@@ -1,0 +1,817 @@
+/* 
+    Document   : default_style.css
+    Created on : Oct 6, 2009, 3:37:56 PM
+    Author     : Wagner Borba
+    Description: Aplica as configurações padrões da estilização do sistema
+*/
+
+/*****************************************\\
+Formatação geraldo do sistema CSS 0001
+*******************************************/
+
+/**************************************************************************
+* Classes  de controle de visibilidade
+***************************************************************************/
+.displayTrue{
+    display:block;
+}
+.displayFalse{
+    display:none;
+}
+/**************************************************************************/
+
+/**************************************************************************
+		Formata sitema de visualização geral
+***************************************************************************/
+
+body{
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    font-family:arial, verdana;
+    font-size:11px;
+}
+
+/*formata*/
+.pageDisp{
+    margin:0px;
+    background-image:url(../../app.images/bg.png);
+    background-repeat: repeat-x;
+    background-position:bottom;
+    /*background-color:#FF0000;*/
+    font-family:arial, verdana;
+    font-size:11px;
+}
+
+#bodyDisplay{
+    cursor:default;
+    width:100%;
+    border:0px;
+    /*background-image:url(../../app.images/wallpaper.png); */
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    overflow: hidden;
+}
+.tpanel{
+	margin-top:2px;
+    overflow: hidden;
+}
+
+.listaDisplay{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.barraPrincipal{
+    height:45px;
+    cursor:default;
+    background-image:url(../../app.images/topGradiente.png);
+    background-repeat:repeat-x;
+    /*background-color:#003399;*/
+    margin:0px;
+    padding:5px;
+    padding-bottom:0px;
+    text-align:center;
+}
+.moduloLogo{
+    float:left;
+    height:38px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+}
+.moduloTopRight{
+    float:left;
+    height:36px;
+    width:150px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+    background-image:url(../../app.images/fdBot.png);
+    background-repeat:repeat-x;
+    border-bottom: 1px outset #f0f0f0;
+    border-top: 1px outset #f0f0f0;
+    border-right: 1px outset #f0f0f0;
+    border-left: 0px;
+    border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-bottom-right-radius:	 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius:  10px;
+}
+
+ .moduloTopRight > .pesqModulo {top: 0px; position: relative; padding-left: 3px;}
+ #pesqModuloImg {position: relative; top: 8px; margin-left: -12px;}
+
+.moduloTopLeft{
+    float:left;
+    height:36px;
+    width: 55px;
+    margin-left: 3px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+    background-image:url(../../app.images/fdBot.png);
+    background-repeat:repeat-x;
+    border-bottom: 1px outset #f0f0f0;
+    border-top: 1px outset #f0f0f0;
+    border-right: 1px outset #f0f0f0;
+    border-left: 1px outset #f0f0f0;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-bottom-left-radius:	 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius:  10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.moduloTopLeft > img {
+    margin-top: 3px;
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#obTempo {
+   color: #fff;
+   margin-top: 10px;
+   position: relative;
+   font-weight: bolder;
+   font-size: 13px;
+   text-shadow: #ccc 0px 0px 1px;
+}
+.modulobot{
+    float:left;
+    height:36px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+    border-right: 1px outset #f0f0f0;
+    border-top: 1px outset #f0f0f0;
+    border-bottom: 1px outset #f0f0f0;
+    border-left: 0px;
+    background-image:url(../../app.images/fdBot.png);
+    background-repeat:repeat-x;
+    background-position: 0% 0%;
+
+}
+.modulobotoff{
+    float:left;
+    height:36px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+    border-right: 1px outset #ffffff;
+    border-top: 1px outset #ffffff;
+    border-bottom: 1px outset #ffffff;
+    border-left: 0px;
+     	background-image:url(../../app.images/fdBot2.png);
+    background-repeat:repeat-x;
+    background-position: 0% 0%;
+
+}
+.modulobotClick{
+    float:left;
+    height:36px;
+    margin-top:1px;
+    margin-right:0px;
+    cursor:pointer;
+    text-align:center;
+    border-right: 1px outset #f0f0f0;
+    border-top: 1px outset #f0f0f0;
+    border-bottom: 1px outset #f0f0f0;
+    border-left: 0px;
+    background-image:url(../../app.images/fdBot2.png);
+    background-repeat:repeat-x;
+    background-position: 0% 0%;    
+
+}
+.modulobot > .inmodulobot{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    cursor:pointer;
+    top:9px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:5px;
+    padding-right:5px;
+    height:30px;
+    position: relative;
+    vertical-align: middle;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: #b0b0b0 0px 0px 5px;
+
+}
+
+.stMmenuBar{
+    position:absolute;
+    left: -420;
+    top:16px;;
+    z-index:1000;
+    /*---*/
+    width:150px;
+    background-color:#CCCCCC;
+    border:2px outset #003399;
+    display:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+
+.stOptionCuston{
+    margin:3px;
+    border:2px outset #CCCCCC;
+    background-color:#333333;
+    width:140px;
+    text-align:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#FFFFFF;
+    padding:2px;
+}
+.stOptionCustonoff{
+    margin:3px;
+    border:2px outset #666666;
+    background-color:#999999;
+    width:140px;
+    text-align:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#FFFFFF;
+    padding:2px;
+}
+
+
+/**************************************************************************
+		(FIM)Formata sitema de menu dos modulos principais
+***************************************************************************/
+
+/**************************************************************************
+		Formata sitema de menu dos módulos secundários
+***************************************************************************/
+
+.botActionOn{
+    padding:3px;
+    width:170px;
+    background-color:#dfe0e0;
+    background-image:url(../app.images/box_barra_over.png);
+    background-repeat:repeat-x;
+    font-family:Verdana;
+    font-size:12px;
+    cursor:pointer;
+    border-top:1px solid #000000;
+    border-left:1px solid #000000;
+    margin:4px;
+}
+.botActionOff{
+    margin-top:2px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+    margin-right:2px;
+    margin-bottom:2px;
+    margin-left:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    cursor:pointer;
+    width:170px;
+    background-color:#FDFDFC;
+    background-image:url(../../app.images/box_barra.png);
+    background-repeat:repeat-x;
+    font-family:Verdana;
+    font-size:12px;
+}
+.botActionClick{
+    margin-top:3px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+    margin-right:2px;
+    margin-bottom:3px;
+    margin-left:3px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    cursor:pointer;
+    width:170px;
+    background-color:#FDFDFC;
+    background-image:url(../../app.images/box_barra.png);
+    background-repeat:repeat-x;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight: bolder;
+    
+}
+.boxMenuSecClicked{
+	border-right:1px solid #000000;
+}
+
+.botSeparador{
+    padding:0px;
+    width:174px;
+    height:0px;
+    border-top: 1px dotted #CCC;
+    border-bottom: 1px dotted #FFF;
+    background-color: transparent;
+    margin:0px;
+}
+
+
+/**************************************************************************
+		Formata sitema de Abas
+***************************************************************************/
+
+/* display / configura a area de visualização das abas */
+.divDisplay{
+    margin-top:17px;
+    width:100%;
+    padding:10px;
+    border:1px solid #98A6C5;
+    background-color:#EEEEEE;
+    overflow:auto;
+    background-image:url(../../app.images/icone_educacional.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family:arial, verdana;
+    font-size:11px;
+}
+/***********************************************************
+	FIM / Sistema de abas
+************************************************************/
+
+/***********************************************************
+	Formata blocos dos formularios
+************************************************************/
+.ui_bloco_fieldset{
+    margin:2px;
+}
+.ui_bloco_legendas{
+    font-size:13px;
+    font-weight:bold;
+    cursor: pointer;
+}
+/***********************************************************
+	FIM / Sistema de blocos
+************************************************************/
+
+
+/************************************************************
+Formata Sistema de lista
+*************************************************************/
+
+.tdatagrid_table{
+    font-family:arial,verdana,sans-serif;
+    border:1px solid #cccccc;
+    position: relative;
+
+
+}
+
+
+.tdatagrid_col{
+    font-size:12px;
+    font-weight:bold;
+    border-left:1px solid #fff;
+    border-top:1px solid #B8C7DC;
+    border-right:1px solid #C3C3C3;
+    border-bottom:1px solid #C3C3C3;
+    padding-top:1px;
+    background-color:#FDFDFC;
+    text-shadow: 1px 1px 0px #FFF;
+    background-image:url(../../app.images/box_barra.png);
+    background-repeat:repeat-x;
+
+}
+.tdatagrid_col:last-child{
+    border-right:1px solid #fff;
+}
+.tdatagrid_table{
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+}
+.tdatagrid_col_over{
+    font-size:12px;
+    font-weight:bold;
+    border-left:1px solid #B8C7DC;
+    border-top: 2px solid #FF8C00;
+    border-right:1px solid #B8C7DC;
+    border-bottom:1px solid #B8C7DC;
+    padding-top:0px;
+    text-shadow: 1px 1px 0px #FFF;
+    background-color:#dfe0e0;
+    color: #333333;
+    background-image:url(../../app.images/box_barra_over.png);
+    background-repeat:repeat-x;
+}
+.tdatagrid_row1{
+    height:23px;
+    font-size     	:11px;
+    padding   		:1px;
+    background-color:#F0F0F0;
+}
+.tdatagrid_row2{
+    height:23px;
+    font-size     	:11px;
+    padding   		:1px;
+    background-color	:#FFFFFF;
+}
+
+.tdatagrid_row_over{
+    height:23px;
+    font-size    		:11px;
+    color   			:#666666;
+    padding	  		:1px;
+    cursor        	:default;
+    border-top:1px solid #D2ECF4;
+    border-bottom: 1px solid #B9D4DD;
+    background-color	: #D2ECF4;
+    background-image:url(../../app.images/tdatagrid_row_over.png);
+    background-repeat:repeat-x;
+    border-right      :1px solid #cccccc;
+
+}
+
+.tlabel{
+    width:210px;
+    text-align:right;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color: #333366;
+}
+.tlabelDestaque{
+    width:210px;
+    text-align:right;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color: #333366;
+    font-weight: bold;
+}
+.tfield{
+    background-color:#FFFFFF;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:13px;
+    z-index:1;
+}
+.tfield_disabled {
+    font-size:12px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.visualizaCampo{
+    font-size:14px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    /*background-color:#EEEEEE;
+	border:none;*/
+    width: 100%;
+    height:auto;
+}
+
+.tButton{
+    font-size:11px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color:#0000FF;
+}
+
+
+/**************************************************************************
+		Estilos de apendices do sistema
+***************************************************************************/
+
+
+/**************************************************************************
+	Estilos Fechamento de caixa - Financeiro
+***************************************************************************/
+.topFechaCaixa{
+    background-color:#000099;
+    color:#FFFFFF;
+    font-weight:bold;
+    padding:2px;
+}
+.rows{
+    padding-left:4px; border-left:1px solid #B8C7DC; border-bottom:1px solid #B8C7DC; text-align: left;
+}
+.rowTotal{
+    font-size:12px;
+    font-weight:bolder;
+    text-align:right;
+}
+.validaFxCaixa{
+    font-family:verdana;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+    color:white;
+    background-color:red;
+    padding:3px;
+}
+
+/**************************************************************************
+	Estilos Formulario de inscrição de alunos (comercial - > inscrição)
+***************************************************************************/
+.tableTurma{
+    font-family:arial;
+    font-size:12px;
+    width:100%;
+}
+.cellLabel{
+    width:200px;
+    text-align:right;
+    padding:4px;
+    color:#333333;
+}
+.cellConteudo{
+    font-weight:bold;
+}
+.cellConfirma{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    text-align:center;
+    background-color:#FFFFFF;
+    border-bottom:2px solid #6699FF;
+}
+
+
+
+/*******************************************************************************
+	Estilo Relatórios
+*******************************************************************************/
+
+.titulo_Relatorio {
+    font-size:14px;
+    /*background-image:url(../app.images/fdBot.png);*/
+    background-color: #C1C1C1;
+    font-weight:bolder;
+}
+#campos_Relatorio {
+    font-size:12px;
+    background-color:#E1E1E1;
+    height: 15px;
+}
+#icone_Relatorio {
+    padding-top:2px;
+    padding-left:5px;
+    position: static;
+    float: left;
+    border: none;
+}
+#iconeExpandDiv {
+    padding-top:2px;
+    padding-left:5px;
+    position: static;
+    float: left;
+    border: none;
+    cursor:pointer;
+    width: 18px;
+    height: 15px;
+
+}
+
+/**************************************************************************
+	Inicio - Folha de estilo para o objeto de impressão
+***************************************************************************/
+
+.jqifade{
+	position: absolute;
+	background-color: #aaaaaa;
+}
+div.jqi{
+	width: 70%;
+	max-height:70%;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	position: absolute;
+        background-image:url(../../app.images/icone_educacional.png);
+        background-repeat: no-repeat;
+        background-position: center;
+	background-color: #ffffff;
+	font-size: 11px;
+	text-align: left;
+	border: solid 1px #eeeeee;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 7px;
+}
+div.jqi .jqicontainer{
+	font-weight: bold;
+}
+div.jqi .jqiclose{
+	position: absolute;
+	top: 4px; right: -2px;
+	width: 18px;
+	cursor: default;
+	color: #bbbbbb;
+	font-weight: bold;
+}
+div.jqi .jqimessage{
+	padding: 10px;
+        height: 400px;
+        overflow: auto;
+	line-height: 20px;
+        color: #444444;
+}
+div.jqi .jqibuttons{
+	text-align: right;
+	padding: 5px 0 5px 0;
+	border: solid 1px #eeeeee;
+	background-color: #f4f4f4;
+}
+div.jqi button{
+	padding: 3px 10px;
+	margin: 0 10px;
+	background-color: #2F6073;
+	border: solid 1px #f4f4f4;
+	color: #ffffff;
+	font-weight: bold;
+        font-size: 11px;
+}
+div.jqi button:hover{
+	background-color: #728A8C;
+}
+div.jqi button.jqidefaultbutton{
+	/*background-color: #8DC05B;*/
+	background-color: #4167B3;
+}
+.jqiwarning .jqi .jqibuttons{
+	background-color: #FFB947;
+}
+
+
+/* aplica formatação basica nos icones do jQuery */
+.icons{ 
+    margin: 2px;
+    padding: 2px 1px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    list-style:none;
+    display: inline;
+}
+.icons span.ui-icon { 
+    float: left;
+}
+.iconDisabled{ 
+    background-color:#cccccc;
+}
+
+
+.ui-box{
+    padding: 2px 2px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+}
+
+.ui-bar-navegation{
+    height:25px;
+    padding:2px;
+    vertical-align: middle;
+}
+
+.ui-border-shadow{
+    border: 10px solid #ff0000;    
+}
+
+
+.obApendice{
+    vertical-align: bottom;
+}
+
+.areaDataGrid {
+    width:100%;
+    height: auto;
+    overflow: hidden;
+    background-color:#f0f0f0;
+    background-image: url(app.images/icone_educacional.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#conteinerList {
+    border: 0px;
+}
+
+.listaDisplay{
+    width: 99%;
+    height: 99%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    float: left;
+    vertical-align: top;
+}
+.listaBodyPrint > table{
+    font-size: 11px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+
+.listaBody{
+    /* O erro está aqui */
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    overflow: auto;
+}
+
+.listaTab{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    vertical-align: top;
+    background-color: #f0f0f0;
+    display: table;
+}
+.row1{
+    width: 100%;
+    height: 1px;
+}
+.row2{
+    width: 100%;
+    height: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+.row3{
+    width: auto;
+    height: auto;
+    overflow: auto;
+    vertical-align: top;
+    position: inherit;
+    display: block;
+}
+.row4{
+    width: 100%;
+    height: 1px;
+    vertical-align: middle;
+    text-align: center;
+}
+.row5{
+    width: 100%;
+    height: 1px;
+    overflow: auto;
+    vertical-align: top;
+    position: inherit;
+}
+#loading-status {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.ui-ajax-stop {
+    background: url(../../app.images/ajax-waiting.png) 1px 1px no-repeat;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.ui-ajax-loading {
+    background: url(../../app.images/loading1.gif) center  no-repeat;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.ui-ajax-error {
+    background: url(../../app.images/ajax-error.png) 1px 1px no-repeat;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.apendiceLista{
+    overflow: hidden;
+}
+
+
+.red-text{
+    color: #ff0000;
+    font-weight:bold;
+}
+
+.datagrid-icon {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: thin solid #B8C7DC;
+    padding: 1px;
+    margin-right: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+}

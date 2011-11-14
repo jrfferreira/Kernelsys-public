@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sistema Integrado - bitUP</title>
+
+<script type="text/javascript">
+function detectBrowser(){
+
+    var browser=navigator.appName;
+    var b_version=navigator.appVersion;
+    var version=parseFloat(b_version);
+
+    if((browser != "Microsoft Internet Explorer") && (version>=4)){
+        var msg = "<div id=retorno>...</div>";
+        document.body.innerHTML = msg;
+    }
+}
+</script>
+
+</head>
+<style>
+.tabela{
+ margin-top:130px;
+ text-align:center;
+ font-family:Verdana, Arial, Helvetica, sans-serif;
+ font-size:12px;
+ width:350px; height:200px;
+ background-image:url(app.images/backLog.png);
+ background-repeat:no-repeat;
+}
+#retorno{
+	text-align:center; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:18px; color:#FFFFFF; 
+	text-shadow:#333333; 
+	padding:20px;
+}
+#gerOption{
+	border-top:1px solid #000ccc; 
+	text-align:center; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:13px; 
+	color:#000ccc; 
+	text-shadow:#333333; 
+	padding:20px;
+}
+#options{
+	text-align:center; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:12px; 
+	color:#0000cc; 
+	text-shadow:#333333; 
+	padding:20px;
+}	
+</style>
+<body onload="detectBrowser()" style="margin:0px; background-image:url(app.images/blue-tile.png); overflow:hidden;">
+<form action="" method="POST" name="sistema" id="sistema" style="margin:2px; height:80%;">
+<table class="tabela" width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
+    
+    <tr>
+      <td height="65" colspan="2"><p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td id="retorno">
+       <p>Sistema em manutenção.</p>      
+      </td>
+    </tr>
+    <tr>
+      <td>
+       <p style="font-size:8px; color: #ffffff"><br /><br />PetrusCOM v 1.0.0.1<br /><br /></p>      
+      </td>
+    </tr>
+</table>
+</form><div style="text-align:center;"><img src="app.images/logo_educacional_index.png" width="324" height="76" alt=""></div>
+<div style=" padding-top:8px; color:#FFFFFF; text-align:center; font-family:Verdana, Arial, Helvetica; font-size:11px; height:60px; background-color:#333333; border-bottom:5px solid #000000;">
+Sistema Integrado Petrus Educacional - Todos os direitos reservados - bitUp Ltda</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="geraDbCredito.php" local="128817043420200000" remote="128817043420000000" testing="0" />
+<file name="baixaCaixa.php" local="128823038363700000" remote="128823038360000000" testing="0" />
+<file name="calculaCaixa.class.php" local="128841255357440000" remote="128841255350000000" testing="128841255350000000" />
+<file name="showBoleto.php" local="128823909481750000" remote="128823909480000000" testing="0" />
+<file name="setMatricula.class.php" local="128817044624940000" remote="128817044620000000" testing="0" />
+<file name="ListaCursos.class.php" local="128817043899230000" remote="128817043890000000" testing="0" />
+<file name="efetMatricula.php" local="128816991530590000" remote="128816991530000000" testing="0" />
+<file name="setRequisitos.php" local="128848971977435443" remote="128848971970000000" testing="128848971970000000" />
+<file name="viewCurso.class.php" local="128817045806860000" remote="128817045800000000" testing="0" />
+<file name="setFaltas.class.php" local="128817044397190000" remote="128817044390000000" testing="0" />
+<file name="lancaFaltas.php" local="128817043649460000" remote="128817043640000000" testing="0" />
+<file name="lancaJustificativa.php" local="128817043712760000" remote="128817043710000000" testing="0" />
+<file name="setNotas.class.php" local="128817044750600000" remote="128817044750000000" testing="0" />
+<file name="validaDataFaltas.php" local="128817045616430000" remote="128817045610000000" testing="0" />
+<file name="getOptionAvaliacao.php" local="128817043486260000" remote="128817043480000000" testing="0" />
+<file name="lancaNotas.php" local="128817043772110000" remote="128817043770000000" testing="0" />
+<file name="setConteudo.class.php" local="128817044285260000" remote="128817044280000000" testing="0" />
+<file name="blocoCheque.php" local="128817043069300000" remote="128817043060000000" testing="0" />
+<file name="setHistoricoAcademico.class.php" local="128817044500770000" remote="128817044500000000" testing="0" />
+<file name="relatorioCaixaR.class.php" local="128817044196100000" remote="128817044190000000" testing="0" />
+<file name="relatorioCaixaD.class.php" local="128817044078130000" remote="128817044070000000" testing="0" />
+<file name="gravaTurmaInscricao.php" local="128842985979840000" remote="128842985970000000" testing="128842985970000000" />
+<file name="viewDRE.class.php" local="128817045911000000" remote="128817045910000000" testing="0" />
+<file name="alocaDados.php" local="128818615080660000" remote="128818615080000000" testing="0" />
+<file name="setPeriodo.class.php" local="128847143610770000" remote="128847143610000000" testing="128847143610000000" />
+<file name="setTipoForm.class.php" local="128817045143430000" remote="128817045140000000" testing="0" />
+<file name="setTipoMov.class.php" local="128817045309080000" remote="128817045300000000" testing="0" />
+<file name="viewBPatrimonial.class.php" local="128817045734350000" remote="128817045730000000" testing="0" />
+<file name="setConciliaRetorno.class.php" local="128823716462440000" remote="128823716460000000" testing="0" />
+<file name="CompRetCX.php" local="128823723849450000" remote="128823723840000000" testing="0" />
+<file name="viewHistAcadem.class.php" local="128847083456840000" remote="128847083450000000" testing="128847083450000000" />
+<file name="viewFaltas.class.php" local="128847083607420000" remote="128847083600000000" testing="128847083600000000" />
+</dwsync>
