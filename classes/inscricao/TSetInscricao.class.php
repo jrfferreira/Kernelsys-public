@@ -10,6 +10,10 @@
             alertPetrus('Conta inválido');
         }
     }
+
+    function atribuicao(){
+		return null;
+    }
 </script>
 <?php
 /*

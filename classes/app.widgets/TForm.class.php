@@ -159,7 +159,7 @@ class TForm{
         $tag->onsubmit = "return $this->submit";// function(){return false;};
         $tag->method = 'post';      // método de transferência
 		$tag->style = "margin:0px;";
-        $tag->enctype = "Content-Type: text/html; charset=UTF-8";
+        $tag->enctype = "application/x-www-form-urlencoded";//"Content-Type: text/html; charset=UTF-8";
         // adiciona o objeto filho ao formulário
         $tag->add($this->child);
         // exibe o formulário
