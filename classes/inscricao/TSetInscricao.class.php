@@ -403,28 +403,17 @@ class TSetInscricao {
 
                 $this->produto["tipo"] = "i";
 
-
-                $this->dbo->setEntidade("dbturmas_descontos");
-                    $criteriaDescontos = new TCriteria();
-                    $criteriaDescontos->add(new TFilter('codigoturma','=',$obEspec['codigo']));
-                $retDescontos = $this->dbo->select('*', $criteriaDescontos);
+                $this->dbo->setEntidade("dbturmas_convenios");
+                $criteriaDescontos = new TCriteria();
+                $criteriaDescontos->add(new TFilter('codigoturma','=',$obEspec['codigo']));
+                $retDescontos = $this->dbo->select('codigoconvenio', $criteriaDescontos);
                 while($obDescontos = $retDescontos->fetch(PDO::FETCH_ASSOC)){
-
-                        if($obDescontos['tipodesconto'] == '1'){
-                            $valorDesconto = $obDescontos['valordescontado']."%";
-                        }else{
-                            $model = new TSetModel();
-                            $valorDesconto = "R$ " . number_format($obDescontos['valordescontado'], 2, ',','.');
-                        }
-                        $infoDescontos = "Pagamento até o dia ".$obDescontos['dialimite'].", desconto não acumulado de ".$valorDesconto;
-                    $arrayDescontos[$obDescontos['dialimite']] .= $infoDescontos."; <br>";
+                    $arrayConvenios = $obDescontos['codigoconvenio'];
                 }
 
-                $descontosPontualidade = '';
-                if(is_array($arrayDescontos) && count($arrayDescontos) > 0){
-                	sort($arrayDescontos);
-                	$descontosPontualidade = implode("\r\n",$arrayDescontos);
-                }
+                $tConvenios = new TConvenios();
+                $descontosPontualidade = $TConvenios->getTextoConvenios($arrayConvenios);
+
                 $descontosPontualidade = substr($descontosPontualidade,0,-6) . '.';
 
                 if($descontosPontualidade == '.') $descontosPontualidade = "Não Informado.";
