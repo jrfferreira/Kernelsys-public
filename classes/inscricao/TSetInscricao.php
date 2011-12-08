@@ -398,27 +398,17 @@ class TSetInscricao {
                 $this->produto = $obEspec + $obCurso + $obProd;
 
                 $this->produto["tipo"] = "i";
-
-
-                $this->dbo->setEntidade("dbturmas_descontos");
-                    $criteriaDescontos = new TCriteria();
-                    $criteriaDescontos->add(new TFilter('codigoturma','=',$obEspec['codigo']));
-                $retDescontos = $this->dbo->select('*', $criteriaDescontos);
+                
+                $this->dbo->setEntidade("dbturmas_convenios");
+                $criteriaDescontos = new TCriteria();
+                $criteriaDescontos->add(new TFilter('codigoturma','=',$obEspec['codigo']));
+                $retDescontos = $this->dbo->select('codigoconvenio', $criteriaDescontos);
                 while($obDescontos = $retDescontos->fetch(PDO::FETCH_ASSOC)){
-
-                        if($obDescontos['tipodesconto'] == '1'){
-                            $valorDesconto = $obDescontos['valordescontado']."%";
-                        }else{
-                            $model = new TSetModel();
-                            $valorDesconto = "R$ " . number_format($obDescontos['valordescontado'], 2, ',','.');
-                        }
-                        $infoDescontos = "Pagamento até o dia ".$obDescontos['dialimite'].", desconto não acumulado de ".$valorDesconto;
-                    $arrayDescontos[$obDescontos['dialimite']] .= $infoDescontos."; <br>";
+                    $arrayConvenios = $obDescontos['codigoconvenio'];
                 }
 
-                sort($arrayDescontos);
-                $descontosPontualidade = implode("\r\n",$arrayDescontos);
-                $descontosPontualidade = substr($descontosPontualidade,0,-6) . '.';
+                $tConvenios = new TConvenios();
+                $descontosPontualidade = $TConvenios->getTextoConvenios($arrayConvenios);
 
                 if($descontosPontualidade == '.') $descontosPontualidade = "Não Informado.";
                 $row1 = $contProd->addRow();

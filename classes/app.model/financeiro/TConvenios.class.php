@@ -175,6 +175,69 @@ class TConvenios{
             new setException($e);
         }
     }
+
+    /**
+     * 
+     * @param $codigoConta
+     */
+    public function getTextoConvenios($arrayConvenios) {
+        
+        $TConvenios = new TConvenios();
+        $descontos = null;
+
+        foreach ($arrayConvenios as $codigoconvenio) {
+            $convenio = $TConvenios->getConvenio($codigoconvenio);
+            foreach ($convenio['descontos'] as $ch => $vl) {
+                $descontos[$ch] += $vl;
+            }
+        }
+        
+        if($descontos["--"]){
+            $descontoInicial = $descontos["--"];
+            unset($descontos["--"]);
+        }
+
+        ksort($descontos);
+        $espelho = $descontos;
+        
+            $endKey = end($espelho);
+            $endKey = key($espelho);          
+            
+            
+        $prev = null;
+        $texto = null;
+        if(count($descontos)) {
+            foreach ($descontos as $ch => $vl) {
+    
+                $valorCheio = number_format(($valorConta - $descontoInicial), 2, ',', '.');
+                $valorAtual = $valorCheio - $vl;
+                if ($valorAtual <= 0) {
+                    $valorAtual = 0;
+                }
+    
+                $valorAtual = number_format($valorAtual, 2, ',', '.');
+                if($prev) {
+                    $texto .= "Pagamento de {$prev}/{$mesVencimento} a {$ch}/{$mesVencimento} - R$ {$valorAtual} ;" . '<br/>';
+                } else {
+                    $texto .= "Pagamento até {$ch}/{$mesVencimento} .................... - R$ {$valorAtual} ;" . '<br/>';
+                }
+                
+                if($descontoInicial && ($ch == $endKey)){   
+                    $texto .= "Pagamento após {$ch}/{$mesVencimento} ................. - R$ {$valorCheio} (+ juros e multas se aplicável);" . '<br/>';              
+                }
+                
+                $prev = $ch + 1;
+                if(strlen($prev) == 1) $prev = '0'.$prev;
+            }
+        }elseif($descontoInicial){
+            $texto = "Para pagamento até o vencimento - R$ " . number_format ( ($valorConta - $descontoInicial), 2, ',', '.' ) . '<br/>';
+        }
+        
+
+        $texto = preg_replace('@(;<br/>)$@i','.',$texto);
+        
+        return $texto;
+    }
     
 
 }
