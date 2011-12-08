@@ -408,15 +408,13 @@ class TSetInscricao {
                 $criteriaDescontos->add(new TFilter('codigoturma','=',$obEspec['codigo']));
                 $retDescontos = $this->dbo->select('codigoconvenio', $criteriaDescontos);
                 while($obDescontos = $retDescontos->fetch(PDO::FETCH_ASSOC)){
-                    $arrayConvenios = $obDescontos['codigoconvenio'];
+                    $arrayConvenios[] = $obDescontos['codigoconvenio'];
                 }
 
                 $tConvenios = new TConvenios();
-                $descontosPontualidade = $TConvenios->getTextoConvenios($arrayConvenios);
+                $descontosPontualidade = $tConvenios->getTextoConvenios($arrayConvenios,$this->produto['valormensal']);
 
-                $descontosPontualidade = substr($descontosPontualidade,0,-6) . '.';
-
-                if($descontosPontualidade == '.') $descontosPontualidade = "Não Informado.";
+                if($descontosPontualidade == '') $descontosPontualidade = "Não Informado.";
                 $row1 = $contProd->addRow();
                 $cellLabel1 = $row1->addCell($label['nome']);
                 $cellLabel1->class = 'titulo_info';
