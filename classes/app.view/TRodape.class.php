@@ -4,9 +4,10 @@
  */
 class TRodape {
 
-    function __construct($nome,$unidade){
-        $this->unidade = $unidade;
-        $this->nome = $nome;
+    function __construct($obUser){
+        $this->unidade = $obUser->unidade->nomeunidade;
+        $this->nome = $obUser->nome;
+        $this->obUser = $obUser;
     }
 
     function show(){
@@ -32,10 +33,12 @@ class TRodape {
         $obLabelSec->add('--');
 
         $infoUser = new TElement('span');
-        $infoUser->style = "color: #fff; text-shadow: #333 0px 1px 1px; margin-right: 20px; display: inline; float: right; position: relative; font-family:verdana; font-size:10px; font-weight:normal; cursor:default; text-align: left; vertical-align: middle;";
+        $infoUser->style = "color: #fff; text-shadow: #333 0px 1px 1px; margin-right: 20px; display: inline; float: right; position: relative; font-family:verdana; font-size:10px; font-weight:normal; cursor:default; text-align: left; vertical-align: middle; cursor: pointer;";
         $infoUser->id    = "obUser";
         $infoUser->add('<img src="app.images/new_user.png" border="0" style="margin-top: 2px;" title="Usuário"/>'.$this->nome.'<br/><img src="app.images/new_home.png" border="0" title="Unidade"/>'. $this->unidade);
         $infoUser->add("<span id='retLoad'></span>");
+		$infoUser->onClick = "prossExe('onView', 'form', 474, '{$this->obUser->codigo}', 'winRet','')";
+		
 
         $logout = new TElement('span');
         $logout->id    = "obSair";

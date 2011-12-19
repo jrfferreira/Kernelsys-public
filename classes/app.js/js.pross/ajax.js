@@ -34,7 +34,7 @@ function exe(alvo, setUrl, dados, tipoReq, msg){
                //context: document.element,
                data:dados,
                cache: false,
-               async: async,
+               async: true,
                beforeSend: function(){
                     $('#loading-status').removeClass().addClass('ui-ajax-loading');
                },
@@ -60,7 +60,7 @@ function exe(alvo, setUrl, dados, tipoReq, msg){
 	               //context: document.element,
 	               data:dados,
 	               cache: false,
-	               async: async,
+	               async: false,
 	               beforeSend: function(){
 	                    $('#loading-status').removeClass().addClass('ui-ajax-loading');
 	               },

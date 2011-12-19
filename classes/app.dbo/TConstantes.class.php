@@ -77,6 +77,7 @@ class TConstantes{
     const DBTRANSACOES_CONTAS_DUPLICATAS    = "dbtransacoes_contas_duplicatas";
     const DBCURSOS_TIPOS                    = "dbcursos_tipos";
     const DBUSUARIOS_ERROS                  = "dbusuarios_erros";
+    const DBUSUARIOS_SENHAS_RECUPERACAO     = "dbusuarios_senhas_recuperacao";
     const DBDEPARTAMENTOS                   = "dbdepartamentos";
     const DBDOCUMENTOS                      = "dbdocumentos";
     const DBPESSOAS_INSCRICOES              = "dbpessoas_inscricoes";

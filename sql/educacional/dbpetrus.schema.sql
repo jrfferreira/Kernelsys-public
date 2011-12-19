@@ -2,17 +2,18 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2011-04-16 12:01:08
+-- Dumped from database version 9.1.2
+-- Dumped by pg_dump version 9.1.2
+-- Started on 2011-12-18 23:28:43 BRST
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
-SET standard_conforming_strings = off;
+SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-SET escape_string_warning = off;
 
 --
--- TOC entry 5 (class 2615 OID 16688)
+-- TOC entry 6 (class 2615 OID 16676)
 -- Name: dominio; Type: SCHEMA; Schema: -; Owner: -
 --
 
@@ -20,11 +21,20 @@ CREATE SCHEMA dominio;
 
 
 --
--- TOC entry 884 (class 2612 OID 16386)
--- Name: plpgsql; Type: PROCEDURAL LANGUAGE; Schema: -; Owner: -
+-- TOC entry 476 (class 3079 OID 12529)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
-CREATE PROCEDURAL LANGUAGE plpgsql;
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 5239 (class 0 OID 0)
+-- Dependencies: 476
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 SET search_path = dominio, pg_catalog;
@@ -34,8 +44,8 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 2071 (class 1259 OID 16689)
--- Dependencies: 5
+-- TOC entry 162 (class 1259 OID 16677)
+-- Dependencies: 6
 -- Name: dbceps; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -49,22 +59,22 @@ CREATE TABLE dbceps (
 
 
 --
--- TOC entry 2072 (class 1259 OID 16692)
--- Dependencies: 2071 5
+-- TOC entry 163 (class 1259 OID 16680)
+-- Dependencies: 162 6
 -- Name: dbceps_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbceps_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4065 (class 0 OID 0)
--- Dependencies: 2072
+-- TOC entry 5240 (class 0 OID 0)
+-- Dependencies: 163
 -- Name: dbceps_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -72,8 +82,8 @@ ALTER SEQUENCE dbceps_id_seq OWNED BY dbceps.id;
 
 
 --
--- TOC entry 2073 (class 1259 OID 16694)
--- Dependencies: 5
+-- TOC entry 164 (class 1259 OID 16682)
+-- Dependencies: 6
 -- Name: dbcidades; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -86,22 +96,22 @@ CREATE TABLE dbcidades (
 
 
 --
--- TOC entry 2074 (class 1259 OID 16697)
--- Dependencies: 2073 5
+-- TOC entry 165 (class 1259 OID 16685)
+-- Dependencies: 164 6
 -- Name: dbcidades_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbcidades_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4066 (class 0 OID 0)
--- Dependencies: 2074
+-- TOC entry 5241 (class 0 OID 0)
+-- Dependencies: 165
 -- Name: dbcidades_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -109,8 +119,8 @@ ALTER SEQUENCE dbcidades_id_seq OWNED BY dbcidades.id;
 
 
 --
--- TOC entry 2075 (class 1259 OID 16699)
--- Dependencies: 5
+-- TOC entry 166 (class 1259 OID 16687)
+-- Dependencies: 6
 -- Name: dbestados; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -124,22 +134,22 @@ CREATE TABLE dbestados (
 
 
 --
--- TOC entry 2076 (class 1259 OID 16702)
--- Dependencies: 2075 5
+-- TOC entry 167 (class 1259 OID 16690)
+-- Dependencies: 166 6
 -- Name: dbestados_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbestados_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4067 (class 0 OID 0)
--- Dependencies: 2076
+-- TOC entry 5242 (class 0 OID 0)
+-- Dependencies: 167
 -- Name: dbestados_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -147,8 +157,8 @@ ALTER SEQUENCE dbestados_id_seq OWNED BY dbestados.id;
 
 
 --
--- TOC entry 2077 (class 1259 OID 16704)
--- Dependencies: 5
+-- TOC entry 168 (class 1259 OID 16692)
+-- Dependencies: 6
 -- Name: dbnfe_erros; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -163,8 +173,8 @@ CREATE TABLE dbnfe_erros (
 
 
 --
--- TOC entry 2078 (class 1259 OID 16710)
--- Dependencies: 5
+-- TOC entry 169 (class 1259 OID 16698)
+-- Dependencies: 6
 -- Name: dbnfe_erros_grupos; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -177,22 +187,22 @@ CREATE TABLE dbnfe_erros_grupos (
 
 
 --
--- TOC entry 2079 (class 1259 OID 16716)
--- Dependencies: 2077 5
+-- TOC entry 170 (class 1259 OID 16704)
+-- Dependencies: 168 6
 -- Name: dbnfe_erros_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbnfe_erros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4068 (class 0 OID 0)
--- Dependencies: 2079
+-- TOC entry 5243 (class 0 OID 0)
+-- Dependencies: 170
 -- Name: dbnfe_erros_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -200,8 +210,8 @@ ALTER SEQUENCE dbnfe_erros_id_seq OWNED BY dbnfe_erros.id;
 
 
 --
--- TOC entry 2080 (class 1259 OID 16718)
--- Dependencies: 5
+-- TOC entry 171 (class 1259 OID 16706)
+-- Dependencies: 6
 -- Name: dbnfe_erros_mensagens; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -213,8 +223,8 @@ CREATE TABLE dbnfe_erros_mensagens (
 
 
 --
--- TOC entry 2081 (class 1259 OID 16724)
--- Dependencies: 5
+-- TOC entry 172 (class 1259 OID 16712)
+-- Dependencies: 6
 -- Name: dbpaises; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -227,22 +237,22 @@ CREATE TABLE dbpaises (
 
 
 --
--- TOC entry 2082 (class 1259 OID 16727)
--- Dependencies: 2081 5
+-- TOC entry 173 (class 1259 OID 16715)
+-- Dependencies: 172 6
 -- Name: dbpaises_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbpaises_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4069 (class 0 OID 0)
--- Dependencies: 2082
+-- TOC entry 5244 (class 0 OID 0)
+-- Dependencies: 173
 -- Name: dbpaises_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -250,8 +260,8 @@ ALTER SEQUENCE dbpaises_id_seq OWNED BY dbpaises.id;
 
 
 --
--- TOC entry 2083 (class 1259 OID 16729)
--- Dependencies: 5
+-- TOC entry 174 (class 1259 OID 16717)
+-- Dependencies: 6
 -- Name: dbwebservices; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -267,8 +277,8 @@ CREATE TABLE dbwebservices (
 
 
 --
--- TOC entry 2084 (class 1259 OID 16735)
--- Dependencies: 5
+-- TOC entry 175 (class 1259 OID 16723)
+-- Dependencies: 6
 -- Name: dbwebservices_campos; Type: TABLE; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -292,22 +302,22 @@ CREATE TABLE dbwebservices_campos (
 
 
 --
--- TOC entry 2085 (class 1259 OID 16741)
--- Dependencies: 2084 5
+-- TOC entry 176 (class 1259 OID 16729)
+-- Dependencies: 175 6
 -- Name: dbwebservices_campos_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbwebservices_campos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4070 (class 0 OID 0)
--- Dependencies: 2085
+-- TOC entry 5245 (class 0 OID 0)
+-- Dependencies: 176
 -- Name: dbwebservices_campos_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -315,22 +325,22 @@ ALTER SEQUENCE dbwebservices_campos_id_seq OWNED BY dbwebservices_campos.id;
 
 
 --
--- TOC entry 2086 (class 1259 OID 16743)
--- Dependencies: 2083 5
+-- TOC entry 177 (class 1259 OID 16731)
+-- Dependencies: 174 6
 -- Name: dbwebservices_id_seq; Type: SEQUENCE; Schema: dominio; Owner: -
 --
 
 CREATE SEQUENCE dbwebservices_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4071 (class 0 OID 0)
--- Dependencies: 2086
+-- TOC entry 5246 (class 0 OID 0)
+-- Dependencies: 177
 -- Name: dbwebservices_id_seq; Type: SEQUENCE OWNED BY; Schema: dominio; Owner: -
 --
 
@@ -340,7 +350,7 @@ ALTER SEQUENCE dbwebservices_id_seq OWNED BY dbwebservices.id;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2087 (class 1259 OID 16745)
+-- TOC entry 178 (class 1259 OID 16733)
 -- Dependencies: 7
 -- Name: dbalunos_disciplinas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -348,13 +358,13 @@ SET search_path = public, pg_catalog;
 CREATE SEQUENCE dbalunos_disciplinas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2088 (class 1259 OID 16747)
+-- TOC entry 179 (class 1259 OID 16735)
 -- Dependencies: 7
 -- Name: gerador_codigo_digito_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -362,14 +372,14 @@ CREATE SEQUENCE dbalunos_disciplinas_id_seq
 CREATE SEQUENCE gerador_codigo_digito_seq
     START WITH 100
     INCREMENT BY 1
-    MAXVALUE 999
     MINVALUE 100
+    MAXVALUE 999
     CACHE 1
     CYCLE;
 
 
 --
--- TOC entry 2089 (class 1259 OID 16749)
+-- TOC entry 180 (class 1259 OID 16737)
 -- Dependencies: 7
 -- Name: gerador_codigo_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -377,14 +387,14 @@ CREATE SEQUENCE gerador_codigo_digito_seq
 CREATE SEQUENCE gerador_codigo_seq
     START WITH 10000000
     INCREMENT BY 1
-    NO MAXVALUE
     MINVALUE 10000000
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2090 (class 1259 OID 16751)
--- Dependencies: 2746 2747 2748 2749 2750 2751 7
+-- TOC entry 181 (class 1259 OID 16739)
+-- Dependencies: 3908 3909 3910 3911 3912 3913 7
 -- Name: dbalunos_disciplinas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -405,8 +415,8 @@ CREATE TABLE dbalunos_disciplinas (
 
 
 --
--- TOC entry 4072 (class 0 OID 0)
--- Dependencies: 2090
+-- TOC entry 5247 (class 0 OID 0)
+-- Dependencies: 181
 -- Name: COLUMN dbalunos_disciplinas.situacao; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -420,7 +430,7 @@ COMMENT ON COLUMN dbalunos_disciplinas.situacao IS '1 - A Cursar
 
 
 --
--- TOC entry 2091 (class 1259 OID 16763)
+-- TOC entry 182 (class 1259 OID 16751)
 -- Dependencies: 7
 -- Name: dbalunos_disciplinas_aproveitamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -428,14 +438,14 @@ COMMENT ON COLUMN dbalunos_disciplinas.situacao IS '1 - A Cursar
 CREATE SEQUENCE dbalunos_disciplinas_aproveitamentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2092 (class 1259 OID 16765)
--- Dependencies: 2752 2753 2754 2755 2756 7
+-- TOC entry 183 (class 1259 OID 16753)
+-- Dependencies: 3914 3915 3916 3917 3918 7
 -- Name: dbalunos_disciplinas_aproveitamentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -459,7 +469,7 @@ CREATE TABLE dbalunos_disciplinas_aproveitamentos (
 
 
 --
--- TOC entry 2093 (class 1259 OID 16776)
+-- TOC entry 184 (class 1259 OID 16764)
 -- Dependencies: 7
 -- Name: dbalunos_faltas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -467,14 +477,14 @@ CREATE TABLE dbalunos_disciplinas_aproveitamentos (
 CREATE SEQUENCE dbalunos_faltas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2094 (class 1259 OID 16778)
--- Dependencies: 2757 2758 2759 2760 2761 2762 2763 7
+-- TOC entry 185 (class 1259 OID 16766)
+-- Dependencies: 3919 3920 3921 3922 3923 3924 3925 7
 -- Name: dbalunos_faltas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -497,7 +507,7 @@ CREATE TABLE dbalunos_faltas (
 
 
 --
--- TOC entry 2095 (class 1259 OID 16791)
+-- TOC entry 186 (class 1259 OID 16779)
 -- Dependencies: 7
 -- Name: dbalunos_notas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -505,14 +515,14 @@ CREATE TABLE dbalunos_faltas (
 CREATE SEQUENCE dbalunos_notas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2096 (class 1259 OID 16793)
--- Dependencies: 2764 2765 2766 2767 2768 7
+-- TOC entry 187 (class 1259 OID 16781)
+-- Dependencies: 3926 3927 3928 3929 3930 7
 -- Name: dbalunos_notas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -533,7 +543,7 @@ CREATE TABLE dbalunos_notas (
 
 
 --
--- TOC entry 2097 (class 1259 OID 16801)
+-- TOC entry 188 (class 1259 OID 16789)
 -- Dependencies: 7
 -- Name: dbalunos_requisitos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -541,14 +551,14 @@ CREATE TABLE dbalunos_notas (
 CREATE SEQUENCE dbalunos_requisitos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2098 (class 1259 OID 16803)
--- Dependencies: 2769 2770 2771 2772 2773 7
+-- TOC entry 189 (class 1259 OID 16791)
+-- Dependencies: 3931 3932 3933 3934 3935 7
 -- Name: dbalunos_requisitos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -566,7 +576,7 @@ CREATE TABLE dbalunos_requisitos (
 
 
 --
--- TOC entry 2099 (class 1259 OID 16814)
+-- TOC entry 190 (class 1259 OID 16802)
 -- Dependencies: 7
 -- Name: dbalunos_solicitacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -574,14 +584,14 @@ CREATE TABLE dbalunos_requisitos (
 CREATE SEQUENCE dbalunos_solicitacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2100 (class 1259 OID 16816)
--- Dependencies: 2774 2775 2776 2777 2778 7
+-- TOC entry 191 (class 1259 OID 16804)
+-- Dependencies: 3936 3937 3938 3939 3940 7
 -- Name: dbalunos_solicitacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -604,7 +614,7 @@ CREATE TABLE dbalunos_solicitacoes (
 
 
 --
--- TOC entry 2101 (class 1259 OID 16827)
+-- TOC entry 192 (class 1259 OID 16815)
 -- Dependencies: 7
 -- Name: dbalunos_transacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -612,14 +622,14 @@ CREATE TABLE dbalunos_solicitacoes (
 CREATE SEQUENCE dbalunos_transacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2102 (class 1259 OID 16829)
--- Dependencies: 2779 2780 2781 2782 2783 7
+-- TOC entry 193 (class 1259 OID 16817)
+-- Dependencies: 3941 3942 3943 3944 3945 7
 -- Name: dbalunos_transacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -636,8 +646,8 @@ CREATE TABLE dbalunos_transacoes (
 
 
 --
--- TOC entry 2103 (class 1259 OID 16837)
--- Dependencies: 2785 2786 2787 2788 2789 2790 2791 7
+-- TOC entry 194 (class 1259 OID 16825)
+-- Dependencies: 3947 3948 3949 3950 3951 3952 3953 7
 -- Name: dbavaliacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -660,22 +670,22 @@ CREATE TABLE dbavaliacoes (
 
 
 --
--- TOC entry 2104 (class 1259 OID 16847)
--- Dependencies: 2103 7
+-- TOC entry 195 (class 1259 OID 16838)
+-- Dependencies: 194 7
 -- Name: dbavaliacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbavaliacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4073 (class 0 OID 0)
--- Dependencies: 2104
+-- TOC entry 5248 (class 0 OID 0)
+-- Dependencies: 195
 -- Name: dbavaliacoes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -683,8 +693,8 @@ ALTER SEQUENCE dbavaliacoes_id_seq OWNED BY dbavaliacoes.id;
 
 
 --
--- TOC entry 2105 (class 1259 OID 16849)
--- Dependencies: 2793 2794 2795 2796 7
+-- TOC entry 196 (class 1259 OID 16840)
+-- Dependencies: 3955 3956 3957 3958 7
 -- Name: dbavaliacoes_regras; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -701,22 +711,22 @@ CREATE TABLE dbavaliacoes_regras (
 
 
 --
--- TOC entry 2106 (class 1259 OID 16859)
--- Dependencies: 2105 7
+-- TOC entry 197 (class 1259 OID 16850)
+-- Dependencies: 196 7
 -- Name: dbavaliacoes_regras_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbavaliacoes_regras_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4074 (class 0 OID 0)
--- Dependencies: 2106
+-- TOC entry 5249 (class 0 OID 0)
+-- Dependencies: 197
 -- Name: dbavaliacoes_regras_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -724,7 +734,7 @@ ALTER SEQUENCE dbavaliacoes_regras_id_seq OWNED BY dbavaliacoes_regras.id;
 
 
 --
--- TOC entry 2107 (class 1259 OID 16861)
+-- TOC entry 198 (class 1259 OID 16852)
 -- Dependencies: 7
 -- Name: dbbalanco_patrimonial_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -732,14 +742,14 @@ ALTER SEQUENCE dbavaliacoes_regras_id_seq OWNED BY dbavaliacoes_regras.id;
 CREATE SEQUENCE dbbalanco_patrimonial_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2108 (class 1259 OID 16863)
--- Dependencies: 2797 2798 2799 2800 2801 2802 2803 2804 2805 2806 2807 2808 2809 2810 2811 2812 2813 2814 2815 2816 2817 2818 2819 2820 2821 2822 2823 7
+-- TOC entry 199 (class 1259 OID 16854)
+-- Dependencies: 3959 3960 3961 3962 3963 3964 3965 3966 3967 3968 3969 3970 3971 3972 3973 3974 3975 3976 3977 3978 3979 3980 3981 3982 3983 3984 3985 7
 -- Name: dbbalanco_patrimonial; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -776,7 +786,7 @@ CREATE TABLE dbbalanco_patrimonial (
 
 
 --
--- TOC entry 2109 (class 1259 OID 16893)
+-- TOC entry 200 (class 1259 OID 16884)
 -- Dependencies: 7
 -- Name: dbbiblioteca_cdu_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -784,14 +794,14 @@ CREATE TABLE dbbalanco_patrimonial (
 CREATE SEQUENCE dbbiblioteca_cdu_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2110 (class 1259 OID 16895)
--- Dependencies: 2824 2825 2826 2827 2828 7
+-- TOC entry 201 (class 1259 OID 16886)
+-- Dependencies: 3986 3987 3988 3989 3990 7
 -- Name: dbbiblioteca_cdu; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -808,7 +818,7 @@ CREATE TABLE dbbiblioteca_cdu (
 
 
 --
--- TOC entry 2111 (class 1259 OID 16903)
+-- TOC entry 202 (class 1259 OID 16894)
 -- Dependencies: 7
 -- Name: dbcaixa_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -816,14 +826,14 @@ CREATE TABLE dbbiblioteca_cdu (
 CREATE SEQUENCE dbcaixa_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2112 (class 1259 OID 16905)
--- Dependencies: 2829 2830 2831 2832 2833 2834 2835 2836 2837 2838 7
+-- TOC entry 203 (class 1259 OID 16896)
+-- Dependencies: 3991 3992 3993 3994 3995 3996 3997 3998 3999 4000 7
 -- Name: dbcaixa; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -862,8 +872,8 @@ CREATE TABLE dbcaixa (
 
 
 --
--- TOC entry 4075 (class 0 OID 0)
--- Dependencies: 2112
+-- TOC entry 5250 (class 0 OID 0)
+-- Dependencies: 203
 -- Name: COLUMN dbcaixa.valorreal; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -871,8 +881,8 @@ COMMENT ON COLUMN dbcaixa.valorreal IS 'Valor real da conta, sem acresciomos e d
 
 
 --
--- TOC entry 4076 (class 0 OID 0)
--- Dependencies: 2112
+-- TOC entry 5251 (class 0 OID 0)
+-- Dependencies: 203
 -- Name: COLUMN dbcaixa.statusmovimento; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -886,7 +896,7 @@ COMMENT ON COLUMN dbcaixa.statusmovimento IS 'Status do movimento do caixa
 
 
 --
--- TOC entry 2113 (class 1259 OID 16921)
+-- TOC entry 204 (class 1259 OID 16912)
 -- Dependencies: 7
 -- Name: dbcaixa_fechamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -894,14 +904,14 @@ COMMENT ON COLUMN dbcaixa.statusmovimento IS 'Status do movimento do caixa
 CREATE SEQUENCE dbcaixa_fechamentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2114 (class 1259 OID 16923)
--- Dependencies: 2839 2840 2841 2842 2843 7
+-- TOC entry 205 (class 1259 OID 16914)
+-- Dependencies: 4001 4002 4003 4004 4005 7
 -- Name: dbcaixa_fechamentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -919,7 +929,7 @@ CREATE TABLE dbcaixa_fechamentos (
 
 
 --
--- TOC entry 2115 (class 1259 OID 16931)
+-- TOC entry 206 (class 1259 OID 16922)
 -- Dependencies: 7
 -- Name: dbcaixa_funcionarios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -927,14 +937,14 @@ CREATE TABLE dbcaixa_fechamentos (
 CREATE SEQUENCE dbcaixa_funcionarios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2116 (class 1259 OID 16933)
--- Dependencies: 2844 2845 2846 2847 2848 2849 7
+-- TOC entry 207 (class 1259 OID 16924)
+-- Dependencies: 4006 4007 4008 4009 4010 4011 7
 -- Name: dbcaixa_funcionarios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -954,8 +964,8 @@ CREATE TABLE dbcaixa_funcionarios (
 
 
 --
--- TOC entry 4077 (class 0 OID 0)
--- Dependencies: 2116
+-- TOC entry 5252 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: COLUMN dbcaixa_funcionarios.situacao; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -964,7 +974,7 @@ COMMENT ON COLUMN dbcaixa_funcionarios.situacao IS '1 = Liberado para Movimenta�
 
 
 --
--- TOC entry 2117 (class 1259 OID 16945)
+-- TOC entry 208 (class 1259 OID 16936)
 -- Dependencies: 7
 -- Name: dbcargos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -972,14 +982,14 @@ COMMENT ON COLUMN dbcaixa_funcionarios.situacao IS '1 = Liberado para Movimenta�
 CREATE SEQUENCE dbcargos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2118 (class 1259 OID 16947)
--- Dependencies: 2850 2851 2852 2853 2854 2855 7
+-- TOC entry 209 (class 1259 OID 16938)
+-- Dependencies: 4012 4013 4014 4015 4016 4017 7
 -- Name: dbcargos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1008,7 +1018,7 @@ CREATE TABLE dbcargos (
 
 
 --
--- TOC entry 2119 (class 1259 OID 16959)
+-- TOC entry 210 (class 1259 OID 16950)
 -- Dependencies: 7
 -- Name: dbceps_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1016,13 +1026,13 @@ CREATE TABLE dbcargos (
 CREATE SEQUENCE dbceps_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2120 (class 1259 OID 16961)
+-- TOC entry 211 (class 1259 OID 16952)
 -- Dependencies: 7
 -- Name: dbcidades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1030,13 +1040,13 @@ CREATE SEQUENCE dbceps_id_seq
 CREATE SEQUENCE dbcidades_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2121 (class 1259 OID 16963)
+-- TOC entry 212 (class 1259 OID 16954)
 -- Dependencies: 7
 -- Name: dbcompras_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1044,14 +1054,14 @@ CREATE SEQUENCE dbcidades_id_seq
 CREATE SEQUENCE dbcompras_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2122 (class 1259 OID 16965)
--- Dependencies: 2856 2857 2858 2859 2860 2861 7
+-- TOC entry 213 (class 1259 OID 16956)
+-- Dependencies: 4018 4019 4020 4021 4022 4023 7
 -- Name: dbcompras; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1070,7 +1080,7 @@ CREATE TABLE dbcompras (
 
 
 --
--- TOC entry 2123 (class 1259 OID 16974)
+-- TOC entry 214 (class 1259 OID 16965)
 -- Dependencies: 7
 -- Name: dbcontas_caixa_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1078,14 +1088,14 @@ CREATE TABLE dbcompras (
 CREATE SEQUENCE dbcontas_caixa_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2124 (class 1259 OID 16976)
--- Dependencies: 2862 2863 2864 2865 2866 2867 2868 2869 7
+-- TOC entry 215 (class 1259 OID 16967)
+-- Dependencies: 4024 4025 4026 4027 4028 4029 4030 4031 7
 -- Name: dbcontas_caixa; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1107,8 +1117,8 @@ CREATE TABLE dbcontas_caixa (
 
 
 --
--- TOC entry 4078 (class 0 OID 0)
--- Dependencies: 2124
+-- TOC entry 5253 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: COLUMN dbcontas_caixa.situacao; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1117,7 +1127,7 @@ COMMENT ON COLUMN dbcontas_caixa.situacao IS '1 = Liberado para Movimentações.
 
 
 --
--- TOC entry 2125 (class 1259 OID 16987)
+-- TOC entry 216 (class 1259 OID 16978)
 -- Dependencies: 7
 -- Name: dbcontas_caixa_historico_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1125,14 +1135,14 @@ COMMENT ON COLUMN dbcontas_caixa.situacao IS '1 = Liberado para Movimentações.
 CREATE SEQUENCE dbcontas_caixa_historico_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2126 (class 1259 OID 16989)
--- Dependencies: 2870 2871 2872 2873 2874 7
+-- TOC entry 217 (class 1259 OID 16980)
+-- Dependencies: 4032 4033 4034 4035 4036 7
 -- Name: dbcontas_caixa_historico; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1150,7 +1160,7 @@ CREATE TABLE dbcontas_caixa_historico (
 
 
 --
--- TOC entry 2127 (class 1259 OID 16997)
+-- TOC entry 218 (class 1259 OID 16988)
 -- Dependencies: 7
 -- Name: dbcontas_cheques_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1158,14 +1168,14 @@ CREATE TABLE dbcontas_caixa_historico (
 CREATE SEQUENCE dbcontas_cheques_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2128 (class 1259 OID 16999)
--- Dependencies: 2875 2876 2877 2878 2879 7
+-- TOC entry 219 (class 1259 OID 16990)
+-- Dependencies: 4037 4038 4039 4040 4041 7
 -- Name: dbcontas_cheques; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1191,7 +1201,7 @@ CREATE TABLE dbcontas_cheques (
 
 
 --
--- TOC entry 2129 (class 1259 OID 17010)
+-- TOC entry 220 (class 1259 OID 17001)
 -- Dependencies: 7
 -- Name: dbcontratos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1199,14 +1209,14 @@ CREATE TABLE dbcontas_cheques (
 CREATE SEQUENCE dbcontratos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2130 (class 1259 OID 17012)
--- Dependencies: 2880 2881 2882 2883 2884 7
+-- TOC entry 221 (class 1259 OID 17003)
+-- Dependencies: 4042 4043 4044 4045 4046 7
 -- Name: dbcontratos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1228,7 +1238,7 @@ CREATE TABLE dbcontratos (
 
 
 --
--- TOC entry 2131 (class 1259 OID 17023)
+-- TOC entry 222 (class 1259 OID 17014)
 -- Dependencies: 7
 -- Name: dbconvenios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1236,14 +1246,14 @@ CREATE TABLE dbcontratos (
 CREATE SEQUENCE dbconvenios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2132 (class 1259 OID 17025)
--- Dependencies: 2885 2886 2887 7
+-- TOC entry 223 (class 1259 OID 17016)
+-- Dependencies: 4047 4048 4049 7
 -- Name: dbconvenios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1267,8 +1277,8 @@ CREATE TABLE dbconvenios (
 
 
 --
--- TOC entry 4079 (class 0 OID 0)
--- Dependencies: 2132
+-- TOC entry 5254 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN dbconvenios.tipoconvenio; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1280,8 +1290,8 @@ COMMENT ON COLUMN dbconvenios.tipoconvenio IS 'Tipo de convênio.
 
 
 --
--- TOC entry 4080 (class 0 OID 0)
--- Dependencies: 2132
+-- TOC entry 5255 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN dbconvenios.tipotransacao; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1292,8 +1302,8 @@ COMMENT ON COLUMN dbconvenios.tipotransacao IS 'tipo da transação a ser gerada
 
 
 --
--- TOC entry 4081 (class 0 OID 0)
--- Dependencies: 2132
+-- TOC entry 5256 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN dbconvenios.valor; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1301,8 +1311,8 @@ COMMENT ON COLUMN dbconvenios.valor IS 'valor do crédito/débito a ser gerado e
 
 
 --
--- TOC entry 4082 (class 0 OID 0)
--- Dependencies: 2132
+-- TOC entry 5257 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN dbconvenios.formato; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1313,8 +1323,8 @@ COMMENT ON COLUMN dbconvenios.formato IS 'formato do valor
 
 
 --
--- TOC entry 4083 (class 0 OID 0)
--- Dependencies: 2132
+-- TOC entry 5258 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: COLUMN dbconvenios.datavigencia; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -1322,8 +1332,8 @@ COMMENT ON COLUMN dbconvenios.datavigencia IS 'data em que o convênio entra em 
 
 
 --
--- TOC entry 2133 (class 1259 OID 17034)
--- Dependencies: 2889 2890 2891 2892 7
+-- TOC entry 224 (class 1259 OID 17025)
+-- Dependencies: 4051 4052 4053 4054 7
 -- Name: dbconvenios_descontos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1342,22 +1352,22 @@ CREATE TABLE dbconvenios_descontos (
 
 
 --
--- TOC entry 2134 (class 1259 OID 17044)
--- Dependencies: 2133 7
+-- TOC entry 225 (class 1259 OID 17035)
+-- Dependencies: 224 7
 -- Name: dbconvenios_descontos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbconvenios_descontos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4084 (class 0 OID 0)
--- Dependencies: 2134
+-- TOC entry 5259 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: dbconvenios_descontos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -1365,7 +1375,7 @@ ALTER SEQUENCE dbconvenios_descontos_id_seq OWNED BY dbconvenios_descontos.id;
 
 
 --
--- TOC entry 2135 (class 1259 OID 17046)
+-- TOC entry 226 (class 1259 OID 17037)
 -- Dependencies: 7
 -- Name: dbcotacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1373,14 +1383,14 @@ ALTER SEQUENCE dbconvenios_descontos_id_seq OWNED BY dbconvenios_descontos.id;
 CREATE SEQUENCE dbcotacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2136 (class 1259 OID 17048)
--- Dependencies: 2893 2894 2895 2896 2897 7
+-- TOC entry 227 (class 1259 OID 17039)
+-- Dependencies: 4055 4056 4057 4058 4059 7
 -- Name: dbcotacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1399,7 +1409,7 @@ CREATE TABLE dbcotacoes (
 
 
 --
--- TOC entry 2137 (class 1259 OID 17056)
+-- TOC entry 228 (class 1259 OID 17047)
 -- Dependencies: 7
 -- Name: dbcrm_demandas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1407,14 +1417,14 @@ CREATE TABLE dbcotacoes (
 CREATE SEQUENCE dbcrm_demandas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2138 (class 1259 OID 17058)
--- Dependencies: 2898 2899 2900 2901 2902 7
+-- TOC entry 229 (class 1259 OID 17049)
+-- Dependencies: 4060 4061 4062 4063 4064 7
 -- Name: dbcrm_demandas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1434,7 +1444,7 @@ CREATE TABLE dbcrm_demandas (
 
 
 --
--- TOC entry 2139 (class 1259 OID 17069)
+-- TOC entry 230 (class 1259 OID 17060)
 -- Dependencies: 7
 -- Name: dbcurriculos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1442,14 +1452,14 @@ CREATE TABLE dbcrm_demandas (
 CREATE SEQUENCE dbcurriculos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2140 (class 1259 OID 17071)
--- Dependencies: 2903 2904 2905 2906 2907 7
+-- TOC entry 231 (class 1259 OID 17062)
+-- Dependencies: 4065 4066 4067 4068 4069 7
 -- Name: dbcurriculos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1487,7 +1497,7 @@ CREATE TABLE dbcurriculos (
 
 
 --
--- TOC entry 2141 (class 1259 OID 17082)
+-- TOC entry 232 (class 1259 OID 17073)
 -- Dependencies: 7
 -- Name: dbcursos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1495,14 +1505,14 @@ CREATE TABLE dbcurriculos (
 CREATE SEQUENCE dbcursos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2142 (class 1259 OID 17084)
--- Dependencies: 2908 2909 2910 2911 2912 7
+-- TOC entry 233 (class 1259 OID 17075)
+-- Dependencies: 4070 4071 4072 4073 4074 7
 -- Name: dbcursos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1525,7 +1535,7 @@ CREATE TABLE dbcursos (
 
 
 --
--- TOC entry 2143 (class 1259 OID 17095)
+-- TOC entry 234 (class 1259 OID 17086)
 -- Dependencies: 7
 -- Name: dbcursos_areas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1533,14 +1543,14 @@ CREATE TABLE dbcursos (
 CREATE SEQUENCE dbcursos_areas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2144 (class 1259 OID 17097)
--- Dependencies: 2913 2914 2915 2916 2917 7
+-- TOC entry 235 (class 1259 OID 17088)
+-- Dependencies: 4075 4076 4077 4078 4079 7
 -- Name: dbcursos_areas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1557,7 +1567,7 @@ CREATE TABLE dbcursos_areas (
 
 
 --
--- TOC entry 2145 (class 1259 OID 17108)
+-- TOC entry 236 (class 1259 OID 17099)
 -- Dependencies: 7
 -- Name: dbcursos_ativos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1565,14 +1575,14 @@ CREATE TABLE dbcursos_areas (
 CREATE SEQUENCE dbcursos_ativos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2146 (class 1259 OID 17110)
--- Dependencies: 2918 2919 2920 2921 2922 7
+-- TOC entry 237 (class 1259 OID 17101)
+-- Dependencies: 4080 4081 4082 4083 4084 7
 -- Name: dbcursos_ativos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1590,7 +1600,7 @@ CREATE TABLE dbcursos_ativos (
 
 
 --
--- TOC entry 2147 (class 1259 OID 17121)
+-- TOC entry 238 (class 1259 OID 17112)
 -- Dependencies: 7
 -- Name: dbcursos_avaliacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1598,14 +1608,14 @@ CREATE TABLE dbcursos_ativos (
 CREATE SEQUENCE dbcursos_avaliacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2148 (class 1259 OID 17123)
--- Dependencies: 2923 2924 2925 2926 2927 7
+-- TOC entry 239 (class 1259 OID 17114)
+-- Dependencies: 4085 4086 4087 4088 4089 7
 -- Name: dbcursos_avaliacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1626,7 +1636,7 @@ CREATE TABLE dbcursos_avaliacoes (
 
 
 --
--- TOC entry 2149 (class 1259 OID 17131)
+-- TOC entry 240 (class 1259 OID 17122)
 -- Dependencies: 7
 -- Name: dbcursos_disciplinas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1634,14 +1644,14 @@ CREATE TABLE dbcursos_avaliacoes (
 CREATE SEQUENCE dbcursos_disciplinas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2150 (class 1259 OID 17133)
--- Dependencies: 2928 2929 2930 2931 2932 7
+-- TOC entry 241 (class 1259 OID 17124)
+-- Dependencies: 4090 4091 4092 4093 4094 7
 -- Name: dbcursos_disciplinas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1658,7 +1668,7 @@ CREATE TABLE dbcursos_disciplinas (
 
 
 --
--- TOC entry 2151 (class 1259 OID 17141)
+-- TOC entry 242 (class 1259 OID 17132)
 -- Dependencies: 7
 -- Name: dbcursos_tipos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1666,14 +1676,14 @@ CREATE TABLE dbcursos_disciplinas (
 CREATE SEQUENCE dbcursos_tipos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2152 (class 1259 OID 17143)
--- Dependencies: 2933 2934 2935 2936 2937 7
+-- TOC entry 243 (class 1259 OID 17134)
+-- Dependencies: 4095 4096 4097 4098 4099 7
 -- Name: dbcursos_tipos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1690,7 +1700,7 @@ CREATE TABLE dbcursos_tipos (
 
 
 --
--- TOC entry 2153 (class 1259 OID 17154)
+-- TOC entry 244 (class 1259 OID 17145)
 -- Dependencies: 7
 -- Name: dbdados_boleto_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1698,14 +1708,14 @@ CREATE TABLE dbcursos_tipos (
 CREATE SEQUENCE dbdados_boleto_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2154 (class 1259 OID 17156)
--- Dependencies: 2938 2939 2940 2941 2942 2943 7
+-- TOC entry 245 (class 1259 OID 17147)
+-- Dependencies: 4100 4101 4102 4103 4104 4105 7
 -- Name: dbdados_boleto; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1740,7 +1750,7 @@ CREATE TABLE dbdados_boleto (
 
 
 --
--- TOC entry 2155 (class 1259 OID 17168)
+-- TOC entry 246 (class 1259 OID 17159)
 -- Dependencies: 7
 -- Name: dbdepartamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1748,14 +1758,14 @@ CREATE TABLE dbdados_boleto (
 CREATE SEQUENCE dbdepartamentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2156 (class 1259 OID 17170)
--- Dependencies: 2944 2945 2946 2947 2948 7
+-- TOC entry 247 (class 1259 OID 17161)
+-- Dependencies: 4106 4107 4108 4109 4110 7
 -- Name: dbdepartamentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1774,7 +1784,7 @@ CREATE TABLE dbdepartamentos (
 
 
 --
--- TOC entry 2157 (class 1259 OID 17181)
+-- TOC entry 248 (class 1259 OID 17172)
 -- Dependencies: 7
 -- Name: dbdisciplinas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1782,14 +1792,14 @@ CREATE TABLE dbdepartamentos (
 CREATE SEQUENCE dbdisciplinas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2158 (class 1259 OID 17183)
--- Dependencies: 2949 2950 2951 2952 2953 7
+-- TOC entry 249 (class 1259 OID 17174)
+-- Dependencies: 4111 4112 4113 4114 4115 7
 -- Name: dbdisciplinas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1811,7 +1821,7 @@ CREATE TABLE dbdisciplinas (
 
 
 --
--- TOC entry 2159 (class 1259 OID 17194)
+-- TOC entry 250 (class 1259 OID 17185)
 -- Dependencies: 7
 -- Name: dbdisciplinas_semelhantes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1819,14 +1829,14 @@ CREATE TABLE dbdisciplinas (
 CREATE SEQUENCE dbdisciplinas_semelhantes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2160 (class 1259 OID 17196)
--- Dependencies: 2954 2955 2956 2957 2958 7
+-- TOC entry 251 (class 1259 OID 17187)
+-- Dependencies: 4116 4117 4118 4119 4120 7
 -- Name: dbdisciplinas_semelhantes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1843,7 +1853,7 @@ CREATE TABLE dbdisciplinas_semelhantes (
 
 
 --
--- TOC entry 2161 (class 1259 OID 17204)
+-- TOC entry 252 (class 1259 OID 17195)
 -- Dependencies: 7
 -- Name: dbdocumentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1851,14 +1861,14 @@ CREATE TABLE dbdisciplinas_semelhantes (
 CREATE SEQUENCE dbdocumentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2162 (class 1259 OID 17206)
--- Dependencies: 2959 2960 2961 2962 2963 7
+-- TOC entry 253 (class 1259 OID 17197)
+-- Dependencies: 4121 4122 4123 4124 4125 7
 -- Name: dbdocumentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1879,7 +1889,7 @@ CREATE TABLE dbdocumentos (
 
 
 --
--- TOC entry 2163 (class 1259 OID 17217)
+-- TOC entry 254 (class 1259 OID 17208)
 -- Dependencies: 7
 -- Name: dbestados_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1887,13 +1897,13 @@ CREATE TABLE dbdocumentos (
 CREATE SEQUENCE dbestados_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2164 (class 1259 OID 17219)
+-- TOC entry 255 (class 1259 OID 17210)
 -- Dependencies: 7
 -- Name: dbfuncionarios_ferias_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1901,14 +1911,14 @@ CREATE SEQUENCE dbestados_id_seq
 CREATE SEQUENCE dbfuncionarios_ferias_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2165 (class 1259 OID 17221)
--- Dependencies: 2964 2965 2966 2967 2968 7
+-- TOC entry 256 (class 1259 OID 17212)
+-- Dependencies: 4126 4127 4128 4129 4130 7
 -- Name: dbfuncionarios_ferias; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1931,7 +1941,7 @@ CREATE TABLE dbfuncionarios_ferias (
 
 
 --
--- TOC entry 2166 (class 1259 OID 17229)
+-- TOC entry 257 (class 1259 OID 17220)
 -- Dependencies: 7
 -- Name: dbfuncionarios_folhapagamento_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1939,14 +1949,14 @@ CREATE TABLE dbfuncionarios_ferias (
 CREATE SEQUENCE dbfuncionarios_folhapagamento_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2167 (class 1259 OID 17231)
--- Dependencies: 2969 2970 2971 2972 2973 2974 2975 2976 2977 2978 2979 2980 2981 2982 2983 2984 2985 2986 2987 2988 2989 2990 2991 2992 7
+-- TOC entry 258 (class 1259 OID 17222)
+-- Dependencies: 4131 4132 4133 4134 4135 4136 4137 4138 4139 4140 4141 4142 4143 4144 4145 4146 4147 4148 4149 4150 4151 4152 4153 4154 7
 -- Name: dbfuncionarios_folhapagamento; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1987,7 +1997,7 @@ CREATE TABLE dbfuncionarios_folhapagamento (
 
 
 --
--- TOC entry 2168 (class 1259 OID 17261)
+-- TOC entry 259 (class 1259 OID 17252)
 -- Dependencies: 7
 -- Name: dbfuncionarios_ocorrencias_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1995,14 +2005,14 @@ CREATE TABLE dbfuncionarios_folhapagamento (
 CREATE SEQUENCE dbfuncionarios_ocorrencias_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2169 (class 1259 OID 17263)
--- Dependencies: 2993 2994 2995 2996 2997 7
+-- TOC entry 260 (class 1259 OID 17254)
+-- Dependencies: 4155 4156 4157 4158 4159 7
 -- Name: dbfuncionarios_ocorrencias; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2020,7 +2030,7 @@ CREATE TABLE dbfuncionarios_ocorrencias (
 
 
 --
--- TOC entry 2170 (class 1259 OID 17274)
+-- TOC entry 261 (class 1259 OID 17265)
 -- Dependencies: 7
 -- Name: dbfuncionarios_professores_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2028,14 +2038,14 @@ CREATE TABLE dbfuncionarios_ocorrencias (
 CREATE SEQUENCE dbfuncionarios_professores_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2171 (class 1259 OID 17276)
--- Dependencies: 2998 2999 3000 3001 3002 7
+-- TOC entry 262 (class 1259 OID 17267)
+-- Dependencies: 4160 4161 4162 4163 4164 7
 -- Name: dbfuncionarios_professores; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2052,7 +2062,7 @@ CREATE TABLE dbfuncionarios_professores (
 
 
 --
--- TOC entry 2172 (class 1259 OID 17287)
+-- TOC entry 263 (class 1259 OID 17278)
 -- Dependencies: 7
 -- Name: dbfuncionarios_treinamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2060,14 +2070,14 @@ CREATE TABLE dbfuncionarios_professores (
 CREATE SEQUENCE dbfuncionarios_treinamentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2173 (class 1259 OID 17289)
--- Dependencies: 3003 3004 3005 3006 3007 7
+-- TOC entry 264 (class 1259 OID 17280)
+-- Dependencies: 4165 4166 4167 4168 4169 7
 -- Name: dbfuncionarios_treinamentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2084,8 +2094,8 @@ CREATE TABLE dbfuncionarios_treinamentos (
 
 
 --
--- TOC entry 2174 (class 1259 OID 17297)
--- Dependencies: 3009 3010 3011 3012 7
+-- TOC entry 265 (class 1259 OID 17288)
+-- Dependencies: 4171 4172 4173 4174 7
 -- Name: dbgrade_avaliacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2102,22 +2112,22 @@ CREATE TABLE dbgrade_avaliacoes (
 
 
 --
--- TOC entry 2175 (class 1259 OID 17307)
--- Dependencies: 2174 7
+-- TOC entry 266 (class 1259 OID 17298)
+-- Dependencies: 265 7
 -- Name: dbgrade_avaliacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbgrade_avaliacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4085 (class 0 OID 0)
--- Dependencies: 2175
+-- TOC entry 5260 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: dbgrade_avaliacoes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -2125,7 +2135,7 @@ ALTER SEQUENCE dbgrade_avaliacoes_id_seq OWNED BY dbgrade_avaliacoes.id;
 
 
 --
--- TOC entry 2176 (class 1259 OID 17309)
+-- TOC entry 267 (class 1259 OID 17300)
 -- Dependencies: 7
 -- Name: dbpaises_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2133,13 +2143,13 @@ ALTER SEQUENCE dbgrade_avaliacoes_id_seq OWNED BY dbgrade_avaliacoes.id;
 CREATE SEQUENCE dbpaises_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2177 (class 1259 OID 17311)
+-- TOC entry 268 (class 1259 OID 17302)
 -- Dependencies: 7
 -- Name: dbpatrimonios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2147,14 +2157,14 @@ CREATE SEQUENCE dbpaises_id_seq
 CREATE SEQUENCE dbpatrimonios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2178 (class 1259 OID 17313)
--- Dependencies: 3013 3014 3015 3016 3017 3018 3019 3020 7
+-- TOC entry 269 (class 1259 OID 17304)
+-- Dependencies: 4175 4176 4177 4178 4179 4180 4181 4182 7
 -- Name: dbpatrimonios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2185,7 +2195,7 @@ CREATE TABLE dbpatrimonios (
 
 
 --
--- TOC entry 2179 (class 1259 OID 17327)
+-- TOC entry 270 (class 1259 OID 17318)
 -- Dependencies: 7
 -- Name: dbpatrimonios_livros_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2193,14 +2203,14 @@ CREATE TABLE dbpatrimonios (
 CREATE SEQUENCE dbpatrimonios_livros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2180 (class 1259 OID 17329)
--- Dependencies: 3021 3022 3023 3024 3025 7
+-- TOC entry 271 (class 1259 OID 17320)
+-- Dependencies: 4183 4184 4185 4186 4187 7
 -- Name: dbpatrimonios_livros; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2229,7 +2239,7 @@ CREATE TABLE dbpatrimonios_livros (
 
 
 --
--- TOC entry 2181 (class 1259 OID 17340)
+-- TOC entry 272 (class 1259 OID 17331)
 -- Dependencies: 7
 -- Name: dbpessoas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2237,14 +2247,14 @@ CREATE TABLE dbpatrimonios_livros (
 CREATE SEQUENCE dbpessoas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2182 (class 1259 OID 17342)
--- Dependencies: 3026 3027 3028 3029 3030 3031 3032 3033 3034 3035 7
+-- TOC entry 273 (class 1259 OID 17333)
+-- Dependencies: 4188 4189 4190 4191 4192 4193 4194 4195 4196 4197 7
 -- Name: dbpessoas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2283,7 +2293,7 @@ CREATE TABLE dbpessoas (
 
 
 --
--- TOC entry 2183 (class 1259 OID 17358)
+-- TOC entry 274 (class 1259 OID 17349)
 -- Dependencies: 7
 -- Name: dbpessoas_alunos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2291,14 +2301,14 @@ CREATE TABLE dbpessoas (
 CREATE SEQUENCE dbpessoas_alunos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2184 (class 1259 OID 17360)
--- Dependencies: 3036 3037 3038 3039 3040 7
+-- TOC entry 275 (class 1259 OID 17351)
+-- Dependencies: 4198 4199 4200 4201 4202 7
 -- Name: dbpessoas_alunos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2317,7 +2327,7 @@ CREATE TABLE dbpessoas_alunos (
 
 
 --
--- TOC entry 2185 (class 1259 OID 17368)
+-- TOC entry 276 (class 1259 OID 17359)
 -- Dependencies: 7
 -- Name: dbpessoas_complemento_pf_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2325,14 +2335,14 @@ CREATE TABLE dbpessoas_alunos (
 CREATE SEQUENCE dbpessoas_complemento_pf_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2186 (class 1259 OID 17370)
--- Dependencies: 3041 3042 3043 3044 3045 7
+-- TOC entry 277 (class 1259 OID 17361)
+-- Dependencies: 4203 4204 4205 4206 4207 7
 -- Name: dbpessoas_complemento_pf; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2360,7 +2370,7 @@ CREATE TABLE dbpessoas_complemento_pf (
 
 
 --
--- TOC entry 2187 (class 1259 OID 17381)
+-- TOC entry 278 (class 1259 OID 17372)
 -- Dependencies: 7
 -- Name: dbpessoas_complemento_pj_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2368,14 +2378,14 @@ CREATE TABLE dbpessoas_complemento_pf (
 CREATE SEQUENCE dbpessoas_complemento_pj_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2188 (class 1259 OID 17383)
--- Dependencies: 3046 3047 3048 3049 3050 7
+-- TOC entry 279 (class 1259 OID 17374)
+-- Dependencies: 4208 4209 4210 4211 4212 7
 -- Name: dbpessoas_complemento_pj; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2395,7 +2405,7 @@ CREATE TABLE dbpessoas_complemento_pj (
 
 
 --
--- TOC entry 2189 (class 1259 OID 17394)
+-- TOC entry 280 (class 1259 OID 17385)
 -- Dependencies: 7
 -- Name: dbpessoas_convenios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2403,14 +2413,14 @@ CREATE TABLE dbpessoas_complemento_pj (
 CREATE SEQUENCE dbpessoas_convenios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2190 (class 1259 OID 17396)
--- Dependencies: 3051 3052 3053 3054 3055 7
+-- TOC entry 281 (class 1259 OID 17387)
+-- Dependencies: 4213 4214 4215 4216 4217 7
 -- Name: dbpessoas_convenios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2427,7 +2437,7 @@ CREATE TABLE dbpessoas_convenios (
 
 
 --
--- TOC entry 2191 (class 1259 OID 17404)
+-- TOC entry 282 (class 1259 OID 17395)
 -- Dependencies: 7
 -- Name: dbpessoas_demandas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2435,14 +2445,14 @@ CREATE TABLE dbpessoas_convenios (
 CREATE SEQUENCE dbpessoas_demandas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2192 (class 1259 OID 17406)
--- Dependencies: 3056 3057 3058 3059 3060 7
+-- TOC entry 283 (class 1259 OID 17397)
+-- Dependencies: 4218 4219 4220 4221 4222 7
 -- Name: dbpessoas_demandas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2460,7 +2470,7 @@ CREATE TABLE dbpessoas_demandas (
 
 
 --
--- TOC entry 2193 (class 1259 OID 17414)
+-- TOC entry 284 (class 1259 OID 17405)
 -- Dependencies: 7
 -- Name: dbpessoas_enderecoscobrancas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2468,14 +2478,14 @@ CREATE TABLE dbpessoas_demandas (
 CREATE SEQUENCE dbpessoas_enderecoscobrancas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2194 (class 1259 OID 17416)
--- Dependencies: 3061 3062 3063 3064 3065 7
+-- TOC entry 285 (class 1259 OID 17407)
+-- Dependencies: 4223 4224 4225 4226 4227 7
 -- Name: dbpessoas_enderecoscobrancas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2497,7 +2507,7 @@ CREATE TABLE dbpessoas_enderecoscobrancas (
 
 
 --
--- TOC entry 2195 (class 1259 OID 17427)
+-- TOC entry 286 (class 1259 OID 17418)
 -- Dependencies: 7
 -- Name: dbpessoas_formacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2505,14 +2515,14 @@ CREATE TABLE dbpessoas_enderecoscobrancas (
 CREATE SEQUENCE dbpessoas_formacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2196 (class 1259 OID 17429)
--- Dependencies: 3066 3067 3068 3069 3070 7
+-- TOC entry 287 (class 1259 OID 17420)
+-- Dependencies: 4228 4229 4230 4231 4232 7
 -- Name: dbpessoas_formacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2533,7 +2543,7 @@ CREATE TABLE dbpessoas_formacoes (
 
 
 --
--- TOC entry 2197 (class 1259 OID 17440)
+-- TOC entry 288 (class 1259 OID 17431)
 -- Dependencies: 7
 -- Name: dbpessoas_funcionarios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2541,14 +2551,14 @@ CREATE TABLE dbpessoas_formacoes (
 CREATE SEQUENCE dbpessoas_funcionarios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2198 (class 1259 OID 17442)
--- Dependencies: 3071 3072 3073 3074 3075 7
+-- TOC entry 289 (class 1259 OID 17433)
+-- Dependencies: 4233 4234 4235 4236 4237 7
 -- Name: dbpessoas_funcionarios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2589,7 +2599,7 @@ CREATE TABLE dbpessoas_funcionarios (
 
 
 --
--- TOC entry 2199 (class 1259 OID 17453)
+-- TOC entry 290 (class 1259 OID 17444)
 -- Dependencies: 7
 -- Name: dbpessoas_inscricoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2597,14 +2607,14 @@ CREATE TABLE dbpessoas_funcionarios (
 CREATE SEQUENCE dbpessoas_inscricoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2200 (class 1259 OID 17455)
--- Dependencies: 3076 3077 3078 3079 3080 3081 7
+-- TOC entry 291 (class 1259 OID 17446)
+-- Dependencies: 4238 4239 4240 4241 4242 4243 7
 -- Name: dbpessoas_inscricoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2626,7 +2636,7 @@ CREATE TABLE dbpessoas_inscricoes (
 
 
 --
--- TOC entry 2201 (class 1259 OID 17464)
+-- TOC entry 292 (class 1259 OID 17455)
 -- Dependencies: 7
 -- Name: dbpessoas_livros_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2634,14 +2644,14 @@ CREATE TABLE dbpessoas_inscricoes (
 CREATE SEQUENCE dbpessoas_livros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2202 (class 1259 OID 17466)
--- Dependencies: 3082 3083 3084 3085 3086 3087 3088 3089 3090 3091 7
+-- TOC entry 293 (class 1259 OID 17457)
+-- Dependencies: 4244 4245 4246 4247 4248 4249 4250 4251 4252 4253 7
 -- Name: dbpessoas_livros; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2663,7 +2673,7 @@ CREATE TABLE dbpessoas_livros (
 
 
 --
--- TOC entry 2203 (class 1259 OID 17479)
+-- TOC entry 294 (class 1259 OID 17470)
 -- Dependencies: 7
 -- Name: dbpessoas_solicitacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2671,14 +2681,14 @@ CREATE TABLE dbpessoas_livros (
 CREATE SEQUENCE dbpessoas_solicitacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2204 (class 1259 OID 17481)
--- Dependencies: 3092 3093 3094 3095 3096 7
+-- TOC entry 295 (class 1259 OID 17472)
+-- Dependencies: 4254 4255 4256 4257 4258 7
 -- Name: dbpessoas_solicitacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2701,7 +2711,7 @@ CREATE TABLE dbpessoas_solicitacoes (
 
 
 --
--- TOC entry 2205 (class 1259 OID 17492)
+-- TOC entry 296 (class 1259 OID 17483)
 -- Dependencies: 7
 -- Name: dbpessoas_titularidades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2709,14 +2719,14 @@ CREATE TABLE dbpessoas_solicitacoes (
 CREATE SEQUENCE dbpessoas_titularidades_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2206 (class 1259 OID 17494)
--- Dependencies: 3097 3098 3099 3100 3101 7
+-- TOC entry 297 (class 1259 OID 17485)
+-- Dependencies: 4259 4260 4261 4262 4263 7
 -- Name: dbpessoas_titularidades; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2733,7 +2743,7 @@ CREATE TABLE dbpessoas_titularidades (
 
 
 --
--- TOC entry 2207 (class 1259 OID 17502)
+-- TOC entry 298 (class 1259 OID 17493)
 -- Dependencies: 7
 -- Name: dbplano_contas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2741,14 +2751,14 @@ CREATE TABLE dbpessoas_titularidades (
 CREATE SEQUENCE dbplano_contas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2208 (class 1259 OID 17504)
--- Dependencies: 3102 3103 3104 3105 3106 3107 3108 7
+-- TOC entry 299 (class 1259 OID 17495)
+-- Dependencies: 4264 4265 4266 4267 4268 4269 4270 7
 -- Name: dbplano_contas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2769,7 +2779,7 @@ CREATE TABLE dbplano_contas (
 
 
 --
--- TOC entry 2209 (class 1259 OID 17517)
+-- TOC entry 300 (class 1259 OID 17508)
 -- Dependencies: 7
 -- Name: dbprocessos_academicos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2777,14 +2787,14 @@ CREATE TABLE dbplano_contas (
 CREATE SEQUENCE dbprocessos_academicos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2210 (class 1259 OID 17519)
--- Dependencies: 3109 3110 3111 3112 3113 7
+-- TOC entry 301 (class 1259 OID 17510)
+-- Dependencies: 4271 4272 4273 4274 4275 7
 -- Name: dbprocessos_academicos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2804,7 +2814,7 @@ CREATE TABLE dbprocessos_academicos (
 
 
 --
--- TOC entry 2211 (class 1259 OID 17530)
+-- TOC entry 302 (class 1259 OID 17521)
 -- Dependencies: 7
 -- Name: dbprodutos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2812,14 +2822,14 @@ CREATE TABLE dbprocessos_academicos (
 CREATE SEQUENCE dbprodutos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2212 (class 1259 OID 17532)
--- Dependencies: 3114 3115 3116 3117 3118 3119 3120 7
+-- TOC entry 303 (class 1259 OID 17523)
+-- Dependencies: 4276 4277 4278 4279 4280 4281 4282 7
 -- Name: dbprodutos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2841,7 +2851,7 @@ CREATE TABLE dbprodutos (
 
 
 --
--- TOC entry 2213 (class 1259 OID 17545)
+-- TOC entry 304 (class 1259 OID 17536)
 -- Dependencies: 7
 -- Name: dbprodutos_caracteristicas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2849,14 +2859,14 @@ CREATE TABLE dbprodutos (
 CREATE SEQUENCE dbprodutos_caracteristicas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2214 (class 1259 OID 17547)
--- Dependencies: 3121 3122 3123 3124 3125 7
+-- TOC entry 305 (class 1259 OID 17538)
+-- Dependencies: 4283 4284 4285 4286 4287 7
 -- Name: dbprodutos_caracteristicas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2883,7 +2893,7 @@ CREATE TABLE dbprodutos_caracteristicas (
 
 
 --
--- TOC entry 2215 (class 1259 OID 17558)
+-- TOC entry 306 (class 1259 OID 17549)
 -- Dependencies: 7
 -- Name: dbprodutos_financeiro_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2891,13 +2901,13 @@ CREATE TABLE dbprodutos_caracteristicas (
 CREATE SEQUENCE dbprodutos_financeiro_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2216 (class 1259 OID 17560)
+-- TOC entry 307 (class 1259 OID 17551)
 -- Dependencies: 7
 -- Name: dbprodutos_formulacao_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2905,13 +2915,13 @@ CREATE SEQUENCE dbprodutos_financeiro_id_seq
 CREATE SEQUENCE dbprodutos_formulacao_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2217 (class 1259 OID 17562)
+-- TOC entry 308 (class 1259 OID 17553)
 -- Dependencies: 7
 -- Name: dbprodutos_midia_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2919,13 +2929,13 @@ CREATE SEQUENCE dbprodutos_formulacao_id_seq
 CREATE SEQUENCE dbprodutos_midia_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2218 (class 1259 OID 17564)
+-- TOC entry 309 (class 1259 OID 17555)
 -- Dependencies: 7
 -- Name: dbprodutos_parametros_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2933,14 +2943,14 @@ CREATE SEQUENCE dbprodutos_midia_id_seq
 CREATE SEQUENCE dbprodutos_parametros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2219 (class 1259 OID 17566)
--- Dependencies: 3126 3127 3128 3129 3130 7
+-- TOC entry 310 (class 1259 OID 17557)
+-- Dependencies: 4288 4289 4290 4291 4292 7
 -- Name: dbprodutos_parametros; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2961,7 +2971,7 @@ CREATE TABLE dbprodutos_parametros (
 
 
 --
--- TOC entry 2220 (class 1259 OID 17577)
+-- TOC entry 311 (class 1259 OID 17568)
 -- Dependencies: 7
 -- Name: dbprodutos_tabelapreco_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -2969,14 +2979,14 @@ CREATE TABLE dbprodutos_parametros (
 CREATE SEQUENCE dbprodutos_tabelapreco_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2221 (class 1259 OID 17579)
--- Dependencies: 3131 3132 3133 3134 3135 7
+-- TOC entry 312 (class 1259 OID 17570)
+-- Dependencies: 4293 4294 4295 4296 4297 7
 -- Name: dbprodutos_tabelapreco; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -2999,7 +3009,7 @@ CREATE TABLE dbprodutos_tabelapreco (
 
 
 --
--- TOC entry 2222 (class 1259 OID 17587)
+-- TOC entry 313 (class 1259 OID 17578)
 -- Dependencies: 7
 -- Name: dbprodutos_tipos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3007,14 +3017,14 @@ CREATE TABLE dbprodutos_tabelapreco (
 CREATE SEQUENCE dbprodutos_tipos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2223 (class 1259 OID 17589)
--- Dependencies: 3136 3137 3138 3139 3140 7
+-- TOC entry 314 (class 1259 OID 17580)
+-- Dependencies: 4298 4299 4300 4301 4302 7
 -- Name: dbprodutos_tipos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3031,7 +3041,7 @@ CREATE TABLE dbprodutos_tipos (
 
 
 --
--- TOC entry 2224 (class 1259 OID 17600)
+-- TOC entry 315 (class 1259 OID 17591)
 -- Dependencies: 7
 -- Name: dbprodutos_tributos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3039,14 +3049,14 @@ CREATE TABLE dbprodutos_tipos (
 CREATE SEQUENCE dbprodutos_tributos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2225 (class 1259 OID 17602)
--- Dependencies: 3141 3142 3143 3144 3145 7
+-- TOC entry 316 (class 1259 OID 17593)
+-- Dependencies: 4303 4304 4305 4306 4307 7
 -- Name: dbprodutos_tributos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3064,7 +3074,7 @@ CREATE TABLE dbprodutos_tributos (
 
 
 --
--- TOC entry 2226 (class 1259 OID 17610)
+-- TOC entry 317 (class 1259 OID 17601)
 -- Dependencies: 7
 -- Name: dbprofessores_areas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3072,14 +3082,14 @@ CREATE TABLE dbprodutos_tributos (
 CREATE SEQUENCE dbprofessores_areas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2227 (class 1259 OID 17612)
--- Dependencies: 3146 3147 3148 3149 3150 7
+-- TOC entry 318 (class 1259 OID 17603)
+-- Dependencies: 4308 4309 4310 4311 4312 7
 -- Name: dbprofessores_areas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3096,7 +3106,7 @@ CREATE TABLE dbprofessores_areas (
 
 
 --
--- TOC entry 2228 (class 1259 OID 17620)
+-- TOC entry 319 (class 1259 OID 17611)
 -- Dependencies: 7
 -- Name: dbprojetos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3104,14 +3114,14 @@ CREATE TABLE dbprofessores_areas (
 CREATE SEQUENCE dbprojetos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2229 (class 1259 OID 17622)
--- Dependencies: 3151 3152 3153 3154 3155 7
+-- TOC entry 320 (class 1259 OID 17613)
+-- Dependencies: 4313 4314 4315 4316 4317 7
 -- Name: dbprojetos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3143,7 +3153,7 @@ CREATE TABLE dbprojetos (
 
 
 --
--- TOC entry 2230 (class 1259 OID 17633)
+-- TOC entry 321 (class 1259 OID 17624)
 -- Dependencies: 7
 -- Name: dbprojetos_colaboradores_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3151,14 +3161,14 @@ CREATE TABLE dbprojetos (
 CREATE SEQUENCE dbprojetos_colaboradores_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2231 (class 1259 OID 17635)
--- Dependencies: 3156 3157 3158 3159 3160 7
+-- TOC entry 322 (class 1259 OID 17626)
+-- Dependencies: 4318 4319 4320 4321 4322 7
 -- Name: dbprojetos_colaboradores; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3176,7 +3186,7 @@ CREATE TABLE dbprojetos_colaboradores (
 
 
 --
--- TOC entry 2232 (class 1259 OID 17643)
+-- TOC entry 323 (class 1259 OID 17634)
 -- Dependencies: 7
 -- Name: dbprojetos_custos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3184,14 +3194,14 @@ CREATE TABLE dbprojetos_colaboradores (
 CREATE SEQUENCE dbprojetos_custos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2233 (class 1259 OID 17645)
--- Dependencies: 3161 3162 3163 3164 3165 7
+-- TOC entry 324 (class 1259 OID 17636)
+-- Dependencies: 4323 4324 4325 4326 4327 7
 -- Name: dbprojetos_custos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3209,7 +3219,7 @@ CREATE TABLE dbprojetos_custos (
 
 
 --
--- TOC entry 2234 (class 1259 OID 17653)
+-- TOC entry 325 (class 1259 OID 17644)
 -- Dependencies: 7
 -- Name: dbprojetos_recursos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3217,14 +3227,14 @@ CREATE TABLE dbprojetos_custos (
 CREATE SEQUENCE dbprojetos_recursos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2235 (class 1259 OID 17655)
--- Dependencies: 3166 3167 3168 3169 3170 7
+-- TOC entry 326 (class 1259 OID 17646)
+-- Dependencies: 4328 4329 4330 4331 4332 7
 -- Name: dbprojetos_recursos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3245,7 +3255,7 @@ CREATE TABLE dbprojetos_recursos (
 
 
 --
--- TOC entry 2236 (class 1259 OID 17663)
+-- TOC entry 327 (class 1259 OID 17654)
 -- Dependencies: 7
 -- Name: dbquestionarios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3253,14 +3263,14 @@ CREATE TABLE dbprojetos_recursos (
 CREATE SEQUENCE dbquestionarios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2237 (class 1259 OID 17665)
--- Dependencies: 3171 3172 3173 3174 3175 7
+-- TOC entry 328 (class 1259 OID 17656)
+-- Dependencies: 4333 4334 4335 4336 4337 7
 -- Name: dbquestionarios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3282,7 +3292,7 @@ CREATE TABLE dbquestionarios (
 
 
 --
--- TOC entry 2238 (class 1259 OID 17676)
+-- TOC entry 329 (class 1259 OID 17667)
 -- Dependencies: 7
 -- Name: dbquestoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3290,14 +3300,14 @@ CREATE TABLE dbquestionarios (
 CREATE SEQUENCE dbquestoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2239 (class 1259 OID 17678)
--- Dependencies: 3176 3177 3178 3179 3180 7
+-- TOC entry 330 (class 1259 OID 17669)
+-- Dependencies: 4338 4339 4340 4341 4342 7
 -- Name: dbquestoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3317,7 +3327,7 @@ CREATE TABLE dbquestoes (
 
 
 --
--- TOC entry 2240 (class 1259 OID 17689)
+-- TOC entry 331 (class 1259 OID 17680)
 -- Dependencies: 7
 -- Name: dbquestoes_itens_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3325,14 +3335,14 @@ CREATE TABLE dbquestoes (
 CREATE SEQUENCE dbquestoes_itens_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2241 (class 1259 OID 17691)
--- Dependencies: 3181 3182 3183 3184 3185 7
+-- TOC entry 332 (class 1259 OID 17682)
+-- Dependencies: 4343 4344 4345 4346 4347 7
 -- Name: dbquestoes_itens; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3351,7 +3361,7 @@ CREATE TABLE dbquestoes_itens (
 
 
 --
--- TOC entry 2242 (class 1259 OID 17702)
+-- TOC entry 333 (class 1259 OID 17693)
 -- Dependencies: 7
 -- Name: dbrecados_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3359,14 +3369,14 @@ CREATE TABLE dbquestoes_itens (
 CREATE SEQUENCE dbrecados_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2243 (class 1259 OID 17704)
--- Dependencies: 3186 3187 3188 3189 3190 3191 7
+-- TOC entry 334 (class 1259 OID 17695)
+-- Dependencies: 4348 4349 4350 4351 4352 4353 7
 -- Name: dbrecados; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3390,7 +3400,7 @@ CREATE TABLE dbrecados (
 
 
 --
--- TOC entry 2244 (class 1259 OID 17716)
+-- TOC entry 335 (class 1259 OID 17707)
 -- Dependencies: 7
 -- Name: dbsalas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3398,14 +3408,14 @@ CREATE TABLE dbrecados (
 CREATE SEQUENCE dbsalas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2245 (class 1259 OID 17718)
--- Dependencies: 3192 3193 3194 3195 3196 3197 7
+-- TOC entry 336 (class 1259 OID 17709)
+-- Dependencies: 4354 4355 4356 4357 4358 4359 7
 -- Name: dbsalas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3426,7 +3436,7 @@ CREATE TABLE dbsalas (
 
 
 --
--- TOC entry 2246 (class 1259 OID 17730)
+-- TOC entry 337 (class 1259 OID 17721)
 -- Dependencies: 7
 -- Name: dbscorecard_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3434,14 +3444,14 @@ CREATE TABLE dbsalas (
 CREATE SEQUENCE dbscorecard_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2247 (class 1259 OID 17732)
--- Dependencies: 3198 3199 3200 3201 3202 7
+-- TOC entry 338 (class 1259 OID 17723)
+-- Dependencies: 4360 4361 4362 4363 4364 7
 -- Name: dbscorecard; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3461,7 +3471,7 @@ CREATE TABLE dbscorecard (
 
 
 --
--- TOC entry 2248 (class 1259 OID 17740)
+-- TOC entry 339 (class 1259 OID 17731)
 -- Dependencies: 7
 -- Name: dbscorecard_sentencas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3469,14 +3479,14 @@ CREATE TABLE dbscorecard (
 CREATE SEQUENCE dbscorecard_sentencas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2249 (class 1259 OID 17742)
--- Dependencies: 3203 3204 3205 3206 3207 7
+-- TOC entry 340 (class 1259 OID 17733)
+-- Dependencies: 4365 4366 4367 4368 4369 7
 -- Name: dbscorecard_sentencas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3497,7 +3507,7 @@ CREATE TABLE dbscorecard_sentencas (
 
 
 --
--- TOC entry 2250 (class 1259 OID 17753)
+-- TOC entry 341 (class 1259 OID 17744)
 -- Dependencies: 7
 -- Name: dbstatus; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
@@ -3510,22 +3520,22 @@ CREATE TABLE dbstatus (
 
 
 --
--- TOC entry 2251 (class 1259 OID 17759)
--- Dependencies: 2250 7
+-- TOC entry 342 (class 1259 OID 17750)
+-- Dependencies: 341 7
 -- Name: dbstatus_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbstatus_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4086 (class 0 OID 0)
--- Dependencies: 2251
+-- TOC entry 5261 (class 0 OID 0)
+-- Dependencies: 342
 -- Name: dbstatus_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -3533,7 +3543,7 @@ ALTER SEQUENCE dbstatus_id_seq OWNED BY dbstatus.id;
 
 
 --
--- TOC entry 2252 (class 1259 OID 17761)
+-- TOC entry 343 (class 1259 OID 17752)
 -- Dependencies: 7
 -- Name: dbtransacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3541,14 +3551,14 @@ ALTER SEQUENCE dbstatus_id_seq OWNED BY dbstatus.id;
 CREATE SEQUENCE dbtransacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2253 (class 1259 OID 17763)
--- Dependencies: 3209 3210 3211 3212 3213 3214 3215 3216 3217 3218 3219 3220 7
+-- TOC entry 344 (class 1259 OID 17754)
+-- Dependencies: 4371 4372 4373 4374 4375 4376 4377 4378 4379 4380 4381 4382 7
 -- Name: dbtransacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3577,7 +3587,7 @@ CREATE TABLE dbtransacoes (
 
 
 --
--- TOC entry 2254 (class 1259 OID 17781)
+-- TOC entry 345 (class 1259 OID 17772)
 -- Dependencies: 7
 -- Name: dbtransacoes_contas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3585,14 +3595,14 @@ CREATE TABLE dbtransacoes (
 CREATE SEQUENCE dbtransacoes_contas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2255 (class 1259 OID 17783)
--- Dependencies: 3221 3222 3223 3224 3225 3226 3227 3228 7
+-- TOC entry 346 (class 1259 OID 17774)
+-- Dependencies: 4383 4384 4385 4386 4387 4388 4389 4390 7
 -- Name: dbtransacoes_contas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3619,8 +3629,8 @@ CREATE TABLE dbtransacoes_contas (
 
 
 --
--- TOC entry 4087 (class 0 OID 0)
--- Dependencies: 2255
+-- TOC entry 5262 (class 0 OID 0)
+-- Dependencies: 346
 -- Name: COLUMN dbtransacoes_contas.statusconta; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -3635,8 +3645,8 @@ COMMENT ON COLUMN dbtransacoes_contas.statusconta IS 'Status da conta
 
 
 --
--- TOC entry 4088 (class 0 OID 0)
--- Dependencies: 2255
+-- TOC entry 5263 (class 0 OID 0)
+-- Dependencies: 346
 -- Name: COLUMN dbtransacoes_contas.valorreal; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -3644,7 +3654,7 @@ COMMENT ON COLUMN dbtransacoes_contas.valorreal IS 'Valor real da conta, conside
 
 
 --
--- TOC entry 2256 (class 1259 OID 17797)
+-- TOC entry 347 (class 1259 OID 17788)
 -- Dependencies: 7
 -- Name: dbtransacoes_contas_duplicatas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3652,14 +3662,14 @@ COMMENT ON COLUMN dbtransacoes_contas.valorreal IS 'Valor real da conta, conside
 CREATE SEQUENCE dbtransacoes_contas_duplicatas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2257 (class 1259 OID 17799)
--- Dependencies: 3229 3230 3231 3232 3233 3234 3235 7
+-- TOC entry 348 (class 1259 OID 17790)
+-- Dependencies: 4391 4392 4393 4394 4395 4396 4397 7
 -- Name: dbtransacoes_contas_duplicatas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3686,7 +3696,7 @@ CREATE TABLE dbtransacoes_contas_duplicatas (
 
 
 --
--- TOC entry 2258 (class 1259 OID 17812)
+-- TOC entry 349 (class 1259 OID 17803)
 -- Dependencies: 7
 -- Name: dbtransacoes_contas_extornos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3694,14 +3704,14 @@ CREATE TABLE dbtransacoes_contas_duplicatas (
 CREATE SEQUENCE dbtransacoes_contas_extornos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2259 (class 1259 OID 17814)
--- Dependencies: 3236 3237 3238 3239 3240 3241 7
+-- TOC entry 350 (class 1259 OID 17805)
+-- Dependencies: 4398 4399 4400 4401 4402 4403 7
 -- Name: dbtransacoes_contas_extornos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3721,8 +3731,8 @@ CREATE TABLE dbtransacoes_contas_extornos (
 
 
 --
--- TOC entry 2382 (class 1259 OID 20275)
--- Dependencies: 3385 3386 3387 3388 7
+-- TOC entry 351 (class 1259 OID 17814)
+-- Dependencies: 4405 4406 4407 4408 7
 -- Name: dbtransacoes_contas_situacao; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3739,22 +3749,22 @@ CREATE TABLE dbtransacoes_contas_situacao (
 
 
 --
--- TOC entry 2381 (class 1259 OID 20273)
--- Dependencies: 2382 7
+-- TOC entry 352 (class 1259 OID 17824)
+-- Dependencies: 351 7
 -- Name: dbtransacoes_contas_situacao_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbtransacoes_contas_situacao_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4089 (class 0 OID 0)
--- Dependencies: 2381
+-- TOC entry 5264 (class 0 OID 0)
+-- Dependencies: 352
 -- Name: dbtransacoes_contas_situacao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -3762,8 +3772,8 @@ ALTER SEQUENCE dbtransacoes_contas_situacao_id_seq OWNED BY dbtransacoes_contas_
 
 
 --
--- TOC entry 2260 (class 1259 OID 17823)
--- Dependencies: 3243 3244 3245 3246 7
+-- TOC entry 353 (class 1259 OID 17826)
+-- Dependencies: 4410 4411 4412 4413 7
 -- Name: dbtransacoes_convenios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3780,22 +3790,22 @@ CREATE TABLE dbtransacoes_convenios (
 
 
 --
--- TOC entry 2261 (class 1259 OID 17830)
--- Dependencies: 2260 7
+-- TOC entry 354 (class 1259 OID 17833)
+-- Dependencies: 353 7
 -- Name: dbtransacoes_convenios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbtransacoes_convenios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4090 (class 0 OID 0)
--- Dependencies: 2261
+-- TOC entry 5265 (class 0 OID 0)
+-- Dependencies: 354
 -- Name: dbtransacoes_convenios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -3803,7 +3813,7 @@ ALTER SEQUENCE dbtransacoes_convenios_id_seq OWNED BY dbtransacoes_convenios.id;
 
 
 --
--- TOC entry 2262 (class 1259 OID 17832)
+-- TOC entry 355 (class 1259 OID 17835)
 -- Dependencies: 7
 -- Name: dbtransacoes_produtos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3811,14 +3821,14 @@ ALTER SEQUENCE dbtransacoes_convenios_id_seq OWNED BY dbtransacoes_convenios.id;
 CREATE SEQUENCE dbtransacoes_produtos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2263 (class 1259 OID 17834)
--- Dependencies: 3247 3248 3249 3250 3251 3252 3253 7
+-- TOC entry 356 (class 1259 OID 17837)
+-- Dependencies: 4414 4415 4416 4417 4418 4419 4420 7
 -- Name: dbtransacoes_produtos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3839,7 +3849,7 @@ CREATE TABLE dbtransacoes_produtos (
 
 
 --
--- TOC entry 2264 (class 1259 OID 17847)
+-- TOC entry 357 (class 1259 OID 17850)
 -- Dependencies: 7
 -- Name: dbtreinamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3847,14 +3857,14 @@ CREATE TABLE dbtransacoes_produtos (
 CREATE SEQUENCE dbtreinamentos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2265 (class 1259 OID 17849)
--- Dependencies: 3254 3255 3256 3257 3258 7
+-- TOC entry 358 (class 1259 OID 17852)
+-- Dependencies: 4421 4422 4423 4424 4425 7
 -- Name: dbtreinamentos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3876,7 +3886,7 @@ CREATE TABLE dbtreinamentos (
 
 
 --
--- TOC entry 2266 (class 1259 OID 17860)
+-- TOC entry 359 (class 1259 OID 17863)
 -- Dependencies: 7
 -- Name: dbtributos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3884,14 +3894,14 @@ CREATE TABLE dbtreinamentos (
 CREATE SEQUENCE dbtributos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2267 (class 1259 OID 17862)
--- Dependencies: 3259 3260 3261 3262 3263 7
+-- TOC entry 360 (class 1259 OID 17865)
+-- Dependencies: 4426 4427 4428 4429 4430 7
 -- Name: dbtributos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3912,7 +3922,7 @@ CREATE TABLE dbtributos (
 
 
 --
--- TOC entry 2268 (class 1259 OID 17873)
+-- TOC entry 361 (class 1259 OID 17876)
 -- Dependencies: 7
 -- Name: dbturmas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -3920,14 +3930,14 @@ CREATE TABLE dbtributos (
 CREATE SEQUENCE dbturmas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2269 (class 1259 OID 17875)
--- Dependencies: 3264 3265 3266 3267 3268 3269 3270 3271 3272 3273 3274 3275 3276 3277 3278 3279 3280 3281 3282 3283 3284 3285 3286 3287 3288 7
+-- TOC entry 362 (class 1259 OID 17878)
+-- Dependencies: 4431 4432 4433 4434 4435 4436 4437 4438 4439 4440 4441 4442 4443 4444 4445 4446 4447 4448 4449 4450 4451 4452 4453 4454 4455 7
 -- Name: dbturmas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3976,8 +3986,8 @@ CREATE TABLE dbturmas (
 
 
 --
--- TOC entry 2270 (class 1259 OID 17906)
--- Dependencies: 3290 3291 3292 3293 7
+-- TOC entry 363 (class 1259 OID 17909)
+-- Dependencies: 4457 4458 4459 4460 7
 -- Name: dbturmas_convenios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3994,22 +4004,22 @@ CREATE TABLE dbturmas_convenios (
 
 
 --
--- TOC entry 2271 (class 1259 OID 17913)
--- Dependencies: 2270 7
+-- TOC entry 364 (class 1259 OID 17916)
+-- Dependencies: 363 7
 -- Name: dbturmas_convenios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbturmas_convenios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4091 (class 0 OID 0)
--- Dependencies: 2271
+-- TOC entry 5266 (class 0 OID 0)
+-- Dependencies: 364
 -- Name: dbturmas_convenios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -4017,7 +4027,7 @@ ALTER SEQUENCE dbturmas_convenios_id_seq OWNED BY dbturmas_convenios.id;
 
 
 --
--- TOC entry 2272 (class 1259 OID 17915)
+-- TOC entry 365 (class 1259 OID 17918)
 -- Dependencies: 7
 -- Name: dbturmas_descontos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4025,14 +4035,14 @@ ALTER SEQUENCE dbturmas_convenios_id_seq OWNED BY dbturmas_convenios.id;
 CREATE SEQUENCE dbturmas_descontos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2273 (class 1259 OID 17917)
--- Dependencies: 3294 3295 3296 3297 3298 7
+-- TOC entry 366 (class 1259 OID 17920)
+-- Dependencies: 4461 4462 4463 4464 4465 7
 -- Name: dbturmas_descontos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4052,8 +4062,8 @@ CREATE TABLE dbturmas_descontos (
 
 
 --
--- TOC entry 4092 (class 0 OID 0)
--- Dependencies: 2273
+-- TOC entry 5267 (class 0 OID 0)
+-- Dependencies: 366
 -- Name: COLUMN dbturmas_descontos.tipodesconto; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -4061,7 +4071,7 @@ COMMENT ON COLUMN dbturmas_descontos.tipodesconto IS '1 = Desconto Percentual / 
 
 
 --
--- TOC entry 2274 (class 1259 OID 17928)
+-- TOC entry 367 (class 1259 OID 17931)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4069,14 +4079,14 @@ COMMENT ON COLUMN dbturmas_descontos.tipodesconto IS '1 = Desconto Percentual / 
 CREATE SEQUENCE dbturmas_disciplinas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2275 (class 1259 OID 17930)
--- Dependencies: 3299 3300 3301 3302 3303 3304 3305 3306 3307 3308 3309 3310 7
+-- TOC entry 368 (class 1259 OID 17933)
+-- Dependencies: 4466 4467 4468 4469 4470 4471 4472 4473 4474 4475 4476 4477 7
 -- Name: dbturmas_disciplinas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4106,7 +4116,7 @@ CREATE TABLE dbturmas_disciplinas (
 
 
 --
--- TOC entry 2276 (class 1259 OID 17946)
+-- TOC entry 369 (class 1259 OID 17951)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_arquivos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4114,14 +4124,14 @@ CREATE TABLE dbturmas_disciplinas (
 CREATE SEQUENCE dbturmas_disciplinas_arquivos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2277 (class 1259 OID 17948)
--- Dependencies: 3311 3312 3313 3314 3315 3316 7
+-- TOC entry 370 (class 1259 OID 17953)
+-- Dependencies: 4478 4479 4480 4481 4482 4483 7
 -- Name: dbturmas_disciplinas_arquivos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4142,7 +4152,7 @@ CREATE TABLE dbturmas_disciplinas_arquivos (
 
 
 --
--- TOC entry 2278 (class 1259 OID 17960)
+-- TOC entry 371 (class 1259 OID 17965)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_aulas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4150,14 +4160,14 @@ CREATE TABLE dbturmas_disciplinas_arquivos (
 CREATE SEQUENCE dbturmas_disciplinas_aulas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2279 (class 1259 OID 17962)
--- Dependencies: 3317 3318 3319 3320 3321 3322 7
+-- TOC entry 372 (class 1259 OID 17967)
+-- Dependencies: 4484 4485 4486 4487 4488 4489 7
 -- Name: dbturmas_disciplinas_aulas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4177,8 +4187,8 @@ CREATE TABLE dbturmas_disciplinas_aulas (
 
 
 --
--- TOC entry 2280 (class 1259 OID 17974)
--- Dependencies: 3324 3325 3326 3327 7
+-- TOC entry 373 (class 1259 OID 17979)
+-- Dependencies: 4491 4492 4493 4494 7
 -- Name: dbturmas_disciplinas_avaliacao_detalhamento; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4197,22 +4207,22 @@ CREATE TABLE dbturmas_disciplinas_avaliacao_detalhamento (
 
 
 --
--- TOC entry 2281 (class 1259 OID 17984)
--- Dependencies: 2280 7
+-- TOC entry 374 (class 1259 OID 17989)
+-- Dependencies: 373 7
 -- Name: dbturmas_disciplinas_avaliacao_detalhamento_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE dbturmas_disciplinas_avaliacao_detalhamento_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 4093 (class 0 OID 0)
--- Dependencies: 2281
+-- TOC entry 5268 (class 0 OID 0)
+-- Dependencies: 374
 -- Name: dbturmas_disciplinas_avaliacao_detalhamento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -4220,7 +4230,7 @@ ALTER SEQUENCE dbturmas_disciplinas_avaliacao_detalhamento_id_seq OWNED BY dbtur
 
 
 --
--- TOC entry 2282 (class 1259 OID 17986)
+-- TOC entry 375 (class 1259 OID 17991)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_avaliacoes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4228,14 +4238,14 @@ ALTER SEQUENCE dbturmas_disciplinas_avaliacao_detalhamento_id_seq OWNED BY dbtur
 CREATE SEQUENCE dbturmas_disciplinas_avaliacoes_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2283 (class 1259 OID 17988)
--- Dependencies: 3328 3329 3330 3331 3332 7
+-- TOC entry 376 (class 1259 OID 17993)
+-- Dependencies: 4495 4496 4497 4498 4499 7
 -- Name: dbturmas_disciplinas_avaliacoes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4256,7 +4266,7 @@ CREATE TABLE dbturmas_disciplinas_avaliacoes (
 
 
 --
--- TOC entry 2284 (class 1259 OID 17996)
+-- TOC entry 377 (class 1259 OID 18001)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_materiais_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4264,14 +4274,14 @@ CREATE TABLE dbturmas_disciplinas_avaliacoes (
 CREATE SEQUENCE dbturmas_disciplinas_materiais_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2285 (class 1259 OID 17998)
--- Dependencies: 3333 3334 3335 3336 3337 3338 7
+-- TOC entry 378 (class 1259 OID 18003)
+-- Dependencies: 4500 4501 4502 4503 4504 4505 7
 -- Name: dbturmas_disciplinas_materiais; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4290,7 +4300,7 @@ CREATE TABLE dbturmas_disciplinas_materiais (
 
 
 --
--- TOC entry 2286 (class 1259 OID 18010)
+-- TOC entry 379 (class 1259 OID 18015)
 -- Dependencies: 7
 -- Name: dbturmas_disciplinas_planoaulas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4298,14 +4308,14 @@ CREATE TABLE dbturmas_disciplinas_materiais (
 CREATE SEQUENCE dbturmas_disciplinas_planoaulas_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2287 (class 1259 OID 18012)
--- Dependencies: 3339 3340 3341 3342 3343 7
+-- TOC entry 380 (class 1259 OID 18017)
+-- Dependencies: 4506 4507 4508 4509 4510 7
 -- Name: dbturmas_disciplinas_planoaulas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4326,7 +4336,7 @@ CREATE TABLE dbturmas_disciplinas_planoaulas (
 
 
 --
--- TOC entry 2288 (class 1259 OID 18023)
+-- TOC entry 381 (class 1259 OID 18028)
 -- Dependencies: 7
 -- Name: dbturmas_requisitos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4334,14 +4344,14 @@ CREATE TABLE dbturmas_disciplinas_planoaulas (
 CREATE SEQUENCE dbturmas_requisitos_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2289 (class 1259 OID 18025)
--- Dependencies: 3344 3345 3346 3347 3348 3349 7
+-- TOC entry 382 (class 1259 OID 18030)
+-- Dependencies: 4511 4512 4513 4514 4515 4516 7
 -- Name: dbturmas_requisitos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4361,7 +4371,7 @@ CREATE TABLE dbturmas_requisitos (
 
 
 --
--- TOC entry 2290 (class 1259 OID 18037)
+-- TOC entry 383 (class 1259 OID 18042)
 -- Dependencies: 7
 -- Name: dbunidades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4369,14 +4379,14 @@ CREATE TABLE dbturmas_requisitos (
 CREATE SEQUENCE dbunidades_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2291 (class 1259 OID 18039)
--- Dependencies: 3350 3351 3352 3353 3354 7
+-- TOC entry 384 (class 1259 OID 18044)
+-- Dependencies: 4517 4518 4519 4520 4521 7
 -- Name: dbunidades; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4406,7 +4416,7 @@ CREATE TABLE dbunidades (
 
 
 --
--- TOC entry 2292 (class 1259 OID 18050)
+-- TOC entry 385 (class 1259 OID 18055)
 -- Dependencies: 7
 -- Name: dbunidades_parametros_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4414,14 +4424,14 @@ CREATE TABLE dbunidades (
 CREATE SEQUENCE dbunidades_parametros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2293 (class 1259 OID 18052)
--- Dependencies: 3355 3356 3357 3358 3359 7
+-- TOC entry 386 (class 1259 OID 18057)
+-- Dependencies: 4522 4523 4524 4525 4526 7
 -- Name: dbunidades_parametros; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4439,7 +4449,7 @@ CREATE TABLE dbunidades_parametros (
 
 
 --
--- TOC entry 2294 (class 1259 OID 18063)
+-- TOC entry 387 (class 1259 OID 18068)
 -- Dependencies: 7
 -- Name: dbusuarios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4447,14 +4457,14 @@ CREATE TABLE dbunidades_parametros (
 CREATE SEQUENCE dbusuarios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2295 (class 1259 OID 18065)
--- Dependencies: 3360 3361 3362 3363 3364 3365 3366 7
+-- TOC entry 388 (class 1259 OID 18070)
+-- Dependencies: 4527 4528 4529 4530 4531 4532 4533 7
 -- Name: dbusuarios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4478,7 +4488,7 @@ CREATE TABLE dbusuarios (
 
 
 --
--- TOC entry 2296 (class 1259 OID 18078)
+-- TOC entry 389 (class 1259 OID 18083)
 -- Dependencies: 7
 -- Name: dbusuarios_erros_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4486,14 +4496,14 @@ CREATE TABLE dbusuarios (
 CREATE SEQUENCE dbusuarios_erros_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2297 (class 1259 OID 18080)
--- Dependencies: 3367 3368 3369 3370 3371 7
+-- TOC entry 390 (class 1259 OID 18085)
+-- Dependencies: 4534 4535 4536 4537 4538 7
 -- Name: dbusuarios_erros; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4512,7 +4522,7 @@ CREATE TABLE dbusuarios_erros (
 
 
 --
--- TOC entry 2298 (class 1259 OID 18091)
+-- TOC entry 391 (class 1259 OID 18096)
 -- Dependencies: 7
 -- Name: dbusuarios_historico_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4520,14 +4530,14 @@ CREATE TABLE dbusuarios_erros (
 CREATE SEQUENCE dbusuarios_historico_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2299 (class 1259 OID 18093)
--- Dependencies: 3372 3373 3374 3375 3376 7
+-- TOC entry 392 (class 1259 OID 18098)
+-- Dependencies: 4539 4540 4541 4542 4543 7
 -- Name: dbusuarios_historico; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4546,7 +4556,7 @@ CREATE TABLE dbusuarios_historico (
 
 
 --
--- TOC entry 2300 (class 1259 OID 18104)
+-- TOC entry 393 (class 1259 OID 18109)
 -- Dependencies: 7
 -- Name: dbusuarios_privilegios_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -4554,14 +4564,14 @@ CREATE TABLE dbusuarios_historico (
 CREATE SEQUENCE dbusuarios_privilegios_id_seq
     START WITH 1
     INCREMENT BY 1
-    NO MAXVALUE
     NO MINVALUE
+    NO MAXVALUE
     CACHE 1;
 
 
 --
--- TOC entry 2301 (class 1259 OID 18106)
--- Dependencies: 3377 3378 3379 3380 3381 3382 3383 7
+-- TOC entry 394 (class 1259 OID 18111)
+-- Dependencies: 4544 4545 4546 4547 4548 4549 4550 7
 -- Name: dbusuarios_privilegios; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4580,8 +4590,8 @@ CREATE TABLE dbusuarios_privilegios (
 
 
 --
--- TOC entry 4094 (class 0 OID 0)
--- Dependencies: 2301
+-- TOC entry 5269 (class 0 OID 0)
+-- Dependencies: 394
 -- Name: COLUMN dbusuarios_privilegios.funcionalidade; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -4590,8 +4600,8 @@ Caso a funcionalidade seja o modulo principal o valor padrão é [0]';
 
 
 --
--- TOC entry 4095 (class 0 OID 0)
--- Dependencies: 2301
+-- TOC entry 5270 (class 0 OID 0)
+-- Dependencies: 394
 -- Name: COLUMN dbusuarios_privilegios.nivel; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -4614,8 +4624,51 @@ COMMENT ON COLUMN dbusuarios_privilegios.nivel IS 'Nivel de acesso na hierarquia
 
 
 --
--- TOC entry 2302 (class 1259 OID 18116)
--- Dependencies: 2469 7
+-- TOC entry 475 (class 1259 OID 20106)
+-- Dependencies: 4552 4553 4554 4555 4556 4557 7
+-- Name: dbusuarios_senhas_recuperacao; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE dbusuarios_senhas_recuperacao (
+    id integer NOT NULL,
+    codigo character varying(20) DEFAULT ((nextval('gerador_codigo_seq'::regclass) || '-'::text) || nextval('gerador_codigo_digito_seq'::regclass)) NOT NULL,
+    unidade character varying(30),
+    codigoautor character varying(20) DEFAULT '0000'::character varying NOT NULL,
+    codigousuario character varying(30),
+    chave integer DEFAULT 0,
+    senhaantiga integer,
+    senhanova integer DEFAULT 0 NOT NULL,
+    datacad date DEFAULT ('now'::text)::date NOT NULL,
+    ativo character varying(2) DEFAULT '9'::character varying NOT NULL
+);
+
+
+--
+-- TOC entry 474 (class 1259 OID 20104)
+-- Dependencies: 475 7
+-- Name: dbusuarios_senhas_recuperacao_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE dbusuarios_senhas_recuperacao_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 5271 (class 0 OID 0)
+-- Dependencies: 474
+-- Name: dbusuarios_senhas_recuperacao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE dbusuarios_senhas_recuperacao_id_seq OWNED BY dbusuarios_senhas_recuperacao.id;
+
+
+--
+-- TOC entry 395 (class 1259 OID 18121)
+-- Dependencies: 3822 7
 -- Name: view_turmas_disciplinas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4624,8 +4677,8 @@ CREATE VIEW view_turmas_disciplinas AS
 
 
 --
--- TOC entry 2303 (class 1259 OID 18121)
--- Dependencies: 2470 7
+-- TOC entry 396 (class 1259 OID 18126)
+-- Dependencies: 3823 7
 -- Name: view_alunos_disciplinas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4634,8 +4687,8 @@ CREATE VIEW view_alunos_disciplinas AS
 
 
 --
--- TOC entry 2304 (class 1259 OID 18126)
--- Dependencies: 2471 7
+-- TOC entry 397 (class 1259 OID 18131)
+-- Dependencies: 3824 7
 -- Name: view_alunos_faltas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4644,8 +4697,8 @@ CREATE VIEW view_alunos_faltas AS
 
 
 --
--- TOC entry 2305 (class 1259 OID 18131)
--- Dependencies: 2472 7
+-- TOC entry 398 (class 1259 OID 18136)
+-- Dependencies: 3825 7
 -- Name: view_alunos_notas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4654,8 +4707,8 @@ CREATE VIEW view_alunos_notas AS
 
 
 --
--- TOC entry 2306 (class 1259 OID 18136)
--- Dependencies: 2473 7
+-- TOC entry 399 (class 1259 OID 18141)
+-- Dependencies: 3826 7
 -- Name: view_alunos_solicitacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4664,8 +4717,8 @@ CREATE VIEW view_alunos_solicitacoes AS
 
 
 --
--- TOC entry 2307 (class 1259 OID 18141)
--- Dependencies: 2474 7
+-- TOC entry 400 (class 1259 OID 18146)
+-- Dependencies: 3827 7
 -- Name: view_biblioteca_cdu; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4674,8 +4727,8 @@ CREATE VIEW view_biblioteca_cdu AS
 
 
 --
--- TOC entry 2308 (class 1259 OID 18145)
--- Dependencies: 2475 7
+-- TOC entry 401 (class 1259 OID 18150)
+-- Dependencies: 3828 7
 -- Name: view_caixa; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4684,8 +4737,8 @@ CREATE VIEW view_caixa AS
 
 
 --
--- TOC entry 2309 (class 1259 OID 18150)
--- Dependencies: 2476 7
+-- TOC entry 402 (class 1259 OID 18155)
+-- Dependencies: 3829 7
 -- Name: view_caixa_fechamentos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4694,8 +4747,8 @@ CREATE VIEW view_caixa_fechamentos AS
 
 
 --
--- TOC entry 2310 (class 1259 OID 18154)
--- Dependencies: 2477 7
+-- TOC entry 403 (class 1259 OID 18159)
+-- Dependencies: 3830 7
 -- Name: view_pessoas_funcionarios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4704,8 +4757,8 @@ CREATE VIEW view_pessoas_funcionarios AS
 
 
 --
--- TOC entry 2311 (class 1259 OID 18159)
--- Dependencies: 2478 7
+-- TOC entry 404 (class 1259 OID 18164)
+-- Dependencies: 3831 7
 -- Name: view_caixa_funcionarios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4714,8 +4767,8 @@ CREATE VIEW view_caixa_funcionarios AS
 
 
 --
--- TOC entry 2312 (class 1259 OID 18164)
--- Dependencies: 2479 7
+-- TOC entry 405 (class 1259 OID 18169)
+-- Dependencies: 3832 7
 -- Name: view_cargos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4724,8 +4777,8 @@ CREATE VIEW view_cargos AS
 
 
 --
--- TOC entry 2313 (class 1259 OID 18169)
--- Dependencies: 2480 7
+-- TOC entry 406 (class 1259 OID 18174)
+-- Dependencies: 3833 7
 -- Name: view_compras; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4734,8 +4787,8 @@ CREATE VIEW view_compras AS
 
 
 --
--- TOC entry 2314 (class 1259 OID 18173)
--- Dependencies: 2481 7
+-- TOC entry 407 (class 1259 OID 18178)
+-- Dependencies: 3834 7
 -- Name: view_contas_caixa; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4744,8 +4797,8 @@ CREATE VIEW view_contas_caixa AS
 
 
 --
--- TOC entry 2315 (class 1259 OID 18178)
--- Dependencies: 2482 7
+-- TOC entry 408 (class 1259 OID 18183)
+-- Dependencies: 3835 7
 -- Name: view_contas_caixa_historico; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4754,8 +4807,8 @@ CREATE VIEW view_contas_caixa_historico AS
 
 
 --
--- TOC entry 2316 (class 1259 OID 18183)
--- Dependencies: 2483 7
+-- TOC entry 409 (class 1259 OID 18188)
+-- Dependencies: 3836 7
 -- Name: view_contas_cheques; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4764,8 +4817,8 @@ CREATE VIEW view_contas_cheques AS
 
 
 --
--- TOC entry 2317 (class 1259 OID 18188)
--- Dependencies: 2484 7
+-- TOC entry 410 (class 1259 OID 18193)
+-- Dependencies: 3837 7
 -- Name: view_contratos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4774,8 +4827,8 @@ CREATE VIEW view_contratos AS
 
 
 --
--- TOC entry 2318 (class 1259 OID 18193)
--- Dependencies: 2485 7
+-- TOC entry 411 (class 1259 OID 18198)
+-- Dependencies: 3838 7
 -- Name: view_convenios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4784,8 +4837,8 @@ CREATE VIEW view_convenios AS
 
 
 --
--- TOC entry 2319 (class 1259 OID 18198)
--- Dependencies: 2486 7
+-- TOC entry 412 (class 1259 OID 18203)
+-- Dependencies: 3839 7
 -- Name: view_cotacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4794,8 +4847,8 @@ CREATE VIEW view_cotacoes AS
 
 
 --
--- TOC entry 2320 (class 1259 OID 18202)
--- Dependencies: 2487 7
+-- TOC entry 413 (class 1259 OID 18207)
+-- Dependencies: 3840 7
 -- Name: view_curriculos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4804,8 +4857,8 @@ CREATE VIEW view_curriculos AS
 
 
 --
--- TOC entry 2321 (class 1259 OID 18207)
--- Dependencies: 2488 7
+-- TOC entry 414 (class 1259 OID 18212)
+-- Dependencies: 3841 7
 -- Name: view_cursos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4814,8 +4867,8 @@ CREATE VIEW view_cursos AS
 
 
 --
--- TOC entry 2322 (class 1259 OID 18212)
--- Dependencies: 2489 7
+-- TOC entry 415 (class 1259 OID 18217)
+-- Dependencies: 3842 7
 -- Name: view_cursos_areas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4824,8 +4877,8 @@ CREATE VIEW view_cursos_areas AS
 
 
 --
--- TOC entry 2323 (class 1259 OID 18216)
--- Dependencies: 2490 7
+-- TOC entry 416 (class 1259 OID 18221)
+-- Dependencies: 3843 7
 -- Name: view_cursos_ativos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4834,8 +4887,8 @@ CREATE VIEW view_cursos_ativos AS
 
 
 --
--- TOC entry 2324 (class 1259 OID 18221)
--- Dependencies: 2491 7
+-- TOC entry 417 (class 1259 OID 18226)
+-- Dependencies: 3844 7
 -- Name: view_cursos_disciplinas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4844,8 +4897,8 @@ CREATE VIEW view_cursos_disciplinas AS
 
 
 --
--- TOC entry 2325 (class 1259 OID 18226)
--- Dependencies: 2492 7
+-- TOC entry 418 (class 1259 OID 18231)
+-- Dependencies: 3845 7
 -- Name: view_cursos_tipos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4854,8 +4907,8 @@ CREATE VIEW view_cursos_tipos AS
 
 
 --
--- TOC entry 2326 (class 1259 OID 18230)
--- Dependencies: 2493 7
+-- TOC entry 419 (class 1259 OID 18235)
+-- Dependencies: 3846 7
 -- Name: view_departamentos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4864,8 +4917,8 @@ CREATE VIEW view_departamentos AS
 
 
 --
--- TOC entry 2327 (class 1259 OID 18235)
--- Dependencies: 2494 7
+-- TOC entry 420 (class 1259 OID 18240)
+-- Dependencies: 3847 7
 -- Name: view_disciplinas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4874,8 +4927,8 @@ CREATE VIEW view_disciplinas AS
 
 
 --
--- TOC entry 2328 (class 1259 OID 18240)
--- Dependencies: 2495 7
+-- TOC entry 421 (class 1259 OID 18245)
+-- Dependencies: 3848 7
 -- Name: view_disciplinas_semelhantes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4884,8 +4937,8 @@ CREATE VIEW view_disciplinas_semelhantes AS
 
 
 --
--- TOC entry 2329 (class 1259 OID 18245)
--- Dependencies: 2496 7
+-- TOC entry 422 (class 1259 OID 18250)
+-- Dependencies: 3849 7
 -- Name: view_funcionarios_ferias; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4894,8 +4947,8 @@ CREATE VIEW view_funcionarios_ferias AS
 
 
 --
--- TOC entry 2330 (class 1259 OID 18250)
--- Dependencies: 2497 7
+-- TOC entry 423 (class 1259 OID 18255)
+-- Dependencies: 3850 7
 -- Name: view_funcionarios_folhapagamento; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4904,8 +4957,8 @@ CREATE VIEW view_funcionarios_folhapagamento AS
 
 
 --
--- TOC entry 2331 (class 1259 OID 18255)
--- Dependencies: 2498 7
+-- TOC entry 424 (class 1259 OID 18260)
+-- Dependencies: 3851 7
 -- Name: view_funcionarios_ocorrencias; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4914,8 +4967,8 @@ CREATE VIEW view_funcionarios_ocorrencias AS
 
 
 --
--- TOC entry 2332 (class 1259 OID 18259)
--- Dependencies: 2499 7
+-- TOC entry 425 (class 1259 OID 18264)
+-- Dependencies: 3852 7
 -- Name: view_funcionarios_professores; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4924,8 +4977,8 @@ CREATE VIEW view_funcionarios_professores AS
 
 
 --
--- TOC entry 2333 (class 1259 OID 18264)
--- Dependencies: 2500 7
+-- TOC entry 426 (class 1259 OID 18269)
+-- Dependencies: 3853 7
 -- Name: view_funcionarios_treinamentos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4934,8 +4987,8 @@ CREATE VIEW view_funcionarios_treinamentos AS
 
 
 --
--- TOC entry 2334 (class 1259 OID 18268)
--- Dependencies: 2501 7
+-- TOC entry 427 (class 1259 OID 18273)
+-- Dependencies: 3854 7
 -- Name: view_patrimonios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4944,8 +4997,8 @@ CREATE VIEW view_patrimonios AS
 
 
 --
--- TOC entry 2335 (class 1259 OID 18273)
--- Dependencies: 2502 7
+-- TOC entry 428 (class 1259 OID 18278)
+-- Dependencies: 3855 7
 -- Name: view_patrimonios_livros; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4954,8 +5007,8 @@ CREATE VIEW view_patrimonios_livros AS
 
 
 --
--- TOC entry 2336 (class 1259 OID 18278)
--- Dependencies: 2503 7
+-- TOC entry 429 (class 1259 OID 18283)
+-- Dependencies: 3856 7
 -- Name: view_pessoas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4964,8 +5017,8 @@ CREATE VIEW view_pessoas AS
 
 
 --
--- TOC entry 2337 (class 1259 OID 18283)
--- Dependencies: 2504 7
+-- TOC entry 430 (class 1259 OID 18288)
+-- Dependencies: 3857 7
 -- Name: view_pessoas_alunos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4974,8 +5027,8 @@ CREATE VIEW view_pessoas_alunos AS
 
 
 --
--- TOC entry 2338 (class 1259 OID 18288)
--- Dependencies: 2505 7
+-- TOC entry 431 (class 1259 OID 18293)
+-- Dependencies: 3858 7
 -- Name: view_pessoas_complemento_pf; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4984,8 +5037,8 @@ CREATE VIEW view_pessoas_complemento_pf AS
 
 
 --
--- TOC entry 2339 (class 1259 OID 18293)
--- Dependencies: 2506 7
+-- TOC entry 432 (class 1259 OID 18298)
+-- Dependencies: 3859 7
 -- Name: view_pessoas_complemento_pj; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -4994,8 +5047,8 @@ CREATE VIEW view_pessoas_complemento_pj AS
 
 
 --
--- TOC entry 2340 (class 1259 OID 18297)
--- Dependencies: 2507 7
+-- TOC entry 433 (class 1259 OID 18303)
+-- Dependencies: 3860 7
 -- Name: view_pessoas_convenios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5004,8 +5057,8 @@ CREATE VIEW view_pessoas_convenios AS
 
 
 --
--- TOC entry 2341 (class 1259 OID 18302)
--- Dependencies: 2508 7
+-- TOC entry 434 (class 1259 OID 18308)
+-- Dependencies: 3861 7
 -- Name: view_pessoas_demandas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5014,8 +5067,8 @@ CREATE VIEW view_pessoas_demandas AS
 
 
 --
--- TOC entry 2342 (class 1259 OID 18307)
--- Dependencies: 2509 7
+-- TOC entry 435 (class 1259 OID 18313)
+-- Dependencies: 3862 7
 -- Name: view_pessoas_enderecoscobrancas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5024,8 +5077,8 @@ CREATE VIEW view_pessoas_enderecoscobrancas AS
 
 
 --
--- TOC entry 2343 (class 1259 OID 18312)
--- Dependencies: 2510 7
+-- TOC entry 436 (class 1259 OID 18318)
+-- Dependencies: 3863 7
 -- Name: view_pessoas_formacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5034,8 +5087,8 @@ CREATE VIEW view_pessoas_formacoes AS
 
 
 --
--- TOC entry 2344 (class 1259 OID 18317)
--- Dependencies: 2511 7
+-- TOC entry 437 (class 1259 OID 18323)
+-- Dependencies: 3864 7
 -- Name: view_pessoas_inscricoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5044,8 +5097,8 @@ CREATE VIEW view_pessoas_inscricoes AS
 
 
 --
--- TOC entry 2345 (class 1259 OID 18322)
--- Dependencies: 2512 7
+-- TOC entry 438 (class 1259 OID 18328)
+-- Dependencies: 3865 7
 -- Name: view_pessoas_livros; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5054,8 +5107,8 @@ CREATE VIEW view_pessoas_livros AS
 
 
 --
--- TOC entry 2346 (class 1259 OID 18327)
--- Dependencies: 2513 7
+-- TOC entry 439 (class 1259 OID 18333)
+-- Dependencies: 3866 7
 -- Name: view_pessoas_solicitacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5064,8 +5117,8 @@ CREATE VIEW view_pessoas_solicitacoes AS
 
 
 --
--- TOC entry 2347 (class 1259 OID 18332)
--- Dependencies: 2514 7
+-- TOC entry 440 (class 1259 OID 18338)
+-- Dependencies: 3867 7
 -- Name: view_plano_contas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5074,8 +5127,8 @@ CREATE VIEW view_plano_contas AS
 
 
 --
--- TOC entry 2348 (class 1259 OID 18336)
--- Dependencies: 2515 7
+-- TOC entry 441 (class 1259 OID 18343)
+-- Dependencies: 3868 7
 -- Name: view_produtos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5084,8 +5137,8 @@ CREATE VIEW view_produtos AS
 
 
 --
--- TOC entry 2349 (class 1259 OID 18341)
--- Dependencies: 2516 7
+-- TOC entry 442 (class 1259 OID 18348)
+-- Dependencies: 3869 7
 -- Name: view_produtos_caracteristicas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5094,8 +5147,8 @@ CREATE VIEW view_produtos_caracteristicas AS
 
 
 --
--- TOC entry 2350 (class 1259 OID 18346)
--- Dependencies: 2517 7
+-- TOC entry 443 (class 1259 OID 18353)
+-- Dependencies: 3870 7
 -- Name: view_produtos_parametros; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5104,8 +5157,8 @@ CREATE VIEW view_produtos_parametros AS
 
 
 --
--- TOC entry 2351 (class 1259 OID 18351)
--- Dependencies: 2518 7
+-- TOC entry 444 (class 1259 OID 18358)
+-- Dependencies: 3871 7
 -- Name: view_produtos_turmas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5114,8 +5167,8 @@ CREATE VIEW view_produtos_turmas AS
 
 
 --
--- TOC entry 2352 (class 1259 OID 18356)
--- Dependencies: 2519 7
+-- TOC entry 445 (class 1259 OID 18363)
+-- Dependencies: 3872 7
 -- Name: view_professores_areas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5124,8 +5177,8 @@ CREATE VIEW view_professores_areas AS
 
 
 --
--- TOC entry 2353 (class 1259 OID 18361)
--- Dependencies: 2520 7
+-- TOC entry 446 (class 1259 OID 18368)
+-- Dependencies: 3873 7
 -- Name: view_projetos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5134,8 +5187,8 @@ CREATE VIEW view_projetos AS
 
 
 --
--- TOC entry 2354 (class 1259 OID 18366)
--- Dependencies: 2521 7
+-- TOC entry 447 (class 1259 OID 18373)
+-- Dependencies: 3874 7
 -- Name: view_projetos_colaboradores; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5144,8 +5197,8 @@ CREATE VIEW view_projetos_colaboradores AS
 
 
 --
--- TOC entry 2355 (class 1259 OID 18370)
--- Dependencies: 2522 7
+-- TOC entry 448 (class 1259 OID 18377)
+-- Dependencies: 3875 7
 -- Name: view_projetos_custos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5154,8 +5207,8 @@ CREATE VIEW view_projetos_custos AS
 
 
 --
--- TOC entry 2356 (class 1259 OID 18374)
--- Dependencies: 2523 7
+-- TOC entry 449 (class 1259 OID 18381)
+-- Dependencies: 3876 7
 -- Name: view_projetos_recursos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5164,8 +5217,8 @@ CREATE VIEW view_projetos_recursos AS
 
 
 --
--- TOC entry 2357 (class 1259 OID 18378)
--- Dependencies: 2524 7
+-- TOC entry 450 (class 1259 OID 18386)
+-- Dependencies: 3877 7
 -- Name: view_questionarios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5174,8 +5227,8 @@ CREATE VIEW view_questionarios AS
 
 
 --
--- TOC entry 2358 (class 1259 OID 18382)
--- Dependencies: 2525 7
+-- TOC entry 451 (class 1259 OID 18391)
+-- Dependencies: 3878 7
 -- Name: view_questoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5184,8 +5237,8 @@ CREATE VIEW view_questoes AS
 
 
 --
--- TOC entry 2359 (class 1259 OID 18386)
--- Dependencies: 2526 7
+-- TOC entry 452 (class 1259 OID 18396)
+-- Dependencies: 3879 7
 -- Name: view_questoes_itens; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5194,8 +5247,8 @@ CREATE VIEW view_questoes_itens AS
 
 
 --
--- TOC entry 2360 (class 1259 OID 18390)
--- Dependencies: 2527 7
+-- TOC entry 453 (class 1259 OID 18400)
+-- Dependencies: 3880 7
 -- Name: view_recados; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5204,8 +5257,8 @@ CREATE VIEW view_recados AS
 
 
 --
--- TOC entry 2361 (class 1259 OID 18395)
--- Dependencies: 2528 7
+-- TOC entry 454 (class 1259 OID 18405)
+-- Dependencies: 3881 7
 -- Name: view_salas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5214,8 +5267,8 @@ CREATE VIEW view_salas AS
 
 
 --
--- TOC entry 2362 (class 1259 OID 18400)
--- Dependencies: 2529 7
+-- TOC entry 455 (class 1259 OID 18410)
+-- Dependencies: 3882 7
 -- Name: view_scorecard; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5224,8 +5277,8 @@ CREATE VIEW view_scorecard AS
 
 
 --
--- TOC entry 2363 (class 1259 OID 18404)
--- Dependencies: 2530 7
+-- TOC entry 456 (class 1259 OID 18415)
+-- Dependencies: 3883 7
 -- Name: view_scorecard_sentencas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5234,8 +5287,8 @@ CREATE VIEW view_scorecard_sentencas AS
 
 
 --
--- TOC entry 2364 (class 1259 OID 18408)
--- Dependencies: 2531 7
+-- TOC entry 457 (class 1259 OID 18420)
+-- Dependencies: 3884 7
 -- Name: view_transacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5244,8 +5297,8 @@ CREATE VIEW view_transacoes AS
 
 
 --
--- TOC entry 2365 (class 1259 OID 18413)
--- Dependencies: 2532 7
+-- TOC entry 458 (class 1259 OID 18425)
+-- Dependencies: 3885 7
 -- Name: view_transacoes_contas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5254,8 +5307,8 @@ CREATE VIEW view_transacoes_contas AS
 
 
 --
--- TOC entry 2366 (class 1259 OID 18418)
--- Dependencies: 2533 7
+-- TOC entry 459 (class 1259 OID 18430)
+-- Dependencies: 3886 7
 -- Name: view_transacoes_contas_duplicatas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5264,8 +5317,8 @@ CREATE VIEW view_transacoes_contas_duplicatas AS
 
 
 --
--- TOC entry 2367 (class 1259 OID 18423)
--- Dependencies: 2534 7
+-- TOC entry 460 (class 1259 OID 18435)
+-- Dependencies: 3887 7
 -- Name: view_transacoes_convenios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5274,8 +5327,8 @@ CREATE VIEW view_transacoes_convenios AS
 
 
 --
--- TOC entry 2368 (class 1259 OID 18428)
--- Dependencies: 2535 7
+-- TOC entry 461 (class 1259 OID 18440)
+-- Dependencies: 3888 7
 -- Name: view_transacoes_produtos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5284,8 +5337,8 @@ CREATE VIEW view_transacoes_produtos AS
 
 
 --
--- TOC entry 2369 (class 1259 OID 18433)
--- Dependencies: 2536 7
+-- TOC entry 462 (class 1259 OID 18445)
+-- Dependencies: 3889 7
 -- Name: view_treinamentos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5294,8 +5347,8 @@ CREATE VIEW view_treinamentos AS
 
 
 --
--- TOC entry 2370 (class 1259 OID 18438)
--- Dependencies: 2537 7
+-- TOC entry 463 (class 1259 OID 18450)
+-- Dependencies: 3890 7
 -- Name: view_turmas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5304,8 +5357,8 @@ CREATE VIEW view_turmas AS
 
 
 --
--- TOC entry 2371 (class 1259 OID 18443)
--- Dependencies: 2538 7
+-- TOC entry 464 (class 1259 OID 18455)
+-- Dependencies: 3891 7
 -- Name: view_turmas_convenios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5314,8 +5367,8 @@ CREATE VIEW view_turmas_convenios AS
 
 
 --
--- TOC entry 2372 (class 1259 OID 18448)
--- Dependencies: 2539 7
+-- TOC entry 465 (class 1259 OID 18460)
+-- Dependencies: 3892 7
 -- Name: view_turmas_descontos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5324,8 +5377,8 @@ CREATE VIEW view_turmas_descontos AS
 
 
 --
--- TOC entry 2373 (class 1259 OID 18452)
--- Dependencies: 2540 7
+-- TOC entry 466 (class 1259 OID 18465)
+-- Dependencies: 3893 7
 -- Name: view_turmas_disciplinas_arquivos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5334,8 +5387,8 @@ CREATE VIEW view_turmas_disciplinas_arquivos AS
 
 
 --
--- TOC entry 2374 (class 1259 OID 18456)
--- Dependencies: 2541 7
+-- TOC entry 467 (class 1259 OID 18470)
+-- Dependencies: 3894 7
 -- Name: view_turmas_disciplinas_aulas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5344,8 +5397,8 @@ CREATE VIEW view_turmas_disciplinas_aulas AS
 
 
 --
--- TOC entry 2375 (class 1259 OID 18460)
--- Dependencies: 2542 7
+-- TOC entry 468 (class 1259 OID 18475)
+-- Dependencies: 3895 7
 -- Name: view_turmas_disciplinas_avaliacoes; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5354,8 +5407,8 @@ CREATE VIEW view_turmas_disciplinas_avaliacoes AS
 
 
 --
--- TOC entry 2376 (class 1259 OID 18465)
--- Dependencies: 2543 7
+-- TOC entry 469 (class 1259 OID 18480)
+-- Dependencies: 3896 7
 -- Name: view_turmas_disciplinas_materiais; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5364,8 +5417,8 @@ CREATE VIEW view_turmas_disciplinas_materiais AS
 
 
 --
--- TOC entry 2377 (class 1259 OID 18469)
--- Dependencies: 2544 7
+-- TOC entry 470 (class 1259 OID 18484)
+-- Dependencies: 3897 7
 -- Name: view_turmas_disciplinas_planoaulas; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5374,8 +5427,8 @@ CREATE VIEW view_turmas_disciplinas_planoaulas AS
 
 
 --
--- TOC entry 2378 (class 1259 OID 18473)
--- Dependencies: 2545 7
+-- TOC entry 471 (class 1259 OID 18489)
+-- Dependencies: 3898 7
 -- Name: view_turmas_requisitos; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5384,8 +5437,8 @@ CREATE VIEW view_turmas_requisitos AS
 
 
 --
--- TOC entry 2379 (class 1259 OID 18477)
--- Dependencies: 2546 7
+-- TOC entry 472 (class 1259 OID 18493)
+-- Dependencies: 3899 7
 -- Name: view_unidades; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5394,8 +5447,8 @@ CREATE VIEW view_unidades AS
 
 
 --
--- TOC entry 2380 (class 1259 OID 18482)
--- Dependencies: 2547 7
+-- TOC entry 473 (class 1259 OID 18498)
+-- Dependencies: 3900 7
 -- Name: view_usuarios; Type: VIEW; Schema: public; Owner: -
 --
 
@@ -5406,8 +5459,8 @@ CREATE VIEW view_usuarios AS
 SET search_path = dominio, pg_catalog;
 
 --
--- TOC entry 2739 (class 2604 OID 18487)
--- Dependencies: 2072 2071
+-- TOC entry 3901 (class 2604 OID 18503)
+-- Dependencies: 163 162
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5415,8 +5468,8 @@ ALTER TABLE dbceps ALTER COLUMN id SET DEFAULT nextval('dbceps_id_seq'::regclass
 
 
 --
--- TOC entry 2740 (class 2604 OID 18488)
--- Dependencies: 2074 2073
+-- TOC entry 3902 (class 2604 OID 18504)
+-- Dependencies: 165 164
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5424,8 +5477,8 @@ ALTER TABLE dbcidades ALTER COLUMN id SET DEFAULT nextval('dbcidades_id_seq'::re
 
 
 --
--- TOC entry 2741 (class 2604 OID 18489)
--- Dependencies: 2076 2075
+-- TOC entry 3903 (class 2604 OID 18505)
+-- Dependencies: 167 166
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5433,8 +5486,8 @@ ALTER TABLE dbestados ALTER COLUMN id SET DEFAULT nextval('dbestados_id_seq'::re
 
 
 --
--- TOC entry 2742 (class 2604 OID 18490)
--- Dependencies: 2079 2077
+-- TOC entry 3904 (class 2604 OID 18506)
+-- Dependencies: 170 168
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5442,8 +5495,8 @@ ALTER TABLE dbnfe_erros ALTER COLUMN id SET DEFAULT nextval('dbnfe_erros_id_seq'
 
 
 --
--- TOC entry 2743 (class 2604 OID 18491)
--- Dependencies: 2082 2081
+-- TOC entry 3905 (class 2604 OID 18507)
+-- Dependencies: 173 172
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5451,8 +5504,8 @@ ALTER TABLE dbpaises ALTER COLUMN id SET DEFAULT nextval('dbpaises_id_seq'::regc
 
 
 --
--- TOC entry 2744 (class 2604 OID 18492)
--- Dependencies: 2086 2083
+-- TOC entry 3906 (class 2604 OID 18508)
+-- Dependencies: 177 174
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5460,8 +5513,8 @@ ALTER TABLE dbwebservices ALTER COLUMN id SET DEFAULT nextval('dbwebservices_id_
 
 
 --
--- TOC entry 2745 (class 2604 OID 18493)
--- Dependencies: 2085 2084
+-- TOC entry 3907 (class 2604 OID 18509)
+-- Dependencies: 176 175
 -- Name: id; Type: DEFAULT; Schema: dominio; Owner: -
 --
 
@@ -5471,8 +5524,8 @@ ALTER TABLE dbwebservices_campos ALTER COLUMN id SET DEFAULT nextval('dbwebservi
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2784 (class 2604 OID 18494)
--- Dependencies: 2104 2103
+-- TOC entry 3946 (class 2604 OID 18510)
+-- Dependencies: 195 194
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5480,8 +5533,8 @@ ALTER TABLE dbavaliacoes ALTER COLUMN id SET DEFAULT nextval('dbavaliacoes_id_se
 
 
 --
--- TOC entry 2792 (class 2604 OID 18495)
--- Dependencies: 2106 2105
+-- TOC entry 3954 (class 2604 OID 18511)
+-- Dependencies: 197 196
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5489,8 +5542,8 @@ ALTER TABLE dbavaliacoes_regras ALTER COLUMN id SET DEFAULT nextval('dbavaliacoe
 
 
 --
--- TOC entry 2888 (class 2604 OID 18496)
--- Dependencies: 2134 2133
+-- TOC entry 4050 (class 2604 OID 18512)
+-- Dependencies: 225 224
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5498,8 +5551,8 @@ ALTER TABLE dbconvenios_descontos ALTER COLUMN id SET DEFAULT nextval('dbconveni
 
 
 --
--- TOC entry 3008 (class 2604 OID 18497)
--- Dependencies: 2175 2174
+-- TOC entry 4170 (class 2604 OID 18513)
+-- Dependencies: 266 265
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5507,8 +5560,8 @@ ALTER TABLE dbgrade_avaliacoes ALTER COLUMN id SET DEFAULT nextval('dbgrade_aval
 
 
 --
--- TOC entry 3208 (class 2604 OID 18498)
--- Dependencies: 2251 2250
+-- TOC entry 4370 (class 2604 OID 18514)
+-- Dependencies: 342 341
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5516,8 +5569,8 @@ ALTER TABLE dbstatus ALTER COLUMN id SET DEFAULT nextval('dbstatus_id_seq'::regc
 
 
 --
--- TOC entry 3384 (class 2604 OID 20278)
--- Dependencies: 2381 2382 2382
+-- TOC entry 4404 (class 2604 OID 18515)
+-- Dependencies: 352 351
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5525,8 +5578,8 @@ ALTER TABLE dbtransacoes_contas_situacao ALTER COLUMN id SET DEFAULT nextval('db
 
 
 --
--- TOC entry 3242 (class 2604 OID 18499)
--- Dependencies: 2261 2260
+-- TOC entry 4409 (class 2604 OID 18516)
+-- Dependencies: 354 353
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5534,8 +5587,8 @@ ALTER TABLE dbtransacoes_convenios ALTER COLUMN id SET DEFAULT nextval('dbtransa
 
 
 --
--- TOC entry 3289 (class 2604 OID 18500)
--- Dependencies: 2271 2270
+-- TOC entry 4456 (class 2604 OID 18517)
+-- Dependencies: 364 363
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5543,19 +5596,28 @@ ALTER TABLE dbturmas_convenios ALTER COLUMN id SET DEFAULT nextval('dbturmas_con
 
 
 --
--- TOC entry 3323 (class 2604 OID 18501)
--- Dependencies: 2281 2280
+-- TOC entry 4490 (class 2604 OID 18518)
+-- Dependencies: 374 373
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE dbturmas_disciplinas_avaliacao_detalhamento ALTER COLUMN id SET DEFAULT nextval('dbturmas_disciplinas_avaliacao_detalhamento_id_seq'::regclass);
 
 
+--
+-- TOC entry 4551 (class 2604 OID 20109)
+-- Dependencies: 474 475 475
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE dbusuarios_senhas_recuperacao ALTER COLUMN id SET DEFAULT nextval('dbusuarios_senhas_recuperacao_id_seq'::regclass);
+
+
 SET search_path = dominio, pg_catalog;
 
 --
--- TOC entry 3390 (class 2606 OID 18681)
--- Dependencies: 2071 2071
+-- TOC entry 4559 (class 2606 OID 18520)
+-- Dependencies: 162 162
 -- Name: pk_dbceps; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5564,8 +5626,8 @@ ALTER TABLE ONLY dbceps
 
 
 --
--- TOC entry 3392 (class 2606 OID 18683)
--- Dependencies: 2073 2073
+-- TOC entry 4561 (class 2606 OID 18522)
+-- Dependencies: 164 164
 -- Name: pk_dbcidades; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5574,8 +5636,8 @@ ALTER TABLE ONLY dbcidades
 
 
 --
--- TOC entry 3394 (class 2606 OID 18685)
--- Dependencies: 2075 2075
+-- TOC entry 4563 (class 2606 OID 18524)
+-- Dependencies: 166 166
 -- Name: pk_dbestados; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5584,8 +5646,8 @@ ALTER TABLE ONLY dbestados
 
 
 --
--- TOC entry 3396 (class 2606 OID 18687)
--- Dependencies: 2077 2077
+-- TOC entry 4565 (class 2606 OID 18526)
+-- Dependencies: 168 168
 -- Name: pk_dbnfe_erros; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5594,8 +5656,8 @@ ALTER TABLE ONLY dbnfe_erros
 
 
 --
--- TOC entry 3398 (class 2606 OID 18689)
--- Dependencies: 2078 2078
+-- TOC entry 4567 (class 2606 OID 18528)
+-- Dependencies: 169 169
 -- Name: pk_dbnfe_erros_grupos; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5604,8 +5666,8 @@ ALTER TABLE ONLY dbnfe_erros_grupos
 
 
 --
--- TOC entry 3400 (class 2606 OID 18691)
--- Dependencies: 2080 2080
+-- TOC entry 4569 (class 2606 OID 18530)
+-- Dependencies: 171 171
 -- Name: pk_dbnfe_erros_mensagens; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5614,8 +5676,8 @@ ALTER TABLE ONLY dbnfe_erros_mensagens
 
 
 --
--- TOC entry 3402 (class 2606 OID 18693)
--- Dependencies: 2081 2081
+-- TOC entry 4571 (class 2606 OID 18532)
+-- Dependencies: 172 172
 -- Name: pk_dbpaises; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5624,8 +5686,8 @@ ALTER TABLE ONLY dbpaises
 
 
 --
--- TOC entry 3404 (class 2606 OID 18695)
--- Dependencies: 2083 2083
+-- TOC entry 4573 (class 2606 OID 18534)
+-- Dependencies: 174 174
 -- Name: pk_dbwebservices; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5634,8 +5696,8 @@ ALTER TABLE ONLY dbwebservices
 
 
 --
--- TOC entry 3406 (class 2606 OID 18697)
--- Dependencies: 2084 2084
+-- TOC entry 4575 (class 2606 OID 18536)
+-- Dependencies: 175 175
 -- Name: pk_dbwebservices_campos; Type: CONSTRAINT; Schema: dominio; Owner: -; Tablespace: 
 --
 
@@ -5646,8 +5708,8 @@ ALTER TABLE ONLY dbwebservices_campos
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 3567 (class 2606 OID 18699)
--- Dependencies: 2171 2171
+-- TOC entry 4736 (class 2606 OID 18538)
+-- Dependencies: 262 262
 -- Name: dbfuncionarios_professores_uk_codigofuncionario; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5656,8 +5718,8 @@ ALTER TABLE ONLY dbfuncionarios_professores
 
 
 --
--- TOC entry 3810 (class 2606 OID 18701)
--- Dependencies: 2295 2295
+-- TOC entry 4983 (class 2606 OID 18540)
+-- Dependencies: 388 388
 -- Name: dbusuarios_uk_usuario; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5666,8 +5728,8 @@ ALTER TABLE ONLY dbusuarios
 
 
 --
--- TOC entry 3408 (class 2606 OID 18703)
--- Dependencies: 2090 2090
+-- TOC entry 4577 (class 2606 OID 18542)
+-- Dependencies: 181 181
 -- Name: pk_dbalunos_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5676,8 +5738,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3412 (class 2606 OID 18714)
--- Dependencies: 2092 2092
+-- TOC entry 4581 (class 2606 OID 18544)
+-- Dependencies: 183 183
 -- Name: pk_dbalunos_disciplinas_aproveitamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5686,8 +5748,8 @@ ALTER TABLE ONLY dbalunos_disciplinas_aproveitamentos
 
 
 --
--- TOC entry 3416 (class 2606 OID 18716)
--- Dependencies: 2094 2094
+-- TOC entry 4585 (class 2606 OID 18546)
+-- Dependencies: 185 185
 -- Name: pk_dbalunos_faltas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5696,8 +5758,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 3420 (class 2606 OID 18718)
--- Dependencies: 2096 2096
+-- TOC entry 4589 (class 2606 OID 18548)
+-- Dependencies: 187 187
 -- Name: pk_dbalunos_notas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5706,8 +5768,8 @@ ALTER TABLE ONLY dbalunos_notas
 
 
 --
--- TOC entry 3424 (class 2606 OID 18720)
--- Dependencies: 2098 2098
+-- TOC entry 4593 (class 2606 OID 18550)
+-- Dependencies: 189 189
 -- Name: pk_dbalunos_requisitos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5716,8 +5778,8 @@ ALTER TABLE ONLY dbalunos_requisitos
 
 
 --
--- TOC entry 3428 (class 2606 OID 18722)
--- Dependencies: 2100 2100
+-- TOC entry 4597 (class 2606 OID 18552)
+-- Dependencies: 191 191
 -- Name: pk_dbalunos_solicitacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5726,8 +5788,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3432 (class 2606 OID 18725)
--- Dependencies: 2102 2102
+-- TOC entry 4601 (class 2606 OID 18554)
+-- Dependencies: 193 193
 -- Name: pk_dbalunos_transacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5736,8 +5798,8 @@ ALTER TABLE ONLY dbalunos_transacoes
 
 
 --
--- TOC entry 3436 (class 2606 OID 18727)
--- Dependencies: 2103 2103
+-- TOC entry 4605 (class 2606 OID 18556)
+-- Dependencies: 194 194
 -- Name: pk_dbavaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5746,8 +5808,8 @@ ALTER TABLE ONLY dbavaliacoes
 
 
 --
--- TOC entry 3440 (class 2606 OID 18729)
--- Dependencies: 2105 2105
+-- TOC entry 4609 (class 2606 OID 18558)
+-- Dependencies: 196 196
 -- Name: pk_dbavaliacoes_regras; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5756,8 +5818,8 @@ ALTER TABLE ONLY dbavaliacoes_regras
 
 
 --
--- TOC entry 3444 (class 2606 OID 18731)
--- Dependencies: 2108 2108
+-- TOC entry 4613 (class 2606 OID 18560)
+-- Dependencies: 199 199
 -- Name: pk_dbbalanco_patrimonial; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5766,8 +5828,8 @@ ALTER TABLE ONLY dbbalanco_patrimonial
 
 
 --
--- TOC entry 3448 (class 2606 OID 18733)
--- Dependencies: 2110 2110
+-- TOC entry 4617 (class 2606 OID 18562)
+-- Dependencies: 201 201
 -- Name: pk_dbbiblioteca_cdu; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5776,8 +5838,8 @@ ALTER TABLE ONLY dbbiblioteca_cdu
 
 
 --
--- TOC entry 3454 (class 2606 OID 18735)
--- Dependencies: 2112 2112
+-- TOC entry 4623 (class 2606 OID 18564)
+-- Dependencies: 203 203
 -- Name: pk_dbcaixa; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5786,8 +5848,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3458 (class 2606 OID 18737)
--- Dependencies: 2114 2114
+-- TOC entry 4627 (class 2606 OID 18566)
+-- Dependencies: 205 205
 -- Name: pk_dbcaixa_fechamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5796,8 +5858,8 @@ ALTER TABLE ONLY dbcaixa_fechamentos
 
 
 --
--- TOC entry 3462 (class 2606 OID 18739)
--- Dependencies: 2116 2116
+-- TOC entry 4631 (class 2606 OID 18568)
+-- Dependencies: 207 207
 -- Name: pk_dbcaixa_funcionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5806,8 +5868,8 @@ ALTER TABLE ONLY dbcaixa_funcionarios
 
 
 --
--- TOC entry 3466 (class 2606 OID 18741)
--- Dependencies: 2118 2118
+-- TOC entry 4635 (class 2606 OID 18570)
+-- Dependencies: 209 209
 -- Name: pk_dbcargos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5816,8 +5878,8 @@ ALTER TABLE ONLY dbcargos
 
 
 --
--- TOC entry 3484 (class 2606 OID 18743)
--- Dependencies: 2128 2128
+-- TOC entry 4653 (class 2606 OID 18572)
+-- Dependencies: 219 219
 -- Name: pk_dbcheques; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5826,8 +5888,8 @@ ALTER TABLE ONLY dbcontas_cheques
 
 
 --
--- TOC entry 3470 (class 2606 OID 18745)
--- Dependencies: 2122 2122
+-- TOC entry 4639 (class 2606 OID 18574)
+-- Dependencies: 213 213
 -- Name: pk_dbcompras; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5836,8 +5898,8 @@ ALTER TABLE ONLY dbcompras
 
 
 --
--- TOC entry 3474 (class 2606 OID 18747)
--- Dependencies: 2124 2124
+-- TOC entry 4643 (class 2606 OID 18576)
+-- Dependencies: 215 215
 -- Name: pk_dbcontas_caixa; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5846,8 +5908,8 @@ ALTER TABLE ONLY dbcontas_caixa
 
 
 --
--- TOC entry 3478 (class 2606 OID 18749)
--- Dependencies: 2126 2126
+-- TOC entry 4647 (class 2606 OID 18578)
+-- Dependencies: 217 217
 -- Name: pk_dbcontas_caixa_historico; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5856,8 +5918,8 @@ ALTER TABLE ONLY dbcontas_caixa_historico
 
 
 --
--- TOC entry 3488 (class 2606 OID 18751)
--- Dependencies: 2130 2130
+-- TOC entry 4657 (class 2606 OID 18580)
+-- Dependencies: 221 221
 -- Name: pk_dbcontratos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5866,8 +5928,8 @@ ALTER TABLE ONLY dbcontratos
 
 
 --
--- TOC entry 3493 (class 2606 OID 18753)
--- Dependencies: 2132 2132
+-- TOC entry 4662 (class 2606 OID 18582)
+-- Dependencies: 223 223
 -- Name: pk_dbconvenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5876,8 +5938,8 @@ ALTER TABLE ONLY dbconvenios
 
 
 --
--- TOC entry 3495 (class 2606 OID 18755)
--- Dependencies: 2133 2133
+-- TOC entry 4664 (class 2606 OID 18584)
+-- Dependencies: 224 224
 -- Name: pk_dbconvenios_descontos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5886,8 +5948,8 @@ ALTER TABLE ONLY dbconvenios_descontos
 
 
 --
--- TOC entry 3499 (class 2606 OID 18757)
--- Dependencies: 2136 2136
+-- TOC entry 4668 (class 2606 OID 18586)
+-- Dependencies: 227 227
 -- Name: pk_dbcotacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5896,8 +5958,8 @@ ALTER TABLE ONLY dbcotacoes
 
 
 --
--- TOC entry 3503 (class 2606 OID 18759)
--- Dependencies: 2138 2138
+-- TOC entry 4672 (class 2606 OID 18588)
+-- Dependencies: 229 229
 -- Name: pk_dbcrm_demandas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5906,8 +5968,8 @@ ALTER TABLE ONLY dbcrm_demandas
 
 
 --
--- TOC entry 3507 (class 2606 OID 18761)
--- Dependencies: 2140 2140
+-- TOC entry 4676 (class 2606 OID 18590)
+-- Dependencies: 231 231
 -- Name: pk_dbcurriculos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5916,8 +5978,8 @@ ALTER TABLE ONLY dbcurriculos
 
 
 --
--- TOC entry 3511 (class 2606 OID 18763)
--- Dependencies: 2142 2142
+-- TOC entry 4680 (class 2606 OID 18592)
+-- Dependencies: 233 233
 -- Name: pk_dbcursos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5926,8 +5988,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 3515 (class 2606 OID 18765)
--- Dependencies: 2144 2144
+-- TOC entry 4684 (class 2606 OID 18594)
+-- Dependencies: 235 235
 -- Name: pk_dbcursos_areas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5936,8 +5998,8 @@ ALTER TABLE ONLY dbcursos_areas
 
 
 --
--- TOC entry 3519 (class 2606 OID 18767)
--- Dependencies: 2146 2146
+-- TOC entry 4688 (class 2606 OID 18596)
+-- Dependencies: 237 237
 -- Name: pk_dbcursos_ativos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5946,8 +6008,8 @@ ALTER TABLE ONLY dbcursos_ativos
 
 
 --
--- TOC entry 3523 (class 2606 OID 18769)
--- Dependencies: 2148 2148
+-- TOC entry 4692 (class 2606 OID 18598)
+-- Dependencies: 239 239
 -- Name: pk_dbcursos_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5956,8 +6018,8 @@ ALTER TABLE ONLY dbcursos_avaliacoes
 
 
 --
--- TOC entry 3527 (class 2606 OID 18771)
--- Dependencies: 2150 2150
+-- TOC entry 4696 (class 2606 OID 18600)
+-- Dependencies: 241 241
 -- Name: pk_dbcursos_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5966,8 +6028,8 @@ ALTER TABLE ONLY dbcursos_disciplinas
 
 
 --
--- TOC entry 3531 (class 2606 OID 18773)
--- Dependencies: 2152 2152
+-- TOC entry 4700 (class 2606 OID 18602)
+-- Dependencies: 243 243
 -- Name: pk_dbcursos_tipos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5976,8 +6038,8 @@ ALTER TABLE ONLY dbcursos_tipos
 
 
 --
--- TOC entry 3535 (class 2606 OID 18775)
--- Dependencies: 2154 2154
+-- TOC entry 4704 (class 2606 OID 18604)
+-- Dependencies: 245 245
 -- Name: pk_dbdados_boleto; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5986,8 +6048,8 @@ ALTER TABLE ONLY dbdados_boleto
 
 
 --
--- TOC entry 3539 (class 2606 OID 18777)
--- Dependencies: 2156 2156
+-- TOC entry 4708 (class 2606 OID 18606)
+-- Dependencies: 247 247
 -- Name: pk_dbdepartamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5996,8 +6058,8 @@ ALTER TABLE ONLY dbdepartamentos
 
 
 --
--- TOC entry 3543 (class 2606 OID 18779)
--- Dependencies: 2158 2158
+-- TOC entry 4712 (class 2606 OID 18608)
+-- Dependencies: 249 249
 -- Name: pk_dbdisciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6006,8 +6068,8 @@ ALTER TABLE ONLY dbdisciplinas
 
 
 --
--- TOC entry 3547 (class 2606 OID 18781)
--- Dependencies: 2160 2160
+-- TOC entry 4716 (class 2606 OID 18610)
+-- Dependencies: 251 251
 -- Name: pk_dbdisciplinas_semelhantes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6016,8 +6078,8 @@ ALTER TABLE ONLY dbdisciplinas_semelhantes
 
 
 --
--- TOC entry 3551 (class 2606 OID 18783)
--- Dependencies: 2162 2162
+-- TOC entry 4720 (class 2606 OID 18612)
+-- Dependencies: 253 253
 -- Name: pk_dbdocumentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6026,8 +6088,8 @@ ALTER TABLE ONLY dbdocumentos
 
 
 --
--- TOC entry 3555 (class 2606 OID 18785)
--- Dependencies: 2165 2165
+-- TOC entry 4724 (class 2606 OID 18614)
+-- Dependencies: 256 256
 -- Name: pk_dbfuncionarios_ferias; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6036,8 +6098,8 @@ ALTER TABLE ONLY dbfuncionarios_ferias
 
 
 --
--- TOC entry 3559 (class 2606 OID 18787)
--- Dependencies: 2167 2167
+-- TOC entry 4728 (class 2606 OID 18616)
+-- Dependencies: 258 258
 -- Name: pk_dbfuncionarios_folhapagamento; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6046,8 +6108,8 @@ ALTER TABLE ONLY dbfuncionarios_folhapagamento
 
 
 --
--- TOC entry 3563 (class 2606 OID 18789)
--- Dependencies: 2169 2169
+-- TOC entry 4732 (class 2606 OID 18618)
+-- Dependencies: 260 260
 -- Name: pk_dbfuncionarios_ocorrencias; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6056,8 +6118,8 @@ ALTER TABLE ONLY dbfuncionarios_ocorrencias
 
 
 --
--- TOC entry 3569 (class 2606 OID 18791)
--- Dependencies: 2171 2171
+-- TOC entry 4738 (class 2606 OID 18620)
+-- Dependencies: 262 262
 -- Name: pk_dbfuncionarios_professores; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6066,8 +6128,8 @@ ALTER TABLE ONLY dbfuncionarios_professores
 
 
 --
--- TOC entry 3573 (class 2606 OID 18793)
--- Dependencies: 2173 2173
+-- TOC entry 4742 (class 2606 OID 18622)
+-- Dependencies: 264 264
 -- Name: pk_dbfuncionarios_treinamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6076,8 +6138,8 @@ ALTER TABLE ONLY dbfuncionarios_treinamentos
 
 
 --
--- TOC entry 3577 (class 2606 OID 18795)
--- Dependencies: 2174 2174
+-- TOC entry 4746 (class 2606 OID 18624)
+-- Dependencies: 265 265
 -- Name: pk_dbgrade_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6086,8 +6148,8 @@ ALTER TABLE ONLY dbgrade_avaliacoes
 
 
 --
--- TOC entry 3581 (class 2606 OID 18797)
--- Dependencies: 2178 2178
+-- TOC entry 4750 (class 2606 OID 18626)
+-- Dependencies: 269 269
 -- Name: pk_dbpatrimonios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6096,8 +6158,8 @@ ALTER TABLE ONLY dbpatrimonios
 
 
 --
--- TOC entry 3585 (class 2606 OID 18799)
--- Dependencies: 2180 2180
+-- TOC entry 4754 (class 2606 OID 18628)
+-- Dependencies: 271 271
 -- Name: pk_dbpatrimonios_livros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6106,8 +6168,8 @@ ALTER TABLE ONLY dbpatrimonios_livros
 
 
 --
--- TOC entry 3589 (class 2606 OID 18801)
--- Dependencies: 2182 2182
+-- TOC entry 4758 (class 2606 OID 18630)
+-- Dependencies: 273 273
 -- Name: pk_dbpessoas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6116,8 +6178,8 @@ ALTER TABLE ONLY dbpessoas
 
 
 --
--- TOC entry 3593 (class 2606 OID 18803)
--- Dependencies: 2184 2184
+-- TOC entry 4762 (class 2606 OID 18632)
+-- Dependencies: 275 275
 -- Name: pk_dbpessoas_alunos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6126,8 +6188,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3597 (class 2606 OID 18805)
--- Dependencies: 2186 2186
+-- TOC entry 4766 (class 2606 OID 18634)
+-- Dependencies: 277 277
 -- Name: pk_dbpessoas_complemento_pf; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6136,8 +6198,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pf
 
 
 --
--- TOC entry 3601 (class 2606 OID 18807)
--- Dependencies: 2188 2188
+-- TOC entry 4770 (class 2606 OID 18636)
+-- Dependencies: 279 279
 -- Name: pk_dbpessoas_complemento_pj; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6146,8 +6208,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pj
 
 
 --
--- TOC entry 3606 (class 2606 OID 18809)
--- Dependencies: 2190 2190
+-- TOC entry 4775 (class 2606 OID 18638)
+-- Dependencies: 281 281
 -- Name: pk_dbpessoas_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6156,8 +6218,8 @@ ALTER TABLE ONLY dbpessoas_convenios
 
 
 --
--- TOC entry 3610 (class 2606 OID 18811)
--- Dependencies: 2192 2192
+-- TOC entry 4779 (class 2606 OID 18640)
+-- Dependencies: 283 283
 -- Name: pk_dbpessoas_demandas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6166,8 +6228,8 @@ ALTER TABLE ONLY dbpessoas_demandas
 
 
 --
--- TOC entry 3614 (class 2606 OID 18813)
--- Dependencies: 2194 2194
+-- TOC entry 4783 (class 2606 OID 18642)
+-- Dependencies: 285 285
 -- Name: pk_dbpessoas_enderecoscobrancas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6176,8 +6238,8 @@ ALTER TABLE ONLY dbpessoas_enderecoscobrancas
 
 
 --
--- TOC entry 3618 (class 2606 OID 18815)
--- Dependencies: 2196 2196
+-- TOC entry 4787 (class 2606 OID 18644)
+-- Dependencies: 287 287
 -- Name: pk_dbpessoas_formacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6186,8 +6248,8 @@ ALTER TABLE ONLY dbpessoas_formacoes
 
 
 --
--- TOC entry 3622 (class 2606 OID 18817)
--- Dependencies: 2198 2198
+-- TOC entry 4791 (class 2606 OID 18646)
+-- Dependencies: 289 289
 -- Name: pk_dbpessoas_funcionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6196,8 +6258,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3626 (class 2606 OID 18819)
--- Dependencies: 2200 2200
+-- TOC entry 4795 (class 2606 OID 18648)
+-- Dependencies: 291 291
 -- Name: pk_dbpessoas_inscricoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6206,8 +6268,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 3630 (class 2606 OID 18821)
--- Dependencies: 2202 2202
+-- TOC entry 4799 (class 2606 OID 18650)
+-- Dependencies: 293 293
 -- Name: pk_dbpessoas_livros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6216,8 +6278,8 @@ ALTER TABLE ONLY dbpessoas_livros
 
 
 --
--- TOC entry 3634 (class 2606 OID 18823)
--- Dependencies: 2204 2204
+-- TOC entry 4803 (class 2606 OID 18652)
+-- Dependencies: 295 295
 -- Name: pk_dbpessoas_solicitacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6226,8 +6288,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3638 (class 2606 OID 18825)
--- Dependencies: 2206 2206
+-- TOC entry 4807 (class 2606 OID 18654)
+-- Dependencies: 297 297
 -- Name: pk_dbpessoas_titularidades; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6236,8 +6298,8 @@ ALTER TABLE ONLY dbpessoas_titularidades
 
 
 --
--- TOC entry 3642 (class 2606 OID 18827)
--- Dependencies: 2208 2208
+-- TOC entry 4811 (class 2606 OID 18656)
+-- Dependencies: 299 299
 -- Name: pk_dbplano_contas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6246,8 +6308,8 @@ ALTER TABLE ONLY dbplano_contas
 
 
 --
--- TOC entry 3646 (class 2606 OID 18829)
--- Dependencies: 2210 2210
+-- TOC entry 4815 (class 2606 OID 18658)
+-- Dependencies: 301 301
 -- Name: pk_dbprocessos_academicos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6256,8 +6318,8 @@ ALTER TABLE ONLY dbprocessos_academicos
 
 
 --
--- TOC entry 3651 (class 2606 OID 18831)
--- Dependencies: 2212 2212
+-- TOC entry 4820 (class 2606 OID 18660)
+-- Dependencies: 303 303
 -- Name: pk_dbprodutos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6266,8 +6328,8 @@ ALTER TABLE ONLY dbprodutos
 
 
 --
--- TOC entry 3655 (class 2606 OID 18833)
--- Dependencies: 2214 2214
+-- TOC entry 4824 (class 2606 OID 18662)
+-- Dependencies: 305 305
 -- Name: pk_dbprodutos_insumos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6276,8 +6338,8 @@ ALTER TABLE ONLY dbprodutos_caracteristicas
 
 
 --
--- TOC entry 3660 (class 2606 OID 18835)
--- Dependencies: 2219 2219
+-- TOC entry 4829 (class 2606 OID 18664)
+-- Dependencies: 310 310
 -- Name: pk_dbprodutos_parametros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6286,8 +6348,8 @@ ALTER TABLE ONLY dbprodutos_parametros
 
 
 --
--- TOC entry 3664 (class 2606 OID 18837)
--- Dependencies: 2221 2221
+-- TOC entry 4833 (class 2606 OID 18666)
+-- Dependencies: 312 312
 -- Name: pk_dbprodutos_tabelapreco; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6296,8 +6358,8 @@ ALTER TABLE ONLY dbprodutos_tabelapreco
 
 
 --
--- TOC entry 3668 (class 2606 OID 18839)
--- Dependencies: 2223 2223
+-- TOC entry 4837 (class 2606 OID 18668)
+-- Dependencies: 314 314
 -- Name: pk_dbprodutos_tipos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6306,8 +6368,8 @@ ALTER TABLE ONLY dbprodutos_tipos
 
 
 --
--- TOC entry 3672 (class 2606 OID 18841)
--- Dependencies: 2225 2225
+-- TOC entry 4841 (class 2606 OID 18670)
+-- Dependencies: 316 316
 -- Name: pk_dbprodutos_tributos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6316,8 +6378,8 @@ ALTER TABLE ONLY dbprodutos_tributos
 
 
 --
--- TOC entry 3676 (class 2606 OID 18843)
--- Dependencies: 2227 2227
+-- TOC entry 4845 (class 2606 OID 18672)
+-- Dependencies: 318 318
 -- Name: pk_dbprofessores_areas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6326,8 +6388,8 @@ ALTER TABLE ONLY dbprofessores_areas
 
 
 --
--- TOC entry 3680 (class 2606 OID 18845)
--- Dependencies: 2229 2229
+-- TOC entry 4849 (class 2606 OID 18674)
+-- Dependencies: 320 320
 -- Name: pk_dbprojetos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6336,8 +6398,8 @@ ALTER TABLE ONLY dbprojetos
 
 
 --
--- TOC entry 3684 (class 2606 OID 18847)
--- Dependencies: 2231 2231
+-- TOC entry 4853 (class 2606 OID 18676)
+-- Dependencies: 322 322
 -- Name: pk_dbprojetos_colaboradores; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6346,8 +6408,8 @@ ALTER TABLE ONLY dbprojetos_colaboradores
 
 
 --
--- TOC entry 3688 (class 2606 OID 18849)
--- Dependencies: 2233 2233
+-- TOC entry 4857 (class 2606 OID 18678)
+-- Dependencies: 324 324
 -- Name: pk_dbprojetos_custos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6356,8 +6418,8 @@ ALTER TABLE ONLY dbprojetos_custos
 
 
 --
--- TOC entry 3692 (class 2606 OID 18851)
--- Dependencies: 2235 2235
+-- TOC entry 4861 (class 2606 OID 18680)
+-- Dependencies: 326 326
 -- Name: pk_dbprojetos_recursos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6366,8 +6428,8 @@ ALTER TABLE ONLY dbprojetos_recursos
 
 
 --
--- TOC entry 3696 (class 2606 OID 18853)
--- Dependencies: 2237 2237
+-- TOC entry 4865 (class 2606 OID 18682)
+-- Dependencies: 328 328
 -- Name: pk_dbquestionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6376,8 +6438,8 @@ ALTER TABLE ONLY dbquestionarios
 
 
 --
--- TOC entry 3700 (class 2606 OID 18855)
--- Dependencies: 2239 2239
+-- TOC entry 4869 (class 2606 OID 18684)
+-- Dependencies: 330 330
 -- Name: pk_dbquestoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6386,8 +6448,8 @@ ALTER TABLE ONLY dbquestoes
 
 
 --
--- TOC entry 3704 (class 2606 OID 18857)
--- Dependencies: 2241 2241
+-- TOC entry 4873 (class 2606 OID 18686)
+-- Dependencies: 332 332
 -- Name: pk_dbquestoes_itens; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6396,8 +6458,8 @@ ALTER TABLE ONLY dbquestoes_itens
 
 
 --
--- TOC entry 3708 (class 2606 OID 18859)
--- Dependencies: 2243 2243
+-- TOC entry 4877 (class 2606 OID 18688)
+-- Dependencies: 334 334
 -- Name: pk_dbrecados; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6406,8 +6468,8 @@ ALTER TABLE ONLY dbrecados
 
 
 --
--- TOC entry 3712 (class 2606 OID 18861)
--- Dependencies: 2245 2245
+-- TOC entry 4881 (class 2606 OID 18690)
+-- Dependencies: 336 336
 -- Name: pk_dbsalas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6416,8 +6478,8 @@ ALTER TABLE ONLY dbsalas
 
 
 --
--- TOC entry 3716 (class 2606 OID 18863)
--- Dependencies: 2247 2247
+-- TOC entry 4885 (class 2606 OID 18692)
+-- Dependencies: 338 338
 -- Name: pk_dbscorecard; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6426,8 +6488,8 @@ ALTER TABLE ONLY dbscorecard
 
 
 --
--- TOC entry 3720 (class 2606 OID 18865)
--- Dependencies: 2249 2249
+-- TOC entry 4889 (class 2606 OID 18694)
+-- Dependencies: 340 340
 -- Name: pk_dbscorecard_sentencas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6436,8 +6498,8 @@ ALTER TABLE ONLY dbscorecard_sentencas
 
 
 --
--- TOC entry 3724 (class 2606 OID 18867)
--- Dependencies: 2250 2250
+-- TOC entry 4893 (class 2606 OID 18696)
+-- Dependencies: 341 341
 -- Name: pk_dbstatus; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6446,8 +6508,8 @@ ALTER TABLE ONLY dbstatus
 
 
 --
--- TOC entry 3726 (class 2606 OID 18869)
--- Dependencies: 2253 2253
+-- TOC entry 4895 (class 2606 OID 18698)
+-- Dependencies: 344 344
 -- Name: pk_dbtransacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6456,8 +6518,8 @@ ALTER TABLE ONLY dbtransacoes
 
 
 --
--- TOC entry 3730 (class 2606 OID 18871)
--- Dependencies: 2255 2255
+-- TOC entry 4899 (class 2606 OID 18700)
+-- Dependencies: 346 346
 -- Name: pk_dbtransacoes_contas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6466,8 +6528,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 3734 (class 2606 OID 18873)
--- Dependencies: 2257 2257
+-- TOC entry 4903 (class 2606 OID 18702)
+-- Dependencies: 348 348
 -- Name: pk_dbtransacoes_contas_duplicatas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6476,8 +6538,8 @@ ALTER TABLE ONLY dbtransacoes_contas_duplicatas
 
 
 --
--- TOC entry 3738 (class 2606 OID 18875)
--- Dependencies: 2259 2259
+-- TOC entry 4907 (class 2606 OID 18704)
+-- Dependencies: 350 350
 -- Name: pk_dbtransacoes_contas_extornos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6486,8 +6548,8 @@ ALTER TABLE ONLY dbtransacoes_contas_extornos
 
 
 --
--- TOC entry 3829 (class 2606 OID 20287)
--- Dependencies: 2382 2382
+-- TOC entry 4911 (class 2606 OID 18706)
+-- Dependencies: 351 351
 -- Name: pk_dbtransacoes_contas_situacao; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6496,8 +6558,8 @@ ALTER TABLE ONLY dbtransacoes_contas_situacao
 
 
 --
--- TOC entry 3742 (class 2606 OID 18877)
--- Dependencies: 2260 2260
+-- TOC entry 4915 (class 2606 OID 18708)
+-- Dependencies: 353 353
 -- Name: pk_dbtransacoes_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6506,8 +6568,8 @@ ALTER TABLE ONLY dbtransacoes_convenios
 
 
 --
--- TOC entry 3746 (class 2606 OID 18879)
--- Dependencies: 2263 2263
+-- TOC entry 4919 (class 2606 OID 18710)
+-- Dependencies: 356 356
 -- Name: pk_dbtransacoes_produtos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6516,8 +6578,8 @@ ALTER TABLE ONLY dbtransacoes_produtos
 
 
 --
--- TOC entry 3750 (class 2606 OID 18881)
--- Dependencies: 2265 2265
+-- TOC entry 4923 (class 2606 OID 18712)
+-- Dependencies: 358 358
 -- Name: pk_dbtreinamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6526,8 +6588,8 @@ ALTER TABLE ONLY dbtreinamentos
 
 
 --
--- TOC entry 3754 (class 2606 OID 18883)
--- Dependencies: 2267 2267
+-- TOC entry 4927 (class 2606 OID 18714)
+-- Dependencies: 360 360
 -- Name: pk_dbtributos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6536,8 +6598,8 @@ ALTER TABLE ONLY dbtributos
 
 
 --
--- TOC entry 3758 (class 2606 OID 18885)
--- Dependencies: 2269 2269
+-- TOC entry 4931 (class 2606 OID 18716)
+-- Dependencies: 362 362
 -- Name: pk_dbturmas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6546,8 +6608,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 3762 (class 2606 OID 18887)
--- Dependencies: 2270 2270
+-- TOC entry 4935 (class 2606 OID 18718)
+-- Dependencies: 363 363
 -- Name: pk_dbturmas_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6556,8 +6618,8 @@ ALTER TABLE ONLY dbturmas_convenios
 
 
 --
--- TOC entry 3766 (class 2606 OID 18889)
--- Dependencies: 2273 2273
+-- TOC entry 4939 (class 2606 OID 18720)
+-- Dependencies: 366 366
 -- Name: pk_dbturmas_descontos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6566,8 +6628,8 @@ ALTER TABLE ONLY dbturmas_descontos
 
 
 --
--- TOC entry 3770 (class 2606 OID 18891)
--- Dependencies: 2275 2275
+-- TOC entry 4943 (class 2606 OID 18722)
+-- Dependencies: 368 368
 -- Name: pk_dbturmas_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6576,8 +6638,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 3774 (class 2606 OID 18893)
--- Dependencies: 2277 2277
+-- TOC entry 4947 (class 2606 OID 18724)
+-- Dependencies: 370 370
 -- Name: pk_dbturmas_disciplinas_arquivos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6586,8 +6648,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_arquivos
 
 
 --
--- TOC entry 3778 (class 2606 OID 18895)
--- Dependencies: 2279 2279
+-- TOC entry 4951 (class 2606 OID 18726)
+-- Dependencies: 372 372
 -- Name: pk_dbturmas_disciplinas_aulas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6596,8 +6658,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_aulas
 
 
 --
--- TOC entry 3782 (class 2606 OID 18897)
--- Dependencies: 2280 2280
+-- TOC entry 4955 (class 2606 OID 18728)
+-- Dependencies: 373 373
 -- Name: pk_dbturmas_disciplinas_avaliacao_detalhamento; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6606,8 +6668,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacao_detalhamento
 
 
 --
--- TOC entry 3786 (class 2606 OID 18899)
--- Dependencies: 2283 2283
+-- TOC entry 4959 (class 2606 OID 18730)
+-- Dependencies: 376 376
 -- Name: pk_dbturmas_disciplinas_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6616,8 +6678,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacoes
 
 
 --
--- TOC entry 3790 (class 2606 OID 18901)
--- Dependencies: 2285 2285
+-- TOC entry 4963 (class 2606 OID 18732)
+-- Dependencies: 378 378
 -- Name: pk_dbturmas_disciplinas_materiais; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6626,8 +6688,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_materiais
 
 
 --
--- TOC entry 3794 (class 2606 OID 18903)
--- Dependencies: 2287 2287
+-- TOC entry 4967 (class 2606 OID 18734)
+-- Dependencies: 380 380
 -- Name: pk_dbturmas_disciplinas_planoaulas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6636,8 +6698,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_planoaulas
 
 
 --
--- TOC entry 3798 (class 2606 OID 18905)
--- Dependencies: 2289 2289
+-- TOC entry 4971 (class 2606 OID 18736)
+-- Dependencies: 382 382
 -- Name: pk_dbturmas_requisitos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6646,8 +6708,8 @@ ALTER TABLE ONLY dbturmas_requisitos
 
 
 --
--- TOC entry 3802 (class 2606 OID 18907)
--- Dependencies: 2291 2291
+-- TOC entry 4975 (class 2606 OID 18738)
+-- Dependencies: 384 384
 -- Name: pk_dbunidades; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6656,8 +6718,8 @@ ALTER TABLE ONLY dbunidades
 
 
 --
--- TOC entry 3806 (class 2606 OID 18909)
--- Dependencies: 2293 2293
+-- TOC entry 4979 (class 2606 OID 18740)
+-- Dependencies: 386 386
 -- Name: pk_dbunidades_parametros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6666,8 +6728,8 @@ ALTER TABLE ONLY dbunidades_parametros
 
 
 --
--- TOC entry 3812 (class 2606 OID 18911)
--- Dependencies: 2295 2295
+-- TOC entry 4985 (class 2606 OID 18742)
+-- Dependencies: 388 388
 -- Name: pk_dbusuarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6676,8 +6738,8 @@ ALTER TABLE ONLY dbusuarios
 
 
 --
--- TOC entry 3816 (class 2606 OID 18913)
--- Dependencies: 2297 2297
+-- TOC entry 4989 (class 2606 OID 18744)
+-- Dependencies: 390 390
 -- Name: pk_dbusuarios_erros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6686,8 +6748,8 @@ ALTER TABLE ONLY dbusuarios_erros
 
 
 --
--- TOC entry 3820 (class 2606 OID 18915)
--- Dependencies: 2299 2299
+-- TOC entry 4993 (class 2606 OID 18746)
+-- Dependencies: 392 392
 -- Name: pk_dbusuarios_historico; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6696,8 +6758,8 @@ ALTER TABLE ONLY dbusuarios_historico
 
 
 --
--- TOC entry 3825 (class 2606 OID 18917)
--- Dependencies: 2301 2301
+-- TOC entry 4998 (class 2606 OID 18748)
+-- Dependencies: 394 394
 -- Name: pk_dbusuarios_privilegios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6706,8 +6768,18 @@ ALTER TABLE ONLY dbusuarios_privilegios
 
 
 --
--- TOC entry 3410 (class 2606 OID 18919)
--- Dependencies: 2090 2090
+-- TOC entry 5002 (class 2606 OID 20117)
+-- Dependencies: 475 475
+-- Name: pk_dbusuarios_senhas_recuperacao; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY dbusuarios_senhas_recuperacao
+    ADD CONSTRAINT pk_dbusuarios_senhas_recuperacao PRIMARY KEY (codigo);
+
+
+--
+-- TOC entry 4579 (class 2606 OID 18750)
+-- Dependencies: 181 181
 -- Name: pk_id_dbalunos_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6716,8 +6788,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3414 (class 2606 OID 18921)
--- Dependencies: 2092 2092
+-- TOC entry 4583 (class 2606 OID 18752)
+-- Dependencies: 183 183
 -- Name: pk_id_dbalunos_disciplinas_aproveitamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6726,8 +6798,8 @@ ALTER TABLE ONLY dbalunos_disciplinas_aproveitamentos
 
 
 --
--- TOC entry 3418 (class 2606 OID 18923)
--- Dependencies: 2094 2094
+-- TOC entry 4587 (class 2606 OID 18754)
+-- Dependencies: 185 185
 -- Name: pk_id_dbalunos_faltas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6736,8 +6808,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 3422 (class 2606 OID 18925)
--- Dependencies: 2096 2096
+-- TOC entry 4591 (class 2606 OID 18756)
+-- Dependencies: 187 187
 -- Name: pk_id_dbalunos_notas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6746,8 +6818,8 @@ ALTER TABLE ONLY dbalunos_notas
 
 
 --
--- TOC entry 3426 (class 2606 OID 18927)
--- Dependencies: 2098 2098
+-- TOC entry 4595 (class 2606 OID 18758)
+-- Dependencies: 189 189
 -- Name: pk_id_dbalunos_requisitos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6756,8 +6828,8 @@ ALTER TABLE ONLY dbalunos_requisitos
 
 
 --
--- TOC entry 3430 (class 2606 OID 18929)
--- Dependencies: 2100 2100
+-- TOC entry 4599 (class 2606 OID 18760)
+-- Dependencies: 191 191
 -- Name: pk_id_dbalunos_solicitacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6766,8 +6838,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3434 (class 2606 OID 18931)
--- Dependencies: 2102 2102
+-- TOC entry 4603 (class 2606 OID 18762)
+-- Dependencies: 193 193
 -- Name: pk_id_dbalunos_transacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6776,8 +6848,8 @@ ALTER TABLE ONLY dbalunos_transacoes
 
 
 --
--- TOC entry 3438 (class 2606 OID 18933)
--- Dependencies: 2103 2103
+-- TOC entry 4607 (class 2606 OID 18764)
+-- Dependencies: 194 194
 -- Name: pk_id_dbavaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6786,8 +6858,8 @@ ALTER TABLE ONLY dbavaliacoes
 
 
 --
--- TOC entry 3442 (class 2606 OID 18935)
--- Dependencies: 2105 2105
+-- TOC entry 4611 (class 2606 OID 18766)
+-- Dependencies: 196 196
 -- Name: pk_id_dbavaliacoes_regras; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6796,8 +6868,8 @@ ALTER TABLE ONLY dbavaliacoes_regras
 
 
 --
--- TOC entry 3446 (class 2606 OID 18937)
--- Dependencies: 2108 2108
+-- TOC entry 4615 (class 2606 OID 18768)
+-- Dependencies: 199 199
 -- Name: pk_id_dbbalanco_patrimonial; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6806,8 +6878,8 @@ ALTER TABLE ONLY dbbalanco_patrimonial
 
 
 --
--- TOC entry 3450 (class 2606 OID 18939)
--- Dependencies: 2110 2110
+-- TOC entry 4619 (class 2606 OID 18770)
+-- Dependencies: 201 201
 -- Name: pk_id_dbbiblioteca_cdu; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6816,8 +6888,8 @@ ALTER TABLE ONLY dbbiblioteca_cdu
 
 
 --
--- TOC entry 3456 (class 2606 OID 18941)
--- Dependencies: 2112 2112
+-- TOC entry 4625 (class 2606 OID 18772)
+-- Dependencies: 203 203
 -- Name: pk_id_dbcaixa; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6826,8 +6898,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3460 (class 2606 OID 18943)
--- Dependencies: 2114 2114
+-- TOC entry 4629 (class 2606 OID 18774)
+-- Dependencies: 205 205
 -- Name: pk_id_dbcaixa_fechamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6836,8 +6908,8 @@ ALTER TABLE ONLY dbcaixa_fechamentos
 
 
 --
--- TOC entry 3464 (class 2606 OID 18945)
--- Dependencies: 2116 2116
+-- TOC entry 4633 (class 2606 OID 18776)
+-- Dependencies: 207 207
 -- Name: pk_id_dbcaixa_funcionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6846,8 +6918,8 @@ ALTER TABLE ONLY dbcaixa_funcionarios
 
 
 --
--- TOC entry 3480 (class 2606 OID 18947)
--- Dependencies: 2126 2126
+-- TOC entry 4649 (class 2606 OID 18778)
+-- Dependencies: 217 217
 -- Name: pk_id_dbcaixa_historico; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6856,8 +6928,8 @@ ALTER TABLE ONLY dbcontas_caixa_historico
 
 
 --
--- TOC entry 3468 (class 2606 OID 18949)
--- Dependencies: 2118 2118
+-- TOC entry 4637 (class 2606 OID 18780)
+-- Dependencies: 209 209
 -- Name: pk_id_dbcargos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6866,8 +6938,8 @@ ALTER TABLE ONLY dbcargos
 
 
 --
--- TOC entry 3486 (class 2606 OID 18951)
--- Dependencies: 2128 2128
+-- TOC entry 4655 (class 2606 OID 18782)
+-- Dependencies: 219 219
 -- Name: pk_id_dbcheques; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6876,8 +6948,8 @@ ALTER TABLE ONLY dbcontas_cheques
 
 
 --
--- TOC entry 3472 (class 2606 OID 18953)
--- Dependencies: 2122 2122
+-- TOC entry 4641 (class 2606 OID 18784)
+-- Dependencies: 213 213
 -- Name: pk_id_dbcompras; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6886,8 +6958,8 @@ ALTER TABLE ONLY dbcompras
 
 
 --
--- TOC entry 3476 (class 2606 OID 18955)
--- Dependencies: 2124 2124
+-- TOC entry 4645 (class 2606 OID 18786)
+-- Dependencies: 215 215
 -- Name: pk_id_dbcontas_caixa; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6896,8 +6968,8 @@ ALTER TABLE ONLY dbcontas_caixa
 
 
 --
--- TOC entry 3740 (class 2606 OID 18957)
--- Dependencies: 2259 2259
+-- TOC entry 4909 (class 2606 OID 18788)
+-- Dependencies: 350 350
 -- Name: pk_id_dbcontas_extornos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6906,8 +6978,8 @@ ALTER TABLE ONLY dbtransacoes_contas_extornos
 
 
 --
--- TOC entry 3490 (class 2606 OID 18959)
--- Dependencies: 2130 2130
+-- TOC entry 4659 (class 2606 OID 18790)
+-- Dependencies: 221 221
 -- Name: pk_id_dbcontratos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6916,8 +6988,8 @@ ALTER TABLE ONLY dbcontratos
 
 
 --
--- TOC entry 3497 (class 2606 OID 18961)
--- Dependencies: 2133 2133
+-- TOC entry 4666 (class 2606 OID 18792)
+-- Dependencies: 224 224
 -- Name: pk_id_dbconvenios_descontos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6926,8 +6998,8 @@ ALTER TABLE ONLY dbconvenios_descontos
 
 
 --
--- TOC entry 3501 (class 2606 OID 18963)
--- Dependencies: 2136 2136
+-- TOC entry 4670 (class 2606 OID 18794)
+-- Dependencies: 227 227
 -- Name: pk_id_dbcotacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6936,8 +7008,8 @@ ALTER TABLE ONLY dbcotacoes
 
 
 --
--- TOC entry 3505 (class 2606 OID 18965)
--- Dependencies: 2138 2138
+-- TOC entry 4674 (class 2606 OID 18796)
+-- Dependencies: 229 229
 -- Name: pk_id_dbcrm_demandas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6946,8 +7018,8 @@ ALTER TABLE ONLY dbcrm_demandas
 
 
 --
--- TOC entry 3509 (class 2606 OID 18967)
--- Dependencies: 2140 2140
+-- TOC entry 4678 (class 2606 OID 18798)
+-- Dependencies: 231 231
 -- Name: pk_id_dbcurriculos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6956,8 +7028,8 @@ ALTER TABLE ONLY dbcurriculos
 
 
 --
--- TOC entry 3513 (class 2606 OID 18969)
--- Dependencies: 2142 2142
+-- TOC entry 4682 (class 2606 OID 18800)
+-- Dependencies: 233 233
 -- Name: pk_id_dbcursos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6966,8 +7038,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 3517 (class 2606 OID 18971)
--- Dependencies: 2144 2144
+-- TOC entry 4686 (class 2606 OID 18802)
+-- Dependencies: 235 235
 -- Name: pk_id_dbcursos_areas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6976,8 +7048,8 @@ ALTER TABLE ONLY dbcursos_areas
 
 
 --
--- TOC entry 3521 (class 2606 OID 18973)
--- Dependencies: 2146 2146
+-- TOC entry 4690 (class 2606 OID 18804)
+-- Dependencies: 237 237
 -- Name: pk_id_dbcursos_ativos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6986,8 +7058,8 @@ ALTER TABLE ONLY dbcursos_ativos
 
 
 --
--- TOC entry 3525 (class 2606 OID 18975)
--- Dependencies: 2148 2148
+-- TOC entry 4694 (class 2606 OID 18806)
+-- Dependencies: 239 239
 -- Name: pk_id_dbcursos_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6996,8 +7068,8 @@ ALTER TABLE ONLY dbcursos_avaliacoes
 
 
 --
--- TOC entry 3529 (class 2606 OID 18977)
--- Dependencies: 2150 2150
+-- TOC entry 4698 (class 2606 OID 18808)
+-- Dependencies: 241 241
 -- Name: pk_id_dbcursos_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7006,8 +7078,8 @@ ALTER TABLE ONLY dbcursos_disciplinas
 
 
 --
--- TOC entry 3533 (class 2606 OID 18979)
--- Dependencies: 2152 2152
+-- TOC entry 4702 (class 2606 OID 18810)
+-- Dependencies: 243 243
 -- Name: pk_id_dbcursos_tipos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7016,8 +7088,8 @@ ALTER TABLE ONLY dbcursos_tipos
 
 
 --
--- TOC entry 3537 (class 2606 OID 18981)
--- Dependencies: 2154 2154
+-- TOC entry 4706 (class 2606 OID 18812)
+-- Dependencies: 245 245
 -- Name: pk_id_dbdados_boleto; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7026,8 +7098,8 @@ ALTER TABLE ONLY dbdados_boleto
 
 
 --
--- TOC entry 3541 (class 2606 OID 18983)
--- Dependencies: 2156 2156
+-- TOC entry 4710 (class 2606 OID 18814)
+-- Dependencies: 247 247
 -- Name: pk_id_dbdepartamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7036,8 +7108,8 @@ ALTER TABLE ONLY dbdepartamentos
 
 
 --
--- TOC entry 3545 (class 2606 OID 18985)
--- Dependencies: 2158 2158
+-- TOC entry 4714 (class 2606 OID 18816)
+-- Dependencies: 249 249
 -- Name: pk_id_dbdisciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7046,8 +7118,8 @@ ALTER TABLE ONLY dbdisciplinas
 
 
 --
--- TOC entry 3549 (class 2606 OID 18987)
--- Dependencies: 2160 2160
+-- TOC entry 4718 (class 2606 OID 18818)
+-- Dependencies: 251 251
 -- Name: pk_id_dbdisciplinas_semelhantes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7056,8 +7128,8 @@ ALTER TABLE ONLY dbdisciplinas_semelhantes
 
 
 --
--- TOC entry 3553 (class 2606 OID 18989)
--- Dependencies: 2162 2162
+-- TOC entry 4722 (class 2606 OID 18820)
+-- Dependencies: 253 253
 -- Name: pk_id_dbdocumentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7066,8 +7138,8 @@ ALTER TABLE ONLY dbdocumentos
 
 
 --
--- TOC entry 3557 (class 2606 OID 18991)
--- Dependencies: 2165 2165
+-- TOC entry 4726 (class 2606 OID 18822)
+-- Dependencies: 256 256
 -- Name: pk_id_dbfuncionarios_ferias; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7076,8 +7148,8 @@ ALTER TABLE ONLY dbfuncionarios_ferias
 
 
 --
--- TOC entry 3561 (class 2606 OID 18993)
--- Dependencies: 2167 2167
+-- TOC entry 4730 (class 2606 OID 18824)
+-- Dependencies: 258 258
 -- Name: pk_id_dbfuncionarios_folhapagamento; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7086,8 +7158,8 @@ ALTER TABLE ONLY dbfuncionarios_folhapagamento
 
 
 --
--- TOC entry 3565 (class 2606 OID 18995)
--- Dependencies: 2169 2169
+-- TOC entry 4734 (class 2606 OID 18826)
+-- Dependencies: 260 260
 -- Name: pk_id_dbfuncionarios_ocorrencias; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7096,8 +7168,8 @@ ALTER TABLE ONLY dbfuncionarios_ocorrencias
 
 
 --
--- TOC entry 3571 (class 2606 OID 18997)
--- Dependencies: 2171 2171
+-- TOC entry 4740 (class 2606 OID 18828)
+-- Dependencies: 262 262
 -- Name: pk_id_dbfuncionarios_professores; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7106,8 +7178,8 @@ ALTER TABLE ONLY dbfuncionarios_professores
 
 
 --
--- TOC entry 3575 (class 2606 OID 18999)
--- Dependencies: 2173 2173
+-- TOC entry 4744 (class 2606 OID 18830)
+-- Dependencies: 264 264
 -- Name: pk_id_dbfuncionarios_treinamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7116,8 +7188,8 @@ ALTER TABLE ONLY dbfuncionarios_treinamentos
 
 
 --
--- TOC entry 3579 (class 2606 OID 19001)
--- Dependencies: 2174 2174
+-- TOC entry 4748 (class 2606 OID 18832)
+-- Dependencies: 265 265
 -- Name: pk_id_dbgrade_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7126,8 +7198,8 @@ ALTER TABLE ONLY dbgrade_avaliacoes
 
 
 --
--- TOC entry 3587 (class 2606 OID 19003)
--- Dependencies: 2180 2180
+-- TOC entry 4756 (class 2606 OID 18834)
+-- Dependencies: 271 271
 -- Name: pk_id_dbpatrimonios_livros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7136,8 +7208,8 @@ ALTER TABLE ONLY dbpatrimonios_livros
 
 
 --
--- TOC entry 3591 (class 2606 OID 19005)
--- Dependencies: 2182 2182
+-- TOC entry 4760 (class 2606 OID 18836)
+-- Dependencies: 273 273
 -- Name: pk_id_dbpessoas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7146,8 +7218,8 @@ ALTER TABLE ONLY dbpessoas
 
 
 --
--- TOC entry 3595 (class 2606 OID 19007)
--- Dependencies: 2184 2184
+-- TOC entry 4764 (class 2606 OID 18838)
+-- Dependencies: 275 275
 -- Name: pk_id_dbpessoas_alunos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7156,8 +7228,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3603 (class 2606 OID 19009)
--- Dependencies: 2188 2188
+-- TOC entry 4772 (class 2606 OID 18840)
+-- Dependencies: 279 279
 -- Name: pk_id_dbpessoas_complemento_pj; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7166,8 +7238,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pj
 
 
 --
--- TOC entry 3608 (class 2606 OID 19011)
--- Dependencies: 2190 2190
+-- TOC entry 4777 (class 2606 OID 18842)
+-- Dependencies: 281 281
 -- Name: pk_id_dbpessoas_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7176,8 +7248,8 @@ ALTER TABLE ONLY dbpessoas_convenios
 
 
 --
--- TOC entry 3612 (class 2606 OID 19013)
--- Dependencies: 2192 2192
+-- TOC entry 4781 (class 2606 OID 18844)
+-- Dependencies: 283 283
 -- Name: pk_id_dbpessoas_demandas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7186,8 +7258,8 @@ ALTER TABLE ONLY dbpessoas_demandas
 
 
 --
--- TOC entry 3620 (class 2606 OID 19015)
--- Dependencies: 2196 2196
+-- TOC entry 4789 (class 2606 OID 18846)
+-- Dependencies: 287 287
 -- Name: pk_id_dbpessoas_formacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7196,8 +7268,8 @@ ALTER TABLE ONLY dbpessoas_formacoes
 
 
 --
--- TOC entry 3624 (class 2606 OID 19017)
--- Dependencies: 2198 2198
+-- TOC entry 4793 (class 2606 OID 18848)
+-- Dependencies: 289 289
 -- Name: pk_id_dbpessoas_funcionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7206,8 +7278,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3628 (class 2606 OID 19019)
--- Dependencies: 2200 2200
+-- TOC entry 4797 (class 2606 OID 18850)
+-- Dependencies: 291 291
 -- Name: pk_id_dbpessoas_inscricoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7216,8 +7288,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 3632 (class 2606 OID 19021)
--- Dependencies: 2202 2202
+-- TOC entry 4801 (class 2606 OID 18852)
+-- Dependencies: 293 293
 -- Name: pk_id_dbpessoas_livros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7226,8 +7298,8 @@ ALTER TABLE ONLY dbpessoas_livros
 
 
 --
--- TOC entry 3636 (class 2606 OID 19023)
--- Dependencies: 2204 2204
+-- TOC entry 4805 (class 2606 OID 18854)
+-- Dependencies: 295 295
 -- Name: pk_id_dbpessoas_solicitacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7236,8 +7308,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3640 (class 2606 OID 19025)
--- Dependencies: 2206 2206
+-- TOC entry 4809 (class 2606 OID 18856)
+-- Dependencies: 297 297
 -- Name: pk_id_dbpessoas_titularidades; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7246,8 +7318,8 @@ ALTER TABLE ONLY dbpessoas_titularidades
 
 
 --
--- TOC entry 3599 (class 2606 OID 19027)
--- Dependencies: 2186 2186
+-- TOC entry 4768 (class 2606 OID 18858)
+-- Dependencies: 277 277
 -- Name: pk_id_dbpessos_complemento_pf; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7256,8 +7328,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pf
 
 
 --
--- TOC entry 3616 (class 2606 OID 19029)
--- Dependencies: 2194 2194
+-- TOC entry 4785 (class 2606 OID 18860)
+-- Dependencies: 285 285
 -- Name: pk_id_dbpesssoas_enderecoscobrancas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7266,8 +7338,8 @@ ALTER TABLE ONLY dbpessoas_enderecoscobrancas
 
 
 --
--- TOC entry 3644 (class 2606 OID 19031)
--- Dependencies: 2208 2208
+-- TOC entry 4813 (class 2606 OID 18862)
+-- Dependencies: 299 299
 -- Name: pk_id_dbplano_contas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7276,8 +7348,8 @@ ALTER TABLE ONLY dbplano_contas
 
 
 --
--- TOC entry 3648 (class 2606 OID 19033)
--- Dependencies: 2210 2210
+-- TOC entry 4817 (class 2606 OID 18864)
+-- Dependencies: 301 301
 -- Name: pk_id_dbprocessos_academicos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7286,8 +7358,8 @@ ALTER TABLE ONLY dbprocessos_academicos
 
 
 --
--- TOC entry 3653 (class 2606 OID 19035)
--- Dependencies: 2212 2212
+-- TOC entry 4822 (class 2606 OID 18866)
+-- Dependencies: 303 303
 -- Name: pk_id_dbprodutos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7296,8 +7368,8 @@ ALTER TABLE ONLY dbprodutos
 
 
 --
--- TOC entry 3657 (class 2606 OID 19037)
--- Dependencies: 2214 2214
+-- TOC entry 4826 (class 2606 OID 18868)
+-- Dependencies: 305 305
 -- Name: pk_id_dbprodutos_insumos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7306,8 +7378,8 @@ ALTER TABLE ONLY dbprodutos_caracteristicas
 
 
 --
--- TOC entry 3662 (class 2606 OID 19039)
--- Dependencies: 2219 2219
+-- TOC entry 4831 (class 2606 OID 18870)
+-- Dependencies: 310 310
 -- Name: pk_id_dbprodutos_parametros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7316,8 +7388,8 @@ ALTER TABLE ONLY dbprodutos_parametros
 
 
 --
--- TOC entry 3583 (class 2606 OID 19041)
--- Dependencies: 2178 2178
+-- TOC entry 4752 (class 2606 OID 18872)
+-- Dependencies: 269 269
 -- Name: pk_id_dbprodutos_patrimonios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7326,8 +7398,8 @@ ALTER TABLE ONLY dbpatrimonios
 
 
 --
--- TOC entry 3666 (class 2606 OID 19043)
--- Dependencies: 2221 2221
+-- TOC entry 4835 (class 2606 OID 18874)
+-- Dependencies: 312 312
 -- Name: pk_id_dbprodutos_tabelapreco; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7336,8 +7408,8 @@ ALTER TABLE ONLY dbprodutos_tabelapreco
 
 
 --
--- TOC entry 3670 (class 2606 OID 19045)
--- Dependencies: 2223 2223
+-- TOC entry 4839 (class 2606 OID 18876)
+-- Dependencies: 314 314
 -- Name: pk_id_dbprodutos_tipos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7346,8 +7418,8 @@ ALTER TABLE ONLY dbprodutos_tipos
 
 
 --
--- TOC entry 3674 (class 2606 OID 19047)
--- Dependencies: 2225 2225
+-- TOC entry 4843 (class 2606 OID 18878)
+-- Dependencies: 316 316
 -- Name: pk_id_dbprodutos_tributos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7356,8 +7428,8 @@ ALTER TABLE ONLY dbprodutos_tributos
 
 
 --
--- TOC entry 3678 (class 2606 OID 19049)
--- Dependencies: 2227 2227
+-- TOC entry 4847 (class 2606 OID 18880)
+-- Dependencies: 318 318
 -- Name: pk_id_dbprofessores_areas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7366,8 +7438,8 @@ ALTER TABLE ONLY dbprofessores_areas
 
 
 --
--- TOC entry 3682 (class 2606 OID 19051)
--- Dependencies: 2229 2229
+-- TOC entry 4851 (class 2606 OID 18882)
+-- Dependencies: 320 320
 -- Name: pk_id_dbprojetos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7376,8 +7448,8 @@ ALTER TABLE ONLY dbprojetos
 
 
 --
--- TOC entry 3686 (class 2606 OID 19053)
--- Dependencies: 2231 2231
+-- TOC entry 4855 (class 2606 OID 18884)
+-- Dependencies: 322 322
 -- Name: pk_id_dbprojetos_colaboradores; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7386,8 +7458,8 @@ ALTER TABLE ONLY dbprojetos_colaboradores
 
 
 --
--- TOC entry 3690 (class 2606 OID 19055)
--- Dependencies: 2233 2233
+-- TOC entry 4859 (class 2606 OID 18886)
+-- Dependencies: 324 324
 -- Name: pk_id_dbprojetos_custos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7396,8 +7468,8 @@ ALTER TABLE ONLY dbprojetos_custos
 
 
 --
--- TOC entry 3694 (class 2606 OID 19057)
--- Dependencies: 2235 2235
+-- TOC entry 4863 (class 2606 OID 18888)
+-- Dependencies: 326 326
 -- Name: pk_id_dbprojetos_recursos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7406,8 +7478,8 @@ ALTER TABLE ONLY dbprojetos_recursos
 
 
 --
--- TOC entry 3698 (class 2606 OID 19059)
--- Dependencies: 2237 2237
+-- TOC entry 4867 (class 2606 OID 18890)
+-- Dependencies: 328 328
 -- Name: pk_id_dbquestionarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7416,8 +7488,8 @@ ALTER TABLE ONLY dbquestionarios
 
 
 --
--- TOC entry 3702 (class 2606 OID 19061)
--- Dependencies: 2239 2239
+-- TOC entry 4871 (class 2606 OID 18892)
+-- Dependencies: 330 330
 -- Name: pk_id_dbquestoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7426,8 +7498,8 @@ ALTER TABLE ONLY dbquestoes
 
 
 --
--- TOC entry 3706 (class 2606 OID 19063)
--- Dependencies: 2241 2241
+-- TOC entry 4875 (class 2606 OID 18894)
+-- Dependencies: 332 332
 -- Name: pk_id_dbquestoes_itens; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7436,8 +7508,8 @@ ALTER TABLE ONLY dbquestoes_itens
 
 
 --
--- TOC entry 3710 (class 2606 OID 19065)
--- Dependencies: 2243 2243
+-- TOC entry 4879 (class 2606 OID 18896)
+-- Dependencies: 334 334
 -- Name: pk_id_dbrecados; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7446,8 +7518,8 @@ ALTER TABLE ONLY dbrecados
 
 
 --
--- TOC entry 3714 (class 2606 OID 19067)
--- Dependencies: 2245 2245
+-- TOC entry 4883 (class 2606 OID 18898)
+-- Dependencies: 336 336
 -- Name: pk_id_dbsalas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7456,8 +7528,8 @@ ALTER TABLE ONLY dbsalas
 
 
 --
--- TOC entry 3718 (class 2606 OID 19069)
--- Dependencies: 2247 2247
+-- TOC entry 4887 (class 2606 OID 18900)
+-- Dependencies: 338 338
 -- Name: pk_id_dbscorecard; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7466,8 +7538,8 @@ ALTER TABLE ONLY dbscorecard
 
 
 --
--- TOC entry 3722 (class 2606 OID 19071)
--- Dependencies: 2249 2249
+-- TOC entry 4891 (class 2606 OID 18902)
+-- Dependencies: 340 340
 -- Name: pk_id_dbscorecard_sentecas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7476,8 +7548,8 @@ ALTER TABLE ONLY dbscorecard_sentencas
 
 
 --
--- TOC entry 3728 (class 2606 OID 19073)
--- Dependencies: 2253 2253
+-- TOC entry 4897 (class 2606 OID 18904)
+-- Dependencies: 344 344
 -- Name: pk_id_dbtransacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7486,8 +7558,8 @@ ALTER TABLE ONLY dbtransacoes
 
 
 --
--- TOC entry 3732 (class 2606 OID 19075)
--- Dependencies: 2255 2255
+-- TOC entry 4901 (class 2606 OID 18906)
+-- Dependencies: 346 346
 -- Name: pk_id_dbtransacoes_contas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7496,8 +7568,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 3736 (class 2606 OID 19077)
--- Dependencies: 2257 2257
+-- TOC entry 4905 (class 2606 OID 18908)
+-- Dependencies: 348 348
 -- Name: pk_id_dbtransacoes_contas_duplicatas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7506,8 +7578,8 @@ ALTER TABLE ONLY dbtransacoes_contas_duplicatas
 
 
 --
--- TOC entry 3831 (class 2606 OID 20289)
--- Dependencies: 2382 2382
+-- TOC entry 4913 (class 2606 OID 18910)
+-- Dependencies: 351 351
 -- Name: pk_id_dbtransacoes_contas_situacao; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7516,8 +7588,8 @@ ALTER TABLE ONLY dbtransacoes_contas_situacao
 
 
 --
--- TOC entry 3744 (class 2606 OID 19079)
--- Dependencies: 2260 2260
+-- TOC entry 4917 (class 2606 OID 18912)
+-- Dependencies: 353 353
 -- Name: pk_id_dbtransacoes_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7526,8 +7598,8 @@ ALTER TABLE ONLY dbtransacoes_convenios
 
 
 --
--- TOC entry 3748 (class 2606 OID 19081)
--- Dependencies: 2263 2263
+-- TOC entry 4921 (class 2606 OID 18914)
+-- Dependencies: 356 356
 -- Name: pk_id_dbtransacoes_produtos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7536,8 +7608,8 @@ ALTER TABLE ONLY dbtransacoes_produtos
 
 
 --
--- TOC entry 3752 (class 2606 OID 19083)
--- Dependencies: 2265 2265
+-- TOC entry 4925 (class 2606 OID 18916)
+-- Dependencies: 358 358
 -- Name: pk_id_dbtreinamentos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7546,8 +7618,8 @@ ALTER TABLE ONLY dbtreinamentos
 
 
 --
--- TOC entry 3756 (class 2606 OID 19085)
--- Dependencies: 2267 2267
+-- TOC entry 4929 (class 2606 OID 18918)
+-- Dependencies: 360 360
 -- Name: pk_id_dbtributos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7556,8 +7628,8 @@ ALTER TABLE ONLY dbtributos
 
 
 --
--- TOC entry 3760 (class 2606 OID 19087)
--- Dependencies: 2269 2269
+-- TOC entry 4933 (class 2606 OID 18920)
+-- Dependencies: 362 362
 -- Name: pk_id_dbturmas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7566,8 +7638,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 3764 (class 2606 OID 19089)
--- Dependencies: 2270 2270
+-- TOC entry 4937 (class 2606 OID 18922)
+-- Dependencies: 363 363
 -- Name: pk_id_dbturmas_convenios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7576,8 +7648,8 @@ ALTER TABLE ONLY dbturmas_convenios
 
 
 --
--- TOC entry 3768 (class 2606 OID 19091)
--- Dependencies: 2273 2273
+-- TOC entry 4941 (class 2606 OID 18924)
+-- Dependencies: 366 366
 -- Name: pk_id_dbturmas_descontos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7586,8 +7658,8 @@ ALTER TABLE ONLY dbturmas_descontos
 
 
 --
--- TOC entry 3772 (class 2606 OID 19093)
--- Dependencies: 2275 2275
+-- TOC entry 4945 (class 2606 OID 18926)
+-- Dependencies: 368 368
 -- Name: pk_id_dbturmas_disciplinas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7596,8 +7668,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 3776 (class 2606 OID 19095)
--- Dependencies: 2277 2277
+-- TOC entry 4949 (class 2606 OID 18928)
+-- Dependencies: 370 370
 -- Name: pk_id_dbturmas_disciplinas_arquivos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7606,8 +7678,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_arquivos
 
 
 --
--- TOC entry 3780 (class 2606 OID 19097)
--- Dependencies: 2279 2279
+-- TOC entry 4953 (class 2606 OID 18930)
+-- Dependencies: 372 372
 -- Name: pk_id_dbturmas_disciplinas_aulas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7616,8 +7688,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_aulas
 
 
 --
--- TOC entry 3784 (class 2606 OID 19099)
--- Dependencies: 2280 2280
+-- TOC entry 4957 (class 2606 OID 18932)
+-- Dependencies: 373 373
 -- Name: pk_id_dbturmas_disciplinas_avaliacao_detalhamento; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7626,8 +7698,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacao_detalhamento
 
 
 --
--- TOC entry 3788 (class 2606 OID 19101)
--- Dependencies: 2283 2283
+-- TOC entry 4961 (class 2606 OID 18934)
+-- Dependencies: 376 376
 -- Name: pk_id_dbturmas_disciplinas_avaliacoes; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7636,8 +7708,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacoes
 
 
 --
--- TOC entry 3792 (class 2606 OID 19103)
--- Dependencies: 2285 2285
+-- TOC entry 4965 (class 2606 OID 18936)
+-- Dependencies: 378 378
 -- Name: pk_id_dbturmas_disciplinas_materiais; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7646,8 +7718,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_materiais
 
 
 --
--- TOC entry 3796 (class 2606 OID 19105)
--- Dependencies: 2287 2287
+-- TOC entry 4969 (class 2606 OID 18938)
+-- Dependencies: 380 380
 -- Name: pk_id_dbturmas_disciplinas_planoaulas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7656,8 +7728,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_planoaulas
 
 
 --
--- TOC entry 3800 (class 2606 OID 19107)
--- Dependencies: 2289 2289
+-- TOC entry 4973 (class 2606 OID 18940)
+-- Dependencies: 382 382
 -- Name: pk_id_dbturmas_requisitos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7666,8 +7738,8 @@ ALTER TABLE ONLY dbturmas_requisitos
 
 
 --
--- TOC entry 3804 (class 2606 OID 19109)
--- Dependencies: 2291 2291
+-- TOC entry 4977 (class 2606 OID 18942)
+-- Dependencies: 384 384
 -- Name: pk_id_dbunidades; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7676,8 +7748,8 @@ ALTER TABLE ONLY dbunidades
 
 
 --
--- TOC entry 3808 (class 2606 OID 19111)
--- Dependencies: 2293 2293
+-- TOC entry 4981 (class 2606 OID 18944)
+-- Dependencies: 386 386
 -- Name: pk_id_dbunidades_parametros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7686,8 +7758,8 @@ ALTER TABLE ONLY dbunidades_parametros
 
 
 --
--- TOC entry 3814 (class 2606 OID 19113)
--- Dependencies: 2295 2295
+-- TOC entry 4987 (class 2606 OID 18946)
+-- Dependencies: 388 388
 -- Name: pk_id_dbusuarios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7696,8 +7768,8 @@ ALTER TABLE ONLY dbusuarios
 
 
 --
--- TOC entry 3818 (class 2606 OID 19115)
--- Dependencies: 2297 2297
+-- TOC entry 4991 (class 2606 OID 18948)
+-- Dependencies: 390 390
 -- Name: pk_id_dbusuarios_erros; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7706,8 +7778,8 @@ ALTER TABLE ONLY dbusuarios_erros
 
 
 --
--- TOC entry 3822 (class 2606 OID 19117)
--- Dependencies: 2299 2299
+-- TOC entry 4995 (class 2606 OID 18950)
+-- Dependencies: 392 392
 -- Name: pk_id_dbusuarios_historico; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7716,8 +7788,8 @@ ALTER TABLE ONLY dbusuarios_historico
 
 
 --
--- TOC entry 3827 (class 2606 OID 19119)
--- Dependencies: 2301 2301
+-- TOC entry 5000 (class 2606 OID 18952)
+-- Dependencies: 394 394
 -- Name: pk_id_dbusuarios_privilegios; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7726,8 +7798,18 @@ ALTER TABLE ONLY dbusuarios_privilegios
 
 
 --
--- TOC entry 3481 (class 1259 OID 19120)
--- Dependencies: 2128
+-- TOC entry 5004 (class 2606 OID 20119)
+-- Dependencies: 475 475
+-- Name: pk_id_dbusuarios_senhas_recuperacao; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY dbusuarios_senhas_recuperacao
+    ADD CONSTRAINT pk_id_dbusuarios_senhas_recuperacao UNIQUE (id);
+
+
+--
+-- TOC entry 4650 (class 1259 OID 18953)
+-- Dependencies: 219
 -- Name: fki__dbtransacoes_contas__dbcontas_cheques; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7735,8 +7817,8 @@ CREATE INDEX fki__dbtransacoes_contas__dbcontas_cheques ON dbcontas_cheques USIN
 
 
 --
--- TOC entry 3482 (class 1259 OID 19121)
--- Dependencies: 2128
+-- TOC entry 4651 (class 1259 OID 18954)
+-- Dependencies: 219
 -- Name: fki_dbcaixa__dbpessoas_cheques__codigocaixa; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7744,8 +7826,8 @@ CREATE INDEX fki_dbcaixa__dbpessoas_cheques__codigocaixa ON dbcontas_cheques USI
 
 
 --
--- TOC entry 3451 (class 1259 OID 19122)
--- Dependencies: 2112
+-- TOC entry 4620 (class 1259 OID 18955)
+-- Dependencies: 203
 -- Name: fki_dbcaixa_funcionarios__dbcaixa__codigocaixafuncionario; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7753,8 +7835,8 @@ CREATE INDEX fki_dbcaixa_funcionarios__dbcaixa__codigocaixafuncionario ON dbcaix
 
 
 --
--- TOC entry 3452 (class 1259 OID 19123)
--- Dependencies: 2112
+-- TOC entry 4621 (class 1259 OID 18956)
+-- Dependencies: 203
 -- Name: fki_dbcontas_caixa_historico__dbcaixa__codigohistorico; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7762,8 +7844,8 @@ CREATE INDEX fki_dbcontas_caixa_historico__dbcaixa__codigohistorico ON dbcaixa U
 
 
 --
--- TOC entry 3604 (class 1259 OID 19124)
--- Dependencies: 2190
+-- TOC entry 4773 (class 1259 OID 18957)
+-- Dependencies: 281
 -- Name: fki_dbcontratos__dbpessoas_convenios__codigoconvenio; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7771,8 +7853,8 @@ CREATE INDEX fki_dbcontratos__dbpessoas_convenios__codigoconvenio ON dbpessoas_c
 
 
 --
--- TOC entry 3491 (class 1259 OID 19125)
--- Dependencies: 2132
+-- TOC entry 4660 (class 1259 OID 18958)
+-- Dependencies: 223
 -- Name: fki_dbplano_contas_dbconvenios_codigoplanoconta; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7780,8 +7862,8 @@ CREATE INDEX fki_dbplano_contas_dbconvenios_codigoplanoconta ON dbconvenios USIN
 
 
 --
--- TOC entry 3658 (class 1259 OID 19126)
--- Dependencies: 2219
+-- TOC entry 4827 (class 1259 OID 18959)
+-- Dependencies: 310
 -- Name: fki_dbprodutos_tipos__dbprodutos__codigotipoproduto; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7789,8 +7871,8 @@ CREATE INDEX fki_dbprodutos_tipos__dbprodutos__codigotipoproduto ON dbprodutos_p
 
 
 --
--- TOC entry 3649 (class 1259 OID 19127)
--- Dependencies: 2212
+-- TOC entry 4818 (class 1259 OID 18960)
+-- Dependencies: 303
 -- Name: fki_dbprodutos_tipos__dbprodutos_codigotipoproduto; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7798,8 +7880,8 @@ CREATE INDEX fki_dbprodutos_tipos__dbprodutos_codigotipoproduto ON dbprodutos US
 
 
 --
--- TOC entry 3823 (class 1259 OID 19128)
--- Dependencies: 2301 2301
+-- TOC entry 4996 (class 1259 OID 18961)
+-- Dependencies: 394 394
 -- Name: idx_usuarios_privilegios; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -7807,8 +7889,8 @@ CREATE INDEX idx_usuarios_privilegios ON dbusuarios_privilegios USING btree (cod
 
 
 --
--- TOC entry 3875 (class 2606 OID 19129)
--- Dependencies: 3729 2255 2128
+-- TOC entry 5048 (class 2606 OID 18962)
+-- Dependencies: 4898 346 219
 -- Name: fk__dbtransacoes_contas__dbcontas_cheques; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7817,8 +7899,8 @@ ALTER TABLE ONLY dbcontas_cheques
 
 
 --
--- TOC entry 3832 (class 2606 OID 19134)
--- Dependencies: 3592 2184 2090
+-- TOC entry 5005 (class 2606 OID 18967)
+-- Dependencies: 4761 275 181
 -- Name: fk_dbalunos__dbalunos_disciplinas__codigoaluno; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7827,8 +7909,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3838 (class 2606 OID 19139)
--- Dependencies: 3592 2184 2094
+-- TOC entry 5011 (class 2606 OID 18972)
+-- Dependencies: 4761 275 185
 -- Name: fk_dbalunos__dbalunos_faltas__codigoaluno; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7837,8 +7919,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 3842 (class 2606 OID 19144)
--- Dependencies: 3592 2184 2096
+-- TOC entry 5015 (class 2606 OID 18977)
+-- Dependencies: 4761 275 187
 -- Name: fk_dbalunos__dbalunos_notas__codigoaluno; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7847,8 +7929,8 @@ ALTER TABLE ONLY dbalunos_notas
 
 
 --
--- TOC entry 3836 (class 2606 OID 19149)
--- Dependencies: 3407 2090 2092
+-- TOC entry 5009 (class 2606 OID 18982)
+-- Dependencies: 4576 181 183
 -- Name: fk_dbalunos_disciplinas__dbalunos_disciplinas_aproveitamentos__; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7857,8 +7939,8 @@ ALTER TABLE ONLY dbalunos_disciplinas_aproveitamentos
 
 
 --
--- TOC entry 3855 (class 2606 OID 19154)
--- Dependencies: 3576 2174 2103
+-- TOC entry 5028 (class 2606 OID 18987)
+-- Dependencies: 4745 265 194
 -- Name: fk_dbavalia_fk_dbgrad_dbgrade_; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7867,8 +7949,8 @@ ALTER TABLE ONLY dbavaliacoes
 
 
 --
--- TOC entry 3923 (class 2606 OID 19159)
--- Dependencies: 3447 2110 2180
+-- TOC entry 5096 (class 2606 OID 18992)
+-- Dependencies: 4616 201 271
 -- Name: fk_dbbiblioteca_cdu__dbpatrimonios_livros__codigocdu; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7877,8 +7959,8 @@ ALTER TABLE ONLY dbpatrimonios_livros
 
 
 --
--- TOC entry 3876 (class 2606 OID 19164)
--- Dependencies: 3453 2112 2128
+-- TOC entry 5049 (class 2606 OID 18997)
+-- Dependencies: 4622 203 219
 -- Name: fk_dbcaixa__dbpessoas_cheques__codigocaixa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7887,8 +7969,8 @@ ALTER TABLE ONLY dbcontas_cheques
 
 
 --
--- TOC entry 3947 (class 2606 OID 19169)
--- Dependencies: 3465 2118 2198
+-- TOC entry 5120 (class 2606 OID 19002)
+-- Dependencies: 4634 209 289
 -- Name: fk_dbcargos__dbpessoas_funcionarios__codigocargo; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7897,8 +7979,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3858 (class 2606 OID 19174)
--- Dependencies: 3473 2124 2112
+-- TOC entry 5031 (class 2606 OID 19007)
+-- Dependencies: 4642 215 203
 -- Name: fk_dbcontas_caixa__dbcaixa__codigocontacaixa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7907,8 +7989,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3866 (class 2606 OID 19179)
--- Dependencies: 3473 2124 2116
+-- TOC entry 5039 (class 2606 OID 19012)
+-- Dependencies: 4642 215 207
 -- Name: fk_dbcontas_caixa__dbcaixa__codigocontacaixa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7917,8 +7999,8 @@ ALTER TABLE ONLY dbcaixa_funcionarios
 
 
 --
--- TOC entry 3873 (class 2606 OID 19184)
--- Dependencies: 3473 2124 2126
+-- TOC entry 5046 (class 2606 OID 19017)
+-- Dependencies: 4642 215 217
 -- Name: fk_dbcontas_caixa__dbcontas_caixa_historico__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7927,8 +8009,8 @@ ALTER TABLE ONLY dbcontas_caixa_historico
 
 
 --
--- TOC entry 3859 (class 2606 OID 19189)
--- Dependencies: 3477 2126 2112
+-- TOC entry 5032 (class 2606 OID 19022)
+-- Dependencies: 4646 217 203
 -- Name: fk_dbcontas_caixa_historico__dbcaixa__codigohistorico; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7937,8 +8019,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3936 (class 2606 OID 19194)
--- Dependencies: 3492 2132 2190
+-- TOC entry 5109 (class 2606 OID 19027)
+-- Dependencies: 4661 223 281
 -- Name: fk_dbcontratos__dbpessoas_convenios__codigoconvenio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7947,8 +8029,8 @@ ALTER TABLE ONLY dbpessoas_convenios
 
 
 --
--- TOC entry 3881 (class 2606 OID 19199)
--- Dependencies: 3492 2132 2133
+-- TOC entry 5054 (class 2606 OID 19032)
+-- Dependencies: 4661 223 224
 -- Name: fk_dbconvenios__dbconvenios_descontos__codigoconvenio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7957,8 +8039,8 @@ ALTER TABLE ONLY dbconvenios_descontos
 
 
 --
--- TOC entry 4011 (class 2606 OID 19204)
--- Dependencies: 3492 2132 2260
+-- TOC entry 5184 (class 2606 OID 19037)
+-- Dependencies: 4661 223 353
 -- Name: fk_dbconvenios__dbtransacoes_convenios__codigoconvenio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7967,8 +8049,8 @@ ALTER TABLE ONLY dbtransacoes_convenios
 
 
 --
--- TOC entry 4023 (class 2606 OID 19209)
--- Dependencies: 3492 2132 2270
+-- TOC entry 5196 (class 2606 OID 19042)
+-- Dependencies: 4661 223 363
 -- Name: fk_dbconvenios__dbturmas_convenios__codigoconvenio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7977,8 +8059,8 @@ ALTER TABLE ONLY dbturmas_convenios
 
 
 --
--- TOC entry 3893 (class 2606 OID 19214)
--- Dependencies: 3510 2142 2146
+-- TOC entry 5066 (class 2606 OID 19047)
+-- Dependencies: 4679 233 237
 -- Name: fk_dbcursos__dbcursos_ativos__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7987,8 +8069,8 @@ ALTER TABLE ONLY dbcursos_ativos
 
 
 --
--- TOC entry 3895 (class 2606 OID 19219)
--- Dependencies: 3510 2142 2148
+-- TOC entry 5068 (class 2606 OID 19052)
+-- Dependencies: 4679 233 239
 -- Name: fk_dbcursos__dbcursos_avaliacoes__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7997,8 +8079,8 @@ ALTER TABLE ONLY dbcursos_avaliacoes
 
 
 --
--- TOC entry 3897 (class 2606 OID 19224)
--- Dependencies: 3510 2142 2150
+-- TOC entry 5070 (class 2606 OID 19057)
+-- Dependencies: 4679 233 241
 -- Name: fk_dbcursos__dbcursos_disciplinas__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8007,8 +8089,8 @@ ALTER TABLE ONLY dbcursos_disciplinas
 
 
 --
--- TOC entry 3905 (class 2606 OID 19229)
--- Dependencies: 3542 2158 2160
+-- TOC entry 5078 (class 2606 OID 19062)
+-- Dependencies: 4711 249 251
 -- Name: fk_dbcursos__dbdisciplinas_semelhantes__codigodisciplinasemelha; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8017,8 +8099,8 @@ ALTER TABLE ONLY dbdisciplinas_semelhantes
 
 
 --
--- TOC entry 3927 (class 2606 OID 19234)
--- Dependencies: 3510 2142 2184
+-- TOC entry 5100 (class 2606 OID 19067)
+-- Dependencies: 4679 233 275
 -- Name: fk_dbcursos__dbpessoas_alunos__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8027,8 +8109,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3939 (class 2606 OID 19239)
--- Dependencies: 3510 2142 2192
+-- TOC entry 5112 (class 2606 OID 19072)
+-- Dependencies: 4679 233 283
 -- Name: fk_dbcursos__dbpessoas_demandas__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8037,8 +8119,8 @@ ALTER TABLE ONLY dbpessoas_demandas
 
 
 --
--- TOC entry 3951 (class 2606 OID 19244)
--- Dependencies: 3510 2142 2200
+-- TOC entry 5124 (class 2606 OID 19077)
+-- Dependencies: 4679 233 291
 -- Name: fk_dbcursos__dbpessoas_inscricoes__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8047,8 +8129,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 4019 (class 2606 OID 19249)
--- Dependencies: 3510 2142 2269
+-- TOC entry 5192 (class 2606 OID 19082)
+-- Dependencies: 4679 233 362
 -- Name: fk_dbcursos__dbturmas__codigocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8057,8 +8139,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 3888 (class 2606 OID 19254)
--- Dependencies: 3514 2144 2142
+-- TOC entry 5061 (class 2606 OID 19087)
+-- Dependencies: 4683 235 233
 -- Name: fk_dbcursos_areas__dbcursos__codigoareacurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8067,8 +8149,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 3978 (class 2606 OID 19259)
--- Dependencies: 3514 2144 2227
+-- TOC entry 5151 (class 2606 OID 19092)
+-- Dependencies: 4683 235 318
 -- Name: fk_dbcursos_areas__dbprofessores_areas__codigoareacurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8077,8 +8159,8 @@ ALTER TABLE ONLY dbprofessores_areas
 
 
 --
--- TOC entry 4020 (class 2606 OID 19264)
--- Dependencies: 3518 2146 2269
+-- TOC entry 5193 (class 2606 OID 19097)
+-- Dependencies: 4687 237 362
 -- Name: fk_dbcursos_ativos__dbturmas__codigocursoativo; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8087,8 +8169,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 3889 (class 2606 OID 19269)
--- Dependencies: 3530 2152 2142
+-- TOC entry 5062 (class 2606 OID 19102)
+-- Dependencies: 4699 243 233
 -- Name: fk_dbcursos_tipos__dbcursos__codigotipocurso; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8097,8 +8179,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 3848 (class 2606 OID 19274)
--- Dependencies: 3538 2156 2100
+-- TOC entry 5021 (class 2606 OID 19107)
+-- Dependencies: 4707 247 191
 -- Name: fk_dbdepartamentos__dbalunos_solicitacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8107,8 +8189,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3948 (class 2606 OID 19279)
--- Dependencies: 3538 2156 2198
+-- TOC entry 5121 (class 2606 OID 19112)
+-- Dependencies: 4707 247 289
 -- Name: fk_dbdepartamentos__dbpessoas_funcionarios__codigodepartamento; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8117,8 +8199,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3959 (class 2606 OID 19284)
--- Dependencies: 3538 2156 2204
+-- TOC entry 5132 (class 2606 OID 19117)
+-- Dependencies: 4707 247 295
 -- Name: fk_dbdepartamentos__dbpessoas_solicitacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8127,8 +8209,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3898 (class 2606 OID 19289)
--- Dependencies: 3542 2158 2150
+-- TOC entry 5071 (class 2606 OID 19122)
+-- Dependencies: 4711 249 241
 -- Name: fk_dbdisciplinas__dbcursos_disciplinas__codigodisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8137,8 +8219,8 @@ ALTER TABLE ONLY dbcursos_disciplinas
 
 
 --
--- TOC entry 3906 (class 2606 OID 19294)
--- Dependencies: 3542 2158 2160
+-- TOC entry 5079 (class 2606 OID 19127)
+-- Dependencies: 4711 249 251
 -- Name: fk_dbdisciplinas__dbdisciplinas_semelhantes__codigodisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8147,8 +8229,8 @@ ALTER TABLE ONLY dbdisciplinas_semelhantes
 
 
 --
--- TOC entry 4028 (class 2606 OID 19299)
--- Dependencies: 3542 2158 2275
+-- TOC entry 5201 (class 2606 OID 19132)
+-- Dependencies: 4711 249 368
 -- Name: fk_dbdisciplinas__dbturmas_disciplinas__codigodisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8157,8 +8239,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 3979 (class 2606 OID 19304)
--- Dependencies: 3568 2171 2227
+-- TOC entry 5152 (class 2606 OID 19137)
+-- Dependencies: 4737 262 318
 -- Name: fk_dbfuncionarios_professores__dbprofessores_areas__codigoprofe; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8167,8 +8249,8 @@ ALTER TABLE ONLY dbprofessores_areas
 
 
 --
--- TOC entry 4029 (class 2606 OID 19309)
--- Dependencies: 3568 2171 2275
+-- TOC entry 5202 (class 2606 OID 19142)
+-- Dependencies: 4737 262 368
 -- Name: fk_dbfuncionarios_professores__dbturmas_disciplinas__codigoprof; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8177,8 +8259,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 4034 (class 2606 OID 19314)
--- Dependencies: 3568 2171 2277
+-- TOC entry 5207 (class 2606 OID 19147)
+-- Dependencies: 4737 262 370
 -- Name: fk_dbfuncionarios_professores__dbturmas_disciplinas_arquivos__c; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8187,8 +8269,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_arquivos
 
 
 --
--- TOC entry 4046 (class 2606 OID 19319)
--- Dependencies: 3568 2171 2287
+-- TOC entry 5219 (class 2606 OID 19152)
+-- Dependencies: 4737 262 380
 -- Name: fk_dbfuncionarios_professores__dbturmas_disciplinas_planoaulas_; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8197,8 +8279,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_planoaulas
 
 
 --
--- TOC entry 3890 (class 2606 OID 19324)
--- Dependencies: 3576 2174 2142
+-- TOC entry 5063 (class 2606 OID 19157)
+-- Dependencies: 4745 265 233
 -- Name: fk_dbgrade_avaliacoes__dbcursos_codigograde; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8207,8 +8289,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 4030 (class 2606 OID 19329)
--- Dependencies: 3576 2174 2275
+-- TOC entry 5203 (class 2606 OID 19162)
+-- Dependencies: 4745 265 368
 -- Name: fk_dbgrade_avaliacoes_dbturmas_disciplinas__CODIGOGRADE; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8217,8 +8299,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 3924 (class 2606 OID 19334)
--- Dependencies: 3580 2178 2180
+-- TOC entry 5097 (class 2606 OID 19167)
+-- Dependencies: 4749 269 271
 -- Name: fk_dbpatrimonios__dbpatrimonios_livros__codigopatrimonio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8227,8 +8309,8 @@ ALTER TABLE ONLY dbpatrimonios_livros
 
 
 --
--- TOC entry 3956 (class 2606 OID 19339)
--- Dependencies: 3584 2180 2202
+-- TOC entry 5129 (class 2606 OID 19172)
+-- Dependencies: 4753 271 293
 -- Name: fk_dbpatrimonios_livros__dbpessoas_livros__codigolivro; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8237,8 +8319,8 @@ ALTER TABLE ONLY dbpessoas_livros
 
 
 --
--- TOC entry 3849 (class 2606 OID 19344)
--- Dependencies: 3592 2184 2100
+-- TOC entry 5022 (class 2606 OID 19177)
+-- Dependencies: 4761 275 191
 -- Name: fk_dbpessoas__dbalunos_solicitacoes__codigoaluno; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8247,8 +8329,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3860 (class 2606 OID 19349)
--- Dependencies: 3588 2182 2112
+-- TOC entry 5033 (class 2606 OID 19182)
+-- Dependencies: 4757 273 203
 -- Name: fk_dbpessoas__dbcaixa__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8257,8 +8339,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3878 (class 2606 OID 19354)
--- Dependencies: 3588 2182 2130
+-- TOC entry 5051 (class 2606 OID 19187)
+-- Dependencies: 4757 273 221
 -- Name: fk_dbpessoas__dbcontratos__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8267,8 +8349,8 @@ ALTER TABLE ONLY dbcontratos
 
 
 --
--- TOC entry 3883 (class 2606 OID 19359)
--- Dependencies: 3588 2182 2136
+-- TOC entry 5056 (class 2606 OID 19192)
+-- Dependencies: 4757 273 227
 -- Name: fk_dbpessoas__dbcotacoes__codigofornecedor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8277,8 +8359,8 @@ ALTER TABLE ONLY dbcotacoes
 
 
 --
--- TOC entry 3928 (class 2606 OID 19364)
--- Dependencies: 3588 2182 2184
+-- TOC entry 5101 (class 2606 OID 19197)
+-- Dependencies: 4757 273 275
 -- Name: fk_dbpessoas__dbpessoas_alunos__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8287,8 +8369,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3932 (class 2606 OID 19369)
--- Dependencies: 3588 2182 2186
+-- TOC entry 5105 (class 2606 OID 19202)
+-- Dependencies: 4757 273 277
 -- Name: fk_dbpessoas__dbpessoas_complemento_pf__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8297,8 +8379,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pf
 
 
 --
--- TOC entry 3934 (class 2606 OID 19374)
--- Dependencies: 3588 2182 2188
+-- TOC entry 5107 (class 2606 OID 19207)
+-- Dependencies: 4757 273 279
 -- Name: fk_dbpessoas__dbpessoas_complemento_pj__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8307,8 +8389,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pj
 
 
 --
--- TOC entry 3937 (class 2606 OID 19379)
--- Dependencies: 3588 2182 2190
+-- TOC entry 5110 (class 2606 OID 19212)
+-- Dependencies: 4757 273 281
 -- Name: fk_dbpessoas__dbpessoas_convenios__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8317,8 +8399,8 @@ ALTER TABLE ONLY dbpessoas_convenios
 
 
 --
--- TOC entry 3940 (class 2606 OID 19384)
--- Dependencies: 3588 2182 2192
+-- TOC entry 5113 (class 2606 OID 19217)
+-- Dependencies: 4757 273 283
 -- Name: fk_dbpessoas__dbpessoas_demandas__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8327,8 +8409,8 @@ ALTER TABLE ONLY dbpessoas_demandas
 
 
 --
--- TOC entry 3942 (class 2606 OID 19389)
--- Dependencies: 3588 2182 2194
+-- TOC entry 5115 (class 2606 OID 19222)
+-- Dependencies: 4757 273 285
 -- Name: fk_dbpessoas__dbpessoas_enderecoscobrancas__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8337,8 +8419,8 @@ ALTER TABLE ONLY dbpessoas_enderecoscobrancas
 
 
 --
--- TOC entry 3944 (class 2606 OID 19394)
--- Dependencies: 3588 2182 2196
+-- TOC entry 5117 (class 2606 OID 19227)
+-- Dependencies: 4757 273 287
 -- Name: fk_dbpessoas__dbpessoas_formacoes__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8347,8 +8429,8 @@ ALTER TABLE ONLY dbpessoas_formacoes
 
 
 --
--- TOC entry 3945 (class 2606 OID 19399)
--- Dependencies: 3637 2206 2196
+-- TOC entry 5118 (class 2606 OID 19232)
+-- Dependencies: 4806 297 287
 -- Name: fk_dbpessoas__dbpessoas_formacoes__codigotitularidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8357,8 +8439,8 @@ ALTER TABLE ONLY dbpessoas_formacoes
 
 
 --
--- TOC entry 3949 (class 2606 OID 19404)
--- Dependencies: 3588 2182 2198
+-- TOC entry 5122 (class 2606 OID 19237)
+-- Dependencies: 4757 273 289
 -- Name: fk_dbpessoas__dbpessoas_funcionarios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8367,8 +8449,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3952 (class 2606 OID 19409)
--- Dependencies: 3588 2182 2200
+-- TOC entry 5125 (class 2606 OID 19242)
+-- Dependencies: 4757 273 291
 -- Name: fk_dbpessoas__dbpessoas_inscricoes__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8377,8 +8459,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 3957 (class 2606 OID 19414)
--- Dependencies: 3588 2182 2202
+-- TOC entry 5130 (class 2606 OID 19247)
+-- Dependencies: 4757 273 293
 -- Name: fk_dbpessoas__dbpessoas_livros__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8387,8 +8469,8 @@ ALTER TABLE ONLY dbpessoas_livros
 
 
 --
--- TOC entry 3960 (class 2606 OID 19419)
--- Dependencies: 3588 2182 2204
+-- TOC entry 5133 (class 2606 OID 19252)
+-- Dependencies: 4757 273 295
 -- Name: fk_dbpessoas__dbpessoas_solicitacoes__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8397,8 +8479,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3982 (class 2606 OID 19424)
--- Dependencies: 3588 2182 2231
+-- TOC entry 5155 (class 2606 OID 19257)
+-- Dependencies: 4757 273 322
 -- Name: fk_dbpessoas__dbprojetos_colaboradores__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8407,8 +8489,8 @@ ALTER TABLE ONLY dbprojetos_colaboradores
 
 
 --
--- TOC entry 3998 (class 2606 OID 19429)
--- Dependencies: 3588 2182 2253
+-- TOC entry 5171 (class 2606 OID 19262)
+-- Dependencies: 4757 273 344
 -- Name: fk_dbpessoas__dbtransacoes__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8417,8 +8499,8 @@ ALTER TABLE ONLY dbtransacoes
 
 
 --
--- TOC entry 4001 (class 2606 OID 19434)
--- Dependencies: 3588 2182 2255
+-- TOC entry 5174 (class 2606 OID 19267)
+-- Dependencies: 4757 273 346
 -- Name: fk_dbpessoas__dbtransacoes_contas__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8427,8 +8509,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 4005 (class 2606 OID 19439)
--- Dependencies: 3588 2182 2257
+-- TOC entry 5178 (class 2606 OID 19272)
+-- Dependencies: 4757 273 348
 -- Name: fk_dbpessoas__dbtransacoes_contas_duplicatas__codigopessoa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8437,8 +8519,8 @@ ALTER TABLE ONLY dbtransacoes_contas_duplicatas
 
 
 --
--- TOC entry 4052 (class 2606 OID 19444)
--- Dependencies: 3588 2182 2295
+-- TOC entry 5225 (class 2606 OID 19277)
+-- Dependencies: 4757 273 388
 -- Name: fk_dbpessoas__dbusuarios__codigousuario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8447,8 +8529,8 @@ ALTER TABLE ONLY dbusuarios
 
 
 --
--- TOC entry 3852 (class 2606 OID 19449)
--- Dependencies: 3592 2184 2102
+-- TOC entry 5025 (class 2606 OID 19282)
+-- Dependencies: 4761 275 193
 -- Name: fk_dbpessoas_alunos__dbalunos_transacoes__codigoaluno; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8457,8 +8539,8 @@ ALTER TABLE ONLY dbalunos_transacoes
 
 
 --
--- TOC entry 3850 (class 2606 OID 19454)
--- Dependencies: 3621 2198 2100
+-- TOC entry 5023 (class 2606 OID 19287)
+-- Dependencies: 4790 289 191
 -- Name: fk_dbpessoas_funcionarios__dbalunos_solicitacoes__codigofuncio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8467,8 +8549,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3861 (class 2606 OID 19459)
--- Dependencies: 3621 2198 2112
+-- TOC entry 5034 (class 2606 OID 19292)
+-- Dependencies: 4790 289 203
 -- Name: fk_dbpessoas_funcionarios__dbcaixa__codigofuncionario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8477,8 +8559,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3867 (class 2606 OID 19464)
--- Dependencies: 3621 2198 2116
+-- TOC entry 5040 (class 2606 OID 19297)
+-- Dependencies: 4790 289 207
 -- Name: fk_dbpessoas_funcionarios__dbcaixa_funcionarios__codigofunciona; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8487,8 +8569,8 @@ ALTER TABLE ONLY dbcaixa_funcionarios
 
 
 --
--- TOC entry 3909 (class 2606 OID 19469)
--- Dependencies: 3621 2198 2165
+-- TOC entry 5082 (class 2606 OID 19302)
+-- Dependencies: 4790 289 256
 -- Name: fk_dbpessoas_funcionarios__dbfuncionarios_ferias__codigofuncion; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8497,8 +8579,8 @@ ALTER TABLE ONLY dbfuncionarios_ferias
 
 
 --
--- TOC entry 3911 (class 2606 OID 19474)
--- Dependencies: 3621 2198 2167
+-- TOC entry 5084 (class 2606 OID 19307)
+-- Dependencies: 4790 289 258
 -- Name: fk_dbpessoas_funcionarios__dbfuncionarios_folhapagamento__codig; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8507,8 +8589,8 @@ ALTER TABLE ONLY dbfuncionarios_folhapagamento
 
 
 --
--- TOC entry 3913 (class 2606 OID 19479)
--- Dependencies: 3621 2198 2169
+-- TOC entry 5086 (class 2606 OID 19312)
+-- Dependencies: 4790 289 260
 -- Name: fk_dbpessoas_funcionarios__dbfuncionarios_ocorrencias__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8517,8 +8599,8 @@ ALTER TABLE ONLY dbfuncionarios_ocorrencias
 
 
 --
--- TOC entry 3915 (class 2606 OID 19484)
--- Dependencies: 3621 2198 2171
+-- TOC entry 5088 (class 2606 OID 19317)
+-- Dependencies: 4790 289 262
 -- Name: fk_dbpessoas_funcionarios__dbfuncionarios_professores__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8527,8 +8609,8 @@ ALTER TABLE ONLY dbfuncionarios_professores
 
 
 --
--- TOC entry 3917 (class 2606 OID 19489)
--- Dependencies: 3621 2198 2173
+-- TOC entry 5090 (class 2606 OID 19322)
+-- Dependencies: 4790 289 264
 -- Name: fk_dbpessoas_funcionarios__dbfuncionarios_treinamentos__codigof; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8537,8 +8619,8 @@ ALTER TABLE ONLY dbfuncionarios_treinamentos
 
 
 --
--- TOC entry 3920 (class 2606 OID 19494)
--- Dependencies: 3621 2198 2178
+-- TOC entry 5093 (class 2606 OID 19327)
+-- Dependencies: 4790 289 269
 -- Name: fk_dbpessoas_funcionarios__dbpatrimonios__codigofuncionario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8547,8 +8629,8 @@ ALTER TABLE ONLY dbpatrimonios
 
 
 --
--- TOC entry 3961 (class 2606 OID 19499)
--- Dependencies: 3621 2198 2204
+-- TOC entry 5134 (class 2606 OID 19332)
+-- Dependencies: 4790 289 295
 -- Name: fk_dbpessoas_funcionarios__dbpessoas_solicitacoes__codigofuncio; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8557,8 +8639,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3999 (class 2606 OID 19504)
--- Dependencies: 3641 2208 2253
+-- TOC entry 5172 (class 2606 OID 19337)
+-- Dependencies: 4810 299 344
 -- Name: fk_dbplano_contas__dbtransacoes__codigoplanoconta; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8567,8 +8649,8 @@ ALTER TABLE ONLY dbtransacoes
 
 
 --
--- TOC entry 4002 (class 2606 OID 19509)
--- Dependencies: 3641 2208 2255
+-- TOC entry 5175 (class 2606 OID 19342)
+-- Dependencies: 4810 299 346
 -- Name: fk_dbplano_contas__dbtransacoes_contas__codigoplanoconta; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8577,8 +8659,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 3880 (class 2606 OID 19514)
--- Dependencies: 3641 2208 2132
+-- TOC entry 5053 (class 2606 OID 19347)
+-- Dependencies: 4810 299 223
 -- Name: fk_dbplano_contas_dbconvenios_codigoplanoconta; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8587,8 +8669,8 @@ ALTER TABLE ONLY dbconvenios
 
 
 --
--- TOC entry 3973 (class 2606 OID 19519)
--- Dependencies: 3650 2212 2221
+-- TOC entry 5146 (class 2606 OID 19352)
+-- Dependencies: 4819 303 312
 -- Name: fk_dbproduto__dbprodutos_tabelapreco__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8597,8 +8679,8 @@ ALTER TABLE ONLY dbprodutos_tabelapreco
 
 
 --
--- TOC entry 3976 (class 2606 OID 19524)
--- Dependencies: 3650 2212 2225
+-- TOC entry 5149 (class 2606 OID 19357)
+-- Dependencies: 4819 303 316
 -- Name: fk_dbproduto__dbprodutos_tributos__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8607,8 +8689,8 @@ ALTER TABLE ONLY dbprodutos_tributos
 
 
 --
--- TOC entry 3870 (class 2606 OID 19529)
--- Dependencies: 3650 2212 2122
+-- TOC entry 5043 (class 2606 OID 19362)
+-- Dependencies: 4819 303 213
 -- Name: fk_dbprodutos__dbcompras__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8617,8 +8699,8 @@ ALTER TABLE ONLY dbcompras
 
 
 --
--- TOC entry 3884 (class 2606 OID 19534)
--- Dependencies: 3650 2212 2136
+-- TOC entry 5057 (class 2606 OID 19367)
+-- Dependencies: 4819 303 227
 -- Name: fk_dbprodutos__dbcotacoes__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8627,8 +8709,8 @@ ALTER TABLE ONLY dbcotacoes
 
 
 --
--- TOC entry 3921 (class 2606 OID 19539)
--- Dependencies: 3650 2212 2178
+-- TOC entry 5094 (class 2606 OID 19372)
+-- Dependencies: 4819 303 269
 -- Name: fk_dbprodutos__dbpatrimonios__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8637,8 +8719,8 @@ ALTER TABLE ONLY dbpatrimonios
 
 
 --
--- TOC entry 3968 (class 2606 OID 19544)
--- Dependencies: 3650 2212 2214
+-- TOC entry 5141 (class 2606 OID 19377)
+-- Dependencies: 4819 303 305
 -- Name: fk_dbprodutos__dbprodutos_insumos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8647,8 +8729,8 @@ ALTER TABLE ONLY dbprodutos_caracteristicas
 
 
 --
--- TOC entry 3970 (class 2606 OID 19549)
--- Dependencies: 3650 2212 2219
+-- TOC entry 5143 (class 2606 OID 19382)
+-- Dependencies: 4819 303 310
 -- Name: fk_dbprodutos__dbprodutos_parametros__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8657,8 +8739,8 @@ ALTER TABLE ONLY dbprodutos_parametros
 
 
 --
--- TOC entry 4014 (class 2606 OID 19554)
--- Dependencies: 3650 2212 2263
+-- TOC entry 5187 (class 2606 OID 19387)
+-- Dependencies: 4819 303 356
 -- Name: fk_dbprodutos__dbtransacoes_produtos__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8667,8 +8749,8 @@ ALTER TABLE ONLY dbtransacoes_produtos
 
 
 --
--- TOC entry 4021 (class 2606 OID 19559)
--- Dependencies: 3650 2212 2269
+-- TOC entry 5194 (class 2606 OID 19392)
+-- Dependencies: 4819 303 362
 -- Name: fk_dbprodutos__dbturmas__codigoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8677,8 +8759,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 3966 (class 2606 OID 19564)
--- Dependencies: 3667 2223 2212
+-- TOC entry 5139 (class 2606 OID 19397)
+-- Dependencies: 4836 314 303
 -- Name: fk_dbprodutos_tipos__dbprodutos__codigotipoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8687,8 +8769,8 @@ ALTER TABLE ONLY dbprodutos
 
 
 --
--- TOC entry 3971 (class 2606 OID 19569)
--- Dependencies: 3667 2223 2219
+-- TOC entry 5144 (class 2606 OID 19402)
+-- Dependencies: 4836 314 310
 -- Name: fk_dbprodutos_tipos__dbprodutos_parametros__codigotipoproduto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8697,8 +8779,8 @@ ALTER TABLE ONLY dbprodutos_parametros
 
 
 --
--- TOC entry 3983 (class 2606 OID 19574)
--- Dependencies: 3679 2229 2231
+-- TOC entry 5156 (class 2606 OID 19407)
+-- Dependencies: 4848 320 322
 -- Name: fk_dbprojetos__dbprojetos_colaboradores__codigoprojeto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8707,8 +8789,8 @@ ALTER TABLE ONLY dbprojetos_colaboradores
 
 
 --
--- TOC entry 3985 (class 2606 OID 19579)
--- Dependencies: 3679 2229 2233
+-- TOC entry 5158 (class 2606 OID 19412)
+-- Dependencies: 4848 320 324
 -- Name: fk_dbprojetos__dbprojetos_custos__codigoprojeto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8717,8 +8799,8 @@ ALTER TABLE ONLY dbprojetos_custos
 
 
 --
--- TOC entry 3987 (class 2606 OID 19584)
--- Dependencies: 3679 2229 2235
+-- TOC entry 5160 (class 2606 OID 19417)
+-- Dependencies: 4848 320 326
 -- Name: fk_dbprojetos__dbprojetos_custos__codigoprojeto; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8727,8 +8809,8 @@ ALTER TABLE ONLY dbprojetos_recursos
 
 
 --
--- TOC entry 3990 (class 2606 OID 19589)
--- Dependencies: 3695 2237 2239
+-- TOC entry 5163 (class 2606 OID 19422)
+-- Dependencies: 4864 328 330
 -- Name: fk_dbquestionarios__dbquestoes__codigoquestionario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8737,8 +8819,8 @@ ALTER TABLE ONLY dbquestoes
 
 
 --
--- TOC entry 3992 (class 2606 OID 19594)
--- Dependencies: 3699 2239 2241
+-- TOC entry 5165 (class 2606 OID 19427)
+-- Dependencies: 4868 330 332
 -- Name: fk_dbquestoes__dbquestoes_itens__codigoquestao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8747,8 +8829,8 @@ ALTER TABLE ONLY dbquestoes_itens
 
 
 --
--- TOC entry 3902 (class 2606 OID 19599)
--- Dependencies: 3711 2245 2156
+-- TOC entry 5075 (class 2606 OID 19432)
+-- Dependencies: 4880 336 247
 -- Name: fk_dbsalas__dbdepartamentos__codigosala; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8757,8 +8839,8 @@ ALTER TABLE ONLY dbdepartamentos
 
 
 --
--- TOC entry 4031 (class 2606 OID 19604)
--- Dependencies: 3711 2245 2275
+-- TOC entry 5204 (class 2606 OID 19437)
+-- Dependencies: 4880 336 368
 -- Name: fk_dbsalas__dbturmas_disciplinas__codigosala; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8767,8 +8849,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 3996 (class 2606 OID 19609)
--- Dependencies: 3715 2247 2249
+-- TOC entry 5169 (class 2606 OID 19442)
+-- Dependencies: 4884 338 340
 -- Name: fk_dbscorecard__dbscorecard_sentencas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8777,8 +8859,8 @@ ALTER TABLE ONLY dbscorecard_sentencas
 
 
 --
--- TOC entry 3853 (class 2606 OID 19614)
--- Dependencies: 3725 2253 2102
+-- TOC entry 5026 (class 2606 OID 19447)
+-- Dependencies: 4894 344 193
 -- Name: fk_dbtransacoes__dbalunos_transacoes__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8787,8 +8869,8 @@ ALTER TABLE ONLY dbalunos_transacoes
 
 
 --
--- TOC entry 3862 (class 2606 OID 19619)
--- Dependencies: 3725 2253 2112
+-- TOC entry 5035 (class 2606 OID 19452)
+-- Dependencies: 4894 344 203
 -- Name: fk_dbtransacoes__dbcaixa__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8797,8 +8879,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3929 (class 2606 OID 19624)
--- Dependencies: 3725 2253 2184
+-- TOC entry 5102 (class 2606 OID 19457)
+-- Dependencies: 4894 344 275
 -- Name: fk_dbtransacoes__dbpessoas_alunos__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8807,8 +8889,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3953 (class 2606 OID 19629)
--- Dependencies: 3725 2253 2200
+-- TOC entry 5126 (class 2606 OID 19462)
+-- Dependencies: 4894 344 291
 -- Name: fk_dbtransacoes__dbpessoas_inscricoes__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8817,8 +8899,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 4003 (class 2606 OID 19634)
--- Dependencies: 3725 2253 2255
+-- TOC entry 5176 (class 2606 OID 19467)
+-- Dependencies: 4894 344 346
 -- Name: fk_dbtransacoes__dbtransacoes_contas__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8827,8 +8909,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 4012 (class 2606 OID 19639)
--- Dependencies: 3725 2253 2260
+-- TOC entry 5185 (class 2606 OID 19472)
+-- Dependencies: 4894 344 353
 -- Name: fk_dbtransacoes__dbtransacoes_convenios__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8837,8 +8919,8 @@ ALTER TABLE ONLY dbtransacoes_convenios
 
 
 --
--- TOC entry 4015 (class 2606 OID 19644)
--- Dependencies: 3725 2253 2263
+-- TOC entry 5188 (class 2606 OID 19477)
+-- Dependencies: 4894 344 356
 -- Name: fk_dbtransacoes__dbtransacoes_produtos__codigotransacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8847,8 +8929,8 @@ ALTER TABLE ONLY dbtransacoes_produtos
 
 
 --
--- TOC entry 4008 (class 2606 OID 19649)
--- Dependencies: 3729 2255 2259
+-- TOC entry 5181 (class 2606 OID 19482)
+-- Dependencies: 4898 346 350
 -- Name: fk_dbtransacoes_contas__db_contas_extornos__codigocontadestino; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8857,8 +8939,8 @@ ALTER TABLE ONLY dbtransacoes_contas_extornos
 
 
 --
--- TOC entry 4009 (class 2606 OID 19654)
--- Dependencies: 3729 2255 2259
+-- TOC entry 5182 (class 2606 OID 19487)
+-- Dependencies: 4898 346 350
 -- Name: fk_dbtransacoes_contas__db_contas_extornos__codigocontaorigem; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8867,8 +8949,8 @@ ALTER TABLE ONLY dbtransacoes_contas_extornos
 
 
 --
--- TOC entry 3863 (class 2606 OID 19659)
--- Dependencies: 3729 2255 2112
+-- TOC entry 5036 (class 2606 OID 19492)
+-- Dependencies: 4898 346 203
 -- Name: fk_dbtransacoes_contas__dbcaixa__codigoconta; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8877,8 +8959,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 4006 (class 2606 OID 19664)
--- Dependencies: 3729 2255 2257
+-- TOC entry 5179 (class 2606 OID 19497)
+-- Dependencies: 4898 346 348
 -- Name: fk_dbtransacoes_contas__dbtransacoes_contas_duplicatas__codigoc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8887,8 +8969,8 @@ ALTER TABLE ONLY dbtransacoes_contas_duplicatas
 
 
 --
--- TOC entry 3918 (class 2606 OID 19669)
--- Dependencies: 3749 2265 2173
+-- TOC entry 5091 (class 2606 OID 19502)
+-- Dependencies: 4922 358 264
 -- Name: fk_dbtreinamentos_dbfuncionarios_treinamentos__codigotreinament; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8897,8 +8979,8 @@ ALTER TABLE ONLY dbfuncionarios_treinamentos
 
 
 --
--- TOC entry 3930 (class 2606 OID 19674)
--- Dependencies: 3757 2269 2184
+-- TOC entry 5103 (class 2606 OID 19507)
+-- Dependencies: 4930 362 275
 -- Name: fk_dbturmas__dbpessoas_alunos__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8907,8 +8989,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3954 (class 2606 OID 19679)
--- Dependencies: 3757 2269 2200
+-- TOC entry 5127 (class 2606 OID 19512)
+-- Dependencies: 4930 362 291
 -- Name: fk_dbturmas__dbpessoas_inscricoes__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8917,8 +8999,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 4024 (class 2606 OID 19684)
--- Dependencies: 3757 2269 2270
+-- TOC entry 5197 (class 2606 OID 19517)
+-- Dependencies: 4930 362 363
 -- Name: fk_dbturmas__dbturmas_convenios__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8927,8 +9009,8 @@ ALTER TABLE ONLY dbturmas_convenios
 
 
 --
--- TOC entry 4026 (class 2606 OID 19689)
--- Dependencies: 3757 2269 2273
+-- TOC entry 5199 (class 2606 OID 19522)
+-- Dependencies: 4930 362 366
 -- Name: fk_dbturmas__dbturmas_descontos__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8937,8 +9019,8 @@ ALTER TABLE ONLY dbturmas_descontos
 
 
 --
--- TOC entry 4032 (class 2606 OID 19694)
--- Dependencies: 3757 2269 2275
+-- TOC entry 5205 (class 2606 OID 19527)
+-- Dependencies: 4930 362 368
 -- Name: fk_dbturmas__dbturmas_disciplinas__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8947,8 +9029,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 4049 (class 2606 OID 19699)
--- Dependencies: 3757 2269 2289
+-- TOC entry 5222 (class 2606 OID 19532)
+-- Dependencies: 4930 362 382
 -- Name: fk_dbturmas__dbturmas_requisitos__codigoturma; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8957,8 +9039,8 @@ ALTER TABLE ONLY dbturmas_requisitos
 
 
 --
--- TOC entry 3833 (class 2606 OID 19704)
--- Dependencies: 3542 2158 2090
+-- TOC entry 5006 (class 2606 OID 19537)
+-- Dependencies: 4711 249 181
 -- Name: fk_dbturmas_disciplinas__dbalunos_disciplinas__codisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8967,8 +9049,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3834 (class 2606 OID 19709)
--- Dependencies: 3769 2275 2090
+-- TOC entry 5007 (class 2606 OID 19542)
+-- Dependencies: 4942 368 181
 -- Name: fk_dbturmas_disciplinas__dbalunos_disciplinas__codturmadisc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8977,8 +9059,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3839 (class 2606 OID 19714)
--- Dependencies: 3769 2275 2094
+-- TOC entry 5012 (class 2606 OID 19547)
+-- Dependencies: 4942 368 185
 -- Name: fk_dbturmas_disciplinas__dbalunos_faltas__codigoturmadisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8987,8 +9069,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 3843 (class 2606 OID 19719)
--- Dependencies: 3769 2275 2096
+-- TOC entry 5016 (class 2606 OID 19552)
+-- Dependencies: 4942 368 187
 -- Name: fk_dbturmas_disciplinas__dbalunos_notas__codigoturmadisciplina; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8997,8 +9079,8 @@ ALTER TABLE ONLY dbalunos_notas
 
 
 --
--- TOC entry 4035 (class 2606 OID 19724)
--- Dependencies: 3769 2275 2277
+-- TOC entry 5208 (class 2606 OID 19557)
+-- Dependencies: 4942 368 370
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_arquivos__codigot; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9007,8 +9089,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_arquivos
 
 
 --
--- TOC entry 4037 (class 2606 OID 19729)
--- Dependencies: 3769 2275 2279
+-- TOC entry 5210 (class 2606 OID 19562)
+-- Dependencies: 4942 368 372
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_aulas__codigoturm; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9017,8 +9099,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_aulas
 
 
 --
--- TOC entry 4039 (class 2606 OID 19734)
--- Dependencies: 3769 2275 2280
+-- TOC entry 5212 (class 2606 OID 19567)
+-- Dependencies: 4942 368 373
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_avaliacao_detalha; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9027,8 +9109,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacao_detalhamento
 
 
 --
--- TOC entry 4041 (class 2606 OID 19739)
--- Dependencies: 3769 2275 2283
+-- TOC entry 5214 (class 2606 OID 19572)
+-- Dependencies: 4942 368 376
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_avaliacoes__codig; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9037,8 +9119,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacoes
 
 
 --
--- TOC entry 4044 (class 2606 OID 19744)
--- Dependencies: 3769 2275 2285
+-- TOC entry 5217 (class 2606 OID 19577)
+-- Dependencies: 4942 368 378
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_materiais__codigo; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9047,8 +9129,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_materiais
 
 
 --
--- TOC entry 4047 (class 2606 OID 19749)
--- Dependencies: 3769 2275 2287
+-- TOC entry 5220 (class 2606 OID 19582)
+-- Dependencies: 4942 368 380
 -- Name: fk_dbturmas_disciplinas__dbturmas_disciplinas_planoaulas__codig; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9057,8 +9139,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_planoaulas
 
 
 --
--- TOC entry 3840 (class 2606 OID 19754)
--- Dependencies: 3777 2279 2094
+-- TOC entry 5013 (class 2606 OID 19587)
+-- Dependencies: 4950 372 185
 -- Name: fk_dbturmas_disciplinas_aulas__dbalunos_faltas__codigoaula; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9067,8 +9149,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 4042 (class 2606 OID 19759)
--- Dependencies: 3785 2283 2283
+-- TOC entry 5215 (class 2606 OID 19592)
+-- Dependencies: 4958 376 376
 -- Name: fk_dbturmas_disciplinas_avaliacoes; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9077,8 +9159,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacoes
 
 
 --
--- TOC entry 3846 (class 2606 OID 19764)
--- Dependencies: 3797 2289 2098
+-- TOC entry 5019 (class 2606 OID 19597)
+-- Dependencies: 4970 382 189
 -- Name: fk_dbturmas_requisitos__dbalunos_requisitos_codigoaula; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9087,8 +9169,8 @@ ALTER TABLE ONLY dbalunos_requisitos
 
 
 --
--- TOC entry 3835 (class 2606 OID 19769)
--- Dependencies: 3801 2291 2090
+-- TOC entry 5008 (class 2606 OID 19602)
+-- Dependencies: 4974 384 181
 -- Name: fk_dbunidades__dbalunos_disciplinas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9097,8 +9179,8 @@ ALTER TABLE ONLY dbalunos_disciplinas
 
 
 --
--- TOC entry 3837 (class 2606 OID 19774)
--- Dependencies: 3801 2291 2092
+-- TOC entry 5010 (class 2606 OID 19607)
+-- Dependencies: 4974 384 183
 -- Name: fk_dbunidades__dbalunos_disciplinas_aproveitamentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9107,8 +9189,8 @@ ALTER TABLE ONLY dbalunos_disciplinas_aproveitamentos
 
 
 --
--- TOC entry 3841 (class 2606 OID 19779)
--- Dependencies: 3801 2291 2094
+-- TOC entry 5014 (class 2606 OID 19612)
+-- Dependencies: 4974 384 185
 -- Name: fk_dbunidades__dbalunos_faltas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9117,8 +9199,8 @@ ALTER TABLE ONLY dbalunos_faltas
 
 
 --
--- TOC entry 3844 (class 2606 OID 19784)
--- Dependencies: 3801 2291 2096
+-- TOC entry 5017 (class 2606 OID 19617)
+-- Dependencies: 4974 384 187
 -- Name: fk_dbunidades__dbalunos_notas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9127,8 +9209,8 @@ ALTER TABLE ONLY dbalunos_notas
 
 
 --
--- TOC entry 3847 (class 2606 OID 19789)
--- Dependencies: 3801 2291 2098
+-- TOC entry 5020 (class 2606 OID 19622)
+-- Dependencies: 4974 384 189
 -- Name: fk_dbunidades__dbalunos_requisitos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9137,8 +9219,8 @@ ALTER TABLE ONLY dbalunos_requisitos
 
 
 --
--- TOC entry 3851 (class 2606 OID 19794)
--- Dependencies: 3801 2291 2100
+-- TOC entry 5024 (class 2606 OID 19627)
+-- Dependencies: 4974 384 191
 -- Name: fk_dbunidades__dbalunos_solicitacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9147,8 +9229,8 @@ ALTER TABLE ONLY dbalunos_solicitacoes
 
 
 --
--- TOC entry 3854 (class 2606 OID 19799)
--- Dependencies: 3801 2291 2102
+-- TOC entry 5027 (class 2606 OID 19632)
+-- Dependencies: 4974 384 193
 -- Name: fk_dbunidades__dbalunos_transacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9157,8 +9239,8 @@ ALTER TABLE ONLY dbalunos_transacoes
 
 
 --
--- TOC entry 3856 (class 2606 OID 19804)
--- Dependencies: 3801 2291 2108
+-- TOC entry 5029 (class 2606 OID 19637)
+-- Dependencies: 4974 384 199
 -- Name: fk_dbunidades__dbbalanco_patrimonial__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9167,8 +9249,8 @@ ALTER TABLE ONLY dbbalanco_patrimonial
 
 
 --
--- TOC entry 3857 (class 2606 OID 19809)
--- Dependencies: 3801 2291 2110
+-- TOC entry 5030 (class 2606 OID 19642)
+-- Dependencies: 4974 384 201
 -- Name: fk_dbunidades__dbbiblioteca_cdu__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9177,8 +9259,8 @@ ALTER TABLE ONLY dbbiblioteca_cdu
 
 
 --
--- TOC entry 3864 (class 2606 OID 19814)
--- Dependencies: 3801 2291 2112
+-- TOC entry 5037 (class 2606 OID 19647)
+-- Dependencies: 4974 384 203
 -- Name: fk_dbunidades__dbcaixa__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9187,8 +9269,8 @@ ALTER TABLE ONLY dbcaixa
 
 
 --
--- TOC entry 3865 (class 2606 OID 19819)
--- Dependencies: 3801 2291 2114
+-- TOC entry 5038 (class 2606 OID 19652)
+-- Dependencies: 4974 384 205
 -- Name: fk_dbunidades__dbcaixa_fechamentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9197,8 +9279,8 @@ ALTER TABLE ONLY dbcaixa_fechamentos
 
 
 --
--- TOC entry 3868 (class 2606 OID 19824)
--- Dependencies: 3801 2291 2116
+-- TOC entry 5041 (class 2606 OID 19657)
+-- Dependencies: 4974 384 207
 -- Name: fk_dbunidades__dbcaixa_funcionarios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9207,8 +9289,8 @@ ALTER TABLE ONLY dbcaixa_funcionarios
 
 
 --
--- TOC entry 3869 (class 2606 OID 19829)
--- Dependencies: 3801 2291 2118
+-- TOC entry 5042 (class 2606 OID 19662)
+-- Dependencies: 4974 384 209
 -- Name: fk_dbunidades__dbcargos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9217,8 +9299,8 @@ ALTER TABLE ONLY dbcargos
 
 
 --
--- TOC entry 3877 (class 2606 OID 19834)
--- Dependencies: 3801 2291 2128
+-- TOC entry 5050 (class 2606 OID 19667)
+-- Dependencies: 4974 384 219
 -- Name: fk_dbunidades__dbcheques__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9227,8 +9309,8 @@ ALTER TABLE ONLY dbcontas_cheques
 
 
 --
--- TOC entry 3871 (class 2606 OID 19839)
--- Dependencies: 3801 2291 2122
+-- TOC entry 5044 (class 2606 OID 19672)
+-- Dependencies: 4974 384 213
 -- Name: fk_dbunidades__dbcompras__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9237,8 +9319,8 @@ ALTER TABLE ONLY dbcompras
 
 
 --
--- TOC entry 3872 (class 2606 OID 19844)
--- Dependencies: 3801 2291 2124
+-- TOC entry 5045 (class 2606 OID 19677)
+-- Dependencies: 4974 384 215
 -- Name: fk_dbunidades__dbcontas_caixa__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9247,8 +9329,8 @@ ALTER TABLE ONLY dbcontas_caixa
 
 
 --
--- TOC entry 3874 (class 2606 OID 19849)
--- Dependencies: 3801 2291 2126
+-- TOC entry 5047 (class 2606 OID 19682)
+-- Dependencies: 4974 384 217
 -- Name: fk_dbunidades__dbcontas_caixa_historico__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9257,8 +9339,8 @@ ALTER TABLE ONLY dbcontas_caixa_historico
 
 
 --
--- TOC entry 3879 (class 2606 OID 19854)
--- Dependencies: 3801 2291 2130
+-- TOC entry 5052 (class 2606 OID 19687)
+-- Dependencies: 4974 384 221
 -- Name: fk_dbunidades__dbcontratos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9267,8 +9349,8 @@ ALTER TABLE ONLY dbcontratos
 
 
 --
--- TOC entry 3882 (class 2606 OID 19859)
--- Dependencies: 3801 2291 2133
+-- TOC entry 5055 (class 2606 OID 19692)
+-- Dependencies: 4974 384 224
 -- Name: fk_dbunidades__dbconvenios_descontos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9277,8 +9359,8 @@ ALTER TABLE ONLY dbconvenios_descontos
 
 
 --
--- TOC entry 3885 (class 2606 OID 19864)
--- Dependencies: 3801 2291 2136
+-- TOC entry 5058 (class 2606 OID 19697)
+-- Dependencies: 4974 384 227
 -- Name: fk_dbunidades__dbcotacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9287,8 +9369,8 @@ ALTER TABLE ONLY dbcotacoes
 
 
 --
--- TOC entry 3886 (class 2606 OID 19869)
--- Dependencies: 3801 2291 2138
+-- TOC entry 5059 (class 2606 OID 19702)
+-- Dependencies: 4974 384 229
 -- Name: fk_dbunidades__dbcrm_demandas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9297,8 +9379,8 @@ ALTER TABLE ONLY dbcrm_demandas
 
 
 --
--- TOC entry 3887 (class 2606 OID 19874)
--- Dependencies: 3801 2291 2140
+-- TOC entry 5060 (class 2606 OID 19707)
+-- Dependencies: 4974 384 231
 -- Name: fk_dbunidades__dbcurriculos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9307,8 +9389,8 @@ ALTER TABLE ONLY dbcurriculos
 
 
 --
--- TOC entry 3891 (class 2606 OID 19879)
--- Dependencies: 3801 2291 2142
+-- TOC entry 5064 (class 2606 OID 19712)
+-- Dependencies: 4974 384 233
 -- Name: fk_dbunidades__dbcursos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9317,8 +9399,8 @@ ALTER TABLE ONLY dbcursos
 
 
 --
--- TOC entry 3892 (class 2606 OID 19884)
--- Dependencies: 3801 2291 2144
+-- TOC entry 5065 (class 2606 OID 19717)
+-- Dependencies: 4974 384 235
 -- Name: fk_dbunidades__dbcursos_areas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9327,8 +9409,8 @@ ALTER TABLE ONLY dbcursos_areas
 
 
 --
--- TOC entry 3894 (class 2606 OID 19889)
--- Dependencies: 3801 2291 2146
+-- TOC entry 5067 (class 2606 OID 19722)
+-- Dependencies: 4974 384 237
 -- Name: fk_dbunidades__dbcursos_ativos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9337,8 +9419,8 @@ ALTER TABLE ONLY dbcursos_ativos
 
 
 --
--- TOC entry 3896 (class 2606 OID 19894)
--- Dependencies: 3801 2291 2148
+-- TOC entry 5069 (class 2606 OID 19727)
+-- Dependencies: 4974 384 239
 -- Name: fk_dbunidades__dbcursos_avaliacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9347,8 +9429,8 @@ ALTER TABLE ONLY dbcursos_avaliacoes
 
 
 --
--- TOC entry 3899 (class 2606 OID 19899)
--- Dependencies: 3801 2291 2150
+-- TOC entry 5072 (class 2606 OID 19732)
+-- Dependencies: 4974 384 241
 -- Name: fk_dbunidades__dbcursos_disciplinas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9357,8 +9439,8 @@ ALTER TABLE ONLY dbcursos_disciplinas
 
 
 --
--- TOC entry 3900 (class 2606 OID 19904)
--- Dependencies: 3801 2291 2152
+-- TOC entry 5073 (class 2606 OID 19737)
+-- Dependencies: 4974 384 243
 -- Name: fk_dbunidades__dbcursos_tipos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9367,8 +9449,8 @@ ALTER TABLE ONLY dbcursos_tipos
 
 
 --
--- TOC entry 3901 (class 2606 OID 19909)
--- Dependencies: 3801 2291 2154
+-- TOC entry 5074 (class 2606 OID 19742)
+-- Dependencies: 4974 384 245
 -- Name: fk_dbunidades__dbdados_boleto__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9377,8 +9459,8 @@ ALTER TABLE ONLY dbdados_boleto
 
 
 --
--- TOC entry 3903 (class 2606 OID 19914)
--- Dependencies: 3801 2291 2156
+-- TOC entry 5076 (class 2606 OID 19747)
+-- Dependencies: 4974 384 247
 -- Name: fk_dbunidades__dbdepartamentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9387,8 +9469,8 @@ ALTER TABLE ONLY dbdepartamentos
 
 
 --
--- TOC entry 3904 (class 2606 OID 19919)
--- Dependencies: 3801 2291 2158
+-- TOC entry 5077 (class 2606 OID 19752)
+-- Dependencies: 4974 384 249
 -- Name: fk_dbunidades__dbdisciplinas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9397,8 +9479,8 @@ ALTER TABLE ONLY dbdisciplinas
 
 
 --
--- TOC entry 3907 (class 2606 OID 19924)
--- Dependencies: 3801 2291 2160
+-- TOC entry 5080 (class 2606 OID 19757)
+-- Dependencies: 4974 384 251
 -- Name: fk_dbunidades__dbdisciplinas_semelhantes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9407,8 +9489,8 @@ ALTER TABLE ONLY dbdisciplinas_semelhantes
 
 
 --
--- TOC entry 3908 (class 2606 OID 19929)
--- Dependencies: 3801 2291 2162
+-- TOC entry 5081 (class 2606 OID 19762)
+-- Dependencies: 4974 384 253
 -- Name: fk_dbunidades__dbdocumentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9417,8 +9499,8 @@ ALTER TABLE ONLY dbdocumentos
 
 
 --
--- TOC entry 3910 (class 2606 OID 19934)
--- Dependencies: 3801 2291 2165
+-- TOC entry 5083 (class 2606 OID 19767)
+-- Dependencies: 4974 384 256
 -- Name: fk_dbunidades__dbfuncionarios_ferias__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9427,8 +9509,8 @@ ALTER TABLE ONLY dbfuncionarios_ferias
 
 
 --
--- TOC entry 3912 (class 2606 OID 19939)
--- Dependencies: 3801 2291 2167
+-- TOC entry 5085 (class 2606 OID 19772)
+-- Dependencies: 4974 384 258
 -- Name: fk_dbunidades__dbfuncionarios_folhapagamento__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9437,8 +9519,8 @@ ALTER TABLE ONLY dbfuncionarios_folhapagamento
 
 
 --
--- TOC entry 3914 (class 2606 OID 19944)
--- Dependencies: 3801 2291 2169
+-- TOC entry 5087 (class 2606 OID 19777)
+-- Dependencies: 4974 384 260
 -- Name: fk_dbunidades__dbfuncionarios_ocorrencias__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9447,8 +9529,8 @@ ALTER TABLE ONLY dbfuncionarios_ocorrencias
 
 
 --
--- TOC entry 3916 (class 2606 OID 19949)
--- Dependencies: 3801 2291 2171
+-- TOC entry 5089 (class 2606 OID 19782)
+-- Dependencies: 4974 384 262
 -- Name: fk_dbunidades__dbfuncionarios_professores__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9457,8 +9539,8 @@ ALTER TABLE ONLY dbfuncionarios_professores
 
 
 --
--- TOC entry 3919 (class 2606 OID 19954)
--- Dependencies: 3801 2291 2173
+-- TOC entry 5092 (class 2606 OID 19787)
+-- Dependencies: 4974 384 264
 -- Name: fk_dbunidades__dbfuncionarios_treinamentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9467,8 +9549,8 @@ ALTER TABLE ONLY dbfuncionarios_treinamentos
 
 
 --
--- TOC entry 3922 (class 2606 OID 19959)
--- Dependencies: 3801 2291 2178
+-- TOC entry 5095 (class 2606 OID 19792)
+-- Dependencies: 4974 384 269
 -- Name: fk_dbunidades__dbpatrimonios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9477,8 +9559,8 @@ ALTER TABLE ONLY dbpatrimonios
 
 
 --
--- TOC entry 3925 (class 2606 OID 19964)
--- Dependencies: 3801 2291 2180
+-- TOC entry 5098 (class 2606 OID 19797)
+-- Dependencies: 4974 384 271
 -- Name: fk_dbunidades__dbpatrimonios_livros__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9487,8 +9569,8 @@ ALTER TABLE ONLY dbpatrimonios_livros
 
 
 --
--- TOC entry 3926 (class 2606 OID 19969)
--- Dependencies: 3801 2291 2182
+-- TOC entry 5099 (class 2606 OID 19802)
+-- Dependencies: 4974 384 273
 -- Name: fk_dbunidades__dbpessoas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9497,8 +9579,8 @@ ALTER TABLE ONLY dbpessoas
 
 
 --
--- TOC entry 3931 (class 2606 OID 19974)
--- Dependencies: 3801 2291 2184
+-- TOC entry 5104 (class 2606 OID 19807)
+-- Dependencies: 4974 384 275
 -- Name: fk_dbunidades__dbpessoas_alunos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9507,8 +9589,8 @@ ALTER TABLE ONLY dbpessoas_alunos
 
 
 --
--- TOC entry 3933 (class 2606 OID 19979)
--- Dependencies: 3801 2291 2186
+-- TOC entry 5106 (class 2606 OID 19812)
+-- Dependencies: 4974 384 277
 -- Name: fk_dbunidades__dbpessoas_complemento_pf__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9517,8 +9599,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pf
 
 
 --
--- TOC entry 3935 (class 2606 OID 19984)
--- Dependencies: 3801 2291 2188
+-- TOC entry 5108 (class 2606 OID 19817)
+-- Dependencies: 4974 384 279
 -- Name: fk_dbunidades__dbpessoas_complemento_pj__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9527,8 +9609,8 @@ ALTER TABLE ONLY dbpessoas_complemento_pj
 
 
 --
--- TOC entry 3938 (class 2606 OID 19989)
--- Dependencies: 3801 2291 2190
+-- TOC entry 5111 (class 2606 OID 19822)
+-- Dependencies: 4974 384 281
 -- Name: fk_dbunidades__dbpessoas_convenios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9537,8 +9619,8 @@ ALTER TABLE ONLY dbpessoas_convenios
 
 
 --
--- TOC entry 3941 (class 2606 OID 19994)
--- Dependencies: 3801 2291 2192
+-- TOC entry 5114 (class 2606 OID 19827)
+-- Dependencies: 4974 384 283
 -- Name: fk_dbunidades__dbpessoas_demandas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9547,8 +9629,8 @@ ALTER TABLE ONLY dbpessoas_demandas
 
 
 --
--- TOC entry 3943 (class 2606 OID 19999)
--- Dependencies: 3801 2291 2194
+-- TOC entry 5116 (class 2606 OID 19832)
+-- Dependencies: 4974 384 285
 -- Name: fk_dbunidades__dbpessoas_enderecoscobrancas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9557,8 +9639,8 @@ ALTER TABLE ONLY dbpessoas_enderecoscobrancas
 
 
 --
--- TOC entry 3946 (class 2606 OID 20004)
--- Dependencies: 3801 2291 2196
+-- TOC entry 5119 (class 2606 OID 19837)
+-- Dependencies: 4974 384 287
 -- Name: fk_dbunidades__dbpessoas_formacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9567,8 +9649,8 @@ ALTER TABLE ONLY dbpessoas_formacoes
 
 
 --
--- TOC entry 3950 (class 2606 OID 20009)
--- Dependencies: 3801 2291 2198
+-- TOC entry 5123 (class 2606 OID 19842)
+-- Dependencies: 4974 384 289
 -- Name: fk_dbunidades__dbpessoas_funcionarios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9577,8 +9659,8 @@ ALTER TABLE ONLY dbpessoas_funcionarios
 
 
 --
--- TOC entry 3955 (class 2606 OID 20014)
--- Dependencies: 3801 2291 2200
+-- TOC entry 5128 (class 2606 OID 19847)
+-- Dependencies: 4974 384 291
 -- Name: fk_dbunidades__dbpessoas_inscricoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9587,8 +9669,8 @@ ALTER TABLE ONLY dbpessoas_inscricoes
 
 
 --
--- TOC entry 3958 (class 2606 OID 20019)
--- Dependencies: 3801 2291 2202
+-- TOC entry 5131 (class 2606 OID 19852)
+-- Dependencies: 4974 384 293
 -- Name: fk_dbunidades__dbpessoas_livros__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9597,8 +9679,8 @@ ALTER TABLE ONLY dbpessoas_livros
 
 
 --
--- TOC entry 3962 (class 2606 OID 20024)
--- Dependencies: 3801 2291 2204
+-- TOC entry 5135 (class 2606 OID 19857)
+-- Dependencies: 4974 384 295
 -- Name: fk_dbunidades__dbpessoas_solicitacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9607,8 +9689,8 @@ ALTER TABLE ONLY dbpessoas_solicitacoes
 
 
 --
--- TOC entry 3963 (class 2606 OID 20029)
--- Dependencies: 3801 2291 2206
+-- TOC entry 5136 (class 2606 OID 19862)
+-- Dependencies: 4974 384 297
 -- Name: fk_dbunidades__dbpessoas_titularidades__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9617,8 +9699,8 @@ ALTER TABLE ONLY dbpessoas_titularidades
 
 
 --
--- TOC entry 3964 (class 2606 OID 20034)
--- Dependencies: 3801 2291 2208
+-- TOC entry 5137 (class 2606 OID 19867)
+-- Dependencies: 4974 384 299
 -- Name: fk_dbunidades__dbplano_contas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9627,8 +9709,8 @@ ALTER TABLE ONLY dbplano_contas
 
 
 --
--- TOC entry 3965 (class 2606 OID 20039)
--- Dependencies: 3801 2291 2210
+-- TOC entry 5138 (class 2606 OID 19872)
+-- Dependencies: 4974 384 301
 -- Name: fk_dbunidades__dbprocessos_academicos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9637,8 +9719,8 @@ ALTER TABLE ONLY dbprocessos_academicos
 
 
 --
--- TOC entry 3967 (class 2606 OID 20044)
--- Dependencies: 3801 2291 2212
+-- TOC entry 5140 (class 2606 OID 19877)
+-- Dependencies: 4974 384 303
 -- Name: fk_dbunidades__dbprodutos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9647,8 +9729,8 @@ ALTER TABLE ONLY dbprodutos
 
 
 --
--- TOC entry 3969 (class 2606 OID 20049)
--- Dependencies: 3801 2291 2214
+-- TOC entry 5142 (class 2606 OID 19882)
+-- Dependencies: 4974 384 305
 -- Name: fk_dbunidades__dbprodutos_insumos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9657,8 +9739,8 @@ ALTER TABLE ONLY dbprodutos_caracteristicas
 
 
 --
--- TOC entry 3972 (class 2606 OID 20054)
--- Dependencies: 3801 2291 2219
+-- TOC entry 5145 (class 2606 OID 19887)
+-- Dependencies: 4974 384 310
 -- Name: fk_dbunidades__dbprodutos_parametros__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9667,8 +9749,8 @@ ALTER TABLE ONLY dbprodutos_parametros
 
 
 --
--- TOC entry 3974 (class 2606 OID 20059)
--- Dependencies: 3801 2291 2221
+-- TOC entry 5147 (class 2606 OID 19892)
+-- Dependencies: 4974 384 312
 -- Name: fk_dbunidades__dbprodutos_tabelapreco__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9677,8 +9759,8 @@ ALTER TABLE ONLY dbprodutos_tabelapreco
 
 
 --
--- TOC entry 3975 (class 2606 OID 20064)
--- Dependencies: 3801 2291 2223
+-- TOC entry 5148 (class 2606 OID 19897)
+-- Dependencies: 4974 384 314
 -- Name: fk_dbunidades__dbprodutos_tipos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9687,8 +9769,8 @@ ALTER TABLE ONLY dbprodutos_tipos
 
 
 --
--- TOC entry 3977 (class 2606 OID 20069)
--- Dependencies: 3801 2291 2225
+-- TOC entry 5150 (class 2606 OID 19902)
+-- Dependencies: 4974 384 316
 -- Name: fk_dbunidades__dbprodutos_tributos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9697,8 +9779,8 @@ ALTER TABLE ONLY dbprodutos_tributos
 
 
 --
--- TOC entry 3980 (class 2606 OID 20074)
--- Dependencies: 3801 2291 2227
+-- TOC entry 5153 (class 2606 OID 19907)
+-- Dependencies: 4974 384 318
 -- Name: fk_dbunidades__dbprofessores_areas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9707,8 +9789,8 @@ ALTER TABLE ONLY dbprofessores_areas
 
 
 --
--- TOC entry 3981 (class 2606 OID 20079)
--- Dependencies: 3801 2291 2229
+-- TOC entry 5154 (class 2606 OID 19912)
+-- Dependencies: 4974 384 320
 -- Name: fk_dbunidades__dbprojetos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9717,8 +9799,8 @@ ALTER TABLE ONLY dbprojetos
 
 
 --
--- TOC entry 3984 (class 2606 OID 20084)
--- Dependencies: 3801 2291 2231
+-- TOC entry 5157 (class 2606 OID 19917)
+-- Dependencies: 4974 384 322
 -- Name: fk_dbunidades__dbprojetos_colaboradores__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9727,8 +9809,8 @@ ALTER TABLE ONLY dbprojetos_colaboradores
 
 
 --
--- TOC entry 3986 (class 2606 OID 20089)
--- Dependencies: 3801 2291 2233
+-- TOC entry 5159 (class 2606 OID 19922)
+-- Dependencies: 4974 384 324
 -- Name: fk_dbunidades__dbprojetos_custos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9737,8 +9819,8 @@ ALTER TABLE ONLY dbprojetos_custos
 
 
 --
--- TOC entry 3988 (class 2606 OID 20094)
--- Dependencies: 3801 2291 2235
+-- TOC entry 5161 (class 2606 OID 19927)
+-- Dependencies: 4974 384 326
 -- Name: fk_dbunidades__dbprojetos_recursos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9747,8 +9829,8 @@ ALTER TABLE ONLY dbprojetos_recursos
 
 
 --
--- TOC entry 3989 (class 2606 OID 20099)
--- Dependencies: 3801 2291 2237
+-- TOC entry 5162 (class 2606 OID 19932)
+-- Dependencies: 4974 384 328
 -- Name: fk_dbunidades__dbquestionarios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9757,8 +9839,8 @@ ALTER TABLE ONLY dbquestionarios
 
 
 --
--- TOC entry 3991 (class 2606 OID 20104)
--- Dependencies: 3801 2291 2239
+-- TOC entry 5164 (class 2606 OID 19937)
+-- Dependencies: 4974 384 330
 -- Name: fk_dbunidades__dbquestoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9767,8 +9849,8 @@ ALTER TABLE ONLY dbquestoes
 
 
 --
--- TOC entry 3993 (class 2606 OID 20109)
--- Dependencies: 3801 2291 2241
+-- TOC entry 5166 (class 2606 OID 19942)
+-- Dependencies: 4974 384 332
 -- Name: fk_dbunidades__dbquestoes_itens__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9777,8 +9859,8 @@ ALTER TABLE ONLY dbquestoes_itens
 
 
 --
--- TOC entry 3994 (class 2606 OID 20114)
--- Dependencies: 3801 2291 2245
+-- TOC entry 5167 (class 2606 OID 19947)
+-- Dependencies: 4974 384 336
 -- Name: fk_dbunidades__dbsalas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9787,8 +9869,8 @@ ALTER TABLE ONLY dbsalas
 
 
 --
--- TOC entry 3995 (class 2606 OID 20119)
--- Dependencies: 3801 2291 2247
+-- TOC entry 5168 (class 2606 OID 19952)
+-- Dependencies: 4974 384 338
 -- Name: fk_dbunidades__dbscorecard__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9797,8 +9879,8 @@ ALTER TABLE ONLY dbscorecard
 
 
 --
--- TOC entry 3997 (class 2606 OID 20124)
--- Dependencies: 3801 2291 2249
+-- TOC entry 5170 (class 2606 OID 19957)
+-- Dependencies: 4974 384 340
 -- Name: fk_dbunidades__dbscorecard_sentencas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9807,8 +9889,8 @@ ALTER TABLE ONLY dbscorecard_sentencas
 
 
 --
--- TOC entry 4000 (class 2606 OID 20129)
--- Dependencies: 3801 2291 2253
+-- TOC entry 5173 (class 2606 OID 19962)
+-- Dependencies: 4974 384 344
 -- Name: fk_dbunidades__dbtransacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9817,8 +9899,8 @@ ALTER TABLE ONLY dbtransacoes
 
 
 --
--- TOC entry 4004 (class 2606 OID 20134)
--- Dependencies: 3801 2291 2255
+-- TOC entry 5177 (class 2606 OID 19967)
+-- Dependencies: 4974 384 346
 -- Name: fk_dbunidades__dbtransacoes_contas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9827,8 +9909,8 @@ ALTER TABLE ONLY dbtransacoes_contas
 
 
 --
--- TOC entry 4010 (class 2606 OID 20139)
--- Dependencies: 3801 2291 2259
+-- TOC entry 5183 (class 2606 OID 19972)
+-- Dependencies: 4974 384 350
 -- Name: fk_dbunidades__dbtransacoes_contas_extornos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9837,8 +9919,8 @@ ALTER TABLE ONLY dbtransacoes_contas_extornos
 
 
 --
--- TOC entry 4013 (class 2606 OID 20144)
--- Dependencies: 3801 2291 2260
+-- TOC entry 5186 (class 2606 OID 19977)
+-- Dependencies: 4974 384 353
 -- Name: fk_dbunidades__dbtransacoes_convenios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9847,8 +9929,8 @@ ALTER TABLE ONLY dbtransacoes_convenios
 
 
 --
--- TOC entry 4016 (class 2606 OID 20149)
--- Dependencies: 3801 2291 2263
+-- TOC entry 5189 (class 2606 OID 19982)
+-- Dependencies: 4974 384 356
 -- Name: fk_dbunidades__dbtransacoes_produtos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9857,8 +9939,8 @@ ALTER TABLE ONLY dbtransacoes_produtos
 
 
 --
--- TOC entry 4017 (class 2606 OID 20154)
--- Dependencies: 3801 2291 2265
+-- TOC entry 5190 (class 2606 OID 19987)
+-- Dependencies: 4974 384 358
 -- Name: fk_dbunidades__dbtreinamentos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9867,8 +9949,8 @@ ALTER TABLE ONLY dbtreinamentos
 
 
 --
--- TOC entry 4018 (class 2606 OID 20159)
--- Dependencies: 3801 2291 2267
+-- TOC entry 5191 (class 2606 OID 19992)
+-- Dependencies: 4974 384 360
 -- Name: fk_dbunidades__dbtributos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9877,8 +9959,8 @@ ALTER TABLE ONLY dbtributos
 
 
 --
--- TOC entry 4022 (class 2606 OID 20164)
--- Dependencies: 3801 2291 2269
+-- TOC entry 5195 (class 2606 OID 19997)
+-- Dependencies: 4974 384 362
 -- Name: fk_dbunidades__dbturmas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9887,8 +9969,8 @@ ALTER TABLE ONLY dbturmas
 
 
 --
--- TOC entry 4025 (class 2606 OID 20169)
--- Dependencies: 3801 2291 2270
+-- TOC entry 5198 (class 2606 OID 20002)
+-- Dependencies: 4974 384 363
 -- Name: fk_dbunidades__dbturmas_convenios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9897,8 +9979,8 @@ ALTER TABLE ONLY dbturmas_convenios
 
 
 --
--- TOC entry 4027 (class 2606 OID 20174)
--- Dependencies: 3801 2291 2273
+-- TOC entry 5200 (class 2606 OID 20007)
+-- Dependencies: 4974 384 366
 -- Name: fk_dbunidades__dbturmas_descontos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9907,8 +9989,8 @@ ALTER TABLE ONLY dbturmas_descontos
 
 
 --
--- TOC entry 4033 (class 2606 OID 20179)
--- Dependencies: 3801 2291 2275
+-- TOC entry 5206 (class 2606 OID 20012)
+-- Dependencies: 4974 384 368
 -- Name: fk_dbunidades__dbturmas_disciplinas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9917,8 +9999,8 @@ ALTER TABLE ONLY dbturmas_disciplinas
 
 
 --
--- TOC entry 4036 (class 2606 OID 20184)
--- Dependencies: 3801 2291 2277
+-- TOC entry 5209 (class 2606 OID 20017)
+-- Dependencies: 4974 384 370
 -- Name: fk_dbunidades__dbturmas_disciplinas_arquivos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9927,8 +10009,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_arquivos
 
 
 --
--- TOC entry 4038 (class 2606 OID 20189)
--- Dependencies: 3801 2291 2279
+-- TOC entry 5211 (class 2606 OID 20022)
+-- Dependencies: 4974 384 372
 -- Name: fk_dbunidades__dbturmas_disciplinas_aulas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9937,8 +10019,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_aulas
 
 
 --
--- TOC entry 4040 (class 2606 OID 20194)
--- Dependencies: 3801 2291 2280
+-- TOC entry 5213 (class 2606 OID 20027)
+-- Dependencies: 4974 384 373
 -- Name: fk_dbunidades__dbturmas_disciplinas_avaliacao_detalhamento__uni; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9947,8 +10029,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacao_detalhamento
 
 
 --
--- TOC entry 4043 (class 2606 OID 20199)
--- Dependencies: 3801 2291 2283
+-- TOC entry 5216 (class 2606 OID 20032)
+-- Dependencies: 4974 384 376
 -- Name: fk_dbunidades__dbturmas_disciplinas_avaliacoes__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9957,8 +10039,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_avaliacoes
 
 
 --
--- TOC entry 4045 (class 2606 OID 20204)
--- Dependencies: 3801 2291 2285
+-- TOC entry 5218 (class 2606 OID 20037)
+-- Dependencies: 4974 384 378
 -- Name: fk_dbunidades__dbturmas_disciplinas_materiais__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9967,8 +10049,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_materiais
 
 
 --
--- TOC entry 4048 (class 2606 OID 20209)
--- Dependencies: 3801 2291 2287
+-- TOC entry 5221 (class 2606 OID 20042)
+-- Dependencies: 4974 384 380
 -- Name: fk_dbunidades__dbturmas_disciplinas_planoaulas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9977,8 +10059,8 @@ ALTER TABLE ONLY dbturmas_disciplinas_planoaulas
 
 
 --
--- TOC entry 4050 (class 2606 OID 20214)
--- Dependencies: 3801 2291 2289
+-- TOC entry 5223 (class 2606 OID 20047)
+-- Dependencies: 4974 384 382
 -- Name: fk_dbunidades__dbturmas_requisitos__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9987,8 +10069,8 @@ ALTER TABLE ONLY dbturmas_requisitos
 
 
 --
--- TOC entry 4051 (class 2606 OID 20219)
--- Dependencies: 3801 2291 2293
+-- TOC entry 5224 (class 2606 OID 20052)
+-- Dependencies: 4974 384 386
 -- Name: fk_dbunidades__dbunidades_parametros__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -9997,8 +10079,8 @@ ALTER TABLE ONLY dbunidades_parametros
 
 
 --
--- TOC entry 4053 (class 2606 OID 20224)
--- Dependencies: 3801 2291 2295
+-- TOC entry 5226 (class 2606 OID 20057)
+-- Dependencies: 4974 384 388
 -- Name: fk_dbunidades__dbusuarios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10007,8 +10089,8 @@ ALTER TABLE ONLY dbusuarios
 
 
 --
--- TOC entry 4054 (class 2606 OID 20229)
--- Dependencies: 3801 2291 2297
+-- TOC entry 5227 (class 2606 OID 20062)
+-- Dependencies: 4974 384 390
 -- Name: fk_dbunidades__dbusuarios_erros__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10017,8 +10099,8 @@ ALTER TABLE ONLY dbusuarios_erros
 
 
 --
--- TOC entry 4056 (class 2606 OID 20234)
--- Dependencies: 3801 2291 2299
+-- TOC entry 5229 (class 2606 OID 20067)
+-- Dependencies: 4974 384 392
 -- Name: fk_dbunidades__dbusuarios_historico__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10027,8 +10109,8 @@ ALTER TABLE ONLY dbusuarios_historico
 
 
 --
--- TOC entry 4058 (class 2606 OID 20239)
--- Dependencies: 3801 2291 2301
+-- TOC entry 5231 (class 2606 OID 20072)
+-- Dependencies: 4974 384 394
 -- Name: fk_dbunidades__dbusuarios_privilegios__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10037,8 +10119,18 @@ ALTER TABLE ONLY dbusuarios_privilegios
 
 
 --
--- TOC entry 4007 (class 2606 OID 20244)
--- Dependencies: 3801 2291 2257
+-- TOC entry 5233 (class 2606 OID 20120)
+-- Dependencies: 4974 384 475
+-- Name: fk_dbunidades__dbusuarios_senhas_recuperacao__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY dbusuarios_senhas_recuperacao
+    ADD CONSTRAINT fk_dbunidades__dbusuarios_senhas_recuperacao__unidade FOREIGN KEY (unidade) REFERENCES dbunidades(codigo) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 5180 (class 2606 OID 20077)
+-- Dependencies: 4974 384 348
 -- Name: fk_dbunidades_dbtransacoes_contas_duplicatas__unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10047,8 +10139,8 @@ ALTER TABLE ONLY dbtransacoes_contas_duplicatas
 
 
 --
--- TOC entry 4055 (class 2606 OID 20249)
--- Dependencies: 3811 2295 2297
+-- TOC entry 5228 (class 2606 OID 20082)
+-- Dependencies: 4984 388 390
 -- Name: fk_dbusuarios__dbusuarios_erros__codigousuario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10057,8 +10149,8 @@ ALTER TABLE ONLY dbusuarios_erros
 
 
 --
--- TOC entry 4057 (class 2606 OID 20254)
--- Dependencies: 3811 2295 2299
+-- TOC entry 5230 (class 2606 OID 20087)
+-- Dependencies: 4984 388 392
 -- Name: fk_dbusuarios__dbusuarios_historico__codigousuario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10067,8 +10159,8 @@ ALTER TABLE ONLY dbusuarios_historico
 
 
 --
--- TOC entry 4059 (class 2606 OID 20259)
--- Dependencies: 3811 2295 2301
+-- TOC entry 5232 (class 2606 OID 20092)
+-- Dependencies: 4984 388 394
 -- Name: fk_dbusuarios__dbusuarios_privilegios__codigousuario; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10077,8 +10169,18 @@ ALTER TABLE ONLY dbusuarios_privilegios
 
 
 --
--- TOC entry 3845 (class 2606 OID 20264)
--- Dependencies: 3435 2103 2096
+-- TOC entry 5234 (class 2606 OID 20125)
+-- Dependencies: 4984 388 475
+-- Name: fk_dbusuarios__dbusuarios_senhas_recuperacao__codigousuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY dbusuarios_senhas_recuperacao
+    ADD CONSTRAINT fk_dbusuarios__dbusuarios_senhas_recuperacao__codigousuario FOREIGN KEY (codigousuario) REFERENCES dbusuarios(codigo) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 5018 (class 2606 OID 20097)
+-- Dependencies: 4604 194 187
 -- Name: pk_dbavaliacoes__dbalunos_notas_codigoavaliacao; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10086,19 +10188,7 @@ ALTER TABLE ONLY dbalunos_notas
     ADD CONSTRAINT pk_dbavaliacoes__dbalunos_notas_codigoavaliacao FOREIGN KEY (codigoavaliacao) REFERENCES dbavaliacoes(codigo) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
---
--- TOC entry 4064 (class 0 OID 0)
--- Dependencies: 7
--- Name: public; Type: ACL; Schema: -; Owner: -
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
--- Completed on 2011-04-16 12:01:09
+-- Completed on 2011-12-18 23:28:44 BRST
 
 --
 -- PostgreSQL database dump complete

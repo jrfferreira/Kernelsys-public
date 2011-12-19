@@ -31,7 +31,7 @@ final class TTransaction{
         	$db = explode('/',$database);
         	$db = array_pop($db);
         	$pathchave = 'conn@'.$db;
-        	$conex_sessao = $obsession->getValue($pathchave);
+        	/*$conex_sessao = $obsession->getValue($pathchave);*/
         	
         	
            // abre uma conexão e armazena
@@ -43,9 +43,9 @@ final class TTransaction{
            		$conexao = TConnection::open($database);
            		self::$conn = $conexao;
            		
-           		$obsession->setValue($pathchave, $conexao);
+           		/*$obsession->setValue($pathchave, $conexao);
            		
-           		$var =  $_SESSION;
+           		$var =  $_SESSION;*/
            }
            
                 // inicia a transação

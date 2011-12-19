@@ -83,7 +83,7 @@ if($conn = TTransaction::get()) {
     }
     }else{
         $botPrincipal = new TElement('span');
-        $botPrincipal->add("Usu�rio sem privil�gios.");
+        $botPrincipal->add("Usuário sem privilégios.");
         $botPrincipal->class = "inmodulobot";
 
         $mbotCont = new TElement('div');
@@ -167,7 +167,7 @@ $DCorpo->add($conteiner);
 
 
 //Instancia barra inferior
-$DRodaPe = new TRodape($obUser->nome, $obUser->unidade->nomeunidade);
+$DRodaPe = new TRodape($obUser);
 
 
 //Instancia a pagina
