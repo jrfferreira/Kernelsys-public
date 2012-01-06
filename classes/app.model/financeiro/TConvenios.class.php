@@ -186,10 +186,22 @@ class TConvenios{
         $descontos = null;
         if(is_array($arrayConvenios)){
         foreach ($arrayConvenios as $codigoconvenio) {
-            $convenio = $tConvenios->getConvenio($codigoconvenio);
-            foreach ($convenio['descontos'] as $ch => $vl) {
-                $descontos[$ch] += $vl;
-            }
+        	$convenio = new TDbo_out('14303-1','dbconvenios');
+        	$critConvenio = new TCriteria();
+        	$critConvenio->add(new TFilter('codigo', '=', $codigoConvenio));
+        	$retConvenio = $convenio->select('*', $critConvenio);
+        	$obConvenio = $retConvenio->fetchObject();
+        	
+        	$desconto = new TDbo_out('14303-1','dbconvenios_descontos');
+        	$critDesconto = new TCriteria();
+        	$critDesconto->add(new TFilter('codigoconvenio', '=', $codigoConvenio));
+        	$retDesconto = $desconto->select('*', $critDesconto);
+        	
+        	while($obDesconto = $retDesconto->fetchObject()){
+        		$convenio['descontos'][$obDesconto->dialimite] += $obDesconto->valor;
+        		$descontos[$obDesconto->dialimite] += $obDesconto->valor;
+        	}
+        	$convenio['convenio'] = $obConvenio->titulo;
         }
         
         if(is_array($descontos)){

@@ -3641,7 +3641,8 @@ COMMENT ON COLUMN dbtransacoes_contas.statusconta IS 'Status da conta
 4 = conta extornada
 5 = conta programada
 6 = conta negociada
-7 = conta anulada (sob regras de negócio)';
+7 = conta anulada (sob regras de negócio)
+8 = conta suspensa';
 
 
 --
