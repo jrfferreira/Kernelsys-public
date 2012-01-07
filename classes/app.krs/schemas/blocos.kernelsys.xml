@@ -1,0 +1,3092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <blocos>
+    <row id="1">
+      <id>1</id>
+      <blocoid>tipoCadastro</blocoid>
+      <nomebloco>Tipo de Cadastro</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="114">
+      <id>114</id>
+      <blocoid>obs</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="88">
+      <id>88</id>
+      <blocoid>blocoInfoChq</blocoid>
+      <nomebloco>Informações do Cheque</nomebloco>
+      <formato>frm</formato>
+      <entidade>42</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="200">
+      <id>200</id>
+      <blocoid>blocPessoaConvenios</blocoid>
+      <nomebloco>Lista de convênios</nomebloco>
+      <formato>lst</formato>
+      <entidade>89</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>1</formpai>
+      <obapendice></obapendice>
+      <idform>373</idform>
+    </row>
+    <row id="90">
+      <id>90</id>
+      <blocoid>blocoSalas</blocoid>
+      <nomebloco>Informações da Sala</nomebloco>
+      <formato>frm</formato>
+      <entidade>44</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>34</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="91">
+      <id>91</id>
+      <blocoid>blocoAreaCursos</blocoid>
+      <nomebloco>Área</nomebloco>
+      <formato>frm</formato>
+      <entidade>45</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>39</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="92">
+      <id>92</id>
+      <blocoid>infoPadraoTurma</blocoid>
+      <nomebloco>Informações Padrão</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="93">
+      <id>93</id>
+      <blocoid>blocoSolicitacao</blocoid>
+      <nomebloco>Formulário de Solicitação</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>38</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="95">
+      <id>95</id>
+      <blocoid>blocoComprasPagamento</blocoid>
+      <nomebloco>Forma de Pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>40</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="97">
+      <id>97</id>
+      <blocoid>bParametrosBPatrimonial</blocoid>
+      <nomebloco>Balanço Patrimonial</nomebloco>
+      <formato>frm</formato>
+      <entidade>50</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>46</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="99">
+      <id>99</id>
+      <blocoid>infoFolhaPag</blocoid>
+      <nomebloco>Informações para Folha de Pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="151">
+      <id>151</id>
+      <blocoid>lstProdutosTransacaoD</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>lst</formato>
+      <entidade>67</entidade>
+      <blocoheight>300px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <obapendice></obapendice>
+      <idform>376</idform>
+    </row>
+    <row id="33">
+      <id>33</id>
+      <blocoid>gerenciarTurmaInscricao</blocoid>
+      <nomebloco>Turma</nomebloco>
+      <formato>frm</formato>
+      <entidade>11</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>8</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="118">
+      <id>118</id>
+      <blocoid>blocoAtualizacao</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>12</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="119">
+      <id>119</id>
+      <blocoid>blprojetoEscopo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="41">
+      <id>41</id>
+      <blocoid>gerenciarTransacaocontas</blocoid>
+      <nomebloco>Gerenciamento de Contas</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="121">
+      <id>121</id>
+      <blocoid>blprojetoRecursosTotal</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="123">
+      <id>123</id>
+      <blocoid>blprojetoProduto</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="42">
+      <id>42</id>
+      <blocoid>dadosContaC</blocoid>
+      <nomebloco>Informações da Receita</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>13</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="122">
+      <id>122</id>
+      <blocoid>blprojetoRisco</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="56">
+      <id>56</id>
+      <blocoid>blocoCargo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>19</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="59">
+      <id>59</id>
+      <blocoid>blocoDadosFuncionarios</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="60">
+      <id>60</id>
+      <blocoid>blocoDadosComplementaresFuncionarios</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="67">
+      <id>67</id>
+      <blocoid>blocoPatrimonios</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>21</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="62">
+      <id>62</id>
+      <blocoid>blocoCargoCompetencias</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>19</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="63">
+      <id>63</id>
+      <blocoid>blocoCargosHierarquia</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>19</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="69">
+      <id>69</id>
+      <blocoid>blocoDadosAdminist</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="112">
+      <id>112</id>
+      <blocoid>formacao</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="113">
+      <id>113</id>
+      <blocoid>experiencia</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="115">
+      <id>115</id>
+      <blocoid>resumo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="130">
+      <id>130</id>
+      <blocoid>opcaoCobraca</blocoid>
+      <nomebloco>Opção de cobrança</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="137">
+      <id>137</id>
+      <blocoid>blListaArquivos</blocoid>
+      <nomebloco>Adicionados</nomebloco>
+      <formato>frm</formato>
+      <entidade>63</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>62</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="139">
+      <id>139</id>
+      <blocoid>bloc_LancaExtornoDebito</blocoid>
+      <nomebloco>Gerar Débido</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>64</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="140">
+      <id>140</id>
+      <blocoid>bloc_LancaExtornoCredito</blocoid>
+      <nomebloco>Gerar Crédito</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>64</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="155">
+      <id>155</id>
+      <blocoid>encaminhamento</blocoid>
+      <nomebloco>Encaminhamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>38</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="157">
+      <id>157</id>
+      <blocoid>blocFinanceiroRec</blocoid>
+      <nomebloco>Base de Receita</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="158">
+      <id>158</id>
+      <blocoid>blocoSolicitacaoAluno</blocoid>
+      <nomebloco>Formulário de Solicitação</nomebloco>
+      <formato>frm</formato>
+      <entidade>46</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>76</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="162">
+      <id>162</id>
+      <blocoid>informacoes</blocoid>
+      <nomebloco>Registro de Solicitação</nomebloco>
+      <formato>frm</formato>
+      <entidade>46</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>78</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="253">
+      <id>253</id>
+      <blocoid>movimentacaoContaDebito</blocoid>
+      <nomebloco>Histórico de movimento da Conta</nomebloco>
+      <formato>frm</formato>
+      <entidade>65</entidade>
+      <blocoheight>430px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>333</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="255">
+      <id>255</id>
+      <blocoid>informacoesCheque</blocoid>
+      <nomebloco>Informações do Cheque</nomebloco>
+      <formato>frm</formato>
+      <entidade>95</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>365</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="168">
+      <id>168</id>
+      <blocoid>infoLivroFinanc</blocoid>
+      <nomebloco>Dados Financeiros</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="172">
+      <id>172</id>
+      <blocoid>detalhesProdutoInsumo</blocoid>
+      <nomebloco>Detalhes</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>27</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="174">
+      <id>174</id>
+      <blocoid>blocTipoCurso</blocoid>
+      <nomebloco>Dados</nomebloco>
+      <formato>frm</formato>
+      <entidade>80</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>85</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="175">
+      <id>175</id>
+      <blocoid>dadosDescontosAcrescimosD</blocoid>
+      <nomebloco>Descontos e acrescimos</nomebloco>
+      <formato>frm</formato>
+      <entidade>21</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="177">
+      <id>177</id>
+      <blocoid>blocCurso Turma</blocoid>
+      <nomebloco>Curso</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="138">
+      <id>138</id>
+      <blocoid>blSetTipoExtorno</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>64</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="131">
+      <id>131</id>
+      <blocoid>blgerTurmaDisc</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>59</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="128">
+      <id>128</id>
+      <blocoid>blprojetoCustoTotal</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="126">
+      <id>126</id>
+      <blocoid>blprojetoResp</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="125">
+      <id>125</id>
+      <blocoid>blprojetoReceita</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="180">
+      <id>180</id>
+      <blocoid>blocQuestionarioInformacoes</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>89</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>89</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="170">
+      <id>170</id>
+      <blocoid>scoreCard</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>78</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>84</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="159">
+      <id>159</id>
+      <blocoid>blocoDepartamentoInfo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>77</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>77</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="154">
+      <id>154</id>
+      <blocoid>bloProdutos</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>70</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>75</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="182">
+      <id>182</id>
+      <blocoid>blocSelecCurso</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>85</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>90</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="146">
+      <id>146</id>
+      <blocoid>blcPermissaoPessoa</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="141">
+      <id>141</id>
+      <blocoid>bloc_transac_InformacoesBasicasC</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="188">
+      <id>188</id>
+      <blocoid>infoLivroAcademSumario</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="187">
+      <id>187</id>
+      <blocoid>infoLivroAcademSinopse</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="4">
+      <id>4</id>
+      <blocoid>dadosPessoaisMatricula</blocoid>
+      <nomebloco>Dados Pessoais</nomebloco>
+      <formato>frm</formato>
+      <entidade>16</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>14</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="189">
+      <id>189</id>
+      <blocoid>informacoesCDU</blocoid>
+      <nomebloco>CDU</nomebloco>
+      <formato>frm</formato>
+      <entidade>88</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>270</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="191">
+      <id>191</id>
+      <blocoid>infoReservaLivro</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>87</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>266</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="192">
+      <id>192</id>
+      <blocoid>infoDevolucaoLivro</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>87</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>267</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="167">
+      <id>167</id>
+      <blocoid>infoLivroAcadem1</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="184">
+      <id>184</id>
+      <blocoid>infoLivroAcadem0</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="185">
+      <id>185</id>
+      <blocoid>infoLivroAcadem2</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="186">
+      <id>186</id>
+      <blocoid>infoLivroAcadem3</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>83</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="194">
+      <id>194</id>
+      <blocoid>dadosCursoMatricula</blocoid>
+      <nomebloco>Dados do Curso</nomebloco>
+      <formato>frm</formato>
+      <entidade>16</entidade>
+      <blocoheight>300px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>14</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="193">
+      <id>193</id>
+      <blocoid>retLocacao</blocoid>
+      <nomebloco>Livros Locados</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>264</formpai>
+      <obapendice>TBiblioteca/viewSetLocacao</obapendice>
+      <idform></idform>
+    </row>
+    <row id="199">
+      <id>199</id>
+      <blocoid>blocDadosConvenio</blocoid>
+      <nomebloco>Dados do convênio</nomebloco>
+      <formato>frm</formato>
+      <entidade>89</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>320</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="190">
+      <id>190</id>
+      <blocoid>infoLocacaoLivros</blocoid>
+      <nomebloco>Locador</nomebloco>
+      <formato>frm</formato>
+      <entidade>87</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>264</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="198">
+      <id>198</id>
+      <blocoid>blocSelectLivro</blocoid>
+      <nomebloco>Livro</nomebloco>
+      <formato>frm</formato>
+      <entidade>87</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>264</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="94">
+      <id>94</id>
+      <blocoid>blocoDadosCompras</blocoid>
+      <nomebloco>Formulário de Compra</nomebloco>
+      <formato>frm</formato>
+      <entidade>47</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>40</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="150">
+      <id>150</id>
+      <blocoid>bloc_transac_InformacoesBasicasD</blocoid>
+      <nomebloco>Cabeçalho da transação</nomebloco>
+      <formato>frm</formato>
+      <entidade>66</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="203">
+      <id>203</id>
+      <blocoid>blocValidaProdInsumo</blocoid>
+      <nomebloco>Especialização</nomebloco>
+      <formato>frm</formato>
+      <entidade>70</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="204">
+      <id>204</id>
+      <blocoid>blocInformacoesProdInsumo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>37</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>75</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="206">
+      <id>206</id>
+      <blocoid>blocFuncCaixa</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>94</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>332</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="205">
+      <id>205</id>
+      <blocoid>blocProdutoInfTecnicas</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>37</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>75</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="209">
+      <id>209</id>
+      <blocoid>bloco_cobranca</blocoid>
+      <nomebloco>Dados para Cobrança</nomebloco>
+      <formato>frm</formato>
+      <entidade>49</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>334</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="207">
+      <id>207</id>
+      <blocoid>movimentosContaCredito</blocoid>
+      <nomebloco>Histórico de movimentos da Conta</nomebloco>
+      <formato>frm</formato>
+      <entidade>65</entidade>
+      <blocoheight>430px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>13</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="211">
+      <id>211</id>
+      <blocoid>bloco_datasDisciplinas</blocoid>
+      <nomebloco>Datas</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>336</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="212">
+      <id>212</id>
+      <blocoid>bloco_blocoProfAreas</blocoid>
+      <nomebloco>Professores Relacionados</nomebloco>
+      <formato>frm</formato>
+      <entidade>75</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>337</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="263">
+      <id>263</id>
+      <blocoid>movInterna</blocoid>
+      <nomebloco>Detalhes</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>404</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="163">
+      <id>163</id>
+      <blocoid>atendimento</blocoid>
+      <nomebloco>Resolução</nomebloco>
+      <formato>frm</formato>
+      <entidade>46</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>78</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="213">
+      <id>213</id>
+      <blocoid>bloco_blocoParticipantes</blocoid>
+      <nomebloco>Participantes</nomebloco>
+      <formato>frm</formato>
+      <entidade>34</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>338</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="254">
+      <id>254</id>
+      <blocoid>bloco_cheques</blocoid>
+      <nomebloco>Informações do Cheque</nomebloco>
+      <formato>frm</formato>
+      <entidade>95</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>378</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="214">
+      <id>214</id>
+      <blocoid>bloco_fornecedoresProdutos</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>frm</formato>
+      <entidade>38</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>339</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="246">
+      <id>246</id>
+      <blocoid>bloco_listContasTransacaoC</blocoid>
+      <nomebloco>Dados da conta</nomebloco>
+      <formato>frm</formato>
+      <entidade>65</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>371</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="215">
+      <id>215</id>
+      <blocoid>bloco_produtoCotacao</blocoid>
+      <nomebloco>Cotação do Produto</nomebloco>
+      <formato>frm</formato>
+      <entidade>38</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>340</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="216">
+      <id>216</id>
+      <blocoid>bloco_blocoClienteFormacao</blocoid>
+      <nomebloco>Formação Acadêmica</nomebloco>
+      <formato>frm</formato>
+      <entidade>43</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>341</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="217">
+      <id>217</id>
+      <blocoid>bloco_blocoListaInteresses</blocoid>
+      <nomebloco>Interesses</nomebloco>
+      <formato>frm</formato>
+      <entidade>48</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>342</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="218">
+      <id>218</id>
+      <blocoid>bloco_matdidaticos</blocoid>
+      <nomebloco>Lista de Materiais</nomebloco>
+      <formato>frm</formato>
+      <entidade>53</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>343</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="219">
+      <id>219</id>
+      <blocoid>bloco_blocoOcorrencia</blocoid>
+      <nomebloco>Ocorrencia</nomebloco>
+      <formato>frm</formato>
+      <entidade>57</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>344</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="220">
+      <id>220</id>
+      <blocoid>bloco_blprojetoRecursos</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>61</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>345</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="221">
+      <id>221</id>
+      <blocoid>bloco_blprojetoRH</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>60</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>346</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="256">
+      <id>256</id>
+      <blocoid>blocmovimentosProgramadosC</blocoid>
+      <nomebloco>Movimentos de créditos programados</nomebloco>
+      <formato>lst</formato>
+      <entidade>21</entidade>
+      <blocoheight>400</blocoheight>
+      <ativo>1</ativo>
+      <formpai>383</formpai>
+      <obapendice></obapendice>
+      <idform>389</idform>
+    </row>
+    <row id="222">
+      <id>222</id>
+      <blocoid>bloco_privilegios</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>40</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>347</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="257">
+      <id>257</id>
+      <blocoid>blocmovimentosProgramadosD</blocoid>
+      <nomebloco>Movimentos de débitos programados</nomebloco>
+      <formato>lst</formato>
+      <entidade>21</entidade>
+      <blocoheight>400</blocoheight>
+      <ativo>1</ativo>
+      <formpai>383</formpai>
+      <obapendice></obapendice>
+      <idform>390</idform>
+    </row>
+    <row id="223">
+      <id>223</id>
+      <blocoid>bloco_blocolistObs</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>28</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>348</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="224">
+      <id>224</id>
+      <blocoid>bloco_blocoFormacao</blocoid>
+      <nomebloco>Formação</nomebloco>
+      <formato>frm</formato>
+      <entidade>43</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>349</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="225">
+      <id>225</id>
+      <blocoid>bloco_blocoFormProf</blocoid>
+      <nomebloco>Formação</nomebloco>
+      <formato>frm</formato>
+      <entidade>43</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>350</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="226">
+      <id>226</id>
+      <blocoid>bloco_blocoAreasProf</blocoid>
+      <nomebloco>Áreas Relacionadas</nomebloco>
+      <formato>frm</formato>
+      <entidade>75</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>351</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="227">
+      <id>227</id>
+      <blocoid>bloco_listaContasNegociacao</blocoid>
+      <nomebloco>Contas a receber</nomebloco>
+      <formato>frm</formato>
+      <entidade>65</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>352</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="228">
+      <id>228</id>
+      <blocoid>bloco_discCursoDisp</blocoid>
+      <nomebloco>Disciplinas do Curso</nomebloco>
+      <formato>frm</formato>
+      <entidade>10</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>353</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="229">
+      <id>229</id>
+      <blocoid>bloco_discCurso</blocoid>
+      <nomebloco>Disciplinas do curso</nomebloco>
+      <formato>frm</formato>
+      <entidade>10</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="230">
+      <id>230</id>
+      <blocoid>bloco_requisitosCurso</blocoid>
+      <nomebloco>Pré-requisitos da turma</nomebloco>
+      <formato>frm</formato>
+      <entidade>23</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>355</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="134">
+      <id>134</id>
+      <blocoid>blplanoaulaRecursos</blocoid>
+      <nomebloco>Recursos</nomebloco>
+      <formato>frm</formato>
+      <entidade>62</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>60</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="245">
+      <id>245</id>
+      <blocoid>bloco_blocoContMinistProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>28</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>370</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="247">
+      <id>247</id>
+      <blocoid>bloco_lstProdutosTransacaoC</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>frm</formato>
+      <entidade>67</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="23">
+      <id>23</id>
+      <blocoid>discCurso</blocoid>
+      <nomebloco>Disciplinas do curso</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>4</formpai>
+      <obapendice></obapendice>
+      <idform>354</idform>
+    </row>
+    <row id="248">
+      <id>248</id>
+      <blocoid>bloco_blocPessoaConvenios</blocoid>
+      <nomebloco>Lista de convênios</nomebloco>
+      <formato>frm</formato>
+      <entidade>90</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>373</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="127">
+      <id>127</id>
+      <blocoid>blprojetoCusto</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform>356</idform>
+    </row>
+    <row id="250">
+      <id>250</id>
+      <blocoid>bloco_blocOrientacoesArquivos</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>63</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>375</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="181">
+      <id>181</id>
+      <blocoid>blocQuestinarioQuestoes</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>89</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>89</formpai>
+      <obapendice></obapendice>
+      <idform>357</idform>
+    </row>
+    <row id="251">
+      <id>251</id>
+      <blocoid>bloco_lstProdutosTransacaoD</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>frm</formato>
+      <entidade>67</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>376</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="13">
+      <id>13</id>
+      <blocoid>cobranca</blocoid>
+      <nomebloco>Dados para Cobrança</nomebloco>
+      <formato>lst</formato>
+      <entidade>49</entidade>
+      <blocoheight>330px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform>334</idform>
+    </row>
+    <row id="252">
+      <id>252</id>
+      <blocoid>bloco_blocContasDebito</blocoid>
+      <nomebloco>Contas a Pagar</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>377</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="28">
+      <id>28</id>
+      <blocoid>datasDisciplinas</blocoid>
+      <nomebloco>Datas</nomebloco>
+      <formato>lst</formato>
+      <entidade>13</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>336</idform>
+    </row>
+    <row id="166">
+      <id>166</id>
+      <blocoid>blocoProfAreas</blocoid>
+      <nomebloco>Professores Relacionados</nomebloco>
+      <formato>lst</formato>
+      <entidade>75</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>39</formpai>
+      <obapendice></obapendice>
+      <idform>337</idform>
+    </row>
+    <row id="65">
+      <id>65</id>
+      <blocoid>blocoParticipantes</blocoid>
+      <nomebloco>Participantes</nomebloco>
+      <formato>lst</formato>
+      <entidade>34</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>22</formpai>
+      <obapendice></obapendice>
+      <idform>338</idform>
+    </row>
+    <row id="75">
+      <id>75</id>
+      <blocoid>fornecedoresProdutos</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>lst</formato>
+      <entidade>37</entidade>
+      <blocoheight>450px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <obapendice></obapendice>
+      <idform>339</idform>
+    </row>
+    <row id="79">
+      <id>79</id>
+      <blocoid>produtoCotacao</blocoid>
+      <nomebloco>Cotação do Produto</nomebloco>
+      <formato>lst</formato>
+      <entidade>38</entidade>
+      <blocoheight>450px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>27</formpai>
+      <obapendice></obapendice>
+      <idform>340</idform>
+    </row>
+    <row id="96">
+      <id>96</id>
+      <blocoid>blocoListaInteresses</blocoid>
+      <nomebloco>Interesses</nomebloco>
+      <formato>lst</formato>
+      <entidade>48</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>1</formpai>
+      <obapendice></obapendice>
+      <idform>342</idform>
+    </row>
+    <row id="98">
+      <id>98</id>
+      <blocoid>matdidaticos</blocoid>
+      <nomebloco>Lista de Materiais</nomebloco>
+      <formato>lst</formato>
+      <entidade>53</entidade>
+      <blocoheight>450px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>87</formpai>
+      <obapendice></obapendice>
+      <idform>343</idform>
+    </row>
+    <row id="111">
+      <id>111</id>
+      <blocoid>blocoOcorrencia</blocoid>
+      <nomebloco>Ocorrencia</nomebloco>
+      <formato>lst</formato>
+      <entidade>57</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>344</idform>
+    </row>
+    <row id="120">
+      <id>120</id>
+      <blocoid>blprojetoRecursos</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform>345</idform>
+    </row>
+    <row id="124">
+      <id>124</id>
+      <blocoid>blprojetoRH</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <obapendice></obapendice>
+      <idform>346</idform>
+    </row>
+    <row id="83">
+      <id>83</id>
+      <blocoid>privilegios</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>40</entidade>
+      <blocoheight>430px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>32</formpai>
+      <obapendice></obapendice>
+      <idform>347</idform>
+    </row>
+    <row id="117">
+      <id>117</id>
+      <blocoid>blocolistObs</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <obapendice></obapendice>
+      <idform>348</idform>
+    </row>
+    <row id="70">
+      <id>70</id>
+      <blocoid>blocoFormacao</blocoid>
+      <nomebloco>Formação</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform>349</idform>
+    </row>
+    <row id="164">
+      <id>164</id>
+      <blocoid>blocoFormProf</blocoid>
+      <nomebloco>Formação</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>7</formpai>
+      <obapendice></obapendice>
+      <idform>350</idform>
+    </row>
+    <row id="165">
+      <id>165</id>
+      <blocoid>blocoAreasProf</blocoid>
+      <nomebloco>Áreas Relacionadas</nomebloco>
+      <formato>lst</formato>
+      <entidade>75</entidade>
+      <blocoheight>150px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>7</formpai>
+      <obapendice></obapendice>
+      <idform>351</idform>
+    </row>
+    <row id="179">
+      <id>179</id>
+      <blocoid>discCursoDisp</blocoid>
+      <nomebloco>Disciplinas do Curso</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>420px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>87</formpai>
+      <obapendice></obapendice>
+      <idform>353</idform>
+    </row>
+    <row id="169">
+      <id>169</id>
+      <blocoid>scorecardSentenças</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>77</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>84</formpai>
+      <obapendice></obapendice>
+      <idform>358</idform>
+    </row>
+    <row id="160">
+      <id>160</id>
+      <blocoid>blocoDepartamentoPessoas</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>14</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>77</formpai>
+      <obapendice></obapendice>
+      <idform>359</idform>
+    </row>
+    <row id="100">
+      <id>100</id>
+      <blocoid>listTreinamento</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>34</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <obapendice></obapendice>
+      <idform>361</idform>
+    </row>
+    <row id="156">
+      <id>156</id>
+      <blocoid>blocoContMinistProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>28</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>362</idform>
+    </row>
+    <row id="153">
+      <id>153</id>
+      <blocoid>blJustFalta</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>25</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform>363</idform>
+    </row>
+    <row id="116">
+      <id>116</id>
+      <blocoid>blocoContMinistCoord</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>28</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <obapendice></obapendice>
+      <idform>364</idform>
+    </row>
+    <row id="152">
+      <id>152</id>
+      <blocoid>listContasTransacaoD</blocoid>
+      <nomebloco>Contas</nomebloco>
+      <formato>lst</formato>
+      <entidade>65</entidade>
+      <blocoheight>350px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <obapendice></obapendice>
+      <idform>365</idform>
+    </row>
+    <row id="259">
+      <id>259</id>
+      <blocoid>bloc_InfoAluno</blocoid>
+      <nomebloco>Informações do Aluno</nomebloco>
+      <formato>frm</formato>
+      <entidade>56</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>15</formpai>
+      <obapendice>TAluno/viewInfoAluno</obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="161">
+      <id>161</id>
+      <blocoid>blocoListaDiscAluno</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>56</entidade>
+      <blocoheight>250px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>15</formpai>
+      <obapendice></obapendice>
+      <idform>360</idform>
+    </row>
+    <row id="26">
+      <id>26</id>
+      <blocoid>inforDisciplinasTurma</blocoid>
+      <nomebloco>Disciplinas da turma</nomebloco>
+      <formato>lst</formato>
+      <entidade>12</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform>335</idform>
+    </row>
+    <row id="210">
+      <id>210</id>
+      <blocoid>bloco_inforDisciplinasTurma</blocoid>
+      <nomebloco>Disciplinas Disponiveis</nomebloco>
+      <formato>lst</formato>
+      <entidade>10</entidade>
+      <blocoheight>350px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>335</formpai>
+      <obapendice></obapendice>
+      <idform>395</idform>
+    </row>
+    <row id="201">
+      <id>201</id>
+      <blocoid>blocDescProgressivos</blocoid>
+      <nomebloco>Descontos</nomebloco>
+      <formato>lst</formato>
+      <entidade>92</entidade>
+      <blocoheight>150px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform>374</idform>
+    </row>
+    <row id="132">
+      <id>132</id>
+      <blocoid>blplanoaulaDisciplina</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>62</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>60</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="196">
+      <id>196</id>
+      <blocoid>blocolistObsProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>28</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <obapendice></obapendice>
+      <idform>368</idform>
+    </row>
+    <row id="260">
+      <id>260</id>
+      <blocoid>blocListaPlanoAulasProf</blocoid>
+      <nomebloco>Planos de Aula</nomebloco>
+      <formato>lst</formato>
+      <entidade>62</entidade>
+      <blocoheight>360px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>397</formpai>
+      <obapendice></obapendice>
+      <idform>60</idform>
+    </row>
+    <row id="202">
+      <id>202</id>
+      <blocoid>blocOrientacoesArquivos</blocoid>
+      <nomebloco>Orientações e Arquivos</nomebloco>
+      <formato>lst</formato>
+      <entidade>63</entidade>
+      <blocoheight>365px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>399</formpai>
+      <obapendice></obapendice>
+      <idform>375</idform>
+    </row>
+    <row id="173">
+      <id>173</id>
+      <blocoid>listaContasNegociacao</blocoid>
+      <nomebloco>Contas a receber</nomebloco>
+      <formato>lst</formato>
+      <entidade>65</entidade>
+      <blocoheight>280px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>29</formpai>
+      <obapendice></obapendice>
+      <idform>352</idform>
+    </row>
+    <row id="144">
+      <id>144</id>
+      <blocoid>listContasTransacaoC</blocoid>
+      <nomebloco>Contas</nomebloco>
+      <formato>lst</formato>
+      <entidade>66</entidade>
+      <blocoheight>250px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <obapendice></obapendice>
+      <idform>371</idform>
+    </row>
+    <row id="143">
+      <id>143</id>
+      <blocoid>lstProdutosTransacaoC</blocoid>
+      <nomebloco>Produtos</nomebloco>
+      <formato>lst</formato>
+      <entidade>67</entidade>
+      <blocoheight>300px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <obapendice></obapendice>
+      <idform>372</idform>
+    </row>
+    <row id="262">
+      <id>262</id>
+      <blocoid>negociacaoInfo</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200</blocoheight>
+      <ativo>1</ativo>
+      <formpai>29</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="46">
+      <id>46</id>
+      <blocoid>requisitosCurso</blocoid>
+      <nomebloco>Pré-requisitos da turma</nomebloco>
+      <formato>lst</formato>
+      <entidade>23</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform>355</idform>
+    </row>
+    <row id="258">
+      <id>258</id>
+      <blocoid>bloc_Disciplinas</blocoid>
+      <nomebloco>Disciplinas</nomebloco>
+      <formato>lst</formato>
+      <entidade>8</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>354</formpai>
+      <obapendice></obapendice>
+      <idform>393</idform>
+    </row>
+    <row id="2">
+      <id>2</id>
+      <blocoid>pessoaFisica</blocoid>
+      <nomebloco>Pessoa Física</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="3">
+      <id>3</id>
+      <blocoid>pessoaJuridica</blocoid>
+      <nomebloco>Pessoa Jurídica</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="12">
+      <id>12</id>
+      <blocoid>contatos</blocoid>
+      <nomebloco>Contatos</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="183">
+      <id>183</id>
+      <blocoid>blocLancamentoNotas</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>lst</formato>
+      <entidade>27</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <idform>366</idform>
+    </row>
+    <row id="14">
+      <id>14</id>
+      <blocoid>disciplina</blocoid>
+      <nomebloco>Formulário de Disciplinas</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="261">
+      <id>261</id>
+      <blocoid>gerenciarTransacaoContasC</blocoid>
+      <nomebloco>Condições de Pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="15">
+      <id>15</id>
+      <blocoid>ementa</blocoid>
+      <nomebloco>Ementa</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="16">
+      <id>16</id>
+      <blocoid>competencias</blocoid>
+      <nomebloco>Competências</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="17">
+      <id>17</id>
+      <blocoid>bibliografia</blocoid>
+      <nomebloco>Bibliografia</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="18">
+      <id>18</id>
+      <blocoid>metodologia</blocoid>
+      <nomebloco>Metodologia</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="19">
+      <id>19</id>
+      <blocoid>programa</blocoid>
+      <nomebloco>Programa</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="20">
+      <id>20</id>
+      <blocoid>escolaridade</blocoid>
+      <nomebloco>Escolaridade</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="22">
+      <id>22</id>
+      <blocoid>infoCurso</blocoid>
+      <nomebloco>Inforrmações do Curso</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>4</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="24">
+      <id>24</id>
+      <blocoid>cargaHorTotal</blocoid>
+      <nomebloco>Carga Horaria</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>0</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="25">
+      <id>25</id>
+      <blocoid>infoGeraisTurma</blocoid>
+      <nomebloco>Informações gerais</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="54">
+      <id>54</id>
+      <blocoid>dAvaliacao</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>lst</formato>
+      <entidade>27</entidade>
+      <blocoheight>350px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>59</formpai>
+      <obapendice></obapendice>
+      <idform>367</idform>
+    </row>
+    <row id="27">
+      <id>27</id>
+      <blocoid>blocFinanceiroCusto</blocoid>
+      <nomebloco>Base de custo Mensal</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="29">
+      <id>29</id>
+      <blocoid>dadosPrincipais</blocoid>
+      <nomebloco>Informações principais</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="30">
+      <id>30</id>
+      <blocoid>informacao</blocoid>
+      <nomebloco>Informações</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>7</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="31">
+      <id>31</id>
+      <blocoid>curriculo</blocoid>
+      <nomebloco>Curriculo</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>7</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="32">
+      <id>32</id>
+      <blocoid>dados</blocoid>
+      <nomebloco>Dados</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>8</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="34">
+      <id>34</id>
+      <blocoid>dadosDuplicata</blocoid>
+      <nomebloco>Dados</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>9</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="35">
+      <id>35</id>
+      <blocoid>valoresNominais</blocoid>
+      <nomebloco>Valores Nominais</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>9</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="36">
+      <id>36</id>
+      <blocoid>valoresReais</blocoid>
+      <nomebloco>Valores Reais</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>9</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="37">
+      <id>37</id>
+      <blocoid>obsDuplicatas</blocoid>
+      <nomebloco>Observações</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>9</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="38">
+      <id>38</id>
+      <blocoid>dadosConta</blocoid>
+      <nomebloco>Conta</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>10</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="39">
+      <id>39</id>
+      <blocoid>infoContas</blocoid>
+      <nomebloco>Informações</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>11</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="40">
+      <id>40</id>
+      <blocoid>infoCredito</blocoid>
+      <nomebloco>Informações</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>12</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="43">
+      <id>43</id>
+      <blocoid>dadosPagC</blocoid>
+      <nomebloco>Dados do Pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>13</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="44">
+      <id>44</id>
+      <blocoid>dadosContaD</blocoid>
+      <nomebloco>Informações do Débito</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>333</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="45">
+      <id>45</id>
+      <blocoid>dadosPagD</blocoid>
+      <nomebloco>Dados do Pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>333</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="51">
+      <id>51</id>
+      <blocoid>infoContaCaixa</blocoid>
+      <nomebloco>Dados da Conta Caixa</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>17</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="197">
+      <id>197</id>
+      <blocoid>blocLancamentoNotas</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>lst</formato>
+      <entidade>27</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <idform>369</idform>
+    </row>
+    <row id="53">
+      <id>53</id>
+      <blocoid>dadosUsuario</blocoid>
+      <nomebloco>Dados do Usuario</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="57">
+      <id>57</id>
+      <blocoid>blocoDados</blocoid>
+      <nomebloco>Dados Gerais</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="58">
+      <id>58</id>
+      <blocoid>blocoCurriculo</blocoid>
+      <nomebloco>Áreas de Interesse</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>20</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="64">
+      <id>64</id>
+      <blocoid>blocoTreinamentos</blocoid>
+      <nomebloco>Informações do Treinamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>22</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="195">
+      <id>195</id>
+      <blocoid>blocoContMinistProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>28</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <obapendice></obapendice>
+      <idform>370</idform>
+    </row>
+    <row id="66">
+      <id>66</id>
+      <blocoid>blocoAtributos</blocoid>
+      <nomebloco>Atributos</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="171">
+      <id>171</id>
+      <blocoid>gerenciarTransacaocontasD</blocoid>
+      <nomebloco>Forma de pagamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="71">
+      <id>71</id>
+      <blocoid>blocoFiliais</blocoid>
+      <nomebloco>Dados</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>24</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="72">
+      <id>72</id>
+      <blocoid>pessoaFisica</blocoid>
+      <nomebloco>Pessoa Física</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="73">
+      <id>73</id>
+      <blocoid>pessoaJuridica</blocoid>
+      <nomebloco>Pessoa Jurídica</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="74">
+      <id>74</id>
+      <blocoid>fornecedoresContatos</blocoid>
+      <nomebloco>Contatos</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="77">
+      <id>77</id>
+      <blocoid>fornecedoresTipo</blocoid>
+      <nomebloco>Tipo de Cadastro</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="78">
+      <id>78</id>
+      <blocoid>produtoCaracteristicas</blocoid>
+      <nomebloco>Caracteristicas do Produto</nomebloco>
+      <formato>frm</formato>
+      <entidade>32</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="80">
+      <id>80</id>
+      <blocoid>produtoEspecificacoes</blocoid>
+      <nomebloco>Especificações do Produto</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="81">
+      <id>81</id>
+      <blocoid>contratos</blocoid>
+      <nomebloco>Contratos e Convênioa</nomebloco>
+      <formato>frm</formato>
+      <entidade>39</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>30</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="82">
+      <id>82</id>
+      <blocoid>usuarios</blocoid>
+      <nomebloco>Dados</nomebloco>
+      <formato>frm</formato>
+      <entidade>26</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>31</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="84">
+      <id>84</id>
+      <blocoid>blocoFeriasPrincipal</blocoid>
+      <nomebloco>Dados do Funcionário</nomebloco>
+      <formato>frm</formato>
+      <entidade>41</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>33</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="85">
+      <id>85</id>
+      <blocoid>blocoFeriasPrevisão</blocoid>
+      <nomebloco>Previsão de Férias</nomebloco>
+      <formato>frm</formato>
+      <entidade>41</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>33</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="86">
+      <id>86</id>
+      <blocoid>blocoFeriasReal</blocoid>
+      <nomebloco>Efetivação de Férias</nomebloco>
+      <formato>frm</formato>
+      <entidade>41</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>33</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="87">
+      <id>87</id>
+      <blocoid>blocoProfissao</blocoid>
+      <nomebloco>Dados Profissionais</nomebloco>
+      <formato>frm</formato>
+      <entidade>1</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="135">
+      <id>135</id>
+      <blocoid>blplanoaulaMetodologia</blocoid>
+      <nomebloco>Metodologia</nomebloco>
+      <formato>frm</formato>
+      <entidade>62</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>60</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="133">
+      <id>133</id>
+      <blocoid>blplanoaulaConteudo</blocoid>
+      <nomebloco>Conteudo</nomebloco>
+      <formato>frm</formato>
+      <entidade>62</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>60</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="231">
+      <id>231</id>
+      <blocoid>bloco_blprojetoCusto</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>59</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>356</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="232">
+      <id>232</id>
+      <blocoid>bloco_blocQuestinarioQuestoes</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>83</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>357</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="233">
+      <id>233</id>
+      <blocoid>bloco_scorecardSentenças</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>78</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>358</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="234">
+      <id>234</id>
+      <blocoid>bloco_blocoDepartamentoPessoas</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>14</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>359</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="235">
+      <id>235</id>
+      <blocoid>bloco_blocoListaDiscAluno</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>56</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>360</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="236">
+      <id>236</id>
+      <blocoid>bloco_listTreinamento</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>34</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>361</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="237">
+      <id>237</id>
+      <blocoid>bloco_blocoContMinistProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>362</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="238">
+      <id>238</id>
+      <blocoid>bloco_blJustFalta</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>25</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>363</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="239">
+      <id>239</id>
+      <blocoid>bloco_blocoContMinistCoord</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>28</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>364</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="240">
+      <id>240</id>
+      <blocoid>bloco_listContasTransacaoD</blocoid>
+      <nomebloco>Contas</nomebloco>
+      <formato>frm</formato>
+      <entidade>65</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>365</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="241">
+      <id>241</id>
+      <blocoid>bloco_blocLancamentoNotas</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>frm</formato>
+      <entidade>27</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>366</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="242">
+      <id>242</id>
+      <blocoid>bloco_dAvaliacao</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>frm</formato>
+      <entidade>27</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>367</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="243">
+      <id>243</id>
+      <blocoid>bloco_blocolistObsProf</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>28</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>368</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="244">
+      <id>244</id>
+      <blocoid>bloco_blocLancamentoNotas</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>frm</formato>
+      <entidade>27</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>369</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="264">
+      <id>264</id>
+      <blocoid>discSemelhantes</blocoid>
+      <nomebloco>Lista de Disciplinas</nomebloco>
+      <formato>lst</formato>
+      <entidade>97</entidade>
+      <blocoheight>280px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <obapendice></obapendice>
+      <idform>413</idform>
+    </row>
+    <row id="265">
+      <id>265</id>
+      <blocoid>blocdiscSemelhante</blocoid>
+      <nomebloco>Disciplina</nomebloco>
+      <formato>frm</formato>
+      <entidade>97</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>413</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="266">
+      <id>266</id>
+      <blocoid>histCaixa-Mov</blocoid>
+      <nomebloco>Histórico de Movimentações</nomebloco>
+      <formato>lst</formato>
+      <entidade>21</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>418</formpai>
+      <obapendice></obapendice>
+      <idform>420</idform>
+    </row>
+    <row id="267">
+      <id>267</id>
+      <blocoid>histCliente-Mov</blocoid>
+      <nomebloco>Histórico de Movimentações</nomebloco>
+      <formato>lst</formato>
+      <entidade>21</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>1</formpai>
+      <obapendice></obapendice>
+      <idform>424</idform>
+    </row>
+    <row id="268">
+      <id>268</id>
+      <blocoid>info</blocoid>
+      <nomebloco>Informações</nomebloco>
+      <formato>frm</formato>
+      <entidade>99</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>426</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="269">
+      <id>269</id>
+      <blocoid>listAprov</blocoid>
+      <nomebloco>Aproveitamentos</nomebloco>
+      <formato>lst</formato>
+      <entidade>100</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>428</formpai>
+      <obapendice></obapendice>
+      <idform>429</idform>
+    </row>
+    <row id="270">
+      <id>270</id>
+      <blocoid>disc</blocoid>
+      <nomebloco>Disciplina</nomebloco>
+      <formato>frm</formato>
+      <entidade>100</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>429</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="271">
+      <id>271</id>
+      <blocoid>detalheProcesso</blocoid>
+      <nomebloco>Informações do Processo</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>0</formpai>
+      <obapendice>TProcessoAcademico/viewDetalheProcessoAcademico</obapendice>
+      <idform></idform>
+    </row>
+    <row id="272">
+      <id>272</id>
+      <blocoid>AprovdisciplinasAluno</blocoid>
+      <nomebloco>Lista de Disciplinas</nomebloco>
+      <formato>lst</formato>
+      <entidade>56</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>434</formpai>
+      <obapendice></obapendice>
+      <idform>428</idform>
+    </row>
+    <row id="273">
+      <id>273</id>
+      <blocoid>justificaFalta</blocoid>
+      <nomebloco>Faltas Lançadas</nomebloco>
+      <formato>lst</formato>
+      <entidade>25</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>440</formpai>
+      <obapendice></obapendice>
+      <idform>444</idform>
+    </row>
+    <row id="274">
+      <id>274</id>
+      <blocoid>textoJustificativa</blocoid>
+      <nomebloco>Detalhamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>25</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>444</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="89">
+      <id>89</id>
+      <blocoid>blocoClienteFormacao</blocoid>
+      <nomebloco>Formação Acadêmica</nomebloco>
+      <formato>lst</formato>
+      <entidade>43</entidade>
+      <blocoheight>250px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>1</formpai>
+      <obapendice></obapendice>
+      <idform>341</idform>
+    </row>
+    <row id="275">
+      <id>275</id>
+      <blocoid>senha</blocoid>
+      <nomebloco>Senha</nomebloco>
+      <formato>frm</formato>
+      <entidade>26</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>31</formpai>
+      <obapendice>TUsuario/apendicePassword</obapendice>
+      <idform></idform>
+    </row>
+    <row id="276">
+      <id>276</id>
+      <blocoid>avaliacoes</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>lst</formato>
+      <entidade>101</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>4</formpai>
+      <obapendice></obapendice>
+      <idform>446</idform>
+    </row>
+    <row id="277">
+      <id>277</id>
+      <blocoid>infoAvaliacao</blocoid>
+      <nomebloco>Dados da Avaliação</nomebloco>
+      <formato>frm</formato>
+      <entidade>101</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>0</formpai>
+      <obapendice></obapendice>
+      <idform>446</idform>
+    </row>
+    <row id="249">
+      <id>249</id>
+      <blocoid>bloco_blocDescProgressivos</blocoid>
+      <nomebloco>Descontos de Pontualidade</nomebloco>
+      <formato>frm</formato>
+      <entidade>92</entidade>
+      <blocoheight>150px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>374</formpai>
+      <obapendice></obapendice>
+      <idform>0</idform>
+    </row>
+    <row id="278">
+      <id>278</id>
+      <blocoid>blocoCOnveniosDEscontos</blocoid>
+      <nomebloco>Lista de Descontos</nomebloco>
+      <formato>lst</formato>
+      <entidade>102</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>320</formpai>
+      <obapendice></obapendice>
+      <idform>448</idform>
+    </row>
+    <row id="279">
+      <id>279</id>
+      <blocoid>detDesconto</blocoid>
+      <nomebloco>Detalhamento</nomebloco>
+      <formato>frm</formato>
+      <entidade>102</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>448</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="280">
+      <id>280</id>
+      <blocoid>listaConveniosTransacs</blocoid>
+      <nomebloco>Convênios</nomebloco>
+      <formato>lst</formato>
+      <entidade>103</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <obapendice></obapendice>
+      <idform>450</idform>
+    </row>
+    <row id="281">
+      <id>281</id>
+      <blocoid>transacConvenio</blocoid>
+      <nomebloco>Detalhe</nomebloco>
+      <formato>frm</formato>
+      <entidade>103</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>450</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="282">
+      <id>282</id>
+      <blocoid>turmasConvenios</blocoid>
+      <nomebloco>Lista de Convênios</nomebloco>
+      <formato>lst</formato>
+      <entidade>104</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <obapendice></obapendice>
+      <idform>452</idform>
+    </row>
+    <row id="283">
+      <id>283</id>
+      <blocoid>turmaConvenio</blocoid>
+      <nomebloco>Detalhe</nomebloco>
+      <formato>frm</formato>
+      <entidade>104</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>452</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="284">
+      <id>284</id>
+      <blocoid>detalheProcesso</blocoid>
+      <nomebloco>Informações do Processo</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>0</formpai>
+      <obapendice>TProcessoAcademico/viewDetalheProcessoAcademico</obapendice>
+      <idform></idform>
+    </row>
+    <row id="285">
+      <id>285</id>
+      <blocoid>AprovdisciplinasAluno</blocoid>
+      <nomebloco>Lista de Disciplinas</nomebloco>
+      <formato>frm</formato>
+      <entidade>56</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>454</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="286">
+      <id>286</id>
+      <blocoid>gradeAvaliacao</blocoid>
+      <nomebloco>Grade de Avaliações</nomebloco>
+      <formato>frm</formato>
+      <entidade>105</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>0</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="287">
+      <id>287</id>
+      <blocoid>avaliacoes</blocoid>
+      <nomebloco>Avaliações</nomebloco>
+      <formato>lst</formato>
+      <entidade>106</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>463</formpai>
+      <obapendice></obapendice>
+      <idform>464</idform>
+    </row>
+    <row id="288">
+      <id>288</id>
+      <blocoid>avalInfo</blocoid>
+      <nomebloco>Informações Principais</nomebloco>
+      <formato>frm</formato>
+      <entidade>106</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>464</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="289">
+      <id>289</id>
+      <blocoid>avDescriminacao</blocoid>
+      <nomebloco>Descriminação da Avaliação</nomebloco>
+      <formato>lst</formato>
+      <entidade>108</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <obapendice></obapendice>
+      <idform>467</idform>
+    </row>
+    <row id="290">
+      <id>290</id>
+      <blocoid>avDescriminacao</blocoid>
+      <nomebloco>Descriminação da Avaliação</nomebloco>
+      <formato>lst</formato>
+      <entidade>108</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <obapendice></obapendice>
+      <idform>467</idform>
+    </row>
+    <row id="291">
+      <id>291</id>
+      <blocoid>totalCustoProfessor</blocoid>
+      <nomebloco>Totalizador</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>59</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="292">
+      <id>292</id>
+      <blocoid>procConfAbandonoCurso</blocoid>
+      <nomebloco>Confirmação</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>460</formpai>
+      <obapendice></obapendice>
+      <idform>&#13;
+</idform>
+    </row>
+    <row id="293">
+      <id>293</id>
+      <blocoid>procConfDesTrancamentoMatricula</blocoid>
+      <nomebloco>Confirmação</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>460</formpai>
+      <obapendice></obapendice>
+      <idform>&#13;
+</idform>
+    </row>
+    <row id="294">
+      <id>294</id>
+      <blocoid>procConfTrancamentoCurso</blocoid>
+      <nomebloco>Confirmação</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>460</formpai>
+      <obapendice></obapendice>
+      <idform>&#13;
+</idform>
+    </row>
+  </blocos>
+</kernelsys>

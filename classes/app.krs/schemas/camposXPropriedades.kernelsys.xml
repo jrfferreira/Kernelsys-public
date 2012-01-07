@@ -1,0 +1,7001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <camposXPropriedades>
+    <row id="1">
+      <campoid>4</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>1</id>
+    </row>
+    <row id="2">
+      <campoid>15</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>2</id>
+    </row>
+    <row id="3">
+      <campoid>12</campoid>
+      <metodo>addItems</metodo>
+      <valor>M=&gt;Marculino;F=&gt;Feminino</valor>
+      <ativo>1</ativo>
+      <id>3</id>
+    </row>
+    <row id="4">
+      <campoid>12</campoid>
+      <metodo>setLayout</metodo>
+      <valor>horizontal</valor>
+      <ativo>1</ativo>
+      <id>4</id>
+    </row>
+    <row id="5">
+      <campoid>13</campoid>
+      <metodo>setProperty</metodo>
+      <valor>=&gt;;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>5</id>
+    </row>
+    <row id="6">
+      <campoid>16</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;afro-brasileiro (negro)=&gt;afro-brasileiro (negro);asiático=&gt;asiático;caucasiano (branco)=&gt;caucasiano (branco);Índias Orientais=&gt;Índias Orientais;hispânico/latino=&gt;hispânico/latino;Oriente Médio=&gt;Oriente Médio;indígena americano=&gt;indígena americano</valor>
+      <ativo>1</ativo>
+      <id>6</id>
+    </row>
+    <row id="8">
+      <campoid>3</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>8</id>
+    </row>
+    <row id="9">
+      <campoid>50</campoid>
+      <metodo>setProperty</metodo>
+      <valor>onClick;addLinha()</valor>
+      <ativo>1</ativo>
+      <id>9</id>
+    </row>
+    <row id="10">
+      <campoid>50</campoid>
+      <metodo>setAction</metodo>
+      <valor></valor>
+      <ativo>1</ativo>
+      <id>10</id>
+    </row>
+    <row id="11">
+      <campoid>24</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>11</id>
+    </row>
+    <row id="12">
+      <campoid>25</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>12</id>
+    </row>
+    <row id="13">
+      <campoid>26</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>13</id>
+    </row>
+    <row id="14">
+      <campoid>27</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>14</id>
+    </row>
+    <row id="15">
+      <campoid>27</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>15</id>
+    </row>
+    <row id="16">
+      <campoid>30</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>16</id>
+    </row>
+    <row id="17">
+      <campoid>31</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>17</id>
+    </row>
+    <row id="18">
+      <campoid>29</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>18</id>
+    </row>
+    <row id="19">
+      <campoid>49</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Tipos;residencia=&gt;Residencial;comercial=&gt;Comercial;amigo=&gt;Amigo</valor>
+      <ativo>1</ativo>
+      <id>19</id>
+    </row>
+    <row id="20">
+      <campoid>49</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>20</id>
+    </row>
+    <row id="21">
+      <campoid>51</campoid>
+      <metodo>setSize</metodo>
+      <valor>200;60</valor>
+      <ativo>1</ativo>
+      <id>21</id>
+    </row>
+    <row id="22">
+      <campoid>44</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>22</id>
+    </row>
+    <row id="23">
+      <campoid>45</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>23</id>
+    </row>
+    <row id="24">
+      <campoid>46</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>24</id>
+    </row>
+    <row id="25">
+      <campoid>47</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>25</id>
+    </row>
+    <row id="26">
+      <campoid>48</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>26</id>
+    </row>
+    <row id="27">
+      <campoid>53</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;250</valor>
+      <ativo>1</ativo>
+      <id>27</id>
+    </row>
+    <row id="28">
+      <campoid>54</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>28</id>
+    </row>
+    <row id="29">
+      <campoid>55</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>29</id>
+    </row>
+    <row id="30">
+      <campoid>56</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>30</id>
+    </row>
+    <row id="31">
+      <campoid>57</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>31</id>
+    </row>
+    <row id="32">
+      <campoid>58</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>32</id>
+    </row>
+    <row id="36">
+      <campoid>67</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>36</id>
+    </row>
+    <row id="37">
+      <campoid>72</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>37</id>
+    </row>
+    <row id="38">
+      <campoid>71</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>38</id>
+    </row>
+    <row id="39">
+      <campoid>73</campoid>
+      <metodo>setProperty</metodo>
+      <valor>onchange;alocaDado(this)</valor>
+      <ativo>1</ativo>
+      <id>39</id>
+    </row>
+    <row id="40">
+      <campoid>89</campoid>
+      <metodo>addItems</metodo>
+      <valor>4=&gt;Em Construção;1=&gt;Concluido;2=&gt;Inativo</valor>
+      <ativo>1</ativo>
+      <id>40</id>
+    </row>
+    <row id="41">
+      <campoid>73</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>41</id>
+    </row>
+    <row id="42">
+      <campoid>78</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Diária=&gt;Diária;Semanal=&gt;Semanal;Quinzenal=&gt;Quinzenal;Mensal=&gt;Mensal;Bimestral=&gt;Bimestral;Trimestral=&gt;Trimestral;Quadrimestral=&gt;Quadrimestral;Semestral=&gt;Semestral;Anual=&gt;Anual</valor>
+      <ativo>1</ativo>
+      <id>42</id>
+    </row>
+    <row id="43">
+      <campoid>74</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>43</id>
+    </row>
+    <row id="44">
+      <campoid>75</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>44</id>
+    </row>
+    <row id="45">
+      <campoid>76</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>45</id>
+    </row>
+    <row id="46">
+      <campoid>77</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;120</valor>
+      <ativo>1</ativo>
+      <id>46</id>
+    </row>
+    <row id="47">
+      <campoid>80</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>47</id>
+    </row>
+    <row id="48">
+      <campoid>86</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>48</id>
+    </row>
+    <row id="50">
+      <campoid>92</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>50</id>
+    </row>
+    <row id="51">
+      <campoid>93</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>51</id>
+    </row>
+    <row id="52">
+      <campoid>94</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>52</id>
+    </row>
+    <row id="53">
+      <campoid>95</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>53</id>
+    </row>
+    <row id="54">
+      <campoid>96</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>54</id>
+    </row>
+    <row id="55">
+      <campoid>97</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>55</id>
+    </row>
+    <row id="56">
+      <campoid>98</campoid>
+      <metodo>addItems</metodo>
+      <valor>M=&gt;Marculino;F=&gt;Feminino</valor>
+      <ativo>1</ativo>
+      <id>56</id>
+    </row>
+    <row id="57">
+      <campoid>98</campoid>
+      <metodo>setLayout</metodo>
+      <valor>horizontal</valor>
+      <ativo>1</ativo>
+      <id>57</id>
+    </row>
+    <row id="58">
+      <campoid>99</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>58</id>
+    </row>
+    <row id="59">
+      <campoid>102</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>59</id>
+    </row>
+    <row id="61">
+      <campoid>216</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>61</id>
+    </row>
+    <row id="62">
+      <campoid>103</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>62</id>
+    </row>
+    <row id="64">
+      <campoid>118</campoid>
+      <metodo>addItems</metodo>
+      <valor>Entrada=&gt;Entrada;Saida=&gt;Saída</valor>
+      <ativo>1</ativo>
+      <id>64</id>
+    </row>
+    <row id="65">
+      <campoid>118</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>65</id>
+    </row>
+    <row id="66">
+      <campoid>115</campoid>
+      <metodo>setSize</metodo>
+      <valor>130</valor>
+      <ativo>1</ativo>
+      <id>66</id>
+    </row>
+    <row id="67">
+      <campoid>117</campoid>
+      <metodo>setSize</metodo>
+      <valor>240</valor>
+      <ativo>1</ativo>
+      <id>67</id>
+    </row>
+    <row id="68">
+      <campoid>119</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;Parcela=&gt;Parcela;Pagamento único=&gt;Pagamento único;Negociação=&gt;Negociação</valor>
+      <ativo>1</ativo>
+      <id>68</id>
+    </row>
+    <row id="69">
+      <campoid>126</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>69</id>
+    </row>
+    <row id="70">
+      <campoid>118</campoid>
+      <metodo>setLayout</metodo>
+      <valor>horizontal</valor>
+      <ativo>1</ativo>
+      <id>70</id>
+    </row>
+    <row id="71">
+      <campoid>128</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>71</id>
+    </row>
+    <row id="72">
+      <campoid>129</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>72</id>
+    </row>
+    <row id="74">
+      <campoid>130</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>74</id>
+    </row>
+    <row id="75">
+      <campoid>131</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>75</id>
+    </row>
+    <row id="76">
+      <campoid>132</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>76</id>
+    </row>
+    <row id="77">
+      <campoid>130</campoid>
+      <metodo>setLayout</metodo>
+      <valor>horizontal</valor>
+      <ativo>1</ativo>
+      <id>77</id>
+    </row>
+    <row id="78">
+      <campoid>133</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>78</id>
+    </row>
+    <row id="79">
+      <campoid>134</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>79</id>
+    </row>
+    <row id="80">
+      <campoid>135</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from dbplano_contas where tipoConta='D' and ativo='1' order by nomeConta</valor>
+      <ativo>1</ativo>
+      <id>80</id>
+    </row>
+    <row id="81">
+      <campoid>135</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>81</id>
+    </row>
+    <row id="82">
+      <campoid>136</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>82</id>
+    </row>
+    <row id="83">
+      <campoid>137</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>83</id>
+    </row>
+    <row id="84">
+      <campoid>138</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>84</id>
+    </row>
+    <row id="85">
+      <campoid>139</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;- -;D=&gt;Débito;C=&gt;Crédito</valor>
+      <ativo>1</ativo>
+      <id>85</id>
+    </row>
+    <row id="86">
+      <campoid>139</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>86</id>
+    </row>
+    <row id="87">
+      <campoid>140</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>87</id>
+    </row>
+    <row id="88">
+      <campoid>141</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>88</id>
+    </row>
+    <row id="90">
+      <campoid>128</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>90</id>
+    </row>
+    <row id="91">
+      <campoid>151</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>91</id>
+    </row>
+    <row id="92">
+      <campoid>196</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>92</id>
+    </row>
+    <row id="94">
+      <campoid>702</campoid>
+      <metodo>readonly</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>94</id>
+    </row>
+    <row id="95">
+      <campoid>145</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>95</id>
+    </row>
+    <row id="96">
+      <campoid>146</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>96</id>
+    </row>
+    <row id="97">
+      <campoid>147</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;50</valor>
+      <ativo>1</ativo>
+      <id>97</id>
+    </row>
+    <row id="99">
+      <campoid>711</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>99</id>
+    </row>
+    <row id="100">
+      <campoid>706</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>100</id>
+    </row>
+    <row id="101">
+      <campoid>709</campoid>
+      <metodo>setSize</metodo>
+      <valor>400;60</valor>
+      <ativo>1</ativo>
+      <id>101</id>
+    </row>
+    <row id="102">
+      <campoid>653</campoid>
+      <metodo>setAction</metodo>
+      <valor>setContas=codigo,desconto,acrescimo,vencimento,numParcelas,intervaloParcelas</valor>
+      <ativo>1</ativo>
+      <id>102</id>
+    </row>
+    <row id="103">
+      <campoid>152</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>103</id>
+    </row>
+    <row id="104">
+      <campoid>649</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>104</id>
+    </row>
+    <row id="106">
+      <campoid>712</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>106</id>
+    </row>
+    <row id="107">
+      <campoid>155</campoid>
+      <metodo>setSize</metodo>
+      <valor>110</valor>
+      <ativo>1</ativo>
+      <id>107</id>
+    </row>
+    <row id="108">
+      <campoid>156</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>108</id>
+    </row>
+    <row id="110">
+      <campoid>157</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>110</id>
+    </row>
+    <row id="111">
+      <campoid>157</campoid>
+      <metodo>setProperty</metodo>
+      <valor>readonly;true</valor>
+      <ativo>1</ativo>
+      <id>111</id>
+    </row>
+    <row id="63">
+      <campoid>114</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo  from dbturma where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>63</id>
+    </row>
+    <row id="89">
+      <campoid>705</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,avaliacao  from dbturmas_disciplinas_avaliacoes where ativo='1' order by avaliacao</valor>
+      <ativo>1</ativo>
+      <id>89</id>
+    </row>
+    <row id="93">
+      <campoid>703</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo  from dbcursos_areas where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>93</id>
+    </row>
+    <row id="60">
+      <campoid>101</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigofuncionario,nomefuncionario from view_pessoas_funcionarios order by nomefuncionario</valor>
+      <ativo>1</ativo>
+      <id>60</id>
+    </row>
+    <row id="112">
+      <campoid>158</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>112</id>
+    </row>
+    <row id="113">
+      <campoid>158</campoid>
+      <metodo>setProperty</metodo>
+      <valor>readonly;true</valor>
+      <ativo>1</ativo>
+      <id>113</id>
+    </row>
+    <row id="462">
+      <campoid>463</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>462</id>
+    </row>
+    <row id="35">
+      <campoid>70</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;140</valor>
+      <ativo>1</ativo>
+      <id>35</id>
+    </row>
+    <row id="7">
+      <campoid>1</campoid>
+      <metodo>setAction</metodo>
+      <valor>onSave&#13;
+</valor>
+      <ativo>0</ativo>
+      <id>7</id>
+    </row>
+    <row id="109">
+      <campoid>156</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>109</id>
+    </row>
+    <row id="115">
+      <campoid>159</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>115</id>
+    </row>
+    <row id="121">
+      <campoid>161</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>121</id>
+    </row>
+    <row id="123">
+      <campoid>163</campoid>
+      <metodo>addItems</metodo>
+      <valor>Dinheiro=&gt;Dinheiro;Cheque=&gt;Cheque;Cartão=&gt;Cartão</valor>
+      <ativo>1</ativo>
+      <id>123</id>
+    </row>
+    <row id="127">
+      <campoid>160</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>127</id>
+    </row>
+    <row id="73">
+      <campoid>130</campoid>
+      <metodo>addItems</metodo>
+      <valor>Fixo=&gt;Fixo;Variável=&gt;Variável;Direto=&gt;Direto;Indireto=&gt;Indireto</valor>
+      <ativo>1</ativo>
+      <id>73</id>
+    </row>
+    <row id="129">
+      <campoid>165</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>129</id>
+    </row>
+    <row id="131">
+      <campoid>166</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>131</id>
+    </row>
+    <row id="133">
+      <campoid>173</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>133</id>
+    </row>
+    <row id="137">
+      <campoid>168</campoid>
+      <metodo>setSize</metodo>
+      <valor>110</valor>
+      <ativo>1</ativo>
+      <id>137</id>
+    </row>
+    <row id="138">
+      <campoid>616</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>138</id>
+    </row>
+    <row id="139">
+      <campoid>169</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>139</id>
+    </row>
+    <row id="141">
+      <campoid>170</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>141</id>
+    </row>
+    <row id="143">
+      <campoid>615</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>143</id>
+    </row>
+    <row id="144">
+      <campoid>171</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>144</id>
+    </row>
+    <row id="146">
+      <campoid>614</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>146</id>
+    </row>
+    <row id="147">
+      <campoid>172</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>147</id>
+    </row>
+    <row id="149">
+      <campoid>170</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas where tipoConta='D' and ativo='1' order by nomeConta</valor>
+      <ativo>1</ativo>
+      <id>149</id>
+    </row>
+    <row id="153">
+      <campoid>175</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>153</id>
+    </row>
+    <row id="155">
+      <campoid>176</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>155</id>
+    </row>
+    <row id="156">
+      <campoid>176</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>--</valor>
+      <ativo>0</ativo>
+      <id>156</id>
+    </row>
+    <row id="158">
+      <campoid>177</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>--</valor>
+      <ativo>0</ativo>
+      <id>158</id>
+    </row>
+    <row id="163">
+      <campoid>729</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>163</id>
+    </row>
+    <row id="164">
+      <campoid>732</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>164</id>
+    </row>
+    <row id="165">
+      <campoid>179</campoid>
+      <metodo>setAction</metodo>
+      <valor>runCaixa=D</valor>
+      <ativo>1</ativo>
+      <id>165</id>
+    </row>
+    <row id="166">
+      <campoid>179</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>166</id>
+    </row>
+    <row id="169">
+      <campoid>682</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>169</id>
+    </row>
+    <row id="172">
+      <campoid>180</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>172</id>
+    </row>
+    <row id="173">
+      <campoid>642</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>173</id>
+    </row>
+    <row id="175">
+      <campoid>194</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>175</id>
+    </row>
+    <row id="176">
+      <campoid>183</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>176</id>
+    </row>
+    <row id="177">
+      <campoid>81</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>177</id>
+    </row>
+    <row id="178">
+      <campoid>82</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>178</id>
+    </row>
+    <row id="179">
+      <campoid>83</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>179</id>
+    </row>
+    <row id="180">
+      <campoid>84</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>180</id>
+    </row>
+    <row id="184">
+      <campoid>197</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>184</id>
+    </row>
+    <row id="185">
+      <campoid>198</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>185</id>
+    </row>
+    <row id="186">
+      <campoid>200</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>0</ativo>
+      <id>186</id>
+    </row>
+    <row id="187">
+      <campoid>200</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Conta Bancária=&gt;Conta Bancária;Conta Caixa=&gt;Conta Caixa</valor>
+      <ativo>1</ativo>
+      <id>187</id>
+    </row>
+    <row id="188">
+      <campoid>201</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>188</id>
+    </row>
+    <row id="189">
+      <campoid>202</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>189</id>
+    </row>
+    <row id="190">
+      <campoid>203</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>190</id>
+    </row>
+    <row id="191">
+      <campoid>204</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>191</id>
+    </row>
+    <row id="192">
+      <campoid>205</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>192</id>
+    </row>
+    <row id="194">
+      <campoid>206</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>194</id>
+    </row>
+    <row id="196">
+      <campoid>675</campoid>
+      <metodo>setSize</metodo>
+      <valor>250;35</valor>
+      <ativo>1</ativo>
+      <id>196</id>
+    </row>
+    <row id="197">
+      <campoid>216</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>197</id>
+    </row>
+    <row id="198">
+      <campoid>218</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>198</id>
+    </row>
+    <row id="199">
+      <campoid>219</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>199</id>
+    </row>
+    <row id="200">
+      <campoid>217</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>200</id>
+    </row>
+    <row id="201">
+      <campoid>223</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>201</id>
+    </row>
+    <row id="202">
+      <campoid>224</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>202</id>
+    </row>
+    <row id="203">
+      <campoid>225</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;Horista=&gt;Horista;Assalariado=&gt;Assalariado</valor>
+      <ativo>1</ativo>
+      <id>203</id>
+    </row>
+    <row id="204">
+      <campoid>575</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>204</id>
+    </row>
+    <row id="205">
+      <campoid>576</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>205</id>
+    </row>
+    <row id="206">
+      <campoid>576</campoid>
+      <metodo>addItems</metodo>
+      <valor>Nenhuma=&gt;Nenhuma;A=&gt;A;B=&gt;B;C=&gt;C;D=&gt;D;AB=&gt;AB;AC=&gt;AC;AD=&gt;AD;</valor>
+      <ativo>1</ativo>
+      <id>206</id>
+    </row>
+    <row id="207">
+      <campoid>577</campoid>
+      <metodo>setSize</metodo>
+      <valor>20</valor>
+      <ativo>1</ativo>
+      <id>207</id>
+    </row>
+    <row id="208">
+      <campoid>578</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>208</id>
+    </row>
+    <row id="209">
+      <campoid>579</campoid>
+      <metodo>setSize</metodo>
+      <valor>300;40</valor>
+      <ativo>1</ativo>
+      <id>209</id>
+    </row>
+    <row id="210">
+      <campoid>237</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>210</id>
+    </row>
+    <row id="211">
+      <campoid>236</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>211</id>
+    </row>
+    <row id="212">
+      <campoid>235</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>212</id>
+    </row>
+    <row id="213">
+      <campoid>234</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>213</id>
+    </row>
+    <row id="214">
+      <campoid>233</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>214</id>
+    </row>
+    <row id="215">
+      <campoid>246</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>215</id>
+    </row>
+    <row id="216">
+      <campoid>246</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>216</id>
+    </row>
+    <row id="217">
+      <campoid>245</campoid>
+      <metodo>addItems</metodo>
+      <valor>M=&gt;Masculino;F=&gt;Feminino</valor>
+      <ativo>1</ativo>
+      <id>217</id>
+    </row>
+    <row id="218">
+      <campoid>260</campoid>
+      <metodo>setSize</metodo>
+      <valor>300;40</valor>
+      <ativo>1</ativo>
+      <id>218</id>
+    </row>
+    <row id="219">
+      <campoid>244</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>219</id>
+    </row>
+    <row id="220">
+      <campoid>243</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>220</id>
+    </row>
+    <row id="221">
+      <campoid>225</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>221</id>
+    </row>
+    <row id="222">
+      <campoid>238</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>222</id>
+    </row>
+    <row id="167">
+      <campoid>180</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbcursos_tipos where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>167</id>
+    </row>
+    <row id="223">
+      <campoid>239</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>223</id>
+    </row>
+    <row id="224">
+      <campoid>240</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>224</id>
+    </row>
+    <row id="225">
+      <campoid>241</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>225</id>
+    </row>
+    <row id="226">
+      <campoid>242</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>226</id>
+    </row>
+    <row id="227">
+      <campoid>226</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>227</id>
+    </row>
+    <row id="181">
+      <campoid>195</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>181</id>
+    </row>
+    <row id="114">
+      <campoid>156</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where ativo='1' or ativo='8' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>114</id>
+    </row>
+    <row id="228">
+      <campoid>227</campoid>
+      <metodo>addItems</metodo>
+      <valor>M=&gt;Masculino;F=&gt;Feminino</valor>
+      <ativo>1</ativo>
+      <id>228</id>
+    </row>
+    <row id="229">
+      <campoid>228</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>229</id>
+    </row>
+    <row id="230">
+      <campoid>229</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>230</id>
+    </row>
+    <row id="231">
+      <campoid>230</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>231</id>
+    </row>
+    <row id="232">
+      <campoid>231</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>232</id>
+    </row>
+    <row id="233">
+      <campoid>232</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>233</id>
+    </row>
+    <row id="234">
+      <campoid>232</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>234</id>
+    </row>
+    <row id="235">
+      <campoid>247</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>235</id>
+    </row>
+    <row id="236">
+      <campoid>248</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>236</id>
+    </row>
+    <row id="237">
+      <campoid>249</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>237</id>
+    </row>
+    <row id="238">
+      <campoid>250</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>238</id>
+    </row>
+    <row id="239">
+      <campoid>250</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>239</id>
+    </row>
+    <row id="240">
+      <campoid>251</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>240</id>
+    </row>
+    <row id="241">
+      <campoid>252</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>241</id>
+    </row>
+    <row id="162">
+      <campoid>176</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>0</ativo>
+      <id>162</id>
+    </row>
+    <row id="124">
+      <campoid>163</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>124</id>
+    </row>
+    <row id="125">
+      <campoid>163</campoid>
+      <metodo>onChange</metodo>
+      <valor>openCadCheque(this)</valor>
+      <ativo>1</ativo>
+      <id>125</id>
+    </row>
+    <row id="145">
+      <campoid>175</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>145</id>
+    </row>
+    <row id="157">
+      <campoid>177</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>157</id>
+    </row>
+    <row id="151">
+      <campoid>174</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>151</id>
+    </row>
+    <row id="242">
+      <campoid>254</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>242</id>
+    </row>
+    <row id="243">
+      <campoid>254</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>243</id>
+    </row>
+    <row id="244">
+      <campoid>255</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>244</id>
+    </row>
+    <row id="245">
+      <campoid>256</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>245</id>
+    </row>
+    <row id="246">
+      <campoid>257</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>246</id>
+    </row>
+    <row id="247">
+      <campoid>258</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>247</id>
+    </row>
+    <row id="248">
+      <campoid>259</campoid>
+      <metodo>addItems</metodo>
+      <valor>Sim=&gt;Sim;Não=&gt;Não</valor>
+      <ativo>1</ativo>
+      <id>248</id>
+    </row>
+    <row id="249">
+      <campoid>261</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>249</id>
+    </row>
+    <row id="250">
+      <campoid>629</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codConta,labelcodigoProduto from dbcaixa where tipoMovimentacao='C' and ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>250</id>
+    </row>
+    <row id="251">
+      <campoid>263</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>251</id>
+    </row>
+    <row id="371">
+      <campoid>378</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>371</id>
+    </row>
+    <row id="252">
+      <campoid>264</campoid>
+      <metodo>addItems</metodo>
+      <valor>Nenhuma=&gt;Nenhuma;A=&gt;A;B=&gt;B;C=&gt;C;D=&gt;D;AB=&gt;AB;AC=&gt;AC;AD=&gt;AD;</valor>
+      <ativo>1</ativo>
+      <id>252</id>
+    </row>
+    <row id="253">
+      <campoid>264</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>253</id>
+    </row>
+    <row id="254">
+      <campoid>265</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>254</id>
+    </row>
+    <row id="255">
+      <campoid>288</campoid>
+      <metodo>setSize</metodo>
+      <valor>300;40</valor>
+      <ativo>1</ativo>
+      <id>255</id>
+    </row>
+    <row id="256">
+      <campoid>266</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>256</id>
+    </row>
+    <row id="257">
+      <campoid>267</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>257</id>
+    </row>
+    <row id="258">
+      <campoid>223</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>258</id>
+    </row>
+    <row id="259">
+      <campoid>224</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>259</id>
+    </row>
+    <row id="260">
+      <campoid>225</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>260</id>
+    </row>
+    <row id="261">
+      <campoid>268</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>261</id>
+    </row>
+    <row id="263">
+      <campoid>273</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>263</id>
+    </row>
+    <row id="264">
+      <campoid>274</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>264</id>
+    </row>
+    <row id="265">
+      <campoid>269</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>265</id>
+    </row>
+    <row id="387">
+      <campoid>393</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>387</id>
+    </row>
+    <row id="388">
+      <campoid>394</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>388</id>
+    </row>
+    <row id="505">
+      <campoid>107</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>505</id>
+    </row>
+    <row id="891">
+      <campoid>779</campoid>
+      <metodo>setAction</metodo>
+      <valor>onFormOpen('260',this)</valor>
+      <ativo>1</ativo>
+      <id>891</id>
+    </row>
+    <row id="736">
+      <campoid>726</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>736</id>
+    </row>
+    <row id="266">
+      <campoid>269</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;Matutino=&gt;Matutino;Vespertino=&gt;Vespertino;Noturno=&gt;Noturno;Matutino e Vespertino=&gt;Matutino e Vespertino;Vespertino e Noturno=&gt;Vespertino e Noturno;Noturno e Matutino=&gt;Noturno e Matutino</valor>
+      <ativo>1</ativo>
+      <id>266</id>
+    </row>
+    <row id="267">
+      <campoid>270</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>267</id>
+    </row>
+    <row id="268">
+      <campoid>271</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>268</id>
+    </row>
+    <row id="269">
+      <campoid>271</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;Leve (Grau I)=&gt;Leve (Grau I);Médio (Grau II)=&gt;Médio (Grau II);Grave (Grau III)=&gt;Grave (Grau III)</valor>
+      <ativo>1</ativo>
+      <id>269</id>
+    </row>
+    <row id="270">
+      <campoid>272</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>270</id>
+    </row>
+    <row id="271">
+      <campoid>253</campoid>
+      <metodo>setSize</metodo>
+      <valor>160		</valor>
+      <ativo>1</ativo>
+      <id>271</id>
+    </row>
+    <row id="272">
+      <campoid>290</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>272</id>
+    </row>
+    <row id="273">
+      <campoid>297</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>273</id>
+    </row>
+    <row id="274">
+      <campoid>284</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>274</id>
+    </row>
+    <row id="275">
+      <campoid>284</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeCargo from dbcargos where ativo='1' order by nomeCargo</valor>
+      <ativo>1</ativo>
+      <id>275</id>
+    </row>
+    <row id="276">
+      <campoid>285</campoid>
+      <metodo>setSize</metodo>
+      <valor>350;60</valor>
+      <ativo>1</ativo>
+      <id>276</id>
+    </row>
+    <row id="277">
+      <campoid>286</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>277</id>
+    </row>
+    <row id="278">
+      <campoid>287</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>278</id>
+    </row>
+    <row id="279">
+      <campoid>291</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>279</id>
+    </row>
+    <row id="280">
+      <campoid>292</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>280</id>
+    </row>
+    <row id="281">
+      <campoid>293</campoid>
+      <metodo>setSize</metodo>
+      <valor>350;60</valor>
+      <ativo>1</ativo>
+      <id>281</id>
+    </row>
+    <row id="282">
+      <campoid>294</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>282</id>
+    </row>
+    <row id="283">
+      <campoid>295</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>283</id>
+    </row>
+    <row id="284">
+      <campoid>298</campoid>
+      <metodo>setSize</metodo>
+      <valor>160</valor>
+      <ativo>1</ativo>
+      <id>284</id>
+    </row>
+    <row id="285">
+      <campoid>298</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;&#13;
+1=&gt;Ens. Fundamental;&#13;
+2=&gt;Ens. Primeira Fase (1º Grau);&#13;
+3=&gt;Ens. Segunda Fase (1º Grau);&#13;
+4=&gt;Ens. 2º Grau;&#13;
+5=&gt;Ens. Superior;&#13;
+6=&gt;Especialização;&#13;
+7=&gt;Mestrado;&#13;
+8=&gt;Doutorado;&#13;
+9=&gt;Pos-Doutorado;</valor>
+      <ativo>1</ativo>
+      <id>285</id>
+    </row>
+    <row id="286">
+      <campoid>299</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;80</valor>
+      <ativo>1</ativo>
+      <id>286</id>
+    </row>
+    <row id="287">
+      <campoid>300</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;80</valor>
+      <ativo>1</ativo>
+      <id>287</id>
+    </row>
+    <row id="288">
+      <campoid>289</campoid>
+      <metodo>setSize</metodo>
+      <valor>40%</valor>
+      <ativo>1</ativo>
+      <id>288</id>
+    </row>
+    <row id="289">
+      <campoid>296</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>289</id>
+    </row>
+    <row id="290">
+      <campoid>314</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>290</id>
+    </row>
+    <row id="291">
+      <campoid>13</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>291</id>
+    </row>
+    <row id="292">
+      <campoid>14</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>292</id>
+    </row>
+    <row id="293">
+      <campoid>14</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>293</id>
+    </row>
+    <row id="294">
+      <campoid>16</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>294</id>
+    </row>
+    <row id="295">
+      <campoid>59</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>295</id>
+    </row>
+    <row id="296">
+      <campoid>59</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;&#13;
+1=&gt;Ens. Fundamental;&#13;
+2=&gt;Ens. Primeira Fase (1º Grau);&#13;
+3=&gt;Ens. Segunda Fase (1º Grau);&#13;
+4=&gt;Ens. 2º Grau;&#13;
+5=&gt;Ens. Superior;&#13;
+6=&gt;Especialização;&#13;
+7=&gt;Mestrado;&#13;
+8=&gt;Doutorado;&#13;
+9=&gt;Pos-Doutorado</valor>
+      <ativo>1</ativo>
+      <id>296</id>
+    </row>
+    <row id="297">
+      <campoid>60</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>297</id>
+    </row>
+    <row id="298">
+      <campoid>61</campoid>
+      <metodo>setSize</metodo>
+      <valor>200;40</valor>
+      <ativo>1</ativo>
+      <id>298</id>
+    </row>
+    <row id="299">
+      <campoid>302</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;40</valor>
+      <ativo>1</ativo>
+      <id>299</id>
+    </row>
+    <row id="300">
+      <campoid>303</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>300</id>
+    </row>
+    <row id="301">
+      <campoid>304</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>301</id>
+    </row>
+    <row id="302">
+      <campoid>305</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>302</id>
+    </row>
+    <row id="303">
+      <campoid>306</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>303</id>
+    </row>
+    <row id="304">
+      <campoid>307</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>304</id>
+    </row>
+    <row id="305">
+      <campoid>308</campoid>
+      <metodo>setSize</metodo>
+      <valor>425</valor>
+      <ativo>1</ativo>
+      <id>305</id>
+    </row>
+    <row id="306">
+      <campoid>309</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>306</id>
+    </row>
+    <row id="307">
+      <campoid>310</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>307</id>
+    </row>
+    <row id="308">
+      <campoid>311</campoid>
+      <metodo>setSize</metodo>
+      <valor>40%</valor>
+      <ativo>1</ativo>
+      <id>308</id>
+    </row>
+    <row id="309">
+      <campoid>312</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>309</id>
+    </row>
+    <row id="310">
+      <campoid>313</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>310</id>
+    </row>
+    <row id="311">
+      <campoid>314</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>311</id>
+    </row>
+    <row id="312">
+      <campoid>315</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>312</id>
+    </row>
+    <row id="313">
+      <campoid>315</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>313</id>
+    </row>
+    <row id="314">
+      <campoid>316</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>314</id>
+    </row>
+    <row id="315">
+      <campoid>317</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>315</id>
+    </row>
+    <row id="316">
+      <campoid>318</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>316</id>
+    </row>
+    <row id="317">
+      <campoid>319</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>317</id>
+    </row>
+    <row id="318">
+      <campoid>320</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>318</id>
+    </row>
+    <row id="319">
+      <campoid>337</campoid>
+      <metodo>addItems</metodo>
+      <valor>F=&gt;Pessoa Física;J=&gt;Pessoa Jurídica</valor>
+      <ativo>1</ativo>
+      <id>319</id>
+    </row>
+    <row id="320">
+      <campoid>322</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>320</id>
+    </row>
+    <row id="321">
+      <campoid>141</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>321</id>
+    </row>
+    <row id="322">
+      <campoid>336</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>322</id>
+    </row>
+    <row id="323">
+      <campoid>336</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>323</id>
+    </row>
+    <row id="324">
+      <campoid>321</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>324</id>
+    </row>
+    <row id="325">
+      <campoid>323</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>325</id>
+    </row>
+    <row id="326">
+      <campoid>323</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>326</id>
+    </row>
+    <row id="327">
+      <campoid>133</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>327</id>
+    </row>
+    <row id="328">
+      <campoid>338</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>328</id>
+    </row>
+    <row id="329">
+      <campoid>340</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>329</id>
+    </row>
+    <row id="330">
+      <campoid>338</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>330</id>
+    </row>
+    <row id="331">
+      <campoid>339</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>331</id>
+    </row>
+    <row id="332">
+      <campoid>341</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>332</id>
+    </row>
+    <row id="333">
+      <campoid>342</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>333</id>
+    </row>
+    <row id="334">
+      <campoid>454</campoid>
+      <metodo>setSize</metodo>
+      <valor>180&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>334</id>
+    </row>
+    <row id="335">
+      <campoid>455</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>335</id>
+    </row>
+    <row id="336">
+      <campoid>456</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>336</id>
+    </row>
+    <row id="337">
+      <campoid>523</campoid>
+      <metodo>setSize</metodo>
+      <valor>425</valor>
+      <ativo>1</ativo>
+      <id>337</id>
+    </row>
+    <row id="338">
+      <campoid>524</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>338</id>
+    </row>
+    <row id="339">
+      <campoid>343</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;afro-brasileiro (negro)=&gt;afro-brasileiro (negro);asiático=&gt;asiático;caucasiano (branco)=&gt;caucasiano (branco);Índias Orientais=&gt;Índias Orientais;hispânico/latino=&gt;hispânico/latino;Oriente Médio=&gt;Oriente Médio;indígena americano=&gt;indígena americ</valor>
+      <ativo>1</ativo>
+      <id>339</id>
+    </row>
+    <row id="340">
+      <campoid>343</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>340</id>
+    </row>
+    <row id="341">
+      <campoid>344</campoid>
+      <metodo>addItems</metodo>
+      <valor>Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>341</id>
+    </row>
+    <row id="342">
+      <campoid>344</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>342</id>
+    </row>
+    <row id="343">
+      <campoid>345</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>343</id>
+    </row>
+    <row id="344">
+      <campoid>345</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;Selecione;A-=&gt;A-;A+=&gt;A+;B-=&gt;B-;B+=&gt;B+;AB-=&gt;AB-;AB+=&gt;AB+;O-=&gt;O-;O+=&gt;O+</valor>
+      <ativo>1</ativo>
+      <id>344</id>
+    </row>
+    <row id="345">
+      <campoid>346</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>345</id>
+    </row>
+    <row id="346">
+      <campoid>347</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>346</id>
+    </row>
+    <row id="347">
+      <campoid>348</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>347</id>
+    </row>
+    <row id="348">
+      <campoid>349</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>348</id>
+    </row>
+    <row id="349">
+      <campoid>350</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>349</id>
+    </row>
+    <row id="350">
+      <campoid>351</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>350</id>
+    </row>
+    <row id="351">
+      <campoid>352</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>351</id>
+    </row>
+    <row id="352">
+      <campoid>353</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>352</id>
+    </row>
+    <row id="353">
+      <campoid>354</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>353</id>
+    </row>
+    <row id="354">
+      <campoid>355</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>354</id>
+    </row>
+    <row id="355">
+      <campoid>256</campoid>
+      <metodo>setSize</metodo>
+      <valor></valor>
+      <ativo>0</ativo>
+      <id>355</id>
+    </row>
+    <row id="356">
+      <campoid>356</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>356</id>
+    </row>
+    <row id="357">
+      <campoid>357</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>357</id>
+    </row>
+    <row id="478">
+      <campoid>481</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>478</id>
+    </row>
+    <row id="480">
+      <campoid>626</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>480</id>
+    </row>
+    <row id="481">
+      <campoid>625</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>481</id>
+    </row>
+    <row id="358">
+      <campoid>357</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>358</id>
+    </row>
+    <row id="359">
+      <campoid>358</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>359</id>
+    </row>
+    <row id="360">
+      <campoid>359</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>360</id>
+    </row>
+    <row id="361">
+      <campoid>360</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>361</id>
+    </row>
+    <row id="362">
+      <campoid>369</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>362</id>
+    </row>
+    <row id="363">
+      <campoid>370</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>363</id>
+    </row>
+    <row id="364">
+      <campoid>371</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>364</id>
+    </row>
+    <row id="365">
+      <campoid>372</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>365</id>
+    </row>
+    <row id="366">
+      <campoid>373</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>366</id>
+    </row>
+    <row id="367">
+      <campoid>374</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>367</id>
+    </row>
+    <row id="368">
+      <campoid>375</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>368</id>
+    </row>
+    <row id="369">
+      <campoid>376</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>369</id>
+    </row>
+    <row id="370">
+      <campoid>377</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>370</id>
+    </row>
+    <row id="372">
+      <campoid>379</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>372</id>
+    </row>
+    <row id="373">
+      <campoid>380</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>373</id>
+    </row>
+    <row id="374">
+      <campoid>381</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>374</id>
+    </row>
+    <row id="375">
+      <campoid>382</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>375</id>
+    </row>
+    <row id="376">
+      <campoid>383</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>376</id>
+    </row>
+    <row id="377">
+      <campoid>384</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;100</valor>
+      <ativo>1</ativo>
+      <id>377</id>
+    </row>
+    <row id="378">
+      <campoid>385</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>378</id>
+    </row>
+    <row id="379">
+      <campoid>385</campoid>
+      <metodo>addItems</metodo>
+      <valor></valor>
+      <ativo>1</ativo>
+      <id>379</id>
+    </row>
+    <row id="380">
+      <campoid>386</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>380</id>
+    </row>
+    <row id="381">
+      <campoid>387</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>381</id>
+    </row>
+    <row id="382">
+      <campoid>388</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>382</id>
+    </row>
+    <row id="383">
+      <campoid>389</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>383</id>
+    </row>
+    <row id="384">
+      <campoid>390</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>384</id>
+    </row>
+    <row id="385">
+      <campoid>391</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>385</id>
+    </row>
+    <row id="386">
+      <campoid>392</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>386</id>
+    </row>
+    <row id="389">
+      <campoid>393</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where fornecedor='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>389</id>
+    </row>
+    <row id="390">
+      <campoid>396</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>390</id>
+    </row>
+    <row id="391">
+      <campoid>397</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbdocumentos where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>391</id>
+    </row>
+    <row id="392">
+      <campoid>398</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>392</id>
+    </row>
+    <row id="393">
+      <campoid>399</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>393</id>
+    </row>
+    <row id="394">
+      <campoid>400</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,label from dbprodutos where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>394</id>
+    </row>
+    <row id="395">
+      <campoid>396</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>395</id>
+    </row>
+    <row id="396">
+      <campoid>404</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>396</id>
+    </row>
+    <row id="397">
+      <campoid>401</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>397</id>
+    </row>
+    <row id="398">
+      <campoid>125</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>398</id>
+    </row>
+    <row id="399">
+      <campoid>124</campoid>
+      <metodo>addItems</metodo>
+      <valor></valor>
+      <ativo>0</ativo>
+      <id>399</id>
+    </row>
+    <row id="400">
+      <campoid>214</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>400</id>
+    </row>
+    <row id="401">
+      <campoid>127</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>401</id>
+    </row>
+    <row id="402">
+      <campoid>113</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>402</id>
+    </row>
+    <row id="403">
+      <campoid>407</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>403</id>
+    </row>
+    <row id="404">
+      <campoid>408</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>404</id>
+    </row>
+    <row id="405">
+      <campoid>410</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>405</id>
+    </row>
+    <row id="406">
+      <campoid>414</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>406</id>
+    </row>
+    <row id="407">
+      <campoid>412</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>407</id>
+    </row>
+    <row id="408">
+      <campoid>413</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>408</id>
+    </row>
+    <row id="409">
+      <campoid>411</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>409</id>
+    </row>
+    <row id="410">
+      <campoid>415</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>410</id>
+    </row>
+    <row id="411">
+      <campoid>412</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>411</id>
+    </row>
+    <row id="412">
+      <campoid>415</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>412</id>
+    </row>
+    <row id="413">
+      <campoid>408</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>413</id>
+    </row>
+    <row id="414">
+      <campoid>281</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>414</id>
+    </row>
+    <row id="416">
+      <campoid>481</campoid>
+      <metodo>setproperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>416</id>
+    </row>
+    <row id="418">
+      <campoid>416</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>418</id>
+    </row>
+    <row id="419">
+      <campoid>417</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>419</id>
+    </row>
+    <row id="420">
+      <campoid>418</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>420</id>
+    </row>
+    <row id="421">
+      <campoid>419</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>421</id>
+    </row>
+    <row id="422">
+      <campoid>421</campoid>
+      <metodo>addItems</metodo>
+      <valor>F=&gt;Pessoa Física;J=&gt;Pessoa Jurídica</valor>
+      <ativo>1</ativo>
+      <id>422</id>
+    </row>
+    <row id="423">
+      <campoid>422</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>423</id>
+    </row>
+    <row id="424">
+      <campoid>423</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>424</id>
+    </row>
+    <row id="425">
+      <campoid>424</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>425</id>
+    </row>
+    <row id="426">
+      <campoid>425</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>426</id>
+    </row>
+    <row id="427">
+      <campoid>426</campoid>
+      <metodo>setSize</metodo>
+      <valor>130</valor>
+      <ativo>1</ativo>
+      <id>427</id>
+    </row>
+    <row id="428">
+      <campoid>426</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
+      <ativo>1</ativo>
+      <id>428</id>
+    </row>
+    <row id="429">
+      <campoid>427</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;afro-brasileiro (negro)=&gt;afro-brasileiro (negro);asiático=&gt;asiático;caucasiano (branco)=&gt;caucasiano (branco);Índias Orientais=&gt;Índias Orientais;hispânico/latino=&gt;hispânico/latino;Oriente Médio=&gt;Oriente Médio;indígena americano=&gt;indígena americano</valor>
+      <ativo>1</ativo>
+      <id>429</id>
+    </row>
+    <row id="430">
+      <campoid>428</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>430</id>
+    </row>
+    <row id="431">
+      <campoid>428</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;A-=&gt;A-;A+=&gt;A+;B-=&gt;B-;B+=&gt;B+;AB-=&gt;AB-;AB+=&gt;AB+;O-=&gt;O-;O+=&gt;O+</valor>
+      <ativo>1</ativo>
+      <id>431</id>
+    </row>
+    <row id="432">
+      <campoid>427</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>432</id>
+    </row>
+    <row id="433">
+      <campoid>429</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>433</id>
+    </row>
+    <row id="434">
+      <campoid>432</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>434</id>
+    </row>
+    <row id="435">
+      <campoid>433</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>435</id>
+    </row>
+    <row id="436">
+      <campoid>434</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>436</id>
+    </row>
+    <row id="437">
+      <campoid>435</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>437</id>
+    </row>
+    <row id="438">
+      <campoid>436</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>438</id>
+    </row>
+    <row id="439">
+      <campoid>437</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>439</id>
+    </row>
+    <row id="440">
+      <campoid>438</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>440</id>
+    </row>
+    <row id="441">
+      <campoid>439</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>441</id>
+    </row>
+    <row id="442">
+      <campoid>440</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>442</id>
+    </row>
+    <row id="443">
+      <campoid>441</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>443</id>
+    </row>
+    <row id="444">
+      <campoid>442</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>444</id>
+    </row>
+    <row id="445">
+      <campoid>443</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>445</id>
+    </row>
+    <row id="446">
+      <campoid>445</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>446</id>
+    </row>
+    <row id="447">
+      <campoid>446</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>447</id>
+    </row>
+    <row id="448">
+      <campoid>447</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>448</id>
+    </row>
+    <row id="449">
+      <campoid>449</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>449</id>
+    </row>
+    <row id="450">
+      <campoid>451</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>450</id>
+    </row>
+    <row id="451">
+      <campoid>453</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>451</id>
+    </row>
+    <row id="452">
+      <campoid>448</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>452</id>
+    </row>
+    <row id="453">
+      <campoid>450</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>453</id>
+    </row>
+    <row id="454">
+      <campoid>452</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>454</id>
+    </row>
+    <row id="455">
+      <campoid>442</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>455</id>
+    </row>
+    <row id="456">
+      <campoid>457</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>456</id>
+    </row>
+    <row id="457">
+      <campoid>458</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>457</id>
+    </row>
+    <row id="458">
+      <campoid>460</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>458</id>
+    </row>
+    <row id="459">
+      <campoid>460</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>459</id>
+    </row>
+    <row id="460">
+      <campoid>461</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>460</id>
+    </row>
+    <row id="461">
+      <campoid>462</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>461</id>
+    </row>
+    <row id="463">
+      <campoid>464</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>463</id>
+    </row>
+    <row id="464">
+      <campoid>465</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>464</id>
+    </row>
+    <row id="465">
+      <campoid>466</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>465</id>
+    </row>
+    <row id="466">
+      <campoid>467</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>466</id>
+    </row>
+    <row id="467">
+      <campoid>467</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>467</id>
+    </row>
+    <row id="468">
+      <campoid>468</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>468</id>
+    </row>
+    <row id="469">
+      <campoid>469</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>469</id>
+    </row>
+    <row id="470">
+      <campoid>470</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>470</id>
+    </row>
+    <row id="471">
+      <campoid>474</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>471</id>
+    </row>
+    <row id="472">
+      <campoid>475</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>472</id>
+    </row>
+    <row id="473">
+      <campoid>476</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>473</id>
+    </row>
+    <row id="474">
+      <campoid>477</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>474</id>
+    </row>
+    <row id="475">
+      <campoid>478</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>475</id>
+    </row>
+    <row id="476">
+      <campoid>479</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>476</id>
+    </row>
+    <row id="477">
+      <campoid>480</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>477</id>
+    </row>
+    <row id="482">
+      <campoid>627</campoid>
+      <metodo>addItems</metodo>
+      <valor>D=&gt;Lançar Extorno gerando Débito;C=&gt;Lançar Extorno gerando Crédito</valor>
+      <ativo>1</ativo>
+      <id>482</id>
+    </row>
+    <row id="483">
+      <campoid>516</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>483</id>
+    </row>
+    <row id="484">
+      <campoid>321</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>484</id>
+    </row>
+    <row id="485">
+      <campoid>575</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>485</id>
+    </row>
+    <row id="486">
+      <campoid>627</campoid>
+      <metodo>onClick</metodo>
+      <valor>setTipoExtorno(this)</valor>
+      <ativo>1</ativo>
+      <id>486</id>
+    </row>
+    <row id="487">
+      <campoid>628</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codConta,labelcodigoProduto from dbcaixa where tipoMovimentacao='D' and ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>487</id>
+    </row>
+    <row id="488">
+      <campoid>488</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>488</id>
+    </row>
+    <row id="489">
+      <campoid>308</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>489</id>
+    </row>
+    <row id="490">
+      <campoid>487</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>490</id>
+    </row>
+    <row id="605">
+      <campoid>563</campoid>
+      <metodo>setSize</metodo>
+      <valor>20</valor>
+      <ativo>1</ativo>
+      <id>605</id>
+    </row>
+    <row id="491">
+      <campoid>488</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>491</id>
+    </row>
+    <row id="492">
+      <campoid>489</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>492</id>
+    </row>
+    <row id="493">
+      <campoid>490</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>493</id>
+    </row>
+    <row id="494">
+      <campoid>491</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>494</id>
+    </row>
+    <row id="495">
+      <campoid>492</campoid>
+      <metodo>setSize</metodo>
+      <valor>425</valor>
+      <ativo>1</ativo>
+      <id>495</id>
+    </row>
+    <row id="497">
+      <campoid>493</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>497</id>
+    </row>
+    <row id="498">
+      <campoid>307</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbsalas where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>498</id>
+    </row>
+    <row id="499">
+      <campoid>287</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbsalas where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>499</id>
+    </row>
+    <row id="500">
+      <campoid>494</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>500</id>
+    </row>
+    <row id="501">
+      <campoid>494</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>501</id>
+    </row>
+    <row id="502">
+      <campoid>104</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>502</id>
+    </row>
+    <row id="504">
+      <campoid>106</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>504</id>
+    </row>
+    <row id="506">
+      <campoid>108</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>506</id>
+    </row>
+    <row id="507">
+      <campoid>108</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;AC=&gt;AC;AL=&gt;AL;AP=&gt;AP;AM=&gt;AM;BA=&gt;BA;CE=&gt;CE;DF=&gt;DF;ES=&gt;ES;GO=&gt;GO;MA=&gt;MA;MT=&gt;MT;MS=&gt;MS;MG=&gt;MG;PA=&gt;PA;PB=&gt;PB;PR=&gt;PR;PE=&gt;PE;PI=&gt;PI;RJ=&gt;RJ;RN=&gt;RN;RS=&gt;RS;RO=&gt;RO;RR=&gt;RR;SC=&gt;SC;SP=&gt;SP;SE=&gt;SE;TO=&gt;TO</valor>
+      <ativo>1</ativo>
+      <id>507</id>
+    </row>
+    <row id="508">
+      <campoid>109</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>508</id>
+    </row>
+    <row id="509">
+      <campoid>110</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>509</id>
+    </row>
+    <row id="510">
+      <campoid>111</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>510</id>
+    </row>
+    <row id="511">
+      <campoid>112</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>511</id>
+    </row>
+    <row id="512">
+      <campoid>332</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>512</id>
+    </row>
+    <row id="513">
+      <campoid>332</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>513</id>
+    </row>
+    <row id="514">
+      <campoid>112</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;&#13;
+1=&gt;Ens. Fundamental;&#13;
+2=&gt;Ens. Primeira Fase (1º Grau);&#13;
+3=&gt;Ens. Segunda Fase (1º Grau);&#13;
+4=&gt;Ens. 2º Grau;&#13;
+5=&gt;Ens. Superior;&#13;
+6=&gt;Especialização;&#13;
+7=&gt;Mestrado;&#13;
+8=&gt;Doutorado;&#13;
+9=&gt;Pos-Doutorado</valor>
+      <ativo>1</ativo>
+      <id>514</id>
+    </row>
+    <row id="516">
+      <campoid>23</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>516</id>
+    </row>
+    <row id="517">
+      <campoid>522</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>517</id>
+    </row>
+    <row id="518">
+      <campoid>495</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>518</id>
+    </row>
+    <row id="519">
+      <campoid>496</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>519</id>
+    </row>
+    <row id="520">
+      <campoid>497</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>520</id>
+    </row>
+    <row id="521">
+      <campoid>498</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>521</id>
+    </row>
+    <row id="522">
+      <campoid>499</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>522</id>
+    </row>
+    <row id="523">
+      <campoid>500</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>523</id>
+    </row>
+    <row id="524">
+      <campoid>501</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>524</id>
+    </row>
+    <row id="525">
+      <campoid>502</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>525</id>
+    </row>
+    <row id="526">
+      <campoid>585</campoid>
+      <metodo>setSize</metodo>
+      <valor>500;100</valor>
+      <ativo>1</ativo>
+      <id>526</id>
+    </row>
+    <row id="527">
+      <campoid>505</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>527</id>
+    </row>
+    <row id="528">
+      <campoid>506</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>528</id>
+    </row>
+    <row id="529">
+      <campoid>507</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>529</id>
+    </row>
+    <row id="530">
+      <campoid>508</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>530</id>
+    </row>
+    <row id="531">
+      <campoid>21</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>531</id>
+    </row>
+    <row id="532">
+      <campoid>22</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>532</id>
+    </row>
+    <row id="533">
+      <campoid>37</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>533</id>
+    </row>
+    <row id="534">
+      <campoid>401</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>534</id>
+    </row>
+    <row id="535">
+      <campoid>486</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;60</valor>
+      <ativo>1</ativo>
+      <id>535</id>
+    </row>
+    <row id="536">
+      <campoid>40</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>536</id>
+    </row>
+    <row id="537">
+      <campoid>509</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>537</id>
+    </row>
+    <row id="538">
+      <campoid>510</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>538</id>
+    </row>
+    <row id="539">
+      <campoid>483</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>539</id>
+    </row>
+    <row id="540">
+      <campoid>484</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>540</id>
+    </row>
+    <row id="541">
+      <campoid>68</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>541</id>
+    </row>
+    <row id="542">
+      <campoid>89</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>542</id>
+    </row>
+    <row id="543">
+      <campoid>180</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>543</id>
+    </row>
+    <row id="544">
+      <campoid>515</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>544</id>
+    </row>
+    <row id="545">
+      <campoid>517</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>545</id>
+    </row>
+    <row id="546">
+      <campoid>518</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>546</id>
+    </row>
+    <row id="547">
+      <campoid>519</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;180</valor>
+      <ativo>1</ativo>
+      <id>547</id>
+    </row>
+    <row id="550">
+      <campoid>518</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>550</id>
+    </row>
+    <row id="552">
+      <campoid>565</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>552</id>
+    </row>
+    <row id="554">
+      <campoid>533</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbinsumos where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>554</id>
+    </row>
+    <row id="555">
+      <campoid>421</campoid>
+      <metodo>onClick</metodo>
+      <valor>setTipoForm(this)</valor>
+      <ativo>1</ativo>
+      <id>555</id>
+    </row>
+    <row id="556">
+      <campoid>527</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>gerValorTotal(this)</valor>
+      <ativo>1</ativo>
+      <id>556</id>
+    </row>
+    <row id="557">
+      <campoid>522</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>557</id>
+    </row>
+    <row id="558">
+      <campoid>525</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>558</id>
+    </row>
+    <row id="559">
+      <campoid>526</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>559</id>
+    </row>
+    <row id="560">
+      <campoid>527</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>560</id>
+    </row>
+    <row id="561">
+      <campoid>528</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>561</id>
+    </row>
+    <row id="562">
+      <campoid>337</campoid>
+      <metodo>onClick</metodo>
+      <valor>setTipoForm(this)</valor>
+      <ativo>1</ativo>
+      <id>562</id>
+    </row>
+    <row id="563">
+      <campoid>523</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbinsumos where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>563</id>
+    </row>
+    <row id="564">
+      <campoid>524</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where fornecedor='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>564</id>
+    </row>
+    <row id="565">
+      <campoid>52</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>565</id>
+    </row>
+    <row id="566">
+      <campoid>529</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas where tipoConta='D' and ativo='1' order by nomeConta</valor>
+      <ativo>1</ativo>
+      <id>566</id>
+    </row>
+    <row id="548">
+      <campoid>520</campoid>
+      <metodo>addItems</metodo>
+      <valor>3=&gt;Negada;2=&gt;Sob análise;1=&gt;Aprovada</valor>
+      <ativo>1</ativo>
+      <id>548</id>
+    </row>
+    <row id="553">
+      <campoid>521</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbsalas where salaaula='1' and ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>553</id>
+    </row>
+    <row id="567">
+      <campoid>532</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
+      <ativo>1</ativo>
+      <id>567</id>
+    </row>
+    <row id="568">
+      <campoid>529</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>568</id>
+    </row>
+    <row id="569">
+      <campoid>530</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>569</id>
+    </row>
+    <row id="570">
+      <campoid>531</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;40</valor>
+      <ativo>1</ativo>
+      <id>570</id>
+    </row>
+    <row id="571">
+      <campoid>533</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>571</id>
+    </row>
+    <row id="572">
+      <campoid>534</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>572</id>
+    </row>
+    <row id="573">
+      <campoid>535</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>573</id>
+    </row>
+    <row id="574">
+      <campoid>275</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>574</id>
+    </row>
+    <row id="575">
+      <campoid>276</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>575</id>
+    </row>
+    <row id="576">
+      <campoid>277</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>576</id>
+    </row>
+    <row id="577">
+      <campoid>278</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;50</valor>
+      <ativo>1</ativo>
+      <id>577</id>
+    </row>
+    <row id="578">
+      <campoid>279</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>578</id>
+    </row>
+    <row id="579">
+      <campoid>548</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>579</id>
+    </row>
+    <row id="580">
+      <campoid>547</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>580</id>
+    </row>
+    <row id="582">
+      <campoid>229</campoid>
+      <metodo>maxlength</metodo>
+      <valor>14</valor>
+      <ativo>1</ativo>
+      <id>582</id>
+    </row>
+    <row id="583">
+      <campoid>32</campoid>
+      <metodo>setSize</metodo>
+      <valor>180</valor>
+      <ativo>1</ativo>
+      <id>583</id>
+    </row>
+    <row id="584">
+      <campoid>547</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo, nome from dbcursos where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>584</id>
+    </row>
+    <row id="585">
+      <campoid>548</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;Matutino=&gt;Matutino;Vespertino=&gt;Vespertino;Noturno=&gt;Noturno</valor>
+      <ativo>1</ativo>
+      <id>585</id>
+    </row>
+    <row id="589">
+      <campoid>546</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>589</id>
+    </row>
+    <row id="590">
+      <campoid>550</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>590</id>
+    </row>
+    <row id="591">
+      <campoid>550</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>591</id>
+    </row>
+    <row id="592">
+      <campoid>134</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where fornecedor='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>592</id>
+    </row>
+    <row id="593">
+      <campoid>550</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo from dbpessoas where fornecedor='1' and ativo='1' order by codigo</valor>
+      <ativo>1</ativo>
+      <id>593</id>
+    </row>
+    <row id="595">
+      <campoid>179</campoid>
+      <metodo>style</metodo>
+      <valor>font-size:18px;</valor>
+      <ativo>1</ativo>
+      <id>595</id>
+    </row>
+    <row id="596">
+      <campoid>551</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>596</id>
+    </row>
+    <row id="597">
+      <campoid>551</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta  from  dbplano_contas WHERE tipoConta='C' and ativo='1' order by nomeConta</valor>
+      <ativo>1</ativo>
+      <id>597</id>
+    </row>
+    <row id="598">
+      <campoid>552</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Aberta;4=&gt;Concluida;5=&gt;Em Andamento;2=&gt;Adiada;3=&gt;Cancelada&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>598</id>
+    </row>
+    <row id="599">
+      <campoid>553</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>599</id>
+    </row>
+    <row id="600">
+      <campoid>554</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;40	&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>600</id>
+    </row>
+    <row id="601">
+      <campoid>555</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>601</id>
+    </row>
+    <row id="602">
+      <campoid>562</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>602</id>
+    </row>
+    <row id="603">
+      <campoid>560</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>603</id>
+    </row>
+    <row id="604">
+      <campoid>561</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>604</id>
+    </row>
+    <row id="606">
+      <campoid>564</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>606</id>
+    </row>
+    <row id="607">
+      <campoid>564</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas where tipoConta='D' and ativo='1' order by nomeConta</valor>
+      <ativo>1</ativo>
+      <id>607</id>
+    </row>
+    <row id="609">
+      <campoid>566</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>609</id>
+    </row>
+    <row id="586">
+      <campoid>303</campoid>
+      <metodo>addItems</metodo>
+      <valor>Maquinário=&gt;Maquinário;Prédio=&gt;Prédio;Móvel e Ut.=&gt;Móvel e Ut.;Veículo=&gt;Veículo</valor>
+      <ativo>1</ativo>
+      <id>586</id>
+    </row>
+    <row id="611">
+      <campoid>565</campoid>
+      <metodo>onChange</metodo>
+      <valor>setEmpTerc(this);</valor>
+      <ativo>1</ativo>
+      <id>611</id>
+    </row>
+    <row id="612">
+      <campoid>566</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>612</id>
+    </row>
+    <row id="779">
+      <campoid>73</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>779</id>
+    </row>
+    <row id="549">
+      <campoid>516</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomepessoa from view_pessoas_alunos</valor>
+      <ativo>1</ativo>
+      <id>549</id>
+    </row>
+    <row id="613">
+      <campoid>566</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where fornecedor='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>613</id>
+    </row>
+    <row id="614">
+      <campoid>567</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;40</valor>
+      <ativo>1</ativo>
+      <id>614</id>
+    </row>
+    <row id="615">
+      <campoid>568</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;40</valor>
+      <ativo>1</ativo>
+      <id>615</id>
+    </row>
+    <row id="616">
+      <campoid>220</campoid>
+      <metodo>addItems</metodo>
+      <valor></valor>
+      <ativo>1</ativo>
+      <id>616</id>
+    </row>
+    <row id="617">
+      <campoid>569</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;80</valor>
+      <ativo>1</ativo>
+      <id>617</id>
+    </row>
+    <row id="618">
+      <campoid>570</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%</valor>
+      <ativo>1</ativo>
+      <id>618</id>
+    </row>
+    <row id="619">
+      <campoid>571</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>619</id>
+    </row>
+    <row id="620">
+      <campoid>572</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>620</id>
+    </row>
+    <row id="621">
+      <campoid>572</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;1=&gt;Funcionários;2=&gt;Tributos;3=&gt;Fornecedores</valor>
+      <ativo>1</ativo>
+      <id>621</id>
+    </row>
+    <row id="622">
+      <campoid>241</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>622</id>
+    </row>
+    <row id="797">
+      <campoid>652</campoid>
+      <metodo>setAction</metodo>
+      <valor>setConfirmaInscricao(this)</valor>
+      <ativo>1</ativo>
+      <id>797</id>
+    </row>
+    <row id="183">
+      <campoid>71</campoid>
+      <metodo>size</metodo>
+      <valor>20</valor>
+      <ativo>1</ativo>
+      <id>183</id>
+    </row>
+    <row id="34">
+      <campoid>69</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;140</valor>
+      <ativo>1</ativo>
+      <id>34</id>
+    </row>
+    <row id="479">
+      <campoid>482</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titularidade from dbpessoas_titularidades order by peso</valor>
+      <ativo>1</ativo>
+      <id>479</id>
+    </row>
+    <row id="752">
+      <campoid>741</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>752</id>
+    </row>
+    <row id="737">
+      <campoid>727</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>737</id>
+    </row>
+    <row id="623">
+      <campoid>578</campoid>
+      <metodo>addItems</metodo>
+      <valor>Administrativa=&gt;Administrativa;&#13;
+Administrativo Comercial=&gt;Administrativo Comercial;&#13;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
+Artes=&gt;Artes;&#13;
+Artes Gráficas=&gt;Artes Gráficas;&#13;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
+Biblioteconomia=&gt;Biblioteconomia;&#13;
+Biologia=&gt;Biologia;&#13;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
+Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
+Compras=&gt;Compras;&#13;
+Contabilidade=&gt;Contabilidade;&#13;
+Departamento Pessoal=&gt;Departamento Pessoal;&#13;
+Desenho Industrial=&gt;Desenho Industrial;&#13;
+Economia=&gt;Economia;&#13;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
+Enfermagem=&gt;Enfermagem;&#13;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
+Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
+Engenharia de Minas=&gt;Engenharia de Minas;&#13;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
+Estética Corporal=&gt;Estética Corporal;&#13;
+Farmácia=&gt;Farmácia;&#13;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
+Fisioterapia=&gt;Fisioterapia;&#13;
+Fonoaudiologia=&gt;Fonoaudiologia;&#13;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
+Industrial=&gt;Industrial;&#13;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
+Jornalismo=&gt;Jornalismo;&#13;
+Jurídica=&gt;Jurídica;&#13;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
+Manutenção=&gt;Manutenção;&#13;
+Marketing=&gt;Marketing;&#13;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
+Moda=&gt;Moda;&#13;
+Nutrição=&gt;Nutrição;&#13;
+Odontologia=&gt;Odontologia;&#13;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
+Qualidade=&gt;Qualidade;&#13;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
+Recursos Humanos=&gt;Recursos Humanos;&#13;
+Relações Internacionais=&gt;Relações Internacionais;&#13;
+Relações Públicas=&gt;Relações Públicas;&#13;
+Restaurante=&gt;Restaurante;&#13;
+Secretariado=&gt;Secretariado;&#13;
+Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
+Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
+Seguros=&gt;Seguros;&#13;
+Serviço Social=&gt;Serviço Social;&#13;
+Técnica=&gt;Técnica;&#13;
+Técnico-Comercial=&gt;Técnico-Comercial;&#13;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
+Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
+Transportes=&gt;Transportes;&#13;
+Zootecnia=&gt;Zootecnia; </valor>
+      <ativo>1</ativo>
+      <id>623</id>
+    </row>
+    <row id="624">
+      <campoid>580</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>624</id>
+    </row>
+    <row id="625">
+      <campoid>581</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>625</id>
+    </row>
+    <row id="626">
+      <campoid>582</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>626</id>
+    </row>
+    <row id="627">
+      <campoid>584</campoid>
+      <metodo>setSize</metodo>
+      <valor>500;100</valor>
+      <ativo>1</ativo>
+      <id>627</id>
+    </row>
+    <row id="628">
+      <campoid>506</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;CLT=&gt;CLT;RPA=&gt;RPA;Pessoa Jurídica=&gt;Pessoa Jurídica</valor>
+      <ativo>1</ativo>
+      <id>628</id>
+    </row>
+    <row id="629">
+      <campoid>714</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>629</id>
+    </row>
+    <row id="630">
+      <campoid>714</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbsalas where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>630</id>
+    </row>
+    <row id="633">
+      <campoid>754</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Ativo;0=&gt;Inativo</valor>
+      <ativo>1</ativo>
+      <id>633</id>
+    </row>
+    <row id="634">
+      <campoid>671</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>634</id>
+    </row>
+    <row id="635">
+      <campoid>672</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>635</id>
+    </row>
+    <row id="636">
+      <campoid>673</campoid>
+      <metodo>addItems</metodo>
+      <valor>0=&gt;Não;1=&gt;Sim</valor>
+      <ativo>1</ativo>
+      <id>636</id>
+    </row>
+    <row id="638">
+      <campoid>169</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>638</id>
+    </row>
+    <row id="639">
+      <campoid>158</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>639</id>
+    </row>
+    <row id="640">
+      <campoid>172</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>640</id>
+    </row>
+    <row id="641">
+      <campoid>157</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>641</id>
+    </row>
+    <row id="642">
+      <campoid>683</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>642</id>
+    </row>
+    <row id="643">
+      <campoid>684</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>643</id>
+    </row>
+    <row id="644">
+      <campoid>684</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>644</id>
+    </row>
+    <row id="645">
+      <campoid>685</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;180</valor>
+      <ativo>1</ativo>
+      <id>645</id>
+    </row>
+    <row id="715">
+      <campoid>687</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,label from dbdepartamentos where ativo='1' order by label</valor>
+      <ativo>1</ativo>
+      <id>715</id>
+    </row>
+    <row id="717">
+      <campoid>689</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>717</id>
+    </row>
+    <row id="718">
+      <campoid>690</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbsalas where ativo='1' order by nome</valor>
+      <ativo>1</ativo>
+      <id>718</id>
+    </row>
+    <row id="719">
+      <campoid>691</campoid>
+      <metodo>setSize</metodo>
+      <valor>400;60</valor>
+      <ativo>1</ativo>
+      <id>719</id>
+    </row>
+    <row id="720">
+      <campoid>677</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,label from dbdepartamentos where ativo='1' order by label</valor>
+      <ativo>1</ativo>
+      <id>720</id>
+    </row>
+    <row id="722">
+      <campoid>694</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>722</id>
+    </row>
+    <row id="723">
+      <campoid>695</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>723</id>
+    </row>
+    <row id="725">
+      <campoid>697</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>725</id>
+    </row>
+    <row id="726">
+      <campoid>698</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>726</id>
+    </row>
+    <row id="646">
+      <campoid>581</campoid>
+      <metodo>addItems</metodo>
+      <valor>Administrativa=&gt;Administrativa;&#13;
+Administrativo Comercial=&gt;Administrativo Comercial;&#13;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
+Artes=&gt;Artes;&#13;
+Artes Gráficas=&gt;Artes Gráficas;&#13;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
+Biblioteconomia=&gt;Biblioteconomia;&#13;
+Biologia=&gt;Biologia;&#13;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
+Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
+Compras=&gt;Compras;&#13;
+Contabilidade=&gt;Contabilidade;&#13;
+Departamento Pessoal=&gt;Departamento Pessoal;&#13;
+Desenho Industrial=&gt;Desenho Industrial;&#13;
+Economia=&gt;Economia;&#13;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
+Enfermagem=&gt;Enfermagem;&#13;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
+Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
+Engenharia de Minas=&gt;Engenharia de Minas;&#13;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
+Estética Corporal=&gt;Estética Corporal;&#13;
+Farmácia=&gt;Farmácia;&#13;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
+Fisioterapia=&gt;Fisioterapia;&#13;
+Fonoaudiologia=&gt;Fonoaudiologia;&#13;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
+Industrial=&gt;Industrial;&#13;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
+Jornalismo=&gt;Jornalismo;&#13;
+Jurídica=&gt;Jurídica;&#13;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
+Manutenção=&gt;Manutenção;&#13;
+Marketing=&gt;Marketing;&#13;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
+Moda=&gt;Moda;&#13;
+Nutrição=&gt;Nutrição;&#13;
+Odontologia=&gt;Odontologia;&#13;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
+Qualidade=&gt;Qualidade;&#13;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
+Recursos Humanos=&gt;Recursos Humanos;&#13;
+Relações Internacionais=&gt;Relações Internacionais;&#13;
+Relações Públicas=&gt;Relações Públicas;&#13;
+Restaurante=&gt;Restaurante;&#13;
+Secretariado=&gt;Secretariado;&#13;
+Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
+Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
+Seguros=&gt;Seguros;&#13;
+Serviço Social=&gt;Serviço Social;&#13;
+Técnica=&gt;Técnica;&#13;
+Técnico-Comercial=&gt;Técnico-Comercial;&#13;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
+Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
+Transportes=&gt;Transportes;&#13;
+Zootecnia=&gt;Zootecnia; </valor>
+      <ativo>1</ativo>
+      <id>646</id>
+    </row>
+    <row id="647">
+      <campoid>699</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>647</id>
+    </row>
+    <row id="648">
+      <campoid>700</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Aprovado;0=&gt;Negado</valor>
+      <ativo>1</ativo>
+      <id>648</id>
+    </row>
+    <row id="649">
+      <campoid>701</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;&#13;
+1=&gt;Ens. Fundamental;&#13;
+2=&gt;Ens. Primeira Fase (1º Grau);&#13;
+3=&gt;Ens. Segunda Fase (1º Grau);&#13;
+4=&gt;Ens. 2º Grau;&#13;
+5=&gt;Ens. Superior;&#13;
+6=&gt;Especialização;&#13;
+7=&gt;Mestrado;&#13;
+8=&gt;Doutorado;&#13;
+9=&gt;Pos-Doutorado</valor>
+      <ativo>1</ativo>
+      <id>649</id>
+    </row>
+    <row id="651">
+      <campoid>713</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>651</id>
+    </row>
+    <row id="652">
+      <campoid>715</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>652</id>
+    </row>
+    <row id="653">
+      <campoid>715</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>653</id>
+    </row>
+    <row id="654">
+      <campoid>716</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>654</id>
+    </row>
+    <row id="655">
+      <campoid>717</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>655</id>
+    </row>
+    <row id="656">
+      <campoid>719</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>656</id>
+    </row>
+    <row id="657">
+      <campoid>720</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>657</id>
+    </row>
+    <row id="658">
+      <campoid>718</campoid>
+      <metodo>setSize</metodo>
+      <valor>400;60</valor>
+      <ativo>1</ativo>
+      <id>658</id>
+    </row>
+    <row id="659">
+      <campoid>707</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>659</id>
+    </row>
+    <row id="660">
+      <campoid>708</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>660</id>
+    </row>
+    <row id="33">
+      <campoid>71</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbdisciplinas where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>33</id>
+    </row>
+    <row id="515">
+      <campoid>621</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomedisciplina  from view_turmas_disciplinas where ativo='1' order by nomedisciplina</valor>
+      <ativo>1</ativo>
+      <id>515</id>
+    </row>
+    <row id="174">
+      <campoid>68</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo  from dbcursos_areas where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>174</id>
+    </row>
+    <row id="690">
+      <campoid>614</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbdisciplinas where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>690</id>
+    </row>
+    <row id="610">
+      <campoid>565</campoid>
+      <metodo>addItems</metodo>
+      <valor>=&gt;;0=&gt;CLT;1=&gt;RPA;2=&gt;Pessoa Jurídica;3=&gt;Propriedade</valor>
+      <ativo>1</ativo>
+      <id>610</id>
+    </row>
+    <row id="780">
+      <campoid>86</campoid>
+      <metodo>addItems</metodo>
+      <valor>getItens/view_cursos_disciplinas/codigodisciplina/nomedisciplina/codigocurso,=,codigocurso</valor>
+      <ativo>1</ativo>
+      <id>780</id>
+    </row>
+    <row id="782">
+      <campoid>86</campoid>
+      <metodo>onChange</metodo>
+      <valor>triggerPross('codigodisciplina')</valor>
+      <ativo>1</ativo>
+      <id>782</id>
+    </row>
+    <row id="417">
+      <campoid>704</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeprofessor from view_funcionarios_professores where ativo='1' order by nomeprofessor</valor>
+      <ativo>1</ativo>
+      <id>417</id>
+    </row>
+    <row id="784">
+      <campoid>704</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>784</id>
+    </row>
+    <row id="785">
+      <campoid>511</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>785</id>
+    </row>
+    <row id="799">
+      <campoid>638</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>799</id>
+    </row>
+    <row id="800">
+      <campoid>639</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>800</id>
+    </row>
+    <row id="791">
+      <campoid>778</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>791</id>
+    </row>
+    <row id="790">
+      <campoid>777</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>790</id>
+    </row>
+    <row id="714">
+      <campoid>678</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigofuncionario,nomefuncionario from view_pessoas_funcionarios order by nomefuncionario</valor>
+      <ativo>1</ativo>
+      <id>714</id>
+    </row>
+    <row id="792">
+      <campoid>776</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>792</id>
+    </row>
+    <row id="802">
+      <campoid>643</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>802</id>
+    </row>
+    <row id="801">
+      <campoid>640</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>801</id>
+    </row>
+    <row id="803">
+      <campoid>644</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>803</id>
+    </row>
+    <row id="804">
+      <campoid>651</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>804</id>
+    </row>
+    <row id="805">
+      <campoid>669</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>805</id>
+    </row>
+    <row id="806">
+      <campoid>670</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>806</id>
+    </row>
+    <row id="890">
+      <campoid>104</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>890</id>
+    </row>
+    <row id="1104">
+      <campoid>951</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>1104</id>
+    </row>
+    <row id="661">
+      <campoid>582</campoid>
+      <metodo>addItems</metodo>
+      <valor>Administrativa=&gt;Administrativa;&#13;
+Administrativo Comercial=&gt;Administrativo Comercial;&#13;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
+Artes=&gt;Artes;&#13;
+Artes Gráficas=&gt;Artes Gráficas;&#13;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
+Biblioteconomia=&gt;Biblioteconomia;&#13;
+Biologia=&gt;Biologia;&#13;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
+Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
+Compras=&gt;Compras;&#13;
+Contabilidade=&gt;Contabilidade;&#13;
+Departamento Pessoal=&gt;Departamento Pessoal;&#13;
+Desenho Industrial=&gt;Desenho Industrial;&#13;
+Economia=&gt;Economia;&#13;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
+Enfermagem=&gt;Enfermagem;&#13;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
+Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
+Engenharia de Minas=&gt;Engenharia de Minas;&#13;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
+Estética Corporal=&gt;Estética Corporal;&#13;
+Farmácia=&gt;Farmácia;&#13;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
+Fisioterapia=&gt;Fisioterapia;&#13;
+Fonoaudiologia=&gt;Fonoaudiologia;&#13;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
+Industrial=&gt;Industrial;&#13;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
+Jornalismo=&gt;Jornalismo;&#13;
+Jurídica=&gt;Jurídica;&#13;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
+Manutenção=&gt;Manutenção;&#13;
+Marketing=&gt;Marketing;&#13;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
+Moda=&gt;Moda;&#13;
+Nutrição=&gt;Nutrição;&#13;
+Odontologia=&gt;Odontologia;&#13;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
+Qualidade=&gt;Qualidade;&#13;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
+Recursos Humanos=&gt;Recursos Humanos;&#13;
+Relações Internacionais=&gt;Relações Internacionais;&#13;
+Relações Públicas=&gt;Relações Públicas;&#13;
+Restaurante=&gt;Restaurante;&#13;
+Secretariado=&gt;Secretariado;&#13;
+Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
+Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
+Seguros=&gt;Seguros;&#13;
+Serviço Social=&gt;Serviço Social;&#13;
+Técnica=&gt;Técnica;&#13;
+Técnico-Comercial=&gt;Técnico-Comercial;&#13;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
+Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
+Transportes=&gt;Transportes;&#13;
+Zootecnia=&gt;Zootecnia; </valor>
+      <ativo>1</ativo>
+      <id>661</id>
+    </row>
+    <row id="662">
+      <campoid>589</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>662</id>
+    </row>
+    <row id="663">
+      <campoid>590</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;150</valor>
+      <ativo>1</ativo>
+      <id>663</id>
+    </row>
+    <row id="664">
+      <campoid>591</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>664</id>
+    </row>
+    <row id="665">
+      <campoid>592</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;150</valor>
+      <ativo>1</ativo>
+      <id>665</id>
+    </row>
+    <row id="666">
+      <campoid>593</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>666</id>
+    </row>
+    <row id="667">
+      <campoid>594</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>667</id>
+    </row>
+    <row id="668">
+      <campoid>604</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>668</id>
+    </row>
+    <row id="669">
+      <campoid>603</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>669</id>
+    </row>
+    <row id="670">
+      <campoid>602</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>670</id>
+    </row>
+    <row id="671">
+      <campoid>601</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>671</id>
+    </row>
+    <row id="672">
+      <campoid>600</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>672</id>
+    </row>
+    <row id="673">
+      <campoid>598</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>673</id>
+    </row>
+    <row id="674">
+      <campoid>597</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>674</id>
+    </row>
+    <row id="675">
+      <campoid>596</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>675</id>
+    </row>
+    <row id="676">
+      <campoid>595</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>676</id>
+    </row>
+    <row id="677">
+      <campoid>605</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>677</id>
+    </row>
+    <row id="678">
+      <campoid>606</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>678</id>
+    </row>
+    <row id="679">
+      <campoid>607</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>679</id>
+    </row>
+    <row id="680">
+      <campoid>608</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>680</id>
+    </row>
+    <row id="681">
+      <campoid>609</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>681</id>
+    </row>
+    <row id="682">
+      <campoid>610</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>682</id>
+    </row>
+    <row id="683">
+      <campoid>611</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>683</id>
+    </row>
+    <row id="684">
+      <campoid>613</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>684</id>
+    </row>
+    <row id="685">
+      <campoid>612</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>685</id>
+    </row>
+    <row id="688">
+      <campoid>618</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>688</id>
+    </row>
+    <row id="689">
+      <campoid>619</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;400</valor>
+      <ativo>1</ativo>
+      <id>689</id>
+    </row>
+    <row id="691">
+      <campoid>620</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>691</id>
+    </row>
+    <row id="693">
+      <campoid>702</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>693</id>
+    </row>
+    <row id="695">
+      <campoid>660</campoid>
+      <metodo>onchange</metodo>
+      <valor>validaValorAlteravel('valorNominal')</valor>
+      <ativo>1</ativo>
+      <id>695</id>
+    </row>
+    <row id="696">
+      <campoid>636</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>696</id>
+    </row>
+    <row id="697">
+      <campoid>637</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>697</id>
+    </row>
+    <row id="698">
+      <campoid>638</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>698</id>
+    </row>
+    <row id="699">
+      <campoid>639</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where funcionario='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>699</id>
+    </row>
+    <row id="700">
+      <campoid>640</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where fornecedor='1' and ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>700</id>
+    </row>
+    <row id="701">
+      <campoid>641</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas where ativo='1' and TipoConta='C'</valor>
+      <ativo>1</ativo>
+      <id>701</id>
+    </row>
+    <row id="702">
+      <campoid>634</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>702</id>
+    </row>
+    <row id="706">
+      <campoid>648</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>706</id>
+    </row>
+    <row id="707">
+      <campoid>632</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where cliente='1' and ativo='1' order by nome_razaoSocial</valor>
+      <ativo>1</ativo>
+      <id>707</id>
+    </row>
+    <row id="708">
+      <campoid>650</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>708</id>
+    </row>
+    <row id="709">
+      <campoid>654</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>709</id>
+    </row>
+    <row id="710">
+      <campoid>660</campoid>
+      <metodo>onblur</metodo>
+      <valor>validaValorAlteravel('valorNominal')</valor>
+      <ativo>1</ativo>
+      <id>710</id>
+    </row>
+    <row id="711">
+      <campoid>664</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas where ativo='1' and TipoConta='D'</valor>
+      <ativo>1</ativo>
+      <id>711</id>
+    </row>
+    <row id="712">
+      <campoid>665</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>712</id>
+    </row>
+    <row id="728">
+      <campoid>697</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>728</id>
+    </row>
+    <row id="729">
+      <campoid>696</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>729</id>
+    </row>
+    <row id="730">
+      <campoid>698</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;80</valor>
+      <ativo>1</ativo>
+      <id>730</id>
+    </row>
+    <row id="731">
+      <campoid>721</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>731</id>
+    </row>
+    <row id="732">
+      <campoid>722</campoid>
+      <metodo>setSize</metodo>
+      <valor>400;60</valor>
+      <ativo>1</ativo>
+      <id>732</id>
+    </row>
+    <row id="733">
+      <campoid>723</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>733</id>
+    </row>
+    <row id="734">
+      <campoid>724</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>734</id>
+    </row>
+    <row id="735">
+      <campoid>725</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>735</id>
+    </row>
+    <row id="738">
+      <campoid>730</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Contagem;2=&gt;Somatória</valor>
+      <ativo>1</ativo>
+      <id>738</id>
+    </row>
+    <row id="739">
+      <campoid>733</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Contagem;2=&gt;Somatória</valor>
+      <ativo>1</ativo>
+      <id>739</id>
+    </row>
+    <row id="740">
+      <campoid>737</campoid>
+      <metodo>addItems</metodo>
+      <valor>0=&gt;Nenhum;1=&gt;Diário;2=&gt;Semanal;3=&gt;Mensal;4=&gt;Bimestral;5=&gt;Trimestral;6=&gt;Semestral;7=&gt;Anual</valor>
+      <ativo>1</ativo>
+      <id>740</id>
+    </row>
+    <row id="741">
+      <campoid>728</campoid>
+      <metodo>addItems</metodo>
+      <valor>show tables like 'view%'</valor>
+      <ativo>1</ativo>
+      <id>741</id>
+    </row>
+    <row id="742">
+      <campoid>731</campoid>
+      <metodo>addItems</metodo>
+      <valor>show tables like 'view%'</valor>
+      <ativo>1</ativo>
+      <id>742</id>
+    </row>
+    <row id="743">
+      <campoid>755</campoid>
+      <metodo>setSize</metodo>
+      <valor>300;40</valor>
+      <ativo>1</ativo>
+      <id>743</id>
+    </row>
+    <row id="745">
+      <campoid>667</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>745</id>
+    </row>
+    <row id="746">
+      <campoid>666</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>746</id>
+    </row>
+    <row id="747">
+      <campoid>738</campoid>
+      <metodo>setSize</metodo>
+      <valor>350;80</valor>
+      <ativo>1</ativo>
+      <id>747</id>
+    </row>
+    <row id="748">
+      <campoid>739</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>748</id>
+    </row>
+    <row id="750">
+      <campoid>740</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>750</id>
+    </row>
+    <row id="754">
+      <campoid>742</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>754</id>
+    </row>
+    <row id="755">
+      <campoid>743</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>755</id>
+    </row>
+    <row id="762">
+      <campoid>753</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>762</id>
+    </row>
+    <row id="764">
+      <campoid>751</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>764</id>
+    </row>
+    <row id="765">
+      <campoid>752</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>765</id>
+    </row>
+    <row id="767">
+      <campoid>756</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>767</id>
+    </row>
+    <row id="768">
+      <campoid>620</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaoSocial from dbpessoas where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>768</id>
+    </row>
+    <row id="771">
+      <campoid>84</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>setValorParcelaTurma('valorTotal','numParcelas','valorMensal')</valor>
+      <ativo>1</ativo>
+      <id>771</id>
+    </row>
+    <row id="772">
+      <campoid>82</campoid>
+      <metodo>readonly</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>772</id>
+    </row>
+    <row id="773">
+      <campoid>757</campoid>
+      <metodo>addItems</metodo>
+      <valor>0=&gt;Não;1=&gt;Sim</valor>
+      <ativo>1</ativo>
+      <id>773</id>
+    </row>
+    <row id="774">
+      <campoid>758</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Pessoal;2=&gt;Digital</valor>
+      <ativo>1</ativo>
+      <id>774</id>
+    </row>
+    <row id="775">
+      <campoid>759</campoid>
+      <metodo>setAction</metodo>
+      <valor>viewDocumento('codigo')</valor>
+      <ativo>1</ativo>
+      <id>775</id>
+    </row>
+    <row id="776">
+      <campoid>761</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Orientação;2=&gt;Arquivo</valor>
+      <ativo>1</ativo>
+      <id>776</id>
+    </row>
+    <row id="777">
+      <campoid>622</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>777</id>
+    </row>
+    <row id="778">
+      <campoid>623</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>778</id>
+    </row>
+    <row id="781">
+      <campoid>284</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>781</id>
+    </row>
+    <row id="865">
+      <campoid>825</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Percentual;2=&gt;Valor</valor>
+      <ativo>1</ativo>
+      <id>865</id>
+    </row>
+    <row id="756">
+      <campoid>744</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbprodutos_tipos order by titulo</valor>
+      <ativo>1</ativo>
+      <id>756</id>
+    </row>
+    <row id="262">
+      <campoid>272</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomecargo from dbcargos where ativo='1' order by nomecargo</valor>
+      <ativo>1</ativo>
+      <id>262</id>
+    </row>
+    <row id="716">
+      <campoid>688</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomefuncionario from view_pessoas_funcionarios order by nomefuncionario</valor>
+      <ativo>1</ativo>
+      <id>716</id>
+    </row>
+    <row id="793">
+      <campoid>631</campoid>
+      <metodo>addItems</metodo>
+      <valor>0 =&gt; -&#13;
+</valor>
+      <ativo>1</ativo>
+      <id>793</id>
+    </row>
+    <row id="794">
+      <campoid>633</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>794</id>
+    </row>
+    <row id="788">
+      <campoid>631</campoid>
+      <metodo>setSize</metodo>
+      <valor>400</valor>
+      <ativo>1</ativo>
+      <id>788</id>
+    </row>
+    <row id="786">
+      <campoid>71</campoid>
+      <metodo>size</metodo>
+      <valor>10</valor>
+      <ativo>0</ativo>
+      <id>786</id>
+    </row>
+    <row id="705">
+      <campoid>647</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Sim;2=&gt;Não;</valor>
+      <ativo>1</ativo>
+      <id>705</id>
+    </row>
+    <row id="783">
+      <campoid>775</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeprofessor from view_funcionarios_professores</valor>
+      <ativo>1</ativo>
+      <id>783</id>
+    </row>
+    <row id="195">
+      <campoid>705</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>0</ativo>
+      <id>195</id>
+    </row>
+    <row id="692">
+      <campoid>663</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where ativo='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>692</id>
+    </row>
+    <row id="811">
+      <campoid>786</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbcursos_ativos where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>811</id>
+    </row>
+    <row id="809">
+      <campoid>786</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>809</id>
+    </row>
+    <row id="812">
+      <campoid>784</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,cdu from dbbiblioteca_cdu order by cdu</valor>
+      <ativo>1</ativo>
+      <id>812</id>
+    </row>
+    <row id="892">
+      <campoid>791</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>892</id>
+    </row>
+    <row id="813">
+      <campoid>776</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>813</id>
+    </row>
+    <row id="770">
+      <campoid>83</campoid>
+      <metodo>onblur</metodo>
+      <valor>setValorParcelaTurma('valorTotal','numParcelas','valorMensal')</valor>
+      <ativo>1</ativo>
+      <id>770</id>
+    </row>
+    <row id="824">
+      <campoid>633</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>824</id>
+    </row>
+    <row id="823">
+      <campoid>633</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigocurso,titulo from dbcursos_ativos where ativo='1' order by titulo</valor>
+      <ativo>1</ativo>
+      <id>823</id>
+    </row>
+    <row id="839">
+      <campoid>633</campoid>
+      <metodo>onchange</metodo>
+      <valor>onLoadSelect(this, 'codigoturma','TTurma','setOptionSelect')</valor>
+      <ativo>1</ativo>
+      <id>839</id>
+    </row>
+    <row id="807">
+      <campoid>631</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>0</ativo>
+      <id>807</id>
+    </row>
+    <row id="769">
+      <campoid>752</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>769</id>
+    </row>
+    <row id="810">
+      <campoid>786</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>810</id>
+    </row>
+    <row id="744">
+      <campoid>676</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;100</valor>
+      <ativo>1</ativo>
+      <id>744</id>
+    </row>
+    <row id="753">
+      <campoid>741</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>753</id>
+    </row>
+    <row id="818">
+      <campoid>794</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where cliente='1' or funcionario='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>818</id>
+    </row>
+    <row id="822">
+      <campoid>798</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where cliente='1' or funcionario='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>822</id>
+    </row>
+    <row id="820">
+      <campoid>796</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where cliente='1' or funcionario='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>820</id>
+    </row>
+    <row id="817">
+      <campoid>797</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from view_patrimonios_livros where codigolocador is not null order by titulo</valor>
+      <ativo>1</ativo>
+      <id>817</id>
+    </row>
+    <row id="840">
+      <campoid>775</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>840</id>
+    </row>
+    <row id="841">
+      <campoid>521</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>841</id>
+    </row>
+    <row id="842">
+      <campoid>631</campoid>
+      <metodo>onchange</metodo>
+      <valor>getDadosTurmaInscricao(this, 'TInscricao','getDadosTurmaInscricao')</valor>
+      <ativo>1</ativo>
+      <id>842</id>
+    </row>
+    <row id="885">
+      <campoid>853</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>885</id>
+    </row>
+    <row id="843">
+      <campoid>807</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>843</id>
+    </row>
+    <row id="844">
+      <campoid>808</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>844</id>
+    </row>
+    <row id="845">
+      <campoid>781</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>845</id>
+    </row>
+    <row id="847">
+      <campoid>815</campoid>
+      <metodo>setAction</metodo>
+      <valor>onFormOpen('260',this)</valor>
+      <ativo>1</ativo>
+      <id>847</id>
+    </row>
+    <row id="886">
+      <campoid>854</campoid>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <ativo>1</ativo>
+      <id>886</id>
+    </row>
+    <row id="887">
+      <campoid>855</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>887</id>
+    </row>
+    <row id="182">
+      <campoid>195</campoid>
+      <metodo>addItems</metodo>
+      <valor>01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30</valor>
+      <ativo>0</ativo>
+      <id>182</id>
+    </row>
+    <row id="895">
+      <campoid>796</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>895</id>
+    </row>
+    <row id="896">
+      <campoid>796</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>896</id>
+    </row>
+    <row id="848">
+      <campoid>795</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>848</id>
+    </row>
+    <row id="849">
+      <campoid>795</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>849</id>
+    </row>
+    <row id="888">
+      <campoid>856</campoid>
+      <metodo>setSize</metodo>
+      <valor>20</valor>
+      <ativo>1</ativo>
+      <id>888</id>
+    </row>
+    <row id="893">
+      <campoid>792</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigolivro,titulo from view_patrimonios_livros order by titulo</valor>
+      <ativo>1</ativo>
+      <id>893</id>
+    </row>
+    <row id="889">
+      <campoid>857</campoid>
+      <metodo>setSize</metodo>
+      <valor>70</valor>
+      <ativo>1</ativo>
+      <id>889</id>
+    </row>
+    <row id="894">
+      <campoid>804</campoid>
+      <metodo>setAction</metodo>
+      <valor>setLocacao('bloc_retLocacao &gt; .ui_bloco_conteudo','codigolivro','codigopessoa','botPesqcodigopessoa')</valor>
+      <ativo>1</ativo>
+      <id>894</id>
+    </row>
+    <row id="850">
+      <campoid>816</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>850</id>
+    </row>
+    <row id="851">
+      <campoid>817</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>851</id>
+    </row>
+    <row id="854">
+      <campoid>819</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>854</id>
+    </row>
+    <row id="855">
+      <campoid>820</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Crédito;2=&gt;Débito</valor>
+      <ativo>1</ativo>
+      <id>855</id>
+    </row>
+    <row id="856">
+      <campoid>821</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>856</id>
+    </row>
+    <row id="858">
+      <campoid>823</campoid>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <ativo>1</ativo>
+      <id>858</id>
+    </row>
+    <row id="852">
+      <campoid>818</campoid>
+      <metodo>setSize</metodo>
+      <valor>350;80</valor>
+      <ativo>1</ativo>
+      <id>852</id>
+    </row>
+    <row id="860">
+      <campoid>819</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Desconto;2=&gt;Bolsa;3=&gt;Parceria</valor>
+      <ativo>1</ativo>
+      <id>860</id>
+    </row>
+    <row id="859">
+      <campoid>816</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where ativo='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>859</id>
+    </row>
+    <row id="862">
+      <campoid>824</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from view_convenios order by titulo</valor>
+      <ativo>1</ativo>
+      <id>862</id>
+    </row>
+    <row id="863">
+      <campoid>824</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>863</id>
+    </row>
+    <row id="864">
+      <campoid>824</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>864</id>
+    </row>
+    <row id="867">
+      <campoid>827</campoid>
+      <metodo>addItems</metodo>
+      <valor>01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30; 31=&gt;31</valor>
+      <ativo>1</ativo>
+      <id>867</id>
+    </row>
+    <row id="869">
+      <campoid>826</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>869</id>
+    </row>
+    <row id="868">
+      <campoid>827</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>868</id>
+    </row>
+    <row id="870">
+      <campoid>828</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>870</id>
+    </row>
+    <row id="871">
+      <campoid>663</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>871</id>
+    </row>
+    <row id="900">
+      <campoid>858</campoid>
+      <metodo>setSize</metodo>
+      <valor>450;200</valor>
+      <ativo>1</ativo>
+      <id>900</id>
+    </row>
+    <row id="883">
+      <campoid>843</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>883</id>
+    </row>
+    <row id="884">
+      <campoid>852</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>884</id>
+    </row>
+    <row id="877">
+      <campoid>835</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>877</id>
+    </row>
+    <row id="49">
+      <campoid>73</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from dbcursos order by nome</valor>
+      <ativo>1</ativo>
+      <id>49</id>
+    </row>
+    <row id="749">
+      <campoid>739</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaMovimentacao('valortotal','acrescimo','desconto',null,null,null,'valorcorrigido');</valor>
+      <ativo>1</ativo>
+      <id>749</id>
+    </row>
+    <row id="789">
+      <campoid>776</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome from view_cursos</valor>
+      <ativo>1</ativo>
+      <id>789</id>
+    </row>
+    <row id="876">
+      <campoid>835</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigofuncionario,nomefuncionario from view_pessoas_funcionarios</valor>
+      <ativo>1</ativo>
+      <id>876</id>
+    </row>
+    <row id="878">
+      <campoid>836</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>878</id>
+    </row>
+    <row id="879">
+      <campoid>840</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;200</valor>
+      <ativo>1</ativo>
+      <id>879</id>
+    </row>
+    <row id="902">
+      <campoid>853</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas</valor>
+      <ativo>1</ativo>
+      <id>902</id>
+    </row>
+    <row id="881">
+      <campoid>829</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>881</id>
+    </row>
+    <row id="880">
+      <campoid>829</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>880</id>
+    </row>
+    <row id="882">
+      <campoid>841</campoid>
+      <metodo>addItems</metodo>
+      <valor>0 =&gt; Aleatório; 1 =&gt; Custom_petrus;2 =&gt; Eggplant;3 =&gt; Redmond;4 =&gt; Ui-lightness;5 =&gt; Black-tie;6 =&gt; Sunny;7 =&gt; Pepper-grinder;8 =&gt; Dot-luv;9 =&gt; Ui-tolook;10 =&gt; Blitzer;11 =&gt; Petrusedu;12 =&gt; Petrusedu_alternate;13 =&gt; Bluestyle;14 =&gt; Flick;15 =&gt; Humanity;16 =&gt; Overcast;17 =&gt; Bluetzer;18 =&gt; Fibratec;19 =&gt; Remake_bluetzer;20 =&gt; South-street;21 =&gt; Cupertino;22 =&gt; Petrus;</valor>
+      <ativo>1</ativo>
+      <id>882</id>
+    </row>
+    <row id="901">
+      <campoid>854</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeConta from  dbplano_contas</valor>
+      <ativo>1</ativo>
+      <id>901</id>
+    </row>
+    <row id="1000">
+      <campoid>170</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>1000</id>
+    </row>
+    <row id="152">
+      <campoid>174</campoid>
+      <metodo>addItems</metodo>
+      <valor>Dinheiro=&gt;Dinheiro;Cheque=&gt;Cheque;Cartão=&gt;Cartão</valor>
+      <ativo>1</ativo>
+      <id>152</id>
+    </row>
+    <row id="608">
+      <campoid>169</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from  dbpessoas where ativo='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>608</id>
+    </row>
+    <row id="132">
+      <campoid>166</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>132</id>
+    </row>
+    <row id="1001">
+      <campoid>155</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>1001</id>
+    </row>
+    <row id="1019">
+      <campoid>178</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1019</id>
+    </row>
+    <row id="1003">
+      <campoid>155</campoid>
+      <metodo>onchange</metodo>
+      <valor>viewMovimentacaoConta(this,'contFields207')</valor>
+      <ativo>1</ativo>
+      <id>1003</id>
+    </row>
+    <row id="1004">
+      <campoid>168</campoid>
+      <metodo>onchange</metodo>
+      <valor>viewMovimentacaoConta(this,'contFields253')</valor>
+      <ativo>1</ativo>
+      <id>1004</id>
+    </row>
+    <row id="1006">
+      <campoid>859</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>1006</id>
+    </row>
+    <row id="1005">
+      <campoid>859</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>1005</id>
+    </row>
+    <row id="1007">
+      <campoid>861</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1007</id>
+    </row>
+    <row id="1009">
+      <campoid>863</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>1009</id>
+    </row>
+    <row id="1010">
+      <campoid>864</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>1010</id>
+    </row>
+    <row id="1011">
+      <campoid>865</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1011</id>
+    </row>
+    <row id="1012">
+      <campoid>866</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1012</id>
+    </row>
+    <row id="1020">
+      <campoid>879</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1020</id>
+    </row>
+    <row id="1026">
+      <campoid>870</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1026</id>
+    </row>
+    <row id="1021">
+      <campoid>880</campoid>
+      <metodo>addItems</metodo>
+      <valor>0=&gt;Não;1=&gt;Sim</valor>
+      <ativo>1</ativo>
+      <id>1021</id>
+    </row>
+    <row id="1017">
+      <campoid>165</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao()</valor>
+      <ativo>1</ativo>
+      <id>1017</id>
+    </row>
+    <row id="1032">
+      <campoid>878</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1032</id>
+    </row>
+    <row id="766">
+      <campoid>101</campoid>
+      <metodo>onChange</metodo>
+      <valor>listaRefresh('blocFormProf','164')</valor>
+      <ativo>1</ativo>
+      <id>766</id>
+    </row>
+    <row id="1033">
+      <campoid>882</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>1033</id>
+    </row>
+    <row id="1034">
+      <campoid>882</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Conta Aberta;5=&gt;Conta Programada</valor>
+      <ativo>1</ativo>
+      <id>1034</id>
+    </row>
+    <row id="1035">
+      <campoid>885</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>1035</id>
+    </row>
+    <row id="1036">
+      <campoid>885</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Movimento Aberto;3=&gt;Movimento Programado</valor>
+      <ativo>1</ativo>
+      <id>1036</id>
+    </row>
+    <row id="1023">
+      <campoid>166</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao()</valor>
+      <ativo>1</ativo>
+      <id>1023</id>
+    </row>
+    <row id="1024">
+      <campoid>165</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1024</id>
+    </row>
+    <row id="1016">
+      <campoid>160</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','concluir_botform13')</valor>
+      <ativo>1</ativo>
+      <id>1016</id>
+    </row>
+    <row id="1018">
+      <campoid>176</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao()</valor>
+      <ativo>1</ativo>
+      <id>1018</id>
+    </row>
+    <row id="1025">
+      <campoid>178</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao()</valor>
+      <ativo>1</ativo>
+      <id>1025</id>
+    </row>
+    <row id="1027">
+      <campoid>873</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>1027</id>
+    </row>
+    <row id="1028">
+      <campoid>874</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>1028</id>
+    </row>
+    <row id="1029">
+      <campoid>875</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>1029</id>
+    </row>
+    <row id="1030">
+      <campoid>876</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>1030</id>
+    </row>
+    <row id="1031">
+      <campoid>877</campoid>
+      <metodo>setSize</metodo>
+      <valor>200</valor>
+      <ativo>1</ativo>
+      <id>1031</id>
+    </row>
+    <row id="1037">
+      <campoid>756</campoid>
+      <metodo>onchange</metodo>
+      <valor>setMoney(this.value,this)</valor>
+      <ativo>1</ativo>
+      <id>1037</id>
+    </row>
+    <row id="1039">
+      <campoid>879</campoid>
+      <metodo>onchange</metodo>
+      <valor>setMoney(this.value,this)</valor>
+      <ativo>1</ativo>
+      <id>1039</id>
+    </row>
+    <row id="1040">
+      <campoid>157</campoid>
+      <metodo>onchange</metodo>
+      <valor>setMoney(this.value,this)</valor>
+      <ativo>1</ativo>
+      <id>1040</id>
+    </row>
+    <row id="1022">
+      <campoid>859</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao();setMoney(this.value,this)</valor>
+      <ativo>1</ativo>
+      <id>1022</id>
+    </row>
+    <row id="874">
+      <campoid>667</campoid>
+      <metodo>onchange</metodo>
+      <valor>setValorTotalProduto()</valor>
+      <ativo>1</ativo>
+      <id>874</id>
+    </row>
+    <row id="815">
+      <campoid>795</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigolivro,titulo from view_patrimonios_livros where codigolocador is null order by titulo</valor>
+      <ativo>1</ativo>
+      <id>815</id>
+    </row>
+    <row id="1042">
+      <campoid>756</campoid>
+      <metodo>disabled</metodo>
+      <valor>true</valor>
+      <ativo>1</ativo>
+      <id>1042</id>
+    </row>
+    <row id="875">
+      <campoid>831</campoid>
+      <metodo>onchange</metodo>
+      <valor>setValorTotalProduto()</valor>
+      <ativo>1</ativo>
+      <id>875</id>
+    </row>
+    <row id="687">
+      <campoid>617</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;300</valor>
+      <ativo>1</ativo>
+      <id>687</id>
+    </row>
+    <row id="1043">
+      <campoid>891</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>1043</id>
+    </row>
+    <row id="1045">
+      <campoid>892</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>1045</id>
+    </row>
+    <row id="1047">
+      <campoid>894</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1047</id>
+    </row>
+    <row id="1048">
+      <campoid>894</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>1048</id>
+    </row>
+    <row id="1049">
+      <campoid>895</campoid>
+      <metodo>setSize</metodo>
+      <valor>90</valor>
+      <ativo>1</ativo>
+      <id>1049</id>
+    </row>
+    <row id="1050">
+      <campoid>899</campoid>
+      <metodo>setSize</metodo>
+      <valor>60</valor>
+      <ativo>1</ativo>
+      <id>1050</id>
+    </row>
+    <row id="1051">
+      <campoid>899</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1051</id>
+    </row>
+    <row id="1055">
+      <campoid>900</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeconta from dbcontas_caixa where ativo='1' order by nomeconta</valor>
+      <ativo>1</ativo>
+      <id>1055</id>
+    </row>
+    <row id="193">
+      <campoid>206</campoid>
+      <metodo>addItems</metodo>
+      <valor>getItens/view_caixa_funcionarios/codigocontacaixa/nomecontacaixa/codigofuncionario,=,codigofuncionario;situacao,=,1</valor>
+      <ativo>1</ativo>
+      <id>193</id>
+    </row>
+    <row id="159">
+      <campoid>177</campoid>
+      <metodo>addItems</metodo>
+      <valor>getItens/view_caixa_funcionarios/codigocontacaixa/nomecontacaixa/codigofuncionario,=,codigofuncionario;situacao,=,1</valor>
+      <ativo>1</ativo>
+      <id>159</id>
+    </row>
+    <row id="1046">
+      <campoid>892</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao('valortotal','acrescimo','desconto',null,null,null,'valorcorrigido');</valor>
+      <ativo>1</ativo>
+      <id>1046</id>
+    </row>
+    <row id="751">
+      <campoid>740</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaMovimentacao('valortotal','acrescimo','desconto',null,null,null,'valorcorrigido');</valor>
+      <ativo>1</ativo>
+      <id>751</id>
+    </row>
+    <row id="763">
+      <campoid>750</campoid>
+      <metodo>setAction</metodo>
+      <valor>addContas(this,'codigo', '215')</valor>
+      <ativo>1</ativo>
+      <id>763</id>
+    </row>
+    <row id="1052">
+      <campoid>897</campoid>
+      <metodo>setAction</metodo>
+      <valor>addContas(this,'codigo', '236')</valor>
+      <ativo>1</ativo>
+      <id>1052</id>
+    </row>
+    <row id="105">
+      <campoid>649</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>calculaMovimentacao();</valor>
+      <ativo>1</ativo>
+      <id>105</id>
+    </row>
+    <row id="1013">
+      <campoid>861</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao();</valor>
+      <ativo>1</ativo>
+      <id>1013</id>
+    </row>
+    <row id="1061">
+      <campoid>908</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Sim;2=&gt;Não</valor>
+      <ativo>1</ativo>
+      <id>1061</id>
+    </row>
+    <row id="650">
+      <campoid>650</campoid>
+      <metodo>onkeyup</metodo>
+      <valor>calculaMovimentacao();</valor>
+      <ativo>1</ativo>
+      <id>650</id>
+    </row>
+    <row id="122">
+      <campoid>161</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao();</valor>
+      <ativo>1</ativo>
+      <id>122</id>
+    </row>
+    <row id="1056">
+      <campoid>905</campoid>
+      <metodo>setAction</metodo>
+      <valor>geraMovimentacaoInterna()</valor>
+      <ativo>1</ativo>
+      <id>1056</id>
+    </row>
+    <row id="1044">
+      <campoid>891</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao('valortotal','acrescimo','desconto',null,null,null,'valorcorrigido');</valor>
+      <ativo>1</ativo>
+      <id>1044</id>
+    </row>
+    <row id="1057">
+      <campoid>902</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeconta from dbcontas_caixa where ativo='1' order by nomeconta</valor>
+      <ativo>1</ativo>
+      <id>1057</id>
+    </row>
+    <row id="1060">
+      <campoid>903</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeconta from dbcontas_caixa where ativo='1' order by nomeconta</valor>
+      <ativo>1</ativo>
+      <id>1060</id>
+    </row>
+    <row id="721">
+      <campoid>694</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomedisciplina from view_turmas_disciplinas where ativo='1' order by nomedisciplina</valor>
+      <ativo>1</ativo>
+      <id>721</id>
+    </row>
+    <row id="496">
+      <campoid>492</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigofuncionario,nomefuncionario from view_pessoas_funcionarios order by nomefuncionario</valor>
+      <ativo>1</ativo>
+      <id>496</id>
+    </row>
+    <row id="1062">
+      <campoid>909</campoid>
+      <metodo>setSize</metodo>
+      <valor>30</valor>
+      <ativo>1</ativo>
+      <id>1062</id>
+    </row>
+    <row id="1063">
+      <campoid>910</campoid>
+      <metodo>SETsIZE</metodo>
+      <valor>30</valor>
+      <ativo>1</ativo>
+      <id>1063</id>
+    </row>
+    <row id="1064">
+      <campoid>912</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbdisciplinas</valor>
+      <ativo>1</ativo>
+      <id>1064</id>
+    </row>
+    <row id="551">
+      <campoid>517</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbprocessos_academicos where ativo = '1'</valor>
+      <ativo>1</ativo>
+      <id>551</id>
+    </row>
+    <row id="171">
+      <campoid>683</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbprocessos_academicos where ativo = '1'</valor>
+      <ativo>1</ativo>
+      <id>171</id>
+    </row>
+    <row id="1065">
+      <campoid>697</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbprocessos_academicos where ativo = '1'</valor>
+      <ativo>1</ativo>
+      <id>1065</id>
+    </row>
+    <row id="727">
+      <campoid>696</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomepessoa from view_pessoas_alunos</valor>
+      <ativo>1</ativo>
+      <id>727</id>
+    </row>
+    <row id="1066">
+      <campoid>105</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1066</id>
+    </row>
+    <row id="1067">
+      <campoid>913</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1067</id>
+    </row>
+    <row id="1068">
+      <campoid>913</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from dbpessoas where ativo = '1'</valor>
+      <ativo>1</ativo>
+      <id>1068</id>
+    </row>
+    <row id="1069">
+      <campoid>916</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1069</id>
+    </row>
+    <row id="1070">
+      <campoid>917</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1070</id>
+    </row>
+    <row id="1071">
+      <campoid>918</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1071</id>
+    </row>
+    <row id="1072">
+      <campoid>919</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>1072</id>
+    </row>
+    <row id="1073">
+      <campoid>920</campoid>
+      <metodo>setSize</metodo>
+      <valor>150</valor>
+      <ativo>1</ativo>
+      <id>1073</id>
+    </row>
+    <row id="1074">
+      <campoid>921</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>1074</id>
+    </row>
+    <row id="1075">
+      <campoid>922</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;250</valor>
+      <ativo>1</ativo>
+      <id>1075</id>
+    </row>
+    <row id="1076">
+      <campoid>923</campoid>
+      <metodo>addItems</metodo>
+      <valor>Aberto=&gt;Aberto;Atendido=&gt;Atendido</valor>
+      <ativo>1</ativo>
+      <id>1076</id>
+    </row>
+    <row id="1077">
+      <campoid>928</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>1077</id>
+    </row>
+    <row id="1078">
+      <campoid>929</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>1078</id>
+    </row>
+    <row id="1079">
+      <campoid>930</campoid>
+      <metodo>setSize</metodo>
+      <valor>500;250</valor>
+      <ativo>1</ativo>
+      <id>1079</id>
+    </row>
+    <row id="1080">
+      <campoid>931</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>1080</id>
+    </row>
+    <row id="1081">
+      <campoid>932</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>1081</id>
+    </row>
+    <row id="1082">
+      <campoid>933</campoid>
+      <metodo>setSize</metodo>
+      <valor>100%;250</valor>
+      <ativo>1</ativo>
+      <id>1082</id>
+    </row>
+    <row id="686">
+      <campoid>596</campoid>
+      <metodo>addItems</metodo>
+      <valor>Próprio=&gt;Próprio;Alugado=&gt;Alugado;Aquisição=&gt;Aquisição</valor>
+      <ativo>1</ativo>
+      <id>686</id>
+    </row>
+    <row id="703">
+      <campoid>645</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Sim;2=&gt;Não;</valor>
+      <ativo>1</ativo>
+      <id>703</id>
+    </row>
+    <row id="704">
+      <campoid>646</campoid>
+      <metodo>addItems</metodo>
+      <valor>1=&gt;Sim;2=&gt;Não;</valor>
+      <ativo>1</ativo>
+      <id>704</id>
+    </row>
+    <row id="170">
+      <campoid>682</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigoaluno,nomepessoa from view_pessoas_alunos</valor>
+      <ativo>1</ativo>
+      <id>170</id>
+    </row>
+    <row id="1084">
+      <campoid>682</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1084</id>
+    </row>
+    <row id="1087">
+      <campoid>937</campoid>
+      <metodo>setSize</metodo>
+      <valor>350</valor>
+      <ativo>1</ativo>
+      <id>1087</id>
+    </row>
+    <row id="1088">
+      <campoid>938</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>1088</id>
+    </row>
+    <row id="1089">
+      <campoid>939</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>1089</id>
+    </row>
+    <row id="1090">
+      <campoid>217</campoid>
+      <metodo>addItems</metodo>
+      <valor>0.5=&gt;0.5;1.0=&gt;1.0;1.5=&gt;1.5;2.0=&gt;2.0;2.5=&gt;2.5;3.0=&gt;3.0;3.5=&gt;3.5;4.0=&gt;4.0;4.5=&gt;4.5;5.0=&gt;5.0;5.5=&gt;5.5;6.0=&gt;6.0;6.5=&gt;6.5;7.0=&gt;7.0;7.5=&gt;7.5;8.0=&gt;8.0;8.5=&gt;8.5;9.0=&gt;9.0;9.5=&gt;9.5;10.0=&gt;10.0</valor>
+      <ativo>1</ativo>
+      <id>1090</id>
+    </row>
+    <row id="1091">
+      <campoid>938</campoid>
+      <metodo>addItems</metodo>
+      <valor>0.5=&gt;0.5;1.0=&gt;1.0;1.5=&gt;1.5;2.0=&gt;2.0;2.5=&gt;2.5;3.0=&gt;3.0;3.5=&gt;3.5;4.0=&gt;4.0;4.5=&gt;4.5;5.0=&gt;5.0;5.5=&gt;5.5;6.0=&gt;6.0;6.5=&gt;6.5;7.0=&gt;7.0;7.5=&gt;7.5;8.0=&gt;8.0;8.5=&gt;8.5;9.0=&gt;9.0;9.5=&gt;9.5;10.0=&gt;10.0</valor>
+      <ativo>1</ativo>
+      <id>1091</id>
+    </row>
+    <row id="1092">
+      <campoid>940</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;140</valor>
+      <ativo>1</ativo>
+      <id>1092</id>
+    </row>
+    <row id="1093">
+      <campoid>941</campoid>
+      <metodo>setSize</metodo>
+      <valor>650;140</valor>
+      <ativo>1</ativo>
+      <id>1093</id>
+    </row>
+    <row id="857">
+      <campoid>822</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomeconta from dbplano_contas order by nomeconta</valor>
+      <ativo>1</ativo>
+      <id>857</id>
+    </row>
+    <row id="1094">
+      <campoid>943</campoid>
+      <metodo>addItems</metodo>
+      <valor>--=&gt;--;01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30;31=&gt;31</valor>
+      <ativo>1</ativo>
+      <id>1094</id>
+    </row>
+    <row id="1095">
+      <campoid>944</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbconvenios order by titulo</valor>
+      <ativo>1</ativo>
+      <id>1095</id>
+    </row>
+    <row id="1097">
+      <campoid>945</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbconvenios order by titulo</valor>
+      <ativo>1</ativo>
+      <id>1097</id>
+    </row>
+    <row id="1098">
+      <campoid>946</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,titulo from dbgrade_avaliacoes order by titulo</valor>
+      <ativo>1</ativo>
+      <id>1098</id>
+    </row>
+    <row id="1101">
+      <campoid>949</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo, nometurma || ' - ' || nomedisciplina || ' - ' || cargahoraria || ' hr' from view_turmas_disciplinas where status in ('1','5')</valor>
+      <ativo>1</ativo>
+      <id>1101</id>
+    </row>
+    <row id="1099">
+      <campoid>947</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomedisciplina from view_alunos_disciplinas where situacao = '2'</valor>
+      <ativo>1</ativo>
+      <id>1099</id>
+    </row>
+    <row id="1103">
+      <campoid>950</campoid>
+      <metodo>setAction</metodo>
+      <valor>alteraDisciplinaAlunoEspecial('codigodisciplina_antiga','codigodisciplina_nova','codigoturmadisciplina')</valor>
+      <ativo>1</ativo>
+      <id>1103</id>
+    </row>
+    <row id="1100">
+      <campoid>948</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nomedisciplina from view_alunos_disciplinas where situacao in ('1','5','6') and id &lt; 100</valor>
+      <ativo>1</ativo>
+      <id>1100</id>
+    </row>
+    <row id="1105">
+      <campoid>952</campoid>
+      <metodo>setSize</metodo>
+      <valor>400;50</valor>
+      <ativo>1</ativo>
+      <id>1105</id>
+    </row>
+    <row id="1106">
+      <campoid>953</campoid>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <ativo>1</ativo>
+      <id>1106</id>
+    </row>
+    <row id="1107">
+      <campoid>954</campoid>
+      <metodo>setSize</metodo>
+      <valor>30</valor>
+      <ativo>1</ativo>
+      <id>1107</id>
+    </row>
+    <row id="1110">
+      <campoid>955</campoid>
+      <metodo>setSize</metodo>
+      <valor>30</valor>
+      <ativo>1</ativo>
+      <id>1110</id>
+    </row>
+    <row id="1111">
+      <campoid>956</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>1111</id>
+    </row>
+    <row id="1112">
+      <campoid>956</campoid>
+      <metodo>addItems</metodo>
+      <valor>select id,titulo from dbavaliacoes_regras order by id</valor>
+      <ativo>1</ativo>
+      <id>1112</id>
+    </row>
+    <row id="1113">
+      <campoid>957</campoid>
+      <metodo>setSize</metodo>
+      <valor>250</valor>
+      <ativo>1</ativo>
+      <id>1113</id>
+    </row>
+    <row id="1114">
+      <campoid>959</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>1114</id>
+    </row>
+    <row id="1115">
+      <campoid>960</campoid>
+      <metodo>setSize</metodo>
+      <valor>300;50</valor>
+      <ativo>1</ativo>
+      <id>1115</id>
+    </row>
+    <row id="846">
+      <campoid>809</campoid>
+      <metodo>setAction</metodo>
+      <valor>setMatricula(this, 'Você deseja realmente confirmar esta ação?')</valor>
+      <ativo>1</ativo>
+      <id>846</id>
+    </row>
+    <row id="713">
+      <campoid>666</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,label from dbprodutos where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>713</id>
+    </row>
+    <row id="694">
+      <campoid>634</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,label from dbprodutos where ativo='1'</valor>
+      <ativo>1</ativo>
+      <id>694</id>
+    </row>
+    <row id="1117">
+      <campoid>964</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1117</id>
+    </row>
+    <row id="1118">
+      <campoid>964</campoid>
+      <metodo>setSize</metodo>
+      <valor>50</valor>
+      <ativo>1</ativo>
+      <id>1118</id>
+    </row>
+    <row id="1119">
+      <campoid>961</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1119</id>
+    </row>
+    <row id="1120">
+      <campoid>963</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1120</id>
+    </row>
+    <row id="1121">
+      <campoid>965</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1121</id>
+    </row>
+    <row id="1122">
+      <campoid>966</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1122</id>
+    </row>
+    <row id="1123">
+      <campoid>967</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1123</id>
+    </row>
+    <row id="1124">
+      <campoid>966</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1124</id>
+    </row>
+    <row id="1125">
+      <campoid>967</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1125</id>
+    </row>
+    <row id="1126">
+      <campoid>965</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1126</id>
+    </row>
+    <row id="1127">
+      <campoid>968</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1127</id>
+    </row>
+    <row id="1128">
+      <campoid>969</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1128</id>
+    </row>
+    <row id="1129">
+      <campoid>507</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaDebitoProfessor()</valor>
+      <ativo>1</ativo>
+      <id>1129</id>
+    </row>
+    <row id="1132">
+      <campoid>961</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaDebitoProfessor()</valor>
+      <ativo>1</ativo>
+      <id>1132</id>
+    </row>
+    <row id="1131">
+      <campoid>508</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaDebitoProfessor()</valor>
+      <ativo>1</ativo>
+      <id>1131</id>
+    </row>
+    <row id="1130">
+      <campoid>505</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaDebitoProfessor()</valor>
+      <ativo>1</ativo>
+      <id>1130</id>
+    </row>
+    <row id="1133">
+      <campoid>963</campoid>
+      <metodo>onchange</metodo>
+      <valor>calculaDebitoProfessor()</valor>
+      <ativo>1</ativo>
+      <id>1133</id>
+    </row>
+    <row id="1116">
+      <campoid>964</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,cargahoraria from dbdisciplinas</valor>
+      <ativo>1</ativo>
+      <id>1116</id>
+    </row>
+    <row id="1136">
+      <campoid>965</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1136</id>
+    </row>
+    <row id="1137">
+      <campoid>966</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1137</id>
+    </row>
+    <row id="1138">
+      <campoid>967</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1138</id>
+    </row>
+    <row id="1139">
+      <campoid>968</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1139</id>
+    </row>
+    <row id="1140">
+      <campoid>969</campoid>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <ativo>1</ativo>
+      <id>1140</id>
+    </row>
+    <row id="1141">
+      <campoid>970</campoid>
+      <metodo>setAction</metodo>
+      <valor>setTransacaoProfessor('59')</valor>
+      <ativo>1</ativo>
+      <id>1141</id>
+    </row>
+    <row id="1142">
+      <campoid>974</campoid>
+      <metodo>setAction</metodo>
+      <valor>setAbandonoCurso($('#codigoaluno_processo').val())</valor>
+      <ativo>1</ativo>
+      <id>1142</id>
+    </row>
+    <row id="1143">
+      <campoid>975</campoid>
+      <metodo>setAction</metodo>
+      <valor>setDestrancamentoMatricula($('#codigoaluno_processo').val())</valor>
+      <ativo>1</ativo>
+      <id>1143</id>
+    </row>
+    <row id="1144">
+      <campoid>976</campoid>
+      <metodo>setAction</metodo>
+      <valor>setTrancamentoCurso($('#codigoaluno_processo').val())</valor>
+      <ativo>1</ativo>
+      <id>1144</id>
+    </row>
+  </camposXPropriedades>
+</kernelsys>
