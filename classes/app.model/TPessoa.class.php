@@ -27,7 +27,7 @@ class TPessoa{
                 $retPessoa = $this->obTDbo->select("*", $criteria);
                 $this->obPessoa = $retPessoa->fetchObject();
 /*
-                $entidades = new TDbo_kernelsys('tabelas');
+                $entidades = new TKrs('tabelas');
                 $critEntidades = new TCriteria();
                 $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_TITULARIDADES%'),'OR');
                 $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_FUNCIONARIOS%'),'OR');

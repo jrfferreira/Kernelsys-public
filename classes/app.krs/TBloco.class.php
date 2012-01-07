@@ -81,14 +81,14 @@ class TBloco{
                 $obTabela = $retTab->fetchObject();
 
                     //retorna dados do formulario
-                    $dboForm = new TDbo_kernelsys('forms');
+                    $dboForm = new TKrs('forms');
                         $criteriaForm = new TCriteria();
                         $criteriaForm->add(new TFilter('id','=',$this->ObjBloco->idform));
                     $retForm = $dboForm->select('*', $criteriaForm);
                     $obForm = $retForm->fetchObject();
 
                     //retorna a lista
-                    $dboLista = new TDbo_kernelsys('lista_form');
+                    $dboLista = new TKrs('lista_form');
                         $criteriaLista = new TCriteria();
                         $criteriaLista->add(new TFilter('id','=',$obForm->idlista));
                     $retLista = $dboLista->select('id', $criteriaLista);

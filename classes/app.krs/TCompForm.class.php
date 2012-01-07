@@ -41,7 +41,7 @@ class TCompForm {
             //==================================================================
 
         //inicia uma transação com a camada de dados do form
-        $this->obKDbo = new TDbo_kernelsys();
+        $this->obKDbo = new TKrs();
 
         $this->obKDbo->setEntidade('campos_x_blocos');
             $criteriaCamposBlocos = new TCriteria();

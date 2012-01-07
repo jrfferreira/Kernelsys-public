@@ -33,6 +33,10 @@ class TCriteria extends TExpression{
 		$this->operators   = NULL;
 	}
     
+	public function drop(){
+		return $this->expressions;
+	}
+	
     /*
      * método dump()
      *  retorna a expressão final

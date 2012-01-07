@@ -28,7 +28,7 @@ class TCompLista {
         //=========================================================
         
         //Abre conexão com o BD de Registro Kernelsys
-        $this->dboKs = new TDbo_kernelsys();
+        $this->dboKs = new TKrs();
 
         $this->idLista = $idLista;
 
@@ -58,7 +58,7 @@ class TCompLista {
                 $setEntidade = $this->obTabela->tabela_view;
 
                 //retorna ações a serem incluidas na barra de navegação da lista
-                $dboBarraAction = new TDbo_kernelsys('lista_bnav');
+                $dboBarraAction = new TKrs('lista_bnav');
 	                $criterioBarraAction = new TCriteria();
 	                $criterioBarraAction->add(new TFilter('lista_form_id', '=', $this->idLista));
                 $retBarraAction = $dboBarraAction->select('*', $criterioBarraAction);

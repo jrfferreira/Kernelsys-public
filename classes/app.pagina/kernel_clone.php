@@ -33,7 +33,7 @@ function carregaModulo($id){
             
         
         imprimi('-- Formulário');
-		$dboForm = new TDbo_kernelsys('forms');
+		$dboForm = new TKrs('forms');
 		$dCritForm = new TCriteria();
 		$dCritForm->add(new TFilter('id','=',$idForm));
 		$retForm = $dboForm->select('*',$dCritForm);
@@ -49,7 +49,7 @@ function carregaModulo($id){
 		}
 */
 		imprimi('-- Form x Tabela');
-		$dboform_x_tabelas = new TDbo_kernelsys('form_x_tabelas');
+		$dboform_x_tabelas = new TKrs('form_x_tabelas');
 		$dCritform_x_tabelas = new TCriteria();
 		$dCritform_x_tabelas->add(new TFilter('formid','=',$obForm->id));
 		$dCritform_x_tabelas->add(new TFilter('ativo','=','1'));
@@ -59,7 +59,7 @@ function carregaModulo($id){
 		imprimi('-- Tabelas');
 		while($obform_x_tabelas= $retform_x_tabelas->fetchObject()){
             
-			$dboTabelas = new TDbo_kernelsys('tabelas');
+			$dboTabelas = new TKrs('tabelas');
 			$dCritTabelas = new TCriteria();
 			$dCritTabelas->add(new TFilter('id','=',$obform_x_tabelas->tabelaid));
 			$retTabelas = $dboTabelas->select('*',$dCritTabelas);
@@ -93,7 +93,7 @@ function carregaModulo($id){
 		}
         
         if(!$form_x_tabelas[$obForm->entidade]){
-            			$dboTabelas = new TDbo_kernelsys('tabelas');
+            			$dboTabelas = new TKrs('tabelas');
 			$dCritTabelas = new TCriteria();
 			$dCritTabelas->add(new TFilter('id','=',$obForm->entidade));
 			$retTabelas = $dboTabelas->select('*',$dCritTabelas);
@@ -163,7 +163,7 @@ function carregaModulo($id){
         
 		imprimi('-- Lista Form');
         //Lista Form	
-		$dboListas = new TDbo_kernelsys('lista_form');
+		$dboListas = new TKrs('lista_form');
 		$dCritLista = new TCriteria();
 		$dCritLista->add(new TFilter('id','=',"({$obForm->idlista})"));
 
@@ -210,7 +210,7 @@ function carregaModulo($id){
 		//Lista-colunas
 		
 		imprimi('-- Lista Colunas');
-		$dboListaCol = new TDbo_kernelsys('lista_colunas');
+		$dboListaCol = new TKrs('lista_colunas');
 		$dCritListaCol = new TCriteria();
 		$dCritListaCol->add(new TFilter('lista_form_id','=',$obForm->idlista));
 		$dCritListaCol->add(new TFilter('ativo','=','1'));
@@ -247,7 +247,7 @@ function carregaModulo($id){
         //form_x_abas
         
 
-        $dboFormAbas = new TDbo_kernelsys('form_x_abas');
+        $dboFormAbas = new TKrs('form_x_abas');
 		$dCritFormAbas = new TCriteria();
 		$dCritFormAbas->add(new TFilter('formid','=',$idForm));
         $dCritFormAbas->add(new TFilter('ativo','=','1'));
@@ -261,7 +261,7 @@ function carregaModulo($id){
       if($obFormAbas_){
        foreach($obFormAbas_ as $obFormAbas){
             
-        $dboAbas = new TDbo_kernelsys('abas');
+        $dboAbas = new TKrs('abas');
 		$dCritAbas = new TCriteria();
 		$dCritAbas->add(new TFilter('id','=',"({$obFormAbas->abaid})"));
         
@@ -298,7 +298,7 @@ function carregaModulo($id){
         
         //bloco_x_abas
         
-        $dboBlocoAbas = new TDbo_kernelsys('blocos_x_abas');
+        $dboBlocoAbas = new TKrs('blocos_x_abas');
 		$dCritBlocoAbas = new TCriteria();
 		$dCritBlocoAbas->add(new TFilter('abaid','=',$obAba->id));
         $retBlocoAbas = $dboBlocoAbas->select('*',$dCritBlocoAbas);
@@ -312,7 +312,7 @@ function carregaModulo($id){
       if($obBlocoAba_ ){
       foreach($obBlocoAba_ as $obBlocoAba){
           
-            $dboBloco = new TDbo_kernelsys('blocos');
+            $dboBloco = new TKrs('blocos');
             $dCritBloco = new TCriteria();
             $dCritBloco->add(new TFilter('id','=',$obBlocoAba->blocoid));
             
@@ -371,7 +371,7 @@ function carregaModulo($id){
         
         //campos_x_blocos
         
-        $dboCampoBloco = new TDbo_kernelsys('campos_x_blocos');
+        $dboCampoBloco = new TKrs('campos_x_blocos');
 		$dCritCampoBloco = new TCriteria();
 		$dCritCampoBloco->add(new TFilter('blocoid','=',$obBloco->id));
         $dCritCampoBloco->add(new TFilter('mostrarcampo','=','S'));
@@ -384,7 +384,7 @@ function carregaModulo($id){
       
       if($obCampoBloco_ ){
       foreach($obCampoBloco_ as $obCampoBloco){
-            $dboCampo = new TDbo_kernelsys('campos');
+            $dboCampo = new TKrs('campos');
             $dCritCampo = new TCriteria();
             $dCritCampo->add(new TFilter('id','=',$obCampoBloco->campoid));
             
@@ -432,7 +432,7 @@ function carregaModulo($id){
         imprimi("INSERT INTO campos_x_blocos (campoid,blocoid,mostrarcampo,formato,ordem) VALUES ((select val from session_var where var = 'idCampo{$obCampo->id}' limit 1), (select val from session_var where var = 'idBloco{$obBloco->id}' limit 1),'{$obCampoBloco->mostrarcampo}','{$obCampoBloco->formato}','{$obCampoBloco->ordem}');");
         
         
-        $dboCamposPropriedades = new TDbo_kernelsys('campos_x_propriedades');
+        $dboCamposPropriedades = new TKrs('campos_x_propriedades');
         $dCritCamposPropriedades = new TCriteria();
         $dCritCamposPropriedades->add(new TFilter('campoid','=',$obCampo->id));
         $dCritCamposPropriedades->add(new TFilter('ativo','=','1'));
@@ -464,7 +464,7 @@ function carregaModulo($id){
 }
 	//Inicio
 
-	$dbo = new TDbo_kernelsys('menu_modulos');
+	$dbo = new TKrs('menu_modulos');
 	$dCrit = new TCriteria();
 	$dCrit->add(new TFilter('id','=',$_GET['id']));
 	$ret = $dbo->select('*',$dCrit);

@@ -51,7 +51,7 @@ class TFilter extends TExpression{
                 }
                 else if (is_string($x)){
                     // se for string, adiciona aspas
-                    if(preg_match('|\(.*?\)|',$x)){
+                    if(preg_match('@\(.*?\)@',$x)){
                         $foo[]= "$x";
                     }else{
                         $foo[]= "'$x'";
@@ -100,5 +100,46 @@ class TFilter extends TExpression{
         return "{$this->variable} {$this->operator} {$this->value}";
 
     }
+    
+	public function getVariable() {
+		return $this->variable;
+	}
+
+	public function getValue() {
+		return $this->value;
+	}
+
+	public function getOperator() {
+		return $this->operator;
+	}
+
+	public function getOpLogico() {
+		return $this->opLogico;
+	}
+
+	public function getTipoFiltro() {
+		return $this->tipoFiltro;
+	}
+
+	public function setVariable($variable) {
+		$this->variable = $variable;
+	}
+
+	public function setValue($value) {
+		$this->value = $value;
+	}
+
+	public function setOperator($operator) {
+		$this->operator = $operator;
+	}
+
+	public function setOpLogico($opLogico) {
+		$this->opLogico = $opLogico;
+	}
+
+	public function setTipoFiltro($tipoFiltro) {
+		$this->tipoFiltro = $tipoFiltro;
+	}
+
 }
 ?>

@@ -80,13 +80,13 @@ if($_POST['upload_form'] && $_POST['upload_codigo'] && $_POST['upload_campo']){
         $upFile = $TUpload->uploadFile($idCampo,$file);
         if($upFile){
 
-            $dbo_kernelsys = new TDbo_kernelsys('forms');
+            $dbo_kernelsys = new TKrs('forms');
             $critForm = new TCriteria();
             $critForm->add(new TFilter('id','=',$idForm));
             $retForm = $dbo_kernelsys->select('entidade',$critForm);
             $form = $retForm->fetchObject();
 
-            $dbo_kernelsys = new TDbo_kernelsys('tabelas');
+            $dbo_kernelsys = new TKrs('tabelas');
             $critEntidade = new TCriteria();
             $critEntidade->add(new TFilter('id','=',$form->entidade));
             $retEntidade = $dbo_kernelsys->select('tabela',$critEntidade);

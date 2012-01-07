@@ -195,6 +195,8 @@ class fileMap{
 		$this->classes[180] = '../../classes/app.access/TSetlogin.class.php';
 		$this->classes[181] = '../../classes/app.access/TShowPrivilegios.class.php';
 		$this->classes[182] = '../../classes/app.access/TUsuario.class.php';
+		$this->classes[183] = '../../classes/app.krs/TKrs.class.php';
+		$this->classes[184] = '../../classes/app.krs/TKrsStatement.class.php';
 		
 	}
 	

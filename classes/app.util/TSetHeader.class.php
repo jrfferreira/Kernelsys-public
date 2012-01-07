@@ -166,7 +166,7 @@ class TSetHeader{
             }
 
             //Objeto DBO
-            $this->dboKs = new TDbo_kernelsys();
+            $this->dboKs = new TKrs();
 
                 $this->dboKs->setEntidade('forms');
                     $criteriaForm = new TCriteria();
@@ -260,7 +260,7 @@ class TSetHeader{
             }
 
             //Objeto DBO
-            $this->dboKs = new TDbo_kernelsys();
+            $this->dboKs = new TKrs();
 
             //Informações da listagem
             $this->dboKs->setEntidade('lista_form');
