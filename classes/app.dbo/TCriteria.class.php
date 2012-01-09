@@ -41,7 +41,7 @@ class TCriteria extends TExpression{
      * método dump()
      *  retorna a expressão final
      */
-    public function dump(){
+    public function dump($formatXml = false){
 
         // concatena a lista de expressães
         if(is_array($this->expressions)){
@@ -55,7 +55,7 @@ class TCriteria extends TExpression{
                 foreach($expression as $obExp){
                     // concatena o operador com a respectiva expressão
                     $result .=  ' '.$operator.' '.$obExp->dump().' ';
-                    $operator = $obExp->opLogico;
+                    $operator = strtolower($obExp->opLogico);
                 }
                 $result .= ') ';
 
@@ -68,7 +68,7 @@ class TCriteria extends TExpression{
                 $result = NULL;
             }
 
-            $group = is_array($groups) ? implode('AND', $groups) : $groups;
+            $group = is_array($groups) ? implode('and', $groups) : $groups;
 
             $resultExp = trim($group);
             return "{$resultExp}";

@@ -14,6 +14,11 @@ class TKrs {
 	private $table;
 	private $tableName;
 	
+	public function __construct($table = null){
+		if(!empty($table)){
+			$this->loadXmlTable($table);
+		}
+	}
 	protected function formatName($name){
 		$nameArray = explode('_',$name);
 		if(is_array($nameArray)){
@@ -30,12 +35,6 @@ class TKrs {
 	
 	}
 	
-	public function __construct($table = null){
-		if(!empty($table)){
-			$this->loadXmlTable($table);
-		}
-	}
-	
 	public function select($rows,$tCriteria = null){
 		
 		if($rows == '*'){
@@ -45,7 +44,7 @@ class TKrs {
 		}
 		$filter = array();
 		if(is_object($tCriteria)){
-			$expressionsList = $tCriteria->drop();
+			/* $expressionsList = $tCriteria->drop();
 			
 			 foreach($expressionsList as $group){
 				foreach($group as $expression){
@@ -57,8 +56,9 @@ class TKrs {
 			
 			$filterString = implode(' or ', $filter);
 			$filterString = "kernelsys/{$this->formatName($this->tableName)}/row[{$filterString}]";
-			$filterString = "kernelsys/{$this->formatName($this->tableName)}/row[".strtolower($tCriteria->dump())."]";
-			$filterString = preg_replace('@\'@', '', $filterString);
+			 */
+			$filterString = "//kernelsys/{$this->formatName($this->tableName)}/row[".$tCriteria->dump(true)."]";
+
 			$xpath = new DOMXPath($this->table);
 			
 			$rows = $xpath->query($filterString);

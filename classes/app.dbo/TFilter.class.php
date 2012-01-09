@@ -95,10 +95,30 @@ class TFilter extends TExpression{
      * método dump()
      *  retorna o filtro em forma de expressão
      */
-    public function dump() {
+    
+    private function formatName($name){
+    	$nameArray = explode('_',$name);
+    	if(is_array($nameArray)){
+    		foreach($nameArray as $i=>$n){
+    			$nameArray[$i] = ucfirst($n);
+    		}
+    		$name = implode('',$nameArray);
+    	}
+    	
+    	$first = strtolower(substr($name,0,1));
+    	$others = substr($name,1);
+    	$name = $first . $others;
+    	return $name;
+    }
+    
+    public function dump($formatXml = false) {
         // concatena a expressão
-        return "{$this->variable} {$this->operator} {$this->value}";
-
+        if($formatXml){
+        	$variable = $this->formatName($this->variable);
+        }else{
+        	$variable = $this->variable;
+        }
+        return "{$variable} {$this->operator} {$this->value}";
     }
     
 	public function getVariable() {

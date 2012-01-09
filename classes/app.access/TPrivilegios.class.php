@@ -174,7 +174,7 @@ class TPrivilegios {
             $dbo = new TKrs('forms');
             $crit = new TCriteria();
             $crit->add(new TFilter('idlista','=','0'),'AND');
-            $crit->setProperty('not exists','(select form from menu_modulos where menu_modulos.form = forms.id)');
+           // $crit->setProperty('not exists','(select form from menu_modulos where menu_modulos.form = forms.id)');
             $retDbo = $dbo->select('*',$crit);
 
             $obMenu = new TElement("div");

@@ -13,9 +13,6 @@ function __autoload($classe){
 
 	//Instancia manipulador de sessão
 	$obsession = new TSession();
-	$patchDB   = $obsession->getValue('pathDB');
-
-$param = $_POST;
 
 		TTransaction::open($patchDB);
 		
