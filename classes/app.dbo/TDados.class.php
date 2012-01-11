@@ -45,22 +45,23 @@ class TDados {
     private function setRelations($idForm) {
 
         try {
-            //inicia uma transação com a camada de dados
-            TTransaction::open('../'.TOccupant::getPath().'app.config/krs');
 
-            if($conn = TTransaction::get()) {
-
-                $sqlEntyts = "SELECT * FROM form_x_tabelas as t1 INNER JOIN tabelas as t2 ON t1.tabelaid=t2.id WHERE t1.formid='".$idForm."' and t1.ativo='1'";
-                $exeQuery = $conn->Query($sqlEntyts);
-
+                $tKrs = new TKrs('form_x_tabelas');
+                $criterio = new TCriteria();
+                $criterio->add(new TFilter('formid','=',$idForm));
+                $criterio->add(new TFilter('ativo','=','1'));
+                $formTables = $tKrs->select('*',$criterio);
+                	
+                $tKrs->setEntidade('tabelas');
+                $criterioTabela = new TCriteria();
+                while($ft = $formTables->fetchObject()){
+                	$criterioTabela->add(new TFilter('id','=',$ft->tabelaid),'OR');
+                }
+                $exeQuery = $tKrs->select('*',$criterioTabela);
+                
                 while($listEntidades = $exeQuery->fetchObject()) {
                     $this->entidades[$listEntidades->tabela] = $listEntidades->tabela;
                 }
-                TTransaction::close();
-            }
-            else {
-                throw new ErrorException("Transação inválida");
-            }
 
         }catch (Exception $e) {
             new setException($e);

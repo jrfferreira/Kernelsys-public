@@ -31,8 +31,19 @@ class TKrs {
 		$first = strtolower(substr($name,0,1));
 		$others = substr($name,1);
 		$name = $first . $others;
-		return $name;
+		return $name;	
+	}
 	
+	protected function reverseFormatName($name){
+		$name = preg_replace('/([A-Z])/', '_\1', $name);
+		$name = strtolower($name);
+		if(is_array($nameArray)){
+			foreach($nameArray as $i=>$n){
+				$nameArray[$i] = strtolower($n);
+			}
+			$name = implode('_',$nameArray);
+		}
+		return $name;	
 	}
 	
 	public function select($rows,$tCriteria = null){
@@ -44,20 +55,12 @@ class TKrs {
 		}
 		$filter = array();
 		if(is_object($tCriteria)){
-			/* $expressionsList = $tCriteria->drop();
 			
-			 foreach($expressionsList as $group){
-				foreach($group as $expression){
-					if($expression->getOperator() == '='){
-						$filter[] = "{$this->formatName($expression->getVariable())}={$expression->getValue()}";
-					}
-				}
+			$dump = $tCriteria->dump(true);
+			if(strlen($dump) > 0){
+				$dump= "[{$dump}]";
 			}
-			
-			$filterString = implode(' or ', $filter);
-			$filterString = "kernelsys/{$this->formatName($this->tableName)}/row[{$filterString}]";
-			 */
-			$filterString = "//kernelsys/{$this->formatName($this->tableName)}/row[".$tCriteria->dump(true)."]";
+			$filterString = "//kernelsys/{$this->formatName($this->tableName)}/row{$dump}";
 
 			$xpath = new DOMXPath($this->table);
 			
@@ -78,7 +81,7 @@ class TKrs {
 				$column =  $row->childNodes->item($n);
 				if($column->nodeName != '#text' && ($rowsRequired === true || array_search($column->nodeName, $rowsRequired) !== false)){
 					if($column->nodeName != '#text'){
-						$response[$i][$column->nodeName] = $column->nodeValue;
+						$response[$i][$this->reverseFormatName($column->nodeName)] = $column->nodeValue;
 					}
 				}
 			}

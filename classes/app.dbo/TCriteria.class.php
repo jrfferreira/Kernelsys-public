@@ -54,7 +54,7 @@ class TCriteria extends TExpression{
                 $result = ' (';
                 foreach($expression as $obExp){
                     // concatena o operador com a respectiva expressão
-                    $result .=  ' '.$operator.' '.$obExp->dump().' ';
+                    $result .=  ' '.$operator.' '.$obExp->dump($formatXml).' ';
                     $operator = strtolower($obExp->opLogico);
                 }
                 $result .= ') ';
