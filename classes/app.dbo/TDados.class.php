@@ -60,7 +60,7 @@ class TDados {
                 }
                 
                 if(!$tableExists){
-                	throw new ErrorException(TMensagem::ERRO_VINCULO_TABELA_NAO_ENCONTRADO, 1);
+                	throw new ErrorException(TMensagem::ERRO_VINCULO_TABELA_NAO_ENCONTRADO, 2);
                 }
                 
                 $exeQuery = $tKrs->select('*',$criterioTabela);
