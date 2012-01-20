@@ -1063,5 +1063,11 @@
       <tabelaid>26</tabelaid>
       <ativo>1</ativo>
     </row>
+    <row id="207">
+      <id>207</id>
+      <formid>450</formid>
+      <tabelaid>103</tabelaid>
+      <ativo>1</ativo>
+    </row>
   </formXTabelas>
 </kernelsys>

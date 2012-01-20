@@ -2425,18 +2425,6 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
-    <row id="81">
-      <id>81</id>
-      <blocoid>contratos</blocoid>
-      <nomebloco>Contratos e Convênioa</nomebloco>
-      <formato>frm</formato>
-      <entidade>39</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>30</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
     <row id="82">
       <id>82</id>
       <blocoid>usuarios</blocoid>
@@ -3087,6 +3075,18 @@
       <obapendice></obapendice>
       <idform>&#13;
 </idform>
+    </row>
+    <row id="81">
+      <id>81</id>
+      <blocoid>contratos</blocoid>
+      <nomebloco>Contratos e Convênios</nomebloco>
+      <formato>frm</formato>
+      <entidade>39</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>30</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
     </row>
   </blocos>
 </kernelsys>

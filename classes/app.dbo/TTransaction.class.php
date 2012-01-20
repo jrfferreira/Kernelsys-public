@@ -42,16 +42,12 @@ final class TTransaction{
            }else{
            		$conexao = TConnection::open($database);
            		self::$conn = $conexao;
-           		
-           		/*$obsession->setValue($pathchave, $conexao);
-           		
-           		$var =  $_SESSION;*/
            }
            
                 // inicia a transação
-                if(self::$conn and !self::$conn->InTransaction()){
+                //if(self::$conn and !self::$conn->InTransaction()){
                 	self::$conn->beginTransaction();
-                }
+                //}
                 // desliga o log de SQL
                 self::$logger = NULL;
            

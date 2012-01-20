@@ -45,7 +45,7 @@ class TDados {
     private function setRelations($idForm) {
 
         try {
-
+        		$tableExists = false;
                 $tKrs = new TKrs('form_x_tabelas');
                 $criterio = new TCriteria();
                 $criterio->add(new TFilter('formid','=',$idForm));
@@ -55,8 +55,14 @@ class TDados {
                 $tKrs->setEntidade('tabelas');
                 $criterioTabela = new TCriteria();
                 while($ft = $formTables->fetchObject()){
+                	$tableExists = true;
                 	$criterioTabela->add(new TFilter('id','=',$ft->tabelaid),'OR');
                 }
+                
+                if(!$tableExists){
+                	throw new ErrorException(TMensagem::ERRO_VINCULO_TABELA_NAO_ENCONTRADO, 1);
+                }
+                
                 $exeQuery = $tKrs->select('*',$criterioTabela);
                 
                 while($listEntidades = $exeQuery->fetchObject()) {

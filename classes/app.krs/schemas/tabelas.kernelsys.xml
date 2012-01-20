@@ -571,14 +571,6 @@
       <ativo>1</ativo>
       <colunafilho>codigolivro</colunafilho>
     </row>
-    <row id="65">
-      <id>65</id>
-      <tabela>dbtransacoes_contas</tabela>
-      <tabelaView>view_transacoes_contas</tabelaView>
-      <tabpai>dbtransacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoconta</colunafilho>
-    </row>
     <row id="67">
       <id>67</id>
       <tabela>dbtransacoes_produtos</tabela>
@@ -659,14 +651,6 @@
       <ativo>1</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="103">
-      <id>103</id>
-      <tabela>dbtransacoes_convenios</tabela>
-      <tabelaView>view_transacoes_convenios</tabelaView>
-      <tabpai>dbtransacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
     <row id="104">
       <id>104</id>
       <tabela>dbturmas_convenios</tabela>
@@ -699,6 +683,14 @@
       <ativo>1</ativo>
       <colunafilho></colunafilho>
     </row>
+    <row id="65">
+      <id>65</id>
+      <tabela>dbtransacoes_contas</tabela>
+      <tabelaView>view_transacoes_contas</tabelaView>
+      <tabpai>dbtransacoes</tabpai>
+      <ativo>1</ativo>
+      <colunafilho>codigotransacaoconta</colunafilho>
+    </row>
     <row id="106">
       <id>106</id>
       <tabela>dbavaliacoes</tabela>
@@ -730,6 +722,14 @@
       <tabpai>-</tabpai>
       <ativo>1</ativo>
       <colunafilho></colunafilho>
+    </row>
+    <row id="103">
+      <id>103</id>
+      <tabela>dbtransacoes_convenios</tabela>
+      <tabelaView>view_transacoes_convenios</tabelaView>
+      <tabpai>dbtransacoes</tabpai>
+      <ativo>1</ativo>
+      <colunafilho>codigo</colunafilho>
     </row>
   </tabelas>
 </kernelsys>
