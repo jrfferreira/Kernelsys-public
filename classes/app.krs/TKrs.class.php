@@ -68,9 +68,7 @@ class TKrs {
 			
 		}else{		
 			$rows = $this->table->getElementsByTagName('row');
-		}
-		
-		
+		}		
 		
 		$response = array();
 		//foreach($rows as $i => $row){

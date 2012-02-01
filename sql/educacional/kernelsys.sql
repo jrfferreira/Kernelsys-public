@@ -4563,7 +4563,6 @@ INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (84
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (853, 'addItems', 'select codigo,nome_razaosocial from dbpessoas', 1, 902);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (829, 'disabled', 'true', 1, 881);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (829, 'setSize', '90', 1, 880);
-INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (841, 'addItems', '0 => Aleatório; 1 => Custom_petrus;2 => Eggplant;3 => Redmond;4 => Ui-lightness;5 => Black-tie;6 => Sunny;7 => Pepper-grinder;8 => Dot-luv;9 => Ui-tolook;10 => Blitzer;11 => Petrusedu;12 => Petrusedu_alternate;13 => Bluestyle;14 => Flick;15 => Humanity;16 => Overcast;17 => Bluetzer;18 => Fibratec;19 => Remake_bluetzer;20 => South-street;21 => Cupertino;22 => Petrus;', 1, 882);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (854, 'addItems', 'select codigo,nomeConta from  dbplano_contas', 1, 901);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (170, 'setProperty', 'disabled;disabled', 1, 1000);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (174, 'addItems', 'Dinheiro=>Dinheiro;Cheque=>Cheque;Cartão=>Cartão', 1, 152);
@@ -4718,6 +4717,7 @@ INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (97
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (974, 'setAction', 'setAbandonoCurso($(''#codigoaluno_processo'').val())', 1, 1142);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (975, 'setAction', 'setDestrancamentoMatricula($(''#codigoaluno_processo'').val())', 1, 1143);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (976, 'setAction', 'setTrancamentoCurso($(''#codigoaluno_processo'').val())', 1, 1144);
+INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (841, 'addItems', '0=>Aleatório;1=>Custom_petrus;2=>Eggplant;3=>Redmond;4=>Ui-lightness;5=>Black-tie;6=>Sunny;7=>Pepper-grinder;8=>Dot-luv;9=>Ui-tolook;10=>Blitzer;11=>Petrusedu;12=>Petrusedu_alternate;13=>Bluestyle;14=>Flick;15=>Humanity;16=>Overcast;17=>Bluetzer;18=>Fibratec;19=>Remake_bluetzer;20=>South-street;21=>Cupertino;22=>Petrus;', 1, 882);
 
 
 --

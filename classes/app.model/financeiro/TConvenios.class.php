@@ -180,12 +180,12 @@ class TConvenios{
      * 
      * @param $codigoConta
      */
-    public function getTextoConvenios($arrayConvenios, $valorConta = 0) {
+    public function getTextoConvenios($arrayConvenios, $obConta = null) {
         $texto = 'Descontos não informados';
         $tConvenios = new TConvenios();
         $descontos = null;
         if(is_array($arrayConvenios)){
-        foreach ($arrayConvenios as $codigoconvenio) {
+        foreach ($arrayConvenios as $codigoConvenio) {
         	$dboConvenio = new TDbo_out('14303-1','dbconvenios');
         	$critConvenio = new TCriteria();
         	$critConvenio->add(new TFilter('codigo', '=', $codigoConvenio));
@@ -217,13 +217,19 @@ class TConvenios{
             $endKey = end($espelho);
             $endKey = key($espelho);          
             
-            
+        if(is_string($obConta)){
+        	$valorConta = $obConta;
+        }else{
+        	$valorConta = $obConta->valorreal;
+            $dt = explode("-", $obConta->vencimento);
+            $mesVencimento = "/". $dt[1] . "/" . $dt[0];
+        }
         $prev = null;
         $texto = null;
         if(count($descontos)) {
             foreach ($descontos as $ch => $vl) {
     
-                $valorCheio = number_format(($valorConta - $descontoInicial), 2, ',', '.');
+                $valorCheio = number_format(($obConta->valorreal - $descontoInicial), 2, ',', '.');
                 $valorAtual = $valorCheio - $vl;
                 if ($valorAtual <= 0) {
                     $valorAtual = 0;
@@ -231,13 +237,13 @@ class TConvenios{
     
                 $valorAtual = number_format($valorAtual, 2, ',', '.');
                 if($prev) {
-                    $texto .= "Pagamento de {$prev}/{$mesVencimento} a {$ch}/{$mesVencimento} - R$ {$valorAtual} ;" . '<br/>';
+                    $texto .= "Pagamento de {$prev}{$mesVencimento} a {$ch}/{$mesVencimento} - R$ {$valorAtual} ;" . '<br/>';
                 } else {
-                    $texto .= "Pagamento até {$ch}/{$mesVencimento} .................... - R$ {$valorAtual} ;" . '<br/>';
+                    $texto .= "Pagamento até {$ch}{$mesVencimento} .................... - R$ {$valorAtual} ;" . '<br/>';
                 }
                 
                 if($descontoInicial && ($ch == $endKey)){   
-                    $texto .= "Pagamento após {$ch}/{$mesVencimento} ................. - R$ {$valorCheio} (+ juros e multas se aplicável);" . '<br/>';              
+                    $texto .= "Pagamento após {$ch}{$mesVencimento} ................. - R$ {$valorCheio} (+ juros e multas se aplicável);" . '<br/>';              
                 }
                 
                 $prev = $ch + 1;
