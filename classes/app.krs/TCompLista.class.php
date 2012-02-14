@@ -28,7 +28,7 @@ class TCompLista {
         //=========================================================
         
         //Abre conexão com o BD de Registro Kernelsys
-        $this->dboKs = new TDbo_kernelsys();
+        $this->dboKs = new TKrs();
 
         $this->idLista = $idLista;
 
@@ -36,40 +36,45 @@ class TCompLista {
         $this->obsession = new TSession();
         $this->editable = $this->obsession->getValue('statusViewForm');
 
-        //inicia uma transação com a camada de dados
-        TTransaction::open('../'.TOccupant::getPath().'app.config/krs');        
-        $this->conn = TTransaction::get();             
         
-        if ($this->conn) {//testa a conexão com o banco de dados
-            if ($this->idLista != "") {
-
-                //Informações da listagem
-                $sqlLista = "SELECT * FROM lista_form WHERE id='" . $this->idLista . "' and ativo='1'";
-                $RetLista = $this->conn->query($sqlLista);
-                $this->listaInfo = $RetLista->fetchObject();
+            if ($this->idLista != "") {                
+                $tKrs = new TKrs('lista_form');
+                $crit = new TCriteria();
+                $crit->add(new TFilter('id','=',$this->idLista));
+                $crit->add(new TFilter('ativo','=','1'));
+                $crit->setProperty('order', 'id');
+                $retLista = $tKrs->select('*',$crit);
+                
+                $this->listaInfo = $retLista->fetchObject();
 
                 $this->idForm = $this->listaInfo->forms_id;
-
-                //Verifica tabela de destino do bloco
-                $sqlTabela = "SELECT * FROM tabelas WHERE id='" . $this->listaInfo->entidade . "' order by id";
-                $retTab = $this->conn->query($sqlTabela);
+                
+                $tKrs = new TKrs('tabelas');
+                $crit = new TCriteria();
+                $crit->add(new TFilter('id','=',$this->listaInfo->entidade));
+                $crit->setProperty('order', 'id');
+                $retTab = $tKrs->select('*',$crit);
+                
                 $this->obTabela = $retTab->fetchObject();
 
                 $setEntidade = $this->obTabela->tabela_view;
 
                 //retorna ações a serem incluidas na barra de navegação da lista
-                $dboBarraAction = new TDbo_kernelsys('lista_bnav');
+                $dboBarraAction = new TKrs('lista_bnav');
 	                $criterioBarraAction = new TCriteria();
 	                $criterioBarraAction->add(new TFilter('lista_form_id', '=', $this->idLista));
                 $retBarraAction = $dboBarraAction->select('*', $criterioBarraAction);
                 while ($obBarraAction = $retBarraAction->fetchObject()) {
                     $this->actionsBarraNav[$obBarraAction->id] = $obBarraAction;
-                }          
-
-                //retorna ações da lista
-                $sqlAction = "SELECT * FROM lista_actions WHERE idlista='" . $this->listaInfo->id . "' and ativo='1' order by ordem";
-                $retAction = $this->conn->Query($sqlAction);                
-
+                }                     
+                
+                $tKrs = new TKrs('lista_actions');
+                $crit = new TCriteria();
+                $crit->add(new TFilter('idlista','=',$this->listaInfo->id));
+                $crit->add(new TFilter('ativo','=','1'));
+                $crit->setProperty('order', 'ordem');
+                $retAction = $tKrs->select('*',$crit);
+                
                 while ($obAct = $retAction->fetchObject()) {
                     $obAct->title = $obAct->label;
                     $obAct->alt = $obAct->label;
@@ -80,12 +85,15 @@ class TCompLista {
                 //Retorna os campos para aplicar na lista
                 $this->getListaCampo($this->conn, $this->listaInfo->id);
 
-                # instancia objetos colunas da lista
-                $sqlCols = "SELECT * FROM lista_colunas WHERE lista_form_id='" . $this->listaInfo->id . "' and ativo='1' order by ordem";
-                $RetCols = $this->conn->Query($sqlCols);
-
+                $tKrs = new TKrs('lista_colunas');
+                $crit = new TCriteria();
+                $crit->add(new TFilter('lista_form_id','=',$this->listaInfo->id));
+                $crit->add(new TFilter('ativo','=','1'));
+                $crit->setProperty('order', 'ordem');
+                $retCols = $tKrs->select('*',$crit);
+                                
                 //percorre colunas da listagem \\
-                while($colsInfo = $RetCols->fetchObject()) {
+                while($colsInfo = $retCols->fetchObject()) {
 
                     $colsInfo->coluna = strtolower($colsInfo->coluna);
                     $this->colunas[$colsInfo->coluna] = $colsInfo;
@@ -111,7 +119,6 @@ class TCompLista {
             }
             /***********************************************************/
             
-        }
         
         // mantem objeto conteiner de retorno das açães da lista
         $this->pane = $paneRet;
@@ -202,11 +209,15 @@ class TCompLista {
     * Retorna Os campos a serem inseridos na listagem.
     */
     private function getListaCampo($conn, $idLista){
-            
-      //retorna ações da lista
-      $sqlAcao = "SELECT * FROM lista_fields WHERE idlista='" . $idLista . "' and ativo='1' order by ordem";
-      $retAcao = $conn->Query($sqlAcao);
-
+                  
+      $tKrs = new TKrs('lista_fields');
+      $crit = new TCriteria();
+      $crit->add(new TFilter('idlista','=',$idLista));
+      $crit->add(new TFilter('ativo','=','1'));
+      $crit->setProperty('order', 'ordem');
+      $retAcao = $tKrs->select('*',$crit);
+      
+      
         while ($obAct = $retAcao->fetchObject()) {
           $obAct->title = $obAct->label;
           $obAct->alt = $obAct->label;

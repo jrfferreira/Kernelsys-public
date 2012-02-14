@@ -21,7 +21,7 @@ class TCloneForm {
     private $clones = 1;
 
     function __construct() {
-        $this->dbok = new TDbo_kernelsys();
+        $this->dbok = new TKrs();
     }
 
 

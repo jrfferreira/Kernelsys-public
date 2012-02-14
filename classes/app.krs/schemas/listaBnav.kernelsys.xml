@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <listaBnav>
+    <row id="1">
+      <id>1</id>
+      <listaFormId>144</listaFormId>
+      <nome>botContaCredito</nome>
+      <tipocampo>TButton</tipocampo>
+      <label> Contas a Receber </label>
+      <metodo>onNew</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>13</argumento>
+    </row>
+    <row id="2">
+      <id>2</id>
+      <listaFormId>144</listaFormId>
+      <nome>botContaDebito</nome>
+      <tipocampo>TButton</tipocampo>
+      <label> Contas a Pagar </label>
+      <metodo>onNew</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>333</argumento>
+    </row>
+    <row id="3">
+      <id>3</id>
+      <listaFormId>144</listaFormId>
+      <nome>botMovimentoProgramado</nome>
+      <tipocampo>TButton</tipocampo>
+      <label> Movimentos Programados </label>
+      <metodo>onFormOpen</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>383</argumento>
+    </row>
+    <row id="4">
+      <id>4</id>
+      <listaFormId>391</listaFormId>
+      <nome>botMovInterna</nome>
+      <tipocampo>TButton</tipocampo>
+      <label>Movimentação Interna</label>
+      <metodo>onFormOpen</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>404</argumento>
+    </row>
+  </listaBnav>
+</kernelsys>

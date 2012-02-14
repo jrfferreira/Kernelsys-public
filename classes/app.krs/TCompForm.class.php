@@ -41,7 +41,7 @@ class TCompForm {
             //==================================================================
 
         //inicia uma transação com a camada de dados do form
-        $this->obKDbo = new TDbo_kernelsys();
+        $this->obKDbo = new TKrs();
 
         $this->obKDbo->setEntidade('campos_x_blocos');
             $criteriaCamposBlocos = new TCriteria();
@@ -337,11 +337,13 @@ class TCompForm {
                     }
 
                     //armazena valor padrão em base de dados atravez dos paramentos do campo
-                    $dboVPad = new TDbo($dadosCampo->entidade);
-                    $cretiriaVpad = new TCriteria();
-                    $cretiriaVpad->add(new TFilter('codigo','=',$dadosCampo->codigoregistro));
-                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
-
+                    if(!empty($dadosCampo->entidade)){
+	                    $dboVPad = new TDbo($dadosCampo->entidade);
+	                    $cretiriaVpad = new TCriteria();
+	                    $cretiriaVpad->add(new TFilter('codigo','=',$dadosCampo->codigoregistro));
+	                    $cretiriaVpad->add(new TFilter($dadosCampo->colunadb,'is','null'));
+	                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
+                    }
 
                     //converte datas para o padrão internacional
                     $obMascara = new TSetMascaras();

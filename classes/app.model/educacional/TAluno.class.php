@@ -20,7 +20,6 @@ class TAluno {
      * param <type> $codigoaluno
      */
     public function getAluno($codigoaluno) {
-
         try {
             if ($codigoaluno) {
                 $this->obTDbo->setEntidade(TConstantes::VIEW_PESSOAS_ALUNOS);

@@ -387,13 +387,13 @@ class TUsuario {
 	public function execCreatePassword($usuario, $new_pass, $confirm) {
 		if ($this->createPassword($usuario, $new_pass, $confirm)) {
 			$div = new TElement('div');
-			$div-> class = 'ui-widget-content ui-state-highlight ui-corner-all';
+			$div->class = 'ui-widget-content ui-state-highlight ui-corner-all';
 			$div->style = "text-align: center; vertical-align: middle; padding: 10px; font-size: 25px";
 			$div->add('<h3>Senha alterada com sucesso.</h3>');
 			return $div;
 		} else {
 			$div = new TElement('div');
-			$div-> class = 'ui-widget-content ui-state-error ui-corner-all';
+			$div->class = 'ui-widget-content ui-state-error ui-corner-all';
 			$div->style = "text-align: center; vertical-align: middle; padding: 10px; font-size: 25px";
 			$div->add('<h3>Erro na alteração, verifique as senhas passadas.</h3>');
 			return $div;
@@ -404,13 +404,13 @@ class TUsuario {
 	public function execChangePassword($usuario, $old_pass, $new_pass, $confirm) {
 		if ($this->changePassword($usuario, $old_pass, $new_pass, $confirm)) {
 			$div = new TElement('div');
-			$div-> class = 'ui-widget-content ui-state-highlight ui-corner-all';
+			$div->class = 'ui-widget-content ui-state-highlight ui-corner-all';
 			$div->style = "text-align: center; vertical-align: middle; padding: 10px; font-size: 25px";
 			$div->add('<h3>Senha alterada com sucesso.</h3>');
 			return $div;
 		} else {
 			$div = new TElement('div');
-			$div-> class = 'ui-widget-content ui-state-error ui-corner-all';
+			$div->class = 'ui-widget-content ui-state-error ui-corner-all';
 			$div->style = "text-align: center; vertical-align: middle; padding: 10px; font-size: 25px";
 			$div->add('<h3>Erro na alteração, verifique as senhas passadas.</h3>');
 			return $div;
@@ -427,7 +427,7 @@ class TUsuario {
 
 		$obFieds = new TSetfields();
 		$content = new TElement('div');
-		$content-> class = "ui_bl_content";
+		$content->class = "ui_bl_content";
 
 		if ($obSenha->senha) {
 			$obFieds->geraCampo("Senha antiga:", 'old_Password', "TPassword", '');

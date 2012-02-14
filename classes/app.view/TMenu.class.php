@@ -30,7 +30,7 @@ class TMenu {
         $conteiner->height      = "100%";
 
         //inicia uma transação com a camada de dados do form
-        $this->obKDbo = new TDbo_kernelsys();
+        $this->obKDbo = new TKrs();
 
         $criteriaModulosPriv = new TCriteria();
 

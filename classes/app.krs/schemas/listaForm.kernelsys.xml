@@ -1,0 +1,4716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <listaForm>
+    <row id="228">
+      <id>228</id>
+      <tipo>form</tipo>
+      <formsId>79</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutosTurma</lista>
+      <label>Turmas</label>
+      <entidade>11</entidade>
+      <listapai>228</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="130">
+      <id>130</id>
+      <tipo>form</tipo>
+      <formsId>1</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaClientes</lista>
+      <label>Clientes</label>
+      <entidade>1</entidade>
+      <listapai>130</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>cliente/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>nome_razaosocial/asc;email1</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="449">
+      <id>449</id>
+      <tipo>form</tipo>
+      <formsId>448</formsId>
+      <filtropai>codigoconvenio</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>lsitaDescontos</lista>
+      <label>Descontos</label>
+      <entidade>102</entidade>
+      <listapai>321</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>dialimite/asc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="381">
+      <id>381</id>
+      <tipo>form</tipo>
+      <formsId>380</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>1</pesquisa>
+      <lista>listaCheques</lista>
+      <label>Cheques</label>
+      <entidade>95</entidade>
+      <listapai>381</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="443">
+      <id>443</id>
+      <tipo>form</tipo>
+      <formsId>428</formsId>
+      <filtropai>codigoaluno</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaADisciplinasAproveitamento</lista>
+      <label>Disciplinas</label>
+      <entidade>56</entidade>
+      <listapai>443</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="382">
+      <id>382</id>
+      <tipo>form</tipo>
+      <formsId>389</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentosProgramadosC</lista>
+      <label>Movimentos de crédito programados</label>
+      <entidade>21</entidade>
+      <listapai>382</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C;statusmovimento/=/AND/3;codigofuncionario/=/AND/TUsuario/getCodigoFuncionario</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="445">
+      <id>445</id>
+      <tipo>form</tipo>
+      <formsId>444</formsId>
+      <filtropai>codigoaluno</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>faltas</lista>
+      <label>Faltas</label>
+      <entidade>25</entidade>
+      <listapai>445</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/F</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="388">
+      <id>388</id>
+      <tipo>form</tipo>
+      <formsId>390</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentosProgramadosD</lista>
+      <label>Movimentos de débitos programados</label>
+      <entidade>21</entidade>
+      <listapai>388</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/D;statusmovimento/=/AND/3;codigofuncionario/=/AND/TUsuario/getCodigoFuncionario</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="226">
+      <id>226</id>
+      <tipo>pesq</tipo>
+      <formsId>61</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoturmadisciplina=codigo,obs=codigo</pesquisa>
+      <lista>pesqTurmaDisciplina</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>226</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="172">
+      <id>172</id>
+      <tipo>pesq</tipo>
+      <formsId>6</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigofuncionario=codigofuncionario&gt;nomefuncionario</pesquisa>
+      <lista>listaPesqFuncionarios</lista>
+      <label>Funcionários</label>
+      <entidade>14</entidade>
+      <listapai>172</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="146">
+      <id>146</id>
+      <tipo>pesq</tipo>
+      <formsId>11</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,valorpago=valorreal,vencimento=vencimento</pesquisa>
+      <lista>listaPesqCDebito</lista>
+      <label>Contas a Pagar</label>
+      <entidade>65</entidade>
+      <listapai>146</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipomovimentacao/=/AND/D;statusconta/=/AND/1;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="321">
+      <id>321</id>
+      <tipo>form</tipo>
+      <formsId>320</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaConvenios</lista>
+      <label>Convênios</label>
+      <entidade>89</entidade>
+      <listapai>321</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo convênio</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="335">
+      <id>335</id>
+      <tipo>form</tipo>
+      <formsId>332</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>pessoasCaixa</lista>
+      <label>Funcionários Caixa</label>
+      <entidade>94</entidade>
+      <listapai>335</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger>&#13;
+</trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="319">
+      <id>319</id>
+      <tipo>form</tipo>
+      <formsId>193</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listlivrosDisponiveis</lista>
+      <label>Livros Disponíveis</label>
+      <entidade>76</entidade>
+      <listapai>315</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigolocador/is/AND/null</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="200">
+      <id>200</id>
+      <tipo>form</tipo>
+      <formsId>59</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listGerenciaTurmas</lista>
+      <label>Gerenciamento de Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>200</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="213">
+      <id>213</id>
+      <tipo>form</tipo>
+      <formsId>72</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>formTransacaoD</lista>
+      <label>Transações a pagar</label>
+      <entidade>66</entidade>
+      <listapai>213</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Gerar Transação</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/D</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="396">
+      <id>396</id>
+      <tipo>form</tipo>
+      <formsId>395</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinasTurma</lista>
+      <label>Disciplinas</label>
+      <entidade>10</entidade>
+      <listapai>395</listapai>
+      <obapendice>TTurma/buttonAddTurmaDisciplina</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigocurso/=/AND/TTurma/getCodigoCurso/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="394">
+      <id>394</id>
+      <tipo>form</tipo>
+      <formsId>393</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>8</entidade>
+      <listapai>394</listapai>
+      <obapendice>TCurso/buttonAddCursoDisciplina</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="398">
+      <id>398</id>
+      <tipo>form</tipo>
+      <formsId>397</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>discsPlanoAul</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>398</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigoprofessor/=/AND/TUsuario/getCodigoProfessor</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="402">
+      <id>402</id>
+      <tipo>form</tipo>
+      <formsId>399</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>discOrienArq</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>402</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigoprofessor/=/AND/TUsuario/getCodigoProfessor</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="331">
+      <id>331</id>
+      <tipo>form</tipo>
+      <formsId>328</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>alunoListaLivros</lista>
+      <label>Livros </label>
+      <entidade>76</entidade>
+      <listapai>331</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="391">
+      <id>391</id>
+      <tipo>form</tipo>
+      <formsId>392</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>consolidacaoCaixa</lista>
+      <label>Consolidação de Caixa</label>
+      <entidade>21</entidade>
+      <listapai>391</listapai>
+      <obapendice>TCaixa/viewCalcCaixaConsolidacao</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statusmovimento/=/OR/1;statusmovimento/=/OR/2;</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="218">
+      <id>218</id>
+      <tipo>form</tipo>
+      <formsId>75</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutos</lista>
+      <label>Produtos</label>
+      <entidade>70</entidade>
+      <listapai>218</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Produto</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>label/!=/AND/Taxa de inscrição;tabela/!=/AND/dbturmas;tabela/!=/AND/dbtransacoes_contas;</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="410">
+      <id>410</id>
+      <tipo>form</tipo>
+      <formsId>405</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>sec-relatorioTurma</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>410</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="411">
+      <id>411</id>
+      <tipo>form</tipo>
+      <formsId>406</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>coord-relatorioTurma</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>411</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="412">
+      <id>412</id>
+      <tipo>form</tipo>
+      <formsId>407</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>prof-relatorioTurma</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>412</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="417">
+      <id>417</id>
+      <tipo>form</tipo>
+      <formsId>413</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>1</pesquisa>
+      <lista>discSemelhantes</lista>
+      <label>Disciplinas</label>
+      <entidade>97</entidade>
+      <listapai>417</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="419">
+      <id>419</id>
+      <tipo>form</tipo>
+      <formsId>418</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>historicoCaixa</lista>
+      <label>Históricos de Caixa</label>
+      <entidade>98</entidade>
+      <listapai>419</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>multiple</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="145">
+      <id>145</id>
+      <tipo>pesq</tipo>
+      <formsId>145</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento,codigocontacaixa=codigocontacaixa,multaacrecimo=multaacrecimo,formapag=formapag</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a Receber</label>
+      <entidade>65</entidade>
+      <listapai>145</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1;tipomovimentacao/=/AND/C;statusconta/=/AND/1;statusconta/=/OR/3;statusconta/=/OR/5;</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="184">
+      <id>184</id>
+      <tipo>pesq</tipo>
+      <formsId>4</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigocursoativo=codigo&gt;titulo,codigocurso=codigocurso&gt;nome</pesquisa>
+      <lista>pesqCursos</lista>
+      <label>Cursos</label>
+      <entidade>85</entidade>
+      <listapai>184</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/!=/AND/8;ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="427">
+      <id>427</id>
+      <tipo>form</tipo>
+      <formsId>426</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>anotacoes</lista>
+      <label>Anotações</label>
+      <entidade>99</entidade>
+      <listapai>427</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="166">
+      <id>166</id>
+      <tipo>form</tipo>
+      <formsId>30</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContratos</lista>
+      <label>Contratos e Convênios</label>
+      <entidade>39</entidade>
+      <listapai>166</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="136">
+      <id>136</id>
+      <tipo>form</tipo>
+      <formsId>6</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaFuncionarios</lista>
+      <label>Funcionários</label>
+      <entidade>81</entidade>
+      <listapai>136</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="223">
+      <id>223</id>
+      <tipo>form</tipo>
+      <formsId>77</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDepartamentos</lista>
+      <label>Departamentos</label>
+      <entidade>74</entidade>
+      <listapai>223</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="151">
+      <id>151</id>
+      <tipo>form</tipo>
+      <formsId>17</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasCaixa</lista>
+      <label>Contas Caixa</label>
+      <entidade>24</entidade>
+      <listapai>151</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="167">
+      <id>167</id>
+      <tipo>form</tipo>
+      <formsId>31</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaUsuarios</lista>
+      <label>Usuários</label>
+      <entidade>26</entidade>
+      <listapai>167</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Usuario</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="171">
+      <id>171</id>
+      <tipo>form</tipo>
+      <formsId>33</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaFerias</lista>
+      <label>Férias</label>
+      <entidade>41</entidade>
+      <listapai>171</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="141">
+      <id>141</id>
+      <tipo>form</tipo>
+      <formsId>11</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasDebito</lista>
+      <label>Contas a pagar</label>
+      <entidade>65</entidade>
+      <listapai>141</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipoMovimentacao/=/AND/D;statusConta/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="139">
+      <id>139</id>
+      <tipo>form</tipo>
+      <formsId>9</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDuplicatas</lista>
+      <label>Duplicatas</label>
+      <entidade>17</entidade>
+      <listapai>139</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="140">
+      <id>140</id>
+      <tipo>form</tipo>
+      <formsId>10</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContas</lista>
+      <label>Contas</label>
+      <entidade>18</entidade>
+      <listapai>140</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="147">
+      <id>147</id>
+      <tipo>form</tipo>
+      <formsId>14</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMatricula</lista>
+      <label>Alunos Inscritos</label>
+      <entidade>16</entidade>
+      <listapai>147</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9;codigopessoa/is not/AND/null</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="455">
+      <id>455</id>
+      <tipo>pesq</tipo>
+      <formsId>462</formsId>
+      <filtropai>codigoaluno</filtropai>
+      <pesquisa>codigodisciplina_antiga=codigo&gt;nomedisciplina</pesquisa>
+      <lista>listaDiscAluno</lista>
+      <label>Disciplinas</label>
+      <entidade>56</entidade>
+      <listapai>458</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>situacao/=/AND/2</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="138">
+      <id>138</id>
+      <tipo>form</tipo>
+      <formsId>8</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaInscritos</lista>
+      <label>Inscritos</label>
+      <entidade>16</entidade>
+      <listapai>138</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Inscrição</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9;codigopessoa/is not/AND/null</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="137">
+      <id>137</id>
+      <tipo>form</tipo>
+      <formsId>7</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProfessores</lista>
+      <label>Professores</label>
+      <entidade>15</entidade>
+      <listapai>137</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="205">
+      <id>205</id>
+      <tipo>pesq</tipo>
+      <formsId>66</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>contaorigem=codconta;</pesquisa>
+      <lista>pesqExtornoCredito</lista>
+      <label>Extornar Crédito</label>
+      <entidade>21</entidade>
+      <listapai>205</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipoMovimento/=/AND/D;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="170">
+      <id>170</id>
+      <tipo>pesq</tipo>
+      <formsId>5</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoproduto=codigo</pesquisa>
+      <lista>listaPesqProdutos</lista>
+      <label>Insumos</label>
+      <entidade>11</entidade>
+      <listapai>170</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="227">
+      <id>227</id>
+      <tipo>form</tipo>
+      <formsId>78</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaSolicitacoesEncaminhadas</lista>
+      <label>Solicitações Encaminhadas</label>
+      <entidade>46</entidade>
+      <listapai>227</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigofuncionario/=/AND/TUsuario/getCodigoFuncionario</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="230">
+      <id>230</id>
+      <tipo>form</tipo>
+      <formsId>350</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>blocFormProf</lista>
+      <label>Formação</label>
+      <entidade>43</entidade>
+      <listapai>137</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar></aceditar>
+      <acviews></acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="241">
+      <id>241</id>
+      <tipo>form</tipo>
+      <formsId>86</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listAlunosInativos</lista>
+      <label>Alunos Inativos</label>
+      <entidade>56</entidade>
+      <listapai>241</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/3</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="240">
+      <id>240</id>
+      <tipo>form</tipo>
+      <formsId>85</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTipoCursos</lista>
+      <label>Tipos de curso</label>
+      <entidade>80</entidade>
+      <listapai>240</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro&#13;
+</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="165">
+      <id>165</id>
+      <tipo>pesq</tipo>
+      <formsId>165</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigopessoa=codigo,nomefornecedor=nome_razaosocial</pesquisa>
+      <lista>listaPesqFornecedores</lista>
+      <label>Fornecedores</label>
+      <entidade>1</entidade>
+      <listapai>165</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>fornecedor/=/AND/1;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="176">
+      <id>176</id>
+      <tipo>form</tipo>
+      <formsId>39</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>ListaAreas</lista>
+      <label>Áreas de Cursos</label>
+      <entidade>45</entidade>
+      <listapai>176</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro&#13;
+</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="177">
+      <id>177</id>
+      <tipo>form</tipo>
+      <formsId>37</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>ListaDemanda</lista>
+      <label>Demanda</label>
+      <entidade>16</entidade>
+      <listapai>0</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="178">
+      <id>178</id>
+      <tipo>form</tipo>
+      <formsId>38</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaSolicitacoes</lista>
+      <label>Solicitações</label>
+      <entidade>46</entidade>
+      <listapai>178</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="193">
+      <id>193</id>
+      <tipo>form</tipo>
+      <formsId>18</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProgDisciplinaProf</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>193</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigoprofessor/=/AND/TUsuario/getCodigoProfessor</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="221">
+      <id>221</id>
+      <tipo>pesq</tipo>
+      <formsId>7</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoprofessor=codigo</pesquisa>
+      <lista>pesqProfessor</lista>
+      <label>Professores</label>
+      <entidade>15</entidade>
+      <listapai>221</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="217">
+      <id>217</id>
+      <tipo>form</tipo>
+      <formsId>74</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaPresenca</lista>
+      <label>Presença</label>
+      <entidade>12</entidade>
+      <listapai>217</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="131">
+      <id>131</id>
+      <tipo>form</tipo>
+      <formsId>3</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>8</entidade>
+      <listapai>131</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="153">
+      <id>153</id>
+      <tipo>form</tipo>
+      <formsId>19</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCargos</lista>
+      <label>Cargos</label>
+      <entidade>29</entidade>
+      <listapai>153</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="154">
+      <id>154</id>
+      <tipo>form</tipo>
+      <formsId>20</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCurriculos</lista>
+      <label>Currículos</label>
+      <entidade>30</entidade>
+      <listapai>154</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="155">
+      <id>155</id>
+      <tipo>form</tipo>
+      <formsId>21</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaPatrimonios</lista>
+      <label>Patrimônios</label>
+      <entidade>32</entidade>
+      <listapai>155</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="156">
+      <id>156</id>
+      <tipo>form</tipo>
+      <formsId>22</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTreinamentos</lista>
+      <label>Treinamentos</label>
+      <entidade>33</entidade>
+      <listapai>156</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="158">
+      <id>158</id>
+      <tipo>form</tipo>
+      <formsId>24</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaFiliais</lista>
+      <label>Filiais</label>
+      <entidade>35</entidade>
+      <listapai>158</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="159">
+      <id>159</id>
+      <tipo>form</tipo>
+      <formsId>25</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaInadimplencia</lista>
+      <label>Inadimplências</label>
+      <entidade>20</entidade>
+      <listapai>159</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>vencimento/&lt;/AND/TSetData/getData</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="160">
+      <id>160</id>
+      <tipo>form</tipo>
+      <formsId>26</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaFornecedores</lista>
+      <label>Fornecedores</label>
+      <entidade>1</entidade>
+      <listapai>160</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro&#13;
+</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>fornecedor/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="212">
+      <id>212</id>
+      <tipo>form</tipo>
+      <formsId>71</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaPessoas</lista>
+      <label>Pessoas</label>
+      <entidade>1</entidade>
+      <listapai>212</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="161">
+      <id>161</id>
+      <tipo>form</tipo>
+      <formsId>27</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutos</lista>
+      <label>Insumos</label>
+      <entidade>37</entidade>
+      <listapai>161</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="132">
+      <id>132</id>
+      <tipo>form</tipo>
+      <formsId>4</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursos</lista>
+      <label>Projetos de Curso</label>
+      <entidade>9</entidade>
+      <listapai>132</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>turmas/=/AND/0</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="175">
+      <id>175</id>
+      <tipo>pesq</tipo>
+      <formsId>175</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>lotacao=codigo,sala=codigo</pesquisa>
+      <lista>ListaPesquisaSalas</lista>
+      <label>Salas</label>
+      <entidade>44</entidade>
+      <listapai>175</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1;salaaula/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="204">
+      <id>204</id>
+      <tipo>pesq</tipo>
+      <formsId>65</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>contaorigem=codconta;</pesquisa>
+      <lista>pesqExtornoDebito</lista>
+      <label>Extornar Débito</label>
+      <entidade>21</entidade>
+      <listapai>204</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipoMovimento/=/AND/D;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="181">
+      <id>181</id>
+      <tipo>pesq</tipo>
+      <formsId>27</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoproduto=codigo</pesquisa>
+      <lista>listaPesqProdut</lista>
+      <label>Insumos</label>
+      <entidade>37</entidade>
+      <listapai>181</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="199">
+      <id>199</id>
+      <tipo>form</tipo>
+      <formsId>58</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProgDisciplinaCoord</lista>
+      <label>Disciplinas</label>
+      <entidade>12</entidade>
+      <listapai>199</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="268">
+      <id>268</id>
+      <tipo>form</tipo>
+      <formsId>266</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaReservas</lista>
+      <label>Reservas</label>
+      <entidade>87</entidade>
+      <listapai>268</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Reserva</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/2</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="234">
+      <id>234</id>
+      <tipo>form</tipo>
+      <formsId>82</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTurmasConcluidas</lista>
+      <label>Turmas Concluidas</label>
+      <entidade>11</entidade>
+      <listapai>234</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>status/=/AND/4</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="235">
+      <id>235</id>
+      <tipo>pesq</tipo>
+      <formsId>54</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>codigopai=codigo</pesquisa>
+      <lista>pesqAvaliacao</lista>
+      <label>Avaliações</label>
+      <entidade>27</entidade>
+      <listapai>235</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="231">
+      <id>231</id>
+      <tipo>form</tipo>
+      <formsId>80</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>ListaFuncionariosDemitidos</lista>
+      <label>Funcionários Demitidos</label>
+      <entidade>14</entidade>
+      <listapai>231</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/3</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="180">
+      <id>180</id>
+      <tipo>pesq</tipo>
+      <formsId>28</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoproduto=codigoproduto,nomefornecedor=codigofornecedor,valorunitario=preco,tempoentrega=entrega</pesquisa>
+      <lista>listaPesqCotacao</lista>
+      <label>Cotação</label>
+      <entidade>38</entidade>
+      <listapai>180</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="265">
+      <id>265</id>
+      <tipo>form</tipo>
+      <formsId>264</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaLocacoes</lista>
+      <label>Locações</label>
+      <entidade>87</entidade>
+      <listapai>265</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Locação</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>multiple</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="244">
+      <id>244</id>
+      <tipo>form</tipo>
+      <formsId>89</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaQuestionarios</lista>
+      <label>Questionários</label>
+      <entidade>82</entidade>
+      <listapai>244</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="238">
+      <id>238</id>
+      <tipo>form</tipo>
+      <formsId>84</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>socrecard</lista>
+      <label>Scorecard</label>
+      <entidade>77</entidade>
+      <listapai>238</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Relatório</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="269">
+      <id>269</id>
+      <tipo>form</tipo>
+      <formsId>267</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDevolucoes</lista>
+      <label>Devoluções</label>
+      <entidade>87</entidade>
+      <listapai>269</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="314">
+      <id>314</id>
+      <tipo>form</tipo>
+      <formsId>311</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosDisponiveis</lista>
+      <label>Cursos Disponíveis</label>
+      <entidade>9</entidade>
+      <listapai>314</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="323">
+      <id>323</id>
+      <tipo>pesq</tipo>
+      <formsId>320</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoconvenio=codigo</pesquisa>
+      <lista>pesqConvenios</lista>
+      <label>Convênios</label>
+      <entidade>89</entidade>
+      <listapai>323</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="219">
+      <id>219</id>
+      <tipo>pesq</tipo>
+      <formsId>71</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigopessoa=codigo&gt;nome_razaosocial</pesquisa>
+      <lista>pesqPessoa</lista>
+      <label>Pessoas</label>
+      <entidade>1</entidade>
+      <listapai>219</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="237">
+      <id>237</id>
+      <tipo>form</tipo>
+      <formsId>83</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaBibliotecaLivros</lista>
+      <label>Livros</label>
+      <entidade>76</entidade>
+      <listapai>237</listapai>
+      <obapendice>TEtiquetas/apendiceEtiquetasLivros</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>1</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="274">
+      <id>274</id>
+      <tipo>form</tipo>
+      <formsId>273</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaLivros</lista>
+      <label>Livros</label>
+      <entidade>76</entidade>
+      <listapai>274</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="277">
+      <id>277</id>
+      <tipo>pesq</tipo>
+      <formsId>273</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigolivro=codigolivro</pesquisa>
+      <lista>pesqListaLivros</lista>
+      <label>Livros disponiveis para Locação</label>
+      <entidade>76</entidade>
+      <listapai>277</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>codigolocador/is/AND/null</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="278">
+      <id>278</id>
+      <tipo>pesq</tipo>
+      <formsId>273</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigolivro=codigolivro</pesquisa>
+      <lista>pesqReservaLivros</lista>
+      <label>Livros</label>
+      <entidade>76</entidade>
+      <listapai>278</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="271">
+      <id>271</id>
+      <tipo>form</tipo>
+      <formsId>270</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaClassificacaoCdu</lista>
+      <label>Classificações CDU</label>
+      <entidade>86</entidade>
+      <listapai>271</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Classificação</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="229">
+      <id>229</id>
+      <tipo>form</tipo>
+      <formsId>349</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>blocoFormFunc</lista>
+      <label>Formação</label>
+      <entidade>43</entidade>
+      <listapai>136</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="179">
+      <id>179</id>
+      <tipo>form</tipo>
+      <formsId>40</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCompras</lista>
+      <label>Compras</label>
+      <entidade>47</entidade>
+      <listapai>179</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="185">
+      <id>185</id>
+      <tipo>form</tipo>
+      <formsId>43</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDemanda</lista>
+      <label>Demanda</label>
+      <entidade>48</entidade>
+      <listapai>185</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="190">
+      <id>190</id>
+      <tipo>form</tipo>
+      <formsId>51</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaFolhaPag</lista>
+      <label>Folha de Pagamento</label>
+      <entidade>55</entidade>
+      <listapai>190</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="195">
+      <id>195</id>
+      <tipo>form</tipo>
+      <formsId>57</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProjetos</lista>
+      <label>Projetos em Andamento</label>
+      <entidade>58</entidade>
+      <listapai>195</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="245">
+      <id>245</id>
+      <tipo>form</tipo>
+      <formsId>357</formsId>
+      <filtropai>codigoquestionario</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaQuestionarioQuestoes</lista>
+      <label>Questões</label>
+      <entidade>83</entidade>
+      <listapai>244</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="282">
+      <id>282</id>
+      <tipo>form</tipo>
+      <formsId>368</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaObs</lista>
+      <label>Observações</label>
+      <entidade>28</entidade>
+      <listapai>193</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>obs/!=/AND//</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="283">
+      <id>283</id>
+      <tipo>form</tipo>
+      <formsId>369</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAvaliacoes</lista>
+      <label>Avaliações</label>
+      <entidade>27</entidade>
+      <listapai>193</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="144">
+      <id>144</id>
+      <tipo>form</tipo>
+      <formsId>333</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentoCaixa</lista>
+      <label>Movimento de caixa</label>
+      <entidade>21</entidade>
+      <listapai>144</listapai>
+      <obapendice>TCaixa/viewCalcCaixa</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statusmovimento/=/AND/1;ativo/=/AND/1;codigofuncionario/=/AND/TUsuario/getCodigoFuncionario</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="279">
+      <id>279</id>
+      <tipo>form</tipo>
+      <formsId>370</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaConteudo</lista>
+      <label>Conteudo Ministrado</label>
+      <entidade>28</entidade>
+      <listapai>193</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="327">
+      <id>327</id>
+      <tipo>form</tipo>
+      <formsId>374</formsId>
+      <filtropai>codigoturma</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listDescontos</lista>
+      <label>Faixas de Desconto</label>
+      <entidade>92</entidade>
+      <listapai>133</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="322">
+      <id>322</id>
+      <tipo>form</tipo>
+      <formsId>373</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaConvenios</lista>
+      <label>Convênios</label>
+      <entidade>90</entidade>
+      <listapai>130</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Relacionar novo convênio</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="174">
+      <id>174</id>
+      <tipo>form</tipo>
+      <formsId>34</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaSalas</lista>
+      <label>Salas</label>
+      <entidade>44</entidade>
+      <listapai>174</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="259">
+      <id>259</id>
+      <tipo>form</tipo>
+      <formsId>90</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosAtivos</lista>
+      <label>Referencia de Curso</label>
+      <entidade>85</entidade>
+      <listapai>259</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo curso</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="242">
+      <id>242</id>
+      <tipo>form</tipo>
+      <formsId>4</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosDisponiveis</lista>
+      <label>Projeto de Curso Concluído</label>
+      <entidade>9</entidade>
+      <listapai>242</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>turmas/&gt;/AND/0</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="186">
+      <id>186</id>
+      <tipo>form</tipo>
+      <formsId>334</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaopCobranca</lista>
+      <label>Opção de Cobrança</label>
+      <entidade>49</entidade>
+      <listapai>130</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro></acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="135">
+      <id>135</id>
+      <tipo>form</tipo>
+      <formsId>335</formsId>
+      <filtropai>codigoturma</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>turmaDisciplinas</lista>
+      <label>Disciplinas da turma</label>
+      <entidade>12</entidade>
+      <listapai>133</listapai>
+      <obapendice>TTurma/getCargaHoraria</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Associar disciplina</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>multiple</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="233">
+      <id>233</id>
+      <tipo>form</tipo>
+      <formsId>337</formsId>
+      <filtropai>codigoareacurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>relProfAreas</lista>
+      <label>Professores Relacionados</label>
+      <entidade>75</entidade>
+      <listapai>176</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="162">
+      <id>162</id>
+      <tipo>form</tipo>
+      <formsId>340</formsId>
+      <filtropai>codigoproduto</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCotacao</lista>
+      <label>Cotação</label>
+      <entidade>38</entidade>
+      <listapai>161</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Nova Cotação</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="173">
+      <id>173</id>
+      <tipo>form</tipo>
+      <formsId>341</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaClienteFormacao</lista>
+      <label>Formação Acadêmica</label>
+      <entidade>43</entidade>
+      <listapai>130</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="183">
+      <id>183</id>
+      <tipo>form</tipo>
+      <formsId>342</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDemandaCliente</lista>
+      <label>Interesses</label>
+      <entidade>48</entidade>
+      <listapai>130</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="188">
+      <id>188</id>
+      <tipo>form</tipo>
+      <formsId>343</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMateriais</lista>
+      <label>Materiais Didáticos</label>
+      <entidade>53</entidade>
+      <listapai>132</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="192">
+      <id>192</id>
+      <tipo>form</tipo>
+      <formsId>344</formsId>
+      <filtropai>codigofuncionario</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaOcorrencias</lista>
+      <label>Ocorrências</label>
+      <entidade>57</entidade>
+      <listapai>136</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="196">
+      <id>196</id>
+      <tipo>form</tipo>
+      <formsId>345</formsId>
+      <filtropai>codigoprojeto</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listProjetoRecursos</lista>
+      <label>Recursos</label>
+      <entidade>61</entidade>
+      <listapai>195</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="197">
+      <id>197</id>
+      <tipo>form</tipo>
+      <formsId>346</formsId>
+      <filtropai>codigoprojeto</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listProjetoRH</lista>
+      <label>Recursos Humanos</label>
+      <entidade>60</entidade>
+      <listapai>195</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="168">
+      <id>168</id>
+      <tipo>form</tipo>
+      <formsId>347</formsId>
+      <filtropai>codigousuario</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaPrivilegios</lista>
+      <label>Privilégios</label>
+      <entidade>40</entidade>
+      <listapai>167</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Privilegio</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="194">
+      <id>194</id>
+      <tipo>form</tipo>
+      <formsId>348</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>lsitObs</lista>
+      <label>Observações</label>
+      <entidade>28</entidade>
+      <listapai>199</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>obs/!=/AND//</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="232">
+      <id>232</id>
+      <tipo>form</tipo>
+      <formsId>351</formsId>
+      <filtropai>codigoprofessor</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>relAreaProfessor</lista>
+      <label>Áreas Relacionadas</label>
+      <entidade>75</entidade>
+      <listapai>137</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="243">
+      <id>243</id>
+      <tipo>form</tipo>
+      <formsId>353</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>10</entidade>
+      <listapai>242</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="198">
+      <id>198</id>
+      <tipo>form</tipo>
+      <formsId>356</formsId>
+      <filtropai>codigoprojeto</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listProjetoCustos</lista>
+      <label>Custos</label>
+      <entidade>59</entidade>
+      <listapai>195</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="239">
+      <id>239</id>
+      <tipo>form</tipo>
+      <formsId>358</formsId>
+      <filtropai>codigoscorecard</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>scorecardSentencas</lista>
+      <label>Sentenças a Analisar</label>
+      <entidade>78</entidade>
+      <listapai>238</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Nova Sentença</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="224">
+      <id>224</id>
+      <tipo>form</tipo>
+      <formsId>359</formsId>
+      <filtropai>codigodepartamento</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listPessoasDep</lista>
+      <label>Funcionários</label>
+      <entidade>14</entidade>
+      <listapai>223</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="191">
+      <id>191</id>
+      <tipo>form</tipo>
+      <formsId>361</formsId>
+      <filtropai>codigofuncionario</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTreinFunc</lista>
+      <label>Treinamentos</label>
+      <entidade>34</entidade>
+      <listapai>136</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="216">
+      <id>216</id>
+      <tipo>form</tipo>
+      <formsId>363</formsId>
+      <filtropai>codigoDisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaJustFalta</lista>
+      <label>Faltas Lançadas</label>
+      <entidade>25</entidade>
+      <listapai>216</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="189">
+      <id>189</id>
+      <tipo>form</tipo>
+      <formsId>364</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaConteudo</lista>
+      <label>Conteudo Ministrado</label>
+      <entidade>28</entidade>
+      <listapai>199</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="203">
+      <id>203</id>
+      <tipo>form</tipo>
+      <formsId>64</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listExtornos</lista>
+      <label>Extornos de Caixa</label>
+      <entidade>64</entidade>
+      <listapai>203</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Lançar Extorno</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="209">
+      <id>209</id>
+      <tipo>form</tipo>
+      <formsId>69</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTurmaCancelada</lista>
+      <label>Turmas Canceladas</label>
+      <entidade>11</entidade>
+      <listapai>209</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>status/=/AND/3</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="202">
+      <id>202</id>
+      <tipo>form</tipo>
+      <formsId>375</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listArquivos</lista>
+      <label>Arquivos</label>
+      <entidade>63</entidade>
+      <listapai>402</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro&#13;
+</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="201">
+      <id>201</id>
+      <tipo>form</tipo>
+      <formsId>60</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listPlanoAula</lista>
+      <label>Plano de Aula</label>
+      <entidade>62</entidade>
+      <listapai>398</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigoprofessor/=/AND/TUsuario/getCodigoProfessor</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="215">
+      <id>215</id>
+      <tipo>form</tipo>
+      <formsId>365</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasTransacao</lista>
+      <label>Contas a Pagar</label>
+      <entidade>65</entidade>
+      <listapai>213</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="211">
+      <id>211</id>
+      <tipo>pesq</tipo>
+      <formsId>70</formsId>
+      <filtropai>codigoconta</filtropai>
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valornominal=valornominal,vencimento=vencimento,&#13;
+codigocontacd=codigo,codigoPessoacd=codigopessoa,valornominalcd=valornominal,vencimentocd=vencimento</pesquisa>
+      <lista>pesqContas</lista>
+      <label>Contas</label>
+      <entidade>65</entidade>
+      <listapai>211</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="163">
+      <id>163</id>
+      <tipo>form</tipo>
+      <formsId>29</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCreditoNegociacao</lista>
+      <label>Negociação de Contas a Receber</label>
+      <entidade>66</entidade>
+      <listapai>163</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C;numparcelasabertas/&gt;/AND/0</filtro>
+      <ativo>1</ativo>
+      <formainclude>multiple</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="225">
+      <id>225</id>
+      <tipo>form</tipo>
+      <formsId>360</formsId>
+      <filtropai>codigoaluno</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDiscAluno</lista>
+      <label>Disciplinas</label>
+      <entidade>56</entidade>
+      <listapai>148</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="150">
+      <id>150</id>
+      <tipo>form</tipo>
+      <formsId>355</formsId>
+      <filtropai>codigoturma</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaRequisitos</lista>
+      <label>Pré Requisitos</label>
+      <entidade>23</entidade>
+      <listapai>133</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="133">
+      <id>133</id>
+      <tipo>form</tipo>
+      <formsId>5</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTurma</lista>
+      <label>Turmas</label>
+      <entidade>11</entidade>
+      <listapai>133</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Turma</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="134">
+      <id>134</id>
+      <tipo>form</tipo>
+      <formsId>354</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>10</entidade>
+      <listapai>132</listapai>
+      <obapendice>TCurso/getCargaHoraria</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Adicionar Disicplinas</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>multiple</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="236">
+      <id>236</id>
+      <tipo>form</tipo>
+      <formsId>371</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTransacaoContasView</lista>
+      <label>Contas a receber</label>
+      <entidade>65</entidade>
+      <listapai>206</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C;statusconta::bigint/in/AND/(1,3)</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="157">
+      <id>157</id>
+      <tipo>form</tipo>
+      <formsId>338</formsId>
+      <filtropai>codigofuncionario</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaParticipantes</lista>
+      <label>Participantes</label>
+      <entidade>34</entidade>
+      <listapai>156</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Participante</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="164">
+      <id>164</id>
+      <tipo>form</tipo>
+      <formsId>339</formsId>
+      <filtropai>codigofornecedor</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutosFornecedor</lista>
+      <label>Insumos</label>
+      <entidade>38</entidade>
+      <listapai>160</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Produto</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="310">
+      <id>310</id>
+      <tipo>pesq</tipo>
+      <formsId>310</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>codigocurso=codigo</pesquisa>
+      <lista>pesqCursosConcluidos</lista>
+      <label>Cursos Disponíveis</label>
+      <entidade>9</entidade>
+      <listapai>310</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/!=/AND/8;ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="207">
+      <id>207</id>
+      <tipo>form</tipo>
+      <formsId>372</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>addProdutosC</lista>
+      <label>Produtos</label>
+      <entidade>67</entidade>
+      <listapai>206</listapai>
+      <obapendice>TTransacao/viewValorTotal</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Produto</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger>setValorTotalTransacao()</trigger>
+      <incontrol>transacaoProdutos</incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="214">
+      <id>214</id>
+      <tipo>form</tipo>
+      <formsId>376</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>addProdutosD</lista>
+      <label>Produtos</label>
+      <entidade>67</entidade>
+      <listapai>214</listapai>
+      <obapendice>TTransacao/viewValorTotal</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Novo Produto</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger>setValorTotalTransacao()</trigger>
+      <incontrol>transacaoProdutos</incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="187">
+      <id>187</id>
+      <tipo>pesq</tipo>
+      <formsId>3</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigodisciplina=codigo;codigodisciplinasemelhante=codigo;</pesquisa>
+      <lista>pesqDisciplina</lista>
+      <label>Disciplinas</label>
+      <entidade>8</entidade>
+      <listapai>187</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one&#13;
+one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="422">
+      <id>422</id>
+      <tipo>form</tipo>
+      <formsId>420</formsId>
+      <filtropai>codigohistorico</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaHisCaixaMov</lista>
+      <label>Movimentações por Período</label>
+      <entidade>21</entidade>
+      <listapai>419</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="423">
+      <id>423</id>
+      <tipo>pesq</tipo>
+      <formsId>15</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigoaluno=codigo&gt;nomepessoa</pesquisa>
+      <lista>listaAlunos-pesq</lista>
+      <label>Alunos</label>
+      <entidade>22</entidade>
+      <listapai>423</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="425">
+      <id>425</id>
+      <tipo>form</tipo>
+      <formsId>424</formsId>
+      <filtropai>codigopessoa</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMov-Cliente</lista>
+      <label>Movimentações</label>
+      <entidade>21</entidade>
+      <listapai>425</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="143">
+      <id>143</id>
+      <tipo>pesq</tipo>
+      <formsId>1</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigopessoa=codigo&gt;nome_razaosocial</pesquisa>
+      <lista>listaPesqCliente</lista>
+      <label>Clientes</label>
+      <entidade>1</entidade>
+      <listapai>143</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>cliente/=/AND/1;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="430">
+      <id>430</id>
+      <tipo>form</tipo>
+      <formsId>429</formsId>
+      <filtropai>codigoalunodisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>aproveitamento</lista>
+      <label>Aproveitamentos</label>
+      <entidade>100</entidade>
+      <listapai>430</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="222">
+      <id>222</id>
+      <tipo>form</tipo>
+      <formsId>76</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaSolicitacoesAluno</lista>
+      <label>Solicitações</label>
+      <entidade>46</entidade>
+      <listapai>222</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>codigoaluno/=/AND/TUsuario/getCodigoAluno</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="447">
+      <id>447</id>
+      <tipo>form</tipo>
+      <formsId>446</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>avaliacaoes</lista>
+      <label>Avaliações</label>
+      <entidade>101</entidade>
+      <listapai>132</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="182">
+      <id>182</id>
+      <tipo>pesq</tipo>
+      <formsId>33</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoturma=codigo,nomecurso=nomecurso,valortaxa=valortaxa,valormatricula=valormensal,numparcelas=numparcelas,valorparcelas=valormensal,valordescontado=valordescontado,datainicio=datainicio,vencimentomatricula=datainicio,vencimentotaxa=datainicio</pesquisa>
+      <lista>listaProdutosInscricao</lista>
+      <label>Turmas Abertas</label>
+      <entidade>11</entidade>
+      <listapai>182</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>status/!=/AND/3;status/!=/AND/4;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="149">
+      <id>149</id>
+      <tipo>form</tipo>
+      <formsId>5</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutos</lista>
+      <label>Turmas Abertas</label>
+      <entidade>11</entidade>
+      <listapai>149</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="451">
+      <id>451</id>
+      <tipo>form</tipo>
+      <formsId>450</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTransacConvenios</lista>
+      <label>Convênios</label>
+      <entidade>103</entidade>
+      <listapai>206</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="453">
+      <id>453</id>
+      <tipo>form</tipo>
+      <formsId>452</formsId>
+      <filtropai>codigoturma</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTurmaConvenios</lista>
+      <label>Convênios</label>
+      <entidade>104</entidade>
+      <listapai>5</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="148">
+      <id>148</id>
+      <tipo>form</tipo>
+      <formsId>15</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>148</pesquisa>
+      <lista>listaAlunosHistAcademico</lista>
+      <label>Alunos</label>
+      <entidade>22</entidade>
+      <listapai>148</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="457">
+      <id>457</id>
+      <tipo>form</tipo>
+      <formsId>459</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAlunosHistFinanceiro</lista>
+      <label>Alunos</label>
+      <entidade>22</entidade>
+      <listapai>148</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="458">
+      <id>458</id>
+      <tipo>form</tipo>
+      <formsId>460</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAlunosProcAcademico</lista>
+      <label>Alunos</label>
+      <entidade>22</entidade>
+      <listapai>148</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="456">
+      <id>456</id>
+      <tipo>pesq</tipo>
+      <formsId>461</formsId>
+      <filtropai>codigoaluno</filtropai>
+      <pesquisa>codigodisciplina_nova=codigo&gt;nomedisciplina</pesquisa>
+      <lista>listaDiscAluno</lista>
+      <label>Disciplinas</label>
+      <entidade>56</entidade>
+      <listapai>458</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>situacao/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="466">
+      <id>466</id>
+      <tipo>form</tipo>
+      <formsId>463</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaGradeAvaliacoes</lista>
+      <label>Grade de Avaliações</label>
+      <entidade>105</entidade>
+      <listapai>466</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="467">
+      <id>467</id>
+      <tipo>form</tipo>
+      <formsId>464</formsId>
+      <filtropai>codigograde</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAvaliacoes</lista>
+      <label>Avaliações</label>
+      <entidade>106</entidade>
+      <listapai>466</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="468">
+      <id>468</id>
+      <tipo>form</tipo>
+      <formsId>465</formsId>
+      <filtropai>codigoavaliacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaRegrasAvaliacoes</lista>
+      <label>Regras da Avaliação</label>
+      <entidade>107</entidade>
+      <listapai>467</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="263">
+      <id>263</id>
+      <tipo>form</tipo>
+      <formsId>366</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAvaliacoes</lista>
+      <label>Avaliações</label>
+      <entidade>27</entidade>
+      <listapai>199</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="152">
+      <id>152</id>
+      <tipo>form</tipo>
+      <formsId>367</formsId>
+      <filtropai>codigoturmadisciplina</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaAvaliacao</lista>
+      <label>Avaliações</label>
+      <entidade>27</entidade>
+      <listapai>200</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>ordem/asc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="470">
+      <id>470</id>
+      <tipo>form</tipo>
+      <formsId>469</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaNotasAlunos</lista>
+      <label>Notas de Alunos</label>
+      <entidade>109</entidade>
+      <listapai>470</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="142">
+      <id>142</id>
+      <tipo>form</tipo>
+      <formsId>12</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a receber</label>
+      <entidade>65</entidade>
+      <listapai>142</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C;statusconta::bigint/in/AND/(1,3)</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="210">
+      <id>210</id>
+      <tipo>form</tipo>
+      <formsId>352</formsId>
+      <filtropai>codigotransacao</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasTransac</lista>
+      <label>Contas a receber</label>
+      <entidade>65</entidade>
+      <listapai>210</listapai>
+      <obapendice>TTransacao/apendiceContasNegociacao</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C;statusconta::bigint/in/AND/(1,3)</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="206">
+      <id>206</id>
+      <tipo>form</tipo>
+      <formsId>67</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>formTransacaoC</lista>
+      <label>Transações de Crédito</label>
+      <entidade>66</entidade>
+      <listapai>206</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipomovimentacao/=/AND/C</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="272">
+      <id>272</id>
+      <tipo>pesq</tipo>
+      <formsId>270</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>codigocdu=codigo&gt;titulo</pesquisa>
+      <lista>pesqClassificacaoCdu</lista>
+      <label>ClassificacoesCdeu</label>
+      <entidade>86</entidade>
+      <listapai>272</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Nova Classificação</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="208">
+      <id>208</id>
+      <tipo>pesq</tipo>
+      <formsId>68</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>valornominal=valor,codigoproduto=codigo,tabelaproduto=tabela</pesquisa>
+      <lista>pesqProdutosC</lista>
+      <label>Produto</label>
+      <entidade>70</entidade>
+      <listapai>208</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>codigotipoproduto/!=/AND/10004330-830</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+  </listaForm>
+</kernelsys>

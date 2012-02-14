@@ -27,7 +27,7 @@ class TForms{
                  $this->idForm = $id;
 
                 //Objeto DBO
-                $this->dboKs = new TDbo_kernelsys();
+                $this->dboKs = new TKrs();
 
 	            /**
 	            * instancia o cabeçalho do formulário
@@ -296,7 +296,7 @@ class TForms{
     public function setBloco($idBloco){
 
         // Dados Formulário
-        $dboFormBloco = new TDbo_kernelsys('blocos');
+        $dboFormBloco = new TKrs('blocos');
             $criteriaFormBloco = new TCriteria();
             $criteriaFormBloco->add(new TFilter('id','=',$idBloco));
         $retFormBloco = $dboFormBloco->select("*", $criteriaFormBloco);

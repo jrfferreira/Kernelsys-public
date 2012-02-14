@@ -1548,7 +1548,7 @@ class TTransacao {
         $criteriaConta->add(new TFilter('codigo','=',$codigoConta));
         $retConta = $dboConta->select("*", $criteriaConta);
         $obConta = $retConta->fetchObject();
-
+	
         $valorConta = $obConta->valorreal;
         
         $dt = explode("-", $obConta->vencimento);
@@ -1566,7 +1566,7 @@ class TTransacao {
         while ($obTransacoes = $retTransacs->fetchObject()) {
             $arrayConvenios[] = $obTransacoes->codigoconvenio;
         }
-        $texto = $TConvenios->getTextoConvenios($arrayConvenios,$valorConta);
+        $texto = $TConvenios->getTextoConvenios($arrayConvenios,$obConta);
         return $texto;
     }
 }

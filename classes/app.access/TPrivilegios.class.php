@@ -8,7 +8,7 @@ class TPrivilegios {
 	 */
     public function getModulos($id = null) {
 
-        $TDbo_modulos = new TDbo_kernelsys('modulos_principais');
+        $TDbo_modulos = new TKrs('modulos_principais');
         $crit = new TCriteria();
         $crit->add(new TFilter('ativo','=','1'));
         $crit->getProperty("order by labelmodulo");
@@ -104,7 +104,7 @@ class TPrivilegios {
      * @param $modulo
      */
     public function getMenu($modulo = null) {
-        $TDbo_menus = new TDbo_kernelsys('menu_modulos');
+        $TDbo_menus = new TKrs('menu_modulos');
 
         $crit = new TCriteria();
         $crit->add(new TFilter("moduloprincipal","=",$modulo));
@@ -171,10 +171,10 @@ class TPrivilegios {
             }
         }else{
 
-            $dbo = new TDbo_kernelsys('forms');
+            $dbo = new TKrs('forms');
             $crit = new TCriteria();
             $crit->add(new TFilter('idlista','=','0'),'AND');
-            $crit->setProperty('not exists','(select form from menu_modulos where menu_modulos.form = forms.id)');
+           // $crit->setProperty('not exists','(select form from menu_modulos where menu_modulos.form = forms.id)');
             $retDbo = $dbo->select('*',$crit);
 
             $obMenu = new TElement("div");
@@ -204,7 +204,7 @@ class TPrivilegios {
      */
     public function getOpcoesLista($lista_id) {
 
-        $TDbo_Lista = new TDbo_kernelsys('lista_form');
+        $TDbo_Lista = new TKrs('lista_form');
         $crit = new TCriteria();
         $crit->add(new TFilter("id","=",$lista_id));
         $retLista = $TDbo_Lista->select("*",$crit);
@@ -222,7 +222,7 @@ class TPrivilegios {
     public function viewGetOpcoesLista($codigousuario,$funcionalidade) {
         if($funcionalidade) {
             
-        $TDbo_menus = new TDbo_kernelsys('menu_modulos');
+        $TDbo_menus = new TKrs('menu_modulos');
         $crit = new TCriteria();
         $crit->add(new TFilter("id","=",$funcionalidade));
 
@@ -360,7 +360,7 @@ class TPrivilegios {
 	 * @param unknown_type $id_lista
 	 */
     public function getColunasLista($id_lista) {
-        $TDbo_menus = new TDbo_kernelsys('lista_form');
+        $TDbo_menus = new TKrs('lista_form');
         $crit = new TCriteria();
         $crit->add(new TFilter("id","=",$id_lista));
         $retMenus = $TDbo_menus->select("*",$crit);
@@ -368,7 +368,7 @@ class TPrivilegios {
         while($obMenus = $retMenus->fetchObject()) {
             $ob[$obMenus->id] = $obMenus;
 
-            $TDbo_colunas = new TDbo_kernelsys('lista_colunas');
+            $TDbo_colunas = new TKrs('lista_colunas');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("lista_form_id","=",$obMenus->id));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -433,7 +433,7 @@ class TPrivilegios {
      */
     public function getFormAbas($forms_id){
     	
-        $TDbo_menus = new TDbo_kernelsys('form_x_abas');
+        $TDbo_menus = new TKrs('form_x_abas');
 	        $crit = new TCriteria();
 	        $crit->add(new TFilter("formid","=",$forms_id));
 	        $crit->add(new TFilter("ativo","=",'1'));
@@ -441,7 +441,7 @@ class TPrivilegios {
         $retMenus = $TDbo_menus->select("abaid",$crit);
 
         while($obMenus = $retMenus->fetchObject()) {
-            $TDbo_colunas = new TDbo_kernelsys('abas');
+            $TDbo_colunas = new TKrs('abas');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("id","=",$obMenus->abaid));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -458,14 +458,14 @@ class TPrivilegios {
      */
     public function getAbaBlocos($aba_id){
     	
-        $TDbo_menus = new TDbo_kernelsys('blocos_x_abas');
+        $TDbo_menus = new TKrs('blocos_x_abas');
 	        $crit = new TCriteria();
 	        $crit->add(new TFilter("abaid","=",$aba_id));
 	        $crit->setProperty('order', 'ordem');
         $retMenus = $TDbo_menus->select("blocoid",$crit);
 
         while($obMenus = $retMenus->fetchObject()) {
-            $TDbo_colunas = new TDbo_kernelsys('blocos');
+            $TDbo_colunas = new TKrs('blocos');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("id","=",$obMenus->blocoid));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -482,7 +482,7 @@ class TPrivilegios {
      */
      public function getBlocosCampos($bloco_id){
      	
-        $TDbo_menus = new TDbo_kernelsys('campos_x_blocos');
+        $TDbo_menus = new TKrs('campos_x_blocos');
 	        $crit = new TCriteria();
 	        $crit->add(new TFilter("blocoid","=",$bloco_id));
 	        $crit->add(new TFilter("mostrarcampo","=","S"));
@@ -490,7 +490,7 @@ class TPrivilegios {
         $retMenus = $TDbo_menus->select("campoid",$crit);
 
         while($obMenus = $retMenus->fetchObject()) {
-            $TDbo_colunas = new TDbo_kernelsys('campos');
+            $TDbo_colunas = new TKrs('campos');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("id","=",$obMenus->campoid));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -506,7 +506,7 @@ class TPrivilegios {
      * @param $campo_id
      */
     public function getCampoEdicao($campo_id){
-            $TDbo_colunas = new TDbo_kernelsys('campos');
+            $TDbo_colunas = new TKrs('campos');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("id","=",$campo_id));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -629,7 +629,7 @@ class TPrivilegios {
      */
     public function viewGetBlocosCampos($codigousuario,$funcionalidade){
         if($funcionalidade) {
-            $TDbo_colunas = new TDbo_kernelsys('blocos');
+            $TDbo_colunas = new TKrs('blocos');
             $critCols = new TCriteria();
             $critCols->add(new TFilter("id","=",$funcionalidade));
             $retColunas = $TDbo_colunas->select("*",$critCols);
@@ -680,7 +680,7 @@ class TPrivilegios {
             }
             }elseif($obBloco->formato == 'lst'){
 
-            $TDbo_sublista = new TDbo_kernelsys('lista_form');
+            $TDbo_sublista = new TKrs('lista_form');
 	            $critsublista = new TCriteria();
 	            $critsublista->add(new TFilter("forms_id","=",$obBloco->idform));
 	            $critsublista->add(new TFilter("tipo","=",'form'));
