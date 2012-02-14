@@ -12874,27 +12874,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="295">
-      <id>295</id>
-      <colunadb>ferias</colunadb>
-      <campo>ferias</campo>
-      <label>Data para Férias Programada:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>14</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="775">
       <id>775</id>
       <colunadb>codigoprofessor</colunadb>
@@ -16480,6 +16459,27 @@
       <outcontrol></outcontrol>
       <incontrol></incontrol>
       <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="295">
+      <id>295</id>
+      <colunadb>ferias</colunadb>
+      <campo>ferias</campo>
+      <label>Valor das férias:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>14</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
       <valornull>0</valornull>

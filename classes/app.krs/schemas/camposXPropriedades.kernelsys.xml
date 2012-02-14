@@ -5912,13 +5912,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>880</id>
     </row>
-    <row id="882">
-      <campoid>841</campoid>
-      <metodo>addItems</metodo>
-      <valor>0 =&gt; Aleatório; 1 =&gt; Custom_petrus;2 =&gt; Eggplant;3 =&gt; Redmond;4 =&gt; Ui-lightness;5 =&gt; Black-tie;6 =&gt; Sunny;7 =&gt; Pepper-grinder;8 =&gt; Dot-luv;9 =&gt; Ui-tolook;10 =&gt; Blitzer;11 =&gt; Petrusedu;12 =&gt; Petrusedu_alternate;13 =&gt; Bluestyle;14 =&gt; Flick;15 =&gt; Humanity;16 =&gt; Overcast;17 =&gt; Bluetzer;18 =&gt; Fibratec;19 =&gt; Remake_bluetzer;20 =&gt; South-street;21 =&gt; Cupertino;22 =&gt; Petrus;</valor>
-      <ativo>1</ativo>
-      <id>882</id>
-    </row>
     <row id="901">
       <campoid>854</campoid>
       <metodo>addItems</metodo>
@@ -6996,6 +6989,13 @@ Zootecnia=&gt;Zootecnia; </valor>
       <valor>setTrancamentoCurso($('#codigoaluno_processo').val())</valor>
       <ativo>1</ativo>
       <id>1144</id>
+    </row>
+    <row id="882">
+      <campoid>841</campoid>
+      <metodo>addItems</metodo>
+      <valor>0=&gt;Aleatório;1=&gt;Custom_petrus;2=&gt;Eggplant;3=&gt;Redmond;4=&gt;Ui-lightness;5=&gt;Black-tie;6=&gt;Sunny;7=&gt;Pepper-grinder;8=&gt;Dot-luv;9=&gt;Ui-tolook;10=&gt;Blitzer;11=&gt;Petrusedu;12=&gt;Petrusedu_alternate;13=&gt;Bluestyle;14=&gt;Flick;15=&gt;Humanity;16=&gt;Overcast;17=&gt;Bluetzer;18=&gt;Fibratec;19=&gt;Remake_bluetzer;20=&gt;South-street;21=&gt;Cupertino;22=&gt;Petrus;</valor>
+      <ativo>1</ativo>
+      <id>882</id>
     </row>
   </camposXPropriedades>
 </kernelsys>
