@@ -13,6 +13,7 @@ class TKrs {
 	
 	private $table;
 	private $tableName;
+	private $keySort;
 	
 	public function __construct($table = null){
 		if(!empty($table)){
@@ -84,6 +85,11 @@ class TKrs {
 				}
 			}
 		}
+
+
+		if($tCriteria->getProperty('order')){
+				$this->sortBy($response, $tCriteria->getProperty('order'));
+		}
 		
 		$statement = new TKrsStatement($response);
 		
@@ -102,5 +108,14 @@ class TKrs {
 			$this->tableName = $table;
 			$this->table = new DomDocument();
 			$this->table->load($this->xmlFolder.'/'.$this->formatName($table).'.'.$this->xmlFile);			
+	}
+
+	public function sortBy(&$items, $key){
+	  if (is_array($items)){
+	    return usort($items, function($a, $b) use ($key){
+	      return strCmp($a[$key], $b[$key]);
+	    });
+	  }
+	  return false;
 	}
 }
