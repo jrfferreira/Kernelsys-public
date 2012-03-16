@@ -112,7 +112,7 @@ class TKrs {
 
 	public function sortBy(&$items, $key){
 	  if (is_array($items)){
-	    return usort($items, function($a, $b) use ($key){
+	    return usort($items, @function($a, $b) use ($key){
 	      return strCmp($a[$key], $b[$key]);
 	    });
 	  }

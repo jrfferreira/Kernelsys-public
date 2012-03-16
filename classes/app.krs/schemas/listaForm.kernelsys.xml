@@ -2889,34 +2889,6 @@
       <ordem>id/desc</ordem>
       <aclimite>1</aclimite>
     </row>
-    <row id="242">
-      <id>242</id>
-      <tipo>form</tipo>
-      <formsId>4</formsId>
-      <filtropai>codigo</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaCursosDisponiveis</lista>
-      <label>Projeto de Curso Concluído</label>
-      <entidade>9</entidade>
-      <listapai>242</listapai>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <accolunas>0 </accolunas>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>1</acviews>
-      <acenviar>0</acenviar>
-      <filtro>turmas/&gt;/AND/0</filtro>
-      <ativo>1</ativo>
-      <formainclude>one</formainclude>
-      <trigger></trigger>
-      <incontrol></incontrol>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>id/desc</ordem>
-      <aclimite>1</aclimite>
-    </row>
     <row id="186">
       <id>186</id>
       <tipo>form</tipo>
@@ -3268,34 +3240,6 @@
       <acincluir>Novo Registro</acincluir>
       <accolunas>0 </accolunas>
       <acdeletar>1</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro></filtro>
-      <ativo>1</ativo>
-      <formainclude>one</formainclude>
-      <trigger></trigger>
-      <incontrol></incontrol>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>id/desc</ordem>
-      <aclimite>1</aclimite>
-    </row>
-    <row id="243">
-      <id>243</id>
-      <tipo>form</tipo>
-      <formsId>353</formsId>
-      <filtropai>codigocurso</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaDisciplinas</lista>
-      <label>Disciplinas</label>
-      <entidade>10</entidade>
-      <listapai>242</listapai>
-      <obapendice>-</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <accolunas>0 </accolunas>
-      <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
       <acviews>0</acviews>
       <acenviar>0</acenviar>
@@ -3862,6 +3806,62 @@ codigocontacd=codigo,codigoPessoacd=codigopessoa,valornominalcd=valornominal,ven
       <acviews>1</acviews>
       <acenviar>0</acenviar>
       <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="243">
+      <id>243</id>
+      <tipo>form</tipo>
+      <formsId>3</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>10</entidade>
+      <listapai>242</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro></filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="242">
+      <id>242</id>
+      <tipo>form</tipo>
+      <formsId>475</formsId>
+      <filtropai>codigo</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosDisponiveis</lista>
+      <label>Projeto de Curso Concluído</label>
+      <entidade>9</entidade>
+      <listapai>242</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>turmas/&gt;/AND/0</filtro>
       <ativo>1</ativo>
       <formainclude>one</formainclude>
       <trigger></trigger>
@@ -4703,6 +4703,34 @@ one</formainclude>
       <acviews>0</acviews>
       <acenviar>1</acenviar>
       <filtro>codigotipoproduto/!=/AND/10004330-830</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="477">
+      <id>477</id>
+      <tipo>form</tipo>
+      <formsId>476</formsId>
+      <filtropai>codigocurso</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listDisciplinas</lista>
+      <label>Disciplinas</label>
+      <entidade>10</entidade>
+      <listapai>242</listapai>
+      <obapendice>TCurso/getCargaHoraria</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>ativo/!=/AND/9</filtro>
       <ativo>1</ativo>
       <formainclude>one</formainclude>
       <trigger></trigger>

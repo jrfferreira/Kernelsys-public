@@ -2332,5 +2332,14 @@
       <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
+    <row id="376">
+      <id>376</id>
+      <idaba>discProjetoDeCursoConcluido</idaba>
+      <nomeaba>Disciplinas</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>&#13;</impressao>
+      <ordem>0</ordem>
+    </row>
   </abas>
 </kernelsys>

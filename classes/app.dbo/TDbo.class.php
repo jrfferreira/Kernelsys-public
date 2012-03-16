@@ -255,7 +255,7 @@ class TDbo {
 
                     // grava log de insert (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
-
+                    
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());
                     if($result) {

@@ -49,7 +49,7 @@ function getLista($unidade, $tipo = null, $area = null, $notEmpty = null) {
 	}
 	
 	if($notEmpty == true){
-			$filtro5 = new TFilter ("(SELECT count(t5.codigocurso) AS count FROM dbturmas t5 WHERE t5.codigocurso = t0.codigo and t5.acinscricao = '1')", '>', 0 );
+			$filtro5 = new TFilter ("(SELECT count(t5.codigocurso) AS count FROM dbturmas t5 WHERE t5.codigocurso = t0.codigo and t5.acinscricao <> '2')", '>', 0 );
 			$filtro5->tipoFiltro = 5;
 			$criterio->add ( $filtro5, 'AND' );
 	}
@@ -100,7 +100,7 @@ function getCurso($unidade, $codigo) {
 			
 			$dbo->setEntidade ( "dbturmas" );
 			$criterioTurmas = new TCriteria ();
-			$criterioTurmas->add ( new TFilter ( 'acinscricao', '=', '1' ), 'AND' );
+			$criterioTurmas->add ( new TFilter ( 'acinscricao', '<>', '2' ), 'AND' );
 			$criterioTurmas->add ( new TFilter ( 'codigocurso', '=', $codigo ), 'AND' );
 			$retTurmas = $dbo->select ( "*", $criterioTurmas );
 			

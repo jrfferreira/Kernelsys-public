@@ -2911,5 +2911,35 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
+    <row id="475">
+      <id>475</id>
+      <form>cadcursosConcluido</form>
+      <nomeform>Projetos de Cursos Concluídos</nomeform>
+      <entidade>9</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>242</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="476">
+      <id>476</id>
+      <form>form_discCurso</form>
+      <nomeform>Disciplinas do curso</nomeform>
+      <entidade>10</entidade>
+      <ativo>1</ativo>
+      <formpai>4</formpai>
+      <idlista>477</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
   </forms>
 </kernelsys>

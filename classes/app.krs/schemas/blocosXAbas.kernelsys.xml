@@ -1555,5 +1555,11 @@
       <blocoid>294</blocoid>
       <ordem>2</ordem>
     </row>
+    <row id="305">
+      <id>305</id>
+      <abaid>376</abaid>
+      <blocoid>295</blocoid>
+      <ordem>1</ordem>
+    </row>
   </blocosXAbas>
 </kernelsys>

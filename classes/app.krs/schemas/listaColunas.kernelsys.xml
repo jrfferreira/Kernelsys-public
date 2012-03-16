@@ -13126,5 +13126,56 @@
       <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="935">
+      <id>935</id>
+      <listaFormId>477</listaFormId>
+      <coluna>codigodisciplina</coluna>
+      <label>Codigo</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="937">
+      <id>937</id>
+      <listaFormId>477</listaFormId>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>30</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="938">
+      <id>938</id>
+      <listaFormId>477</listaFormId>
+      <coluna>nomedisciplina</coluna>
+      <label>Disciplina</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>400</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
+    </row>
   </listaColunas>
 </kernelsys>

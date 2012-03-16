@@ -3088,5 +3088,17 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
+    <row id="295">
+      <id>295</id>
+      <blocoid>discCursoProjConcluido</blocoid>
+      <nomebloco>Disciplinas do curso</nomebloco>
+      <formato>lst</formato>
+      <entidade>0</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>475</formpai>
+      <obapendice></obapendice>
+      <idform>476</idform>
+    </row>
   </blocos>
 </kernelsys>

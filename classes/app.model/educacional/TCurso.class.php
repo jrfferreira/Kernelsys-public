@@ -7,8 +7,6 @@
  */
 
 class TCurso{
-
-
     /**
      * Retorna um objeto curso e suas informações
      *
@@ -68,7 +66,7 @@ class TCurso{
 
         foreach($headerLista as $ch=>$vl){
             if(!$listaDisciplinas[$ch]){
-                $data['codigodisciplina'] = $vl;
+                $data['codigodisciplina'] = str_replace(array('[',']','"',"'"), '', $vl);
                 $dboDisciplina = new TDbo(TConstantes::DBCURSOS_DISCIPLINAS);
                 $dboDisciplina->insert($data);
             }

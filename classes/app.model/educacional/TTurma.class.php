@@ -60,7 +60,7 @@ class TTurma {
     
     /**
      * Gera chequebox na lista de disciplinas.
-     * @param INT $idForm = Id do formulario em questão.
+     * @param INT $idForm = Id do formulario em questï¿½o.
      */
     public function buttonAddTurmaDisciplina($idForm){
 
@@ -351,14 +351,14 @@ class TTurma {
         $retDiscs = $dbo->select('id,codigocurso,codigodisciplina',$crit);
 
        while($vl = $retDiscs->fetchObject()){
-           $codigocurso = $vl->codigocurso;
+           $codigoCurso = $vl->codigocurso;
            if(!$obCurso){
                $TCurso = new TCurso();
                $obCurso = $TCurso->getCurso($codigoCurso, false);
                $data['codigograde'] = $obCurso->codigograde;
            }
            if(!$TurmaDiciplinas[$vl->codigodisciplina]){
-               $data['codigodisciplina'] = $vl->codigodisciplina;
+               $data['codigodisciplina'] = str_replace(array('[',']','"',"'"), '', $vl->codigodisciplina);
                $dboDisciplina = new TDbo(TConstantes::DBTURMAS_DISCIPLINAS);
                $ret = $dboDisciplina->insert($data);
 
