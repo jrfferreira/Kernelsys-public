@@ -64,7 +64,7 @@ ALTER SEQUENCE abas_id_seq OWNED BY abas.id;
 -- Name: abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('abas_id_seq', 375, true);
+SELECT pg_catalog.setval('abas_id_seq', 376, true);
 
 
 --
@@ -118,7 +118,7 @@ ALTER SEQUENCE blocos_id_seq OWNED BY blocos.id;
 -- Name: blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('blocos_id_seq', 292, true);
+SELECT pg_catalog.setval('blocos_id_seq', 295, true);
 
 
 --
@@ -156,7 +156,7 @@ ALTER SEQUENCE blocos_x_abas_id_seq OWNED BY blocos_x_abas.id;
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('blocos_x_abas_id_seq', 304, true);
+SELECT pg_catalog.setval('blocos_x_abas_id_seq', 305, true);
 
 
 --
@@ -433,7 +433,7 @@ ALTER SEQUENCE form_x_abas_id_seq OWNED BY form_x_abas.id;
 -- Name: form_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_x_abas_id_seq', 276, true);
+SELECT pg_catalog.setval('form_x_abas_id_seq', 278, true);
 
 
 --
@@ -471,7 +471,7 @@ ALTER SEQUENCE form_x_tabelas_id_seq OWNED BY form_x_tabelas.id;
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_x_tabelas_id_seq', 207, true);
+SELECT pg_catalog.setval('form_x_tabelas_id_seq', 209, true);
 
 
 --
@@ -546,7 +546,7 @@ ALTER SEQUENCE forms_id_seq OWNED BY forms.id;
 -- Name: forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('forms_id_seq', 474, true);
+SELECT pg_catalog.setval('forms_id_seq', 477, true);
 
 
 --
@@ -730,7 +730,7 @@ ALTER SEQUENCE lista_colunas_id_seq OWNED BY lista_colunas.id;
 -- Name: lista_colunas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('lista_colunas_id_seq', 934, true);
+SELECT pg_catalog.setval('lista_colunas_id_seq', 938, true);
 
 
 --
@@ -1395,6 +1395,7 @@ INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALU
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (373, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (374, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (375, 'configUsuario-AlteracaoSenha', 'Alteração de Senha', 'TUsuario/apendicePassword', '-', '0', 0);
+INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (376, 'discProjetoDeCursoConcluido', 'Disciplinas', '-', '-', '', 0);
 
 
 --
@@ -1661,6 +1662,7 @@ INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativ
 INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativo, formpai, obapendice, idform) VALUES (294, 'procConfTrancamentoCurso', 'Confirmação', 'frm', 0, '200px', 1, '460', NULL, '
 ');
 INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativo, formpai, obapendice, idform) VALUES (81, 'contratos', 'Contratos e Convênios', 'frm', 39, '200px', 1, '30', NULL, NULL);
+INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativo, formpai, obapendice, idform) VALUES (295, 'discCursoProjConcluido', 'Disciplinas do curso', 'lst', 0, '380px', 1, '475', NULL, '476');
 
 
 --
@@ -1926,6 +1928,7 @@ INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (301, 374, 271, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (302, 345, 292, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (303, 351, 293, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (304, 374, 294, 2);
+INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (305, 376, 295, 1);
 
 
 --
@@ -2545,7 +2548,6 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (158, 'vencimento', 'vencimento', 'Vencimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 'TEntry', 21, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (244, 'datanasc', 'datanasc', 'Data de Nascimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 'TEntry', 5, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (228, 'dataNasc', 'dataNasc', 'Data de Nascimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 'TEntry', 30, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (295, 'ferias', 'ferias', 'Data para Férias Programada:', '', '', 'TEntry', 14, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (775, 'codigoprofessor', 'codigoprofessor', 'Professor:', NULL, NULL, 'TCombo', 12, 1, 221, '-', NULL, '0', '0', NULL, 1, 0, 1, '1');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (881, 'valorcalculado', 'valorcalculado', 'Valor Calculado:', NULL, 'CLASS_MASCARA_VALOR', 'TEntry', 21, 0, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (879, 'valorreal', 'valorrealview', 'Valor:', NULL, 'CLASS_MASCARA_VALOR', 'TEntry', 0, 0, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 2, '0');
@@ -2717,6 +2719,7 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (971, 'codigo', 'codigoaluno_processo', NULL, NULL, NULL, 'THidden', 22, 0, 0, '-', NULL, NULL, NULL, NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (972, 'codigo', 'codigoaluno_processo', NULL, NULL, NULL, 'THidden', 22, 0, 0, '-', NULL, NULL, NULL, NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (973, 'codigo', 'codigoaluno_processo', NULL, NULL, NULL, 'THidden', 22, 0, 0, '-', NULL, NULL, NULL, NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (295, 'ferias', 'ferias', 'Valor das férias:', NULL, NULL, 'TEntry', 14, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 
 
 --
@@ -4992,6 +4995,8 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (273, 471, 372,
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (274, 472, 373, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (275, 473, 374, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (276, 474, 375, '1', 1);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (277, 475, 18, '1', 0);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (278, 475, 376, '1', 0);
 
 
 --
@@ -5176,6 +5181,8 @@ INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (204, 467, 108, 
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (205, 468, 108, '1');
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (206, 474, 26, '1');
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (207, 450, 103, '1');
+INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (208, 475, 9, '1');
+INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (209, 475, 10, '1');
 
 
 --
@@ -5376,6 +5383,8 @@ INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formai
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (473, 'processo-TrancamentoCurso', 'Processo Acadêmico: Trancamento de Curso', '22', '1', '15', '0', 'one', '900;500', '1', '0', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (431, 'processo-Abandono', 'Processo Acadêmico: Abandono de Curso', '22', '1', '15', '0', 'one', '900;500', '1', '0', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (474, 'usuarioConfig', 'Configurações de Usuário', '26', '1', '0', '0', 'one', '500;200', '1', '1', '0', '0');
+INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (475, 'cadcursosConcluido', 'Projetos de Cursos Concluídos', '9', '1', NULL, '242', 'one', NULL, '1', '1', '0', '0');
+INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (476, 'form_discCurso', 'Disciplinas do curso', '10', '1', '4', '477', 'multiple', '900;500', '1', '1', '0', '0');
 
 
 --
@@ -6194,6 +6203,9 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (773, 163, 'valorreal', 'Valor em Aberto', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 6, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (558, 245, 'valorQuestao', 'Valor', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (369, 203, 'valor', 'Valor', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 0, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (935, 477, 'codigodisciplina', 'Codigo', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (937, 477, 'cargahoraria', 'C.H.', 'left', 'right', 30, '-', '0', 1, 0, '-', '0', 3, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (938, 477, 'nomedisciplina', 'Disciplina', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, '1');
 
 
 --
@@ -6313,7 +6325,6 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (322, 'form', 373, 'codigopessoa', '0', 'listaConvenios', 'Convênios', 90, 130, '-', '0', 'Relacionar novo convênio', '0 ', '1', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (174, 'form', 34, 'codigo', '0', 'listaSalas', 'Salas', 44, 174, '-', '1', 'Novo Registro', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (259, 'form', 90, 'codigo', '0', 'listaCursosAtivos', 'Referencia de Curso', 85, 259, '-', '1', 'Novo curso', '0 ', '0', '1', '1', '0', 'ativo/=/AND/1', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
-INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (242, 'form', 4, 'codigo', '0', 'listaCursosDisponiveis', 'Projeto de Curso Concluído', 9, 242, '-', '1', '0', '0 ', '0', '0', '1', '0', 'turmas/>/AND/0', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (186, 'form', 334, 'codigopessoa', '0', 'listaopCobranca', 'Opção de Cobrança', 49, 130, '-', NULL, 'Novo Registro', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (135, 'form', 335, 'codigoturma', '0', 'turmaDisciplinas', 'Disciplinas da turma', 12, 133, 'TTurma/getCargaHoraria', '0', 'Associar disciplina', '0 ', '1', '0', '0', '0', NULL, '1', 'multiple', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (233, 'form', 337, 'codigoareacurso', '0', 'relProfAreas', 'Professores Relacionados', 75, 176, '-', '0', 'Novo Registro', '0 ', '1', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
@@ -6327,7 +6338,6 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (168, 'form', 347, 'codigousuario', '0', 'listaPrivilegios', 'Privilégios', 40, 167, '-', '1', 'Novo Privilegio', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (194, 'form', 348, 'codigoturmadisciplina', '0', 'lsitObs', 'Observações', 28, 199, '-', '0', '0', '0 ', '0', '0', '0', '0', 'obs/!=/AND//', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (232, 'form', 351, 'codigoprofessor', '0', 'relAreaProfessor', 'Áreas Relacionadas', 75, 137, '-', '0', 'Novo Registro', '0 ', '1', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
-INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (243, 'form', 353, 'codigocurso', '0', 'listaDisciplinas', 'Disciplinas', 10, 242, '-', '0', '0', '0 ', '0', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (198, 'form', 356, 'codigoprojeto', '0', 'listProjetoCustos', 'Custos', 59, 195, '-', '0', 'Novo Registro', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (239, 'form', 358, 'codigoscorecard', '0', 'scorecardSentencas', 'Sentenças a Analisar', 78, 238, '-', '0', 'Nova Sentença', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (224, 'form', 359, 'codigodepartamento', '0', 'listPessoasDep', 'Funcionários', 14, 223, '-', '0', '0', '0 ', '0', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
@@ -6350,6 +6360,8 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (236, 'form', 371, 'codigotransacao', '0', 'listaTransacaoContasView', 'Contas a receber', 65, 206, '-', '0', '0', '0 ', '0', '1', '1', '0', 'tipomovimentacao/=/AND/C;statusconta::bigint/in/AND/(1,3)', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (157, 'form', 338, 'codigofuncionario', '0', 'listaParticipantes', 'Participantes', 34, 156, '-', '0', 'Novo Participante', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (164, 'form', 339, 'codigofornecedor', '0', 'listaProdutosFornecedor', 'Insumos', 38, 160, '-', '0', 'Novo Produto', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
+INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (243, 'form', 3, 'codigocurso', '0', 'listaDisciplinas', 'Disciplinas', 10, 242, '-', '0', '0', '0 ', '0', '0', '0', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
+INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (242, 'form', 475, 'codigo', '0', 'listaCursosDisponiveis', 'Projeto de Curso Concluído', 9, 242, '-', '1', '0', '0 ', '0', '1', '0', '0', 'turmas/>/AND/0', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (310, 'pesq', 310, 'codigocurso', 'codigocurso=codigo', 'pesqCursosConcluidos', 'Cursos Disponíveis', 9, 310, '-', '1', '0', '0 ', '0', '0', '0', '1', 'ativo/!=/AND/8;ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (207, 'form', 372, 'codigotransacao', '0', 'addProdutosC', 'Produtos', 67, 206, 'TTransacao/viewValorTotal', '0', 'Novo Produto', '0 ', '1', '0', '1', '0', NULL, '1', 'one', 'setValorTotalTransacao()', 'transacaoProdutos', '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (214, 'form', 376, 'codigotransacao', '0', 'addProdutosD', 'Produtos', 67, 214, 'TTransacao/viewValorTotal', '0', 'Novo Produto', '0 ', '1', '0', '1', '0', NULL, '1', 'one', 'setValorTotalTransacao()', 'transacaoProdutos', '0', '0', 'id/desc', '1');
@@ -6381,6 +6393,7 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (206, 'form', 67, 'codigo', '0', 'formTransacaoC', 'Transações de Crédito', 66, 206, '-', '1', 'Novo', '0 ', '1', '1', '1', '0', 'tipomovimentacao/=/AND/C', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (272, 'pesq', 270, 'codigo', 'codigocdu=codigo>titulo', 'pesqClassificacaoCdu', 'ClassificacoesCdeu', 86, 272, '-', '1', 'Nova Classificação', '0 ', '0', '0', '0', '1', 'ativo/=/AND/1', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (208, 'pesq', 68, 'codigo', 'valornominal=valor,codigoproduto=codigo,tabelaproduto=tabela', 'pesqProdutosC', 'Produto', 70, 208, '-', '1', '1', '0 ', '1', '0', '0', '1', 'codigotipoproduto/!=/AND/10004330-830', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
+INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (477, 'form', 476, 'codigocurso', '0', 'listDisciplinas', 'Disciplinas', 10, 242, 'TCurso/getCargaHoraria', '0', '0', '0 ', '0', '0', '0', '0', 'ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 
 
 --

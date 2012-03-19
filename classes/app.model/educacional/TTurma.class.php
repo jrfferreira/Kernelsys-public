@@ -5,6 +5,7 @@
  * @date 20/01/2010
 */
 
+
 class TTurma {
 
     private $obTDbo = NULL;
@@ -330,7 +331,7 @@ class TTurma {
      * @param string $idForm
      */
     public function addTurmaDisciplina($idForm){
-
+    	
         $obCurso = false;
         $obHeader = new TSetHeader();
         $headerForm = $obHeader->getHead($idForm);
@@ -365,6 +366,8 @@ class TTurma {
                $discs_av[] = $ret['codigo'];
            }
         }
+        
+        return $discs_av;
     }
     /**
      * Calcura, atualiza e retorna a carga horaria da turma

@@ -37,31 +37,31 @@ SET search_path = public, pg_catalog;
 
 CREATE FUNCTION atualiza_pessoa_funcionario() RETURNS trigger
     LANGUAGE plpgsql
-    AS 'DECLARE
+    AS $$DECLARE
 	codigos INTEGER;
     BEGIN
-        IF (TG_OP = ''DELETE'') THEN
+        IF (TG_OP = 'DELETE') THEN
             DELETE FROM dbpessoas_funcionarios WHERE codigopessoa = OLD.codigo;
             RETURN OLD;
-        ELSIF (TG_OP = ''UPDATE'') THEN
-            IF (NEW.funcionario = ''1'') THEN
+        ELSIF (TG_OP = 'UPDATE') THEN
+            IF (NEW.funcionario = '1') THEN
 		    select count(codigo) into codigos from dbpessoas_funcionarios where codigopessoa = NEW.codigo;
 		    IF codigos > 0 THEN
 		      RETURN NULL;
 		    ELSE
-		       INSERT INTO dbpessoas_funcionarios (codigopessoa,unidade,codigoautor,ativo) values (NEW.codigo,NEW.unidade,NEW.codigoautor,''8'');
+		       INSERT INTO dbpessoas_funcionarios (codigopessoa,unidade,codigoautor,ativo) values (NEW.codigo,NEW.unidade,NEW.codigoautor,'8');
 		    END IF;
             ELSE
 		DELETE FROM dbpessoas_funcionarios WHERE codigopessoa = NEW.codigo;
             END IF;
             RETURN NEW;
-        ELSIF (TG_OP = ''INSERT'') THEN
-            IF (NEW.funcionario = ''1'') THEN
+        ELSIF (TG_OP = 'INSERT') THEN
+            IF (NEW.funcionario = '1') THEN
 		    select codigo from dbpessoas_funcionarios where codigopessoa = NEW.codigo;
 		    IF FOUND THEN
 			RETURN NULL;
 		    ELSE
-		       INSERT INTO dbpessoas_funcionarios (codigopessoa,unidade,codigoautor,ativo) values (NEW.codigo,NEW.unidade,NEW.codigoautor,''8'');
+		       INSERT INTO dbpessoas_funcionarios (codigopessoa,unidade,codigoautor,ativo) values (NEW.codigo,NEW.unidade,NEW.codigoautor,'8');
 		    END IF;
             ELSE            
 		    RETURN NULL;
@@ -69,7 +69,7 @@ CREATE FUNCTION atualiza_pessoa_funcionario() RETURNS trigger
             RETURN NEW;
         END IF;
         RETURN NULL;
-    END;';
+    END;$$;
 
 
 SET search_path = dominio, pg_catalog;

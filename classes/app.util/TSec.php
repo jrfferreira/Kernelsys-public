@@ -6,7 +6,6 @@
  */
 
 function __autoload($classe){
-
     include_once('autoload.class.php');
     $autoload = new autoload('../',$classe);
 }
@@ -27,7 +26,9 @@ else if($_POST){
      $param = $_POST;
 }
 
+
 if($param['classe'] and $param['metodo']){
+	
 
     $method  = $param['metodo'];
     $classe  = $param['classe'];

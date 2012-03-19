@@ -9,7 +9,7 @@ class autoload {
 	
 	public $nivelatual = 1;
 	public $niveis = 10;
-	public $mapfile = '../app.tmp/mapfile.php';
+	public $mapfile = '../app.util/fileMap.php';
 	
 
     public function __construct($nvl, $classe, $raiz = NULL) {
@@ -64,6 +64,12 @@ class autoload {
     	require_once($this->mapfile);
 
     	$classMap = new fileMap();
+    	
+    	$classPath = $classMap->getClasses($classe);
+    	if($classPath != false){
+    		include_once($classPath);
+    		return true;
+    	}
     	
 	    if( is_array( $classMap->getClasses() ) ){ 
 	        foreach( $classMap->getClasses() as $key=> $val ) 
