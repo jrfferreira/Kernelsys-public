@@ -50,4 +50,3 @@ class TSetMascaras{
         return $data;
     }
 }
-?>

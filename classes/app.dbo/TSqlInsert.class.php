@@ -67,4 +67,3 @@ final class TSqlInsert extends TSqlInstruction{
         return $this->sql;
     }
 }
-?>

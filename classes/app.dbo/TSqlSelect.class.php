@@ -70,4 +70,3 @@ final class TSqlSelect extends TSqlInstruction{
         return $this->sql;
     }
 }
-?>

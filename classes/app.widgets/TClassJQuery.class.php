@@ -16,6 +16,3 @@ class TClassJQuery{
     const CLASS_UI_H2                      = "ui-h2";
 
 }
-
-
-?>

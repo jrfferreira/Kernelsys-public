@@ -112,10 +112,14 @@ class TKrs {
 
 	public function sortBy(&$items, $key){
 	  if (is_array($items)){
-	    return usort($items, @function($a, $b) use ($key){
-	      return strCmp($a[$key], $b[$key]);
-	    });
+	  	$_REQUEST['key'] = $key;
+	    return usort($items, "krsSort");
 	  }
 	  return false;
 	}
+}
+
+function krsSort ($a, $b){
+	$key = $_REQUEST['key'];
+	return strCmp($a[$key], $b[$key]);	
 }

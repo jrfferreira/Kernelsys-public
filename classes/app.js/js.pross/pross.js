@@ -113,39 +113,6 @@ function multiSelect_pross(obj, idForm, entity, codigo, incontrol, tipoForm){
 
 // executa funções das funcionalidades [formulários / listas]
 
-/* Conservando prossExe atual 
-function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
-    var condiction = true;
-    //configura os dados do filtro
-    var valField = setFiltro(idForm);
-    if(confirme!=""){
-        if(!confirm(confirme)){
-            condiction = false;
-        }
-    }
-
-    if(condiction==true){
-        if(obRetorno!= ""){
-            var view = obRetorno;
-        }
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
-
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(tipoObjeto == 'lista'){
-                jQuery('#'+view).html(retorno);
-            }else{
-                jQuery('#'+view).append(retorno);
-            }
-            atribuicao();
-        }
-    }
-}
-*/
 function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
 
     //var condiction = true;
@@ -169,21 +136,23 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
                     if(obRetorno!= ""){
                         var view = obRetorno;
                     }
-                    //compAction(metodo, key);                    
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
-
-
-                    var erro = getErro(retorno);
-                    if(erro == 'erro'){
-                        setRertonoControl(idForm, retorno);
-                    }else{
-                        if(tipoObjeto == 'lista'){
-                            jQuery('#'+view).html(retorno);
+                    
+                    callback = function(retorno){
+                    	var erro = getErro(retorno);
+                        if(erro == 'erro'){
+                            setRertonoControl(idForm, retorno);
                         }else{
-                            jQuery('#'+view).append(retorno);
+                            if(tipoObjeto == 'lista'){
+                                jQuery('#'+view).html(retorno);
+                            }else{
+                                jQuery('#'+view).append(retorno);
+                            }
+                            atribuicao();
                         }
-                        atribuicao();
-                    }
+                    };
+                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);
+
+                    
                 }
             }
         });
@@ -193,20 +162,23 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
         if(obRetorno!= ""){
             var view = obRetorno;
         }
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
 
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(tipoObjeto == 'lista'){
-                jQuery('#'+view).html(retorno);
+        callback = function(retorno){
+        	var erro = getErro(retorno);
+            if(erro == 'erro'){
+                setRertonoControl(idForm, retorno);
             }else{
-                jQuery('#'+view).append(retorno);
+                if(tipoObjeto == 'lista'){
+                    jQuery('#'+view).html(retorno);
+                }else{
+                    jQuery('#'+view).append(retorno);
+                }
+                atribuicao();
             }
-            atribuicao();
-        }
+        };
+        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso',callback);
+
+        
     }
 }
 

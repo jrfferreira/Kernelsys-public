@@ -25,4 +25,3 @@ class TPanel extends TElement{
         $this->class = 'tpanel';
     }
 }
-?>

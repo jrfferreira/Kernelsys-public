@@ -187,5 +187,3 @@ $pageSys->add($content);
 //$pageSys->add($DRodaPe);
 
 $pageSys->show();
-
-?>

@@ -6,5 +6,3 @@
 class campos_x_propriedadesRecord extends TRecord{
 
 }
-
-?>

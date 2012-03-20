@@ -285,4 +285,3 @@ abstract class TRecord{
 	}
 	
 }
-?>

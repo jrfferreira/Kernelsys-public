@@ -93,4 +93,3 @@ function _t($word)
 {
 	return TTranslation::Translate($word);
 }
-?>

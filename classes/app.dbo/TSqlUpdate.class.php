@@ -73,4 +73,3 @@ final class TSqlUpdate extends TSqlInstruction
         return $this->sql;
     }
 }
-?>

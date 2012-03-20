@@ -2,78 +2,72 @@
  * function Ajax.JQuery para execuÃ§Ãµes mult-threads
 */
 
-function exe(alvo, setUrl, dados, tipoReq, msg){
+function exe(alvo, setUrl, dados, tipoReq, msg, callback){
 	
-/*    if(tipoReq == 'GET'){
-        var rand = "&rand="+new Date().getTime();
-    }else{
-        var rand = "?rand="+new Date().getTime();
-    }
-    setUrl = setUrl+rand;*/
-    
     retorno = false;
-
-    if(arguments[5]){
-        var async = arguments[5];
+    
+    if(typeof(callback) == 'function'){
+    	asyncRequest = true;
     }else{
-        var async = false;
+    	asyncRequest = false;
     }
-    
-    
-    //alert(setUrl);
-    
-    $(document).ready(function(){
-       
+          
       //executa se o alvo de retorno for verdadeiro
         if(alvo != ''){
-
+        	if(typeof(callback) == 'function'){
+        		jQuery.data(jQuery('#'+alvo),'callbackFunction',callback);
+     	    }
           $.ajax({
-
                type: tipoReq,
                url: setUrl,
-               //context: document.element,
+               context: jQuery('#'+alvo),
                data:dados,
+               dataType: 'html',
                cache: false,
                async: true,
                beforeSend: function(){
                     $('#loading-status').removeClass().addClass('ui-ajax-loading');
                },
                success: function(ret){
-             	       	  
-            	   //document.getElementById(alvo).innerHTML = ret;
-                   jQuery('#'+alvo).html(ret);
+             	    $(this).html(ret);
+             	    callback = jQuery.data(jQuery('#'+alvo),'callbackFunction');
+	             	   if(typeof(callback) == 'function'){
+	             		 callback(ret);  
+	             	   }             	    
                },
                error: function(XMLHttpRequest, textStatus, erro){
-
             	   $('#loading-status').removeClass().addClass('ui-ajax-error');
-            	   alertPetrus("Ouve uma falhar ao executar a ação.\n\nERRO\n["+erro+"]", 'Falha na requisição');
-                   
+            	   alertPetrus("Ouve uma falhar ao executar a ação.\n\nERRO\n["+erro+"]", 'Falha na requisição');                   
                }
           });
-
         }else{//Executa se o alvo de retorno for vasio rentornado o valor da solicitacao ajax
-
-        	retorno = $.ajax({
-
+        	if(typeof(callback) == 'function'){
+     	    	callbackFunction = callback;
+     	    }else{
+     	    	callbackFunction = function(ret){     	    						  
+					            	   return ret;
+					               };
+     	    }
+        	$.ajax({
 	               type: tipoReq,
 	               url: setUrl,
-	               //context: document.element,
 	               data:dados,
 	               cache: false,
-	               async: false,
+	               async: asyncRequest,
+	               dataType: 'html',
 	               beforeSend: function(){
 	                    $('#loading-status').removeClass().addClass('ui-ajax-loading');
 	               },
-	               success: function(ret){},
+	               success: function(ret){
+	            	   var retorno = callbackFunction(ret);
+	            	   return retorno;
+	               },
 	               error: function(XMLHttpRequest, textStatus, erro){
 	                   $('#loading-status').removeClass().addClass('ui-ajax-error');
 	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexÃ£o.\n\nERRO - ["+e.getMessage+"]");
 	               }
-
-        	}).responseText;
+        	});
         }
-
-    });
     if(retorno){
         return retorno;
     }

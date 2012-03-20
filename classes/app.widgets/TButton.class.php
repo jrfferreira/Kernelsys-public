@@ -75,4 +75,3 @@ class TButton extends TField{
 		
     }
 }
-?>

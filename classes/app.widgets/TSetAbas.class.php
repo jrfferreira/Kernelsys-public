@@ -79,5 +79,3 @@ class TSetAbas extends TForm {
     }
 
 }
-
-?>

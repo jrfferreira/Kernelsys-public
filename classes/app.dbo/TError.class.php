@@ -11,4 +11,3 @@ class TError
         return $this->Message;
     }
 }
-?>

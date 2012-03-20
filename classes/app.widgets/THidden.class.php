@@ -19,4 +19,3 @@ class THidden extends TField{
         $this->tag->show();
     }
 }
-?>

@@ -38,5 +38,3 @@ function __autoload($classe){
 	}
 	
 	$divM->show();
-
-?>

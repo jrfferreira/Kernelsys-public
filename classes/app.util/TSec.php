@@ -61,5 +61,3 @@ if($param['classe'] and $param['metodo']){
      // lança exeção de erro na execução da sql
      new setException("Os argumentos basicos [classe - metodo] não foram encontrados. TSec.php - Line 9");
 }
-
-?>

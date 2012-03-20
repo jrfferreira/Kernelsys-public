@@ -167,6 +167,3 @@ class TForm{
     }
 
 }// fim da class
-
-
-?>

@@ -847,6 +847,3 @@ class TPrivilegios {
         }
     }
 }
-
-
-?>

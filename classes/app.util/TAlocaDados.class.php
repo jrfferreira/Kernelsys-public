@@ -35,4 +35,3 @@ class TAlocaDados {
         return $dado;
     }
 }
-?>

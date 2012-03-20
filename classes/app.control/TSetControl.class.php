@@ -620,5 +620,3 @@ class TSetControl {
         return $vl;
     }
 }
-
-?>

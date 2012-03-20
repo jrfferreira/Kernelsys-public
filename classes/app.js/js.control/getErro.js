@@ -1,5 +1,5 @@
 function getErro(retorno){
-if(retorno){
+if(retorno && typeof(retorno) == 'string'){
     var erro = retorno.slice(0,5);
     if(erro == 'erro#'){
         erro = 'erro';

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Apresenta metodos para validação e manipulação da camada de
+ * Apresenta metodos para validaï¿½ï¿½o e manipulaï¿½ï¿½o da camada de
  * Modelo de negocios do sistema.
- * (Camada que gerencia o fluxo de dados e os converte em informações
+ * (Camada que gerencia o fluxo de dados e os converte em informaï¿½ï¿½es
  * para serem retornados a camada visual)
  * @author Wagne Borba
  * @date 27/01/2010
@@ -401,4 +401,3 @@ class TSetModel {
 
 
 }
-?>

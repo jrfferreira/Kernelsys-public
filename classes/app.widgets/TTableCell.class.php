@@ -15,4 +15,3 @@ class TTableCell extends TElement{
         parent::add($value);
     }
 }
-?>

@@ -56,4 +56,3 @@ const CAIXA_STATUSCAIXAATUAL                = "statusCaixaAtual";
 
 const INTERFACE_ZINDEX                      = "zIndex";
 }
-?>

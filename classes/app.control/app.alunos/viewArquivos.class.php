@@ -342,5 +342,3 @@ class viewArquivos {
         return $this->ob;
     }
 }
-
-?>

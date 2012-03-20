@@ -335,5 +335,3 @@ class viewOrientacoes{
         return $this->ob;
     }
 }
-
-?>

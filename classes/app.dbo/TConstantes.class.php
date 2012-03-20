@@ -2,7 +2,7 @@
 /**
  * Classe TConstantes
  *
- * author Jo�o Felix
+ * author Joao Felix
  */
 class TConstantes{
 	
@@ -110,4 +110,3 @@ class TConstantes{
 
      
 }
-?>

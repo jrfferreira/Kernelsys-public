@@ -104,5 +104,3 @@ if($_POST['upload_form'] && $_POST['upload_codigo'] && $_POST['upload_campo']){
             }
         }
 }
-
-?>

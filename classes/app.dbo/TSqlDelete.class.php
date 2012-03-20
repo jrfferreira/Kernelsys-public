@@ -29,4 +29,3 @@ final class TSqlDelete extends TSqlInstruction
         return $this->sql;
     }
 }
-?>

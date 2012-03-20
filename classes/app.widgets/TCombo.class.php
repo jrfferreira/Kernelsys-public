@@ -122,4 +122,3 @@ class TCombo extends TField {
         $this->tag->show();
     }
 }
-?>

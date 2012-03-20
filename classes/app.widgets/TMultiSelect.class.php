@@ -116,6 +116,3 @@ class TMultiSelect extends TField {
         $this->tag->show();
     }
 }
-
-
-?>

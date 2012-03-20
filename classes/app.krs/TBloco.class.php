@@ -177,4 +177,3 @@ class TBloco{
 		return $this->campos;
 	}
 }
-?>

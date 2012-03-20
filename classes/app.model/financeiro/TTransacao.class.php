@@ -1059,7 +1059,6 @@ class TTransacao {
      * @param $idForm = ID do formulário em questão.
      */
     public function setContasNegociacao($idForm) {
-
         try {
             $TProduto = new TProduto();
 
@@ -1081,7 +1080,7 @@ class TTransacao {
                 $retTransacao = $dbotransacao->select('codigo,codigopessoa,codigoplanoconta,tipomovimentacao', $crit);
 
                 $obTransacao = $retTransacao->fetchObject();
-
+                
                 $transacao = array();
                 $transacao['codigopessoa'] = $obTransacao->codigopessoa;
                 $transacao['codigoplanoconta'] = $obTransacao->codigoplanoconta;
@@ -1130,7 +1129,7 @@ class TTransacao {
                             throw new ErrorException("Não foi possível concluir. A ação foi cancelada.", 1);
                         }
                     }
-
+                    
                     $transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
                     $up = $transaction->update(array('statusconta' => '6'), $critUpdate);
                     if ($up) {
@@ -1570,5 +1569,3 @@ class TTransacao {
         return $texto;
     }
 }
-
-?>

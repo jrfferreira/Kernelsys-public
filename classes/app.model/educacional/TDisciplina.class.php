@@ -38,4 +38,3 @@ class TDisciplina{
         return $this->obDisciplina;
     }
 }
-?>

@@ -342,7 +342,6 @@ class TTurma {
         $headerLista = $obHeader->getHead($headerForm['idLista'],'listaSelecao');
         $TurmaDiciplinas = $this->getDiciplinas($data['codigoturma']);
 
-        //print_r($headerLista);
         $dbo = new TDbo(TConstantes::DBCURSOS_DISCIPLINAS);
         $crit = new TCriteria();
         foreach($headerLista as $ch=>$vl){
@@ -548,4 +547,3 @@ class TTurma {
         return $headerForm['codigocurso']['valor'];
     }
 }
-?>

@@ -257,4 +257,3 @@ class relatorioCaixaR{
 		return $this->obCont;
 	}
 }
-?>

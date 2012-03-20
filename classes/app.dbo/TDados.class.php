@@ -164,8 +164,3 @@ class TDados {
     }
 
 }
-
-//$ob = new TDados(1);
-//print_r($ob->get());
-
-?>

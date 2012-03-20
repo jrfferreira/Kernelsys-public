@@ -23,4 +23,3 @@ abstract class TLogger
     // define o método write como obrigat�rio
     abstract function write($message);
 }
-?>

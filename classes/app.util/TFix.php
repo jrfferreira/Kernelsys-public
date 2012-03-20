@@ -75,5 +75,3 @@ Class TFix{
 
 $fix = new TFix();
 $fix->redefineUsuarios();
-
-?>
