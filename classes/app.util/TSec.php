@@ -6,6 +6,7 @@
  */
 
 function __autoload($classe){
+
     include_once('autoload.class.php');
     $autoload = new autoload('../',$classe);
 }
@@ -26,9 +27,7 @@ else if($_POST){
      $param = $_POST;
 }
 
-
 if($param['classe'] and $param['metodo']){
-	
 
     $method  = $param['metodo'];
     $classe  = $param['classe'];
@@ -61,3 +60,5 @@ if($param['classe'] and $param['metodo']){
      // lança exeção de erro na execução da sql
      new setException("Os argumentos basicos [classe - metodo] não foram encontrados. TSec.php - Line 9");
 }
+
+?>

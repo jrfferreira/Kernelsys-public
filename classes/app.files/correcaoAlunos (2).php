@@ -85,3 +85,5 @@ foreach($a as $obAluno){
 	 
 
 }
+
+?>

@@ -28,3 +28,4 @@ class TSeparator extends TField
         echo "</div>";
     }
 }
+?>

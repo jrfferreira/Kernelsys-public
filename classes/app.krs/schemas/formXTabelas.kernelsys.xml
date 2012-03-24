@@ -37,12 +37,6 @@
       <tabelaid>12</tabelaid>
       <ativo>1</ativo>
     </row>
-    <row id="14">
-      <id>14</id>
-      <formid>5</formid>
-      <tabelaid>13</tabelaid>
-      <ativo>1</ativo>
-    </row>
     <row id="15">
       <id>15</id>
       <formid>6</formid>
@@ -71,18 +65,6 @@
       <id>19</id>
       <formid>10</formid>
       <tabelaid>18</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="20">
-      <id>20</id>
-      <formid>11</formid>
-      <tabelaid>19</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="21">
-      <id>21</id>
-      <formid>12</formid>
-      <tabelaid>20</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="22">
@@ -241,18 +223,6 @@
       <tabelaid>50</tabelaid>
       <ativo>1</ativo>
     </row>
-    <row id="55">
-      <id>55</id>
-      <formid>32</formid>
-      <tabelaid>51</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="56">
-      <id>56</id>
-      <formid>32</formid>
-      <tabelaid>52</tabelaid>
-      <ativo>1</ativo>
-    </row>
     <row id="57">
       <id>57</id>
       <formid>47</formid>
@@ -347,12 +317,6 @@
       <id>77</id>
       <formid>69</formid>
       <tabelaid>11</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="78">
-      <id>78</id>
-      <formid>1</formid>
-      <tabelaid>5</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="79">
@@ -577,12 +541,6 @@
       <tabelaid>2</tabelaid>
       <ativo>1</ativo>
     </row>
-    <row id="123">
-      <id>123</id>
-      <formid>264</formid>
-      <tabelaid>0</tabelaid>
-      <ativo>1</ativo>
-    </row>
     <row id="127">
       <id>127</id>
       <formid>18</formid>
@@ -593,12 +551,6 @@
       <id>128</id>
       <formid>311</formid>
       <tabelaid>9</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="126">
-      <id>126</id>
-      <formid>270</formid>
-      <tabelaid>88</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="130">
@@ -637,12 +589,6 @@
       <tabelaid>12</tabelaid>
       <ativo>1</ativo>
     </row>
-    <row id="137">
-      <id>137</id>
-      <formid>336</formid>
-      <tabelaid>0</tabelaid>
-      <ativo>1</ativo>
-    </row>
     <row id="138">
       <id>138</id>
       <formid>337</formid>
@@ -665,12 +611,6 @@
       <id>141</id>
       <formid>340</formid>
       <tabelaid>38</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="142">
-      <id>142</id>
-      <formid>341</formid>
-      <tabelaid>43</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="143">
@@ -713,18 +653,6 @@
       <id>149</id>
       <formid>348</formid>
       <tabelaid>28</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="150">
-      <id>150</id>
-      <formid>349</formid>
-      <tabelaid>43</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="151">
-      <id>151</id>
-      <formid>350</formid>
-      <tabelaid>43</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="152">
@@ -785,18 +713,6 @@
       <id>161</id>
       <formid>360</formid>
       <tabelaid>56</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="162">
-      <id>162</id>
-      <formid>361</formid>
-      <tabelaid>34</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="163">
-      <id>163</id>
-      <formid>362</formid>
-      <tabelaid>0</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="164">
@@ -881,12 +797,6 @@
       <id>177</id>
       <formid>376</formid>
       <tabelaid>67</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="178">
-      <id>178</id>
-      <formid>377</formid>
-      <tabelaid>0</tabelaid>
       <ativo>1</ativo>
     </row>
     <row id="179">
@@ -1015,71 +925,17 @@
       <tabelaid>25</tabelaid>
       <ativo>1</ativo>
     </row>
-    <row id="199">
-      <id>199</id>
-      <formid>1</formid>
-      <tabelaid>43</tabelaid>
-      <ativo>1</ativo>
-    </row>
     <row id="200">
       <id>200</id>
       <formid>1</formid>
       <tabelaid>89</tabelaid>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
     </row>
-    <row id="201">
-      <id>201</id>
-      <formid>463</formid>
-      <tabelaid>105</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="202">
-      <id>202</id>
-      <formid>464</formid>
-      <tabelaid>106</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="203">
-      <id>203</id>
-      <formid>465</formid>
-      <tabelaid>107</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="204">
-      <id>204</id>
-      <formid>467</formid>
-      <tabelaid>108</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="205">
-      <id>205</id>
-      <formid>468</formid>
-      <tabelaid>108</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="206">
-      <id>206</id>
-      <formid>474</formid>
-      <tabelaid>26</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="207">
-      <id>207</id>
-      <formid>450</formid>
-      <tabelaid>103</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="208">
-      <id>208</id>
-      <formid>475</formid>
-      <tabelaid>9</tabelaid>
-      <ativo>1</ativo>
-    </row>
-    <row id="209">
-      <id>209</id>
-      <formid>475</formid>
-      <tabelaid>10</tabelaid>
-      <ativo>1</ativo>
+    <row id="78">
+      <id>78</id>
+      <formid>1</formid>
+      <tabelaid>5</tabelaid>
+      <ativo>0</ativo>
     </row>
   </formXTabelas>
 </kernelsys>

@@ -128,3 +128,4 @@ class TMenu {
 }
 
 $obMenu = new TMenu($_GET['id']);
+?>

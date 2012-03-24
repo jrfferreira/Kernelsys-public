@@ -39,3 +39,4 @@ if($cods['codatual'] != "" and $cods['codant'] != "" and $cods['ridform']){
         $executor->onEdit();
 		//header('Location: ../app.view/TExecs.class.php?method=onEdit()&iidForm='.$cods['ridform']);
 }
+?>

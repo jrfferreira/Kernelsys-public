@@ -51,3 +51,4 @@ abstract class TSqlInstruction
      */
     abstract function getInstruction();
 }
+?>

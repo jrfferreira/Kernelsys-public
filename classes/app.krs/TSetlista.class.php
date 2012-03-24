@@ -716,7 +716,7 @@ class TSetlista {
         	$vetorRegistro = json_decode($registro);
         	
             if($action == '1'){
-                $listaSelecao[$vetorRegistro[0]] = $vetorRegistro[0];
+                $listaSelecao[$vetorRegistro[0]] = $registro;
             }elseif($action == '2'){
                 unset($listaSelecao[$vetorRegistro[0]]);
             }
@@ -1138,3 +1138,5 @@ class TSetlista {
     }
 
 }
+
+?>

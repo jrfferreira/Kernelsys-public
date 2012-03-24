@@ -69,3 +69,4 @@ class TQuestion
         $painel->show();
     }
 }
+?>

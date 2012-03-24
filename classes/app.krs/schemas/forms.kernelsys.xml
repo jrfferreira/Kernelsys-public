@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <forms>
-    <row id="4">
-      <id>4</id>
-      <form>cadcursos</form>
-      <nomeform>Projeto de Curso</nomeform>
-      <entidade>9</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>132</idlista>
+    <row id="342">
+      <id>342</id>
+      <form>form_blocoListaInteresses</form>
+      <nomeform>Interesses</nomeform>
+      <entidade>48</entidade>
+      <ativo>0</ativo>
+      <formpai>1</formpai>
+      <idlista>183</idlista>
       <formainclude>one</formainclude>
       <dimensao></dimensao>
       <botconcluir>1</botconcluir>
@@ -16,119 +16,14 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="6">
-      <id>6</id>
-      <form>cadFuncionario</form>
-      <nomeform>Cadastro de Funcionario</nomeform>
-      <entidade>81</entidade>
-      <ativo>1</ativo>
+    <row id="43">
+      <id>43</id>
+      <form>formDemanda</form>
+      <nomeform>Demanda</nomeform>
+      <entidade>48</entidade>
+      <ativo>0</ativo>
       <formpai></formpai>
-      <idlista>136</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="9">
-      <id>9</id>
-      <form>duplicatas</form>
-      <nomeform>Duplicatas</nomeform>
-      <entidade>17</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>139</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="10">
-      <id>10</id>
-      <form>contasCaixa</form>
-      <nomeform>Conta Caixa</nomeform>
-      <entidade>18</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>140</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="11">
-      <id>11</id>
-      <form>contasDebito</form>
-      <nomeform>Contas a pagar</nomeform>
-      <entidade>19</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>141</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="12">
-      <id>12</id>
-      <form>contasCredito</form>
-      <nomeform>Contas a receber</nomeform>
-      <entidade>20</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>142</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="14">
-      <id>14</id>
-      <form>matricula</form>
-      <nomeform>Matrícula</nomeform>
-      <entidade>16</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>147</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="16">
-      <id>16</id>
-      <form>listaProdutos</form>
-      <nomeform>Cursos</nomeform>
-      <entidade>11</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>149</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="17">
-      <id>17</id>
-      <form>contaCaixa</form>
-      <nomeform>Contas Caixa</nomeform>
-      <entidade>24</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>151</idlista>
+      <idlista>185</idlista>
       <formainclude>one</formainclude>
       <dimensao></dimensao>
       <botconcluir>1</botconcluir>
@@ -151,719 +46,29 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="20">
-      <id>20</id>
-      <form>curriculos</form>
-      <nomeform>Curriculos</nomeform>
-      <entidade>30</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>154</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="22">
-      <id>22</id>
-      <form>treinamentos</form>
-      <nomeform>Treinamentos</nomeform>
-      <entidade>33</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>156</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="24">
-      <id>24</id>
-      <form>filiais</form>
-      <nomeform>Filiais</nomeform>
-      <entidade>35</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>158</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="25">
-      <id>25</id>
-      <form>inadiplencia</form>
-      <nomeform>Inadimplência</nomeform>
-      <entidade>20</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>159</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="26">
-      <id>26</id>
-      <form>fornecedores</form>
-      <nomeform>Fornecedores</nomeform>
-      <entidade>1</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>160</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="27">
-      <id>27</id>
-      <form>produtosInsumo</form>
-      <nomeform>Insumos</nomeform>
-      <entidade>37</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>161</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TProduto/formOutFunction</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="28">
-      <id>28</id>
-      <form>cotacao</form>
-      <nomeform>Cotação</nomeform>
-      <entidade>38</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="31">
-      <id>31</id>
-      <form>formUsuarios</form>
-      <nomeform>Usuários</nomeform>
-      <entidade>26</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>167</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="32">
-      <id>32</id>
-      <form>formPrivilegios</form>
-      <nomeform>Privilégios</nomeform>
-      <entidade>40</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="33">
-      <id>33</id>
-      <form>formFerias</form>
-      <nomeform>Férias</nomeform>
-      <entidade>41</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>171</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="34">
-      <id>34</id>
-      <form>formSalas</form>
-      <nomeform>Salas</nomeform>
-      <entidade>44</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>174</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="36">
-      <id>36</id>
-      <form>formAlunoHistorico</form>
-      <nomeform>Histórico do Aluno</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="37">
-      <id>37</id>
-      <form>demanda</form>
-      <nomeform>Demanda</nomeform>
-      <entidade>16</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>177</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="38">
-      <id>38</id>
-      <form>solicitacoes</form>
-      <nomeform>Solicitações</nomeform>
-      <entidade>46</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>178</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="39">
-      <id>39</id>
-      <form>areaCurso</form>
-      <nomeform>Áreas de curso</nomeform>
-      <entidade>45</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>176</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="40">
-      <id>40</id>
-      <form>formCompras</form>
-      <nomeform>Compras</nomeform>
-      <entidade>47</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>179</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="43">
-      <id>43</id>
-      <form>formDemanda</form>
-      <nomeform>Demanda</nomeform>
-      <entidade>48</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>185</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="44">
-      <id>44</id>
-      <form>balancoPatrimonial</form>
-      <nomeform>Balanço Patrimonial</nomeform>
-      <entidade>32</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="45">
-      <id>45</id>
-      <form>dre</form>
-      <nomeform>DRE</nomeform>
+    <row id="403">
+      <id>403</id>
+      <form>detalhesConsolidacaoCaixa</form>
+      <nomeform>Detalhes</nomeform>
       <entidade>0</entidade>
       <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
+      <formpai>392</formpai>
+      <idlista>391</idlista>
+      <formainclude>multiple</formainclude>
       <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="46">
-      <id>46</id>
-      <form>parametros</form>
-      <nomeform>Parametros do Sistema</nomeform>
-      <entidade>50</entidade>
+    <row id="4">
+      <id>4</id>
+      <form>cadcursos</form>
+      <nomeform>Projeto de Curso</nomeform>
+      <entidade>9</entidade>
       <ativo>1</ativo>
       <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="48">
-      <id>48</id>
-      <form>cadmateriais</form>
-      <nomeform>Materiais Didáticos</nomeform>
-      <entidade>53</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="49">
-      <id>49</id>
-      <form>fechamentoCaixa</form>
-      <nomeform>Fechamento de Caixa</nomeform>
-      <entidade>54</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="50">
-      <id>50</id>
-      <form>duplicatasAlunos</form>
-      <nomeform>Boletos</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="51">
-      <id>51</id>
-      <form>contasFolhaPag</form>
-      <nomeform>Folha de Pagamento</nomeform>
-      <entidade>55</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>190</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="52">
-      <id>52</id>
-      <form>notasAluno</form>
-      <nomeform>Notas</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="53">
-      <id>53</id>
-      <form>faltasAlunos</form>
-      <nomeform>Faltas</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="54">
-      <id>54</id>
-      <form>HistAcadem</form>
-      <nomeform>Histórico Acadêmico</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="57">
-      <id>57</id>
-      <form>formProjetos</form>
-      <nomeform>Projetos</nomeform>
-      <entidade>58</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>195</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>setProduto/formOutFunction</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="59">
-      <id>59</id>
-      <form>gerenciamentoTurmas</form>
-      <nomeform>Gerenciamento de Turmas</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>200</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="61">
-      <id>61</id>
-      <form>geraDisciplina</form>
-      <nomeform>Gera Disciplina</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="62">
-      <id>62</id>
-      <form>orientacoesearquivos</form>
-      <nomeform>Orientações e Arquivos</nomeform>
-      <entidade>63</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="64">
-      <id>64</id>
-      <form>extorno</form>
-      <nomeform>Extorno de Caixa</nomeform>
-      <entidade>64</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>203</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="65">
-      <id>65</id>
-      <form>pesqExtornoDebito</form>
-      <nomeform>Extornar Débito</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="69">
-      <id>69</id>
-      <form>turmasCanceladas</form>
-      <nomeform>Turmas Canceladas</nomeform>
-      <entidade>11</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>209</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="71">
-      <id>71</id>
-      <form>gerenciaPessoas</form>
-      <nomeform>Pessoas</nomeform>
-      <entidade>1</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>212</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="72">
-      <id>72</id>
-      <form>transacaoD</form>
-      <nomeform>Transação de Débito</nomeform>
-      <entidade>66</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>213</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="74">
-      <id>74</id>
-      <form>listaPresenca</form>
-      <nomeform>Lista de Presença</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>217</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="75">
-      <id>75</id>
-      <form>cadProdutos</form>
-      <nomeform>Produtos</nomeform>
-      <entidade>70</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>218</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="77">
-      <id>77</id>
-      <form>departamentos</form>
-      <nomeform>Departamentos</nomeform>
-      <entidade>74</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>223</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="78">
-      <id>78</id>
-      <form>solicitacoesEncaminhadas</form>
-      <nomeform>Solicitações Encaminhadas</nomeform>
-      <entidade>46</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>227</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="79">
-      <id>79</id>
-      <form>produtosTurma</form>
-      <nomeform>Turmas</nomeform>
-      <entidade>70</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>228</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="80">
-      <id>80</id>
-      <form>listFuncDemitidos</form>
-      <nomeform>Funcionários Demitidos</nomeform>
-      <entidade>14</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>231</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="82">
-      <id>82</id>
-      <form>turmasConcluidas</form>
-      <nomeform>Turmas Concluidas</nomeform>
-      <entidade>11</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>234</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="84">
-      <id>84</id>
-      <form>scorecard</form>
-      <nomeform>Scorecard</nomeform>
-      <entidade>77</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>238</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="85">
-      <id>85</id>
-      <form>cadCursoTipo</form>
-      <nomeform>Tipos de curso</nomeform>
-      <entidade>80</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>240</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="86">
-      <id>86</id>
-      <form>alunosInativos</form>
-      <nomeform>Alunos Inativos</nomeform>
-      <entidade>56</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>241</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="89">
-      <id>89</id>
-      <form>gerenciaQuestionarios</form>
-      <nomeform>Gerenciar Questionários</nomeform>
-      <entidade>82</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>244</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="90">
-      <id>90</id>
-      <form>cursosAtivos</form>
-      <nomeform>Cursos Ativos</nomeform>
-      <entidade>85</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>259</idlista>
+      <idlista>132</idlista>
       <formainclude>one</formainclude>
       <dimensao></dimensao>
       <botconcluir>1</botconcluir>
@@ -886,11 +91,11 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="261">
-      <id>261</id>
-      <form>lancaNotas</form>
-      <nomeform>Lançamento de Notas</nomeform>
-      <entidade>27</entidade>
+    <row id="52">
+      <id>52</id>
+      <form>notasAluno</form>
+      <nomeform>Notas</nomeform>
+      <entidade>0</entidade>
       <ativo>1</ativo>
       <formpai></formpai>
       <idlista>0</idlista>
@@ -898,231 +103,6 @@
       <dimensao></dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="264">
-      <id>264</id>
-      <form>locacaoLivros</form>
-      <nomeform>Lista de Locações</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>265</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="266">
-      <id>266</id>
-      <form>reservaLivros</form>
-      <nomeform>Lista de Reservas</nomeform>
-      <entidade>87</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>268</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="267">
-      <id>267</id>
-      <form>devolucaoLivros</form>
-      <nomeform>Lista de Devoluções</nomeform>
-      <entidade>87</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>269</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="273">
-      <id>273</id>
-      <form>consultaLivros</form>
-      <nomeform>Livros</nomeform>
-      <entidade>76</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>274</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="275">
-      <id>275</id>
-      <form>formDevolucaoBiblioteca</form>
-      <nomeform>Devolução de Livros</nomeform>
-      <entidade>87</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="332">
-      <id>332</id>
-      <form>caixaPessoas</form>
-      <nomeform>Funcionários Caixa</nomeform>
-      <entidade>94</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>335</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="348">
-      <id>348</id>
-      <form>form_blocolistObs</form>
-      <nomeform>-</nomeform>
-      <entidade>28</entidade>
-      <ativo>1</ativo>
-      <formpai>58</formpai>
-      <idlista>194</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="349">
-      <id>349</id>
-      <form>form_blocoFormacao</form>
-      <nomeform>Formação</nomeform>
-      <entidade>43</entidade>
-      <ativo>1</ativo>
-      <formpai>6</formpai>
-      <idlista>229</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="350">
-      <id>350</id>
-      <form>form_blocoFormProf</form>
-      <nomeform>Formação</nomeform>
-      <entidade>43</entidade>
-      <ativo>1</ativo>
-      <formpai>7</formpai>
-      <idlista>230</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="351">
-      <id>351</id>
-      <form>form_blocoAreasProf</form>
-      <nomeform>Áreas Relacionadas</nomeform>
-      <entidade>75</entidade>
-      <ativo>1</ativo>
-      <formpai>7</formpai>
-      <idlista>232</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>500;150</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="356">
-      <id>356</id>
-      <form>form_blprojetoCusto</form>
-      <nomeform>-</nomeform>
-      <entidade>59</entidade>
-      <ativo>1</ativo>
-      <formpai>57</formpai>
-      <idlista>198</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="357">
-      <id>357</id>
-      <form>form_blocQuestinarioQuestoes</form>
-      <nomeform>-</nomeform>
-      <entidade>83</entidade>
-      <ativo>1</ativo>
-      <formpai>89</formpai>
-      <idlista>245</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="358">
-      <id>358</id>
-      <form>form_scorecardSentenças</form>
-      <nomeform>-</nomeform>
-      <entidade>78</entidade>
-      <ativo>1</ativo>
-      <formpai>84</formpai>
-      <idlista>239</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="359">
-      <id>359</id>
-      <form>form_blocoDepartamentoPessoas</form>
-      <nomeform>-</nomeform>
-      <entidade>14</entidade>
-      <ativo>1</ativo>
-      <formpai>77</formpai>
-      <idlista>224</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="403">
-      <id>403</id>
-      <form>detalhesConsolidacaoCaixa</form>
-      <nomeform>Detalhes</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai>392</formpai>
-      <idlista>391</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
@@ -1138,6 +118,21 @@
       <dimensao>500;250</dimensao>
       <botconcluir>0</botconcluir>
       <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="351">
+      <id>351</id>
+      <form>form_blocoAreasProf</form>
+      <nomeform>Áreas Relacionadas</nomeform>
+      <entidade>75</entidade>
+      <ativo>1</ativo>
+      <formpai>7</formpai>
+      <idlista>232</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>500;150</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
@@ -1186,6 +181,1881 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
+    <row id="348">
+      <id>348</id>
+      <form>form_blocolistObs</form>
+      <nomeform>-</nomeform>
+      <entidade>28</entidade>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <idlista>194</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="275">
+      <id>275</id>
+      <form>formDevolucaoBiblioteca</form>
+      <nomeform>Devolução de Livros</nomeform>
+      <entidade>87</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="273">
+      <id>273</id>
+      <form>consultaLivros</form>
+      <nomeform>Livros</nomeform>
+      <entidade>76</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>274</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="267">
+      <id>267</id>
+      <form>devolucaoLivros</form>
+      <nomeform>Lista de Devoluções</nomeform>
+      <entidade>87</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>269</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="266">
+      <id>266</id>
+      <form>reservaLivros</form>
+      <nomeform>Lista de Reservas</nomeform>
+      <entidade>87</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>268</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="264">
+      <id>264</id>
+      <form>locacaoLivros</form>
+      <nomeform>Lista de Locações</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>265</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="261">
+      <id>261</id>
+      <form>lancaNotas</form>
+      <nomeform>Lançamento de Notas</nomeform>
+      <entidade>27</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="90">
+      <id>90</id>
+      <form>cursosAtivos</form>
+      <nomeform>Cursos Ativos</nomeform>
+      <entidade>85</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>259</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="89">
+      <id>89</id>
+      <form>gerenciaQuestionarios</form>
+      <nomeform>Gerenciar Questionários</nomeform>
+      <entidade>82</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>244</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="86">
+      <id>86</id>
+      <form>alunosInativos</form>
+      <nomeform>Alunos Inativos</nomeform>
+      <entidade>56</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>241</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="85">
+      <id>85</id>
+      <form>cadCursoTipo</form>
+      <nomeform>Tipos de curso</nomeform>
+      <entidade>80</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>240</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="84">
+      <id>84</id>
+      <form>scorecard</form>
+      <nomeform>Scorecard</nomeform>
+      <entidade>77</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>238</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="82">
+      <id>82</id>
+      <form>turmasConcluidas</form>
+      <nomeform>Turmas Concluidas</nomeform>
+      <entidade>11</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>234</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="80">
+      <id>80</id>
+      <form>listFuncDemitidos</form>
+      <nomeform>Funcionários Demitidos</nomeform>
+      <entidade>14</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>231</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="79">
+      <id>79</id>
+      <form>produtosTurma</form>
+      <nomeform>Turmas</nomeform>
+      <entidade>70</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>228</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="78">
+      <id>78</id>
+      <form>solicitacoesEncaminhadas</form>
+      <nomeform>Solicitações Encaminhadas</nomeform>
+      <entidade>46</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>227</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="77">
+      <id>77</id>
+      <form>departamentos</form>
+      <nomeform>Departamentos</nomeform>
+      <entidade>74</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>223</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="76">
+      <id>76</id>
+      <form>solicitacoesAlun</form>
+      <nomeform>Solicitações</nomeform>
+      <entidade>46</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>222</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="75">
+      <id>75</id>
+      <form>cadProdutos</form>
+      <nomeform>Produtos</nomeform>
+      <entidade>70</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>218</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="74">
+      <id>74</id>
+      <form>listaPresenca</form>
+      <nomeform>Lista de Presença</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>217</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="71">
+      <id>71</id>
+      <form>gerenciaPessoas</form>
+      <nomeform>Pessoas</nomeform>
+      <entidade>1</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>212</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="69">
+      <id>69</id>
+      <form>turmasCanceladas</form>
+      <nomeform>Turmas Canceladas</nomeform>
+      <entidade>11</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>209</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="65">
+      <id>65</id>
+      <form>pesqExtornoDebito</form>
+      <nomeform>Extornar Débito</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="64">
+      <id>64</id>
+      <form>extorno</form>
+      <nomeform>Extorno de Caixa</nomeform>
+      <entidade>64</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>203</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="62">
+      <id>62</id>
+      <form>orientacoesearquivos</form>
+      <nomeform>Orientações e Arquivos</nomeform>
+      <entidade>63</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="61">
+      <id>61</id>
+      <form>geraDisciplina</form>
+      <nomeform>Gera Disciplina</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="59">
+      <id>59</id>
+      <form>gerenciamentoTurmas</form>
+      <nomeform>Gerenciamento de Turmas</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>200</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="58">
+      <id>58</id>
+      <form>diarioCoordenacao</form>
+      <nomeform>Diario Coordenacao</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>199</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="54">
+      <id>54</id>
+      <form>HistAcadem</form>
+      <nomeform>Histórico Acadêmico</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="53">
+      <id>53</id>
+      <form>faltasAlunos</form>
+      <nomeform>Faltas</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="51">
+      <id>51</id>
+      <form>contasFolhaPag</form>
+      <nomeform>Folha de Pagamento</nomeform>
+      <entidade>55</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>190</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="50">
+      <id>50</id>
+      <form>duplicatasAlunos</form>
+      <nomeform>Boletos</nomeform>
+      <entidade>22</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="49">
+      <id>49</id>
+      <form>fechamentoCaixa</form>
+      <nomeform>Fechamento de Caixa</nomeform>
+      <entidade>54</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="48">
+      <id>48</id>
+      <form>cadmateriais</form>
+      <nomeform>Materiais Didáticos</nomeform>
+      <entidade>53</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="46">
+      <id>46</id>
+      <form>parametros</form>
+      <nomeform>Parametros do Sistema</nomeform>
+      <entidade>50</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="45">
+      <id>45</id>
+      <form>dre</form>
+      <nomeform>DRE</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="44">
+      <id>44</id>
+      <form>balancoPatrimonial</form>
+      <nomeform>Balanço Patrimonial</nomeform>
+      <entidade>32</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="41">
+      <id>41</id>
+      <form>relatorioCaixa</form>
+      <nomeform>Relatório de Caixa</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="40">
+      <id>40</id>
+      <form>formCompras</form>
+      <nomeform>Compras</nomeform>
+      <entidade>47</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>179</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="39">
+      <id>39</id>
+      <form>areaCurso</form>
+      <nomeform>Áreas de curso</nomeform>
+      <entidade>45</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>176</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="38">
+      <id>38</id>
+      <form>solicitacoes</form>
+      <nomeform>Solicitações</nomeform>
+      <entidade>46</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>178</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="37">
+      <id>37</id>
+      <form>demanda</form>
+      <nomeform>Demanda</nomeform>
+      <entidade>16</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>177</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="36">
+      <id>36</id>
+      <form>formAlunoHistorico</form>
+      <nomeform>Histórico do Aluno</nomeform>
+      <entidade>22</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="34">
+      <id>34</id>
+      <form>formSalas</form>
+      <nomeform>Salas</nomeform>
+      <entidade>44</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>174</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="33">
+      <id>33</id>
+      <form>formFerias</form>
+      <nomeform>Férias</nomeform>
+      <entidade>41</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>171</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="32">
+      <id>32</id>
+      <form>formPrivilegios</form>
+      <nomeform>Privilégios</nomeform>
+      <entidade>40</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="31">
+      <id>31</id>
+      <form>formUsuarios</form>
+      <nomeform>Usuários</nomeform>
+      <entidade>26</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>167</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="28">
+      <id>28</id>
+      <form>cotacao</form>
+      <nomeform>Cotação</nomeform>
+      <entidade>38</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="26">
+      <id>26</id>
+      <form>fornecedores</form>
+      <nomeform>Fornecedores</nomeform>
+      <entidade>1</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>160</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="25">
+      <id>25</id>
+      <form>inadiplencia</form>
+      <nomeform>Inadimplência</nomeform>
+      <entidade>20</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>159</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="24">
+      <id>24</id>
+      <form>filiais</form>
+      <nomeform>Filiais</nomeform>
+      <entidade>35</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>158</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="22">
+      <id>22</id>
+      <form>treinamentos</form>
+      <nomeform>Treinamentos</nomeform>
+      <entidade>33</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>156</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="20">
+      <id>20</id>
+      <form>curriculos</form>
+      <nomeform>Curriculos</nomeform>
+      <entidade>30</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>154</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="17">
+      <id>17</id>
+      <form>contaCaixa</form>
+      <nomeform>Contas Caixa</nomeform>
+      <entidade>24</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>151</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="16">
+      <id>16</id>
+      <form>listaProdutos</form>
+      <nomeform>Cursos</nomeform>
+      <entidade>11</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>149</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="14">
+      <id>14</id>
+      <form>matricula</form>
+      <nomeform>Matrícula</nomeform>
+      <entidade>16</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>147</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="12">
+      <id>12</id>
+      <form>contasCredito</form>
+      <nomeform>Contas a receber</nomeform>
+      <entidade>20</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>142</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="11">
+      <id>11</id>
+      <form>contasDebito</form>
+      <nomeform>Contas a pagar</nomeform>
+      <entidade>19</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>141</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="10">
+      <id>10</id>
+      <form>contasCaixa</form>
+      <nomeform>Conta Caixa</nomeform>
+      <entidade>18</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>140</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="9">
+      <id>9</id>
+      <form>duplicatas</form>
+      <nomeform>Duplicatas</nomeform>
+      <entidade>17</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>139</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="7">
+      <id>7</id>
+      <form>cadProfessor</form>
+      <nomeform>Cadastro de Professor</nomeform>
+      <entidade>15</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>137</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="6">
+      <id>6</id>
+      <form>cadFuncionario</form>
+      <nomeform>Cadastro de Funcionario</nomeform>
+      <entidade>81</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>136</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="353">
+      <id>353</id>
+      <form>form_discCursoDisp</form>
+      <nomeform>Disciplinas do Curso</nomeform>
+      <entidade>10</entidade>
+      <ativo>1</ativo>
+      <formpai>87</formpai>
+      <idlista>243</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="3">
+      <id>3</id>
+      <form>caddisciplinas</form>
+      <nomeform>Cadastro de Disciplinas</nomeform>
+      <entidade>8</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>131</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="359">
+      <id>359</id>
+      <form>form_blocoDepartamentoPessoas</form>
+      <nomeform>-</nomeform>
+      <entidade>14</entidade>
+      <ativo>1</ativo>
+      <formpai>77</formpai>
+      <idlista>224</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="358">
+      <id>358</id>
+      <form>form_scorecardSentenças</form>
+      <nomeform>-</nomeform>
+      <entidade>78</entidade>
+      <ativo>1</ativo>
+      <formpai>84</formpai>
+      <idlista>239</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="357">
+      <id>357</id>
+      <form>form_blocQuestinarioQuestoes</form>
+      <nomeform>-</nomeform>
+      <entidade>83</entidade>
+      <ativo>1</ativo>
+      <formpai>89</formpai>
+      <idlista>245</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="356">
+      <id>356</id>
+      <form>form_blprojetoCusto</form>
+      <nomeform>-</nomeform>
+      <entidade>59</entidade>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <idlista>198</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="27">
+      <id>27</id>
+      <form>produtosInsumo</form>
+      <nomeform>Insumos</nomeform>
+      <entidade>37</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>161</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>TProduto/formOutFunction</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="57">
+      <id>57</id>
+      <form>formProjetos</form>
+      <nomeform>Projetos</nomeform>
+      <entidade>58</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>195</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>setProduto/formOutFunction</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="67">
+      <id>67</id>
+      <form>transacaoC</form>
+      <nomeform>Transação de Crédito</nomeform>
+      <entidade>66</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>206</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="72">
+      <id>72</id>
+      <form>transacaoD</form>
+      <nomeform>Transação de Débito</nomeform>
+      <entidade>66</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>213</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="332">
+      <id>332</id>
+      <form>caixaPessoas</form>
+      <nomeform>Funcionários Caixa</nomeform>
+      <entidade>94</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>335</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="347">
+      <id>347</id>
+      <form>form_privilegios</form>
+      <nomeform>-</nomeform>
+      <entidade>40</entidade>
+      <ativo>1</ativo>
+      <formpai>32</formpai>
+      <idlista>168</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="346">
+      <id>346</id>
+      <form>form_blprojetoRH</form>
+      <nomeform>-</nomeform>
+      <entidade>60</entidade>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <idlista>197</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="345">
+      <id>345</id>
+      <form>form_blprojetoRecursos</form>
+      <nomeform>-</nomeform>
+      <entidade>61</entidade>
+      <ativo>1</ativo>
+      <formpai>57</formpai>
+      <idlista>196</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="344">
+      <id>344</id>
+      <form>form_blocoOcorrencia</form>
+      <nomeform>Ocorrencia</nomeform>
+      <entidade>57</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>192</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="343">
+      <id>343</id>
+      <form>form_matdidaticos</form>
+      <nomeform>Lista de Materiais</nomeform>
+      <entidade>53</entidade>
+      <ativo>1</ativo>
+      <formpai>87</formpai>
+      <idlista>188</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="340">
+      <id>340</id>
+      <form>form_produtoCotacao</form>
+      <nomeform>Cotação do Produto</nomeform>
+      <entidade>38</entidade>
+      <ativo>1</ativo>
+      <formpai>27</formpai>
+      <idlista>162</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="339">
+      <id>339</id>
+      <form>form_fornecedoresProdutos</form>
+      <nomeform>Produtos</nomeform>
+      <entidade>38</entidade>
+      <ativo>1</ativo>
+      <formpai>26</formpai>
+      <idlista>164</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="338">
+      <id>338</id>
+      <form>form_blocoParticipantes</form>
+      <nomeform>Participantes</nomeform>
+      <entidade>34</entidade>
+      <ativo>1</ativo>
+      <formpai>22</formpai>
+      <idlista>157</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="337">
+      <id>337</id>
+      <form>form_blocoProfAreas</form>
+      <nomeform>Professores Relacionados</nomeform>
+      <entidade>75</entidade>
+      <ativo>1</ativo>
+      <formpai>39</formpai>
+      <idlista>233</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="336">
+      <id>336</id>
+      <form>form_datasDisciplinas</form>
+      <nomeform>Datas</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista></idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="324">
+      <id>324</id>
+      <form>formDescontosprog</form>
+      <nomeform>Descontos Progressivos</nomeform>
+      <entidade>92</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="320">
+      <id>320</id>
+      <form>cadconvenios</form>
+      <nomeform>Convênios</nomeform>
+      <entidade>89</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>321</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="311">
+      <id>311</id>
+      <form>formListaCursosDisponiveis</form>
+      <nomeform>Cursos Disponíveis</nomeform>
+      <entidade>9</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>314</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="87">
+      <id>87</id>
+      <form>cursosDisponiveis</form>
+      <nomeform>Cursos Disponiveis</nomeform>
+      <entidade>9</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>242</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="70">
+      <id>70</id>
+      <form>pesqContas</form>
+      <nomeform>Contas</nomeform>
+      <entidade>71</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="68">
+      <id>68</id>
+      <form>pesqProdutos</form>
+      <nomeform>Produtos</nomeform>
+      <entidade>70</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="66">
+      <id>66</id>
+      <form>pesqExtornoCredito</form>
+      <nomeform>Extornar Crédito</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="63">
+      <id>63</id>
+      <form>viewArquivos</form>
+      <nomeform>Orientações e Arquivos</nomeform>
+      <entidade>63</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="15">
+      <id>15</id>
+      <form>formAlunos</form>
+      <nomeform>Alunos</nomeform>
+      <entidade>22</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>148</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="30">
+      <id>30</id>
+      <form>formContratos</form>
+      <nomeform>Contratos</nomeform>
+      <entidade>39</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>166</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="29">
+      <id>29</id>
+      <form>formNegociacao</form>
+      <nomeform>Negociação</nomeform>
+      <entidade>66</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>163</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="376">
+      <id>376</id>
+      <form>form_lstProdutosTransacaoD</form>
+      <nomeform>Produtos</nomeform>
+      <entidade>67</entidade>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <idlista>214</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>800;400</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="334">
+      <id>334</id>
+      <form>form_cobranca</form>
+      <nomeform>Dados para Cobrança</nomeform>
+      <entidade>49</entidade>
+      <ativo>1</ativo>
+      <formpai>71</formpai>
+      <idlista>186</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="377">
+      <id>377</id>
+      <form>form_blocContasDebito</form>
+      <nomeform>Contas a Pagar</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="366">
+      <id>366</id>
+      <form>form_blocLancamentoNotas</form>
+      <nomeform>Avaliações</nomeform>
+      <entidade>27</entidade>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <idlista>263</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="364">
+      <id>364</id>
+      <form>form_blocoContMinistCoord</form>
+      <nomeform>-</nomeform>
+      <entidade>28</entidade>
+      <ativo>1</ativo>
+      <formpai>58</formpai>
+      <idlista>189</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="363">
+      <id>363</id>
+      <form>form_blJustFalta</form>
+      <nomeform>-</nomeform>
+      <entidade>25</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>216</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="362">
+      <id>362</id>
+      <form>form_blocoContMinistProf</form>
+      <nomeform>-</nomeform>
+      <entidade>0</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="361">
+      <id>361</id>
+      <form>form_listTreinamento</form>
+      <nomeform>-</nomeform>
+      <entidade>34</entidade>
+      <ativo>1</ativo>
+      <formpai>6</formpai>
+      <idlista>191</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="5">
+      <id>5</id>
+      <form>cadturmas</form>
+      <nomeform>Cadastro de turmas</nomeform>
+      <entidade>11</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>133</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>TTurma/setProduto</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="373">
+      <id>373</id>
+      <form>form_blocPessoaConvenios</form>
+      <nomeform>Lista de convênios</nomeform>
+      <entidade>90</entidade>
+      <ativo>1</ativo>
+      <formpai>1</formpai>
+      <idlista>322</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>800;450</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="374">
+      <id>374</id>
+      <form>form_blocDescProgressivos</form>
+      <nomeform>Descontos</nomeform>
+      <entidade>92</entidade>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <idlista>327</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>600;400</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="380">
+      <id>380</id>
+      <form>form_listacheques</form>
+      <nomeform>Lista de Cheques</nomeform>
+      <entidade>95</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>381</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="390">
+      <id>390</id>
+      <form>formblocMovimentoProgD</form>
+      <nomeform>Movimentos Programados</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai>383</formpai>
+      <idlista>388</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;550</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="8">
+      <id>8</id>
+      <form>fichaInscricao</form>
+      <nomeform>Ficha de inscrição</nomeform>
+      <entidade>16</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>138</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>2</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="378">
+      <id>378</id>
+      <form>form_cheques</form>
+      <nomeform>Cheques</nomeform>
+      <entidade>95</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>600;400</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="13">
+      <id>13</id>
+      <form>movimentoCaixaCredito</form>
+      <nomeform>Contas a Receber</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>144</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>Baixar Conta/2</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>TCaixa/baixaCaixa</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="333">
+      <id>333</id>
+      <form>movimentoCaixaDebito</form>
+      <nomeform>Contas a Pagar</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>144</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>Baixar conta</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>TCaixa/baixaCaixa</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="389">
+      <id>389</id>
+      <form>formblocMovimentoProgC</form>
+      <nomeform>Movimentos Programados</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai>383</formpai>
+      <idlista>382</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;550</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="383">
+      <id>383</id>
+      <form>formMovimentosProgramados</form>
+      <nomeform>Movimentos Programados</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>144</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="392">
+      <id>392</id>
+      <form>consolidacaoCaixa</form>
+      <nomeform>Consolidação de Caixa</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>391</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>Baixar conta</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="395">
+      <id>395</id>
+      <form>listaDisciplinasTurma</form>
+      <nomeform>Disciplinas</nomeform>
+      <entidade>10</entidade>
+      <ativo>1</ativo>
+      <formpai>335</formpai>
+      <idlista>396</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;600</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="393">
+      <id>393</id>
+      <form>listaDisciplinasCurso</form>
+      <nomeform>Disciplinas</nomeform>
+      <entidade>8</entidade>
+      <ativo>1</ativo>
+      <formpai>354</formpai>
+      <idlista>394</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;600</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="18">
+      <id>18</id>
+      <form>diarioEletronico</form>
+      <nomeform>Diário Elentrônico</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>193</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="370">
+      <id>370</id>
+      <form>form_blocoContMinistProf</form>
+      <nomeform>-</nomeform>
+      <entidade>28</entidade>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <idlista>279</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="368">
+      <id>368</id>
+      <form>form_blocolistObsProf</form>
+      <nomeform>-</nomeform>
+      <entidade>28</entidade>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <idlista>282</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="369">
+      <id>369</id>
+      <form>form_blocLancamentoNotas</form>
+      <nomeform>Avaliações</nomeform>
+      <entidade>27</entidade>
+      <ativo>1</ativo>
+      <formpai>18</formpai>
+      <idlista>283</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="375">
+      <id>375</id>
+      <form>form_blocOrientacoesArquivos</form>
+      <nomeform>Orientações e Arquivos</nomeform>
+      <entidade>63</entidade>
+      <ativo>1</ativo>
+      <formpai>399</formpai>
+      <idlista>202</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="60">
+      <id>60</id>
+      <form>planoAula</form>
+      <nomeform>Plano de Aula</nomeform>
+      <entidade>62</entidade>
+      <ativo>1</ativo>
+      <formpai>397</formpai>
+      <idlista>201</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="397">
+      <id>397</id>
+      <form>listaDisciplinasPlanoAulaProfessor</form>
+      <nomeform>Disciplinas</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>398</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="399">
+      <id>399</id>
+      <form>listaDIsciplinasOrientacoesArquivos</form>
+      <nomeform>Disciplinas</nomeform>
+      <entidade>12</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>402</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="328">
+      <id>328</id>
+      <form>alunosListaLivros</form>
+      <nomeform>Livros</nomeform>
+      <entidade>76</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>331</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;550</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
     <row id="335">
       <id>335</id>
       <form>form_inforDisciplinasTurma</form>
@@ -1196,6 +2066,96 @@
       <idlista>135</idlista>
       <formainclude>multiple</formainclude>
       <dimensao>900;550</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="352">
+      <id>352</id>
+      <form>form_listaContasNegociacao</form>
+      <nomeform>Contas a receber</nomeform>
+      <entidade>65</entidade>
+      <ativo>1</ativo>
+      <formpai>29</formpai>
+      <idlista>210</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="371">
+      <id>371</id>
+      <form>form_listContasTransacaoC</form>
+      <nomeform>Contas</nomeform>
+      <entidade>65</entidade>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <idlista>236</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>800;550</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="372">
+      <id>372</id>
+      <form>form_lstProdutosTransacaoC</form>
+      <nomeform>Produtos</nomeform>
+      <entidade>67</entidade>
+      <ativo>1</ativo>
+      <formpai>67</formpai>
+      <idlista>207</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="365">
+      <id>365</id>
+      <form>form_listContasTransacaoD</form>
+      <nomeform>Contas a pagar</nomeform>
+      <entidade>65</entidade>
+      <ativo>1</ativo>
+      <formpai>72</formpai>
+      <idlista>215</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>800;550</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="367">
+      <id>367</id>
+      <form>form_dAvaliacao</form>
+      <nomeform>Avaliações</nomeform>
+      <entidade>27</entidade>
+      <ativo>1</ativo>
+      <formpai>59</formpai>
+      <idlista>152</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="360">
+      <id>360</id>
+      <form>form_blocoListaDiscAluno</form>
+      <nomeform>-</nomeform>
+      <entidade>56</entidade>
+      <ativo>1</ativo>
+      <formpai>15</formpai>
+      <idlista>225</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>600;300</dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
@@ -1216,6 +2176,51 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
+    <row id="355">
+      <id>355</id>
+      <form>form_requisitosCurso</form>
+      <nomeform>Pré-requisitos da turma</nomeform>
+      <entidade>23</entidade>
+      <ativo>1</ativo>
+      <formpai>5</formpai>
+      <idlista>150</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>700;300</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="21">
+      <id>21</id>
+      <form>patrimonios</form>
+      <nomeform>Patrimonios</nomeform>
+      <entidade>32</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>155</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>TProduto/setProdutoParametro</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="354">
+      <id>354</id>
+      <form>form_discCurso</form>
+      <nomeform>Disciplinas do curso</nomeform>
+      <entidade>10</entidade>
+      <ativo>1</ativo>
+      <formpai>4</formpai>
+      <idlista>134</idlista>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
     <row id="418">
       <id>418</id>
       <form>historicoCaixa</form>
@@ -1228,6 +2233,21 @@
       <dimensao></dimensao>
       <botconcluir>0</botconcluir>
       <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="413">
+      <id>413</id>
+      <form>blocoDiscSemelhantes</form>
+      <nomeform>Disciplinas</nomeform>
+      <entidade>97</entidade>
+      <ativo>1</ativo>
+      <formpai>3</formpai>
+      <idlista>417</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>500;250</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
@@ -1276,6 +2296,21 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
+    <row id="426">
+      <id>426</id>
+      <form>Recados</form>
+      <nomeform>Anotações</nomeform>
+      <entidade>99</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>427</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
     <row id="429">
       <id>429</id>
       <form>aproveitamentoDisciplina</form>
@@ -1288,6 +2323,21 @@
       <dimensao></dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="431">
+      <id>431</id>
+      <form>processo-Abandono</form>
+      <nomeform>Processo Acadêmico: Abandono de Faltas</nomeform>
+      <entidade>22</entidade>
+      <ativo>1</ativo>
+      <formpai>15</formpai>
+      <idlista>0</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>0</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
@@ -1336,186 +2386,6 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="1">
-      <id>1</id>
-      <form>cadclientes</form>
-      <nomeform>Cadastro de Clientes</nomeform>
-      <entidade>1</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>130</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="5">
-      <id>5</id>
-      <form>cadturmas</form>
-      <nomeform>Cadastro de turmas</nomeform>
-      <entidade>11</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>133</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TTurma/setProduto</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="8">
-      <id>8</id>
-      <form>fichaInscricao</form>
-      <nomeform>Ficha de inscrição</nomeform>
-      <entidade>16</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>138</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>2</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="413">
-      <id>413</id>
-      <form>blocoDiscSemelhantes</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>97</entidade>
-      <ativo>1</ativo>
-      <formpai>3</formpai>
-      <idlista>417</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>500;250</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="18">
-      <id>18</id>
-      <form>diarioEletronico</form>
-      <nomeform>Diário Elentrônico</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>193</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="21">
-      <id>21</id>
-      <form>patrimonios</form>
-      <nomeform>Patrimonios</nomeform>
-      <entidade>32</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>155</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TProduto/setProdutoParametro</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="30">
-      <id>30</id>
-      <form>formContratos</form>
-      <nomeform>Contratos</nomeform>
-      <entidade>39</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>166</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="60">
-      <id>60</id>
-      <form>planoAula</form>
-      <nomeform>Plano de Aula</nomeform>
-      <entidade>62</entidade>
-      <ativo>1</ativo>
-      <formpai>397</formpai>
-      <idlista>201</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="63">
-      <id>63</id>
-      <form>viewArquivos</form>
-      <nomeform>Orientações e Arquivos</nomeform>
-      <entidade>63</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="66">
-      <id>66</id>
-      <form>pesqExtornoCredito</form>
-      <nomeform>Extornar Crédito</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="68">
-      <id>68</id>
-      <form>pesqProdutos</form>
-      <nomeform>Produtos</nomeform>
-      <entidade>70</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="70">
-      <id>70</id>
-      <form>pesqContas</form>
-      <nomeform>Contas</nomeform>
-      <entidade>71</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
     <row id="83">
       <id>83</id>
       <form>biblioteca</form>
@@ -1529,711 +2399,6 @@
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
       <formoutcontrol>TProduto/setProdutoParametro</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="87">
-      <id>87</id>
-      <form>cursosDisponiveis</form>
-      <nomeform>Cursos Disponiveis</nomeform>
-      <entidade>9</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>242</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="311">
-      <id>311</id>
-      <form>formListaCursosDisponiveis</form>
-      <nomeform>Cursos Disponíveis</nomeform>
-      <entidade>9</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>314</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="320">
-      <id>320</id>
-      <form>cadconvenios</form>
-      <nomeform>Convênios</nomeform>
-      <entidade>89</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>321</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="324">
-      <id>324</id>
-      <form>formDescontosprog</form>
-      <nomeform>Descontos Progressivos</nomeform>
-      <entidade>92</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="328">
-      <id>328</id>
-      <form>alunosListaLivros</form>
-      <nomeform>Livros</nomeform>
-      <entidade>76</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>331</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;550</dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="333">
-      <id>333</id>
-      <form>movimentoCaixaDebito</form>
-      <nomeform>Contas a Pagar</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>144</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>Baixar conta</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TCaixa/baixaCaixa</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="334">
-      <id>334</id>
-      <form>form_cobranca</form>
-      <nomeform>Dados para Cobrança</nomeform>
-      <entidade>49</entidade>
-      <ativo>1</ativo>
-      <formpai>71</formpai>
-      <idlista>186</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="336">
-      <id>336</id>
-      <form>form_datasDisciplinas</form>
-      <nomeform>Datas</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista></idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="337">
-      <id>337</id>
-      <form>form_blocoProfAreas</form>
-      <nomeform>Professores Relacionados</nomeform>
-      <entidade>75</entidade>
-      <ativo>1</ativo>
-      <formpai>39</formpai>
-      <idlista>233</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="338">
-      <id>338</id>
-      <form>form_blocoParticipantes</form>
-      <nomeform>Participantes</nomeform>
-      <entidade>34</entidade>
-      <ativo>1</ativo>
-      <formpai>22</formpai>
-      <idlista>157</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="339">
-      <id>339</id>
-      <form>form_fornecedoresProdutos</form>
-      <nomeform>Produtos</nomeform>
-      <entidade>38</entidade>
-      <ativo>1</ativo>
-      <formpai>26</formpai>
-      <idlista>164</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="340">
-      <id>340</id>
-      <form>form_produtoCotacao</form>
-      <nomeform>Cotação do Produto</nomeform>
-      <entidade>38</entidade>
-      <ativo>1</ativo>
-      <formpai>27</formpai>
-      <idlista>162</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="342">
-      <id>342</id>
-      <form>form_blocoListaInteresses</form>
-      <nomeform>Interesses</nomeform>
-      <entidade>48</entidade>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <idlista>183</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="343">
-      <id>343</id>
-      <form>form_matdidaticos</form>
-      <nomeform>Lista de Materiais</nomeform>
-      <entidade>53</entidade>
-      <ativo>1</ativo>
-      <formpai>87</formpai>
-      <idlista>188</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="344">
-      <id>344</id>
-      <form>form_blocoOcorrencia</form>
-      <nomeform>Ocorrencia</nomeform>
-      <entidade>57</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>192</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="345">
-      <id>345</id>
-      <form>form_blprojetoRecursos</form>
-      <nomeform>-</nomeform>
-      <entidade>61</entidade>
-      <ativo>1</ativo>
-      <formpai>57</formpai>
-      <idlista>196</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="346">
-      <id>346</id>
-      <form>form_blprojetoRH</form>
-      <nomeform>-</nomeform>
-      <entidade>60</entidade>
-      <ativo>1</ativo>
-      <formpai>57</formpai>
-      <idlista>197</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="347">
-      <id>347</id>
-      <form>form_privilegios</form>
-      <nomeform>-</nomeform>
-      <entidade>40</entidade>
-      <ativo>1</ativo>
-      <formpai>32</formpai>
-      <idlista>168</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="352">
-      <id>352</id>
-      <form>form_listaContasNegociacao</form>
-      <nomeform>Contas a receber</nomeform>
-      <entidade>65</entidade>
-      <ativo>1</ativo>
-      <formpai>29</formpai>
-      <idlista>210</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="354">
-      <id>354</id>
-      <form>form_discCurso</form>
-      <nomeform>Disciplinas do curso</nomeform>
-      <entidade>10</entidade>
-      <ativo>1</ativo>
-      <formpai>4</formpai>
-      <idlista>134</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="360">
-      <id>360</id>
-      <form>form_blocoListaDiscAluno</form>
-      <nomeform>-</nomeform>
-      <entidade>56</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>225</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>600;300</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="361">
-      <id>361</id>
-      <form>form_listTreinamento</form>
-      <nomeform>-</nomeform>
-      <entidade>34</entidade>
-      <ativo>1</ativo>
-      <formpai>6</formpai>
-      <idlista>191</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="362">
-      <id>362</id>
-      <form>form_blocoContMinistProf</form>
-      <nomeform>-</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="363">
-      <id>363</id>
-      <form>form_blJustFalta</form>
-      <nomeform>-</nomeform>
-      <entidade>25</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>216</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="364">
-      <id>364</id>
-      <form>form_blocoContMinistCoord</form>
-      <nomeform>-</nomeform>
-      <entidade>28</entidade>
-      <ativo>1</ativo>
-      <formpai>58</formpai>
-      <idlista>189</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="365">
-      <id>365</id>
-      <form>form_listContasTransacaoD</form>
-      <nomeform>Contas a pagar</nomeform>
-      <entidade>65</entidade>
-      <ativo>1</ativo>
-      <formpai>72</formpai>
-      <idlista>215</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>800;550</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="367">
-      <id>367</id>
-      <form>form_dAvaliacao</form>
-      <nomeform>Avaliações</nomeform>
-      <entidade>27</entidade>
-      <ativo>1</ativo>
-      <formpai>59</formpai>
-      <idlista>152</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="368">
-      <id>368</id>
-      <form>form_blocolistObsProf</form>
-      <nomeform>-</nomeform>
-      <entidade>28</entidade>
-      <ativo>1</ativo>
-      <formpai>18</formpai>
-      <idlista>282</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="369">
-      <id>369</id>
-      <form>form_blocLancamentoNotas</form>
-      <nomeform>Avaliações</nomeform>
-      <entidade>27</entidade>
-      <ativo>1</ativo>
-      <formpai>18</formpai>
-      <idlista>283</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="370">
-      <id>370</id>
-      <form>form_blocoContMinistProf</form>
-      <nomeform>-</nomeform>
-      <entidade>28</entidade>
-      <ativo>1</ativo>
-      <formpai>18</formpai>
-      <idlista>279</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="371">
-      <id>371</id>
-      <form>form_listContasTransacaoC</form>
-      <nomeform>Contas</nomeform>
-      <entidade>65</entidade>
-      <ativo>1</ativo>
-      <formpai>67</formpai>
-      <idlista>236</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>800;550</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="372">
-      <id>372</id>
-      <form>form_lstProdutosTransacaoC</form>
-      <nomeform>Produtos</nomeform>
-      <entidade>67</entidade>
-      <ativo>1</ativo>
-      <formpai>67</formpai>
-      <idlista>207</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="373">
-      <id>373</id>
-      <form>form_blocPessoaConvenios</form>
-      <nomeform>Lista de convênios</nomeform>
-      <entidade>90</entidade>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <idlista>322</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>800;450</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="374">
-      <id>374</id>
-      <form>form_blocDescProgressivos</form>
-      <nomeform>Descontos</nomeform>
-      <entidade>92</entidade>
-      <ativo>1</ativo>
-      <formpai>5</formpai>
-      <idlista>327</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>600;400</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="375">
-      <id>375</id>
-      <form>form_blocOrientacoesArquivos</form>
-      <nomeform>Orientações e Arquivos</nomeform>
-      <entidade>63</entidade>
-      <ativo>1</ativo>
-      <formpai>399</formpai>
-      <idlista>202</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="376">
-      <id>376</id>
-      <form>form_lstProdutosTransacaoD</form>
-      <nomeform>Produtos</nomeform>
-      <entidade>67</entidade>
-      <ativo>1</ativo>
-      <formpai>72</formpai>
-      <idlista>214</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>800;400</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="377">
-      <id>377</id>
-      <form>form_blocContasDebito</form>
-      <nomeform>Contas a Pagar</nomeform>
-      <entidade>0</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="378">
-      <id>378</id>
-      <form>form_cheques</form>
-      <nomeform>Cheques</nomeform>
-      <entidade>95</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>600;400</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="380">
-      <id>380</id>
-      <form>form_listacheques</form>
-      <nomeform>Lista de Cheques</nomeform>
-      <entidade>95</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>381</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="383">
-      <id>383</id>
-      <form>formMovimentosProgramados</form>
-      <nomeform>Movimentos Programados</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>144</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="389">
-      <id>389</id>
-      <form>formblocMovimentoProgC</form>
-      <nomeform>Movimentos Programados</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai>383</formpai>
-      <idlista>382</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;550</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="390">
-      <id>390</id>
-      <form>formblocMovimentoProgD</form>
-      <nomeform>Movimentos Programados</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai>383</formpai>
-      <idlista>388</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;550</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="392">
-      <id>392</id>
-      <form>consolidacaoCaixa</form>
-      <nomeform>Consolidação de Caixa</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>391</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>Baixar conta</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="393">
-      <id>393</id>
-      <form>listaDisciplinasCurso</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>8</entidade>
-      <ativo>1</ativo>
-      <formpai>354</formpai>
-      <idlista>394</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="395">
-      <id>395</id>
-      <form>listaDisciplinasTurma</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>10</entidade>
-      <ativo>1</ativo>
-      <formpai>335</formpai>
-      <idlista>396</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="397">
-      <id>397</id>
-      <form>listaDisciplinasPlanoAulaProfessor</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>398</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="426">
-      <id>426</id>
-      <form>Recados</form>
-      <nomeform>Anotações</nomeform>
-      <entidade>99</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>427</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
     <row id="435">
@@ -2356,21 +2521,6 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="29">
-      <id>29</id>
-      <form>formNegociacao</form>
-      <nomeform>Negociação</nomeform>
-      <entidade>66</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>163</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
     <row id="428">
       <id>428</id>
       <form>detAprovDsc</form>
@@ -2398,6 +2548,21 @@
       <dimensao>650;400</dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="270">
+      <id>270</id>
+      <form>bibliotecaCdu</form>
+      <nomeform>Classificação CDU</nomeform>
+      <entidade>86</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>271</idlista>
+      <formainclude>one</formainclude>
+      <dimensao>600;200</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
@@ -2461,481 +2626,16 @@
       <formoutcontrol>TConvenios/atualizaTransacao</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="3">
-      <id>3</id>
-      <form>caddisciplinas</form>
-      <nomeform>Cadastro de Disciplinas</nomeform>
-      <entidade>8</entidade>
+    <row id="1">
+      <id>1</id>
+      <form>cadclientes</form>
+      <nomeform>Cadastro de Clientes</nomeform>
+      <entidade>1</entidade>
       <ativo>1</ativo>
       <formpai></formpai>
-      <idlista>131</idlista>
+      <idlista>130</idlista>
       <formainclude>one</formainclude>
       <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="7">
-      <id>7</id>
-      <form>cadProfessor</form>
-      <nomeform>Cadastro de Professor</nomeform>
-      <entidade>15</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>137</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="13">
-      <id>13</id>
-      <form>movimentoCaixaCredito</form>
-      <nomeform>Contas a Receber</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>144</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>Baixar Conta/2</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TCaixa/baixaCaixa</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="41">
-      <id>41</id>
-      <form>relatorioCaixa</form>
-      <nomeform>Relatório de Caixa</nomeform>
-      <entidade>21</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="76">
-      <id>76</id>
-      <form>solicitacoesAlun</form>
-      <nomeform>Solicitações</nomeform>
-      <entidade>46</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>222</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="270">
-      <id>270</id>
-      <form>bibliotecaCdu</form>
-      <nomeform>Classificação CDU</nomeform>
-      <entidade>86</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>271</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>600;200</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="341">
-      <id>341</id>
-      <form>form_blocoClienteFormacao</form>
-      <nomeform>Formação Acadêmica</nomeform>
-      <entidade>43</entidade>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <idlista>173</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="353">
-      <id>353</id>
-      <form>form_discCursoDisp</form>
-      <nomeform>Disciplinas do Curso</nomeform>
-      <entidade>10</entidade>
-      <ativo>1</ativo>
-      <formpai>87</formpai>
-      <idlista>243</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="355">
-      <id>355</id>
-      <form>form_requisitosCurso</form>
-      <nomeform>Pré-requisitos da turma</nomeform>
-      <entidade>23</entidade>
-      <ativo>1</ativo>
-      <formpai>5</formpai>
-      <idlista>150</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>700;300</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="399">
-      <id>399</id>
-      <form>listaDIsciplinasOrientacoesArquivos</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>402</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="454">
-      <id>454</id>
-      <form>processo-RegularizacaoAlunoEspecial</form>
-      <nomeform>Processo Acadêmico: Regularização de Aluno Especial</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="459">
-      <id>459</id>
-      <form>formAlunoHistFinanceiro</form>
-      <nomeform>Histórico Financeiro</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>0</formpai>
-      <idlista>457</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="460">
-      <id>460</id>
-      <form>formAlunoProcAcademico</form>
-      <nomeform>Processos Acadêmicos</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>0</formpai>
-      <idlista>458</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="15">
-      <id>15</id>
-      <form>formAlunoHistAcademico</form>
-      <nomeform>Histórico Acadêmico</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>148</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>0</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="462">
-      <id>462</id>
-      <form>alunosDisciplinas</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>56</entidade>
-      <ativo>1</ativo>
-      <formpai>460</formpai>
-      <idlista>455</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="461">
-      <id>461</id>
-      <form>alunosDisciplinas</form>
-      <nomeform>Disciplinas</nomeform>
-      <entidade>56</entidade>
-      <ativo>1</ativo>
-      <formpai>460</formpai>
-      <idlista>456</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="463">
-      <id>463</id>
-      <form>formGradeAvaliacoes</form>
-      <nomeform>Grade de Avaliações</nomeform>
-      <entidade>105</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>466</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="464">
-      <id>464</id>
-      <form>formAvaliacoes</form>
-      <nomeform>Avaliações</nomeform>
-      <entidade>106</entidade>
-      <ativo>1</ativo>
-      <formpai>463</formpai>
-      <idlista>467</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="465">
-      <id>465</id>
-      <form>formAvaliacoesRegras</form>
-      <nomeform>Regras da Avaliação</nomeform>
-      <entidade>107</entidade>
-      <ativo>1</ativo>
-      <formpai>464</formpai>
-      <idlista>468</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="366">
-      <id>366</id>
-      <form>form_blocLancamentoNotas</form>
-      <nomeform>Avaliações</nomeform>
-      <entidade>27</entidade>
-      <ativo>1</ativo>
-      <formpai>58</formpai>
-      <idlista>263</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>800;400</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="58">
-      <id>58</id>
-      <form>diarioCoordenacao</form>
-      <nomeform>Diario Coordenacao</nomeform>
-      <entidade>12</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>199</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>700;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="467">
-      <id>467</id>
-      <form>formAvDescricao</form>
-      <nomeform>Descriminação da Avaliação</nomeform>
-      <entidade>108</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista></idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="468">
-      <id>468</id>
-      <form>formAvDescricao</form>
-      <nomeform>Descriminação da Avaliação</nomeform>
-      <entidade>108</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista></idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="469">
-      <id>469</id>
-      <form>formNotasAlunos</form>
-      <nomeform>Notas de Alunos</nomeform>
-      <entidade>109</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista></idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>1</autosave>
-    </row>
-    <row id="67">
-      <id>67</id>
-      <form>transacaoC</form>
-      <nomeform>Transação de Crédito</nomeform>
-      <entidade>66</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>206</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="471">
-      <id>471</id>
-      <form>processo-TransferenciaExterna</form>
-      <nomeform>Processo Acadêmico: Transferência Externa</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="472">
-      <id>472</id>
-      <form>processo-TransferenciaInterna</form>
-      <nomeform>Processo Acadêmico: Transferência Interna</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="473">
-      <id>473</id>
-      <form>processo-TrancamentoCurso</form>
-      <nomeform>Processo Acadêmico: Trancamento de Curso</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="431">
-      <id>431</id>
-      <form>processo-Abandono</form>
-      <nomeform>Processo Acadêmico: Abandono de Curso</nomeform>
-      <entidade>22</entidade>
-      <ativo>1</ativo>
-      <formpai>15</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>900;500</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="474">
-      <id>474</id>
-      <form>usuarioConfig</form>
-      <nomeform>Configurações de Usuário</nomeform>
-      <entidade>26</entidade>
-      <ativo>1</ativo>
-      <formpai>0</formpai>
-      <idlista>0</idlista>
-      <formainclude>one</formainclude>
-      <dimensao>500;200</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="475">
-      <id>475</id>
-      <form>cadcursosConcluido</form>
-      <nomeform>Projetos de Cursos Concluídos</nomeform>
-      <entidade>9</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>242</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
-    <row id="476">
-      <id>476</id>
-      <form>form_discCurso</form>
-      <nomeform>Disciplinas do curso</nomeform>
-      <entidade>10</entidade>
-      <ativo>1</ativo>
-      <formpai>4</formpai>
-      <idlista>477</idlista>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;500</dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>

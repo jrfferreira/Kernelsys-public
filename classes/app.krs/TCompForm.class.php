@@ -51,6 +51,7 @@ class TCompForm {
         $RetIdCampos = $this->obKDbo->select("*", $criteriaCamposBlocos);
 
         while($camposId = $RetIdCampos->fetchObject()) {
+        	
             $this->obKDbo->setEntidade('campos');
                 $criteriaCampos = new TCriteria();
                 $criteriaCampos->add(new TFilter('id','=',$camposId->campoid),'AND');
@@ -79,7 +80,7 @@ class TCompForm {
 
                 //==============================================================
                 // monta estrutura de campos na sessão
-                if($cmp->colunadb and $cmp->entidade != "0"){
+                if($cmp->colunadb and $cmp->colunadb!='codigo' and $cmp->entidade != "0"){
                     $infoCampos['idForm']      = $this->idForm;
                     $infoCampos['label']       = $cmp->label;
                     $infoCampos['entidade']    = $obTabela->tabela;
@@ -107,15 +108,15 @@ class TCompForm {
                 }else {
                    $tipoForm = "lista";
                 }
-                $cmp->funct = "pross(this,'".$this->idForm."','".$this->codigo."')";
-
-                if($cmp->autosave){
-                    $cmp->funct .= "; onSave('".$this->idForm."', false)";
+            
+                //Define se o campo sera gravando no banco de dados
+                if($cmp->colunadb!='codigo'){
+	                $cmp->manter = true;
+	                //$cmp->funct = "pross(this,'".$this->idForm."','".$this->codigo."')";
                 }
 
                 $agregFunc = NULL;
                 $inControl = NULL;
-
             }
 
             //aplica classes do JQuery nos campos ======================
@@ -180,7 +181,7 @@ class TCompForm {
         // retorna consulta no banco de propriedades
         while($props = $Result->fetchObject()) {
 
-            // verifica se a propriedade é uma addItems
+            // verifica se a propriedade � uma addItems
             if($props->metodo == "addItems") {
 
                 if(strpos($props->valor,"getItens/") !== false) {
@@ -275,13 +276,14 @@ class TCompForm {
                 $setCampo->setOutControl($dadosCampo->outcontrol);
                 $setCampo->setNome($dadosCampo->colunadb);
                 $setCampo->setLabel($dadosCampo->label);
-                    // atribui function de gravação do objeto [se abilitado]
-                    //if(empty($dadosCampo->funct)){
-                        $setCampo->setAction('onblur', $dadosCampo->funct);
-                        //$setCampo->setAction('onchange','$(this).blur()');
-                    //}
                 $setCampo->setCampo($key, $dadosCampo->tipo, $dadosCampo->seletorJQ);
                 $setCampo->setPropriedade('alteravel', $dadosCampo->alteravel);
+                    // atribui atribupto para gravação do objeto [se abilitado]
+                    if($dadosCampo->manter == true){
+                    	 $setCampo->setPropriedade('manter', 'true');
+                        //$setCampo->setAction('onblur', $dadosCampo->funct);
+                        //$setCampo->setAction('onchange','$(this).blur()');
+                    }
 
                     // verifica se o campo pode ser editado e atribui a propriedade somente leitura
                     if($this->editable){
@@ -326,7 +328,7 @@ class TCompForm {
                 }
 
                 //==================================================================
-                //compila valor padrão
+                //compila valor padr�o
                 if($dadosCampo->valorpadrao != "-"){
 
                     $vDefalt = $dadosCampo->valorpadrao;
@@ -336,16 +338,14 @@ class TCompForm {
                         $vDefalt = call_user_func(array($obValPadrao,$getfunc[2]));
                     }
 
-                    //armazena valor padrão em base de dados atravez dos paramentos do campo
-                    if(!empty($dadosCampo->entidade)){
-	                    $dboVPad = new TDbo($dadosCampo->entidade);
-	                    $cretiriaVpad = new TCriteria();
-	                    $cretiriaVpad->add(new TFilter('codigo','=',$dadosCampo->codigoregistro));
-	                    $cretiriaVpad->add(new TFilter($dadosCampo->colunadb,'is','null'));
-	                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
-                    }
+                    //armazena valor padr�o em base de dados atravez dos paramentos do campo
+                    $dboVPad = new TDbo($dadosCampo->entidade);
+                    $cretiriaVpad = new TCriteria();
+                    $cretiriaVpad->add(new TFilter('codigo','=',$dadosCampo->codigoregistro));
+                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
 
-                    //converte datas para o padrão internacional
+
+                    //converte datas para o padr�o internacional
                     $obMascara = new TSetMascaras();
                     $vDefalt = $obMascara->setData($vDefalt);
                 }
@@ -392,7 +392,7 @@ class TCompForm {
     
     /**
      * Metodo getCamp()
-     * Retorna um vetor com todos os campos (servirá de paramentro para TForm)
+     * Retorna um vetor com todos os campos (servir� de paramentro para TForm)
      * Autor: Wagner Borba
      */
     public function getCamp() {
@@ -403,3 +403,4 @@ class TCompForm {
 
 
 }
+?>

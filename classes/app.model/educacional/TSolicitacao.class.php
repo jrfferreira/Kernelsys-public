@@ -24,3 +24,4 @@ class TSolicitacao {
         return $retorno;
     }
 }
+?>

@@ -4,6 +4,8 @@
  * Autor : João Felix.
  * Atualizada: João Felix - 22/03/2010
  */
+
+
 class TProduto{
 
     private $dados = array();
@@ -502,3 +504,7 @@ class TProduto{
 
 
 }
+
+
+?>
+

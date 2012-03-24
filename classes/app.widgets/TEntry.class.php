@@ -30,3 +30,4 @@ class TEntry extends TField{
         $this->tag->show();
     }
 }
+?>

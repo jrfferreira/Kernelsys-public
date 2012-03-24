@@ -28,4 +28,5 @@ class setTipoMov{
 		
 		return $tp;
 	}
-}
+}	
+?>

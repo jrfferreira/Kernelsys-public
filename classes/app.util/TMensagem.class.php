@@ -71,8 +71,6 @@ class TMensagem{
 
      //Inscrição de alunos
      const ERRO_CODIGO_INSCRICAO        = "O codigo da inscrição não é válido";
-     
-     //TDados
-     const ERRO_VINCULO_TABELA_NAO_ENCONTRADO = "Não foi encontrado nenhum vínculo de tabela para este formulário.";
 
 }
+?>

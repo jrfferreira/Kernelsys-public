@@ -91,3 +91,4 @@ class TSession {
     	var_dump($_SESSION);
     }
 }
+?>

@@ -24,3 +24,5 @@ const CLASS_MULTISELECT                = "ui-jquery-multiselect";// atribui func
 const CLASS_UI_H2                      = "ui-h2";
 
 }
+
+?>

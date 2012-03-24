@@ -26,3 +26,4 @@ class TLogout{
 }
 
 new TLogout($_GET['occupant']);
+?>

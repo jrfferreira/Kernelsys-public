@@ -9,7 +9,7 @@ Programador: Wagner Borba
 /*
 * run()
 * Executa determinado método de acordo com
-* os parâmetros recebidos
+* os par�metros recebidos
 */
 if(!function_exists("__autoload") && !is_callable("__autoload")) {
     function __autoload($classe) {
@@ -26,6 +26,7 @@ if(!function_exists("__autoload") && !is_callable("__autoload")) {
  * metodo em questão
  */
 if ($_GET['method']) {
+			
     $method = $_GET['method'];
     $ObExec = new TExecs($method, $_GET);
 }
@@ -125,7 +126,7 @@ class TExecs {
     #############################################################################################
 
     /*
-    * Método getList()
+    * método getList()
     * Instancia objeto lista diretamente do TCompLista
     */
     public function getList() {
@@ -160,10 +161,10 @@ class TExecs {
     
     
     /**
-     * Método getform()
+     * método getform()
      * instancia objeto form
      */
-    public function getform($key, $dados = NULL) {
+    public function getform($key = NULL, $dados = NULL) {
         /**
          * armazena codigo do objeto(registro) em sessão para associações (chave estrangeira) dos objetos filhos
          */
@@ -174,12 +175,10 @@ class TExecs {
     
         /**
         * Instancia objeto lista principal
-        * usando DForm que monta o fomulário pai
+        * usando DForm que monta o fomul�rio pai
         * completo (form, aba, blocos e botões)
         */
         $OBform = new TForms($this->idForm, $key);
-        
-            
 
         if($dados){
             $OBform->setDados($dados);
@@ -193,10 +192,10 @@ class TExecs {
     }
 
      /**
-     * Gera registro inicial no formulário
+     * Abre o formulário para criar um novo registro
      */
     public function onNew() {
-
+    	
             //==============================================
             //aplica regras de negocio na inclusão da lista
             $retorno = $this->setInControl();
@@ -205,6 +204,7 @@ class TExecs {
         //grava status do formulário no cabeçalho
         $this->obHeader->addHeader($this->idForm, "status", 'new');
 
+        /*
         #-------- Gera novo registo no banco de dados --------#
         if($this->headerDados['formainclude'] == "one"){
             
@@ -233,26 +233,29 @@ class TExecs {
 
                 $codRegistro =  $codSecundario['codigo'];
             }
+            
+            
 
             #----------------------------------------------------#
             // Executa o formulario se o mesmo for solicitado
             $ObDados = new TDados($this->idForm, $codRegistro, $this->headerDados['tipo'], $this->entidadeForm);
-            $dados = $ObDados->get();
+           	$dados = $ObDados->get();
             
         }
         elseif($this->headerDados['formainclude'] == "multiple"){
             $codRegistro = null;
             $dados = null;
         }
+        */
 
-        $forms = $this->getform($codRegistro, $dados);
+        $forms = $this->getform();
     }
 
 
     /**
      * método onEdit
      * carrega os dados do registro no formulário
-     * param  $param = parâmetros passados via URL ($_GET) instanciado no contrutor
+     * param  $param = parámetros passados via URL ($_GET) instanciado no contrutor
      */
     public function onEdit() {
 
@@ -266,14 +269,14 @@ class TExecs {
             $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
             $dados = $ObDados->get();
             //Altera estatus do registro para edição - 8
-            if($dados['ativo'] == '1') {
-                $obStatus = new TStatus();
-                $obStatus->setStatus($dados['codigo'], $this->entidadeForm, $dados['ativo'], '8');
-            }
+//            if($dados['ativo'] == '1') {
+//                $obStatus = new TStatus();
+//                $obStatus->setStatus($dados['codigo'], $this->entidadeForm, $dados['ativo'], '8');
+//            }
         
 
             /**
-             * armazena ID do registro em questão para registro de histórico
+             * armazena ID do registro em questão para registro de hist�rico
              * de movemento do sistema
              */
             $this->obsession->setValue('statusFormEdition', 'editando');
@@ -293,7 +296,7 @@ class TExecs {
     }
 
     /*
-    * Gera um formulário imdependente
+    * Gera um formulário independente
     * onSet precisa ser reavaliado
     */
     public function onFormOpen() {
@@ -323,7 +326,7 @@ class TExecs {
             //grava status do formulário no cabeçalho
             $this->obHeader->addHeader($this->idForm, "status", 'view');
 
-            // obtém o objeto pelo ID
+            // obt�m o objeto pelo ID
             $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
             $dados = $ObDados->get();
 
@@ -362,18 +365,33 @@ class TExecs {
      */
     function onSave(){
     	
-    	$dados = $this->headerDados;
-
-        $camposSession = $this->headerDados['camposSession'];
-        $codigo    = $this->headerDados['codigo'];
-
+    		//atribui o valor aos campos
+    		$dados = $this->headerDados;
+	        $camposSession = $this->headerDados['camposSession'];
+	        $dadosForm = $_POST;
+			
+			foreach($dadosForm as $nomeCampo=>$valorCampo){
+			    if($camposSession){
+			        $campoAtual = $camposSession[$nomeCampo];
+			        $campoAtual['valor']  = $valorCampo;
+			        $campoAtual['status'] = 0;
+			        
+			        $camposSession[$nomeCampo] = $campoAtual;
+			    }
+			}
+			//atualiza a auteração na sessão
+			$this->obHeader->addHeader($this->idForm, 'camposSession',  $camposSession);  
+			
+        $codigo= $this->headerDados['codigo'];
+        
+        
         if($camposSession){
 
                 $unidade = $this->obUser->unidade->codigo;
                 $codigoPai = $this->headerDados['codigoPai'];
                 // recupera campo de destino do codigo armazenado em sessão
                 $destinoCodigo = $this->headerDados['destinocodigo'];//"codigo";
-
+                
             $obControl = new TSetControl();
             $codigoRetorno = 'erro#0';
 
@@ -381,7 +399,7 @@ class TExecs {
             foreach($camposSession as $campo=>$infoCampo){
 
                         //=====================================================================
-                        //valida campos obrigatórios
+                        //valida campos obrigatários
                         if($infoCampo['obrigatorio'] == '1'){
                             $retornoValidaNulos = $obControl->setNulos($infoCampo['label'], $infoCampo['valor']);
 
@@ -421,56 +439,62 @@ class TExecs {
 
                 //percorre os campos agrupados por entidade e grava em banco
                 if(count($dadosCampos) > 0){
-                foreach($dadosCampos as $entidade=>$dados){
-
-                    //Define o campo chave da operação =============================
-                    if($entidade != $this->headerDados['entidade']){
-                        $colunafilho = $this->headerDados['colunafilho'];
-                    }else{
-                        $colunafilho = "codigo";
-                    }
-                    //==============================================================
-
-                    $obDbo = new TDbo();
-                    //consulta se o registro já existe
-                    $obDbo->setEntidade($entidade);
-                        $criterioValReg = new TCriteria();
-                        $criterioValReg->add(new TFilter($colunafilho, '=',$codigo));
-                        $Check = $obDbo->select('codigo', $criterioValReg);
-                    $resCheck = $Check->fetch();
-
-                    //se o registro já existir
-                    if($resCheck['codigo']) {
-                        $obDbo->setEntidade($entidade);
-                           $criteriaUpCampo = new TCriteria();
-                           $criteriaUpCampo->add(new TFilter($colunafilho, '=', $codigo));
-                        $Query = $obDbo->update($dados, $criteriaUpCampo);
-                    }else{
-
-                        //valores padrões
-                        if($codigo){
-                            $dados[$colunafilho]   = $codigo;
-                        }
-                        if($codigoPai){
-                            $dados[$destinoCodigo]  = $codigoPai;
-                        }
-                        $dados['unidade']      = $unidade;
-                        $dados['codigoautor']  = $this->obUser->codigo;
-                        $dados['datacad']      = date("Y-m-d");
-                        $dados['ativo']        = '1';
-
-
-                        $obDbo->setEntidade($entidade);
-                        $retorno = $obDbo->insert($dados);
-			
-
-                        $codigo = $retorno['codigo'];
-                    }
-                    $obDbo->close();
-                }//fimdo loop salvar
+                	                	
+	                foreach($dadosCampos as $entidade=>$dados){
+	
+	                    //Define o campo chave da operação =============================
+	                    if($entidade != $this->headerDados['entidade']){
+	                        $colunaReferencia = $this->headerDados['colunafilho'];
+	                    }else{
+	                        $colunaReferencia = "codigo";
+	                    }
+	                    //==============================================================
+	
+	                    $obDbo = new TDbo();
+	                    //consulta se o registro já existe
+	                    $obDbo->setEntidade($entidade);
+	                        $criterioValReg = new TCriteria();
+	                        $criterioValReg->add(new TFilter($colunaReferencia, '=',$codigo));
+	                        $Check = $obDbo->select('codigo', $criterioValReg);
+	                    $resCheck = $Check->fetch();
+	                    
+	                    //se o registro já existir
+	                    if(!$resCheck['codigo']) {
+	                    	
+	                        //valores padrões
+	                        if($codigo){
+	                            $dados[$colunaReferencia]   = $codigo;
+	                        }
+	                        if($codigoPai){
+	                            $dados[$destinoCodigo]  = $codigoPai;
+	                        }
+	                        
+	                        $dados['unidade']      = $unidade;
+	                        $dados['codigoautor']  = $this->obUser->codigo;
+	                        $dados['datacad']      = date("Y-m-d");
+	                        $dados['ativo']        = '1';
+									
+	                        $obDbo->setEntidade($entidade);
+	                        $retorno = $obDbo->insert($dados);
+				
+	                        $codigo = $retorno['codigo'];
+	                        
+	                    }else{
+							
+	                    	$obDbo->setEntidade($entidade);
+	                           $criteriaUpCampo = new TCriteria();
+	                           $criteriaUpCampo->add(new TFilter($colunaReferencia, '=', $codigo));
+	                        $Query = $obDbo->update($dados, $criteriaUpCampo);
+	                        
+	                    }
+	                    $obDbo->close();
+	                }//fim do loop salvar
                 }
           }
+          //Fecha o formulário
+          $this->onClose();
           return $codigo;
+          
         }
 
     /*
@@ -478,51 +502,49 @@ class TExecs {
     */
     public function onClose() {
 
-        if($this->headerDados['formainclude'] == 'one'){
-
-                $codigoRegAtual = $this->onSave();
-    	
-                //autera estatus de edição para Ativo
-                if($codigoRegAtual) {
-
-                    //define o campo de acesso ao registro considerando o tipo form ou secundario
-                    $campoReferencia = "codigo";
-
-                    $obTDboStatus = new TDbo();
-                    $obTDboStatus->setEntidade($this->entidadeForm);
-    	
-
-                    $criteriaStatus = new TCriteria();
-                    $criteriaStatus->add(new TFilter($campoReferencia,'=',$codigoRegAtual));
-                    $retStatus = $obTDboStatus->select("ativo", $criteriaStatus);
-                    $obStatus = $retStatus->fetchObject();
-
-                    if($obStatus->ativo == '9' or $obStatus->ativo == '8') {
-                        $retUpStatus = $obTDboStatus->update(array("ativo"=>"1"), $criteriaStatus);
-
-                        if(!$retUpStatus) {
-                            $obTDboStatus->rollback();
-                            $obTDboStatus->close();
-                            new setException("Erro ao atualizar o estatus do resgistro [".$codigoRegAtual."] - TExecs - Line - 516.");
-                        }
-                    }
-                    $obTDboStatus->close();
-                }
-
-            //==========================================================================
-            //Executa metodo formOutControl do formulario presentes no cabeçalho
-            $formOutControl = $this->headerDados['formOutControl'];
-            if($formOutControl) {
-
-                $expFormOutControl = explode('/', $formOutControl);
-
-                $classeOutControl = $expFormOutControl[0];
-                $metodoOutControl = $expFormOutControl[1];
-                $obOutControl = new $classeOutControl();
-
-                call_user_func(array($obOutControl, $metodoOutControl), $this->idForm);
-            }
-        }
+//        if($this->headerDados['formainclude'] == 'one'){
+//    	
+//                //autera estatus de edição para Ativo
+//                if($codigoRegAtual) {
+//
+//                    //define o campo de acesso ao registro considerando o tipo form ou secundario
+//                    $campoReferencia = "codigo";
+//
+//                    $obTDboStatus = new TDbo();
+//                    $obTDboStatus->setEntidade($this->entidadeForm);
+//    	
+//
+//                    $criteriaStatus = new TCriteria();
+//                    $criteriaStatus->add(new TFilter($campoReferencia,'=',$codigoRegAtual));
+//                    $retStatus = $obTDboStatus->select("ativo", $criteriaStatus);
+//                    $obStatus = $retStatus->fetchObject();
+//
+//                    if($obStatus->ativo == '9' or $obStatus->ativo == '8') {
+//                        $retUpStatus = $obTDboStatus->update(array("ativo"=>"1"), $criteriaStatus);
+//
+//                        if(!$retUpStatus) {
+//                            $obTDboStatus->rollback();
+//                            $obTDboStatus->close();
+//                            new setException("Erro ao atualizar o estatus do resgistro [".$codigoRegAtual."] - TExecs - Line - 516.");
+//                        }
+//                    }
+//                    $obTDboStatus->close();
+//                }
+//
+//            //==========================================================================
+//            //Executa metodo formOutControl do formulario presentes no cabeçalho
+//            $formOutControl = $this->headerDados['formOutControl'];
+//            if($formOutControl) {
+//
+//                $expFormOutControl = explode('/', $formOutControl);
+//
+//                $classeOutControl = $expFormOutControl[0];
+//                $metodoOutControl = $expFormOutControl[1];
+//                $obOutControl = new $classeOutControl();
+//
+//                call_user_func(array($obOutControl, $metodoOutControl), $this->idForm);
+//            }
+//        }
 
         //recarrega a lista
         $this->getList();
@@ -535,16 +557,16 @@ class TExecs {
     */
     public function onCancel() {
 
-        // obtém o objeto pelo ID
-        $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
-        $ObDados->delete();
+        // obt�m o objeto pelo ID
+        //$ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
+        //$ObDados->delete();
 
         $this->showlist();
         $this->obHeader->clearHeader($this->idForm);
     }
 
     #############################################
-    # Ações da lista
+    # ações da lista
     #############################################
 
     /**
@@ -565,7 +587,7 @@ class TExecs {
             $this->showlist();
         }
         else {
-            // Lança exeção de erro na execução da sql
+            // Lan�a exeção de erro na execução da sql
             new setException("Os parametros não foram definidos corretamente (TExecs.onDelete) - Linha - 579");
         }
     }
@@ -623,7 +645,7 @@ class TExecs {
     }
 
     /**
-     * Método onOrder()
+     * método onOrder()
      * metodo para ordenar lista de dados
      */
     public function onOrder($param) {
@@ -640,7 +662,7 @@ class TExecs {
                     throw new ErrorException("A lista não foi instanciada na memoria de execução.");
                 }
             }else{
-                throw new ErrorException("A coluna passada é inválida.");
+                throw new ErrorException("A coluna passada � inv�lida.");
             }
         }catch(Exception $e){
             new setException($e);
@@ -650,7 +672,7 @@ class TExecs {
 
      /**
      * método onReply
-     * gatilho para replicaçao de formularios
+     * gatilho para replicação de formularios
      * param  $param = parâmetros passados via URL ($_GET) instanciado no contrutor
      */
     public function onReply() {
@@ -684,7 +706,7 @@ class TExecs {
     }
 
     /*
-    *Avança os registros listados
+    *Avan�a os registros listados
     */
     public function onNext() {
 
@@ -706,7 +728,7 @@ class TExecs {
     }
 
         /**
-     * Método onPrint()
+     * método onPrint()
      * metodo para imprimir uma lista de dados
      */
     public function onPrint($param) {
@@ -735,14 +757,14 @@ class TExecs {
                    $this->showlist();
                }
             }else{
-                throw new Exception('Os dados passados para a seleção são inválidos.');
+                throw new Exception('Os dados passados para a seleção são inv�lidos.');
             }
         }catch(Exception $e){
             new setException($e);
         }
     }
 
-    /*Método showlist()
+    /*método showlist()
     /Armazena novo objeto lista em sessão e imprime o novo objeto
     */
     public function showlist() {
@@ -751,7 +773,7 @@ class TExecs {
             $this->getObLista();
         }
 
-        //Limpa o histórico da lista em sessão
+        //Limpa o hist�rico da lista em sessão
         if($this->nivelExec == 1){
             $this->obsession->delValue($this->listaBox);
         }
@@ -815,3 +837,5 @@ class TExecs {
         }
     }
 }
+
+?>

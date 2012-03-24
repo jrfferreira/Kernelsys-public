@@ -95,3 +95,6 @@ $form->addAba('Teste2',$fields->getConteiner());
 
 $form->setCampos($fields->getCampos());
 $form->showForm();
+
+
+?>

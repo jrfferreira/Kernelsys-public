@@ -343,7 +343,10 @@ class TDbo {
                     // grava log de upDate (data - hora | autor | alçao)
                     TTransaction::log($sql->getInstruction());
                     
-
+                    print_r($sql->getInstruction());
+                    
+                    //exit;
+                    
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());
 
@@ -519,3 +522,4 @@ class TDbo {
     }
 
 }
+?>

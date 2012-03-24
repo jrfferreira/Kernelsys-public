@@ -66,3 +66,4 @@ class TRodape {
         return $DRodaPe;
     }
 }
+?>

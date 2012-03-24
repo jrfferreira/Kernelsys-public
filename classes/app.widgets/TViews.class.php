@@ -53,3 +53,6 @@ class TViews{
 	}
 
 }
+//<div style="background-color:#C8D0D2; padding:5px; text-align:right;"
+?>
+

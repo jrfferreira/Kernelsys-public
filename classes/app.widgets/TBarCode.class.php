@@ -939,3 +939,4 @@ class TBarCode {
     }
 
 }
+?>

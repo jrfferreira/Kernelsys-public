@@ -24,3 +24,4 @@ class TLoggerXML extends TLogger
         fclose($handler);
     }
 }
+?>

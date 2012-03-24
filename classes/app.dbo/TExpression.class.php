@@ -12,3 +12,5 @@ abstract class TExpression{
     // marca método dump como obrigatório
     abstract public function dump();
 }
+
+?>

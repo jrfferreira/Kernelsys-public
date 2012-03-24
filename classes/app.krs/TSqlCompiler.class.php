@@ -1,10 +1,14 @@
-<?php 
+<?php
+
 set_time_limit(0);
+
 function __autoload($classe) {
 	include_once('../app.util/autoload.class.php');
 	$autoload = new autoload('../',$classe);
 }
 include_once('TKrs.class.php');
+
+
 class TSqlCompiler extends TKrs {
 	
 	private $tableNames = array();

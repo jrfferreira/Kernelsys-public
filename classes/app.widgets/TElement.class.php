@@ -190,3 +190,5 @@ class TElement{
         echo "</{$this->name}>\n";
     }
 }
+
+?>

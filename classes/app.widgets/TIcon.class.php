@@ -269,3 +269,4 @@ class TIcon{
         $tipo[] = "ui-icon-grip-diagonal-se";
     }
 }
+?>

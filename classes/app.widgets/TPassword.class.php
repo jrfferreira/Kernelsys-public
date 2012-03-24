@@ -27,3 +27,4 @@ class TPassword extends TField{
         $this->tag->show();
     }
 }
+?>

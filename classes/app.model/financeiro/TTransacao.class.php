@@ -1059,6 +1059,7 @@ class TTransacao {
      * @param $idForm = ID do formulário em questão.
      */
     public function setContasNegociacao($idForm) {
+
         try {
             $TProduto = new TProduto();
 
@@ -1080,7 +1081,7 @@ class TTransacao {
                 $retTransacao = $dbotransacao->select('codigo,codigopessoa,codigoplanoconta,tipomovimentacao', $crit);
 
                 $obTransacao = $retTransacao->fetchObject();
-                
+
                 $transacao = array();
                 $transacao['codigopessoa'] = $obTransacao->codigopessoa;
                 $transacao['codigoplanoconta'] = $obTransacao->codigoplanoconta;
@@ -1129,7 +1130,7 @@ class TTransacao {
                             throw new ErrorException("Não foi possível concluir. A ação foi cancelada.", 1);
                         }
                     }
-                    
+
                     $transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
                     $up = $transaction->update(array('statusconta' => '6'), $critUpdate);
                     if ($up) {
@@ -1543,11 +1544,11 @@ class TTransacao {
     public function getTextoConvenios($codigoConta) {
     	
         $dboConta = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
-        $criteriaConta = new TCriteria();
-        $criteriaConta->add(new TFilter('codigo','=',$codigoConta));
+            $criteriaConta = new TCriteria();
+        	$criteriaConta->add(new TFilter('codigo','=',$codigoConta));
         $retConta = $dboConta->select("*", $criteriaConta);
         $obConta = $retConta->fetchObject();
-	
+
         $valorConta = $obConta->valorreal;
         
         $dt = explode("-", $obConta->vencimento);
@@ -1555,17 +1556,66 @@ class TTransacao {
         $diaVencimento = $dt[2];
 
         $transacs = new TDbo('dbtransacoes_convenios');
-    	$crit = new TCriteria();
-        $crit->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
+        	$crit = new TCriteria();
+        	$crit->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
         $retTransacs = $transacs->select('codigoconvenio', $crit);
 
         $TConvenios = new TConvenios();
         $descontos = null;
 
         while ($obTransacoes = $retTransacs->fetchObject()) {
-            $arrayConvenios[] = $obTransacoes->codigoconvenio;
+            $convenio = $TConvenios->getConvenio($obTransacoes->codigoconvenio);
+            foreach ($convenio['descontos'] as $ch => $vl) {
+                $descontos[$ch] += $vl;
+            }
         }
-        $texto = $TConvenios->getTextoConvenios($arrayConvenios,$obConta);
+        
+        if($descontos["--"]){
+            $descontoInicial = $descontos["--"];
+            unset($descontos["--"]);
+        }
+
+        ksort($descontos);
+        $espelho = $descontos;
+        
+            $endKey = end($espelho);
+            $endKey = key($espelho);          
+            
+            
+        $prev = null;
+        $texto = null;
+		if(count($descontos)) {
+	        foreach ($descontos as $ch => $vl) {
+	
+	        	$valorCheio = number_format(($valorConta - $descontoInicial), 2, ',', '.');
+	            $valorAtual = $valorCheio - $vl;
+	            if ($valorAtual <= 0) {
+	                $valorAtual = 0;
+	            }
+	
+	            $valorAtual = number_format($valorAtual, 2, ',', '.');
+	            if($prev) {
+	                $texto .= "Pagamento de {$prev}/{$mesVencimento} a {$ch}/{$mesVencimento} - R$ {$valorAtual} ;" . '<br/>';
+	            } else {
+	                $texto .= "Pagamento até {$ch}/{$mesVencimento} .................... - R$ {$valorAtual} ;" . '<br/>';
+	            }
+	            
+	            if($descontoInicial && ($ch == $endKey)){	
+	                $texto .= "Pagamento após {$ch}/{$mesVencimento} ................. - R$ {$valorCheio} (+ juros e multas se aplicável);" . '<br/>';        		
+	            }
+	            
+	            $prev = $ch + 1;
+	            if(strlen($prev) == 1) $prev = '0'.$prev;
+	        }
+		}elseif($descontoInicial){
+			$texto = "Para pagamento até o vencimento - R$ " . number_format ( ($valorConta - $descontoInicial), 2, ',', '.' ) . '<br/>';
+		}
+		
+
+        $texto = preg_replace('@(;<br/>)$@i','.',$texto);
+        
         return $texto;
     }
 }
+
+?>

@@ -20,6 +20,9 @@ $obUser = $inPriv->getUser();
 
 // Monta botões dos módulos principais \\
 //inicia uma transação com a camada de dados do form
+TTransaction::open('../'.TOccupant::getPath().'app.config/krs');
+
+if($conn = TTransaction::get()) {
 
     $THeader = new TSetHeader();
     $THeader->add('zIndex',0);
@@ -28,22 +31,21 @@ $obUser = $inPriv->getUser();
 
     //===== monta criterios de acesso do uruario ======\\
     if(is_array($obPriv)) {
-    	
-    $criterio = new TCriteria();
-    	$criterio->add(new TFilter('ativo','=','1'),'AND');
-    
         foreach($obPriv as $mp) {
-        	$filter = new TFilter('id','=',$mp);
-        	$filter->setTipoFiltro('idSelecao');        	
-    		$criterio->add($filter,"OR");
+            $userArg .= "ativo='1' and id='".$mp."' or ";
         }
+        $userArg = rtrim($userArg, " or ");
+        //$userArg = "ativo='1' and ".$userArg;
     }
     else {
         new setException(TMensagem::ERRO_PRIVILEGIOS);
     }
     //=================================================\\
-    $tKrs = new TKrs('modulos_principais');
-    $execSql = $tKrs->select('*',$criterio);
+
+    $sqlMod = "select * from modulos_principais where ".$userArg." order by ordem";
+    $execSql = $conn->Query($sqlMod);
+
+    
 
     $obLogo = new TElement('div');
     $obLogo->id = "logoBitup";
@@ -131,7 +133,7 @@ $obUser = $inPriv->getUser();
     //$obBotCuston = new TSetCuston();
     //$botCuston = $obBotCuston->getBot();
     //$BarraPrincipal->add($botCuston);
-
+}
 //======================================\\
 
 
@@ -187,3 +189,5 @@ $pageSys->add($content);
 //$pageSys->add($DRodaPe);
 
 $pageSys->show();
+
+?>

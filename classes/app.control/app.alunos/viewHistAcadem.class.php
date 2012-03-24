@@ -565,3 +565,5 @@ class viewHistAcadem{
 
     }
 }
+
+?>

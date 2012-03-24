@@ -49,3 +49,4 @@ class TCheckLogin {
         return $this->user;
     }
 }
+?>
