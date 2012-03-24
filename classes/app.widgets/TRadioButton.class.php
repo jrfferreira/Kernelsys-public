@@ -41,4 +41,3 @@ class TRadioButton extends TField{
         $this->tag->show();
     }
 }
-?>

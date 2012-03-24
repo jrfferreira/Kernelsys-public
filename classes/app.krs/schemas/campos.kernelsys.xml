@@ -1,69 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <campos>
-    <row id="315">
-      <id>315</id>
-      <colunadb>codigo</colunadb>
-      <campo>codigo</campo>
-      <label>Cod.:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>35</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="316">
-      <id>316</id>
-      <colunadb>nomeUnidade</colunadb>
-      <campo>nomeUnidade</campo>
-      <label>Nome da Unidade:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>35</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="489">
-      <id>489</id>
-      <colunadb>nome</colunadb>
-      <campo>nome</campo>
-      <label>Sala:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>44</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="841">
       <id>841</id>
       <colunadb>codigotema</colunadb>
@@ -127,111 +64,6 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="801">
-      <id>801</id>
-      <colunadb>previsaoentrada</colunadb>
-      <campo>previsaoentrada</campo>
-      <label>Data de Devolução:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>87</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>2</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="305">
-      <id>305</id>
-      <colunadb>dataaquisicao</colunadb>
-      <campo>dataAquisicao</campo>
-      <label>Data de Aquisição:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>32</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="670">
-      <id>670</id>
-      <colunadb>vencimentotaxa</colunadb>
-      <campo>vencimentotaxa</campo>
-      <label>Vencimento da taxa:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>16</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="338">
-      <id>338</id>
-      <colunadb>dataCad</colunadb>
-      <campo>dataCad</campo>
-      <label>Data do Cadastro:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="429">
-      <id>429</id>
-      <colunadb>dataNasc</colunadb>
-      <campo>dataNasc</campo>
-      <label>Data de Nascimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>5</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="530">
       <id>530</id>
       <colunadb>vencimento</colunadb>
@@ -265,279 +97,6 @@
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>function/TSetData/getData</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="412">
-      <id>412</id>
-      <colunadb>retornoFeriasPrevisao</colunadb>
-      <campo>retornoFeriasPrevisao</campo>
-      <label>Data prevista para o fim das férias:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>41</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="410">
-      <id>410</id>
-      <colunadb>dataFeriasPrevisao</colunadb>
-      <campo>dataFeriasPrevisao</campo>
-      <label>Data prevista para o início das férias:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>41</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="407">
-      <id>407</id>
-      <colunadb>dataAdmissao</colunadb>
-      <campo>dataAdmissao</campo>
-      <label>Data de Admissão:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>14</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="399">
-      <id>399</id>
-      <colunadb>dataTermino</colunadb>
-      <campo>dataTermino</campo>
-      <label>Data do Termino:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>39</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="398">
-      <id>398</id>
-      <colunadb>dataAssinatura</colunadb>
-      <campo>dataAssinatura</campo>
-      <label>Data da Assinatura:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>39</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="75">
-      <id>75</id>
-      <colunadb>dataFim</colunadb>
-      <campo>dataFim</campo>
-      <label>Data do término:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>11</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="104">
-      <id>104</id>
-      <colunadb>datacad</colunadb>
-      <campo>datacad</campo>
-      <label>Data da Inscrição:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>16</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>setBotAbas('concluir_botform','0')</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="146">
-      <id>146</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>65</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="137">
-      <id>137</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Data de vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>19</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="91">
-      <id>91</id>
-      <colunadb>dataDisc</colunadb>
-      <campo>dataDisc</campo>
-      <label>Data:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>13</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="679">
-      <id>679</id>
-      <colunadb>dataaula</colunadb>
-      <campo>dataaula</campo>
-      <label>Data da aula:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>28</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="616">
-      <id>616</id>
-      <colunadb>dataAula</colunadb>
-      <campo>dataAula</campo>
-      <label>Data:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>62</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="546">
-      <id>546</id>
-      <colunadb>dataRealizacao</colunadb>
-      <campo>dataRealizacao</campo>
-      <label>Data de Inicio:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
       <outcontrol>setDataPT</outcontrol>
       <incontrol>setDataDB</incontrol>
       <trigger>0</trigger>
@@ -610,27 +169,6 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="74">
-      <id>74</id>
-      <colunadb>dataInicio</colunadb>
-      <campo>dataInicio</campo>
-      <label>Data de início:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>11</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="796">
       <id>796</id>
       <colunadb>codigopessoa</colunadb>
@@ -650,27 +188,6 @@
       <ativo>1</ativo>
       <valornull>1</valornull>
       <alteravel>2</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="304">
-      <id>304</id>
-      <colunadb>datafabricacao</colunadb>
-      <campo>dataFabricacao</campo>
-      <label>Data de Fabricação:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>32</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="794">
@@ -725,48 +242,6 @@
       <tipo>TEntry</tipo>
       <entidade>16</entidade>
       <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="583">
-      <id>583</id>
-      <colunadb>dataaula</colunadb>
-      <campo>dataaula</campo>
-      <label>Data da aula:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>28</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="159">
-      <id>159</id>
-      <colunadb>datacad</colunadb>
-      <campo>datacad</campo>
-      <label>Data do Movimento</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>21</entidade>
-      <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
       <outcontrol>setDataPT</outcontrol>
@@ -988,27 +463,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="642">
-      <id>642</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Data base:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
     <row id="852">
       <id>852</id>
       <colunadb>codigo</colunadb>
@@ -1198,6 +652,405 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="75">
+      <id>75</id>
+      <colunadb>dataFim</colunadb>
+      <campo>dataFim</campo>
+      <label>Data do término:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>11</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="801">
+      <id>801</id>
+      <colunadb>previsaoentrada</colunadb>
+      <campo>previsaoentrada</campo>
+      <label>Data de Devolução:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>87</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>2</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="679">
+      <id>679</id>
+      <colunadb>dataaula</colunadb>
+      <campo>dataaula</campo>
+      <label>Data da aula:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>28</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="670">
+      <id>670</id>
+      <colunadb>vencimentotaxa</colunadb>
+      <campo>vencimentotaxa</campo>
+      <label>Vencimento da taxa:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>16</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="642">
+      <id>642</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Data base:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="616">
+      <id>616</id>
+      <colunadb>dataAula</colunadb>
+      <campo>dataAula</campo>
+      <label>Data:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>62</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="583">
+      <id>583</id>
+      <colunadb>dataaula</colunadb>
+      <campo>dataaula</campo>
+      <label>Data da aula:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>28</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="546">
+      <id>546</id>
+      <colunadb>dataRealizacao</colunadb>
+      <campo>dataRealizacao</campo>
+      <label>Data de Inicio:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="412">
+      <id>412</id>
+      <colunadb>retornoFeriasPrevisao</colunadb>
+      <campo>retornoFeriasPrevisao</campo>
+      <label>Data prevista para o fim das férias:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>41</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="410">
+      <id>410</id>
+      <colunadb>dataFeriasPrevisao</colunadb>
+      <campo>dataFeriasPrevisao</campo>
+      <label>Data prevista para o início das férias:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>41</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="407">
+      <id>407</id>
+      <colunadb>dataAdmissao</colunadb>
+      <campo>dataAdmissao</campo>
+      <label>Data de Admissão:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>14</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="399">
+      <id>399</id>
+      <colunadb>dataTermino</colunadb>
+      <campo>dataTermino</campo>
+      <label>Data do Termino:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>39</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="398">
+      <id>398</id>
+      <colunadb>dataAssinatura</colunadb>
+      <campo>dataAssinatura</campo>
+      <label>Data da Assinatura:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>39</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="91">
+      <id>91</id>
+      <colunadb>dataDisc</colunadb>
+      <campo>dataDisc</campo>
+      <label>Data:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>13</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="146">
+      <id>146</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>65</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="137">
+      <id>137</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Data de vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>19</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="304">
+      <id>304</id>
+      <colunadb>datafabricacao</colunadb>
+      <campo>dataFabricacao</campo>
+      <label>Data de Fabricação:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>32</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="305">
+      <id>305</id>
+      <colunadb>dataaquisicao</colunadb>
+      <campo>dataAquisicao</campo>
+      <label>Data de Aquisição:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>32</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="338">
+      <id>338</id>
+      <colunadb>dataCad</colunadb>
+      <campo>dataCad</campo>
+      <label>Data do Cadastro:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="128">
       <id>128</id>
       <colunadb>codigo</colunadb>
@@ -1279,48 +1132,6 @@
       <help></help>
       <ativo>1</ativo>
       <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="791">
-      <id>791</id>
-      <colunadb>titulo</colunadb>
-      <campo>titulo</campo>
-      <label>Titulo:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>88</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="790">
-      <id>790</id>
-      <colunadb>cdu</colunadb>
-      <campo>cdu</campo>
-      <label>Classificação CDU:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>88</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
@@ -1555,27 +1366,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="812">
-      <id>812</id>
-      <colunadb>dataaula</colunadb>
-      <campo>dataaula</campo>
-      <label>Data da aula:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>28</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="387">
       <id>387</id>
       <colunadb>cor</colunadb>
@@ -1800,27 +1590,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="669">
-      <id>669</id>
-      <colunadb>vencimentomatricula</colunadb>
-      <campo>vencimentomatricula</campo>
-      <label>Vencimento da matrícula:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>16</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -2141,27 +1910,6 @@
       <ativo>1</ativo>
       <valornull>1</valornull>
       <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="834">
-      <id>834</id>
-      <colunadb>valortotal</colunadb>
-      <campo>valortotalproduto</campo>
-      <label>Valor total:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>67</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="251">
@@ -2584,6 +2332,69 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="812">
+      <id>812</id>
+      <colunadb>dataaula</colunadb>
+      <campo>dataaula</campo>
+      <label>Data da aula:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>28</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="790">
+      <id>790</id>
+      <colunadb>cdu</colunadb>
+      <campo>cdu</campo>
+      <label>Classificação CDU:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>86</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="791">
+      <id>791</id>
+      <colunadb>titulo</colunadb>
+      <campo>titulo</campo>
+      <label>Titulo:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>86</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="275">
       <id>275</id>
       <colunadb>nomeCurso</colunadb>
@@ -2773,48 +2584,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="521">
-      <id>521</id>
-      <colunadb>codigosala</colunadb>
-      <campo>codigosala</campo>
-      <label>Sala:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TCombo</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>175</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="312">
-      <id>312</id>
-      <colunadb>dataverificacao</colunadb>
-      <campo>dataVerificacao</campo>
-      <label>Data da Última Verificação:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>32</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="28">
       <id>28</id>
       <colunadb>pais</colunadb>
@@ -2892,48 +2661,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="123">
-      <id>123</id>
-      <colunadb>dataPag</colunadb>
-      <campo>dataPag</campo>
-      <label>Data do Pagamento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>17</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="121">
-      <id>121</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>17</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -3046,27 +2773,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="77">
-      <id>77</id>
-      <colunadb>datas</colunadb>
-      <campo>datas</campo>
-      <label>Datas:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="78">
       <id>78</id>
       <colunadb>frequenciaAula</colunadb>
@@ -3160,6 +2866,27 @@
       <seletor></seletor>
       <tipo>TText</tipo>
       <entidade>15</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="106">
+      <id>106</id>
+      <colunadb>opCobranca</colunadb>
+      <campo>opCobranca</campo>
+      <label>Usar Endereço de cobrança:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>1</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -3475,27 +3202,6 @@
       <seletor></seletor>
       <tipo>TEntry</tipo>
       <entidade>94</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="122">
-      <id>122</id>
-      <colunadb>valorPago</colunadb>
-      <campo>valorPago</campo>
-      <label>Valor Pago:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>17</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -3865,27 +3571,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="76">
-      <id>76</id>
-      <colunadb>frequencia</colunadb>
-      <campo>frequencia</campo>
-      <label>Nº. Total de Frequência:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol></outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="120">
       <id>120</id>
       <colunadb>valorNominal</colunadb>
@@ -3969,6 +3654,90 @@
       <valornull>1</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
+    </row>
+    <row id="123">
+      <id>123</id>
+      <colunadb>dataPag</colunadb>
+      <campo>dataPag</campo>
+      <label>Data do Pagamento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>17</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="76">
+      <id>76</id>
+      <colunadb>frequencia</colunadb>
+      <campo>frequencia</campo>
+      <label>Nº. Total de Frequência:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="77">
+      <id>77</id>
+      <colunadb>datas</colunadb>
+      <campo>datas</campo>
+      <label>Datas:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="521">
+      <id>521</id>
+      <colunadb>codigosala</colunadb>
+      <campo>codigosala</campo>
+      <label>Sala:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>175</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
     </row>
     <row id="86">
       <id>86</id>
@@ -4147,27 +3916,6 @@
       <seletor></seletor>
       <tipo>TText</tipo>
       <entidade>65</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="161">
-      <id>161</id>
-      <colunadb>desconto</colunadb>
-      <campo>desconto</campo>
-      <label>Desconto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>21</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -4432,48 +4180,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="711">
-      <id>711</id>
-      <colunadb>datafabricacao</colunadb>
-      <campo>dataFabricacao</campo>
-      <label>Data de Fabricação:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>76</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="176">
-      <id>176</id>
-      <colunadb>desconto</colunadb>
-      <campo>desconto</campo>
-      <label>Desconto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>21</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="160">
       <id>160</id>
       <colunadb>valorentrada</colunadb>
@@ -4555,48 +4261,6 @@
       <help></help>
       <ativo>1</ativo>
       <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="712">
-      <id>712</id>
-      <colunadb>dataaquisicao</colunadb>
-      <campo>dataAquisicao</campo>
-      <label>Data de Aquisição:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>76</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="720">
-      <id>720</id>
-      <colunadb>dataverificacao</colunadb>
-      <campo>dataVerificacao</campo>
-      <label>Data da Última Verificação:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>76</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
@@ -4726,90 +4390,6 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="494">
-      <id>494</id>
-      <colunadb>dataLimite</colunadb>
-      <campo>dataLimite</campo>
-      <label>Data Limite:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>41</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="481">
-      <id>481</id>
-      <colunadb>dataCad</colunadb>
-      <campo>dataCad</campo>
-      <label>Data do Cadastro:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="460">
-      <id>460</id>
-      <colunadb>empregoDataAdmissao</colunadb>
-      <campo>empregoDataAdmissao</campo>
-      <label>Data de Admissão:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>72</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="415">
-      <id>415</id>
-      <colunadb>retornoFeriasReal</colunadb>
-      <campo>retornoFeriasReal</campo>
-      <label>Data real para o fim das férias:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>41</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="101">
       <id>101</id>
       <colunadb>codigofuncionario</colunadb>
@@ -4908,69 +4488,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="346">
-      <id>346</id>
-      <colunadb>dataNasc</colunadb>
-      <campo>dataNasc</campo>
-      <label>Data de Nascimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>5</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="286">
-      <id>286</id>
-      <colunadb>dataExame</colunadb>
-      <campo>dataExame</campo>
-      <label>Data do Exame:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>14</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="221">
-      <id>221</id>
-      <colunadb>dataaula</colunadb>
-      <campo>dataaula</campo>
-      <label>Data:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>28</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -5293,6 +4810,174 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="712">
+      <id>712</id>
+      <colunadb>dataaquisicao</colunadb>
+      <campo>dataAquisicao</campo>
+      <label>Data de Aquisição:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>76</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="711">
+      <id>711</id>
+      <colunadb>datafabricacao</colunadb>
+      <campo>dataFabricacao</campo>
+      <label>Data de Fabricação:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>76</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="494">
+      <id>494</id>
+      <colunadb>dataLimite</colunadb>
+      <campo>dataLimite</campo>
+      <label>Data Limite:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>41</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="460">
+      <id>460</id>
+      <colunadb>empregoDataAdmissao</colunadb>
+      <campo>empregoDataAdmissao</campo>
+      <label>Data de Admissão:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>72</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="415">
+      <id>415</id>
+      <colunadb>retornoFeriasReal</colunadb>
+      <campo>retornoFeriasReal</campo>
+      <label>Data real para o fim das férias:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>41</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="346">
+      <id>346</id>
+      <colunadb>dataNasc</colunadb>
+      <campo>dataNasc</campo>
+      <label>Data de Nascimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>5</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="286">
+      <id>286</id>
+      <colunadb>dataExame</colunadb>
+      <campo>dataExame</campo>
+      <label>Data do Exame:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>14</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="221">
+      <id>221</id>
+      <colunadb>dataaula</colunadb>
+      <campo>dataaula</campo>
+      <label>Data:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>28</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="238">
       <id>238</id>
       <colunadb>cursos</colunadb>
@@ -5449,6 +5134,27 @@
       <seletor></seletor>
       <tipo>TEntry</tipo>
       <entidade>32</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="315">
+      <id>315</id>
+      <colunadb>codigo</colunadb>
+      <campo>codigo</campo>
+      <label>Cod.:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>35</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -5755,27 +5461,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="172">
-      <id>172</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>21</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="165">
       <id>165</id>
       <colunadb>valorpago</colunadb>
@@ -5923,27 +5608,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="739">
-      <id>739</id>
-      <colunadb>desconto</colunadb>
-      <campo>desconto</campo>
-      <label>Desconto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
     <row id="340">
       <id>340</id>
       <colunadb>cpf_cnpj</colunadb>
@@ -5958,6 +5622,27 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>setCPF</outcontrol>
       <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="317">
+      <id>317</id>
+      <colunadb>cnpj</colunadb>
+      <campo>cnpj</campo>
+      <label>CNPJ:</label>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>35</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCNPJ</outcontrol>
+      <incontrol>validaCnpj</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -6231,27 +5916,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="317">
-      <id>317</id>
-      <colunadb>cnpj</colunadb>
-      <campo>cnpj</campo>
-      <label>CNPJ:</label>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>35</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCNPJ</outcontrol>
-      <incontrol>validaCnpj</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -6574,27 +6238,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="309">
-      <id>309</id>
-      <colunadb>valorcompra</colunadb>
-      <campo>valorCompra</campo>
-      <label>Valor de Compra:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>32</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="310">
       <id>310</id>
       <colunadb>numnf</colunadb>
@@ -6615,6 +6258,27 @@
       <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
+    </row>
+    <row id="739">
+      <id>739</id>
+      <colunadb>desconto</colunadb>
+      <campo>desconto</campo>
+      <label>Desconto:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
     </row>
     <row id="390">
       <id>390</id>
@@ -7855,6 +7519,90 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="483">
+      <id>483</id>
+      <colunadb>curso</colunadb>
+      <campo>curso</campo>
+      <label>Curso:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>43</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="484">
+      <id>484</id>
+      <colunadb>instituicao</colunadb>
+      <campo>instituicao</campo>
+      <label>Instituição:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>43</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="485">
+      <id>485</id>
+      <colunadb>anoConclusao</colunadb>
+      <campo>anoConclusao</campo>
+      <label>Ano de Conclusão:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>43</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="486">
+      <id>486</id>
+      <colunadb>observacao</colunadb>
+      <campo>observacao</campo>
+      <label>Observações:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TText</tipo>
+      <entidade>43</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="488">
       <id>488</id>
       <colunadb>codigo</colunadb>
@@ -7906,27 +7654,6 @@
       <seletor></seletor>
       <tipo>TText</tipo>
       <entidade>44</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="506">
-      <id>506</id>
-      <colunadb>regimeTrabalho</colunadb>
-      <campo>regimeTrabalho</campo>
-      <label>Regime de Trabalho:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TCombo</tipo>
-      <entidade>12</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -8053,6 +7780,27 @@
       <seletor></seletor>
       <tipo>TEntry</tipo>
       <entidade>49</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="489">
+      <id>489</id>
+      <colunadb>nome</colunadb>
+      <campo>nome</campo>
+      <label>Sala:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>44</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -8317,6 +8065,27 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="482">
+      <id>482</id>
+      <colunadb>codigotitularidade</colunadb>
+      <campo>codigotitularidade</campo>
+      <label>Escolaridade:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>43</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="525">
       <id>525</id>
       <colunadb>valorUnitario</colunadb>
@@ -8326,69 +8095,6 @@
       <seletor>CLASS_MASCARA_VALOR</seletor>
       <tipo>TEntry</tipo>
       <entidade>47</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="508">
-      <id>508</id>
-      <colunadb>custoDeslocamento</colunadb>
-      <campo>custoDeslocamento</campo>
-      <label>Custo Deslocamento:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="507">
-      <id>507</id>
-      <colunadb>custoHospedagem</colunadb>
-      <campo>custoHospedagem</campo>
-      <label>Custo Hospedagem:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="505">
-      <id>505</id>
-      <colunadb>custoHoraAula</colunadb>
-      <campo>custoHoraAula</campo>
-      <label>Custo Hora/Aula:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>12</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -9261,6 +8967,48 @@
       <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
+    </row>
+    <row id="507">
+      <id>507</id>
+      <colunadb>custoHospedagem</colunadb>
+      <campo>custohospedagem</campo>
+      <label>Custo Hospedagem:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="508">
+      <id>508</id>
+      <colunadb>custoDeslocamento</colunadb>
+      <campo>custodeslocamento</campo>
+      <label>Custo Deslocamento:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
     </row>
     <row id="582">
       <id>582</id>
@@ -10312,27 +10060,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="673">
-      <id>673</id>
-      <colunadb>valorAlteravel</colunadb>
-      <campo>valorAlteravel</campo>
-      <label>Valor pode ser alterado:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TCombo</tipo>
-      <entidade>70</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help>Define se o valor pode sofrer alteração durante a negociação.</help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="646">
       <id>646</id>
       <colunadb>fornecedor</colunadb>
@@ -10816,27 +10543,6 @@
       <alteravel>1</alteravel>
       <autosave>1</autosave>
     </row>
-    <row id="649">
-      <id>649</id>
-      <colunadb>desconto</colunadb>
-      <campo>desconto</campo>
-      <label>Desconto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
     <row id="650">
       <id>650</id>
       <colunadb>acrescimo</colunadb>
@@ -11003,27 +10709,6 @@
       <ativo>1</ativo>
       <valornull>0</valornull>
       <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="666">
-      <id>666</id>
-      <colunadb>codigoproduto</colunadb>
-      <campo>codigoproduto</campo>
-      <label>Produto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TCombo</tipo>
-      <entidade>67</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>208</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>setDuplicacao</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="729">
@@ -11572,6 +11257,27 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="316">
+      <id>316</id>
+      <colunadb>nomeUnidade</colunadb>
+      <campo>nomeUnidade</campo>
+      <label>Nome da Unidade:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>35</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="671">
       <id>671</id>
       <colunadb>label</colunadb>
@@ -11866,27 +11572,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="809">
-      <id>809</id>
-      <colunadb>botefetivamatricula</colunadb>
-      <campo>botefetivamatricula</campo>
-      <label>Confirmar Matrícula:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TButton</tipo>
-      <entidade>16</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="663">
       <id>663</id>
       <colunadb>codigopessoa</colunadb>
@@ -11926,27 +11611,6 @@
       <help></help>
       <ativo>1</ativo>
       <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
-    <row id="702">
-      <id>702</id>
-      <colunadb>valorCorrigido</colunadb>
-      <campo>valorCorrigido</campo>
-      <label>Valor total corrigido:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR,CLASS_DESTAQUE</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
     </row>
@@ -12055,25 +11719,25 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="773">
-      <id>773</id>
-      <colunadb>valorQuestao</colunadb>
-      <campo>valorQuestao</campo>
-      <label>Valor:</label>
+    <row id="666">
+      <id>666</id>
+      <colunadb>codigoproduto</colunadb>
+      <campo>codigoproduto</campo>
+      <label>Produto:</label>
       <mascara></mascara>
       <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>83</entidade>
+      <tipo>TCombo</tipo>
+      <entidade>67</entidade>
       <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
+      <ativapesquisa>208</ativapesquisa>
       <valorpadrao>-</valorpadrao>
-      <outcontrol></outcontrol>
+      <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
+      <valornull>1</valornull>
+      <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="774">
@@ -12152,27 +11816,6 @@
       <ativapesquisa>235</ativapesquisa>
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="775">
-      <id>775</id>
-      <colunadb>codigoprofessor</colunadb>
-      <campo>codigoprofessor</campo>
-      <label>Professor:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TCombo</tipo>
-      <entidade>12</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>221</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol></outcontrol>
       <incontrol>0</incontrol>
       <trigger>0</trigger>
       <help></help>
@@ -12433,90 +12076,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="652">
-      <id>652</id>
-      <colunadb>Confirmar</colunadb>
-      <campo>confirmar</campo>
-      <label>Confirmar escolhar</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TButton</tipo>
-      <entidade>16</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="158">
-      <id>158</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>21</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="295">
-      <id>295</id>
-      <colunadb>ferias</colunadb>
-      <campo>ferias</campo>
-      <label>Data para Férias Programada:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>14</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="244">
-      <id>244</id>
-      <colunadb>datanasc</colunadb>
-      <campo>datanasc</campo>
-      <label>Data de Nascimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>5</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="633">
       <id>633</id>
       <colunadb>codigocurso</colunadb>
@@ -12536,27 +12095,6 @@
       <ativo>1</ativo>
       <valornull>1</valornull>
       <alteravel>2</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="228">
-      <id>228</id>
-      <colunadb>dataNasc</colunadb>
-      <campo>dataNasc</campo>
-      <label>Data de Nascimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>30</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="776">
@@ -12652,27 +12190,6 @@
       <seletor></seletor>
       <tipo>TEntry</tipo>
       <entidade>82</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="413">
-      <id>413</id>
-      <colunadb>dataFeriasReal</colunadb>
-      <campo>dataFeriasReal</campo>
-      <label>Data real para início das ferias:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>41</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -13147,24 +12664,24 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="195">
-      <id>195</id>
-      <colunadb>datavencimento</colunadb>
-      <campo>datavencimento</campo>
-      <label>Data base para vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
+    <row id="773">
+      <id>773</id>
+      <colunadb>valorQuestao</colunadb>
+      <campo>valorQuestao</campo>
+      <label>Valor:</label>
+      <mascara></mascara>
+      <seletor></seletor>
       <tipo>TEntry</tipo>
-      <entidade>11</entidade>
+      <entidade>83</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
+      <outcontrol></outcontrol>
+      <incontrol>setFloat</incontrol>
       <trigger>0</trigger>
-      <help>Data base para o vemcimento das prestações da turma iniciando pela matrícula.</help>
+      <help></help>
       <ativo>1</ativo>
-      <valornull>1</valornull>
+      <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
@@ -13293,6 +12810,90 @@
       <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
+    </row>
+    <row id="158">
+      <id>158</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="244">
+      <id>244</id>
+      <colunadb>datanasc</colunadb>
+      <campo>datanasc</campo>
+      <label>Data de Nascimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>5</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="228">
+      <id>228</id>
+      <colunadb>dataNasc</colunadb>
+      <campo>dataNasc</campo>
+      <label>Data de Nascimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>30</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="775">
+      <id>775</id>
+      <colunadb>codigoprofessor</colunadb>
+      <campo>codigoprofessor</campo>
+      <label>Professor:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>221</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
     </row>
     <row id="881">
       <id>881</id>
@@ -13462,27 +13063,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="644">
-      <id>644</id>
-      <colunadb>valordescontado</colunadb>
-      <campo>valordescontado</campo>
-      <label>Valor do desconto:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>16</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="639">
       <id>639</id>
       <colunadb>valormatricula</colunadb>
@@ -13493,27 +13073,6 @@
       <tipo>TEntry</tipo>
       <entidade>16</entidade>
       <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setMoney</outcontrol>
-      <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="667">
-      <id>667</id>
-      <colunadb>valornominal</colunadb>
-      <campo>valornominalproduto</campo>
-      <label>Valor:</label>
-      <mascara></mascara>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>67</entidade>
-      <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
       <outcontrol>setMoney</outcontrol>
@@ -13861,48 +13420,6 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="895">
-      <id>895</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Data base:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
-    <row id="742">
-      <id>742</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Data base:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
-    </row>
     <row id="743">
       <id>743</id>
       <colunadb>intervaloParcelas</colunadb>
@@ -13943,27 +13460,6 @@
       <ativo>1</ativo>
       <valornull>0</valornull>
       <alteravel>2</alteravel>
-      <autosave>1</autosave>
-    </row>
-    <row id="891">
-      <id>891</id>
-      <colunadb>desconto</colunadb>
-      <campo>desconto</campo>
-      <label>Desconto:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
       <autosave>1</autosave>
     </row>
     <row id="896">
@@ -14049,27 +13545,6 @@
       <valornull>0</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
-    </row>
-    <row id="892">
-      <id>892</id>
-      <colunadb>acrescimo</colunadb>
-      <campo>acrescimo</campo>
-      <label>Acrescimo:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>66</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>1</autosave>
     </row>
     <row id="880">
       <id>880</id>
@@ -14302,6 +13777,48 @@
       <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="891">
+      <id>891</id>
+      <colunadb>desconto</colunadb>
+      <campo>desconto</campo>
+      <label>Desconto:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="892">
+      <id>892</id>
+      <colunadb>acrescimo</colunadb>
+      <campo>acrescimo</campo>
+      <label>Acrescimo:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
     <row id="821">
       <id>821</id>
       <colunadb>valor</colunadb>
@@ -14316,27 +13833,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>setMoney</outcontrol>
       <incontrol>setFloat</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="828">
-      <id>828</id>
-      <colunadb>datacad</colunadb>
-      <campo>datacad</campo>
-      <label>Data da Matrícula:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>16</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -14511,6 +14007,27 @@
       <valornull>1</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
+    </row>
+    <row id="895">
+      <id>895</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Data base:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
     </row>
     <row id="234">
       <id>234</id>
@@ -14867,27 +14384,6 @@
       <ativo>1</ativo>
       <valornull>0</valornull>
       <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="857">
-      <id>857</id>
-      <colunadb>vencimento</colunadb>
-      <campo>vencimento</campo>
-      <label>Vencimento:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>65</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>2</alteravel>
       <autosave>0</autosave>
     </row>
     <row id="918">
@@ -15667,27 +15163,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="823">
-      <id>823</id>
-      <colunadb>datavigencia</colunadb>
-      <campo>datavigencia</campo>
-      <label>Data de Vigência:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tipo>TEntry</tipo>
-      <entidade>89</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>0</trigger>
-      <help>Data em que o Convênio passa a valer</help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="944">
       <id>944</id>
       <colunadb>codigoconvenio</colunadb>
@@ -15751,6 +15226,405 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="823">
+      <id>823</id>
+      <colunadb>datavigencia</colunadb>
+      <campo>datavigencia</campo>
+      <label>Data de Vigência:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>89</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help>Data em que o Convênio passa a valer</help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="702">
+      <id>702</id>
+      <colunadb>valorCorrigido</colunadb>
+      <campo>valorCorrigido</campo>
+      <label>Valor total corrigido:</label>
+      <mascara></mascara>
+      <seletor>CLASS_MASCARA_VALOR,CLASS_DESTAQUE</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="673">
+      <id>673</id>
+      <colunadb>valorAlteravel</colunadb>
+      <campo>valorAlteravel</campo>
+      <label>Valor pode ser alterado:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>70</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help>Define se o valor pode sofrer alteração durante a negociação.</help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="309">
+      <id>309</id>
+      <colunadb>valorcompra</colunadb>
+      <campo>valorCompra</campo>
+      <label>Valor de Compra:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>32</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="122">
+      <id>122</id>
+      <colunadb>valorPago</colunadb>
+      <campo>valorPago</campo>
+      <label>Valor Pago:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>17</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="176">
+      <id>176</id>
+      <colunadb>desconto</colunadb>
+      <campo>desconto</campo>
+      <label>Desconto:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="161">
+      <id>161</id>
+      <colunadb>desconto</colunadb>
+      <campo>desconto</campo>
+      <label>Desconto:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="649">
+      <id>649</id>
+      <colunadb>desconto</colunadb>
+      <campo>desconto</campo>
+      <label>Desconto:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="950">
+      <id>950</id>
+      <colunadb>alterar</colunadb>
+      <campo>alterar</campo>
+      <label>Alterar</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="947">
+      <id>947</id>
+      <colunadb>codigodisciplina_antiga</colunadb>
+      <campo>codigodisciplina_antiga</campo>
+      <label>Disciplina a ser Alterada:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>455</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="951">
+      <id>951</id>
+      <colunadb>titulo</colunadb>
+      <campo>titulo</campo>
+      <label>Titulo</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>105</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="952">
+      <id>952</id>
+      <colunadb>observacoes</colunadb>
+      <campo>observacoes</campo>
+      <label>Obs.:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TText</tipo>
+      <entidade>105</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="953">
+      <id>953</id>
+      <colunadb>avaliacao</colunadb>
+      <campo>avaliacao</campo>
+      <label>Avaliação:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="954">
+      <id>954</id>
+      <colunadb>peso</colunadb>
+      <campo>peso</campo>
+      <label>Peso:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="960">
+      <id>960</id>
+      <colunadb>condicao</colunadb>
+      <campo>condicao</campo>
+      <label>Condição:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TText</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="955">
+      <id>955</id>
+      <colunadb>ordem</colunadb>
+      <campo>ordem</campo>
+      <label>Ordem:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="956">
+      <id>956</id>
+      <colunadb>codigoregra</colunadb>
+      <campo>codigoregra</campo>
+      <label>Regra para a Avaliação:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="957">
+      <id>957</id>
+      <colunadb>incontrol</colunadb>
+      <campo>incontrol</campo>
+      <label>Função de controle:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="959">
+      <id>959</id>
+      <colunadb>referencia</colunadb>
+      <campo>referencia</campo>
+      <label>Referência:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>106</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="946">
       <id>946</id>
       <colunadb>codigograde</colunadb>
@@ -15759,13 +15633,853 @@
       <mascara></mascara>
       <seletor></seletor>
       <tipo>TCombo</tipo>
-      <entidade>9</entidade>
+      <entidade>11</entidade>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol></incontrol>
       <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="644">
+      <id>644</id>
+      <colunadb>valordescontado</colunadb>
+      <campo>valordescontado</campo>
+      <label>Valor do desconto:</label>
+      <mascara></mascara>
+      <seletor>CLASS_MASCARA_VALOR</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>16</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>0</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="652">
+      <id>652</id>
+      <colunadb>Confirmar</colunadb>
+      <campo>confirmar</campo>
+      <label>Confirmar escolha</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>16</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="809">
+      <id>809</id>
+      <colunadb>botefetivamatricula</colunadb>
+      <campo>botefetivamatricula</campo>
+      <label>Confirmar Matrícula</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>16</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="667">
+      <id>667</id>
+      <colunadb>valornominal</colunadb>
+      <campo>valornominalproduto</campo>
+      <label>Valor:</label>
+      <mascara></mascara>
+      <seletor>CLASS_MASCARA_VALOR</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>67</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>0</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="834">
+      <id>834</id>
+      <colunadb>valortotal</colunadb>
+      <campo>valortotalproduto</campo>
+      <label>Valor total:</label>
+      <mascara></mascara>
+      <seletor>CLASS_MASCARA_VALOR</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>67</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>2</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="949">
+      <id>949</id>
+      <colunadb>codigoturmadisciplina</colunadb>
+      <campo>codigoturmadisciplina</campo>
+      <label>Turma Disciplina Disponível para cursar:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="948">
+      <id>948</id>
+      <colunadb>codigodisciplina_nova</colunadb>
+      <campo>codigodisciplina_nova</campo>
+      <label>Disciplina não cursada atualmente:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>456</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="74">
+      <id>74</id>
+      <colunadb>dataInicio</colunadb>
+      <campo>dataInicio</campo>
+      <label>Data de início:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>11</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="121">
+      <id>121</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>17</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="104">
+      <id>104</id>
+      <colunadb>datacad</colunadb>
+      <campo>datacad</campo>
+      <label>Data da Inscrição:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>16</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>setBotAbas('concluir_botform','0')</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="857">
+      <id>857</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>65</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>2</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="828">
+      <id>828</id>
+      <colunadb>datacad</colunadb>
+      <campo>datacad</campo>
+      <label>Data da Matrícula:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>16</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="742">
+      <id>742</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Data base:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>66</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="720">
+      <id>720</id>
+      <colunadb>dataverificacao</colunadb>
+      <campo>dataVerificacao</campo>
+      <label>Data da Última Verificação:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>76</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="669">
+      <id>669</id>
+      <colunadb>vencimentomatricula</colunadb>
+      <campo>vencimentomatricula</campo>
+      <label>Vencimento da matrícula:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>16</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="481">
+      <id>481</id>
+      <colunadb>dataCad</colunadb>
+      <campo>dataCad</campo>
+      <label>Data do Cadastro:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="429">
+      <id>429</id>
+      <colunadb>dataNasc</colunadb>
+      <campo>dataNasc</campo>
+      <label>Data de Nascimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>5</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="413">
+      <id>413</id>
+      <colunadb>dataFeriasReal</colunadb>
+      <campo>dataFeriasReal</campo>
+      <label>Data real para início das ferias:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>41</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="159">
+      <id>159</id>
+      <colunadb>datacad</colunadb>
+      <campo>datacad</campo>
+      <label>Data do Movimento</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="312">
+      <id>312</id>
+      <colunadb>dataverificacao</colunadb>
+      <campo>dataVerificacao</campo>
+      <label>Data da Última Verificação:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>32</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="195">
+      <id>195</id>
+      <colunadb>datavencimento</colunadb>
+      <campo>datavencimento</campo>
+      <label>Data base para vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>11</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help>Data base para o vemcimento das prestações da turma iniciando pela matrícula.</help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="172">
+      <id>172</id>
+      <colunadb>vencimento</colunadb>
+      <campo>vencimento</campo>
+      <label>Vencimento:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="965">
+      <id>965</id>
+      <colunadb>totalcargahoraria</colunadb>
+      <campo>totalcargahoraria</campo>
+      <label>Total Carga Horária:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="966">
+      <id>966</id>
+      <colunadb>totalinsspatronal</colunadb>
+      <campo>totalinsspatronal</campo>
+      <label>Total INSS Patr.:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="961">
+      <id>961</id>
+      <colunadb>custoalimentacao</colunadb>
+      <campo>custoalimentacao</campo>
+      <label>Custo Alimentação:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="967">
+      <id>967</id>
+      <colunadb>totalinssprofessor</colunadb>
+      <campo>totalinssprofessor</campo>
+      <label>Total INSS Prof.:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="968">
+      <id>968</id>
+      <colunadb>totalgeralencargos</colunadb>
+      <campo>totalgeralencargos</campo>
+      <label>Total com Encargos:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="970">
+      <id>970</id>
+      <colunadb>gerarcontas</colunadb>
+      <campo>gerarcontas</campo>
+      <label>Gerar Contas</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="969">
+      <id>969</id>
+      <colunadb>totalgeral</colunadb>
+      <campo>totalgeral</campo>
+      <label>Total Geral:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger>calculaDebitoProfessor()</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="964">
+      <id>964</id>
+      <colunadb>codigodisciplina</colunadb>
+      <campo>cargahoraria</campo>
+      <label>Carga Horária:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="963">
+      <id>963</id>
+      <colunadb>custoextra</colunadb>
+      <campo>custoextra</campo>
+      <label>Custo Extra:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="505">
+      <id>505</id>
+      <colunadb>custoHoraAula</colunadb>
+      <campo>custohoraaula</campo>
+      <label>Custo Hora/Aula:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="506">
+      <id>506</id>
+      <colunadb>regimeTrabalho</colunadb>
+      <campo>regimeTrabalho</campo>
+      <label>Regime de Trabalho:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>12</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>1</autosave>
+    </row>
+    <row id="974">
+      <id>974</id>
+      <colunadb>confirmacao</colunadb>
+      <campo>confAbandono</campo>
+      <label>Confirmar o Abandono de Curso</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="975">
+      <id>975</id>
+      <colunadb>confirmacao</colunadb>
+      <campo>confDestrancamento</campo>
+      <label>Confirmar o Destrancamento de Matrícula</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="976">
+      <id>976</id>
+      <colunadb>confirmacao</colunadb>
+      <campo>confTrancamento</campo>
+      <label>Confirmar o Trancamento de Curso</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TButton</tipo>
+      <entidade>0</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="971">
+      <id>971</id>
+      <colunadb>codigo</colunadb>
+      <campo>codigoaluno_processo</campo>
+      <label></label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>THidden</tipo>
+      <entidade>22</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="972">
+      <id>972</id>
+      <colunadb>codigo</colunadb>
+      <campo>codigoaluno_processo</campo>
+      <label></label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>THidden</tipo>
+      <entidade>22</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="973">
+      <id>973</id>
+      <colunadb>codigo</colunadb>
+      <campo>codigoaluno_processo</campo>
+      <label></label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>THidden</tipo>
+      <entidade>22</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="295">
+      <id>295</id>
+      <colunadb>ferias</colunadb>
+      <campo>ferias</campo>
+      <label>Valor das férias:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>14</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
       <valornull>0</valornull>

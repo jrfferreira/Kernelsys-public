@@ -770,6 +770,3 @@ class TVoice {
     }
 
 }
-
-
-?>

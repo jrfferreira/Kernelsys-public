@@ -24,16 +24,14 @@ class TBloco{
                 $this->codigo   = $codigo;
 				$this->idBloco  = $id;
 				$this->idPai    = $idPai;
-	
-                //inicia uma transação com a camada de dados do form
-                TTransaction::open('../'.TOccupant::getPath().'app.config/krs');
-                //difine o arquivo de log do acesso aos formularios
-                TTransaction::setLogger(new TLoggerTXT("../".TOccupant::getPath()."app.tmp/logAcForm.txt"));
-
-                if($this->conn = TTransaction::get()){//testa a conex�o com o banco de dados
-
-                    $sqlObBloco = "SELECT * FROM blocos WHERE id='".$this->idBloco."' and ativo='1'";
-                    $RetObBloco = $this->conn->Query($sqlObBloco);
+                    
+                    $criterio = new TCriteria();
+                    $criterio->add(new TFilter('id', '=', $this->idBloco));
+                    $criterio->add(new TFilter('ativo', '=', '1'));
+                    
+                    $tKrs = new TKrs('blocos');
+                    $RetObBloco = $tKrs->select('*',$criterio);
+                    
                     $this->ObjBloco = $RetObBloco->fetchObject();
 
                     $this->formato = $this->ObjBloco->formato;
@@ -44,11 +42,6 @@ class TBloco{
                         }
                         $this->setBloco();
                     }
-
-                }//termina teste de tranzação
-			
-		//termina a transass�o
-		TTransaction::close();
 	}
 
         /**
@@ -76,8 +69,10 @@ class TBloco{
             elseif($this->formato == 'lst'){
 
                 //Verifica tabela de destino do bloco
-                $sqlTabela = "SELECT * FROM tabelas WHERE id='".$this->ObjBloco->entidade."' order by id";
-                $retTab = $this->conn->Query($sqlTabela);
+                $dboTab = new TKrs('tabelas');
+                $criteriaFormTab = new TCriteria();
+                $criteriaFormTab->add(new TFilter('id','=',$this->ObjBloco->entidade));                
+                $retTab = $dboTab->select('*', $criteriaFormTab);
                 $obTabela = $retTab->fetchObject();
 
                     //retorna dados do formulario
@@ -182,4 +177,3 @@ class TBloco{
 		return $this->campos;
 	}
 }
-?>

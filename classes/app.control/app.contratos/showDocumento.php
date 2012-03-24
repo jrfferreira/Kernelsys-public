@@ -35,5 +35,3 @@ $doc->add($docBody);
 
 
 $doc->show();
-
-    ?>

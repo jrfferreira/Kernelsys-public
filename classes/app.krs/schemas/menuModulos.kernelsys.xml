@@ -13,6 +13,18 @@
       <ordem>1</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="82">
+      <id>82</id>
+      <modulo>parametros</modulo>
+      <labelmodulo>Parametros</labelmodulo>
+      <metodo>getform</metodo>
+      <argumento>46</argumento>
+      <form>46</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>12</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="26">
       <id>26</id>
       <modulo>financeiroAluno</modulo>
@@ -47,6 +59,42 @@
       <nivel>2</nivel>
       <moduloprincipal>2</moduloprincipal>
       <ordem>8</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="97">
+      <id>97</id>
+      <modulo>&lt;separador&gt;</modulo>
+      <labelmodulo></labelmodulo>
+      <metodo>-</metodo>
+      <argumento>0</argumento>
+      <form>0</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>5</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="98">
+      <id>98</id>
+      <modulo>&lt;separador&gt;</modulo>
+      <labelmodulo></labelmodulo>
+      <metodo>-</metodo>
+      <argumento>0</argumento>
+      <form>0</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>10</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="44">
+      <id>44</id>
+      <modulo>botFuncionario</modulo>
+      <labelmodulo>Funcionários</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>136</argumento>
+      <form>6</form>
+      <nivel>2</nivel>
+      <moduloprincipal>5</moduloprincipal>
+      <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
     <row id="14">
@@ -85,6 +133,18 @@
       <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="2">
+      <id>2</id>
+      <modulo>inscricao</modulo>
+      <labelmodulo>Inscrição</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>138</argumento>
+      <form>8</form>
+      <nivel>0</nivel>
+      <moduloprincipal>1</moduloprincipal>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="7">
       <id>7</id>
       <modulo>matricula</modulo>
@@ -95,18 +155,6 @@
       <nivel>2</nivel>
       <moduloprincipal>2</moduloprincipal>
       <ordem>2</ordem>
-      <ativo>1</ativo>
-    </row>
-    <row id="10">
-      <id>10</id>
-      <modulo>alunos</modulo>
-      <labelmodulo>Alunos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>148</argumento>
-      <form>15</form>
-      <nivel>2</nivel>
-      <moduloprincipal>2</moduloprincipal>
-      <ordem>1</ordem>
       <ativo>1</ativo>
     </row>
     <row id="46">
@@ -133,6 +181,18 @@
       <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="50">
+      <id>50</id>
+      <modulo>patrimonios</modulo>
+      <labelmodulo>Patrimonios</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>155</argumento>
+      <form>21</form>
+      <nivel>1</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>4</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="51">
       <id>51</id>
       <modulo>treinamentos</modulo>
@@ -157,6 +217,18 @@
       <ordem>1</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="53">
+      <id>53</id>
+      <modulo>fornecedores</modulo>
+      <labelmodulo>Fornecedores</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>160</argumento>
+      <form>26</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>8</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="56">
       <id>56</id>
       <modulo>usuarios</modulo>
@@ -169,6 +241,18 @@
       <ordem>11</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="61">
+      <id>61</id>
+      <modulo>salas</modulo>
+      <labelmodulo>Salas</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>174</argumento>
+      <form>34</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="63">
       <id>63</id>
       <modulo>solicitacoes</modulo>
@@ -179,6 +263,30 @@
       <nivel>2</nivel>
       <moduloprincipal>2</moduloprincipal>
       <ordem>9</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="60">
+      <id>60</id>
+      <modulo>compras</modulo>
+      <labelmodulo>Compras</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>179</argumento>
+      <form>40</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>6</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="58">
+      <id>58</id>
+      <modulo>demanda</modulo>
+      <labelmodulo>Demanda</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>185</argumento>
+      <form>43</form>
+      <nivel>2</nivel>
+      <moduloprincipal>1</moduloprincipal>
+      <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
     <row id="16">
@@ -253,6 +361,18 @@
       <ordem>21</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="93">
+      <id>93</id>
+      <modulo>produtos</modulo>
+      <labelmodulo>Produtos</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>218</argumento>
+      <form>75</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="27">
       <id>27</id>
       <modulo>solicitacao</modulo>
@@ -262,6 +382,18 @@
       <form>76</form>
       <nivel>2</nivel>
       <moduloprincipal>10</moduloprincipal>
+      <ordem>3</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="94">
+      <id>94</id>
+      <modulo>departamentos</modulo>
+      <labelmodulo>Departamentos</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>223</argumento>
+      <form>77</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
       <ordem>3</ordem>
       <ativo>1</ativo>
     </row>
@@ -373,6 +505,18 @@
       <ordem>6</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="55">
+      <id>55</id>
+      <modulo>contratos</modulo>
+      <labelmodulo>Contratos</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>166</argumento>
+      <form>30</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>9</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="86">
       <id>86</id>
       <modulo>viewArquivos</modulo>
@@ -395,6 +539,18 @@
       <nivel>2</nivel>
       <moduloprincipal>12</moduloprincipal>
       <ordem>7</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="8">
+      <id>8</id>
+      <modulo>bot_convenios</modulo>
+      <labelmodulo>Convênios</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>321</argumento>
+      <form>320</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>9</ordem>
       <ativo>1</ativo>
     </row>
     <row id="29">
@@ -613,6 +769,18 @@
       <ordem>6</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="4">
+      <id>4</id>
+      <modulo>cadDisciplina</modulo>
+      <labelmodulo>Disciplinas</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>131</argumento>
+      <form>3</form>
+      <nivel>2</nivel>
+      <moduloprincipal>13</moduloprincipal>
+      <ordem>5</ordem>
+      <ativo>1</ativo>
+    </row>
     <row id="5">
       <id>5</id>
       <modulo>cadProjetoCursos</modulo>
@@ -829,90 +997,6 @@
       <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="8">
-      <id>8</id>
-      <modulo>bot_convenios</modulo>
-      <labelmodulo>Convênios</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>321</argumento>
-      <form>320</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>9</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="50">
-      <id>50</id>
-      <modulo>patrimonios</modulo>
-      <labelmodulo>Patrimonios</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>155</argumento>
-      <form>21</form>
-      <nivel>1</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>4</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="53">
-      <id>53</id>
-      <modulo>fornecedores</modulo>
-      <labelmodulo>Fornecedores</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>160</argumento>
-      <form>26</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>8</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="55">
-      <id>55</id>
-      <modulo>contratos</modulo>
-      <labelmodulo>Contratos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>166</argumento>
-      <form>30</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>9</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="60">
-      <id>60</id>
-      <modulo>compras</modulo>
-      <labelmodulo>Compras</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>179</argumento>
-      <form>40</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>6</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="93">
-      <id>93</id>
-      <modulo>produtos</modulo>
-      <labelmodulo>Produtos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>218</argumento>
-      <form>75</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>0</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="94">
-      <id>94</id>
-      <modulo>departamentos</modulo>
-      <labelmodulo>Departamentos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>223</argumento>
-      <form>77</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>3</ordem>
-      <ativo>0</ativo>
-    </row>
     <row id="122">
       <id>122</id>
       <modulo>historicosCaixa</modulo>
@@ -925,66 +1009,6 @@
       <ordem>18</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="61">
-      <id>61</id>
-      <modulo>salas</modulo>
-      <labelmodulo>Salas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>174</argumento>
-      <form>34</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>2</ordem>
-      <ativo>1</ativo>
-    </row>
-    <row id="98">
-      <id>98</id>
-      <modulo>&lt;separador&gt;</modulo>
-      <labelmodulo></labelmodulo>
-      <metodo>-</metodo>
-      <argumento>0</argumento>
-      <form>0</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>10</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="97">
-      <id>97</id>
-      <modulo>&lt;separador&gt;</modulo>
-      <labelmodulo></labelmodulo>
-      <metodo>-</metodo>
-      <argumento>0</argumento>
-      <form>0</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>5</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="4">
-      <id>4</id>
-      <modulo>cadDisciplina</modulo>
-      <labelmodulo>Disciplinas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>131</argumento>
-      <form>3</form>
-      <nivel>2</nivel>
-      <moduloprincipal>13</moduloprincipal>
-      <ordem>5</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="58">
-      <id>58</id>
-      <modulo>demanda</modulo>
-      <labelmodulo>Demanda</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>185</argumento>
-      <form>43</form>
-      <nivel>2</nivel>
-      <moduloprincipal>1</moduloprincipal>
-      <ordem>0</ordem>
-      <ativo>0</ativo>
-    </row>
     <row id="33">
       <id>33</id>
       <modulo>consciliaBanco</modulo>
@@ -995,6 +1019,30 @@
       <nivel>2</nivel>
       <moduloprincipal>3</moduloprincipal>
       <ordem>8</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="123">
+      <id>123</id>
+      <modulo>anotacoes</modulo>
+      <labelmodulo>Anotações</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>427</argumento>
+      <form>426</form>
+      <nivel>2</nivel>
+      <moduloprincipal>1</moduloprincipal>
+      <ordem>25</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="124">
+      <id>124</id>
+      <modulo>gerPessoas</modulo>
+      <labelmodulo>Pessoas</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>212</argumento>
+      <form>71</form>
+      <nivel>2</nivel>
+      <moduloprincipal>4</moduloprincipal>
+      <ordem>12</ordem>
       <ativo>1</ativo>
     </row>
     <row id="57">
@@ -1021,65 +1069,65 @@
       <ordem>0</ordem>
       <ativo>0</ativo>
     </row>
-    <row id="82">
-      <id>82</id>
-      <modulo>parametros</modulo>
-      <labelmodulo>Parametros</labelmodulo>
-      <metodo>getform</metodo>
-      <argumento>46</argumento>
-      <form>46</form>
-      <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>12</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="44">
-      <id>44</id>
-      <modulo>botFuncionario</modulo>
-      <labelmodulo>Funcionários</labelmodulo>
+    <row id="10">
+      <id>10</id>
+      <modulo>alunosHistAcademico</modulo>
+      <labelmodulo>Históricos Acadêmicos</labelmodulo>
       <metodo>getList</metodo>
-      <argumento>136</argumento>
-      <form>6</form>
+      <argumento>148</argumento>
+      <form>15</form>
       <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>0</ordem>
+      <moduloprincipal>2</moduloprincipal>
+      <ordem>1</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="124">
-      <id>124</id>
-      <modulo>gerPessoas</modulo>
-      <labelmodulo>Pessoas</labelmodulo>
+    <row id="125">
+      <id>125</id>
+      <modulo>alunosHistFinanceiro</modulo>
+      <labelmodulo>Históricos Financeiros</labelmodulo>
       <metodo>getList</metodo>
-      <argumento>212</argumento>
-      <form>71</form>
+      <argumento>457</argumento>
+      <form>459</form>
       <nivel>2</nivel>
-      <moduloprincipal>4</moduloprincipal>
-      <ordem>12</ordem>
+      <moduloprincipal>2</moduloprincipal>
+      <ordem>1</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="2">
-      <id>2</id>
-      <modulo>inscricao</modulo>
-      <labelmodulo>Inscrição</labelmodulo>
+    <row id="126">
+      <id>126</id>
+      <modulo>alunosProcAcademicos</modulo>
+      <labelmodulo>Processos Acadêmicos</labelmodulo>
       <metodo>getList</metodo>
-      <argumento>138</argumento>
-      <form>8</form>
-      <nivel>0</nivel>
-      <moduloprincipal>1</moduloprincipal>
-      <ordem>0</ordem>
-      <ativo>0</ativo>
-    </row>
-    <row id="123">
-      <id>123</id>
-      <modulo>anotacoes</modulo>
-      <labelmodulo>Anotações</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>427</argumento>
-      <form>426</form>
+      <argumento>458</argumento>
+      <form>460</form>
       <nivel>2</nivel>
-      <moduloprincipal>1</moduloprincipal>
-      <ordem>25</ordem>
-      <ativo>0</ativo>
+      <moduloprincipal>2</moduloprincipal>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="127">
+      <id>127</id>
+      <modulo>gradeAvaliacoes</modulo>
+      <labelmodulo>Grades de Avaliações</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>466</argumento>
+      <form>463</form>
+      <nivel>2</nivel>
+      <moduloprincipal>7</moduloprincipal>
+      <ordem>10</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="128">
+      <id>128</id>
+      <modulo>notasAlunos</modulo>
+      <labelmodulo>Notas de Alunos</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>470</argumento>
+      <form>469</form>
+      <nivel>2</nivel>
+      <moduloprincipal>2</moduloprincipal>
+      <ordem>15</ordem>
+      <ativo>1</ativo>
     </row>
   </menuModulos>
 </kernelsys>

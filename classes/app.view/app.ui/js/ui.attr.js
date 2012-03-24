@@ -1,7 +1,5 @@
-/*
- * 
- * Sobrevive todos os objetos criados dinamicamente pelo ajax.
- */
+
+
 
 function atribuicao() {
 
@@ -47,7 +45,7 @@ function atribuicao() {
         });
     });
     // *********************************************************************
-    // INICIO - jQuery - Atribuição de Padronização CSS
+    // INICIO - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o CSS
     // *********************************************************************
    /* $('body').find('.remarkable').each(function() {
         $(this).click(function(e){
@@ -85,7 +83,7 @@ function atribuicao() {
 
         
 
-    //Função para enter avanÃ§ar campo
+    //FunÃ§Ã£o para enter avanÃ§ar campo
 
    // $('body').find('.ui-tabs-panel').each(function(){
 
@@ -116,8 +114,6 @@ function atribuicao() {
                 $(this).remove();
             }
         }else{
-        	
-        	//Verifica se há alguma trigger nos campo a ser executada
             if($(this).attr("trigger")){
                 var string = $(this).attr("trigger");
                 $(this).removeAttr("trigger");
@@ -181,7 +177,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     });
 
 
-    // FIM - jQuery - Atribuição de Padronização CSS
+    // FIM - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o CSS
     // *********************************************************************
 
 
@@ -197,11 +193,11 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     // Campo desabilitado
     $('body').find('.ui_campo_disabled').disabled = true;
 
-    // FIM - jQuery - Atribuição de campo desabilitado
+    // FIM - jQuery - AtribuiÃ§Ã£o de campo desabilitado
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - Atribuição de plugin "Abas"
+    // INICIO - jQuery - AtribuiÃ§Ã£o de plugin "Abas"
     // *********************************************************************
 
 
@@ -222,11 +218,11 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     }); 
 
 
-    // FIM - jQuery - Atribuição de plugin "Abas"
+    // FIM - jQuery - AtribuiÃ§Ã£o de plugin "Abas"
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - Atribuição de plugin "Mascara"
+    // INICIO - jQuery - AtribuiÃ§Ã£o de plugin "Mascara"
     // *********************************************************************
     $('body').find('.ui_mascara_telefone[masked!=masked]').attr('masked','masked').mask("(99)9999-9999");
     $('body').find('.ui_mascara_data[masked!=masked]').attr('masked','masked').mask("99/99/9999");
@@ -252,11 +248,11 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
 
 
-    // FIM - jQuery - Atribuição de plugin "janela Dialog"
+    // FIM - jQuery - AtribuiÃ§Ã£o de plugin "janela Dialog"
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - Atribuição de Padronização do Menu
+    // INICIO - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o do Menu
     // *********************************************************************
 
 
@@ -281,12 +277,12 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
         $(".botActionOff").removeClass("botActionClick ui-state-active");
         $(this).addClass("botActionClick ui-state-active");
     });
-    // FIM - jQuery - Atribuição de Padronização do Menu
+    // FIM - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o do Menu
     // *********************************************************************
 
 
     // *********************************************************************
-    // INICIO - jQuery - Atribuição de help Span
+    // INICIO - jQuery - AtribuiÃ§Ã£o de help Span
     // *********************************************************************
 
     $('body').find('.ui-icon-help').each(
@@ -309,7 +305,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
         );
 
-    // FIM - jQuery - Atribuição de help Span
+    // FIM - jQuery - AtribuiÃ§Ã£o de help Span
     // *********************************************************************
     $('body').find('.TWindow').each(function(){
         if( $("#ui-dialog-title-" + $(this).attr('id')).length == 0 ){
@@ -384,7 +380,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
 function delay_atribuicao(){
 
-    //função para execução de funÃ§Ãµes gatilho.
+    //funÃ§Ã£o para execuÃ§Ã£o de funÃ§Ãµes gatilho.
     $('body').find('*[trigger]').each(function(){
         eval($(this).attr('trigger'));
         $(this).removeAttr('trigger').attr('triggered','triggered');

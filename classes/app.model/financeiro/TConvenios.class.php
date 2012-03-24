@@ -175,7 +175,90 @@ class TConvenios{
             new setException($e);
         }
     }
+
+    /**
+     * 
+     * @param $codigoConta
+     */
+    public function getTextoConvenios($arrayConvenios, $obConta = null) {
+        $texto = 'Descontos não informados';
+        $tConvenios = new TConvenios();
+        $descontos = null;
+        if(is_array($arrayConvenios)){
+        foreach ($arrayConvenios as $codigoConvenio) {
+        	$dboConvenio = new TDbo_out('14303-1','dbconvenios');
+        	$critConvenio = new TCriteria();
+        	$critConvenio->add(new TFilter('codigo', '=', $codigoConvenio));
+        	$retConvenio = $dboConvenio->select('*', $critConvenio);
+        	$obConvenio = $retConvenio->fetchObject();
+        	
+        	$desconto = new TDbo_out('14303-1','dbconvenios_descontos');
+        	$critDesconto = new TCriteria();
+        	$critDesconto->add(new TFilter('codigoconvenio', '=', $codigoConvenio));
+        	$retDesconto = $desconto->select('*', $critDesconto);
+        	
+        	$convenio = array();
+        	while($obDesconto = $retDesconto->fetchObject()){
+        		$convenio['descontos'][$obDesconto->dialimite] += $obDesconto->valor;
+        		$descontos[$obDesconto->dialimite] += $obDesconto->valor;
+        	}
+        	$convenio['convenio'] = $obConvenio->titulo;
+        }
+        
+        if(is_array($descontos)){
+        if($descontos["--"]){
+            $descontoInicial = $descontos["--"];
+            unset($descontos["--"]);
+        }
+
+        ksort($descontos);
+        $espelho = $descontos;
+        
+            $endKey = end($espelho);
+            $endKey = key($espelho);          
+            
+        if(is_string($obConta)){
+        	$valorConta = $obConta;
+        }else{
+        	$valorConta = $obConta->valorreal;
+            $dt = explode("-", $obConta->vencimento);
+            $mesVencimento = "/". $dt[1] . "/" . $dt[0];
+        }
+        $prev = null;
+        $texto = null;
+        if(count($descontos)) {
+            foreach ($descontos as $ch => $vl) {
+    
+                $valorCheio = number_format(($obConta->valorreal - $descontoInicial), 2, ',', '.');
+                $valorAtual = $valorCheio - $vl;
+                if ($valorAtual <= 0) {
+                    $valorAtual = 0;
+                }
+    
+                $valorAtual = number_format($valorAtual, 2, ',', '.');
+                if($prev) {
+                    $texto .= "Pagamento de {$prev}{$mesVencimento} a {$ch}/{$mesVencimento} - R$ {$valorAtual} ;" . '<br/>';
+                } else {
+                    $texto .= "Pagamento até {$ch}{$mesVencimento} .................... - R$ {$valorAtual} ;" . '<br/>';
+                }
+                
+                if($descontoInicial && ($ch == $endKey)){   
+                    $texto .= "Pagamento após {$ch}{$mesVencimento} ................. - R$ {$valorCheio} (+ juros e multas se aplicável);" . '<br/>';              
+                }
+                
+                $prev = $ch + 1;
+                if(strlen($prev) == 1) $prev = '0'.$prev;
+            }
+        }elseif($descontoInicial){
+            $texto = "Para pagamento até o vencimento - R$ " . number_format ( ($valorConta - $descontoInicial), 2, ',', '.' ) . '<br/>';
+        }
+        
+
+        $texto = preg_replace('@(;<br/>)$@i','.',$texto);
+        }
+    }
+        return $texto;
+    }
     
 
 }
-?>

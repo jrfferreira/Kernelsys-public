@@ -1,8 +1,8 @@
 <?php
 /*
  * classe TCriteria
- *  Esta classe provê uma interface
- *  utilizada para definição de critérios
+ *  Esta classe prov� uma interface
+ *  utilizada para definição de crit�rios
  */
 class TCriteria extends TExpression{
 
@@ -43,7 +43,7 @@ class TCriteria extends TExpression{
      */
     public function dump($formatXml = false){
 
-        // concatena a lista de expressões
+        // concatena a lista de expressães
         if(is_array($this->expressions)){
         	
             $operator = "";
@@ -54,7 +54,7 @@ class TCriteria extends TExpression{
                 $result = ' (';
                 foreach($expression as $obExp){
                     // concatena o operador com a respectiva expressão
-                    $result .=  ' '.$operator.' '.$obExp->dump().' ';
+                    $result .=  ' '.$operator.' '.$obExp->dump($formatXml).' ';
                     $operator = strtolower($obExp->opLogico);
                 }
                 $result .= ') ';
@@ -77,7 +77,7 @@ class TCriteria extends TExpression{
 	    
     /*
      * método setProperty()
-     * define o valor de uma propriedade
+     *  define o valor de uma propriedade
      * param  $property = propriedade
      * param  $value    = valor
      */
@@ -94,5 +94,3 @@ class TCriteria extends TExpression{
         return $this->properties[$property];
     }
 }
-
-?>

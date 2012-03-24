@@ -69,4 +69,3 @@ class TCheckGroup extends TField{
         }
     }
 }
-?>

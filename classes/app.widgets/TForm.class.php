@@ -2,9 +2,7 @@
 /**
  * classe TForm
  * Classe para construção de formulários
- * 
  */
-
 class TForm{
 
     protected $fields;      // array de objetos contidos pelo form
@@ -169,6 +167,3 @@ class TForm{
     }
 
 }// fim da class
-
-
-?>

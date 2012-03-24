@@ -6,4 +6,3 @@
 class formsRecord extends TRecord{
 
 }
-?>

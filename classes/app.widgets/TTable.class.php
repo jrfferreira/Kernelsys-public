@@ -42,4 +42,3 @@ class TTable extends TElement{
         return $row;
     }
 }
-?>

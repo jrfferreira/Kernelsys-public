@@ -1,8 +1,8 @@
 <?php
 /**
- * Apresenta metodos para validação e manipulção da camada de
+ * Apresenta metodos para validação e manipulação da camada de
  * controle do sistema.
- * (Camada que gerencia o fluxo de informações e as converte em dados
+ * (Camada que gerencia o fluxo de informaçães e as converte em dados
  * para serem armazenadas em banco de dados.)
  * @author Wagne Borba
  * @date 27/01/2010
@@ -46,7 +46,7 @@ class TSetControl {
                 return $this->argumento;
 
             }else {
-                throw new ErrorException("Os dados não foram definidas corretamente.");
+                throw new ErrorException("As dados não foram definidas corretamente.");
             }
         }
         catch (Exception $e) {
@@ -67,7 +67,7 @@ class TSetControl {
              }
 
             if($validation === false){
-                $retorno = "O campo: ".$labelCampo.' é obrigatário e deve ser preenchido com informação válida.';
+                $retorno = "O campo: ".$labelCampo.' � obrigatório e deve ser preenchido com informaç�o válida.';
             }else{
                 $retorno = false;
             }
@@ -81,7 +81,7 @@ class TSetControl {
     }
 
     /**
-     * Aloca dados no nivel de sesão AlocaDados
+     * Aloca dados no nivel de ses�o AlocaDados
      * param $vetor = vetor com valores
      */
     private function setAlocaDadosMain($vetor) {
@@ -90,7 +90,7 @@ class TSetControl {
                 $obAlocaDados = new TAlocaDados();
                 $obAlocaDados->setValue($vetor['campo'], $vetor['valor']);
             }else {
-                throw new ErrorException("O argumento passado não é um vetor válido.");
+                throw new ErrorException("O argumento passado não � um vetor v�lido.");
             }
         }catch(Exception $e) {
             new setException($e);
@@ -109,7 +109,7 @@ class TSetControl {
                 $obAlocaDados = new TAlocaDados();
                 $vetor['valor'] = $obAlocaDados->getValue($vetor['argumento']);
             }else {
-                throw new ErrorException("O argumento passado não é um vetor válido.");
+                throw new ErrorException("O argumento passado não � um vetor v�lido.");
             }
         }catch(Exception $e) {
             new setException($e);
@@ -149,7 +149,7 @@ class TSetControl {
 //    }
 
     /*
-     * Aplica configuração de encripta�ão em senhas ou qualquer dado
+     * Aplica configuraç�o de encriptaç�o em senhas ou qualquer dado
      * que precise ser encriptado. (Fora de escopo do metodo main)
     */
     public function setPass($valor) {
@@ -170,7 +170,7 @@ class TSetControl {
     }
     
     /**
-     * aplica encriptação dentro do escopo do metodo main.
+     * aplica encriptaç�o dentro do escopo do metodo main.
      */
     private function setPassMain($vetor) {
         $vetor['valor'] = $this->setPass($vetor['valor']);
@@ -178,12 +178,12 @@ class TSetControl {
     }
 
     /**
-     * Valida Duplicação baseada no campo
+     * Valida Duplicaç�o baseada no campo
      * param <array> $vetor = vetor contendo o nome do campo e o valor
      */
     private function setDuplicacaoMain($vetor) {
         try{
-                //retorna o cabeçalho do formul�rio
+                //retorna o cabeçalho do formulário
                 $obHeaderForm = new TSetHeader();
                 $headerForm = $obHeaderForm->getHead($vetor['idForm']);
 
@@ -212,7 +212,7 @@ class TSetControl {
                  
                 $duplic = false;
                 $vetor['codigoRetorno'] = 'erro#4';
-                $vetor['msg'] = "Ja existe um registro com a informação fornecida ( ".$vetor['valor'].").<br>";
+                $vetor['msg'] = "Já existe um registro com a informaç�o fornecida ( ".$vetor['valor'].").<br>";
              }else{
                 $duplic = $vetor['valor'];
              }
@@ -327,7 +327,7 @@ class TSetControl {
             }
         }else{
             $vetor['codigoRetorno'] = 'erro#4';
-            $vetor['msg'] = "O CNPJ passado não é válido ( ".$vetor['valor'].").<br>";
+            $vetor['msg'] = "O CNPJ passado não � válido ( ".$vetor['valor'].").<br>";
             $vetor['valor'] = false;
             return $vetor;
         }
@@ -392,7 +392,7 @@ class TSetControl {
             }
         }else{
             $vetor['codigoRetorno'] = 'erro#4';
-            $vetor['msg'] = "O CPF informado não é válido ( ".$vetor['valor'].").<br>";
+            $vetor['msg'] = "O CPF informado não � válido ( ".$vetor['valor'].").<br>";
             $vetor['valor'] = false;
             return $vetor;
         }
@@ -429,7 +429,7 @@ class TSetControl {
             $qtde = $n->quantidadedisponivel ? $n->quantidadedisponivel : 0;
             if($vetor['valor'] > $qtde){
                 $vetor['codigoRetorno'] = 'erro#4';
-                $vetor['msg'] = "não é possivel prosseguir com o formulário de pedidos.<br><p>A quantidade informada ({$vetor['valor']}) é superior à quantidade disponível em estoque ({$qtde})</p>";
+                $vetor['msg'] = "não � possível prosseguir com o formulário de pedidos.<br><p>A quantidade informada ({$vetor['valor']}) � superior à quantidade disponível em estoque ({$qtde})</p>";
                 $vetor['valor'] = false;
                 return $vetor;
             }else{
@@ -490,7 +490,7 @@ class TSetControl {
     }
 
     /*
-    * Fun�ão para arredondamento de notas 0,5 a 0,5 pontos
+    * Funç�o para arredondamento de notas 0,5 a 0,5 pontos
     */
     public function setArredondamentoNota($n){
         try{
@@ -518,8 +518,8 @@ class TSetControl {
     }
 
     /**
-     * Valida a inclusão de produtos na transa�ão
-     * apos a gera�ão das contas
+     * Valida a inclus�o de produtos na transação
+     * apos a geração das contas
      * param <type> $vetor
      */
     public function transacaoProdutosMain($vetor){
@@ -533,7 +533,7 @@ class TSetControl {
 
             if($obContas->codigo){
                 $retorno  = 'erro#5';
-                $retorno .= "#Já existem contas associadas à esta transação, não é possivel alterar o valor da mesma.";
+                $retorno .= "#Já existem contas associadas � esta transação, não � possivel alterar o valor da mesma.";
             }else{
                 $retorno = false;
             }
@@ -553,7 +553,7 @@ class TSetControl {
     private function showMsg($msg){
         try{
             if(!$msg){
-               throw new Exception('A mensagem não é uma String válida');
+               throw new Exception('A mensagem não � uma String v�lida');
             }
 
             $windowMsg = new TWindow('Alerta', 'msg_rng');
@@ -568,11 +568,11 @@ class TSetControl {
     }
 
     /*
-     * Fun�ão para checagem de Sistema Operacional
+     * Função para checagem de Sistema Operacional
      */
 
  	/*
-     * Fun�ão para checagem de navegador
+     * Função para checagem de navegador
      */
         public function checkBrowser(){
             $props    = array("version" => "0.0.0",
@@ -620,5 +620,3 @@ class TSetControl {
         return $vl;
     }
 }
-
-?>

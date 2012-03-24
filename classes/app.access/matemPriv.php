@@ -13,13 +13,12 @@ function __autoload($classe){
 
 	//Instancia manipulador de sessão
 	$obsession = new TSession();
-
-		TTransaction::open($patchDB);
 		
-if($conn = TTransaction::get()){
-		
-	$sqlSubMenu = "select * from menu_modulos where ativo='1' and moduloPrincipal='".$param['rid']."'";
-	$runSubMenu = $conn->Query($sqlSubMenu);
+	$tKrs = new TKrs('menu_modulos');
+	$criterio = new TCriteria();
+	$criterio->add(new TFilter('ativo','=',1));
+	$criterio->add(new TFilter('moduloprincial','=',$param['rid']));
+	$runSubMenu = $tKrs->select('*',$criterio);
 	
 	$divM = new TElement('div');
 			
@@ -39,7 +38,3 @@ if($conn = TTransaction::get()){
 	}
 	
 	$divM->show();
-}	
-
-
-?>

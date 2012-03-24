@@ -19,67 +19,7 @@ Class TFix{
 		}
 		
 		$this->obdbo = new TDbo();
-		$this->obkrs = new  TDbo_kernelsys();
 		
-	}
-	
-	/**
-	 * Deleta um modolo do sistema em cascata
-	 * Wagner borba
-	 * Versão 1.0
-	 */
-	public function excluirModulo($get){
-		
-		$id_menumodulo = $get['menu_modulos'];
-		
-		$this->obkrs->setEntidade('menu_modulos');
-		 	$critmenu = new TCriteria();
-        	$critmenu->add(new TFilter("id", "=", $id_menumodulo));
-       	$menumodulo = $this->obkrs->select("id,form,metodo",$critmenu);
-       	
-		$menumodulo = $menumodulo->fetchObject();
-		
-		if($menumodulo->metodo = 'getList'){
-			
-			$idform = $menumodulo->form;
-			
-			$this->obkrs->setEntidade('forms');
-			 	$critform = new TCriteria();
-	        	$critform->add(new TFilter("id", "=", $idform));
-	       	$form = $this->obkrs->select("id,nomeform",$critform);
-	       	
-			$form = $form->fetchObject();
-			
-			//Abas do formulario
-			$this->obkrs->setEntidade('form_x_abas');
-			 	$critformabas = new TCriteria();
-	        	$critformabas->add(new TFilter("formid", "=", $form->id));
-	       	$formaba = $this->obkrs->select("formid,abaid",$critformabas);
-	       	
-	       	
-			while($auxformaba = $formaba->fetchObject()){
-				
-				//blocos e abas
-				$this->obkrs->setEntidade('blocos_x_abas');
-				 	$critblocosabas = new TCriteria();
-		        	$critblocosabas->add(new TFilter("abaid", "=", $auxformaba->abaid));
-		       	$blocoaba = $this->obkrs->select("blocoid,abaid",$critblocosabas);
-				
-				while($auxblocoaba = $blocoaba->fetchObject()){
-					
-					$lstbloboaba[] = $auxblocoaba;
-					
-				}
-				
-				$lstformaba[] = $auxformaba;
-				
-			}
-			
-			
-			print_r($lstformaba+$lstbloboaba);
-			
-		}
-       	
 	}
 	
 	
@@ -133,16 +73,5 @@ Class TFix{
     }
 }
 
-
-echo '-------------------- FIX ---------------------<br>';
-
 $fix = new TFix();
-
-//$fix->redefineUsuarios();
-$fix->excluirModulo($_GET);
-
-
-echo '<br>------------------ END FIX -------------------';
-
-
-?>
+$fix->redefineUsuarios();

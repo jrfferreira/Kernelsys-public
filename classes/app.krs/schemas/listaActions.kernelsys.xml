@@ -211,5 +211,50 @@
       <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
+    <row id="21">
+      <id>21</id>
+      <idlista>457</idlista>
+      <tipocampo></tipocampo>
+      <nameAction>onViewHistFinanceiro</nameAction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+      <tiporetorno>form</tiporetorno>
+    </row>
+    <row id="22">
+      <id>22</id>
+      <idlista>458</idlista>
+      <tipocampo></tipocampo>
+      <nameAction>onViewProcAcademicos</nameAction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+      <tiporetorno>form</tiporetorno>
+    </row>
+    <row id="23">
+      <id>23</id>
+      <idlista>217</idlista>
+      <tipocampo></tipocampo>
+      <nameAction>onAtaAvaliacao</nameAction>
+      <label>Ata de Avaliação</label>
+      <actionjs>showAtaAvaliacao</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
+      <tiporetorno>form</tiporetorno>
+    </row>
   </listaActions>
 </kernelsys>

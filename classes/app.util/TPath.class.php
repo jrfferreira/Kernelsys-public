@@ -22,4 +22,3 @@ class TPath {
             return $pathSystem;
     }
 }
-?>

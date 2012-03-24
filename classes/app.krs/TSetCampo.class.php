@@ -70,7 +70,7 @@ class TSetCampo {
     * param <type> $evento = evento javascript que dispara a ação
     * param <type> $action = ação a ser disparada pelo evento javascript
     */
-    public function setAction($evento, $action = NULL){
+    public function setAction($evento, $action){
     	$evento = strtolower($evento);
         if($this->action[$evento]){
             $this->action[$evento] = $this->action[$evento].'; '.$action;
@@ -99,7 +99,7 @@ class TSetCampo {
                 // se valor da propriedade for composto converte em vetor
                 $vls = explode(";",$valor);
 
-                // verifica se o valor da propriedade � composto ou simples
+                // verifica se o valor da propriedade é composto ou simples
                 if(count($vls) > 1) {
                     $this->fields->$propriedade($vls[0],$vls[1]);
                 }else {
@@ -135,8 +135,7 @@ class TSetCampo {
 
         }
         else {// senão, atribui propriedade
-           	
-        	$this->fields->$propriedade = $valor;
+           $this->fields->$propriedade = $valor;
         }
     }
 
@@ -178,5 +177,3 @@ class TSetCampo {
     }
 
 }
-
-?>

@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
-  <formButton/>
+  <formButton>
+    <row id="1">
+      <id>1</id>
+      <form>49</form>
+      <botao>fecharCaixa</botao>
+      <labelbotao>Fechar Caixa</labelbotao>
+      <confirmacao>Você deseja Realmente executar esta ação?</confirmacao>
+      <actionjs>closeCaixaDia</actionjs>
+      <metodo></metodo>
+      <ordem>1 </ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="2">
+      <id>2</id>
+      <form>13</form>
+      <botao>concluir_botform</botao>
+      <labelbotao>Baixar conta</labelbotao>
+      <confirmacao>Você deseja realmente executar o pagamento desta conta?</confirmacao>
+      <actionjs>onClose</actionjs>
+      <metodo>onClose</metodo>
+      <ordem>2 </ordem>
+      <ativo>0</ativo>
+    </row>
+  </formButton>
 </kernelsys>

@@ -302,4 +302,3 @@ class TDataGrid extends TTable {
     }
 
 }
-?>

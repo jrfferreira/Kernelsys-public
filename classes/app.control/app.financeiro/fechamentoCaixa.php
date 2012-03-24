@@ -97,6 +97,4 @@ if($MCaixa){
 
     //TTransaction::close();
 
-}				
-
-?>
+}

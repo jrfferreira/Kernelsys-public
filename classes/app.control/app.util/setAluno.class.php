@@ -20,4 +20,3 @@ class setAluno{
         return $retorno;
     }
  }
-?>

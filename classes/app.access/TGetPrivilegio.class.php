@@ -38,4 +38,3 @@ class TGetPrivilegio{
 		return $this->obUser;
 	}
 }
-?>

@@ -14,7 +14,3 @@ class setDisc{
         return $retorno;
     }
 }
-
-//comentario
-
-?>

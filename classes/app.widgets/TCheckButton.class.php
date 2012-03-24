@@ -26,4 +26,3 @@ class TCheckButton extends TField{
         $this->tag->show();
     }
 }
-?>

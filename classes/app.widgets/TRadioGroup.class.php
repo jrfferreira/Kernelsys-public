@@ -39,7 +39,7 @@ class TRadioGroup extends TField{
 	
         if ($this->items){
 		$cont = 1;
-            // percorre cadauma das opções do rádio
+            // percorre cadauma das opções do r�dio
             foreach ($this->items as $index => $label){
 			
                 $button = new TRadioButton($this->name);
@@ -50,7 +50,6 @@ class TRadioGroup extends TField{
 				//atribui propriedades
 				if($this->props){
 					foreach($this->props as $kProp=>$vProp){
-						
 						$button->$kProp = $vProp;
 					}
 				}
@@ -78,4 +77,3 @@ class TRadioGroup extends TField{
         }
     }
 }
-?>

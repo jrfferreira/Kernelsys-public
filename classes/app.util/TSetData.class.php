@@ -253,8 +253,3 @@ final class TSetData{
   }
 
 }
-
-//$ob = new TSetData();
-//print_r($ob->setIntervalo('20/03/2009', '20/04/2009'));
-
-?>

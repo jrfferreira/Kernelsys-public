@@ -9,7 +9,7 @@ class autoload {
 	
 	public $nivelatual = 1;
 	public $niveis = 10;
-	public $mapfile = '../app.tmp/mapfile.php';
+	public $mapfile = '../app.util/fileMap.php';
 	
 
     public function __construct($nvl, $classe, $raiz = NULL) {
@@ -64,6 +64,12 @@ class autoload {
     	require_once($this->mapfile);
 
     	$classMap = new fileMap();
+    	
+    	$classPath = $classMap->getClasses($classe);
+    	if($classPath != false && !is_array($classPath)){
+    		include_once($classPath);
+    		return true;
+    	}
     	
 	    if( is_array( $classMap->getClasses() ) ){ 
 	        foreach( $classMap->getClasses() as $key=> $val ) 
@@ -121,17 +127,28 @@ class autoload {
             $nivel1 = $this->foreach_dir($raiz, $classe);
             
             $file  = '<?php ';
-            $file .= ' class fileMap{';            
+            $file .= ' class fileMap {';            
             $file .= 'public $classes = array();';    
             $file .= 'public function __construct(){';    
             foreach($nivel1 as $ch => $vl){
-            	$file .= '$this->classes['.$ch.'] = \''.$vl.'\';';
+            	$chave = preg_grep('@(.*)/(.*?)(\.class\.php)@i', $vl);
+            	$file .= '$this->classes['.$chave[1].'] = \''.$vl.'\';';
             }
                 
             $file .= '}';
-            $file .= 'public function getClasses(){ return $this->classes; }';
+            $file .= 'public function getClasses($class = null){ ';
+			$file .= '  	if(!empty($class)){';
+			$file .= '  		$returnClass = $this->classes[$class];';
+			$file .= '  		if(empty($returnClass)){';
+			$file .= '  			return false;';
+			$file .= '  		}else{';
+			$file .= '  			return $returnClass;';
+			$file .= '  		}';
+			$file .= '  	}else{';
+			$file .= '      	return $this->classes; ';
+			$file .= '  	}';
+			$file .= '  }';
             $file .= '}';
-            $file .= '?>';
     		            
             file_put_contents($this->mapfile,$file,LOCK_EX);
     		
@@ -141,5 +158,3 @@ class autoload {
     	}
     }
 }
-
-?>

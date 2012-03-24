@@ -669,5 +669,3 @@ class viewBPatrimonial {
 
 
 }
-?>
-

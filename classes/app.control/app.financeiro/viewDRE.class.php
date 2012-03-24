@@ -243,7 +243,4 @@ function __autoload($classe){
 	
 		$ob->show();		
 		
-		//}
-	
-?>
 

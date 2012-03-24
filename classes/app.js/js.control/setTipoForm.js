@@ -1,7 +1,3 @@
-/*
- * 
- * Altera o conteudo do bloco de pessoa física ou jurídica
- */
 function setTipoForm(ob){
 
     var pF = document.getElementById('bloc_pessoaFisica');

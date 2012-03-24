@@ -59,4 +59,3 @@ class TText extends TField
         $this->tag->show();
     }
 }
-?>

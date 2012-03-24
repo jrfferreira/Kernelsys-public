@@ -51,5 +51,3 @@ class TFrameFile extends TField {
 
     
 }
-
-?>

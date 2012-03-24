@@ -126,4 +126,3 @@ class TDataGridColumn
         return $this->visibilidade;
     }
 }
-?>

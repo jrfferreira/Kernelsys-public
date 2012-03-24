@@ -306,4 +306,3 @@ class TGDImage {
 		return false;
 	}
 }
-?>

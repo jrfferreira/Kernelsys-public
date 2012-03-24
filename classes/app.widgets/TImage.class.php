@@ -20,4 +20,3 @@ class TImage extends TElement
         $this->border = 0;
     }
 }
-?>
