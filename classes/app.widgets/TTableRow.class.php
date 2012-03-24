@@ -25,3 +25,4 @@ class TTableRow extends TElement{
         return $cell;
     }
 }
+?>

@@ -68,3 +68,4 @@ class TLabel extends TField
         $this->tag->show();
     }
 }
+?>

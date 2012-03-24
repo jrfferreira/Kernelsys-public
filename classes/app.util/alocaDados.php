@@ -15,3 +15,5 @@ $valor     = $_GET['alValor'];
 $idContent = $_GET['idc']; 
 
 $obsession = new TAlocaDados($idContent, $valor);
+
+?>

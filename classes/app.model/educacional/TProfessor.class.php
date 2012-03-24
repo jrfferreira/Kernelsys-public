@@ -46,3 +46,4 @@ class TProfessor {
         return $obProfessor;
     }
 }
+?>

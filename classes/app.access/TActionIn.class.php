@@ -48,3 +48,4 @@ class TActionIn{
 // instancia e executa objeto
 $action = $_GET['act'];
 $atctionIn = new TActionIn($action);
+?>

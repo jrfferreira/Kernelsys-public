@@ -32,3 +32,5 @@ class loadJs{
             return $itens;
         }
 }
+
+?>

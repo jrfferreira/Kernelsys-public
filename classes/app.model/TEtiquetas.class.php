@@ -1,4 +1,107 @@
 <?php
+/*
+class TEtiquetas {
+
+    public $line = array();
+
+    public function __construct($espHorizontal, $espVertical, $largura, $altura, $margemEsq, $margemSup, $colunas, $linhas) {
+        $this->espHorizontal = $espHorizontal;
+        $this->espVertical = $espVertical;
+        $this->largura = $largura;
+        $this->altura = $altura;
+        $this->margemEsq = $margemEsq;
+        $this->margemSup = $margemSup;
+        $this->colunas = $colunas;
+        $this->linhas = $linhas;
+    }
+
+    public function addLine($etiqueta1, $etiqueta2 = null) {
+        $this->line[] = array($etiqueta1, $etiqueta2);
+    }
+
+    public function show() {
+
+        $model = '<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head profile="http://dublincore.org/documents/dcmi-terms/">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+        <title xml:lang="en-US">Etiquetas</title><meta name="DCTERMS.title" content="" xml:lang="en-US"/><meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/><meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/><meta name="DCTERMS.creator" content="João Felix"/><meta name="DCTERMS.issued" content="2010-08-05T20:30:04" scheme="DCTERMS.W3CDTF"/><meta name="DCTERMS.contributor" content="João Felix"/><meta name="DCTERMS.modified" content="2010-08-05T20:31:16" scheme="DCTERMS.W3CDTF"/><meta name="DCTERMS.provenance" content="" xml:lang="en-US"/><meta name="DCTERMS.subject" content="," xml:lang="en-US"/><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/><link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/><link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/><base href="."/><style type="text/css">
+	@page {  }
+	table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+	td, th { vertical-align:top; font-size:12pt;}
+	h1, h2, h3, h4, h5, h6 { clear:both }
+	ol, ul { margin:0; padding:0;}
+	li { list-style: none; margin:0; padding:0;}
+	<!-- "li span.odfLiEnd" - IE 7 issue-->
+	li span. { clear: both; line-height:0; width:0; height:0; margin:0; padding:0; }
+	span.footnodeNumber { padding-right:1em; }
+	span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+	* { margin:0;}
+        .etiq {width: ' . $this->largura . 'cm; height: ' . $this->altura . 'cm; vertical-align:middle; padding: 0.5cm;}
+	.P1 {font-size:11pt; font-family: arial,verdana,Times New Roman; writing-mode:lr-tb; margin-left:0.27cm; margin-right:0.27cm; text-indent:0cm; }
+	.Standard { font-size:12pt; font-family:Times New Roman; writing-mode:lr-tb; }
+	.Table1 { width:20.796cm; margin-left:-0.026cm; writing-mode:lr-tb; }
+	.Table1_A1 { vertical-align:middle; padding-left:0.026cm; padding-right:0.026cm; padding-top:0cm; padding-bottom:0cm; border-style:none; }
+	.Table1_A { width:10.16cm; }
+	.Table1_B { width:0.476cm; }
+	.Table1_1 { height:3.387cm; }
+	<!-- ODF styles with no properties representable as CSS -->
+	.Endnote_20_Symbol .Footnote_20_Symbol { }
+	</style>
+        </head>
+        <body dir="ltr" style="max-width:21.59cm;margin-top:2.117cm; margin-bottom:0cm; margin-left:0.397cm; margin-right:0.397cm; ">
+        <table border="0" cellspacing="0" cellpadding="0" class="Table1">
+            <colgroup>
+                <col width="444"/>
+                <col width="21"/>
+                <col width="444"/>
+           </colgroup>';
+
+        foreach ($this->line as $vl) {
+            $model .= '<tr class="Table11">
+            <td style="text-align:left;width:10.16cm; " class="Table1_A1">
+                <p class="P1 etiq">' . $vl[0] . '</p>
+            </td>
+            <td style="text-align:left;width:0.476cm; " class="Table1_A1">
+                <p class="P1"> </p>
+            </td>
+            <td style="text-align:left;width:10.16cm; " class="Table1_A1">
+                <p class="P1 etiq">' . $vl[1] . '</p>
+            </td>
+           </tr>';
+        }
+        $model .= '</table><p class="Standard"></p></body></html>';
+
+        return $model;
+    }
+
+    public function apendiceImprimir($idForm) {
+        $div = new TElement('div');
+        $button1 = new TElement('input');
+        $button1->type = "button";
+        $button1->onclick = "showEtiquetas(" . $idForm . ")";
+        $button1->name = "showEtiquetas-8062";
+        $button1->id = "showEtiquetas-8062";
+        $button1->class = "ui-corner-all ui-widget ui-state-default";
+        $button1->value = "Imprimir Etiquetas\r(Padrão 8062).";
+
+        $div->add($button1);
+
+        $divREsposta = new TElement('div');
+        $divREsposta->id = "respostashowEtiquetas";
+        $divREsposta->style = 'display: inline-block;margin-top: 5px;';
+        $div->add($divREsposta);
+
+        return $div;
+    }
+
+}
+ * */
+?>
+
+
+<?php
 
 class TEtiquetas {
 
@@ -102,3 +205,4 @@ class TEtiquetas {
         return $div;
     }
 }
+?>

@@ -19,12 +19,6 @@
       <blocoid>12</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="4">
-      <id>4</id>
-      <abaid>4</abaid>
-      <blocoid>13</blocoid>
-      <ordem>2</ordem>
-    </row>
     <row id="5">
       <id>5</id>
       <abaid>1</abaid>
@@ -265,12 +259,6 @@
       <blocoid>69</blocoid>
       <ordem></ordem>
     </row>
-    <row id="59">
-      <id>59</id>
-      <abaid>54</abaid>
-      <blocoid>70</blocoid>
-      <ordem></ordem>
-    </row>
     <row id="60">
       <id>60</id>
       <abaid>57</abaid>
@@ -361,12 +349,6 @@
       <blocoid>87</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="77">
-      <id>77</id>
-      <abaid>3</abaid>
-      <blocoid>89</blocoid>
-      <ordem>2</ordem>
-    </row>
     <row id="78">
       <id>78</id>
       <abaid>69</abaid>
@@ -397,12 +379,6 @@
       <blocoid>95</blocoid>
       <ordem></ordem>
     </row>
-    <row id="83">
-      <id>83</id>
-      <abaid>77</abaid>
-      <blocoid>96</blocoid>
-      <ordem></ordem>
-    </row>
     <row id="84">
       <id>84</id>
       <abaid>82</abaid>
@@ -419,12 +395,6 @@
       <id>87</id>
       <abaid>53</abaid>
       <blocoid>99</blocoid>
-      <ordem></ordem>
-    </row>
-    <row id="88">
-      <id>88</id>
-      <abaid>54</abaid>
-      <blocoid>100</blocoid>
       <ordem></ordem>
     </row>
     <row id="89">
@@ -516,12 +486,6 @@
       <abaid>207</abaid>
       <blocoid>126</blocoid>
       <ordem></ordem>
-    </row>
-    <row id="113">
-      <id>113</id>
-      <abaid>4</abaid>
-      <blocoid>130</blocoid>
-      <ordem>1</ordem>
     </row>
     <row id="114">
       <id>114</id>
@@ -733,12 +697,6 @@
       <blocoid>4</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="179">
-      <id>179</id>
-      <abaid>255</abaid>
-      <blocoid>183</blocoid>
-      <ordem>1</ordem>
-    </row>
     <row id="158">
       <id>158</id>
       <abaid>239</abaid>
@@ -859,6 +817,12 @@
       <blocoid>200</blocoid>
       <ordem>1</ordem>
     </row>
+    <row id="197">
+      <id>197</id>
+      <abaid>55</abaid>
+      <blocoid>201</blocoid>
+      <ordem>2</ordem>
+    </row>
     <row id="198">
       <id>198</id>
       <abaid>268</abaid>
@@ -955,12 +919,6 @@
       <blocoid>215</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="212">
-      <id>212</id>
-      <abaid>282</abaid>
-      <blocoid>216</blocoid>
-      <ordem>1</ordem>
-    </row>
     <row id="213">
       <id>213</id>
       <abaid>283</abaid>
@@ -1001,18 +959,6 @@
       <id>219</id>
       <abaid>289</abaid>
       <blocoid>223</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="220">
-      <id>220</id>
-      <abaid>290</abaid>
-      <blocoid>224</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="221">
-      <id>221</id>
-      <abaid>291</abaid>
-      <blocoid>225</blocoid>
       <ordem>1</ordem>
     </row>
     <row id="222">
@@ -1297,12 +1243,6 @@
       <blocoid>266</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="264">
-      <id>264</id>
-      <abaid>341</abaid>
-      <blocoid>267</blocoid>
-      <ordem>1</ordem>
-    </row>
     <row id="265">
       <id>265</id>
       <abaid>342</abaid>
@@ -1481,84 +1421,6 @@
       <id>292</id>
       <abaid>366</abaid>
       <blocoid>283</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="293">
-      <id>293</id>
-      <abaid>367</abaid>
-      <blocoid>284</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="294">
-      <id>294</id>
-      <abaid>367</abaid>
-      <blocoid>285</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="295">
-      <id>295</id>
-      <abaid>368</abaid>
-      <blocoid>286</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="296">
-      <id>296</id>
-      <abaid>368</abaid>
-      <blocoid>287</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="297">
-      <id>297</id>
-      <abaid>369</abaid>
-      <blocoid>288</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="298">
-      <id>298</id>
-      <abaid>211</abaid>
-      <blocoid>291</blocoid>
-      <ordem>2</ordem>
-    </row>
-    <row id="299">
-      <id>299</id>
-      <abaid>372</abaid>
-      <blocoid>271</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="300">
-      <id>300</id>
-      <abaid>373</abaid>
-      <blocoid>271</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="301">
-      <id>301</id>
-      <abaid>374</abaid>
-      <blocoid>271</blocoid>
-      <ordem>1</ordem>
-    </row>
-    <row id="302">
-      <id>302</id>
-      <abaid>345</abaid>
-      <blocoid>292</blocoid>
-      <ordem>2</ordem>
-    </row>
-    <row id="303">
-      <id>303</id>
-      <abaid>351</abaid>
-      <blocoid>293</blocoid>
-      <ordem>2</ordem>
-    </row>
-    <row id="304">
-      <id>304</id>
-      <abaid>374</abaid>
-      <blocoid>294</blocoid>
-      <ordem>2</ordem>
-    </row>
-    <row id="305">
-      <id>305</id>
-      <abaid>376</abaid>
-      <blocoid>295</blocoid>
       <ordem>1</ordem>
     </row>
   </blocosXAbas>

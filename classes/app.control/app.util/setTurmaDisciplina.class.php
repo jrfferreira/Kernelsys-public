@@ -77,3 +77,5 @@ class setTurmaDisciplina{
         return $retorno;
     }
  }
+?>
+

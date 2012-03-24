@@ -1,62 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <tabelas>
-    <row id="39">
-      <id>39</id>
-      <tabela>dbcontratos</tabela>
-      <tabelaView>view_contratos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
+    <row id="2">
+      <id>2</id>
+      <tabela>view_pessoas_inscricoes</tabela>
+      <tabelaView>view_pessoas_inscricoes</tabelaView>
+      <tabpai>dbpessoas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoinscricao</colunafilho>
     </row>
-    <row id="15">
-      <id>15</id>
-      <tabela>dbfuncionarios_professores</tabela>
-      <tabelaView>view_funcionarios_professores</tabelaView>
-      <tabpai>dbfuncionarios_professores&#13;
-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoprofessor</colunafilho>
-    </row>
-    <row id="74">
-      <id>74</id>
-      <tabela>dbdepartamentos</tabela>
-      <tabelaView>view_departamentos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigodepartamento</colunafilho>
-    </row>
-    <row id="81">
-      <id>81</id>
-      <tabela>dbpessoas</tabela>
-      <tabelaView>view_pessoas_funcionarios</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigopessoa</colunafilho>
-    </row>
-    <row id="48">
-      <id>48</id>
-      <tabela>dbpessoas_demandas</tabela>
-      <tabelaView>view_pessoas_demandas</tabelaView>
+    <row id="6">
+      <id>6</id>
+      <tabela>dbpessoas_complemento_pj</tabela>
+      <tabelaView>view_pessoas_complemento_pj</tabelaView>
       <tabpai>dbpessoas</tabpai>
       <ativo>1</ativo>
       <colunafilho></colunafilho>
-    </row>
-    <row id="10">
-      <id>10</id>
-      <tabela>dbcursos_disciplinas</tabela>
-      <tabelaView>view_cursos_disciplinas</tabelaView>
-      <tabpai>dbdisciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigocursodisciplina</colunafilho>
-    </row>
-    <row id="12">
-      <id>12</id>
-      <tabela>dbturmas_disciplinas</tabela>
-      <tabelaView>view_turmas_disciplinas</tabelaView>
-      <tabpai>dbturmas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoturmadisciplina</colunafilho>
     </row>
     <row id="14">
       <id>14</id>
@@ -66,29 +25,53 @@
       <ativo>1</ativo>
       <colunafilho>codigofuncionario</colunafilho>
     </row>
-    <row id="43">
-      <id>43</id>
-      <tabela>dbpessoas_formacoes</tabela>
-      <tabelaView>view_pessoas_formacoes</tabelaView>
+    <row id="8">
+      <id>8</id>
+      <tabela>dbdisciplinas</tabela>
+      <tabelaView>view_disciplinas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigodisciplina</colunafilho>
+    </row>
+    <row id="9">
+      <id>9</id>
+      <tabela>dbcursos</tabela>
+      <tabelaView>view_cursos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocurso</colunafilho>
+    </row>
+    <row id="10">
+      <id>10</id>
+      <tabela>dbcursos_disciplinas</tabela>
+      <tabelaView>view_cursos_disciplinas</tabelaView>
+      <tabpai>dbdisciplinas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocursodisciplina</colunafilho>
+    </row>
+    <row id="11">
+      <id>11</id>
+      <tabela>dbturmas</tabela>
+      <tabelaView>view_turmas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoturma</colunafilho>
+    </row>
+    <row id="12">
+      <id>12</id>
+      <tabela>dbturmas_disciplinas</tabela>
+      <tabelaView>view_turmas_disciplinas</tabelaView>
+      <tabpai>dbturmas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoturmadisciplina</colunafilho>
+    </row>
+    <row id="16">
+      <id>16</id>
+      <tabela>dbpessoas_inscricoes</tabela>
+      <tabelaView>view_pessoas_inscricoes</tabelaView>
       <tabpai>dbpessoas</tabpai>
       <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="85">
-      <id>85</id>
-      <tabela>dbcursos_ativos</tabela>
-      <tabelaView>view_cursos_ativos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigocursoativo</colunafilho>
-    </row>
-    <row id="21">
-      <id>21</id>
-      <tabela>dbcaixa</tabela>
-      <tabelaView>view_caixa</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigocaixa</colunafilho>
+      <colunafilho>codigo</colunafilho>
     </row>
     <row id="22">
       <id>22</id>
@@ -98,13 +81,29 @@
       <ativo>1</ativo>
       <colunafilho>codigoaluno</colunafilho>
     </row>
-    <row id="2">
-      <id>2</id>
-      <tabela>view_pessoas_inscricoes</tabela>
-      <tabelaView>view_pessoas_inscricoes</tabelaView>
-      <tabpai>dbpessoas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoinscricao</colunafilho>
+    <row id="17">
+      <id>17</id>
+      <tabela>dbtransacoes_contas_duplicatas</tabela>
+      <tabelaView>view_transacoes_contas_duplicatas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigo</colunafilho>
+    </row>
+    <row id="18">
+      <id>18</id>
+      <tabela>dbplano_contas</tabela>
+      <tabelaView>view_plano_contas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="21">
+      <id>21</id>
+      <tabela>dbcaixa</tabela>
+      <tabelaView>view_caixa</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocaixa</colunafilho>
     </row>
     <row id="42">
       <id>42</id>
@@ -114,13 +113,422 @@
       <ativo>1</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="87">
-      <id>87</id>
-      <tabela>dbpessoas_livros</tabela>
-      <tabelaView>view_pessoas_livros</tabelaView>
+    <row id="23">
+      <id>23</id>
+      <tabela>dbturmas_requisitos</tabela>
+      <tabelaView>view_turmas_requisitos</tabelaView>
+      <tabpai>dbturmas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="24">
+      <id>24</id>
+      <tabela>dbcontas_caixa</tabela>
+      <tabelaView>view_contas_caixa</tabelaView>
       <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocontacaixa</colunafilho>
+    </row>
+    <row id="25">
+      <id>25</id>
+      <tabela>dbalunos_faltas</tabela>
+      <tabelaView>view_alunos_faltas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="26">
+      <id>26</id>
+      <tabela>dbusuarios</tabela>
+      <tabelaView>view_usuarios</tabelaView>
+      <tabpai></tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigousuario</colunafilho>
+    </row>
+    <row id="27">
+      <id>27</id>
+      <tabela>dbturmas_disciplinas_avaliacoes</tabela>
+      <tabelaView>view_turmas_disciplinas_avaliacoes</tabelaView>
+      <tabpai>dbturmas_disciplinas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="28">
+      <id>28</id>
+      <tabela>dbturmas_disciplinas_aulas</tabela>
+      <tabelaView>view_turmas_disciplinas_aulas</tabelaView>
+      <tabpai>dbturmas_disciplinas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="29">
+      <id>29</id>
+      <tabela>dbcargos</tabela>
+      <tabelaView>view_cargos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="30">
+      <id>30</id>
+      <tabela>dbcurriculos</tabela>
+      <tabelaView>view_curriculos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="32">
+      <id>32</id>
+      <tabela>dbpatrimonios</tabela>
+      <tabelaView>view_patrimonios</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigopatrimonio</colunafilho>
+    </row>
+    <row id="33">
+      <id>33</id>
+      <tabela>dbtreinamentos</tabela>
+      <tabelaView>view_treinamentos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="34">
+      <id>34</id>
+      <tabela>dbfuncionarios_treinamentos
+</tabela>
+      <tabelaView>view_funcionarios_treinamentos </tabelaView>
+      <tabpai>dbpessoas_funcionarios</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="35">
+      <id>35</id>
+      <tabela>dbunidades</tabela>
+      <tabelaView>view_unidades</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>unidade</colunafilho>
+    </row>
+    <row id="37">
+      <id>37</id>
+      <tabela>dbprodutos_caracteristicas</tabela>
+      <tabelaView>view_produtos_caracteristicas</tabelaView>
+      <tabpai>dbprodutos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="38">
+      <id>38</id>
+      <tabela>dbcotacoes</tabela>
+      <tabelaView>view_cotacoes</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="39">
+      <id>39</id>
+      <tabela>dbcontratos</tabela>
+      <tabelaView>view_contratos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="40">
+      <id>40</id>
+      <tabela>dbusuarios_privilegios</tabela>
+      <tabelaView>view_usuarios_privilegios</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="41">
+      <id>41</id>
+      <tabela>dbfuncionarios_ferias</tabela>
+      <tabelaView>view_funcionarios_ferias</tabelaView>
+      <tabpai>dbpessoas_funcionarios</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="48">
+      <id>48</id>
+      <tabela>dbpessoas_demandas</tabela>
+      <tabelaView>view_pessoas_demandas</tabelaView>
+      <tabpai>dbpessoas</tabpai>
       <ativo>1</ativo>
       <colunafilho></colunafilho>
+    </row>
+    <row id="44">
+      <id>44</id>
+      <tabela>dbsalas</tabela>
+      <tabelaView>view_salas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigosala</colunafilho>
+    </row>
+    <row id="45">
+      <id>45</id>
+      <tabela>dbcursos_areas</tabela>
+      <tabelaView>view_cursos_areas</tabelaView>
+      <tabpai>dbcursos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="46">
+      <id>46</id>
+      <tabela>dbalunos_solicitacoes</tabela>
+      <tabelaView>view_alunos_solicitacoes</tabelaView>
+      <tabpai>dbpessoas_alunos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="47">
+      <id>47</id>
+      <tabela>dbcompras</tabela>
+      <tabelaView>view_compras</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="49">
+      <id>49</id>
+      <tabela>dbpessoas_enderecoscobrancas</tabela>
+      <tabelaView>view_pessoas_enderecoscobrancas</tabelaView>
+      <tabpai>dbpessoas</tabpai>
+      <ativo>1</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="81">
+      <id>81</id>
+      <tabela>dbpessoas</tabela>
+      <tabelaView>view_pessoas_funcionarios</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>1</ativo>
+      <colunafilho>codigopessoa</colunafilho>
+    </row>
+    <row id="50">
+      <id>50</id>
+      <tabela>dbparametros</tabela>
+      <tabelaView>view_parametros</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="53">
+      <id>53</id>
+      <tabela>dbturmas_disciplinas_materiais</tabela>
+      <tabelaView>view_turmas_disciplinas_materiais</tabelaView>
+      <tabpai>dbturmas_disciplinas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="54">
+      <id>54</id>
+      <tabela>dbcaixa_fechamentos</tabela>
+      <tabelaView>view_caixa_fechamentos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="55">
+      <id>55</id>
+      <tabela>dbfuncionarios_folhapagamento</tabela>
+      <tabelaView>view_funcionarios_folhapagamento</tabelaView>
+      <tabpai>dbpessoas_funcionarios</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="56">
+      <id>56</id>
+      <tabela>dbalunos_disciplinas</tabela>
+      <tabelaView>view_alunos_disciplinas</tabelaView>
+      <tabpai>dbpessoas_alunos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoalunodisciplina</colunafilho>
+    </row>
+    <row id="57">
+      <id>57</id>
+      <tabela>dbfuncionarios_ocorrencias</tabela>
+      <tabelaView>view_funcionarios_ocorrencias</tabelaView>
+      <tabpai>dbpessoas_funcionarios</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="58">
+      <id>58</id>
+      <tabela>dbprojetos</tabela>
+      <tabelaView>view_projetos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="59">
+      <id>59</id>
+      <tabela>dbprojetos_custos</tabela>
+      <tabelaView>view_projetos_custos</tabelaView>
+      <tabpai>dbprojetos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="60">
+      <id>60</id>
+      <tabela>dbprojetos_colaboradores</tabela>
+      <tabelaView>view_projetos_colaboradores</tabelaView>
+      <tabpai>dbprojetos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="61">
+      <id>61</id>
+      <tabela>dbprojetos_recursos</tabela>
+      <tabelaView>view_projetos_recursos</tabelaView>
+      <tabpai>dbprojetos</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="63">
+      <id>63</id>
+      <tabela>dbturmas_disciplinas_arquivos</tabela>
+      <tabelaView>view_turmas_disciplinas_arquivos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="64">
+      <id>64</id>
+      <tabela>dbextornos</tabela>
+      <tabelaView>view_extornos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="65">
+      <id>65</id>
+      <tabela>dbtransacoes_contas</tabela>
+      <tabelaView>view_transacoes_contas</tabelaView>
+      <tabpai>dbtransacoes</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoconta</colunafilho>
+    </row>
+    <row id="66">
+      <id>66</id>
+      <tabela>dbtransacoes</tabela>
+      <tabelaView>view_transacoes</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigotransacao</colunafilho>
+    </row>
+    <row id="67">
+      <id>67</id>
+      <tabela>dbtransacoes_produtos</tabela>
+      <tabelaView>view_transacoes_produtos</tabelaView>
+      <tabpai>dbtransacoes</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoproduto</colunafilho>
+    </row>
+    <row id="70">
+      <id>70</id>
+      <tabela>dbprodutos</tabela>
+      <tabelaView>view_produtos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoproduto</colunafilho>
+    </row>
+    <row id="74">
+      <id>74</id>
+      <tabela>dbdepartamentos</tabela>
+      <tabelaView>view_departamentos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigodepartamento</colunafilho>
+    </row>
+    <row id="75">
+      <id>75</id>
+      <tabela>dbprofessores_areas</tabela>
+      <tabelaView>view_professores_areas</tabelaView>
+      <tabpai>dbfuncionarios_professores</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoprofessor</colunafilho>
+    </row>
+    <row id="76">
+      <id>76</id>
+      <tabela>dbpatrimonios</tabela>
+      <tabelaView>view_patrimonios_livros</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigopatrimonio</colunafilho>
+    </row>
+    <row id="77">
+      <id>77</id>
+      <tabela>dbscorecard</tabela>
+      <tabelaView>view_scorecard</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="78">
+      <id>78</id>
+      <tabela>dbscorecard_sentencas</tabela>
+      <tabelaView>view_scorecard_sentencas</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="79">
+      <id>79</id>
+      <tabela>dbprodutos_especialidades</tabela>
+      <tabelaView>view_produtos_especialidades</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="80">
+      <id>80</id>
+      <tabela>dbcursos_tipos</tabela>
+      <tabelaView>view_cursos_tipos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="82">
+      <id>82</id>
+      <tabela>dbquestionarios</tabela>
+      <tabelaView>view_questionarios</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="83">
+      <id>83</id>
+      <tabela>dbquestoes</tabela>
+      <tabelaView>view_questoes</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="84">
+      <id>84</id>
+      <tabela>dbquestoes_itens</tabela>
+      <tabelaView>view_questoes_itens</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="85">
+      <id>85</id>
+      <tabela>dbcursos_ativos</tabela>
+      <tabelaView>view_cursos_ativos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocursoativo</colunafilho>
+    </row>
+    <row id="86">
+      <id>86</id>
+      <tabela>dbbiblioteca_cdu</tabela>
+      <tabelaView>view_biblioteca_cdu</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigocdu</colunafilho>
     </row>
     <row id="90">
       <id>90</id>
@@ -135,240 +543,104 @@
       <tabela>dbconvenios</tabela>
       <tabelaView>view_convenios</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
       <colunafilho>codigoconvenio</colunafilho>
     </row>
-    <row id="66">
-      <id>66</id>
-      <tabela>dbtransacoes</tabela>
-      <tabelaView>view_transacoes</tabelaView>
+    <row id="87">
+      <id>87</id>
+      <tabela>dbpessoas_livros</tabela>
+      <tabelaView>view_pessoas_livros</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigotransacao</colunafilho>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="92">
+      <id>92</id>
+      <tabela>dbturmas_descontos</tabela>
+      <tabelaView>view_turmas_descontos</tabelaView>
+      <tabpai>-</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
     </row>
     <row id="94">
       <id>94</id>
       <tabela>dbcaixa_funcionarios</tabela>
       <tabelaView>view_caixa_funcionarios</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="86">
-      <id>86</id>
-      <tabela>dbbiblioteca_cdu</tabela>
-      <tabelaView>view_biblioteca_cdu</tabelaView>
+    <row id="95">
+      <id>95</id>
+      <tabela>dbcontas_cheques</tabela>
+      <tabelaView>view_contas_cheques</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigocdu</colunafilho>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
     </row>
-    <row id="83">
-      <id>83</id>
-      <tabela>dbquestoes</tabela>
-      <tabelaView>view_questoes</tabelaView>
+    <row id="97">
+      <id>97</id>
+      <tabela>dbdisciplinas_semelhantes</tabela>
+      <tabelaView>view_disciplinas_semelhantes</tabelaView>
+      <tabpai>dbdisciplinas</tabpai>
+      <ativo>0</ativo>
+      <colunafilho></colunafilho>
+    </row>
+    <row id="98">
+      <id>98</id>
+      <tabela>dbcontas_caixa_historico</tabela>
+      <tabelaView>view_contas_caixa_historico</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
+      <ativo>0</ativo>
+      <colunafilho>codigohistorico</colunafilho>
     </row>
-    <row id="82">
-      <id>82</id>
-      <tabela>dbquestionarios</tabela>
-      <tabelaView>view_questionarios</tabelaView>
+    <row id="99">
+      <id>99</id>
+      <tabela>dbrecados</tabela>
+      <tabelaView>view_recados</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
+      <colunafilho>codigorecado</colunafilho>
+    </row>
+    <row id="100">
+      <id>100</id>
+      <tabela>dbalunos_disciplinas_aproveitamentos</tabela>
+      <tabelaView>dbalunos_disciplinas_aproveitamentos</tabelaView>
+      <tabpai>dbalunos_disciplinas</tabpai>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="80">
-      <id>80</id>
-      <tabela>dbcursos_tipos</tabela>
-      <tabelaView>view_cursos_tipos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="79">
-      <id>79</id>
-      <tabela>dbprodutos_especialidades</tabela>
-      <tabelaView>view_produtos_especialidades</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="53">
-      <id>53</id>
-      <tabela>dbturmas_disciplinas_materiais</tabela>
-      <tabelaView>view_turmas_disciplinas_materiais</tabelaView>
-      <tabpai>dbturmas_disciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="25">
-      <id>25</id>
-      <tabela>dbalunos_faltas</tabela>
-      <tabelaView>view_alunos_faltas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="84">
-      <id>84</id>
-      <tabela>dbquestoes_itens</tabela>
-      <tabelaView>view_questoes_itens</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="61">
-      <id>61</id>
-      <tabela>dbprojetos_recursos</tabela>
-      <tabelaView>view_projetos_recursos</tabelaView>
-      <tabpai>dbprojetos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="78">
-      <id>78</id>
-      <tabela>dbscorecard_sentencas</tabela>
-      <tabelaView>view_scorecard_sentencas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="77">
-      <id>77</id>
-      <tabela>dbscorecard</tabela>
-      <tabelaView>view_scorecard</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="75">
-      <id>75</id>
-      <tabela>dbprofessores_areas</tabela>
-      <tabelaView>view_professores_areas</tabelaView>
-      <tabpai>dbfuncionarios_professores</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoprofessor</colunafilho>
-    </row>
-    <row id="70">
-      <id>70</id>
-      <tabela>dbprodutos</tabela>
-      <tabelaView>view_produtos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoproduto</colunafilho>
-    </row>
-    <row id="64">
-      <id>64</id>
-      <tabela>dbextornos</tabela>
-      <tabelaView>view_extornos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="50">
-      <id>50</id>
-      <tabela>dbparametros</tabela>
-      <tabelaView>view_parametros</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="49">
-      <id>49</id>
-      <tabela>dbpessoas_enderecoscobrancas</tabela>
-      <tabelaView>view_pessoas_enderecoscobrancas</tabelaView>
-      <tabpai>dbpessoas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="47">
-      <id>47</id>
-      <tabela>dbcompras</tabela>
-      <tabelaView>view_compras</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="45">
-      <id>45</id>
-      <tabela>dbcursos_areas</tabela>
-      <tabelaView>view_cursos_areas</tabelaView>
+    <row id="101">
+      <id>101</id>
+      <tabela>dbcursos_avaliacoes</tabela>
+      <tabelaView>dbcursos_avaliacoes</tabelaView>
       <tabpai>dbcursos</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="44">
-      <id>44</id>
-      <tabela>dbsalas</tabela>
-      <tabelaView>view_salas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigosala</colunafilho>
-    </row>
-    <row id="41">
-      <id>41</id>
-      <tabela>dbfuncionarios_ferias</tabela>
-      <tabelaView>view_funcionarios_ferias</tabelaView>
-      <tabpai>dbpessoas_funcionarios</tabpai>
-      <ativo>1</ativo>
+    <row id="102">
+      <id>102</id>
+      <tabela>dbconvenios_descontos</tabela>
+      <tabelaView>dbconvenios_descontos</tabelaView>
+      <tabpai>dbconvenios</tabpai>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="33">
-      <id>33</id>
-      <tabela>dbtreinamentos</tabela>
-      <tabelaView>view_treinamentos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
+    <row id="103">
+      <id>103</id>
+      <tabela>dbtransacoes_convenios</tabela>
+      <tabelaView>view_transacoes_convenios</tabelaView>
+      <tabpai>dbtransacoes</tabpai>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="32">
-      <id>32</id>
-      <tabela>dbpatrimonios</tabela>
-      <tabelaView>view_patrimonios</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigopatrimonio</colunafilho>
-    </row>
-    <row id="30">
-      <id>30</id>
-      <tabela>dbcurriculos</tabela>
-      <tabelaView>view_curriculos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
+    <row id="104">
+      <id>104</id>
+      <tabela>dbturmas_convenios</tabela>
+      <tabelaView>view_turmas_convenios</tabelaView>
+      <tabpai>dbturmas</tabpai>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
-    </row>
-    <row id="29">
-      <id>29</id>
-      <tabela>dbcargos</tabela>
-      <tabelaView>view_cargos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="28">
-      <id>28</id>
-      <tabela>dbturmas_disciplinas_aulas</tabela>
-      <tabelaView>view_turmas_disciplinas_aulas</tabelaView>
-      <tabpai>dbturmas_disciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="26">
-      <id>26</id>
-      <tabela>dbusuarios</tabela>
-      <tabelaView>view_usuarios</tabelaView>
-      <tabpai></tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigousuario</colunafilho>
-    </row>
-    <row id="35">
-      <id>35</id>
-      <tabela>dbunidades</tabela>
-      <tabelaView>view_unidades</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>unidade</colunafilho>
     </row>
     <row id="5">
       <id>5</id>
@@ -378,189 +650,21 @@
       <ativo>1</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="1">
-      <id>1</id>
-      <tabela>dbpessoas</tabela>
-      <tabelaView>view_pessoas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigopessoa</colunafilho>
-    </row>
-    <row id="60">
-      <id>60</id>
-      <tabela>dbprojetos_colaboradores</tabela>
-      <tabelaView>view_projetos_colaboradores</tabelaView>
-      <tabpai>dbprojetos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="34">
-      <id>34</id>
-      <tabela>dbfuncionarios_treinamentos&#13;
-</tabela>
-      <tabelaView>view_funcionarios_treinamentos </tabelaView>
-      <tabpai>dbpessoas_funcionarios</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="6">
-      <id>6</id>
-      <tabela>dbpessoas_complemento_pj</tabela>
-      <tabelaView>view_pessoas_complemento_pj</tabelaView>
-      <tabpai>dbpessoas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="17">
-      <id>17</id>
-      <tabela>dbtransacoes_contas_duplicatas</tabela>
-      <tabelaView>view_transacoes_contas_duplicatas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigo</colunafilho>
-    </row>
-    <row id="18">
-      <id>18</id>
-      <tabela>dbplano_contas</tabela>
-      <tabelaView>view_plano_contas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="92">
-      <id>92</id>
-      <tabela>dbturmas_descontos</tabela>
-      <tabelaView>view_turmas_descontos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="40">
-      <id>40</id>
-      <tabela>dbusuarios_privilegios</tabela>
-      <tabelaView>view_usuarios_privilegios</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="23">
-      <id>23</id>
-      <tabela>dbturmas_requisitos</tabela>
-      <tabelaView>view_turmas_requisitos</tabelaView>
-      <tabpai>dbturmas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="63">
-      <id>63</id>
-      <tabela>dbturmas_disciplinas_arquivos</tabela>
-      <tabelaView>view_turmas_disciplinas_arquivos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
+    <row id="15">
+      <id>15</id>
+      <tabela>dbfuncionarios_professores</tabela>
+      <tabelaView>view_funcionarios_professores</tabelaView>
+      <tabpai>dbfuncionarios_professores
+</tabpai>
+      <ativo>0</ativo>
+      <colunafilho>codigoprofessor</colunafilho>
     </row>
     <row id="62">
       <id>62</id>
       <tabela>dbturmas_disciplinas_planoaulas</tabela>
       <tabelaView>view_turmas_disciplinas_planoaulas</tabelaView>
       <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="59">
-      <id>59</id>
-      <tabela>dbprojetos_custos</tabela>
-      <tabelaView>view_projetos_custos</tabelaView>
-      <tabpai>dbprojetos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="58">
-      <id>58</id>
-      <tabela>dbprojetos</tabela>
-      <tabelaView>view_projetos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="57">
-      <id>57</id>
-      <tabela>dbfuncionarios_ocorrencias</tabela>
-      <tabelaView>view_funcionarios_ocorrencias</tabelaView>
-      <tabpai>dbpessoas_funcionarios</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="55">
-      <id>55</id>
-      <tabela>dbfuncionarios_folhapagamento</tabela>
-      <tabelaView>view_funcionarios_folhapagamento</tabelaView>
-      <tabpai>dbpessoas_funcionarios</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="54">
-      <id>54</id>
-      <tabela>dbcaixa_fechamentos</tabela>
-      <tabelaView>view_caixa_fechamentos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="38">
-      <id>38</id>
-      <tabela>dbcotacoes</tabela>
-      <tabelaView>view_cotacoes</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="37">
-      <id>37</id>
-      <tabela>dbprodutos_caracteristicas</tabela>
-      <tabelaView>view_produtos_caracteristicas</tabelaView>
-      <tabpai>dbprodutos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="76">
-      <id>76</id>
-      <tabela>dbpatrimonios</tabela>
-      <tabelaView>view_patrimonios_livros</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigopatrimonio</colunafilho>
-    </row>
-    <row id="11">
-      <id>11</id>
-      <tabela>dbturmas</tabela>
-      <tabelaView>view_turmas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoturma</colunafilho>
-    </row>
-    <row id="9">
-      <id>9</id>
-      <tabela>dbcursos</tabela>
-      <tabelaView>view_cursos</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigocurso</colunafilho>
-    </row>
-    <row id="8">
-      <id>8</id>
-      <tabela>dbdisciplinas</tabela>
-      <tabelaView>view_disciplinas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigodisciplina</colunafilho>
-    </row>
-    <row id="95">
-      <id>95</id>
-      <tabela>dbcontas_cheques</tabela>
-      <tabelaView>view_contas_cheques</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
       <colunafilho></colunafilho>
     </row>
     <row id="96">
@@ -568,168 +672,16 @@
       <tabela>dbpatrimonios_livros</tabela>
       <tabelaView>view_patrimonios_livros</tabelaView>
       <tabpai>dbpatrimonios</tabpai>
-      <ativo>1</ativo>
+      <ativo>0</ativo>
       <colunafilho>codigolivro</colunafilho>
     </row>
-    <row id="67">
-      <id>67</id>
-      <tabela>dbtransacoes_produtos</tabela>
-      <tabelaView>view_transacoes_produtos</tabelaView>
-      <tabpai>dbtransacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoproduto</colunafilho>
-    </row>
-    <row id="24">
-      <id>24</id>
-      <tabela>dbcontas_caixa</tabela>
-      <tabelaView>view_contas_caixa</tabelaView>
+    <row id="1">
+      <id>1</id>
+      <tabela>dbpessoas</tabela>
+      <tabelaView>view_pessoas</tabelaView>
       <tabpai>-</tabpai>
       <ativo>1</ativo>
-      <colunafilho>codigocontacaixa</colunafilho>
-    </row>
-    <row id="97">
-      <id>97</id>
-      <tabela>dbdisciplinas_semelhantes</tabela>
-      <tabelaView>view_disciplinas_semelhantes</tabelaView>
-      <tabpai>dbdisciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="98">
-      <id>98</id>
-      <tabela>dbcontas_caixa_historico</tabela>
-      <tabelaView>view_contas_caixa_historico</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigohistorico</colunafilho>
-    </row>
-    <row id="46">
-      <id>46</id>
-      <tabela>dbalunos_solicitacoes</tabela>
-      <tabelaView>view_alunos_solicitacoes</tabelaView>
-      <tabpai>dbpessoas_alunos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="100">
-      <id>100</id>
-      <tabela>dbalunos_disciplinas_aproveitamentos</tabela>
-      <tabelaView>dbalunos_disciplinas_aproveitamentos</tabelaView>
-      <tabpai>dbalunos_disciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="56">
-      <id>56</id>
-      <tabela>dbalunos_disciplinas</tabela>
-      <tabelaView>view_alunos_disciplinas</tabelaView>
-      <tabpai>dbpessoas_alunos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoalunodisciplina</colunafilho>
-    </row>
-    <row id="16">
-      <id>16</id>
-      <tabela>dbpessoas_inscricoes</tabela>
-      <tabelaView>view_pessoas_inscricoes</tabelaView>
-      <tabpai>dbpessoas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigo</colunafilho>
-    </row>
-    <row id="101">
-      <id>101</id>
-      <tabela>dbcursos_avaliacoes</tabela>
-      <tabelaView>dbcursos_avaliacoes</tabelaView>
-      <tabpai>dbcursos</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="102">
-      <id>102</id>
-      <tabela>dbconvenios_descontos</tabela>
-      <tabelaView>dbconvenios_descontos</tabelaView>
-      <tabpai>dbconvenios</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="104">
-      <id>104</id>
-      <tabela>dbturmas_convenios</tabela>
-      <tabelaView>view_turmas_convenios</tabelaView>
-      <tabpai>dbturmas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="99">
-      <id>99</id>
-      <tabela>dbrecados</tabela>
-      <tabelaView>view_recados</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigorecado</colunafilho>
-    </row>
-    <row id="105">
-      <id>105</id>
-      <tabela>dbgrade_avaliacoes</tabela>
-      <tabelaView>dbgrade_avaliacoes</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigograde</colunafilho>
-    </row>
-    <row id="107">
-      <id>107</id>
-      <tabela>dbavaliacoes_regras</tabela>
-      <tabelaView>dbavaliacoes_regras</tabelaView>
-      <tabpai>dbavaliacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="65">
-      <id>65</id>
-      <tabela>dbtransacoes_contas</tabela>
-      <tabelaView>view_transacoes_contas</tabelaView>
-      <tabpai>dbtransacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigotransacaoconta</colunafilho>
-    </row>
-    <row id="106">
-      <id>106</id>
-      <tabela>dbavaliacoes</tabela>
-      <tabelaView>dbavaliacoes</tabelaView>
-      <tabpai>dbgrade_avaliacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoavaliacao</colunafilho>
-    </row>
-    <row id="27">
-      <id>27</id>
-      <tabela>dbturmas_disciplinas_avaliacoes</tabela>
-      <tabelaView>view_turmas_disciplinas_avaliacoes</tabelaView>
-      <tabpai>dbturmas_disciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigoavaliacao</colunafilho>
-    </row>
-    <row id="108">
-      <id>108</id>
-      <tabela>dbturmas_disciplinas_avaliacao_detalhamento</tabela>
-      <tabelaView>dbturmas_disciplinas_avaliacao_detalhamento</tabelaView>
-      <tabpai>dbturmas_disciplinas</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="109">
-      <id>109</id>
-      <tabela>dbalunos_notas</tabela>
-      <tabelaView>view_alunos_notas</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
-    <row id="103">
-      <id>103</id>
-      <tabela>dbtransacoes_convenios</tabela>
-      <tabelaView>view_transacoes_convenios</tabelaView>
-      <tabpai>dbtransacoes</tabpai>
-      <ativo>1</ativo>
-      <colunafilho>codigo</colunafilho>
+      <colunafilho>codigopessoa</colunafilho>
     </row>
   </tabelas>
 </kernelsys>

@@ -21,3 +21,4 @@ class TLoggerTXT extends TLogger
         fclose($handler);
     }
 }
+?>

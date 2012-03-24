@@ -63,3 +63,4 @@ class TButtonImg extends TField{
 		
     }
 }
+?>

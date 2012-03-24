@@ -21,3 +21,5 @@ function __autoload($classe){
 	$objeto = new viewBPatrimonial();
     return $objeto->get($_POST["id"]);
 	
+?>
+

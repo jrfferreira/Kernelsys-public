@@ -198,3 +198,4 @@ class TScoreCard {
         return $this->obCont;
     }
 }
+?>

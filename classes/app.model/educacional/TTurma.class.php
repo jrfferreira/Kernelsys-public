@@ -5,7 +5,6 @@
  * @date 20/01/2010
 */
 
-
 class TTurma {
 
     private $obTDbo = NULL;
@@ -61,7 +60,7 @@ class TTurma {
     
     /**
      * Gera chequebox na lista de disciplinas.
-     * @param INT $idForm = Id do formulario em questï¿½o.
+     * @param INT $idForm = Id do formulario em questão.
      */
     public function buttonAddTurmaDisciplina($idForm){
 
@@ -331,7 +330,7 @@ class TTurma {
      * @param string $idForm
      */
     public function addTurmaDisciplina($idForm){
-    	
+
         $obCurso = false;
         $obHeader = new TSetHeader();
         $headerForm = $obHeader->getHead($idForm);
@@ -342,6 +341,7 @@ class TTurma {
         $headerLista = $obHeader->getHead($headerForm['idLista'],'listaSelecao');
         $TurmaDiciplinas = $this->getDiciplinas($data['codigoturma']);
 
+        //print_r($headerLista);
         $dbo = new TDbo(TConstantes::DBCURSOS_DISCIPLINAS);
         $crit = new TCriteria();
         foreach($headerLista as $ch=>$vl){
@@ -351,22 +351,20 @@ class TTurma {
         $retDiscs = $dbo->select('id,codigocurso,codigodisciplina',$crit);
 
        while($vl = $retDiscs->fetchObject()){
-           $codigoCurso = $vl->codigocurso;
+           $codigocurso = $vl->codigocurso;
            if(!$obCurso){
                $TCurso = new TCurso();
                $obCurso = $TCurso->getCurso($codigoCurso, false);
                $data['codigograde'] = $obCurso->codigograde;
            }
            if(!$TurmaDiciplinas[$vl->codigodisciplina]){
-               $data['codigodisciplina'] = str_replace(array('[',']','"',"'"), '', $vl->codigodisciplina);
+               $data['codigodisciplina'] = $vl->codigodisciplina;
                $dboDisciplina = new TDbo(TConstantes::DBTURMAS_DISCIPLINAS);
                $ret = $dboDisciplina->insert($data);
 
                $discs_av[] = $ret['codigo'];
            }
         }
-        
-        return $discs_av;
     }
     /**
      * Calcura, atualiza e retorna a carga horaria da turma
@@ -547,3 +545,4 @@ class TTurma {
         return $headerForm['codigocurso']['valor'];
     }
 }
+?>

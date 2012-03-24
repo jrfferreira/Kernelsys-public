@@ -1,6 +1,6 @@
 <?php
 //--------------------------------------------------------------
-// Gera cÃ³digos
+// Gera códigos
 
 class geraCodigo{
 
@@ -31,3 +31,8 @@ class geraCodigo{
 	}
 
 }
+
+//$obcod = new geraCodigo(date(i));
+//echo $obcod->get();
+
+?>

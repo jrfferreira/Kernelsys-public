@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <blocos>
+    <row id="180">
+      <id>180</id>
+      <blocoid>blocQuestionarioInformacoes</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>frm</formato>
+      <entidade>89</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>0</ativo>
+      <formpai>89</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="199">
+      <id>199</id>
+      <blocoid>blocDadosConvenio</blocoid>
+      <nomebloco>Dados do convênio</nomebloco>
+      <formato>frm</formato>
+      <entidade>89</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>0</ativo>
+      <formpai>320</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
     <row id="1">
       <id>1</id>
       <blocoid>tipoCadastro</blocoid>
@@ -36,18 +60,6 @@
       <formpai></formpai>
       <obapendice></obapendice>
       <idform></idform>
-    </row>
-    <row id="200">
-      <id>200</id>
-      <blocoid>blocPessoaConvenios</blocoid>
-      <nomebloco>Lista de convênios</nomebloco>
-      <formato>lst</formato>
-      <entidade>89</entidade>
-      <blocoheight>400px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <obapendice></obapendice>
-      <idform>373</idform>
     </row>
     <row id="90">
       <id>90</id>
@@ -361,18 +373,6 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
-    <row id="130">
-      <id>130</id>
-      <blocoid>opcaoCobraca</blocoid>
-      <nomebloco>Opção de cobrança</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>71</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
     <row id="137">
       <id>137</id>
       <blocoid>blListaArquivos</blocoid>
@@ -601,18 +601,6 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
-    <row id="180">
-      <id>180</id>
-      <blocoid>blocQuestionarioInformacoes</blocoid>
-      <nomebloco>-</nomebloco>
-      <formato>frm</formato>
-      <entidade>89</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>89</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
     <row id="170">
       <id>170</id>
       <blocoid>scoreCard</blocoid>
@@ -829,18 +817,6 @@
       <obapendice>TBiblioteca/viewSetLocacao</obapendice>
       <idform></idform>
     </row>
-    <row id="199">
-      <id>199</id>
-      <blocoid>blocDadosConvenio</blocoid>
-      <nomebloco>Dados do convênio</nomebloco>
-      <formato>frm</formato>
-      <entidade>89</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>320</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
     <row id="190">
       <id>190</id>
       <blocoid>infoLocacaoLivros</blocoid>
@@ -985,6 +961,18 @@
       <obapendice></obapendice>
       <idform>0</idform>
     </row>
+    <row id="200">
+      <id>200</id>
+      <blocoid>blocPessoaConvenios</blocoid>
+      <nomebloco>Lista de convênios</nomebloco>
+      <formato>lst</formato>
+      <entidade>89</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>0</ativo>
+      <formpai>1</formpai>
+      <obapendice></obapendice>
+      <idform>373</idform>
+    </row>
     <row id="263">
       <id>263</id>
       <blocoid>movInterna</blocoid>
@@ -1066,18 +1054,6 @@
       <blocoheight>200px</blocoheight>
       <ativo>1</ativo>
       <formpai>340</formpai>
-      <obapendice></obapendice>
-      <idform>0</idform>
-    </row>
-    <row id="216">
-      <id>216</id>
-      <blocoid>bloco_blocoClienteFormacao</blocoid>
-      <nomebloco>Formação Acadêmica</nomebloco>
-      <formato>frm</formato>
-      <entidade>43</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>341</formpai>
       <obapendice></obapendice>
       <idform>0</idform>
     </row>
@@ -1186,30 +1162,6 @@
       <blocoheight>200px</blocoheight>
       <ativo>1</ativo>
       <formpai>348</formpai>
-      <obapendice></obapendice>
-      <idform>0</idform>
-    </row>
-    <row id="224">
-      <id>224</id>
-      <blocoid>bloco_blocoFormacao</blocoid>
-      <nomebloco>Formação</nomebloco>
-      <formato>frm</formato>
-      <entidade>43</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>349</formpai>
-      <obapendice></obapendice>
-      <idform>0</idform>
-    </row>
-    <row id="225">
-      <id>225</id>
-      <blocoid>bloco_blocoFormProf</blocoid>
-      <nomebloco>Formação</nomebloco>
-      <formato>frm</formato>
-      <entidade>43</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>350</formpai>
       <obapendice></obapendice>
       <idform>0</idform>
     </row>
@@ -1357,18 +1309,6 @@
       <obapendice></obapendice>
       <idform>0</idform>
     </row>
-    <row id="181">
-      <id>181</id>
-      <blocoid>blocQuestinarioQuestoes</blocoid>
-      <nomebloco>-</nomebloco>
-      <formato>lst</formato>
-      <entidade>89</entidade>
-      <blocoheight>400px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>89</formpai>
-      <obapendice></obapendice>
-      <idform>357</idform>
-    </row>
     <row id="251">
       <id>251</id>
       <blocoid>bloco_lstProdutosTransacaoD</blocoid>
@@ -1380,18 +1320,6 @@
       <formpai>376</formpai>
       <obapendice></obapendice>
       <idform>0</idform>
-    </row>
-    <row id="13">
-      <id>13</id>
-      <blocoid>cobranca</blocoid>
-      <nomebloco>Dados para Cobrança</nomebloco>
-      <formato>lst</formato>
-      <entidade>49</entidade>
-      <blocoheight>330px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>71</formpai>
-      <obapendice></obapendice>
-      <idform>334</idform>
     </row>
     <row id="252">
       <id>252</id>
@@ -1465,18 +1393,6 @@
       <obapendice></obapendice>
       <idform>340</idform>
     </row>
-    <row id="96">
-      <id>96</id>
-      <blocoid>blocoListaInteresses</blocoid>
-      <nomebloco>Interesses</nomebloco>
-      <formato>lst</formato>
-      <entidade>48</entidade>
-      <blocoheight>400px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <obapendice></obapendice>
-      <idform>342</idform>
-    </row>
     <row id="98">
       <id>98</id>
       <blocoid>matdidaticos</blocoid>
@@ -1549,18 +1465,6 @@
       <obapendice></obapendice>
       <idform>348</idform>
     </row>
-    <row id="70">
-      <id>70</id>
-      <blocoid>blocoFormacao</blocoid>
-      <nomebloco>Formação</nomebloco>
-      <formato>lst</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>6</formpai>
-      <obapendice></obapendice>
-      <idform>349</idform>
-    </row>
     <row id="164">
       <id>164</id>
       <blocoid>blocoFormProf</blocoid>
@@ -1620,18 +1524,6 @@
       <formpai>77</formpai>
       <obapendice></obapendice>
       <idform>359</idform>
-    </row>
-    <row id="100">
-      <id>100</id>
-      <blocoid>listTreinamento</blocoid>
-      <nomebloco>-</nomebloco>
-      <formato>lst</formato>
-      <entidade>34</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>6</formpai>
-      <obapendice></obapendice>
-      <idform>361</idform>
     </row>
     <row id="156">
       <id>156</id>
@@ -1897,18 +1789,6 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
-    <row id="183">
-      <id>183</id>
-      <blocoid>blocLancamentoNotas</blocoid>
-      <nomebloco>Avaliações</nomebloco>
-      <formato>lst</formato>
-      <entidade>27</entidade>
-      <blocoheight>400px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>58</formpai>
-      <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
-      <idform>366</idform>
-    </row>
     <row id="14">
       <id>14</id>
       <blocoid>disciplina</blocoid>
@@ -1932,6 +1812,18 @@
       <formpai>67</formpai>
       <obapendice></obapendice>
       <idform></idform>
+    </row>
+    <row id="181">
+      <id>181</id>
+      <blocoid>blocQuestinarioQuestoes</blocoid>
+      <nomebloco>-</nomebloco>
+      <formato>lst</formato>
+      <entidade>89</entidade>
+      <blocoheight>400px</blocoheight>
+      <ativo>0</ativo>
+      <formpai>89</formpai>
+      <obapendice></obapendice>
+      <idform>357</idform>
     </row>
     <row id="15">
       <id>15</id>
@@ -2425,6 +2317,18 @@
       <obapendice></obapendice>
       <idform></idform>
     </row>
+    <row id="81">
+      <id>81</id>
+      <blocoid>contratos</blocoid>
+      <nomebloco>Contratos e Convênioa</nomebloco>
+      <formato>frm</formato>
+      <entidade>39</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>30</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
     <row id="82">
       <id>82</id>
       <blocoid>usuarios</blocoid>
@@ -2713,18 +2617,6 @@
       <obapendice></obapendice>
       <idform>420</idform>
     </row>
-    <row id="267">
-      <id>267</id>
-      <blocoid>histCliente-Mov</blocoid>
-      <nomebloco>Histórico de Movimentações</nomebloco>
-      <formato>lst</formato>
-      <entidade>21</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <obapendice></obapendice>
-      <idform>424</idform>
-    </row>
     <row id="268">
       <id>268</id>
       <blocoid>info</blocoid>
@@ -2808,18 +2700,6 @@
       <formpai>444</formpai>
       <obapendice></obapendice>
       <idform></idform>
-    </row>
-    <row id="89">
-      <id>89</id>
-      <blocoid>blocoClienteFormacao</blocoid>
-      <nomebloco>Formação Acadêmica</nomebloco>
-      <formato>lst</formato>
-      <entidade>43</entidade>
-      <blocoheight>250px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>1</formpai>
-      <obapendice></obapendice>
-      <idform>341</idform>
     </row>
     <row id="275">
       <id>275</id>
@@ -2940,165 +2820,6 @@
       <formpai>452</formpai>
       <obapendice></obapendice>
       <idform></idform>
-    </row>
-    <row id="284">
-      <id>284</id>
-      <blocoid>detalheProcesso</blocoid>
-      <nomebloco>Informações do Processo</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>0</formpai>
-      <obapendice>TProcessoAcademico/viewDetalheProcessoAcademico</obapendice>
-      <idform></idform>
-    </row>
-    <row id="285">
-      <id>285</id>
-      <blocoid>AprovdisciplinasAluno</blocoid>
-      <nomebloco>Lista de Disciplinas</nomebloco>
-      <formato>frm</formato>
-      <entidade>56</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>454</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
-    <row id="286">
-      <id>286</id>
-      <blocoid>gradeAvaliacao</blocoid>
-      <nomebloco>Grade de Avaliações</nomebloco>
-      <formato>frm</formato>
-      <entidade>105</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>0</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
-    <row id="287">
-      <id>287</id>
-      <blocoid>avaliacoes</blocoid>
-      <nomebloco>Avaliações</nomebloco>
-      <formato>lst</formato>
-      <entidade>106</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>463</formpai>
-      <obapendice></obapendice>
-      <idform>464</idform>
-    </row>
-    <row id="288">
-      <id>288</id>
-      <blocoid>avalInfo</blocoid>
-      <nomebloco>Informações Principais</nomebloco>
-      <formato>frm</formato>
-      <entidade>106</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>464</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
-    <row id="289">
-      <id>289</id>
-      <blocoid>avDescriminacao</blocoid>
-      <nomebloco>Descriminação da Avaliação</nomebloco>
-      <formato>lst</formato>
-      <entidade>108</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>18</formpai>
-      <obapendice></obapendice>
-      <idform>467</idform>
-    </row>
-    <row id="290">
-      <id>290</id>
-      <blocoid>avDescriminacao</blocoid>
-      <nomebloco>Descriminação da Avaliação</nomebloco>
-      <formato>lst</formato>
-      <entidade>108</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>58</formpai>
-      <obapendice></obapendice>
-      <idform>467</idform>
-    </row>
-    <row id="291">
-      <id>291</id>
-      <blocoid>totalCustoProfessor</blocoid>
-      <nomebloco>Totalizador</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>59</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
-    <row id="292">
-      <id>292</id>
-      <blocoid>procConfAbandonoCurso</blocoid>
-      <nomebloco>Confirmação</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>460</formpai>
-      <obapendice></obapendice>
-      <idform>&#13;
-</idform>
-    </row>
-    <row id="293">
-      <id>293</id>
-      <blocoid>procConfDesTrancamentoMatricula</blocoid>
-      <nomebloco>Confirmação</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>460</formpai>
-      <obapendice></obapendice>
-      <idform>&#13;
-</idform>
-    </row>
-    <row id="294">
-      <id>294</id>
-      <blocoid>procConfTrancamentoCurso</blocoid>
-      <nomebloco>Confirmação</nomebloco>
-      <formato>frm</formato>
-      <entidade>0</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>460</formpai>
-      <obapendice></obapendice>
-      <idform>&#13;
-</idform>
-    </row>
-    <row id="81">
-      <id>81</id>
-      <blocoid>contratos</blocoid>
-      <nomebloco>Contratos e Convênios</nomebloco>
-      <formato>frm</formato>
-      <entidade>39</entidade>
-      <blocoheight>200px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>30</formpai>
-      <obapendice></obapendice>
-      <idform></idform>
-    </row>
-    <row id="295">
-      <id>295</id>
-      <blocoid>discCursoProjConcluido</blocoid>
-      <nomebloco>Disciplinas do curso</nomebloco>
-      <formato>lst</formato>
-      <entidade>0</entidade>
-      <blocoheight>380px</blocoheight>
-      <ativo>1</ativo>
-      <formpai>475</formpai>
-      <obapendice></obapendice>
-      <idform>476</idform>
     </row>
   </blocos>
 </kernelsys>
