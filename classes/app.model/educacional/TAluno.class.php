@@ -358,7 +358,7 @@ class TAluno {
                     if ($frequencia > 0) {
                         $obDiscs->disciplinas[$ch]->frequencia = round(((100 * ($frequencia - $faltas)) / $frequencia) * 10) / 10;
                     } else {
-                        $obDiscs->disciplinas[$ch]->frequencia = null;
+                        $obDiscs->disciplinas[$ch]->frequencia = 100;
                     }
                     if ($obDiscs->disciplinas[$ch]->frequencia >= $TParametros->academico_mediapresenca) {
                         $obDiscs->disciplinas[$ch]->aprovacaofrequencias = true;
