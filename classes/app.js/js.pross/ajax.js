@@ -17,7 +17,7 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
         	if(typeof(callback) == 'function'){
         		jQuery.data(jQuery('#'+alvo),'callbackFunction',callback);
      	    }
-          $.ajax({
+          retorno = $.ajax({
                type: tipoReq,
                url: setUrl,
                context: jQuery('#'+alvo),
@@ -39,16 +39,16 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
             	   $('#loading-status').removeClass().addClass('ui-ajax-error');
             	   alertPetrus("Ouve uma falhar ao executar a ação.\n\nERRO\n["+erro+"]", 'Falha na requisição');                   
                }
-          });
+          }).responseText;
         }else{//Executa se o alvo de retorno for vasio rentornado o valor da solicitacao ajax
         	if(typeof(callback) == 'function'){
      	    	callbackFunction = callback;
      	    }else{
-     	    	callbackFunction = function(ret){     	    						  
+     	    	callbackFunction = function(ret){
 					            	   return ret;
 					               };
      	    }
-        	$.ajax({
+        	retorno = $.ajax({
 	               type: tipoReq,
 	               url: setUrl,
 	               data:dados,
@@ -66,7 +66,7 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
 	                   $('#loading-status').removeClass().addClass('ui-ajax-error');
 	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexÃ£o.\n\nERRO - ["+e.getMessage+"]");
 	               }
-        	});
+        	}).responseText;
         }
     if(retorno){
         return retorno;

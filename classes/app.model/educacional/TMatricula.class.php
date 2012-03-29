@@ -43,8 +43,10 @@ class TMatricula {
                 }
                 //==============================================================
 
-            foreach($turma->disciplinas as $codTD=>$turmaDisciplina){
-                $listaTurmaDisicplinas[$turmaDisciplina->codigodisciplina] = $turmaDisciplina;
+            if(count($turma->disciplinas) > 0){
+	            foreach($turma->disciplinas as $codTD=>$turmaDisciplina){
+	                $listaTurmaDisicplinas[$turmaDisciplina->codigodisciplina] = $turmaDisciplina;
+	            }
             }
 
              //=========================================================
@@ -104,30 +106,31 @@ class TMatricula {
             if($inAluno){
 
                 //Gera relacionamento aluno disciplinas
-                foreach($curso->disciplinas as $codDisciplina=>$obDisciplina){
-
-                        //define se a disciplina está associada a atual turma
-                        if($listaTurmaDisicplinas[$codDisciplina]){
-                            $codigoturmadisciplina = $listaTurmaDisicplinas[$codDisciplina]->codigo;
-                            $dadosDisciplina['codigoturmadisciplina'] = $codigoturmadisciplina;
-                            $situação = '2';
-                        }else{
-                            $situação = '1';
-                        }
-
-                        $dadosDisciplina['codigoaluno']      = $inAluno['codigo'];
-                        $dadosDisciplina['codigodisciplina'] = $obDisciplina->codigo;
-                        $dadosDisciplina['ativo']            = '1';
-                        $dadosDisciplina['situacao']         = $situação;
-
-                     $obDbo->setEntidade(TConstantes::DBALUNOS_DISCIPLINAS);
-                     $inDisciplinas = $obDbo->insert($dadosDisciplina);
-
-                     if(!$inDisciplinas){
-                         throw new Exception(TMensagem::ERRO_GERAL_MATRICULA);
-                     }
+                if(count($curso->disciplinas) > 0){
+	                foreach($curso->disciplinas as $codDisciplina=>$obDisciplina){
+	
+	                        //define se a disciplina está associada a atual turma
+	                        if($listaTurmaDisicplinas[$codDisciplina]){
+	                            $codigoturmadisciplina = $listaTurmaDisicplinas[$codDisciplina]->codigo;
+	                            $dadosDisciplina['codigoturmadisciplina'] = $codigoturmadisciplina;
+	                            $situação = '2';
+	                        }else{
+	                            $situação = '1';
+	                        }
+	
+	                        $dadosDisciplina['codigoaluno']      = $inAluno['codigo'];
+	                        $dadosDisciplina['codigodisciplina'] = $obDisciplina->codigo;
+	                        $dadosDisciplina['ativo']            = '1';
+	                        $dadosDisciplina['situacao']         = $situação;
+	
+	                     $obDbo->setEntidade(TConstantes::DBALUNOS_DISCIPLINAS);
+	                     $inDisciplinas = $obDbo->insert($dadosDisciplina);
+	
+	                     if(!$inDisciplinas){
+	                         throw new Exception(TMensagem::ERRO_GERAL_MATRICULA);
+	                     }
+	                }
                 }
-
                 //associa a transação da turma com os aluno
                 $dadosAlunoTransacoes['codigoaluno'] = $inAluno['codigo'];
                 $dadosAlunoTransacoes['codigotransacao'] = $codigotransacao;

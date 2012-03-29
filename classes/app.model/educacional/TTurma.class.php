@@ -366,7 +366,18 @@ class TTurma {
            }
         }
         
-        return $discs_av;
+        $cont = count($discs_av);
+        
+        if($cont > 1){
+        	$plural = 's';
+        }else{
+        	$plural = '';
+        }
+        
+        if($cont == 0){
+        	$cont = "Nenhuma";
+        }
+        return $cont." disciplina{$plural} adicionada{$plural} com sucesso.";
     }
     /**
      * Calcura, atualiza e retorna a carga horaria da turma

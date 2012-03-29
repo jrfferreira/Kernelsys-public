@@ -121,5 +121,11 @@ class TKrs {
 
 function krsSort ($a, $b){
 	$key = $_REQUEST['key'];
-	return strCmp($a[$key], $b[$key]);	
+	if($a[$key] == $b[$key]){
+		return 0;
+	}else if($a[$key] > $b[$key]){
+		return 1;
+	}else{
+		return -1;
+	}
 }

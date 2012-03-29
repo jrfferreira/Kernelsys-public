@@ -64,13 +64,26 @@ class TCurso{
         //    echo "<i>$ch</i> = <b>$vl</b><br/>";
         //}
 
+        $cont = 0;
         foreach($headerLista as $ch=>$vl){
             if(!$listaDisciplinas[$ch]){
                 $data['codigodisciplina'] = str_replace(array('[',']','"',"'"), '', $vl);
                 $dboDisciplina = new TDbo(TConstantes::DBCURSOS_DISCIPLINAS);
                 $dboDisciplina->insert($data);
+                $cont++;
             }
         }
+        
+        if($cont > 1){
+        	$plural = 's';
+        }else{
+        	$plural = '';
+        }
+        
+        if($cont == 0){
+        	$cont = "Nenhuma";
+        }
+        return $cont." disciplina{$plural} adicionada{$plural} com sucesso.";
     }
 
     public function getListaDisciplinas($codigoCurso){
