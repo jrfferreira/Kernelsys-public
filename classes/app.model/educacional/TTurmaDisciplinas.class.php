@@ -256,7 +256,9 @@ class TTurmaDisciplinas {
         foreach ($listaAlunos as $codigoAluno => $aluno) {
             $media = $TAvaliacao->getMedia($codigoAluno, $codigoTurmaDisciplina);
                                 
-            eval('if(' . $toDo . ') { $checagem = true; } else { $checagem = false;}');
+            if(!empty($toDo)) {
+            	eval('if(' . $toDo . ') { $checagem = true; } else { $checagem = false;}');
+            }
              
             if($checagem){
                 $alunos[$codigoAluno] = $aluno;
@@ -533,8 +535,8 @@ class TTurmaDisciplinas {
         $listaAlunos->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
         $listaAlunosLegenda = new TElement("legend");
         $listaAlunosLegenda->class = "ui_bloco_legendas ui-widget-content ui-corner-all";
-        $listaAlunosLegenda->add("Lan�amento de Faltas");
-        $listaAlunos->add($disciplinasLegenda);
+        $listaAlunosLegenda->add("Lançamento de Faltas");
+        $listaAlunos->add($listaAlunosLegenda);
 
         $content = new TElement('div');
         $content->class = "ui_bloco_conteudo";
@@ -594,7 +596,7 @@ class TTurmaDisciplinas {
         $listaAlunosLegenda = new TElement("legend");
         $listaAlunosLegenda->class = "ui_bloco_legendas ui-widget-content ui-corner-all";
         $listaAlunosLegenda->add("Lançamento de Notas");
-        $listaAlunos->add($disciplinasLegenda);
+        $listaAlunos->add($listaAlunosLegenda);
 
         $content = new TElement('div');
         $content->class = "ui_bloco_conteudo";
