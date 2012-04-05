@@ -300,11 +300,15 @@ class TTurmaDisciplinas {
                 $retAlunos = $this->obTDbo->select('codigoaluno', $criterio);
 
                 $critAlunos = new TCriteria();
-                
+                	$filtroAlunos = false;
 	                while ($retAluno = $retAlunos->fetchObject()) {
 	                    $critAlunos->add(new TFilter('codigo', '=', $retAluno->codigoaluno), 'or');
+	                    $filtroAlunos = true;
 	                }
-	                
+	            
+	            if(!$filtroAlunos){
+	            	throw new ErrorException("O codigo do relacionamento Turma x Disciplina não possui nenhum aluno ativo.");
+	            }
                 $critAlunos->setProperty('order', 'nomepessoa');
                 
                 $TAluno = new TAluno();
