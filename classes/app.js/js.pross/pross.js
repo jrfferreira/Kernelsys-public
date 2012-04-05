@@ -660,7 +660,7 @@ function onMarcador(ob){
     }else{
         //obAvo.createEvent("MouseEvents");
         obAvo.event(function anonymous(){
-            this.className = 'tdatagrid_row_over'
+            this.className = 'tdatagrid_row_over';
         });
     }
 }
