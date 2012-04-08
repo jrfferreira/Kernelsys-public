@@ -31,23 +31,17 @@ final class TTransaction{
         	$db = explode('/',$database);
         	$db = array_pop($db);
         	$pathchave = 'conn@'.$db;
-        	/*$conex_sessao = $obsession->getValue($pathchave);*/
+        	$conex_sessao = $_REQUEST[$pathchave];
         	
         	
            // abre uma conexão e armazena
            // na propriedade estática $conn
         	//if (empty(self::$conn) or !self::$conn){
-           if($conex_sessao){
-           		self::$conn = $conex_sessao;
-           }else{
+
            		$conexao = TConnection::open($database);
            		self::$conn = $conexao;
-           }
-           
                 // inicia a transação
-                //if(self::$conn and !self::$conn->InTransaction()){
                 	self::$conn->beginTransaction();
-                //}
                 // desliga o log de SQL
                 self::$logger = NULL;
            

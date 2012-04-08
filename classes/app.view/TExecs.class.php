@@ -128,7 +128,7 @@ class TExecs {
     * Método getList()
     * Instancia objeto lista diretamente do TCompLista
     */
-    public function getList() {
+    public function getList($tp = null) {
 
         //limpa estatos de viazualização quando ativado pela lista interna
         if($tp == $this->obsession->getValue('statusViewForm')) {
@@ -163,7 +163,7 @@ class TExecs {
      * Método getform()
      * instancia objeto form
      */
-    public function getform($key, $dados = NULL) {
+    public function getform($key = NULL, $dados = NULL) {
         /**
          * armazena codigo do objeto(registro) em sessão para associações (chave estrangeira) dos objetos filhos
          */
@@ -266,10 +266,10 @@ class TExecs {
             $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
             $dados = $ObDados->get();
             //Altera estatus do registro para edição - 8
-            if($dados['ativo'] == '1') {
-                $obStatus = new TStatus();
-                $obStatus->setStatus($dados['codigo'], $this->entidadeForm, $dados['ativo'], '8');
-            }
+//             if($dados['ativo'] == '1') {
+//                 $obStatus = new TStatus();
+//                 $obStatus->setStatus($dados['codigo'], $this->entidadeForm, $dados['ativo'], '8');
+//             }
         
 
             /**
@@ -362,11 +362,25 @@ class TExecs {
      */
     function onSave(){
     	
+    	//atribui o valor aos campos
     	$dados = $this->headerDados;
-
-        $camposSession = $this->headerDados['camposSession'];
-        $codigo    = $this->headerDados['codigo'];
-
+	    $camposSession = $this->headerDados['camposSession'];
+	    $dadosForm = $_POST;
+			
+		foreach($dadosForm as $nomeCampo=>$valorCampo){
+			   if($camposSession){
+			   		$campoAtual = $camposSession[$nomeCampo];
+			   		$campoAtual['valor']  = $valorCampo;
+			   		$campoAtual['status'] = 0;
+			   		$camposSession[$nomeCampo] = $campoAtual;
+			   }
+		}
+			
+		//atualiza a alteração na sessão
+		$this->obHeader->addHeader($this->idForm, 'camposSession',  $camposSession);  
+			
+        $codigo= $this->headerDados['codigo'];
+        
         if($camposSession){
 
                 $unidade = $this->obUser->unidade->codigo;
@@ -421,7 +435,7 @@ class TExecs {
 
                 //percorre os campos agrupados por entidade e grava em banco
                 if(count($dadosCampos) > 0){
-                foreach($dadosCampos as $entidade=>$dados){
+                /* foreach($dadosCampos as $entidade=>$dados){
 
                     //Define o campo chave da operação =============================
                     if($entidade != $this->headerDados['entidade']){
@@ -467,9 +481,59 @@ class TExecs {
                         $codigo = $retorno['codigo'];
                     }
                     $obDbo->close();
-                }//fimdo loop salvar
+                }//fimdo loop salvar */
+                	foreach($dadosCampos as $entidade=>$dados){
+                	
+                		//Define o campo chave da operação =============================
+                		if($entidade != $this->headerDados['entidade']){
+                			$colunaReferencia = $this->headerDados['colunafilho'];
+                		}else{
+                			$colunaReferencia = "codigo";
+                		}
+                		//==============================================================
+                	
+                		$obDbo = new TDbo();
+                		//consulta se o registro já existe
+                		$obDbo->setEntidade($entidade);
+                		$criterioValReg = new TCriteria();
+                		$criterioValReg->add(new TFilter($colunaReferencia, '=',$codigo));
+                		$Check = $obDbo->select('codigo', $criterioValReg);
+                		$resCheck = $Check->fetch();
+                		 
+                		//se o registro já existir
+                		if(!$resCheck['codigo']) {
+                	
+                			//valores padrões
+                			if($codigo){
+                				$dados[$colunaReferencia]   = $codigo;
+                			}
+                			if($codigoPai){
+                				$dados[$destinoCodigo]  = $codigoPai;
+                			}
+                			 
+                			$dados['unidade']      = $unidade;
+                			$dados['codigoautor']  = $this->obUser->codigo;
+                			$dados['datacad']      = date("Y-m-d");
+                			$dados['ativo']        = '1';
+                				
+                			$obDbo->setEntidade($entidade);
+                			$retorno = $obDbo->insert($dados);
+                	
+                			$codigo = $retorno['codigo'];
+                			 
+                		}else{
+                				
+                			$obDbo->setEntidade($entidade);
+                			$criteriaUpCampo = new TCriteria();
+                			$criteriaUpCampo->add(new TFilter($colunaReferencia, '=', $codigo));
+                			$Query = $obDbo->update($dados, $criteriaUpCampo);
+                			 
+                		}
+                		$obDbo->close();
+                	}//fim do loop salvar
                 }
           }
+          $this->onClose();
           return $codigo;
         }
 
@@ -477,53 +541,15 @@ class TExecs {
     *
     */
     public function onClose() {
-
-        if($this->headerDados['formainclude'] == 'one'){
-
-                $codigoRegAtual = $this->onSave();
+    	$formOutControl = $this->headerDados['formOutControl'];
+		if($formOutControl) {
+    		$expFormOutControl = explode('/', $formOutControl);
+    		$classeOutControl = $expFormOutControl[0];
+    		$metodoOutControl = $expFormOutControl[1];
+    		$obOutControl = new $classeOutControl();
+    		call_user_func_array(array($obOutControl, $metodoOutControl), array($this->idForm));
+    	}
     	
-                //autera estatus de edição para Ativo
-                if($codigoRegAtual) {
-
-                    //define o campo de acesso ao registro considerando o tipo form ou secundario
-                    $campoReferencia = "codigo";
-
-                    $obTDboStatus = new TDbo();
-                    $obTDboStatus->setEntidade($this->entidadeForm);
-    	
-
-                    $criteriaStatus = new TCriteria();
-                    $criteriaStatus->add(new TFilter($campoReferencia,'=',$codigoRegAtual));
-                    $retStatus = $obTDboStatus->select("ativo", $criteriaStatus);
-                    $obStatus = $retStatus->fetchObject();
-
-                    if($obStatus->ativo == '9' or $obStatus->ativo == '8') {
-                        $retUpStatus = $obTDboStatus->update(array("ativo"=>"1"), $criteriaStatus);
-
-                        if(!$retUpStatus) {
-                            $obTDboStatus->rollback();
-                            $obTDboStatus->close();
-                            new setException("Erro ao atualizar o estatus do resgistro [".$codigoRegAtual."] - TExecs - Line - 516.");
-                        }
-                    }
-                    $obTDboStatus->close();
-                }
-
-            //==========================================================================
-            //Executa metodo formOutControl do formulario presentes no cabeçalho
-            $formOutControl = $this->headerDados['formOutControl'];
-            if($formOutControl) {
-
-                $expFormOutControl = explode('/', $formOutControl);
-
-                $classeOutControl = $expFormOutControl[0];
-                $metodoOutControl = $expFormOutControl[1];
-                $obOutControl = new $classeOutControl();
-
-                call_user_func(array($obOutControl, $metodoOutControl), $this->idForm);
-            }
-        }
-
         //recarrega a lista
         $this->getList();
         //destroi cabeçalho do form
@@ -534,11 +560,6 @@ class TExecs {
     *
     */
     public function onCancel() {
-
-        // obtém o objeto pelo ID
-        $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
-        $ObDados->delete();
-
         $this->showlist();
         $this->obHeader->clearHeader($this->idForm);
     }

@@ -99,7 +99,7 @@ class TForms{
         $this->form         = $obForm->form;
         $this->labelForm    = $obForm->nomeform;
         $this->ativo        = $obForm->ativo;
-        $this->autoSave     = $obForm->autosave;
+        //$this->autoSave     = $obForm->autosave;
                  
 
         //Limpa codigo do formulario para acesso posteriores
@@ -116,7 +116,7 @@ class TForms{
                 $criteriaFormAbas->add(new TFilter('formid', '=', $this->idForm));
                 $criteriaFormAbas->add(new TFilter('ativo', '=', '1'));
                 $criteriaFormAbas->setProperty('order', 'ordem');
-            $RetIdAbas =  $this->dboKs->select('*', $criteriaFormAbas);         
+           	$RetIdAbas =  $this->dboKs->select('*', $criteriaFormAbas);         
  
             //executa loop das abas
             while($abasId = $RetIdAbas->fetchObject()){
@@ -211,17 +211,17 @@ class TForms{
                     $actionPrint = new TAction('printScreen');
                     $actionPrint->setParameter('impressao','impressao');
                     $actionPrint->setParameter('titulo','impLabel');
-                    // Cancelada a Ação de Imprimir $this->setButton('imprimir_botform'.$this->idForm, 'Imprimir', $actionPrint);//.$this->idForm
+                    // Cancelada a Ação de Imprimir 
+                    //$this->setButton('imprimir_botform'.$this->idForm, 'Imprimir', $actionPrint);
 
 
                     if($obForm->botconcluir != '0'){
-                        // Botão padrão [concluir] \\
-                        $action1 = new TAction('onClose');
-                        $action1->setParameter('tipoRetorno', 'form');
+                        // Botão padrão [Salvar] \\
+                        $action1 = new TAction('onSave');
                         $action1->setParameter('idForm', $this->idForm);
-                        //$action1->setParameter('key', $key);
+                        $action1->setParameter('nomeform', $this->idForm.'-window');
+                        $action1->setParameter('tipoRetorno', 'form');
                         $action1->setParameter('alvo', $this->paneRet);
-                        $action1->setParameter('confirme', '');
 
                         if($obForm->botconcluir == '2' or strpos($obForm->botconcluir, '/2') !== false){
                             $action1->disabled = 1;
@@ -229,49 +229,30 @@ class TForms{
                         }
 
                         if($obForm->botconcluir == '1' or $obForm->botconcluir == '2'){
-                            $labelBotConcluir = 'Concluir';
+                            $labelBotSalvar = 'Salvar';
                         }else{
-                            $labelBotConcluir = $obForm->botconcluir;
+                            $labelBotSalvar = $obForm->botconcluir;
                         }
 
-                        $this->setButton('concluir_botform'.$this->idForm, $labelBotConcluir, $action1, 'botaosalvar');//.$this->idForm
+                        $this->setButton('salvar_botform'.$this->idForm, $labelBotSalvar, $action1, 'botaosalvar');//.$this->idForm
                     }
 
                     //verifica se a exibição atual foi disparada a partir de um botão editar
                     //if(!$this->obsession->getValue('statusFormEdition') and !$this->obsession->getValue('statusViewForm')) {
-                    if($this->headerForm['status'] == "new" and $obForm->botcancelar != '0'){
-
-                        //botão cancelar padrão [Cancelar]
+                    //botão cancelar padrão [Cancelar]
                             $action2 = new TAction('onCancel');
                             $action2->setParameter('tipoRetorno', 'form');
                             $action2->setParameter('idForm', $this->idForm);
                             $action2->setParameter('key', $this->codigo);
                             $action2->setParameter('alvo', $this->paneRet);
-                            $action2->setParameter('confirme', 'Você deseja realmente descatar este registro?');
+                            $action2->setParameter('confirme', 'Você deseja cancelar?');
 
                             if($obForm->botcancelar == '2'){
                                 $action2->disabled = 1;
                             }
 
                         $this->setButton('cancelar_botform'.$this->idForm, 'Cancelar', $action2);
-                    }else{
-
-                        // Botão padrão [Fechar] \\
-                        $action2 = new TAction('onClose');
-                        $action2->setParameter('tipoRetorno', 'form');
-                        $action2->setParameter('idForm', $this->idForm);
-                        //$action2->setParameter('key', $key);
-                        $action2->setParameter('alvo', $this->paneRet);
-                        if($this->autoSave) {
-                            $action2->setParameter('confirme', 'Caso a opção de [Salvar automaticamente] não esteja habilitada as alterações não serão aplicadas. deseja realmente fechar?');
-                        }else{
-                            $action2->setParameter('confirme', '');
-                        }
-
-
-
-                        $this->setButton('fechar_botform'.$this->idForm, 'Fechar', $action2);
-                    }
+                    
 
         }
         else {// executado se o formulário não for associado uma lista

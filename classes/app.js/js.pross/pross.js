@@ -16,26 +16,24 @@ function pesqModulo(){
     alertPetrus('Em breve');
 }
 
-function alertPetrus(mensagem,titulo){
-	
-	alert(titulo+'\n\n'+mensagem);
-	
-/*    if((!titulo) || (titulo == '')) titulo = 'Alerta';
-    id = 'alert-' + $('.alerta').length;
-    jQuery('<div id=\''+id+'\' title=\'' +titulo + '\' style="padding:15px" class=alerta></div>').html(mensagem).appendTo('body');
+function alertPetrus(mensagem){	
+	alert(mensagem);	
+}
 
-    jQuery( '#'+ id).dialog({
-        resizable: false,
-        modal: true,
-        close : function() {
-            $(this).remove()
-        },
-        buttons: {
-            "Fechar": function() {
-                $(this).remove();
-            }
-        }
-    });*/
+function setExcecao(idForm,view,retorno){
+		
+	 var erro = getErro(retorno);
+     if(erro == 'erro'){
+         setRertonoControl(idForm, retorno);
+     }else{
+         if(jQuery('#'+view).length > 0){
+             jQuery('#'+view).html(retorno);
+         }
+         jQuery('#'+idForm+'-window').dialog('close');
+
+         atribuicao();
+     }
+	
 }
 
 // executa interface Principal \\
@@ -70,51 +68,145 @@ function onLogout(occupant){
     }
 }
 
-// camada de execução da gravação dos campos no db
-function pross(obj,idForm,codigo){
 
-    if(obj.type=="select-one" && obj.value==0){
-        valor="";
-    }else if(obj.type=="checkbox" && obj.checked==false){
-        valor="0";
-    }
-    else{
-        valor = obj.value;
-    }
+//mantendo funções Originais
+//Recupera os camos da tela e armazena envia ao servidor
+function onSave(idForm, nomeform, tipoRetorno, alvo){
+	
+	var metodo    = 'onSave';
+	var valor     = '';
+	var campos    = '';
+	var formCampo = document.getElementById(nomeform);
+	var elementos = formCampo.getElementsByTagName('*');
+	
 
-    var nameCampo = $(obj).attr('name');
-
-    if(valor && valor != ""){
-        var valField = 'idForm='+idForm+'&campo='+nameCampo+'&valor='+valor+'&codigo='+codigo;
-
-        var retorno =  exeCampo(getPath()+'/app.dbo/compilerData.php?loc=x', valField, 'POST');
-
-    }else{
-        var valField = null;
-    }
+	for(var i = 0; i < elementos.length; i++) {
+		
+		if (elementos[i].getAttribute('manter')) {
+			
+//			    if(elementos[i].type=="select-one" && elementos[i].value==0){
+//			        valor = "";
+//			    }else 
+			    if(elementos[i].type=="checkbox" && elementos[i].checked==false){
+			        valor = "0";
+			    }
+			    else if(elementos[i].type=="radio" && elementos[i].checked == false){
+			        continue;
+			    }else{
+			        valor = elementos[i].value;
+			    }	    
+			campos = campos+'&'+elementos[i].name+'='+valor;
+		}
+	}
+	
+	//====================================
+	var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, campos, 'POST', 'Sucesso');
+	
+	setExcecao(idForm,alvo,retorno);    
 }
 
 
-//Retorna um vetor com todas as opções do multiselect
-//@param obj = objeto multiselect
-function multiSelect_pross(obj, idForm, entity, codigo, incontrol, tipoForm){
-    if(obj){
+//interface do metodo onClose
+function onClose(tipoRetorno, idForm, alvo, confirme){
 
-        obj = document.getElementById(obj);
-        if(obj.selected){
-        }else{
-            pross(obj, idForm, entity, codigo, incontrol, tipoForm);
-        }
+  var metodo = 'onClose';
+  var condiction = true;
 
-    }else{
-        alertPetrus("O objeto multselect não foi passado corretamente");
-    }
+  if(confirme!=""){
+
+      jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
+
+      jQuery( '#confirmation' + idForm ).dialog({
+          resizable: false,
+          modal: true,
+          close : function() {
+              $(this).remove()
+          },
+          buttons: {
+              "Cancelar": function() {
+                  $(this).remove();
+              },
+              "Confirmar": function() {
+                  $(this).remove();
+                  if(alvo!= ""){
+                      var view = alvo;
+                  }
+                  // executa ação de salvar campo a campo
+                  execSaveAction(idForm,'false');
+                  //compAction(metodo, key);
+                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
+
+                  setExcecao(idForm, view, retorno);
+                  
+              }
+          }
+      });
+  }else{
+	  
+      if(alvo!= ""){
+          var view = alvo;
+      }
+
+      //compAction(metodo, key);
+      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
+
+      setExcecao(idForm, view, retorno);
+  }
+  
+  return true;
 }
+
+//interface do metodo onCancel
+function onCancel(tipoRetorno, idForm, key, alvo, confirme){
+
+  var metodo = 'onCancel';
+  var condiction = true;
+
+  if(confirme!=""){
+
+      jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
+
+      jQuery( '#confirmation' + idForm ).dialog({
+          resizable: false,
+          modal: true,
+          close : function() {
+              $(this).remove()
+          },
+          buttons: {
+              "Cancelar": function() {
+                  $(this).remove();
+              },
+              "Confirmar": function() {
+                  $(this).remove();
+                  if(alvo!= ""){
+                      var view = alvo;
+                  }
+
+                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
+
+                  
+                  setExcecao(idForm, view, retorno);
+              }
+          }
+      });
+  }else{
+      if(alvo!= ""){
+          var view = alvo;
+      }
+
+      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
+
+      setExcecao(idForm, view, retorno);
+
+  }
+}
+
+
 
 // executa funções das funcionalidades [formulários / listas]
 
 function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
-
+	
     //var condiction = true;
     //configura os dados do filtro
     var valField = setFiltro(idForm);
@@ -136,23 +228,12 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
                     if(obRetorno!= ""){
                         var view = obRetorno;
                     }
-                    
-                    callback = function(retorno){
-                    	var erro = getErro(retorno);
-                        if(erro == 'erro'){
-                            setRertonoControl(idForm, retorno);
-                        }else{
-                            if(tipoObjeto == 'lista'){
-                                jQuery('#'+view).html(retorno);
-                            }else{
-                                jQuery('#'+view).append(retorno);
-                            }
-                            atribuicao();
-                        }
-                    };
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);
 
-                    
+                    callback = function(retorno){
+                    	setExcecao(idForm, view, retorno);
+                    };
+                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);     
+
                 }
             }
         });
@@ -164,20 +245,11 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
         }
 
         callback = function(retorno){
-        	var erro = getErro(retorno);
-            if(erro == 'erro'){
-                setRertonoControl(idForm, retorno);
-            }else{
-                if(tipoObjeto == 'lista'){
-                    jQuery('#'+view).html(retorno);
-                }else{
-                    jQuery('#'+view).append(retorno);
-                }
-                atribuicao();
-            }
+        	setExcecao(idForm, view, retorno);
         };
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso',callback);
+        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
 
+        setExcecao(idForm, view, retorno);
         
     }
 }
@@ -231,253 +303,6 @@ function onFormOpen(idForm, obj){
     }
 }
 
-/* mantendo funções Originais
-//interface do metodo onClose
-function onClose(tipoRetorno, idForm, alvo, confirme){
-
-    var metodo = 'onClose';
-    var condiction = true;
-
-    if(confirme!=""){
-        if(!confirm(confirme)){
-            condiction = false;
-        }
-    }
-
-    if(condiction==true){
-        if(alvo!= ""){
-            var view = alvo;
-        }
-        // executa ação de salvar campo a campo
-        execSaveAction();
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(jQuery('#'+view).length > 0){
-                jQuery('#'+view).html(retorno);
-            }
-            jQuery('#'+idForm+'-window').dialog('close');
-            
-            atribuicao();
-        }
-    }
-}
-
-//interface do metodo onCancel
-function onCancel(tipoRetorno, idForm, key, alvo, confirme){
-
-    var metodo = 'onCancel';
-    var condiction = true;
-
-    if(confirme!=""){
-        if(!confirm(confirme)){
-            condiction = false;
-        }
-    }
-
-    if(condiction==true){
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            jQuery('#'+view).html(retorno);
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-}
-*/
-
-//interface do metodo onClose
-function onClose(tipoRetorno, idForm, alvo, confirme){
-
-    var metodo = 'onClose';
-    var condiction = true;
-
-    if(confirme!=""){
-
-        jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
-
-        jQuery( '#confirmation' + idForm ).dialog({
-            resizable: false,
-            modal: true,
-            close : function() {
-                $(this).remove()
-            },
-            buttons: {
-                "Cancelar": function() {
-                    $(this).remove();
-                },
-                "Confirmar": function() {
-                    $(this).remove();
-                    if(alvo!= ""){
-                        var view = alvo;
-                    }
-                    // executa ação de salvar campo a campo
-                    execSaveAction(idForm,'false');
-                    //compAction(metodo, key);
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-                    var erro = getErro(retorno);
-                    if(erro == 'erro'){
-                        setRertonoControl(idForm, retorno);
-                    }else{
-                        if(jQuery('#'+view).length > 0){
-                            jQuery('#'+view).html(retorno);
-                        }
-                        jQuery('#'+idForm+'-window').dialog('close');
-
-                        atribuicao();
-                    }
-                }
-            }
-        });
-    }else{
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        // executa ação de salvar campo a campo
-        execSaveAction(idForm,'false');
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(jQuery('#'+view).length > 0){
-                jQuery('#'+view).html(retorno);
-            }
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-    
-    return true;
-}
-
-//interface do metodo onCancel
-function onCancel(tipoRetorno, idForm, key, alvo, confirme){
-
-    var metodo = 'onCancel';
-    var condiction = true;
-
-    if(confirme!=""){
-
-        jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
-
-        jQuery( '#confirmation' + idForm ).dialog({
-            resizable: false,
-            modal: true,
-            close : function() {
-                $(this).remove()
-            },
-            buttons: {
-                "Cancelar": function() {
-                    $(this).remove();
-                },
-                "Confirmar": function() {
-                    $(this).remove();
-                    if(alvo!= ""){
-                        var view = alvo;
-                    }
-
-                    //compAction(metodo, key);
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-                    var erro = getErro(retorno);
-                    if(erro == 'erro'){
-                        setRertonoControl(idForm, retorno);
-                    }else{
-                        jQuery('#'+view).html(retorno);
-                        jQuery('#'+idForm+'-window').dialog('close');
-
-                        atribuicao();
-                    }
-                }
-            }
-        });
-    }else{
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            jQuery('#'+view).html(retorno);
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-}
-
-
-/*
- *Representa o metodo onSeve da classe de execução TExecs.class
- */
-function onSave(idForm, asyn){
-    var valores = 'method=onSave&idForm='+idForm+'&tipoRetorno=form';
-    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?'+valores, '', 'GET','Sucesso', asyn);
-    return retorno;
-}
-
-/*
- *
- */
-function autoSaveForm(ob,idForm){
-    var mark = $(ob).attr('ligado') == 'true' ? 'false' : 'true';
-    $(ob).attr('ligado',mark);
-    $(ob).toggleClass('ui-icon-circle-check ui-icon-close');
-    if(mark == 'true'){
-        execSaveAction(idForm,'30000');
-    }else{
-        $(ob).parent().children('.botaosalvarAutomatico_label').html('Salvar Automaticamente');
-    }
-}
-
-/*
- * Função para executar o salvar automatico dos campos no banco de dados
- */
-function execSaveAction(idForm,times){
-
-    onSave(idForm, true);
-
-    if(times != 'false' && times){
-        if($('#botaosalvarAutomatico_label'+idForm).parent().children('.botaosalvarAutomatico').attr('ligado') == 'true'){
-            var save_now = new Date();
-            var save_hours = save_now.getHours();
-            var save_minutes = save_now.getMinutes();
-            var save_seconds = save_now.getSeconds();
-            var save_timeValue = "" + ((save_hours < 10) ? "0" + save_hours: save_hours);
-            save_timeValue  += ((save_minutes < 10) ? ":0" : ":") + save_minutes;
-            save_timeValue  += ((save_seconds < 10) ? ":0" : ":") + save_seconds;
-            
-            $('#botaosalvarAutomatico_label'+idForm).html('Informações salvas às '+save_timeValue);
-            setTimeout('execSaveAction(\''+idForm+'\',\''+times+'\');',times);
-        }
-    }
-}
 
 //INICIO - funções referentes a Impressão de listas
 function printDataGrid(idForm, pane){

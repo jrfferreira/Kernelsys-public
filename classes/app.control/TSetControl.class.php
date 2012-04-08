@@ -301,35 +301,39 @@ class TSetControl {
     	
         $obHeaderForm = new TSetHeader();
         $headerForm = $obHeaderForm->getHead($vetor['idForm']);
-        $cnpj = $this->setTrueCnpj($vetor['valor']);
-        if($cnpj){
-            $dbo = new TDbo($vetor['entidade']);
-            $crit = new TCriteria();
-            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
-            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
-            $filter = new TFilter('codigo','=',$headerForm['codigo']);
-            $filter->tipoFiltro = 6;
-            $crit->add($filter,'AND');
-
-            $ret = $dbo->select($vetor['campo'],$crit);
-            $duplic = false;
-            while($n = $ret->fetchObject()){
-                $duplic = true;
-            }
-            if($duplic){
-                $vetor['codigoRetorno'] = 'erro#4';
-                $vetor['msg'] = "O CNPJ passado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
-                $vetor['valor'] = false;
-                return $vetor;
-            }else{
-                $vetor['valor'] = $cnpj;
-                return $vetor;
-            }
-        }else{
-            $vetor['codigoRetorno'] = 'erro#4';
-            $vetor['msg'] = "O CNPJ passado não � válido ( ".$vetor['valor'].").<br>";
-            $vetor['valor'] = false;
-            return $vetor;
+        if(strtolower($headerForm['camposSession']['tipo']['valor']) == 'j'){
+	        $cnpj = $this->setTrueCnpj($vetor['valor']);
+	        if($cnpj){
+	            $dbo = new TDbo($vetor['entidade']);
+	            $crit = new TCriteria();
+	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
+	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
+	            $filter = new TFilter('codigo','=',$headerForm['codigo']);
+	            $filter->tipoFiltro = 6;
+	            $crit->add($filter,'AND');
+	
+	            $ret = $dbo->select($vetor['campo'],$crit);
+	            $duplic = false;
+	            while($n = $ret->fetchObject()){
+	                $duplic = true;
+	            }
+	            if($duplic){
+	                $vetor['codigoRetorno'] = 'erro#4';
+	                $vetor['msg'] = "O CNPJ passado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
+	                $vetor['valor'] = false;
+	                return $vetor;
+	            }else{
+	                $vetor['valor'] = $cnpj;
+	                return $vetor;
+	            }
+	        }else{
+	            $vetor['codigoRetorno'] = 'erro#4';
+	            $vetor['msg'] = "O CNPJ passado não é válido ( ".$vetor['valor'].").<br>";
+	            $vetor['valor'] = false;
+	            return $vetor;
+	        }
+	        
+	        return $vetor;
         }
     }
     
@@ -353,7 +357,7 @@ class TSetControl {
             if ($cnpj[++$t] != ($d = ((10 * $d) % 11) % 10)) {
                 return false;
             }else{
-                return $cpf;
+                return $cnpj;
             }
         }
         }

@@ -47,35 +47,7 @@ class TAbas {
             $this->bots = $bot;
         }
     }
-/*
- * Função responsavel pelo Auto Save
- */
-    public function setAutoSave($idForm){
-        $this->autoSave = new TElement('div');
-        $this->autoSave->style = "height: 16px; display: inline-block; float: right; width: 250px; text-align: right;";
 
-       $iconSalvar = new TElement('div');
-       $iconSalvar->class = "botaosalvarAutomatico ui-icon ui-icon-close";
-       $iconSalvar->ligado = 'false';
-       $iconSalvar->form = $idForm;
-       $iconSalvar->style = "width: 16px; height: 16px; display: inline-block; float: right; position: relative; cursor: pointer; margin-top: 6px; margin-left: 4px; ";
-       $iconSalvar->title = "Salvar Automaticamente";
-       $iconSalvar->onClick = "autoSaveForm(this,'{$idForm}')";
-       $iconSalvar->trigger = "autoSaveForm(this,'{$idForm}')";
-       $iconSalvar->add(' ');
-       //$IconSalvar = new TIcon('ui-icon-bullet','botaosalvarAutomatico', 'botaosalvarAutomatico');
-       //$IconSalvar->setTitle('Salvar automaticamente');
-
-       $textoSalvar = new TElement('div');
-       $textoSalvar->ligado = 'false';
-       $textoSalvar->id = "botaosalvarAutomatico_label".$idForm;
-       $textoSalvar->class = "botaosalvarAutomatico_label";
-       $textoSalvar->style = "margin-top: 7px; margin-right: 4px; ";
-       $textoSalvar->add('Salvar Automaticamente');
-
-       $this->autoSave->add($iconSalvar);
-       $this->autoSave->add($textoSalvar);
-    }
     /*Metodo addAbas
 	*adiciona abas
     */

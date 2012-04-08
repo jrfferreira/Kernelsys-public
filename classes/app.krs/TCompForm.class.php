@@ -79,7 +79,7 @@ class TCompForm {
 
                 //==============================================================
                 // monta estrutura de campos na sessão
-                if($cmp->colunadb and $cmp->entidade != "0"){
+                if($cmp->colunadb and $cmp->colunadb != 'codigo' and $cmp->entidade != "0"){
                     $infoCampos['idForm']      = $this->idForm;
                     $infoCampos['label']       = $cmp->label;
                     $infoCampos['entidade']    = $obTabela->tabela;
@@ -107,10 +107,10 @@ class TCompForm {
                 }else {
                    $tipoForm = "lista";
                 }
-                $cmp->funct = "pross(this,'".$this->idForm."','".$this->codigo."')";
-
-                if($cmp->autosave){
-                    $cmp->funct .= "; onSave('".$this->idForm."', false)";
+                //Define se o campo sera gravando no banco de dados
+				if($cmp->colunadb!='codigo'){
+					$cmp->manter = true;
+					//$cmp->funct = "pross(this,'".$this->idForm."','".$this->codigo."')";
                 }
 
                 $agregFunc = NULL;
@@ -275,14 +275,14 @@ class TCompForm {
                 $setCampo->setOutControl($dadosCampo->outcontrol);
                 $setCampo->setNome($dadosCampo->colunadb);
                 $setCampo->setLabel($dadosCampo->label);
-                    // atribui function de gravação do objeto [se abilitado]
-                    //if(empty($dadosCampo->funct)){
-                        $setCampo->setAction('onblur', $dadosCampo->funct);
-                        //$setCampo->setAction('onchange','$(this).blur()');
-                    //}
                 $setCampo->setCampo($key, $dadosCampo->tipo, $dadosCampo->seletorJQ);
                 $setCampo->setPropriedade('alteravel', $dadosCampo->alteravel);
-
+                // atribui atribupto para gravação do objeto [se abilitado]
+                 if($dadosCampo->manter == true){
+                	$setCampo->setPropriedade('manter', 'true');
+                	//$setCampo->setAction('onblur', $dadosCampo->funct);
+                	//$setCampo->setAction('onchange','$(this).blur()');
+                }
                     // verifica se o campo pode ser editado e atribui a propriedade somente leitura
                     if($this->editable){
                        $setCampo->setPropriedade('readonly','true');
