@@ -612,8 +612,6 @@ class TExecs {
         
        	$limite = $this->obsession->getValue("comboLimite" . $this->idLista);
 
-       	$this->obsession->__dump(); exit();
-       	
         $this->obLista->setLimite($limite);
         $this->obLista->clearSelecao();
         $this->showlist();

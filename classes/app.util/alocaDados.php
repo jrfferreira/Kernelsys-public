@@ -14,4 +14,5 @@ function __autoload($classe){
 $valor     = $_GET['alValor'];
 $idContent = $_GET['idc']; 
 
-$obsession = new TAlocaDados($idContent, $valor);
+$obsession = new TAlocaDados();
+$obsession->setValue($idContent, $valor);
