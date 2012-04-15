@@ -76,6 +76,9 @@
             $mensagem .= '<br/><b>Mensagem</b>: ' . $this->msg." - Line: [".$this->getLine()."] ".$this->getMessage();;
             $mensagem .= '<br/><br/><br/><b>Data/Hora</b>: ' . date("d/m/Y H:i:s");;
             $mensagem .= '<br/><b>IP</b>: ' . $_SERVER['REMOTE_ADDR'];
+            
+            
+            
 
             //$TEmail = new TEmail();
             //$TEmail->enviar('bitup.si@gmail.com', 'Erro no sistema', $mensagem, false);

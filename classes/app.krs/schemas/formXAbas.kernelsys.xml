@@ -120,20 +120,6 @@
       <ativo>1</ativo>
       <ordem>0</ordem>
     </row>
-    <row id="42">
-      <id>42</id>
-      <formid>6</formid>
-      <abaid>45</abaid>
-      <ativo>1</ativo>
-      <ordem>0</ordem>
-    </row>
-    <row id="43">
-      <id>43</id>
-      <formid>6</formid>
-      <abaid>46</abaid>
-      <ativo>1</ativo>
-      <ordem>0</ordem>
-    </row>
     <row id="44">
       <id>44</id>
       <formid>19</formid>
@@ -159,20 +145,6 @@
       <id>48</id>
       <formid>21</formid>
       <abaid>47</abaid>
-      <ativo>1</ativo>
-      <ordem>0</ordem>
-    </row>
-    <row id="49">
-      <id>49</id>
-      <formid>6</formid>
-      <abaid>53</abaid>
-      <ativo>1</ativo>
-      <ordem>0</ordem>
-    </row>
-    <row id="50">
-      <id>50</id>
-      <formid>6</formid>
-      <abaid>54</abaid>
       <ativo>1</ativo>
       <ordem>0</ordem>
     </row>
@@ -398,13 +370,6 @@
       <formid>50</formid>
       <abaid>91</abaid>
       <ativo>1</ativo>
-      <ordem>0</ordem>
-    </row>
-    <row id="88">
-      <id>88</id>
-      <formid>6</formid>
-      <abaid>92</abaid>
-      <ativo>0</ativo>
       <ordem>0</ordem>
     </row>
     <row id="89">
@@ -1100,6 +1065,27 @@
       <ativo>1</ativo>
       <ordem>1</ordem>
     </row>
+    <row id="43">
+      <id>43</id>
+      <formid>6</formid>
+      <abaid>46</abaid>
+      <ativo>1</ativo>
+      <ordem>2</ordem>
+    </row>
+    <row id="50">
+      <id>50</id>
+      <formid>6</formid>
+      <abaid>54</abaid>
+      <ativo>1</ativo>
+      <ordem>4</ordem>
+    </row>
+    <row id="88">
+      <id>88</id>
+      <formid>6</formid>
+      <abaid>92</abaid>
+      <ativo>0</ativo>
+      <ordem>5</ordem>
+    </row>
     <row id="183">
       <id>183</id>
       <formid>344</formid>
@@ -1792,6 +1778,20 @@
       <abaid>376</abaid>
       <ativo>1</ativo>
       <ordem>0</ordem>
+    </row>
+    <row id="42">
+      <id>42</id>
+      <formid>6</formid>
+      <abaid>45</abaid>
+      <ativo>1</ativo>
+      <ordem>1</ordem>
+    </row>
+    <row id="49">
+      <id>49</id>
+      <formid>6</formid>
+      <abaid>53</abaid>
+      <ativo>1</ativo>
+      <ordem>3</ordem>
     </row>
   </formXAbas>
 </kernelsys>

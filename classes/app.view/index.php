@@ -3,6 +3,19 @@
     include_once('../app.util/autoload.class.php');
     $autoload = new autoload('../',$classe);
 }*/
+$dominioValido = false;
+$prefixoEndereco = '';
+
+if($_GET['occupant']){
+	$prefixoEndereco = 'occupant/'.$_GET['occupant'].'/';
+}
+
+
+if(file_exists("../{$prefixoEndereco}app.config/my_dbpetrus.ini")){
+	$dominioValido = true;
+}
+
+$enderecoGetPath = "../{$prefixoEndereco}app.config/getPath.js";
 
 if($_POST['logar'] != ""){
         if($_GET['occupant']) {
@@ -18,6 +31,7 @@ if($_POST['logar'] != ""){
 <link rel="shortcut icon" href="favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Sistema Integrado - bitUP</title>
+<script type="text/javascript" src="<?php echo $enderecoGetPath; ?>"></script>
 <style>
 a {color: #666; text-decoration: none; font-weight: bolder;text-shadow: #999 0px 0px 1px;}
 a :hover {color: #999;; text-decoration: none; font-weight: bolder;text-shadow: #999 0px 0px 1px;}
@@ -71,7 +85,7 @@ a :visited {color: #444; text-decoration: none; font-weight: bolder;text-shadow:
 </style>
 
 </head>
-<body onload="document.getElementById('usuario').focus();" style="margin:0px; background-image:url(app.images/texture.jpg); overflow:hidden;">
+<body onload="document.getElementById('usuario').focus();" style="margin:0px; background-image:url(app.images/texture.jpg); overflow:hidden;" id="corpo">
     <div><!-- <div style="background:url(app.images/icone_educacional.png) center no-repeat;"> !-->
 <form action="" method="POST" name="sistema" id="sistema" style="margin:2px; ">
 <table class="tabela" width="50%" border="0" align="center" cellpadding="2" cellspacing="2">
@@ -90,7 +104,7 @@ a :visited {color: #444; text-decoration: none; font-weight: bolder;text-shadow:
     </tr>
     <tr>
       <td colspan="2" id="autenticacao">
-        <input type="submit" name="logar" value="autenticar" id="autenticar" />
+        <input type="submit" name="logar" value="<?php echo $dominioValido ? 'Autenticar' : 'Este dominio é invalido!'  ?>" id="autenticar" <?php if(!$dominioValido) echo "disabled='disabled'" ?>/>
       </td>
     </tr>
 </table>
@@ -119,6 +133,13 @@ a :visited {color: #444; text-decoration: none; font-weight: bolder;text-shadow:
 <p>Sistema Integrado Petrus Comercial<br/>Todos os direitos reservados - <a href="http://www.bitup.com.br" target="blank">BitUP S.i</a></p></div>
     </div>
     <script type="text/javascript">
+    
+    	href = (window.location.href).split('?');
+
+    	if(href[0] != getPath()+'/app.view/'){
+    		document.getElementById('corpo').innerHTML = 'Aguarde, você está sendo redirecionado...';
+    		window.location.href = getPath();
+    	}
 if(navigator.appName == 'Microsoft Internet Explorer' || navigator.appName == 'Opera'){
     document.getElementById('options').innerHTML = 'Use um navegador atualizado:<br/><br/><a href="http://br.mozdev.org/download/" border=0 title="Instalar Firefox" alt="Instalar Firefox" target="blank"><img src="app.images/icon_firefox.png" style="height: 48px; border: 0px" /></a> <a href="http://www.google.com/chrome" border=0 title="Instalar Chrome" alt="Instalar Chrome" target="blank"><img src="app.images/icon_chrome.png" style="height: 48px; border: 0px" /></a>';
     document.getElementById('autenticacao').innerHTML = '<span style="font-size: 12px; background-color: #fff; padding: 2px; border: 1pd dotted #ccc;">Navegador não suportado</span>';

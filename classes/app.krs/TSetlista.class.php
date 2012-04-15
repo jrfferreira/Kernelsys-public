@@ -620,8 +620,8 @@ class TSetlista {
     					60=>60,
     					80=>80,
     					100=>100,
-    					120=>120,
-    					'all'=>'Todos');
+    					120=>120);
+    					//'all'=>'Todos');
     					
     	$ActionLimite = new TSetAction('prossExe');
         $ActionLimite->setMetodo('onChangeLimit');
