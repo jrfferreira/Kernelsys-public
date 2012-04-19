@@ -1,21 +1,18 @@
 function setTipoForm(ob){
 
-    var pF = document.getElementById('bloc_pessoaFisica');
-    var pJ = document.getElementById('bloc_pessoaJuridica');
+    var pF = $('#bloc_pessoaFisica');
+    var pJ = $('#bloc_pessoaJuridica');
 
     if(typeof(ob) == "string"){
-        ob = document.getElementById(ob);
+        ob = $('#'+ob);
     }
 
-    if(ob.value == "F" & ob.checked == true){
-
-        pF.style.display = "block";
-        pJ.style.display  = "none";
+    if($(ob).val() == "F" && $(ob).attr('checked') == 'checked'){
+        pF.css('display','block').find(':input').attr('manter',true);        
+        pJ.css('display','none').find(':input').removeAttr('manter');
     }
     else{
-
-        pF.style.display = "none";
-        pJ.style.display  = "block";
+        pF.css('display','none').find(':input').removeAttr('manter');
+        pJ.css('display','block').find(':input').attr('manter',true); 
     }
-
 }

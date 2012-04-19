@@ -408,7 +408,7 @@ class TExecs {
                         
                         //======================================================================
                         
-                  if($infoCampo[status] == 0){
+                  if($infoCampo['status'] == 0){
                         /***************************************************************************
                         * Aplica regra de negócios do campo se ouver
                         */
@@ -435,54 +435,7 @@ class TExecs {
 
                 //percorre os campos agrupados por entidade e grava em banco
                 if(count($dadosCampos) > 0){
-                /* foreach($dadosCampos as $entidade=>$dados){
-
-                    //Define o campo chave da operação =============================
-                    if($entidade != $this->headerDados['entidade']){
-                        $colunafilho = $this->headerDados['colunafilho'];
-                    }else{
-                        $colunafilho = "codigo";
-                    }
-                    //==============================================================
-
-                    $obDbo = new TDbo();
-                    //consulta se o registro já existe
-                    $obDbo->setEntidade($entidade);
-                        $criterioValReg = new TCriteria();
-                        $criterioValReg->add(new TFilter($colunafilho, '=',$codigo));
-                        $Check = $obDbo->select('codigo', $criterioValReg);
-                    $resCheck = $Check->fetch();
-
-                    //se o registro já existir
-                    if($resCheck['codigo']) {
-                        $obDbo->setEntidade($entidade);
-                           $criteriaUpCampo = new TCriteria();
-                           $criteriaUpCampo->add(new TFilter($colunafilho, '=', $codigo));
-                        $Query = $obDbo->update($dados, $criteriaUpCampo);
-                    }else{
-
-                        //valores padrões
-                        if($codigo){
-                            $dados[$colunafilho]   = $codigo;
-                        }
-                        if($codigoPai){
-                            $dados[$destinoCodigo]  = $codigoPai;
-                        }
-                        $dados['unidade']      = $unidade;
-                        $dados['codigoautor']  = $this->obUser->codigo;
-                        $dados['datacad']      = date("Y-m-d");
-                        $dados['ativo']        = '1';
-
-
-                        $obDbo->setEntidade($entidade);
-                        $retorno = $obDbo->insert($dados);
-			
-
-                        $codigo = $retorno['codigo'];
-                    }
-                    $obDbo->close();
-                }//fimdo loop salvar */
-                	foreach($dadosCampos as $entidade=>$dados){
+                   foreach($dadosCampos as $entidade=>$dados){
                 	
                 		//Define o campo chave da operação =============================
                 		if($entidade != $this->headerDados['entidade']){
@@ -500,7 +453,7 @@ class TExecs {
                 		$Check = $obDbo->select('codigo', $criterioValReg);
                 		$resCheck = $Check->fetch();
                 		 
-                		//se o registro já existir
+                		//se o registro não existir
                 		if(!$resCheck['codigo']) {
                 	
                 			//valores padrões
@@ -522,6 +475,7 @@ class TExecs {
                 			$codigo = $retorno['codigo'];
                 			 
                 		}else{
+                			$dados['ativo']        = '1';
                 				
                 			$obDbo->setEntidade($entidade);
                 			$criteriaUpCampo = new TCriteria();
@@ -560,7 +514,13 @@ class TExecs {
     *
     */
     public function onCancel() {
-        $this->showlist();
+    	//Elimina o registro caso seja uma instancia nova.
+        if($this->headerDados['status'] == 'new'){      
+            $this->getObLista();  	
+        	$this->obLista->onDelete($this->headerDados['codigo'], $this->headerDados['entidade']);
+        }
+        //Exibe a lista novamente.
+    	$this->showlist();
         $this->obHeader->clearHeader($this->idForm);
     }
 

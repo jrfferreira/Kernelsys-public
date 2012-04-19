@@ -37,6 +37,7 @@ final class TTransaction{
         	
            // abre uma conexão e armazena
            // na propriedade estática $conn
+           if(PHP_VERSION >= 5.3){
 	           if(is_a($conex_sessao,'PDO') && $conex_sessao->inTransaction()){
 	           		self::$conn = $conex_sessao;
 	           }else{
@@ -46,12 +47,16 @@ final class TTransaction{
 	           }
 	           
                 // inicia a transação
-                if(self::$conn && !self::$conn->InTransaction()){
+                if(self::$conn && !self::$conn->inTransaction()){
                 	self::$conn->beginTransaction();
                 }
                 // desliga o log de SQL
                 self::$logger = NULL;
-           
+           }else{
+           		$conexao = TConnection::open($database);
+	           	self::$conn = $conexao;
+                self::$conn->beginTransaction();
+           }
            //if (empty(self::$conn) or !self::$conn){
            //}
         }
