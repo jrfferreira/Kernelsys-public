@@ -170,8 +170,8 @@ class setException extends Exception {
 		$dadosErro ['msg'] = "" . $this->msg . " - Line: [" . $this->getLine () . "] " . $this->getMessage ();
 		$dadosErro ['horaCad'] = date ( "H:i:s" );
 		
-		//$TEmail = new TEmail();
-		//$TEmail->enviar('jrffer@gmail.com', 'Erro no sistema', $mensagem, false);
+		$TEmail = new TEmail();
+		$TEmail->enviar('jr8116@gmail.com', 'Erro no sistema', $mensagem, false);
 		
 		return true;
 		// $dboLog = new TDbo(TConstantes::DBUSUARIOS_ERROS);

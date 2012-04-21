@@ -26,10 +26,9 @@ function setExcecao(idForm,view,retorno){
      if(erro == 'erro'){
          setRertonoControl(idForm, retorno);
      }else{
-         if(jQuery('#'+view).length > 0){
+         if(view && jQuery('#'+view).length > 0){
              jQuery('#'+view).html(retorno);
          }
-         jQuery('#'+idForm+'-window').dialog('close');
 
          atribuicao();
      }
@@ -102,7 +101,8 @@ function onSave(idForm, nomeform, tipoRetorno, alvo){
 	//====================================
 	var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, campos, 'POST', 'Sucesso');
 	
-	setExcecao(idForm,alvo,retorno);    
+	setExcecao(idForm,alvo,retorno); 
+    jQuery('#'+idForm+'-window').dialog('close');   
 }
 
 
@@ -110,7 +110,6 @@ function onSave(idForm, nomeform, tipoRetorno, alvo){
 function onClose(tipoRetorno, idForm, alvo, confirme){
 
   var metodo = 'onClose';
-  var condiction = true;
 
   if(confirme!=""){
 
@@ -120,7 +119,7 @@ function onClose(tipoRetorno, idForm, alvo, confirme){
           resizable: false,
           modal: true,
           close : function() {
-              $(this).remove()
+              $(this).remove();
           },
           buttons: {
               "Cancelar": function() {
@@ -128,32 +127,26 @@ function onClose(tipoRetorno, idForm, alvo, confirme){
               },
               "Confirmar": function() {
                   $(this).remove();
-                  if(alvo!= ""){
-                      var view = alvo;
-                  }
+                  
                   // executa ação de salvar campo a campo
                   execSaveAction(idForm,'false');
                   
-                  callback = function(retorno){
-                    	setExcecao(idForm, view, retorno);
-                    };
-                  
-                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso',callback);
+                    	
 
+                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
+                  setExcecao(idForm, alvo, retorno);
+                  jQuery('#'+idForm+'-window').dialog('close');
                   
               }
           }
       });
   }else{
 	  
-      if(alvo!= ""){
-          var view = alvo;
-      }
-      callback = function(retorno){
-        	setExcecao(idForm, view, retorno);
-        };
       //compAction(metodo, key);
-      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso',callback);
+      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
+  	
+      setExcecao(idForm, alvo, retorno);
+      jQuery('#'+idForm+'-window').dialog('close');
   }
   
   return true;
@@ -163,7 +156,6 @@ function onClose(tipoRetorno, idForm, alvo, confirme){
 function onCancel(tipoRetorno, idForm, key, alvo, confirme){
 
   var metodo = 'onCancel';
-  var condiction = true;
 
   if(confirme!=""){
 
@@ -173,7 +165,7 @@ function onCancel(tipoRetorno, idForm, key, alvo, confirme){
           resizable: false,
           modal: true,
           close : function() {
-              $(this).remove()
+              $(this).remove();
           },
           buttons: {
               "Cancelar": function() {
@@ -181,26 +173,18 @@ function onCancel(tipoRetorno, idForm, key, alvo, confirme){
               },
               "Confirmar": function() {
                   $(this).remove();
-                  if(alvo!= ""){
-                      var view = alvo;
-                  }
-                  callback = function(retorno){
-                  	setExcecao(idForm, view, retorno);
-                  };
                   
-                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso',callback);
+                  var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
 
+                  setExcecao(idForm, alvo, retorno);
+                  jQuery('#'+idForm+'-window').dialog('close');
               }
           }
       });
   }else{
-      if(alvo!= ""){
-          var view = alvo;
-      }
-      callback = function(retorno){
-      	setExcecao(idForm, view, retorno);
-      };
-      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso',callback);
+      var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
+    	setExcecao(idForm, alvo, retorno);
+        jQuery('#'+idForm+'-window').dialog('close');
   }
 }
 
@@ -220,39 +204,35 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
             resizable: false,
             modal: true,
             close : function() {
-                $(this).remove()
+                $(this).remove();
             },
             buttons: {
                 "Cancelar": function() {
                     $(this).remove();
                 },
                 "Confirmar": function() {
-                    $(this).remove();
-                    if(obRetorno!= ""){
-                        var view = obRetorno;
-                    }
+                    $(this).remove();    
+                    
+                    callback = function(ajaxArgs){
+                     	setExcecao(idForm, obRetorno, ajaxArgs);
+                     }
+                    var url = getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno;
+                    exe('', url, valField, 'POST', 'Sucesso',callback);     
 
-                    callback = function(retorno){
-                    	setExcecao(idForm, view, retorno);
-                    };
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);     
-
+                    
                 }
             }
         });
 
 
     }else{
-        if(obRetorno!= ""){
-            var view = obRetorno;
-        }
+    	var url = getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno;
+    	callback = function(ajaxArgs){
+         	setExcecao(idForm, obRetorno, ajaxArgs);
+         }
 
-        callback = function(retorno){
-        	setExcecao(idForm, view, retorno);
-        };
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);
+         exe('', url, valField, 'POST', 'Sucesso',callback);
 
-        
     }
 }
 
