@@ -19,6 +19,11 @@ if(!function_exists("__autoload") && !is_callable("__autoload")) {
     }
 }
 
+//Atribui controlador de erros personalizado
+if(!function_exists('errorHandler')){
+	include_once('../app.util/errorHandler.php');
+}
+set_error_handler("errorHandler" , E_ALL^E_NOTICE);
 
 /**
  * Recepta as ações enviadas por get

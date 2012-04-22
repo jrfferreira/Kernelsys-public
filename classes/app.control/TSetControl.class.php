@@ -117,37 +117,6 @@ class TSetControl {
         return $vetor;
     }
 
-//    /**
-//     * Converte para maiúsculas o primeiro caractere de cada palavra
-//     */
-//    public function setUcwords($valor) {
-//        try {
-//            if($valor) {
-//                $array = explode(" ", $valor);
-//
-//                foreach ($array as $ch=>$vl) {
-//                    $min = strtolower($vl);
-//                    if($min != "de" and $min != "da") {
-//                        $min = ucwords($min);
-//                    }
-//                    $str[$ch] = $min;
-//                }
-//                $valor = implode(" ", $str);
-//            }
-//        }catch (Exception $e) {
-//            new setException($e);
-//        }
-//        return $valor;
-//    }
-//
-//    /**
-//     * Converte para maiúsculas o primeiro caractere de cada palavra
-//     */
-//    public function setUcwordsMain($vetor) {
-//        $vetor['valor'] = $this->setUcwords($vetor['valor']);
-//        return $vetor;
-//    }
-
     /*
      * Aplica configuraç�o de encriptaç�o em senhas ou qualquer dado
      * que precise ser encriptado. (Fora de escopo do metodo main)

@@ -1,5 +1,6 @@
 function setConfirmaInscricao(obj){
-
+	
+	onSave('8','8-window','form', '', true);
     var codigo = $(obj).attr('codigo');
 
     var tcliente = document.getElementById('codigopessoa');

@@ -70,7 +70,7 @@ function onLogout(occupant){
 
 //mantendo funções Originais
 //Recupera os camos da tela e armazena envia ao servidor
-function onSave(idForm, nomeform, tipoRetorno, alvo){
+function onSave(idForm, nomeform, tipoRetorno, alvo, notClose){
 	
 	var metodo    = 'onSave';
 	var valor     = '';
@@ -102,7 +102,8 @@ function onSave(idForm, nomeform, tipoRetorno, alvo){
 	var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, campos, 'POST', 'Sucesso');
 	
 	setExcecao(idForm,alvo,retorno); 
-    jQuery('#'+idForm+'-window').dialog('close');   
+    if(!notClose) jQuery('#'+idForm+'-window').dialog('close'); 
+    
 }
 
 
