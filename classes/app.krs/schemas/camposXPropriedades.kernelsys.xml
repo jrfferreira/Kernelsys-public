@@ -6111,7 +6111,7 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="1016">
       <campoid>160</campoid>
       <metodo>onChange</metodo>
-      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','concluir_botform13')</valor>
+      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','salvar_botform13')</valor>
       <ativo>1</ativo>
       <id>1016</id>
     </row>
