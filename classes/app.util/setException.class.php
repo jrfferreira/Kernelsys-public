@@ -30,7 +30,7 @@ class setException extends Exception {
 			}
 		}
 		
-		$mensagemTratada = is_string ( $Exeption ) ? $Exeption : $this->trataMensagem ( $Exeption );
+		$mensagemTratada = $Exeption; //is_string ( $Exeption ) ? $Exeption : $this->trataMensagem ( $Exeption );
 		
 		// grava o log do erro em um arquivo txt
 		$retLog = $this->setLog ( $mensagemTratada );
