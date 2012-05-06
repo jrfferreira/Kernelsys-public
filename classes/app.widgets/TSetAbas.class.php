@@ -13,6 +13,9 @@ class TSetAbas extends TForm {
 
         parent::__construct($idForm);
         $this->ObAba = new TAbas($idForm, $tituloJanela, $dimensao);
+        if($autoSave){
+            $this->ObAba->setAutoSave($idForm);
+        }
     }
 
 

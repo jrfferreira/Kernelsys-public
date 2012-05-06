@@ -3172,6 +3172,27 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="243">
+      <id>243</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cpf_cnpj</campo>
+      <label>CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCPF</outcontrol>
+      <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="836">
       <id>836</id>
       <colunadb>titulo</colunadb>
@@ -5587,6 +5608,48 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="340">
+      <id>340</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cpfFornecedor</campo>
+      <label>CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCPF</outcontrol>
+      <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="317">
+      <id>317</id>
+      <colunadb>cnpj</colunadb>
+      <campo>cnpj</campo>
+      <label>CNPJ:</label>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>35</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCNPJ</outcontrol>
+      <incontrol>validaCnpj</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="344">
       <id>344</id>
       <colunadb>estadoCivil</colunadb>
@@ -6483,27 +6546,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="317">
-      <id>317</id>
-      <colunadb>cnpj</colunadb>
-      <campo>cnpj</campo>
-      <label>CNPJ:</label>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>35</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCNPJ</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>
@@ -13210,6 +13252,111 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="229">
+      <id>229</id>
+      <colunadb>cpf</colunadb>
+      <campo>cpf</campo>
+      <label>CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>30</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCPF</outcontrol>
+      <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="423">
+      <id>423</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cpf</campo>
+      <label>CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCPF</outcontrol>
+      <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="782">
+      <id>782</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cpf_cnpj</campo>
+      <label>CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>2</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCPF</outcontrol>
+      <incontrol>validaCpf</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="433">
+      <id>433</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cnpj</campo>
+      <label>CNPJ:</label>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCNPJ</outcontrol>
+      <incontrol>validaCnpj</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="348">
+      <id>348</id>
+      <colunadb>cpf_cnpj</colunadb>
+      <campo>cnpjFornecedor</campo>
+      <label>CNPJ:</label>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>1</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCNPJ</outcontrol>
+      <incontrol>validaCnpj</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="152">
       <id>152</id>
       <colunadb>intervaloParcelas</colunadb>
@@ -14257,69 +14404,6 @@
       <help></help>
       <ativo>1</ativo>
       <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="433">
-      <id>433</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cnpj</campo>
-      <label>CNPJ:</label>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCNPJ</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="423">
-      <id>423</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cpf</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCPF</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="348">
-      <id>348</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cnpjFornecedor</campo>
-      <label>CNPJ:</label>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCNPJ</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
@@ -16395,90 +16479,6 @@
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="229">
-      <id>229</id>
-      <colunadb>cpf</colunadb>
-      <campo>cpf</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>30</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCPF</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="243">
-      <id>243</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cpf_cnpj</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCPF</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="782">
-      <id>782</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cpf_cnpj</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>2</entidade>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCPF</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-    </row>
-    <row id="340">
-      <id>340</id>
-      <colunadb>cpf_cnpj</colunadb>
-      <campo>cpfFornecedor</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>1</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCPF</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
       <trigger>0</trigger>
       <help></help>
       <ativo>1</ativo>

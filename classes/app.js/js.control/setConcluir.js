@@ -3,13 +3,13 @@
 *action =  1 = ativo / 2 = inativo
 */
 function setConcluir(idForm, action){
-	var id = "#concluir_botform"+idForm;
-    if($(id).length > 0){
-        if(action == '1'){
-        	$(id).removeAttr('disabled');
-        }
-        else if(action == '2'){
-        	$(id).attr('disabled','disabled');
-        }
+
+    var bot = document.getElementById("concluir_botform"+idForm);
+
+    if(action == '1'){
+        bot.disabled = false;
+    }
+    else if(action == '2'){
+        bot.disabled = true;
     }
 }

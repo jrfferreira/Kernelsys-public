@@ -48,10 +48,6 @@ class TSetlista {
         //Objeto criteria
         $this->criteria = new TCriteria();
 
-        $limite = $this->obsession->getValue("comboLimite" . $idLista);
-        if(!empty($limite)){
-        	$this->limite = $limite;
-        }
         if(!$this->limite) {
             $this->setLimite($this->limitePadrao);
         }
@@ -316,13 +312,11 @@ class TSetlista {
      * param limite = número de linhas limite para a listagem
      */
     public function setLimite($lim = null) {
-    	if(!empty($lim)){
+    	if($lim){
         $this->limite = $lim;
     	}else{
         $this->limite = $this->limitePadrao;    		
     	}
-    	
-    	$this->loaded = false;
     }
 
 
@@ -337,7 +331,7 @@ class TSetlista {
         if($this->posicao == "") {
             $this->posicao = '0';
         }
-        if($this->limite && is_numeric($this->limite)){
+        if($this->limite){
             $limite = $this->limite.' OFFSET '.$this->posicao;
         }
         $this->limiteParam = $limite;
@@ -472,7 +466,7 @@ class TSetlista {
 
         $NavLista->add($this->bt['btPrint']);
         
-    	$this->onLimite();
+    
         if($this->comboLimite){
         	$LabelLimite = new TElement('span');
 	        $LabelLimite->add($this->comboLimite);
@@ -621,7 +615,6 @@ class TSetlista {
     					80=>80,
     					100=>100,
     					120=>120);
-    					//'all'=>'Todos');
     					
     	$ActionLimite = new TSetAction('prossExe');
         $ActionLimite->setMetodo('onChangeLimit');
@@ -631,7 +624,7 @@ class TSetlista {
         
         $this->comboLimite = new TCombo('comboLimite'.$this->idLista, false);
 	    $this->comboLimite->class = 'button icons ui-corner-all ui-state-default';
-        $this->comboLimite->setSize('80');
+        $this->comboLimite->setSize('60');
         $this->comboLimite->onchange = 'alocaDado(this); '.$ActionLimite->getAction()->serialize();
         $this->comboLimite->addItems($itens);
         $this->comboLimite->value = $this->limite;

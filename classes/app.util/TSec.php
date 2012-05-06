@@ -10,12 +10,6 @@ function __autoload($classe){
     $autoload = new autoload('../',$classe);
 }
 
-//Atribui controlador de erros personalizado
-if(!function_exists('errorHandler')){
-	include_once('../app.util/errorHandler.php');
-}
-set_error_handler("errorHandler" , E_ALL^E_NOTICE);
-
 /**
  * Recepta as ações enviadas por get ou post
  * instancia o objeto execs e executa o

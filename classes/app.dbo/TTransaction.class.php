@@ -31,32 +31,26 @@ final class TTransaction{
         	$db = explode('/',$database);
         	$db = array_pop($db);
         	$pathchave = 'conn@'.$db;
-        	
-        	$conex_sessao = $_REQUEST[$pathchave];
+        	/*$conex_sessao = $obsession->getValue($pathchave);*/
         	
         	
            // abre uma conexão e armazena
            // na propriedade estática $conn
-           if(PHP_VERSION >= 5.3){
-	           if(is_a($conex_sessao,'PDO') && $conex_sessao->inTransaction()){
-	           		self::$conn = $conex_sessao;
-	           }else{
-	           		$conexao = TConnection::open($database);
-	           		self::$conn = $conexao;
-	           		$_REQUEST[$pathchave] = $conexao;
-	           }
-	           
-                // inicia a transação
-                if(self::$conn && !self::$conn->inTransaction()){
-                	self::$conn->beginTransaction();
-                }
-                // desliga o log de SQL
-                self::$logger = NULL;
+        	//if (empty(self::$conn) or !self::$conn){
+           if($conex_sessao){
+           		self::$conn = $conex_sessao;
            }else{
            		$conexao = TConnection::open($database);
-	           	self::$conn = $conexao;
-                self::$conn->beginTransaction();
+           		self::$conn = $conexao;
            }
+           
+                // inicia a transação
+                //if(self::$conn and !self::$conn->InTransaction()){
+                	self::$conn->beginTransaction();
+                //}
+                // desliga o log de SQL
+                self::$logger = NULL;
+           
            //if (empty(self::$conn) or !self::$conn){
            //}
         }
@@ -79,7 +73,7 @@ final class TTransaction{
      *  Desfaz todas operações realizadas na transação
      */
     public static function rollback(){
-        if (is_a(self::$conn,'PDO')){
+        if (self::$conn){
 		
             // desfaz as operações realizadas
             // durante a transação
@@ -95,7 +89,7 @@ final class TTransaction{
       * futuras operações
      */
     public static function commit(){
-        if (is_a(self::$conn,'PDO')){
+        if (self::$conn){
             // aplica as operações realizadas
             // durante a transação
             self::$conn->commit();
@@ -107,7 +101,7 @@ final class TTransaction{
      *  Aplica todas operações realizadas e fecha a transação
      */
     public static function close(){
-        if (is_a(self::$conn,'PDO')){
+        if (self::$conn){
             // aplica as operações realizadas
             // durante a transação
             self::$conn->commit();
@@ -131,7 +125,7 @@ final class TTransaction{
     public static function log($message){
 	
         // verifica existe um logger
-        if (is_object(self::$logger)){
+        if (self::$logger){
 		
             self::$logger->write($message);
         }

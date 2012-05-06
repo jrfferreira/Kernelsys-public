@@ -117,6 +117,37 @@ class TSetControl {
         return $vetor;
     }
 
+//    /**
+//     * Converte para maiúsculas o primeiro caractere de cada palavra
+//     */
+//    public function setUcwords($valor) {
+//        try {
+//            if($valor) {
+//                $array = explode(" ", $valor);
+//
+//                foreach ($array as $ch=>$vl) {
+//                    $min = strtolower($vl);
+//                    if($min != "de" and $min != "da") {
+//                        $min = ucwords($min);
+//                    }
+//                    $str[$ch] = $min;
+//                }
+//                $valor = implode(" ", $str);
+//            }
+//        }catch (Exception $e) {
+//            new setException($e);
+//        }
+//        return $valor;
+//    }
+//
+//    /**
+//     * Converte para maiúsculas o primeiro caractere de cada palavra
+//     */
+//    public function setUcwordsMain($vetor) {
+//        $vetor['valor'] = $this->setUcwords($vetor['valor']);
+//        return $vetor;
+//    }
+
     /*
      * Aplica configuraç�o de encriptaç�o em senhas ou qualquer dado
      * que precise ser encriptado. (Fora de escopo do metodo main)
@@ -266,74 +297,39 @@ class TSetControl {
 	 * 
 	 * @param unknown_type $vetor
 	 */
-    public function validaCpfCnpjMain($vetor){
+    public function validaCnpjMain($vetor){
     	
         $obHeaderForm = new TSetHeader();
         $headerForm = $obHeaderForm->getHead($vetor['idForm']);
-        if(strtolower($headerForm['camposSession']['tipo']['valor']) == 'j'){
-	        $cnpj = $this->setTrueCnpj($vetor['valor']);
-	        if($cnpj){
-	            $dbo = new TDbo($vetor['entidade']);
-	            $crit = new TCriteria();
-	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
-	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
-	            $filter = new TFilter('codigo','=',$headerForm['codigo']);
-	            $filter->tipoFiltro = 6;
-	            $crit->add($filter,'AND');
-	
-	            $ret = $dbo->select($vetor['campo'],$crit);
-	            $duplic = false;
-	            while($n = $ret->fetchObject()){
-	                $duplic = true;
-	            }
-	            if($duplic){
-	                $vetor['codigoRetorno'] = 'erro#4';
-	                $vetor['msg'] = "O CNPJ passado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
-	                $vetor['valor'] = false;
-	                return $vetor;
-	            }else{
-	                $vetor['valor'] = $cnpj;
-	                return $vetor;
-	            }
-	        }else{
-	            $vetor['codigoRetorno'] = 'erro#4';
-	            $vetor['msg'] = "O CNPJ passado não é válido ( ".$vetor['valor'].").<br>";
-	            $vetor['valor'] = false;
-	            return $vetor;
-	        }
-	        
-	        return $vetor;
+        $cnpj = $this->setTrueCnpj($vetor['valor']);
+        if($cnpj){
+            $dbo = new TDbo($vetor['entidade']);
+            $crit = new TCriteria();
+            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
+            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
+            $filter = new TFilter('codigo','=',$headerForm['codigo']);
+            $filter->tipoFiltro = 6;
+            $crit->add($filter,'AND');
+
+            $ret = $dbo->select($vetor['campo'],$crit);
+            $duplic = false;
+            while($n = $ret->fetchObject()){
+                $duplic = true;
+            }
+            if($duplic){
+                $vetor['codigoRetorno'] = 'erro#4';
+                $vetor['msg'] = "O CNPJ passado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
+                $vetor['valor'] = false;
+                return $vetor;
+            }else{
+                $vetor['valor'] = $cnpj;
+                return $vetor;
+            }
         }else{
-        	$cpf = $this->setTrueCpf($vetor['valor']);
-        	if($cpf){
-        		$dbo = new TDbo($vetor['entidade']);
-        		$crit = new TCriteria();
-        		$crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
-        		$crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
-        		$filter = new TFilter('codigo','!=',$headerForm['codigo']);
-        		$filter->tipoFiltro = 6;
-        		$crit->add($filter,'AND');
-        	
-        		$ret = $dbo->select($vetor['campo'],$crit);
-        		$duplic = false;
-        		while($n = $ret->fetchObject()){
-        			$duplic = true;
-        		}
-        		if($duplic){
-        			$vetor['codigoRetorno'] = 'erro#4';
-        			$vetor['msg'] = "O CPF informado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
-        			$vetor['valor'] = false;
-        			return $vetor;
-        		}else{
-        			$vetor['valor'] = $cpf;
-        			return $vetor;
-        		}
-        	}else{
-        		$vetor['codigoRetorno'] = 'erro#4';
-        		$vetor['msg'] = "O CPF informado não é válido ( ".$vetor['valor'].").<br>";
-        		$vetor['valor'] = false;
-        		return $vetor;
-        	}
+            $vetor['codigoRetorno'] = 'erro#4';
+            $vetor['msg'] = "O CNPJ passado não � válido ( ".$vetor['valor'].").<br>";
+            $vetor['valor'] = false;
+            return $vetor;
         }
     }
     
@@ -357,12 +353,51 @@ class TSetControl {
             if ($cnpj[++$t] != ($d = ((10 * $d) % 11) % 10)) {
                 return false;
             }else{
-                return $cnpj;
+                return $cpf;
             }
         }
         }
     }
     
+	/**
+	 * 
+	 * @param unknown_type $vetor
+	 */
+    public function validaCpfMain($vetor){
+        $obHeaderForm = new TSetHeader();
+        $headerForm = $obHeaderForm->getHead($vetor['idForm']);
+        $cpf = $this->setTrueCpf($vetor['valor']);
+        if($cpf){
+            $dbo = new TDbo($vetor['entidade']);
+            $crit = new TCriteria();
+            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
+            $crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
+            $filter = new TFilter('codigo','!=',$headerForm['codigo']);
+            $filter->tipoFiltro = 6;
+            $crit->add($filter,'AND');
+
+            $ret = $dbo->select($vetor['campo'],$crit);
+            $duplic = false;
+            while($n = $ret->fetchObject()){
+                $duplic = true;
+            }
+            if($duplic){
+                $vetor['codigoRetorno'] = 'erro#4';
+                $vetor['msg'] = "O CPF informado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
+                $vetor['valor'] = false;
+                return $vetor;
+            }else{
+                $vetor['valor'] = $cpf;
+                return $vetor;
+            }
+        }else{
+            $vetor['codigoRetorno'] = 'erro#4';
+            $vetor['msg'] = "O CPF informado não � válido ( ".$vetor['valor'].").<br>";
+            $vetor['valor'] = false;
+            return $vetor;
+        }
+    }
+
 
 	/**
 	 * 

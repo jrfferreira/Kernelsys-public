@@ -14,6 +14,9 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
           
       //executa se o alvo de retorno for verdadeiro
         if(alvo != ''){
+        	if(typeof(callback) == 'function'){
+        		jQuery.data(jQuery('#'+alvo),'callbackFunction',callback);
+     	    }
           retorno = $.ajax({
                type: tipoReq,
                url: setUrl,
@@ -26,39 +29,25 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
                     $('#loading-status').removeClass().addClass('ui-ajax-loading');
                },
                success: function(ret){
-             	    $(this).html(ret);       	    
+             	    $(this).html(ret);
+             	    callback = jQuery.data(jQuery('#'+alvo),'callbackFunction');
+	             	   if(typeof(callback) == 'function'){
+	             		 callback(ret);  
+	             	   }             	    
                },
                error: function(XMLHttpRequest, textStatus, erro){
             	   $('#loading-status').removeClass().addClass('ui-ajax-error');
             	   alertPetrus("Ouve uma falhar ao executar a ação.\n\nERRO\n["+erro+"]", 'Falha na requisição');                   
                }
           }).responseText;
-        }else if(asyncRequest){
-        	//Executa se o alvo de retorno for vazio rentornado o valor da solicitacao ajax mas ainda sim for Assíncrono
-
-        	$.ajax({
-	               type: tipoReq,
-	               url: setUrl,
-	               data:dados,
-	               cache: false,
-	               async: asyncRequest,
-	               dataType: 'html',
-	               beforeSend: function(){
-	                    $('#loading-status').removeClass().addClass('ui-ajax-loading');
-	               },
-	               success: function(ret){
-	            	   return retorno;
-	               },
-	               error: function(XMLHttpRequest, textStatus, erro){
-	                   $('#loading-status').removeClass().addClass('ui-ajax-error');
-	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexão.\n\nERRO - ["+e.getMessage+"]");
-	               }
-        	}).then(function(ajaxArgs){
-        		callback(ajaxArgs);
-        	});
-        }else{
-        	//Executa se o alvo de retorno for vazio e não for do tipo Assíncrono
-
+        }else{//Executa se o alvo de retorno for vasio rentornado o valor da solicitacao ajax
+        	if(typeof(callback) == 'function'){
+     	    	callbackFunction = callback;
+     	    }else{
+     	    	callbackFunction = function(ret){
+					            	   return ret;
+					               };
+     	    }
         	retorno = $.ajax({
 	               type: tipoReq,
 	               url: setUrl,
@@ -70,11 +59,12 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
 	                    $('#loading-status').removeClass().addClass('ui-ajax-loading');
 	               },
 	               success: function(ret){
+	            	   var retorno = callbackFunction(ret);
 	            	   return retorno;
 	               },
 	               error: function(XMLHttpRequest, textStatus, erro){
 	                   $('#loading-status').removeClass().addClass('ui-ajax-error');
-	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexão.\n\nERRO - ["+e.getMessage+"]");
+	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexÃ£o.\n\nERRO - ["+e.getMessage+"]");
 	               }
         	}).responseText;
         }

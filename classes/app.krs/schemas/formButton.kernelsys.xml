@@ -23,16 +23,5 @@
       <ordem>2 </ordem>
       <ativo>0</ativo>
     </row>
-    <row id="4">
-      <id>4</id>
-      <form>8</form>
-      <botao>concluir_inscricao</botao>
-      <labelbotao>Concluir</labelbotao>
-      <confirmacao></confirmacao>
-      <actionjs>onClose</actionjs>
-      <metodo>onClose</metodo>
-      <ordem>2 </ordem>
-      <ativo>1</ativo>
-    </row>
   </formButton>
 </kernelsys>

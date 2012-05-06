@@ -16,16 +16,7 @@ final class TSqlInsert extends TSqlInstruction{
     public function setRowData($column, $value){
         $column = strtolower($column);
         // monta um array indexado pelo nome da coluna
-        
-        if(empty($value)){
-            // caso seja um número 	 
-            $this->columnValues[$column] = 'null'; 	 
-	    }
-	 	else if(is_numeric($value)){
-            // caso seja um número 	 
-            $this->columnValues[$column] = $value; 	 
-	    }
-	 	else if (is_string($value)){
+        if (is_string($value)){
             // adiciona \ em aspas
             $value = addslashes($value);
             

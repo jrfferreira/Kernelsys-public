@@ -34,7 +34,7 @@ class TSession {
      */
     public function setValue($var, $value, $nivel = NULL) {
 
-		$value = serialize($value);
+	$value = serialize($value);
 	
         if($nivel) {
             $_SESSION[$nivel][$var] = $value;

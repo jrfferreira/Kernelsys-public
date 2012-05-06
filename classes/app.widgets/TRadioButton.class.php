@@ -27,7 +27,8 @@ class TRadioButton extends TField{
         // atribui as propriedades da TAG
         $this->tag->name  = $this->name;
         $this->tag->value = $this->value;
-        $this->tag->type  = 'radio';        	
+        $this->tag->type  = 'radio';
+        
         // se o campo não � edit�vel
         if (!parent::getEditable()){
 		

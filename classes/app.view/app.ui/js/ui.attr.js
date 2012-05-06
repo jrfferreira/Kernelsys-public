@@ -181,7 +181,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     // *********************************************************************
 
 
-    $('body').find(".ui_calendario:enabled:not(.formated)").addClass('formated').datePicker( {
+    $('body').find(".ui_calendario:enabled").datePicker( {
         startDate : '01/01/1900',
         displayedMonth	: true,
         displayedYear	: true

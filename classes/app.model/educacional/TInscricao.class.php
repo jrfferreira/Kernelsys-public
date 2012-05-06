@@ -186,7 +186,7 @@ class TInscricao{
     public function setConfirmar($codigoinscricao){
 
         try{
-        	
+
             if(!$codigoinscricao){
                 throw new Exception(TMensagem::ERRO_CODIGO_INSCRICAO);
             }

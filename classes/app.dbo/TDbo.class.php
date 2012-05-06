@@ -21,7 +21,7 @@ class TDbo {
 	        }else {
 	            $this->autoClose = false;
 	        }
-			
+	
 	        //inicia objeto sesseion
 	        $this->obsession = new TSession();
 	
