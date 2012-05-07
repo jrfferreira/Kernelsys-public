@@ -380,8 +380,13 @@ class TForms{
                     $listaCamposSession = $headerForm['camposSession'];
                     if($listaCamposSession and is_array($listaCamposSession)){
                         foreach($listaCamposSession as $campo=>$infoCampo){
-                             $infoCampo['valor']  = $this->dados[$campo];
-                             $infoCampo['status'] = 1;
+                        //Sincroniza dados do banco com os da sessão 
+ 	 if($infoCampo['status'] != 1){
+ 	 $infoCampo['valor']  = $this->dados[$campo];
+ 	 $infoCampo['status'] = 1;
+ 	 }else{
+ 	 $this->dados[$campo] = $infoCampo['valor'];
+ 	  }
                              $listaCamposSession[$campo] = $infoCampo;
                         }
                         $obHeader->addHeader($this->idForm, 'camposSession', $listaCamposSession);

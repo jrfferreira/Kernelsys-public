@@ -48,6 +48,10 @@ class TSetlista {
         //Objeto criteria
         $this->criteria = new TCriteria();
 
+        $limite = $this->obsession->getValue("comboLimite" . $idLista);
+        if(!empty($limite)){
+	        $this->limite = $limite;
+        }
         if(!$this->limite) {
             $this->setLimite($this->limitePadrao);
         }
@@ -312,11 +316,13 @@ class TSetlista {
      * param limite = número de linhas limite para a listagem
      */
     public function setLimite($lim = null) {
-    	if($lim){
-        $this->limite = $lim;
+    	if(!empty($lim)){
+        	$this->limite = $lim;
     	}else{
-        $this->limite = $this->limitePadrao;    		
+        	$this->limite = $this->limitePadrao;    		
     	}
+    	
+    	$this->loaded = false;
     }
 
 
@@ -331,7 +337,7 @@ class TSetlista {
         if($this->posicao == "") {
             $this->posicao = '0';
         }
-        if($this->limite){
+        if($this->limite && is_numeric($this->limite)){
             $limite = $this->limite.' OFFSET '.$this->posicao;
         }
         $this->limiteParam = $limite;
@@ -466,7 +472,7 @@ class TSetlista {
 
         $NavLista->add($this->bt['btPrint']);
         
-    
+        $this->onLimite();
         if($this->comboLimite){
         	$LabelLimite = new TElement('span');
 	        $LabelLimite->add($this->comboLimite);

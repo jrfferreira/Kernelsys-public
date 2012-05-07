@@ -36,7 +36,7 @@ final class TTransaction{
         	
            // abre uma conexão e armazena
            // na propriedade estática $conn
-        	//if (empty(self::$conn) or !self::$conn){
+        	//if (!is_a(self::$conn,'PDO')){
            if($conex_sessao){
            		self::$conn = $conex_sessao;
            }else{
@@ -45,14 +45,12 @@ final class TTransaction{
            }
            
                 // inicia a transação
-                //if(self::$conn and !self::$conn->InTransaction()){
+                //if(self::$conn && !self::$conn->InTransaction()){
                 	self::$conn->beginTransaction();
                 //}
                 // desliga o log de SQL
                 self::$logger = NULL;
            
-           //if (empty(self::$conn) or !self::$conn){
-           //}
         }
         catch (Exception $e){
             self::close();
@@ -73,7 +71,7 @@ final class TTransaction{
      *  Desfaz todas operações realizadas na transação
      */
     public static function rollback(){
-        if (self::$conn){
+        if (is_a(self::$conn,'PDO')){
 		
             // desfaz as operações realizadas
             // durante a transação
@@ -89,7 +87,7 @@ final class TTransaction{
       * futuras operações
      */
     public static function commit(){
-        if (self::$conn){
+        if (is_a(self::$conn,'PDO')){
             // aplica as operações realizadas
             // durante a transação
             self::$conn->commit();
@@ -101,7 +99,7 @@ final class TTransaction{
      *  Aplica todas operações realizadas e fecha a transação
      */
     public static function close(){
-        if (self::$conn){
+        if (is_a(self::$conn,'PDO')){
             // aplica as operações realizadas
             // durante a transação
             self::$conn->commit();
@@ -125,7 +123,7 @@ final class TTransaction{
     public static function log($message){
 	
         // verifica existe um logger
-        if (self::$logger){
+        if (is_object(self::$logger)){
 		
             self::$logger->write($message);
         }

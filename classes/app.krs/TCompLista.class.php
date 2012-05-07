@@ -160,7 +160,7 @@ class TCompLista {
                 // | pos 3 = classe ou valor fixo | pos 4 = metodo se o pos 3 for uma classe
                 $vetorFiltro = explode('/', $pdFiltro);
 
-                if (method_exists($vetorFiltro[3], $vetorFiltro[4])) {
+                if (class_exists($vetorFiltro[3]) && method_exists($vetorFiltro[3], $vetorFiltro[4])) {
                     $objetoDinamicofiltro = new $vetorFiltro[3];
                     //verifica se vai ser passando argumento
                     if($vetorFiltro[5]){

@@ -5,6 +5,12 @@
  * a funcao autora da acao
  */
 
+//Atribui controlador de erros personalizado
+if(!function_exists('errorHandler')){
+	include_once('../app.util/errorHandler.php');
+}
+set_error_handler("errorHandler" , E_ALL^E_NOTICE);
+
 function __autoload($classe){
     include_once('autoload.class.php');
     $autoload = new autoload('../',$classe);

@@ -6,6 +6,12 @@ Data: 06/03/2010
 Programador: Wagner Borba
 *******************************************************************************/
 
+//Atribui controlador de erros personalizado
+if(!function_exists('errorHandler')){
+  include_once('../app.util/errorHandler.php');
+}
+set_error_handler("errorHandler" , E_ALL^E_NOTICE);
+	
 /*
 * run()
 * Executa determinado método de acordo com
@@ -536,9 +542,10 @@ class TExecs {
     public function onCancel() {
 
         // obtém o objeto pelo ID
-        $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
-        $ObDados->delete();
-
+    	if($this->headerDados['status'] == 'new'){
+	        $ObDados = new TDados($this->idForm, $this->param['key'], $this->headerDados['tipo'], $this->entidadeForm);
+	        $ObDados->delete();
+    	}
         $this->showlist();
         $this->obHeader->clearHeader($this->idForm);
     }
@@ -590,9 +597,7 @@ class TExecs {
         $this->getObLista();
         
        	$limite = $this->obsession->getValue("comboLimite" . $this->idLista);
-
-       	$this->obsession->__dump(); exit();
-       	
+      	
         $this->obLista->setLimite($limite);
         $this->obLista->clearSelecao();
         $this->showlist();

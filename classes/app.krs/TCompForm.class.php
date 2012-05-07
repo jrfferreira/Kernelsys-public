@@ -311,11 +311,7 @@ class TCompForm {
                         }
                     }
 
-                // Injeta campo no conteinar TSetFields
-                $obCampo = $setCampo->getCampo();
-                $this->blocoCampos->addCampo($dadosCampo->label, $obCampo, $dadosCampo->ativapesquisa);
-
-                //borbulha mensagem [help] para o metodo responsavel
+               //borbulha mensagem [help] para o metodo responsavel
                 if($dadosCampo->help) {
                     $this->blocoCampos->setHelp($key, $dadosCampo->help);
                 }
@@ -327,7 +323,10 @@ class TCompForm {
 
                 //==================================================================
                 //compila valor padrão
-                if($dadosCampo->valorpadrao != "-"){
+                if($dadosCampo->valorpadrao != "-" && $this->headerForm['status'] == 'new'){
+                	$obHeader = new TSetHeader();
+				 	$headerForm = $obHeader->getHead($this->idForm);
+				 	$listaCamposSession = $headerForm['camposSession'];
 
                     $vDefalt = $dadosCampo->valorpadrao;
                     if(strpos($dadosCampo->valorpadrao, "function/") !== false) {
@@ -340,17 +339,24 @@ class TCompForm {
                     if(!empty($dadosCampo->entidade)){
 	                    $dboVPad = new TDbo($dadosCampo->entidade);
 	                    $cretiriaVpad = new TCriteria();
-	                    $cretiriaVpad->add(new TFilter('codigo','=',$dadosCampo->codigoregistro));
-	                    $cretiriaVpad->add(new TFilter($dadosCampo->colunadb,'is','null'));
+	                    $cretiriaVpad->add(new TFilter($this->headerForm['entidade'] != $dadosCampo->entidade ? $this->headerForm['colunafilho'] : 'codigo' ,'=',$dadosCampo->codigoregistro));
 	                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
                     }
 
-                    //converte datas para o padrão internacional
+                    //converte datas para o padrão nacional
                     $obMascara = new TSetMascaras();
                     $vDefalt = $obMascara->setData($vDefalt);
+                    
+                    //Atualiza o valor do campo na sessão
+                    $listaCamposSession[$dadosCampo->colunadb]['valor'] = $vDefalt;
+                    $listaCamposSession[$dadosCampo->colunadb]['status'] = 1;
+                    $obHeader->addHeader($this->idForm, 'camposSession', $listaCamposSession);
+                    $setCampo->setValue($vDefalt);
                 }
                 //==================================================================
-
+                // Injeta campo no conteinar TSetFields
+                $obCampo = $setCampo->getCampo();
+                $this->blocoCampos->addCampo($dadosCampo->label, $obCampo, $dadosCampo->ativapesquisa);
             }//foreach principal
         }
 
