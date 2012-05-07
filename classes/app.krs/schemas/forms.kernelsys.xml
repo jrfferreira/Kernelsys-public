@@ -1366,21 +1366,6 @@
       <formoutcontrol>TTurma/setProduto</formoutcontrol>
       <autosave>0</autosave>
     </row>
-    <row id="8">
-      <id>8</id>
-      <form>fichaInscricao</form>
-      <nomeform>Ficha de inscrição</nomeform>
-      <entidade>16</entidade>
-      <ativo>1</ativo>
-      <formpai></formpai>
-      <idlista>138</idlista>
-      <formainclude>one</formainclude>
-      <dimensao></dimensao>
-      <botconcluir>2</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-    </row>
     <row id="413">
       <id>413</id>
       <form>blocoDiscSemelhantes</form>
@@ -2932,12 +2917,27 @@
       <nomeform>Disciplinas do curso</nomeform>
       <entidade>10</entidade>
       <ativo>1</ativo>
-      <formpai>4</formpai>
+      <formpai>475</formpai>
       <idlista>477</idlista>
       <formainclude>multiple</formainclude>
       <dimensao>900;500</dimensao>
       <botconcluir>1</botconcluir>
       <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="8">
+      <id>8</id>
+      <form>fichaInscricao</form>
+      <nomeform>Ficha de inscrição</nomeform>
+      <entidade>16</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista>138</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>

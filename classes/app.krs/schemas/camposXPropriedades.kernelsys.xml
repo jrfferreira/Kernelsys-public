@@ -6108,13 +6108,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>1024</id>
     </row>
-    <row id="1016">
-      <campoid>160</campoid>
-      <metodo>onChange</metodo>
-      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','concluir_botform13')</valor>
-      <ativo>1</ativo>
-      <id>1016</id>
-    </row>
     <row id="1018">
       <campoid>176</campoid>
       <metodo>onChange</metodo>
@@ -6128,6 +6121,13 @@ Zootecnia=&gt;Zootecnia; </valor>
       <valor>calculaMovimentacao()</valor>
       <ativo>1</ativo>
       <id>1025</id>
+    </row>
+    <row id="1016">
+      <campoid>160</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','salvar_botform13')</valor>
+      <ativo>1</ativo>
+      <id>1016</id>
     </row>
     <row id="1027">
       <campoid>873</campoid>

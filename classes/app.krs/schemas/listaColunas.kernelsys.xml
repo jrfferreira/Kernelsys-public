@@ -460,23 +460,6 @@
       <ordem>9</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="96">
-      <id>96</id>
-      <listaFormId>147</listaFormId>
-      <coluna>nomePessoa</coluna>
-      <label>Nome</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>250</largura>
-      <colfunction></colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>1</ordem>
-      <ativo>1</ativo>
-    </row>
     <row id="98">
       <id>98</id>
       <listaFormId>147</listaFormId>
@@ -629,23 +612,6 @@
       <link>0</link>
       <ordem>2</ordem>
       <ativo>1</ativo>
-    </row>
-    <row id="157">
-      <id>157</id>
-      <listaFormId>160</listaFormId>
-      <coluna>codigo</coluna>
-      <label>Codigo</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>100</largura>
-      <colfunction></colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <ativo>0</ativo>
     </row>
     <row id="158">
       <id>158</id>
@@ -1394,6 +1360,23 @@
       <link>0</link>
       <ordem>0</ordem>
       <ativo>1</ativo>
+    </row>
+    <row id="157">
+      <id>157</id>
+      <listaFormId>160</listaFormId>
+      <coluna>codigo</coluna>
+      <label>Codigo</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>100</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <ativo>0</ativo>
     </row>
     <row id="178">
       <id>178</id>
@@ -3512,23 +3495,6 @@
       <alinhadados>left</alinhadados>
       <largura>200</largura>
       <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <ativo>1</ativo>
-    </row>
-    <row id="367">
-      <id>367</id>
-      <listaFormId>203</listaFormId>
-      <coluna>contaDestino</coluna>
-      <label>Conta de Destino</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>200</largura>
-      <colfunction></colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
       <entidadePai>0</entidadePai>
@@ -13175,6 +13141,40 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>2</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="96">
+      <id>96</id>
+      <listaFormId>147</listaFormId>
+      <coluna>nomePessoa</coluna>
+      <label>Nome</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>250</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="367">
+      <id>367</id>
+      <listaFormId>203</listaFormId>
+      <coluna>contaDestino</coluna>
+      <label>Conta de Destino</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>200</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
   </listaColunas>
