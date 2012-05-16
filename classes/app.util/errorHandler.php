@@ -24,7 +24,7 @@ function errorHandler($errNum, $errString, $errFile, $errLine) {
 			break;
 		
 		default :
-			$resposta = "Aconteceu um erro desconhecido: [$errNum] $errString<br />\n";
+			$resposta = "Aconteceu um erro desconhecido na linha $errLine do arquivo $errFile: [$errNum] $errString<br />\n";
 			break;
 	}
 	

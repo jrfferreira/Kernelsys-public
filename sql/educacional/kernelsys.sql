@@ -2,6 +2,10 @@
 -- PostgreSQL database dump
 --
 
+-- Dumped from database version 9.1.2
+-- Dumped by pg_dump version 9.1.2
+-- Started on 2012-05-16 00:03:29
+
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
@@ -9,6 +13,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
+-- TOC entry 201 (class 3079 OID 11639)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -16,6 +21,8 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
+-- TOC entry 2143 (class 0 OID 0)
+-- Dependencies: 201
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
 --
 
@@ -27,6 +34,8 @@ SET search_path = public, pg_catalog;
 SET default_with_oids = false;
 
 --
+-- TOC entry 161 (class 1259 OID 19849)
+-- Dependencies: 1971 1972 1973 1974 5
 -- Name: abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -42,6 +51,8 @@ CREATE TABLE abas (
 
 
 --
+-- TOC entry 162 (class 1259 OID 19856)
+-- Dependencies: 161 5
 -- Name: abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -54,6 +65,8 @@ CREATE SEQUENCE abas_id_seq
 
 
 --
+-- TOC entry 2144 (class 0 OID 0)
+-- Dependencies: 162
 -- Name: abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -61,6 +74,8 @@ ALTER SEQUENCE abas_id_seq OWNED BY abas.id;
 
 
 --
+-- TOC entry 2145 (class 0 OID 0)
+-- Dependencies: 162
 -- Name: abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -68,6 +83,8 @@ SELECT pg_catalog.setval('abas_id_seq', 376, true);
 
 
 --
+-- TOC entry 163 (class 1259 OID 19858)
+-- Dependencies: 1976 1977 1978 1979 5
 -- Name: blocos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -86,6 +103,8 @@ CREATE TABLE blocos (
 
 
 --
+-- TOC entry 2146 (class 0 OID 0)
+-- Dependencies: 163
 -- Name: COLUMN blocos.obapendice; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -96,6 +115,8 @@ ps. o metodo chamado como apêndice deve retornar sempre um objeto TElement vál
 
 
 --
+-- TOC entry 164 (class 1259 OID 19868)
+-- Dependencies: 5 163
 -- Name: blocos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -108,6 +129,8 @@ CREATE SEQUENCE blocos_id_seq
 
 
 --
+-- TOC entry 2147 (class 0 OID 0)
+-- Dependencies: 164
 -- Name: blocos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -115,6 +138,8 @@ ALTER SEQUENCE blocos_id_seq OWNED BY blocos.id;
 
 
 --
+-- TOC entry 2148 (class 0 OID 0)
+-- Dependencies: 164
 -- Name: blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -122,6 +147,8 @@ SELECT pg_catalog.setval('blocos_id_seq', 295, true);
 
 
 --
+-- TOC entry 165 (class 1259 OID 19870)
+-- Dependencies: 1981 5
 -- Name: blocos_x_abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -134,6 +161,8 @@ CREATE TABLE blocos_x_abas (
 
 
 --
+-- TOC entry 166 (class 1259 OID 19874)
+-- Dependencies: 5 165
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -146,6 +175,8 @@ CREATE SEQUENCE blocos_x_abas_id_seq
 
 
 --
+-- TOC entry 2149 (class 0 OID 0)
+-- Dependencies: 166
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -153,6 +184,8 @@ ALTER SEQUENCE blocos_x_abas_id_seq OWNED BY blocos_x_abas.id;
 
 
 --
+-- TOC entry 2150 (class 0 OID 0)
+-- Dependencies: 166
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -160,6 +193,8 @@ SELECT pg_catalog.setval('blocos_x_abas_id_seq', 305, true);
 
 
 --
+-- TOC entry 167 (class 1259 OID 19876)
+-- Dependencies: 1983 1984 1985 1986 1987 1988 1989 1990 5
 -- Name: campos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -187,6 +222,8 @@ CREATE TABLE campos (
 
 
 --
+-- TOC entry 2151 (class 0 OID 0)
+-- Dependencies: 167
 -- Name: COLUMN campos.trigger; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -194,6 +231,8 @@ COMMENT ON COLUMN campos.trigger IS 'função a ser executada quando o campo for
 
 
 --
+-- TOC entry 2152 (class 0 OID 0)
+-- Dependencies: 167
 -- Name: COLUMN campos.autosave; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -203,6 +242,8 @@ COMMENT ON COLUMN campos.autosave IS 'Esepecifica se o campo vai ter a capacidad
 
 
 --
+-- TOC entry 168 (class 1259 OID 19890)
+-- Dependencies: 5 167
 -- Name: campos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -215,6 +256,8 @@ CREATE SEQUENCE campos_id_seq
 
 
 --
+-- TOC entry 2153 (class 0 OID 0)
+-- Dependencies: 168
 -- Name: campos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -222,6 +265,8 @@ ALTER SEQUENCE campos_id_seq OWNED BY campos.id;
 
 
 --
+-- TOC entry 2154 (class 0 OID 0)
+-- Dependencies: 168
 -- Name: campos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -229,6 +274,8 @@ SELECT pg_catalog.setval('campos_id_seq', 976, true);
 
 
 --
+-- TOC entry 169 (class 1259 OID 19892)
+-- Dependencies: 1992 5
 -- Name: campos_x_blocos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -243,6 +290,8 @@ CREATE TABLE campos_x_blocos (
 
 
 --
+-- TOC entry 170 (class 1259 OID 19896)
+-- Dependencies: 5 169
 -- Name: campos_x_blocos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -255,6 +304,8 @@ CREATE SEQUENCE campos_x_blocos_id_seq
 
 
 --
+-- TOC entry 2155 (class 0 OID 0)
+-- Dependencies: 170
 -- Name: campos_x_blocos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -262,6 +313,8 @@ ALTER SEQUENCE campos_x_blocos_id_seq OWNED BY campos_x_blocos.id;
 
 
 --
+-- TOC entry 2156 (class 0 OID 0)
+-- Dependencies: 170
 -- Name: campos_x_blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -269,6 +322,8 @@ SELECT pg_catalog.setval('campos_x_blocos_id_seq', 966, true);
 
 
 --
+-- TOC entry 171 (class 1259 OID 19898)
+-- Dependencies: 5
 -- Name: campos_x_propriedades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -281,13 +336,17 @@ CREATE SEQUENCE campos_x_propriedades_id_seq
 
 
 --
+-- TOC entry 2157 (class 0 OID 0)
+-- Dependencies: 171
 -- Name: campos_x_propriedades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('campos_x_propriedades_id_seq', 1144, true);
+SELECT pg_catalog.setval('campos_x_propriedades_id_seq', 1146, true);
 
 
 --
+-- TOC entry 172 (class 1259 OID 19900)
+-- Dependencies: 1994 1995 5
 -- Name: campos_x_propriedades; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -301,6 +360,8 @@ CREATE TABLE campos_x_propriedades (
 
 
 --
+-- TOC entry 2158 (class 0 OID 0)
+-- Dependencies: 172
 -- Name: COLUMN campos_x_propriedades.valor; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -319,6 +380,8 @@ chaveAlocaDados; ( Informa a chave de onde está armazenado no AlocaDados o valo
 
 
 --
+-- TOC entry 173 (class 1259 OID 19908)
+-- Dependencies: 1996 1997 5
 -- Name: form_button; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -336,6 +399,8 @@ CREATE TABLE form_button (
 
 
 --
+-- TOC entry 174 (class 1259 OID 19916)
+-- Dependencies: 5 173
 -- Name: form_button_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -348,6 +413,8 @@ CREATE SEQUENCE form_button_id_seq
 
 
 --
+-- TOC entry 2159 (class 0 OID 0)
+-- Dependencies: 174
 -- Name: form_button_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -355,13 +422,17 @@ ALTER SEQUENCE form_button_id_seq OWNED BY form_button.id;
 
 
 --
+-- TOC entry 2160 (class 0 OID 0)
+-- Dependencies: 174
 -- Name: form_button_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_button_id_seq', 3, true);
+SELECT pg_catalog.setval('form_button_id_seq', 4, true);
 
 
 --
+-- TOC entry 175 (class 1259 OID 19918)
+-- Dependencies: 1999 5
 -- Name: form_validacao; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -372,6 +443,8 @@ CREATE TABLE form_validacao (
 
 
 --
+-- TOC entry 176 (class 1259 OID 19922)
+-- Dependencies: 5 175
 -- Name: form_validacao_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -384,6 +457,8 @@ CREATE SEQUENCE form_validacao_id_seq
 
 
 --
+-- TOC entry 2161 (class 0 OID 0)
+-- Dependencies: 176
 -- Name: form_validacao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -391,6 +466,8 @@ ALTER SEQUENCE form_validacao_id_seq OWNED BY form_validacao.id;
 
 
 --
+-- TOC entry 2162 (class 0 OID 0)
+-- Dependencies: 176
 -- Name: form_validacao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -398,6 +475,8 @@ SELECT pg_catalog.setval('form_validacao_id_seq', 1, true);
 
 
 --
+-- TOC entry 177 (class 1259 OID 19924)
+-- Dependencies: 2001 2002 5
 -- Name: form_x_abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -411,6 +490,8 @@ CREATE TABLE form_x_abas (
 
 
 --
+-- TOC entry 178 (class 1259 OID 19929)
+-- Dependencies: 5 177
 -- Name: form_x_abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -423,6 +504,8 @@ CREATE SEQUENCE form_x_abas_id_seq
 
 
 --
+-- TOC entry 2163 (class 0 OID 0)
+-- Dependencies: 178
 -- Name: form_x_abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -430,6 +513,8 @@ ALTER SEQUENCE form_x_abas_id_seq OWNED BY form_x_abas.id;
 
 
 --
+-- TOC entry 2164 (class 0 OID 0)
+-- Dependencies: 178
 -- Name: form_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -437,6 +522,8 @@ SELECT pg_catalog.setval('form_x_abas_id_seq', 278, true);
 
 
 --
+-- TOC entry 179 (class 1259 OID 19931)
+-- Dependencies: 2004 5
 -- Name: form_x_tabelas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -449,6 +536,8 @@ CREATE TABLE form_x_tabelas (
 
 
 --
+-- TOC entry 180 (class 1259 OID 19935)
+-- Dependencies: 5 179
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -461,6 +550,8 @@ CREATE SEQUENCE form_x_tabelas_id_seq
 
 
 --
+-- TOC entry 2165 (class 0 OID 0)
+-- Dependencies: 180
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -468,6 +559,8 @@ ALTER SEQUENCE form_x_tabelas_id_seq OWNED BY form_x_tabelas.id;
 
 
 --
+-- TOC entry 2166 (class 0 OID 0)
+-- Dependencies: 180
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -475,6 +568,8 @@ SELECT pg_catalog.setval('form_x_tabelas_id_seq', 209, true);
 
 
 --
+-- TOC entry 181 (class 1259 OID 19937)
+-- Dependencies: 2006 2007 2008 2009 2010 2011 5
 -- Name: forms; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -496,6 +591,8 @@ CREATE TABLE forms (
 
 
 --
+-- TOC entry 2167 (class 0 OID 0)
+-- Dependencies: 181
 -- Name: COLUMN forms.dimensao; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -504,6 +601,8 @@ largura;altura';
 
 
 --
+-- TOC entry 2168 (class 0 OID 0)
+-- Dependencies: 181
 -- Name: COLUMN forms.botconcluir; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -514,6 +613,8 @@ COMMENT ON COLUMN forms.botconcluir IS 'Habilita ou desabilita o botão padrão 
 
 
 --
+-- TOC entry 2169 (class 0 OID 0)
+-- Dependencies: 181
 -- Name: COLUMN forms.botcancelar; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -524,6 +625,8 @@ COMMENT ON COLUMN forms.botcancelar IS 'Habilita ou desabilita o botão padrão 
 
 
 --
+-- TOC entry 182 (class 1259 OID 19946)
+-- Dependencies: 5 181
 -- Name: forms_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -536,6 +639,8 @@ CREATE SEQUENCE forms_id_seq
 
 
 --
+-- TOC entry 2170 (class 0 OID 0)
+-- Dependencies: 182
 -- Name: forms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -543,6 +648,8 @@ ALTER SEQUENCE forms_id_seq OWNED BY forms.id;
 
 
 --
+-- TOC entry 2171 (class 0 OID 0)
+-- Dependencies: 182
 -- Name: forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -550,6 +657,8 @@ SELECT pg_catalog.setval('forms_id_seq', 477, true);
 
 
 --
+-- TOC entry 183 (class 1259 OID 19948)
+-- Dependencies: 5
 -- Name: info_empresa; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -570,6 +679,8 @@ CREATE TABLE info_empresa (
 
 
 --
+-- TOC entry 184 (class 1259 OID 19954)
+-- Dependencies: 183 5
 -- Name: info_empresa_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -582,6 +693,8 @@ CREATE SEQUENCE info_empresa_id_seq
 
 
 --
+-- TOC entry 2172 (class 0 OID 0)
+-- Dependencies: 184
 -- Name: info_empresa_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -589,6 +702,8 @@ ALTER SEQUENCE info_empresa_id_seq OWNED BY info_empresa.id;
 
 
 --
+-- TOC entry 2173 (class 0 OID 0)
+-- Dependencies: 184
 -- Name: info_empresa_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -596,6 +711,8 @@ SELECT pg_catalog.setval('info_empresa_id_seq', 1, true);
 
 
 --
+-- TOC entry 185 (class 1259 OID 19956)
+-- Dependencies: 2014 2015 2016 2017 2018 2019 2020 2021 5
 -- Name: lista_actions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -617,6 +734,8 @@ CREATE TABLE lista_actions (
 
 
 --
+-- TOC entry 186 (class 1259 OID 19970)
+-- Dependencies: 185 5
 -- Name: lista_actions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -629,6 +748,8 @@ CREATE SEQUENCE lista_actions_id_seq
 
 
 --
+-- TOC entry 2174 (class 0 OID 0)
+-- Dependencies: 186
 -- Name: lista_actions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -636,6 +757,8 @@ ALTER SEQUENCE lista_actions_id_seq OWNED BY lista_actions.id;
 
 
 --
+-- TOC entry 2175 (class 0 OID 0)
+-- Dependencies: 186
 -- Name: lista_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -643,6 +766,8 @@ SELECT pg_catalog.setval('lista_actions_id_seq', 22, true);
 
 
 --
+-- TOC entry 187 (class 1259 OID 19972)
+-- Dependencies: 2023 2024 5
 -- Name: lista_bnav; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -659,6 +784,8 @@ CREATE TABLE lista_bnav (
 
 
 --
+-- TOC entry 188 (class 1259 OID 19980)
+-- Dependencies: 187 5
 -- Name: lista_bnav_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -671,6 +798,8 @@ CREATE SEQUENCE lista_bnav_id_seq
 
 
 --
+-- TOC entry 2176 (class 0 OID 0)
+-- Dependencies: 188
 -- Name: lista_bnav_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -678,6 +807,8 @@ ALTER SEQUENCE lista_bnav_id_seq OWNED BY lista_bnav.id;
 
 
 --
+-- TOC entry 2177 (class 0 OID 0)
+-- Dependencies: 188
 -- Name: lista_bnav_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -685,6 +816,8 @@ SELECT pg_catalog.setval('lista_bnav_id_seq', 4, true);
 
 
 --
+-- TOC entry 189 (class 1259 OID 19982)
+-- Dependencies: 2026 2027 2028 2029 2030 2031 2032 2033 2034 5
 -- Name: lista_colunas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -708,6 +841,8 @@ CREATE TABLE lista_colunas (
 
 
 --
+-- TOC entry 190 (class 1259 OID 19997)
+-- Dependencies: 5 189
 -- Name: lista_colunas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -720,6 +855,8 @@ CREATE SEQUENCE lista_colunas_id_seq
 
 
 --
+-- TOC entry 2178 (class 0 OID 0)
+-- Dependencies: 190
 -- Name: lista_colunas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -727,6 +864,8 @@ ALTER SEQUENCE lista_colunas_id_seq OWNED BY lista_colunas.id;
 
 
 --
+-- TOC entry 2179 (class 0 OID 0)
+-- Dependencies: 190
 -- Name: lista_colunas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -734,6 +873,8 @@ SELECT pg_catalog.setval('lista_colunas_id_seq', 938, true);
 
 
 --
+-- TOC entry 191 (class 1259 OID 19999)
+-- Dependencies: 2036 2037 2038 2039 2040 5
 -- Name: lista_fields; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -749,6 +890,8 @@ CREATE TABLE lista_fields (
 
 
 --
+-- TOC entry 192 (class 1259 OID 20007)
+-- Dependencies: 5 191
 -- Name: lista_fields_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -761,6 +904,8 @@ CREATE SEQUENCE lista_fields_id_seq
 
 
 --
+-- TOC entry 2180 (class 0 OID 0)
+-- Dependencies: 192
 -- Name: lista_fields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -768,6 +913,8 @@ ALTER SEQUENCE lista_fields_id_seq OWNED BY lista_fields.id;
 
 
 --
+-- TOC entry 2181 (class 0 OID 0)
+-- Dependencies: 192
 -- Name: lista_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -775,6 +922,8 @@ SELECT pg_catalog.setval('lista_fields_id_seq', 1, true);
 
 
 --
+-- TOC entry 193 (class 1259 OID 20009)
+-- Dependencies: 2042 2043 2044 2045 2046 2047 2048 2049 2050 2051 2052 2053 2054 2055 2056 5
 -- Name: lista_form; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -809,6 +958,8 @@ CREATE TABLE lista_form (
 
 
 --
+-- TOC entry 2182 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.pesquisa; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -818,6 +969,8 @@ campo do formulário=coluna entidade[>coluna label],campo do formulário=coluna 
 
 
 --
+-- TOC entry 2183 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.filtro; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -831,6 +984,8 @@ pos 5 = se o metodo da classe vai receber o idLista ou não
 
 
 --
+-- TOC entry 2184 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.formainclude; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -838,6 +993,8 @@ COMMENT ON COLUMN lista_form.formainclude IS 'define a forma de inclusão da lis
 
 
 --
+-- TOC entry 2185 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.trigger; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -847,6 +1004,8 @@ COMMENT ON COLUMN lista_form.trigger IS 'Ações [JavaScript] a serem executadas
 
 
 --
+-- TOC entry 2186 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.incontrol; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -856,6 +1015,8 @@ padrão de execução TSetControl';
 
 
 --
+-- TOC entry 2187 (class 0 OID 0)
+-- Dependencies: 193
 -- Name: COLUMN lista_form.ordem; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -864,6 +1025,8 @@ Ex: id/desc;datacad';
 
 
 --
+-- TOC entry 194 (class 1259 OID 20030)
+-- Dependencies: 193 5
 -- Name: lista_form_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -876,6 +1039,8 @@ CREATE SEQUENCE lista_form_id_seq
 
 
 --
+-- TOC entry 2188 (class 0 OID 0)
+-- Dependencies: 194
 -- Name: lista_form_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -883,6 +1048,8 @@ ALTER SEQUENCE lista_form_id_seq OWNED BY lista_form.id;
 
 
 --
+-- TOC entry 2189 (class 0 OID 0)
+-- Dependencies: 194
 -- Name: lista_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -890,6 +1057,8 @@ SELECT pg_catalog.setval('lista_form_id_seq', 335, true);
 
 
 --
+-- TOC entry 195 (class 1259 OID 20032)
+-- Dependencies: 5
 -- Name: menu_modulos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -902,6 +1071,8 @@ CREATE SEQUENCE menu_modulos_id_seq
 
 
 --
+-- TOC entry 2190 (class 0 OID 0)
+-- Dependencies: 195
 -- Name: menu_modulos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -909,6 +1080,8 @@ SELECT pg_catalog.setval('menu_modulos_id_seq', 128, true);
 
 
 --
+-- TOC entry 196 (class 1259 OID 20034)
+-- Dependencies: 2057 2058 2059 2060 2061 2062 5
 -- Name: menu_modulos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -927,6 +1100,8 @@ CREATE TABLE menu_modulos (
 
 
 --
+-- TOC entry 197 (class 1259 OID 20043)
+-- Dependencies: 2063 2064 5
 -- Name: modulos_principais; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -941,6 +1116,8 @@ CREATE TABLE modulos_principais (
 
 
 --
+-- TOC entry 198 (class 1259 OID 20048)
+-- Dependencies: 5 197
 -- Name: modulos_principais_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -953,6 +1130,8 @@ CREATE SEQUENCE modulos_principais_id_seq
 
 
 --
+-- TOC entry 2191 (class 0 OID 0)
+-- Dependencies: 198
 -- Name: modulos_principais_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -960,6 +1139,8 @@ ALTER SEQUENCE modulos_principais_id_seq OWNED BY modulos_principais.id;
 
 
 --
+-- TOC entry 2192 (class 0 OID 0)
+-- Dependencies: 198
 -- Name: modulos_principais_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -967,6 +1148,8 @@ SELECT pg_catalog.setval('modulos_principais_id_seq', 13, true);
 
 
 --
+-- TOC entry 199 (class 1259 OID 20050)
+-- Dependencies: 2066 2067 2068 5
 -- Name: tabelas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -981,6 +1164,8 @@ CREATE TABLE tabelas (
 
 
 --
+-- TOC entry 2193 (class 0 OID 0)
+-- Dependencies: 199
 -- Name: COLUMN tabelas.colunafilho; Type: COMMENT; Schema: public; Owner: -
 --
 
@@ -988,6 +1173,8 @@ COMMENT ON COLUMN tabelas.colunafilho IS 'Nome da coluna necessar para todos os 
 
 
 --
+-- TOC entry 200 (class 1259 OID 20056)
+-- Dependencies: 199 5
 -- Name: tabelas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1000,6 +1187,8 @@ CREATE SEQUENCE tabelas_id_seq
 
 
 --
+-- TOC entry 2194 (class 0 OID 0)
+-- Dependencies: 200
 -- Name: tabelas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
@@ -1007,6 +1196,8 @@ ALTER SEQUENCE tabelas_id_seq OWNED BY tabelas.id;
 
 
 --
+-- TOC entry 2195 (class 0 OID 0)
+-- Dependencies: 200
 -- Name: tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -1014,6 +1205,8 @@ SELECT pg_catalog.setval('tabelas_id_seq', 109, true);
 
 
 --
+-- TOC entry 1975 (class 2604 OID 20058)
+-- Dependencies: 162 161
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1021,6 +1214,8 @@ ALTER TABLE abas ALTER COLUMN id SET DEFAULT nextval('abas_id_seq'::regclass);
 
 
 --
+-- TOC entry 1980 (class 2604 OID 20059)
+-- Dependencies: 164 163
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1028,6 +1223,8 @@ ALTER TABLE blocos ALTER COLUMN id SET DEFAULT nextval('blocos_id_seq'::regclass
 
 
 --
+-- TOC entry 1982 (class 2604 OID 20060)
+-- Dependencies: 166 165
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1035,6 +1232,8 @@ ALTER TABLE blocos_x_abas ALTER COLUMN id SET DEFAULT nextval('blocos_x_abas_id_
 
 
 --
+-- TOC entry 1991 (class 2604 OID 20061)
+-- Dependencies: 168 167
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1042,6 +1241,8 @@ ALTER TABLE campos ALTER COLUMN id SET DEFAULT nextval('campos_id_seq'::regclass
 
 
 --
+-- TOC entry 1993 (class 2604 OID 20062)
+-- Dependencies: 170 169
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1049,6 +1250,8 @@ ALTER TABLE campos_x_blocos ALTER COLUMN id SET DEFAULT nextval('campos_x_blocos
 
 
 --
+-- TOC entry 1998 (class 2604 OID 20063)
+-- Dependencies: 174 173
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1056,6 +1259,8 @@ ALTER TABLE form_button ALTER COLUMN id SET DEFAULT nextval('form_button_id_seq'
 
 
 --
+-- TOC entry 2000 (class 2604 OID 20064)
+-- Dependencies: 176 175
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1063,6 +1268,8 @@ ALTER TABLE form_validacao ALTER COLUMN id SET DEFAULT nextval('form_validacao_i
 
 
 --
+-- TOC entry 2003 (class 2604 OID 20065)
+-- Dependencies: 178 177
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1070,6 +1277,8 @@ ALTER TABLE form_x_abas ALTER COLUMN id SET DEFAULT nextval('form_x_abas_id_seq'
 
 
 --
+-- TOC entry 2005 (class 2604 OID 20066)
+-- Dependencies: 180 179
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1077,6 +1286,8 @@ ALTER TABLE form_x_tabelas ALTER COLUMN id SET DEFAULT nextval('form_x_tabelas_i
 
 
 --
+-- TOC entry 2012 (class 2604 OID 20067)
+-- Dependencies: 182 181
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1084,6 +1295,8 @@ ALTER TABLE forms ALTER COLUMN id SET DEFAULT nextval('forms_id_seq'::regclass);
 
 
 --
+-- TOC entry 2013 (class 2604 OID 20068)
+-- Dependencies: 184 183
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1091,6 +1304,8 @@ ALTER TABLE info_empresa ALTER COLUMN id SET DEFAULT nextval('info_empresa_id_se
 
 
 --
+-- TOC entry 2022 (class 2604 OID 20069)
+-- Dependencies: 186 185
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1098,6 +1313,8 @@ ALTER TABLE lista_actions ALTER COLUMN id SET DEFAULT nextval('lista_actions_id_
 
 
 --
+-- TOC entry 2025 (class 2604 OID 20070)
+-- Dependencies: 188 187
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1105,6 +1322,8 @@ ALTER TABLE lista_bnav ALTER COLUMN id SET DEFAULT nextval('lista_bnav_id_seq'::
 
 
 --
+-- TOC entry 2035 (class 2604 OID 20071)
+-- Dependencies: 190 189
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1112,6 +1331,8 @@ ALTER TABLE lista_colunas ALTER COLUMN id SET DEFAULT nextval('lista_colunas_id_
 
 
 --
+-- TOC entry 2041 (class 2604 OID 20072)
+-- Dependencies: 192 191
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1119,6 +1340,8 @@ ALTER TABLE lista_fields ALTER COLUMN id SET DEFAULT nextval('lista_fields_id_se
 
 
 --
+-- TOC entry 2065 (class 2604 OID 20073)
+-- Dependencies: 198 197
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1126,6 +1349,8 @@ ALTER TABLE modulos_principais ALTER COLUMN id SET DEFAULT nextval('modulos_prin
 
 
 --
+-- TOC entry 2069 (class 2604 OID 20074)
+-- Dependencies: 200 199
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1133,6 +1358,8 @@ ALTER TABLE tabelas ALTER COLUMN id SET DEFAULT nextval('tabelas_id_seq'::regcla
 
 
 --
+-- TOC entry 2119 (class 0 OID 19849)
+-- Dependencies: 161
 -- Data for Name: abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1399,6 +1626,8 @@ INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALU
 
 
 --
+-- TOC entry 2120 (class 0 OID 19858)
+-- Dependencies: 163
 -- Data for Name: blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1666,6 +1895,8 @@ INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativ
 
 
 --
+-- TOC entry 2121 (class 0 OID 19870)
+-- Dependencies: 165
 -- Data for Name: blocos_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1687,8 +1918,6 @@ INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (18, 21, 26, NULL);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (20, 22, 29, NULL);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (21, 23, 30, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (170, 246, 31, 1);
-INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (23, 24, 32, NULL);
-INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (24, 24, 33, NULL);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (25, 26, 34, NULL);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (26, 26, 35, NULL);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (27, 26, 36, NULL);
@@ -1854,6 +2083,7 @@ INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (231, 301, 235, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (232, 302, 236, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (233, 303, 237, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (234, 304, 238, 1);
+INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (24, 24, 33, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (235, 305, 239, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (236, 306, 240, 1);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (237, 307, 241, 1);
@@ -1929,9 +2159,12 @@ INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (302, 345, 292, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (303, 351, 293, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (304, 374, 294, 2);
 INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (305, 376, 295, 1);
+INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (23, 24, 32, 1);
 
 
 --
+-- TOC entry 2122 (class 0 OID 19876)
+-- Dependencies: 167
 -- Data for Name: campos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -2086,7 +2319,6 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (17, 'tipoSangue', 'tipoSangue', 'Tipo Sanguineo: ', NULL, NULL, 'TCombo', 5, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (119, 'tipoDuplicata', 'tipoDuplicata', 'Tipo da duplicata:', NULL, NULL, 'TCombo', 17, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (840, 'obs', 'obs', 'Observações:', NULL, NULL, 'TText', 94, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (243, 'cpf_cnpj', 'cpf_cnpj', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpf', '0', NULL, 1, 1, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (836, 'titulo', 'titulo', 'Referência:', NULL, NULL, 'TEntry', 94, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (25, 'bairro', 'bairro', 'Bairro: ', NULL, NULL, 'TEntry', 1, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (26, 'cidade', 'cidade', 'Cidade: ', NULL, NULL, 'TEntry', 1, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0');
@@ -2202,8 +2434,6 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (706, 'label', 'label', 'Nome do Livro:', NULL, NULL, 'TEntry', 76, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (341, 'rg_inscEst', 'rg_inscEst', 'RG:', NULL, NULL, 'TEntry', 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (342, 'titEleitor_inscMun', 'titEleitor_inscMun', 'Titulo de Eleitor:', NULL, NULL, 'TEntry', 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (340, 'cpf_cnpj', 'cpfFornecedor', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpf', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (317, 'cnpj', 'cnpj', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 35, 1, 0, '-', 'setCNPJ', 'validaCnpj', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (344, 'estadoCivil', 'estadoCivil', 'Estado Civil:', NULL, NULL, 'TCombo', 5, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (345, 'tipoSanguineo', 'tipoSanguineo', 'Tipo Sanguineo:', NULL, NULL, 'TCombo', 5, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (306, 'valornominal', 'valorNominal', 'Valor Contábil:', NULL, 'CLASS_MASCARA_VALOR', 'TEntry', 32, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0');
@@ -2247,6 +2477,7 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (411, 'diasFeriasPrevisao', 'diasFeriasPrevisao', 'Quantidade de dias previstos:', NULL, NULL, 'TEntry', 41, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (414, 'diasFeriasReal', 'diasFeriasReal', 'Quantidade de dias:', NULL, NULL, 'TEntry', 41, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (418, 'agencia', 'agencia', 'Agencia:', NULL, NULL, 'TEntry', 42, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (317, 'cnpj', 'cnpj', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 35, 1, 0, '-', 'setCNPJ', 'validaCpfCnpj', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (419, 'numConta', 'numConta', 'N. Conta:', NULL, NULL, 'TEntry', 42, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (425, 'titEleitor_inscMun', 'titEleitorCliente', 'Titulo de Eleitor:', NULL, NULL, 'TEntry', 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (426, 'estadoCivil', 'estadoCivil', 'Estado Civil:', NULL, NULL, 'TCombo', 5, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
@@ -2566,11 +2797,6 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (886, 'volume', 'volume', 'Volume:', NULL, NULL, 'TEntry', 96, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (32, 'fone', 'fone', 'Telefone: ', NULL, 'CLASS_UI_TELEFONE', 'TEntry', 7, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (461, 'empregoFone', 'empregoFone', 'Telefone de Contato:', NULL, 'CLASS_UI_TELEFONE', 'TEntry', 72, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (229, 'cpf', 'cpf', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 30, 1, 0, '-', 'setCPF', 'validaCpf', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (423, 'cpf_cnpj', 'cpf', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpf', '0', NULL, 1, 1, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (782, 'cpf_cnpj', 'cpf_cnpj', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 2, 0, 0, '-', 'setCPF', 'validaCpf', '0', NULL, 1, 0, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (433, 'cpf_cnpj', 'cnpj', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCNPJ', 'validaCnpj', '0', NULL, 1, 1, 1, '0');
-INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (348, 'cpf_cnpj', 'cnpjFornecedor', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCNPJ', 'validaCnpj', '0', NULL, 1, 1, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (152, 'intervaloParcelas', 'intervaloParcelas', 'Intervalo:', NULL, NULL, 'TEntry', 66, 0, 0, '-', '-', '0', '0', 'Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.', 1, 0, 1, '1');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (630, 'tipoMovimentacao', 'tipoMovimentacao', '', NULL, NULL, 'THidden', 66, 1, 0, 'C', '-', '0', '0', NULL, 1, 0, 2, '1');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (900, 'codigocontacaixa', 'codigocontacaixa', 'Conta Caixa:', NULL, NULL, 'TCombo', 94, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '0');
@@ -2621,6 +2847,9 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (917, 'referencia', 'referencia', 'Referência:', NULL, NULL, 'TEntry', 99, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (913, 'codigopessoa', 'codigopessoa', 'Cliente:', NULL, NULL, 'TCombo', 16, 1, 143, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (918, 'interessado', 'interessado', 'Interessado:', NULL, NULL, 'TEntry', 99, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (433, 'cpf_cnpj', 'cnpj', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCNPJ', 'validaCpfCnpj', '0', NULL, 1, 1, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (423, 'cpf_cnpj', 'cpf', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpfCnpj', '0', NULL, 1, 1, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (348, 'cpf_cnpj', 'cnpjFornecedor', 'CNPJ:', '''99.999.999/9999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCNPJ', 'validaCpfCnpj', '0', NULL, 1, 1, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (695, 'data', 'data', 'Data:', NULL, 'CLASS_CALENDARIO', 'TEntry', 46, 1, 0, '-', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (241, 'dataReg', 'dataReg', 'Data do Registro:', NULL, 'CLASS_CALENDARIO', 'TEntry', 30, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (921, 'email', 'email', 'E-mail:', NULL, NULL, 'TEntry', 99, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
@@ -2720,9 +2949,15 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (972, 'codigo', 'codigoaluno_processo', NULL, NULL, NULL, 'THidden', 22, 0, 0, '-', NULL, NULL, NULL, NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (973, 'codigo', 'codigoaluno_processo', NULL, NULL, NULL, 'THidden', 22, 0, 0, '-', NULL, NULL, NULL, NULL, 1, 0, 1, '0');
 INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (295, 'ferias', 'ferias', 'Valor das férias:', NULL, NULL, 'TEntry', 14, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (229, 'cpf', 'cpf', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 30, 1, 0, '-', 'setCPF', 'validaCpfCnpj', '0', NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (243, 'cpf_cnpj', 'cpf_cnpj', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpfCnpj', '0', NULL, 1, 1, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (782, 'cpf_cnpj', 'cpf_cnpj', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 2, 0, 0, '-', 'setCPF', 'validaCpfCnpj', '0', NULL, 1, 0, 1, '0');
+INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, ativo, valornull, alteravel, autosave) VALUES (340, 'cpf_cnpj', 'cpfFornecedor', 'CPF:', '''999.999.999-99'',1', NULL, 'TEntry', 1, 1, 0, '-', 'setCPF', 'validaCpfCnpj', '0', NULL, 1, 0, 1, '0');
 
 
 --
+-- TOC entry 2123 (class 0 OID 19892)
+-- Dependencies: 169
 -- Data for Name: campos_x_blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -3494,6 +3729,8 @@ INSERT INTO campos_x_blocos (id, blocoid, campoid, mostrarcampo, formato, ordem)
 
 
 --
+-- TOC entry 2124 (class 0 OID 19900)
+-- Dependencies: 172
 -- Data for Name: campos_x_propriedades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -4594,9 +4831,9 @@ INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (88
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (885, 'addItems', '1=>Movimento Aberto;3=>Movimento Programado', 1, 1036);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (166, 'onChange', 'calculaMovimentacao()', 1, 1023);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (165, 'disabled', 'disabled', 1, 1024);
-INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (160, 'onChange', 'calculaMovimentacao();validaValorRecebido(''valorentrada'',''concluir_botform13'')', 1, 1016);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (176, 'onChange', 'calculaMovimentacao()', 1, 1018);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (178, 'onChange', 'calculaMovimentacao()', 1, 1025);
+INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (160, 'onChange', 'calculaMovimentacao();validaValorRecebido(''valorentrada'',''concluir_botform13'')', 1, 1016);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (873, 'setSize', '300', 1, 1027);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (874, 'setSize', '200', 1, 1028);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (875, 'setSize', '150', 1, 1029);
@@ -4721,23 +4958,32 @@ INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (97
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (975, 'setAction', 'setDestrancamentoMatricula($(''#codigoaluno_processo'').val())', 1, 1143);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (976, 'setAction', 'setTrancamentoCurso($(''#codigoaluno_processo'').val())', 1, 1144);
 INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (841, 'addItems', '0=>Aleatório;1=>Custom_petrus;2=>Eggplant;3=>Redmond;4=>Ui-lightness;5=>Black-tie;6=>Sunny;7=>Pepper-grinder;8=>Dot-luv;9=>Ui-tolook;10=>Blitzer;11=>Petrusedu;12=>Petrusedu_alternate;13=>Bluestyle;14=>Flick;15=>Humanity;16=>Overcast;17=>Bluetzer;18=>Fibratec;19=>Remake_bluetzer;20=>South-street;21=>Cupertino;22=>Petrus;', 1, 882);
+INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (913, 'onChange', 'setCampoTurmaDisabled()', 1, 1145);
+INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (631, 'disabled', 'disabled', 1, 1146);
 
 
 --
+-- TOC entry 2125 (class 0 OID 19908)
+-- Dependencies: 173
 -- Data for Name: form_button; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (1, 49, 'fecharCaixa', 'Fechar Caixa', 'Você deseja Realmente executar esta ação?', 'closeCaixaDia', NULL, '1 ', '1');
 INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (2, 13, 'concluir_botform', 'Baixar conta', 'Você deseja realmente executar o pagamento desta conta?', 'onClose', 'onClose', '2 ', '0');
+INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (4, 8, 'concluir_inscricao', 'Concluir', NULL, 'onClose', 'onClose', '2 ', '1');
 
 
 --
+-- TOC entry 2126 (class 0 OID 19918)
+-- Dependencies: 175
 -- Data for Name: form_validacao; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
+-- TOC entry 2127 (class 0 OID 19924)
+-- Dependencies: 177
 -- Data for Name: form_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -4758,14 +5004,10 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (33, 17, 35, '1
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (39, 19, 42, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (40, 20, 43, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (41, 20, 44, '1', 0);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (42, 6, 45, '1', 0);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (43, 6, 46, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (44, 19, 48, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (45, 19, 49, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (46, 22, 50, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (48, 21, 47, '1', 0);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (49, 6, 53, '1', 0);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (50, 6, 54, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (53, 24, 57, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (54, 26, 58, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (55, 26, 59, '1', 0);
@@ -4798,7 +5040,6 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (83, 47, 87, '1
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (85, 49, 89, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (86, 49, 90, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (87, 50, 91, '1', 0);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (88, 6, 92, '0', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (89, 52, 93, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (90, 53, 94, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (91, 54, 95, '1', 0);
@@ -4898,6 +5139,9 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (106, 459, 210,
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (180, 341, 282, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (181, 342, 283, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (182, 343, 284, '1', 1);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (43, 6, 46, '1', 2);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (50, 6, 54, '1', 4);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (88, 6, 92, '0', 5);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (183, 344, 285, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (184, 345, 286, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (185, 346, 287, '1', 1);
@@ -4984,7 +5228,6 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (266, 5, 365, '
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (267, 452, 366, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (268, 454, 367, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (68, 15, 72, '1', 1);
-INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (230, 15, 328, '1', 5);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (237, 460, 335, '1', 6);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (138, 0, 233, '0', 3);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (269, 463, 368, '1', 1);
@@ -4997,9 +5240,14 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (275, 473, 374,
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (276, 474, 375, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (277, 475, 18, '1', 0);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (278, 475, 376, '1', 0);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (42, 6, 45, '1', 1);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (49, 6, 53, '1', 3);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (230, 15, 328, '0', 2);
 
 
 --
+-- TOC entry 2128 (class 0 OID 19931)
+-- Dependencies: 179
 -- Data for Name: form_x_tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5186,6 +5434,8 @@ INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (209, 475, 10, '
 
 
 --
+-- TOC entry 2129 (class 0 OID 19937)
+-- Dependencies: 181
 -- Data for Name: forms; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5280,7 +5530,6 @@ INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formai
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (434, 'processo-AproveitamentoDisciplina', 'Processo Acadêmico: Aproveitamento de Disciplina', '22', '1', '15', '0', 'one', '900;500', '1', '0', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (1, 'cadclientes', 'Cadastro de Clientes', '1', '1', NULL, '130', 'one', NULL, '1', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (5, 'cadturmas', 'Cadastro de turmas', '11', '1', NULL, '133', 'one', NULL, '1', '1', 'TTurma/setProduto', '0');
-INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (8, 'fichaInscricao', 'Ficha de inscrição', '16', '1', NULL, '138', 'one', NULL, '2', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (413, 'blocoDiscSemelhantes', 'Disciplinas', '97', '1', '3', '417', 'one', '500;250', '1', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (18, 'diarioEletronico', 'Diário Elentrônico', '12', '1', NULL, '193', 'multiple', NULL, '0', '0', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (21, 'patrimonios', 'Patrimonios', '32', '1', NULL, '155', 'one', NULL, '1', '1', 'TProduto/setProdutoParametro', '0');
@@ -5384,16 +5633,21 @@ INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formai
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (431, 'processo-Abandono', 'Processo Acadêmico: Abandono de Curso', '22', '1', '15', '0', 'one', '900;500', '1', '0', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (474, 'usuarioConfig', 'Configurações de Usuário', '26', '1', '0', '0', 'one', '500;200', '1', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (475, 'cadcursosConcluido', 'Projetos de Cursos Concluídos', '9', '1', NULL, '242', 'one', NULL, '1', '1', '0', '0');
-INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (476, 'form_discCurso', 'Disciplinas do curso', '10', '1', '4', '477', 'multiple', '900;500', '1', '1', '0', '0');
+INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (476, 'form_discCurso', 'Disciplinas do curso', '10', '1', '475', '477', 'multiple', '900;500', '1', '1', '0', '0');
+INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (8, 'fichaInscricao', 'Ficha de inscrição', '16', '1', NULL, '138', 'one', NULL, '0', '1', '0', '0');
 
 
 --
+-- TOC entry 2130 (class 0 OID 19948)
+-- Dependencies: 183
 -- Data for Name: info_empresa; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
+-- TOC entry 2131 (class 0 OID 19956)
+-- Dependencies: 185
 -- Data for Name: lista_actions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5417,6 +5671,8 @@ INSERT INTO lista_actions (id, idlista, tipocampo, "nameAction", label, actionjs
 
 
 --
+-- TOC entry 2132 (class 0 OID 19972)
+-- Dependencies: 187
 -- Data for Name: lista_bnav; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5427,6 +5683,8 @@ INSERT INTO lista_bnav (id, lista_form_id, nome, tipocampo, label, metodo, funca
 
 
 --
+-- TOC entry 2133 (class 0 OID 19982)
+-- Dependencies: 189
 -- Data for Name: lista_colunas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5457,7 +5715,6 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (73, 143, 'nome_razaoSocial', 'Nome', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (75, 143, 'ativo', 'Estatus', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (85, 144, 'vencimento', 'Data Venc.', 'center', 'center', 70, '-', '0', 1, 0, '-', '0', 9, '1');
-INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (96, 147, 'nomePessoa', 'Nome', 'left', 'left', 250, '', '0', 1, 0, '-', '0', 1, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (98, 147, 'nomeTurma', 'Turma', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 2, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (99, 147, 'nomeCurso', 'Curso', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 3, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (100, 147, 'dataCad', 'Data da inscrição', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 4, '1');
@@ -5467,7 +5724,6 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (110, 150, 'ativo', 'Situação', 'center', 'center', 80, '-', '0', 1, 0, '-', '0', 2, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (111, 151, 'nomeConta', 'Conta', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 1, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (112, 151, 'tipoConta', 'Tipo da Conta', 'left', 'left', 150, '-', '0', 1, 0, '-', '0', 2, '1');
-INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (157, 160, 'codigo', 'Codigo', 'left', 'left', 100, '', '0', 1, 0, '-', '0', 0, '0');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (158, 160, 'nome_razaoSocial', 'Nome / Razão Social', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (191, 160, 'cidade', 'Cidade', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (192, 160, 'estado', 'Estado', 'left', 'left', 50, '-', '0', 1, 0, '-', '0', 0, '1');
@@ -5512,6 +5768,7 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (175, 165, 'nome_razaoSocial', 'Nome / Razão Social', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 1, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (12, 133, 'nomecurso', 'Curso', 'left', 'left', 230, '-', '0', 1, 0, '-', '0', 3, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (177, 166, 'nomePessoa', 'Pessoa', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 0, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (157, 160, 'codigo', 'Codigo', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, '0');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (178, 166, 'dataAssinatura', 'Data da Assinatura', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (179, 166, 'dataTermino', 'Data do Termino', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (180, 167, 'usuario', 'Usuário', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
@@ -5637,7 +5894,6 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (321, 159, 'unidade', 'Unidade', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (359, 202, 'dataCad', 'Data', 'left', 'left', 60, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (366, 203, 'contaOrigem', 'Conta de Origem', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
-INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (367, 203, 'contaDestino', 'Conta de Destino', 'left', 'left', 200, '', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (368, 203, 'tipoExtorno', 'Tipo de Extorno', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (353, 201, 'dataaula', 'Data', 'center', 'center', 90, '-', '0', 1, 0, '-', '0', 1, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (370, 204, 'codigoConta', 'Conta', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
@@ -6206,15 +6462,21 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (935, 477, 'codigodisciplina', 'Codigo', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (937, 477, 'cargahoraria', 'C.H.', 'left', 'right', 30, '-', '0', 1, 0, '-', '0', 3, '1');
 INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (938, 477, 'nomedisciplina', 'Disciplina', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (96, 147, 'nomePessoa', 'Nome', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 1, '1');
+INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, entidade_pai, colunaaux, link, ordem, ativo) VALUES (367, 203, 'contaDestino', 'Conta de Destino', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, '1');
 
 
 --
+-- TOC entry 2134 (class 0 OID 19999)
+-- Dependencies: 191
 -- Data for Name: lista_fields; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
+-- TOC entry 2135 (class 0 OID 20009)
+-- Dependencies: 193
 -- Data for Name: lista_form; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6397,6 +6659,8 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 
 
 --
+-- TOC entry 2136 (class 0 OID 20034)
+-- Dependencies: 196
 -- Data for Name: menu_modulos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6497,6 +6761,8 @@ INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nive
 
 
 --
+-- TOC entry 2137 (class 0 OID 20043)
+-- Dependencies: 197
 -- Data for Name: modulos_principais; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6516,6 +6782,8 @@ INSERT INTO modulos_principais (id, modulo, labelmodulo, nivel, ordem, ativo) VA
 
 
 --
+-- TOC entry 2138 (class 0 OID 20050)
+-- Dependencies: 199
 -- Data for Name: tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6615,6 +6883,8 @@ INSERT INTO tabelas (id, tabela, tabela_view, tabpai, ativo, colunafilho) VALUES
 
 
 --
+-- TOC entry 2071 (class 2606 OID 20076)
+-- Dependencies: 161 161
 -- Name: pk_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6623,6 +6893,8 @@ ALTER TABLE ONLY abas
 
 
 --
+-- TOC entry 2073 (class 2606 OID 20078)
+-- Dependencies: 163 163
 -- Name: pk_blocos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6631,6 +6903,8 @@ ALTER TABLE ONLY blocos
 
 
 --
+-- TOC entry 2075 (class 2606 OID 20080)
+-- Dependencies: 165 165
 -- Name: pk_blocos_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6639,6 +6913,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
+-- TOC entry 2078 (class 2606 OID 20082)
+-- Dependencies: 167 167
 -- Name: pk_campos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6647,6 +6923,8 @@ ALTER TABLE ONLY campos
 
 
 --
+-- TOC entry 2081 (class 2606 OID 20084)
+-- Dependencies: 169 169
 -- Name: pk_campos_x_blocos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6655,6 +6933,8 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
+-- TOC entry 2084 (class 2606 OID 20086)
+-- Dependencies: 172 172
 -- Name: pk_campos_x_propriedades; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6663,6 +6943,8 @@ ALTER TABLE ONLY campos_x_propriedades
 
 
 --
+-- TOC entry 2086 (class 2606 OID 20088)
+-- Dependencies: 173 173
 -- Name: pk_form_button; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6671,6 +6953,8 @@ ALTER TABLE ONLY form_button
 
 
 --
+-- TOC entry 2088 (class 2606 OID 20090)
+-- Dependencies: 175 175
 -- Name: pk_form_validacao; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6679,6 +6963,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
+-- TOC entry 2090 (class 2606 OID 20092)
+-- Dependencies: 177 177
 -- Name: pk_form_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6687,6 +6973,8 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
+-- TOC entry 2092 (class 2606 OID 20094)
+-- Dependencies: 179 179
 -- Name: pk_form_x_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6695,6 +6983,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
+-- TOC entry 2094 (class 2606 OID 20096)
+-- Dependencies: 181 181
 -- Name: pk_forms; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6703,6 +6993,8 @@ ALTER TABLE ONLY forms
 
 
 --
+-- TOC entry 2096 (class 2606 OID 20098)
+-- Dependencies: 183 183
 -- Name: pk_info_empresa; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6711,6 +7003,8 @@ ALTER TABLE ONLY info_empresa
 
 
 --
+-- TOC entry 2099 (class 2606 OID 20100)
+-- Dependencies: 185 185
 -- Name: pk_lista_actions; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6719,6 +7013,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
+-- TOC entry 2101 (class 2606 OID 20102)
+-- Dependencies: 187 187
 -- Name: pk_lista_bnav; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6727,6 +7023,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
+-- TOC entry 2104 (class 2606 OID 20104)
+-- Dependencies: 189 189
 -- Name: pk_lista_colunas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6735,6 +7033,8 @@ ALTER TABLE ONLY lista_colunas
 
 
 --
+-- TOC entry 2106 (class 2606 OID 20106)
+-- Dependencies: 191 191
 -- Name: pk_lista_fields; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6743,6 +7043,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
+-- TOC entry 2109 (class 2606 OID 20108)
+-- Dependencies: 193 193
 -- Name: pk_lista_form; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6751,6 +7053,8 @@ ALTER TABLE ONLY lista_form
 
 
 --
+-- TOC entry 2112 (class 2606 OID 20110)
+-- Dependencies: 196 196
 -- Name: pk_menu_modulos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6759,6 +7063,8 @@ ALTER TABLE ONLY menu_modulos
 
 
 --
+-- TOC entry 2114 (class 2606 OID 20112)
+-- Dependencies: 197 197
 -- Name: pk_modulos_principais; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6767,6 +7073,8 @@ ALTER TABLE ONLY modulos_principais
 
 
 --
+-- TOC entry 2116 (class 2606 OID 20114)
+-- Dependencies: 199 199
 -- Name: pk_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6775,6 +7083,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
+-- TOC entry 2097 (class 1259 OID 20115)
+-- Dependencies: 185
 -- Name: fki_lista_actions__lista_form__idlista; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6782,6 +7092,8 @@ CREATE INDEX fki_lista_actions__lista_form__idlista ON lista_actions USING btree
 
 
 --
+-- TOC entry 2110 (class 1259 OID 20116)
+-- Dependencies: 196
 -- Name: fki_menu_modulos__lista_form__lista; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6789,6 +7101,8 @@ CREATE INDEX fki_menu_modulos__lista_form__lista ON menu_modulos USING btree (ar
 
 
 --
+-- TOC entry 2079 (class 1259 OID 20117)
+-- Dependencies: 169 169
 -- Name: idx_campos_blocos; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6796,6 +7110,8 @@ CREATE INDEX idx_campos_blocos ON campos_x_blocos USING btree (blocoid, campoid)
 
 
 --
+-- TOC entry 2076 (class 1259 OID 20118)
+-- Dependencies: 167
 -- Name: idx_campos_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6803,6 +7119,8 @@ CREATE INDEX idx_campos_id ON campos USING btree (id);
 
 
 --
+-- TOC entry 2082 (class 1259 OID 20119)
+-- Dependencies: 172
 -- Name: idx_campos_propriedades; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6810,6 +7128,8 @@ CREATE INDEX idx_campos_propriedades ON campos_x_propriedades USING btree (campo
 
 
 --
+-- TOC entry 2102 (class 1259 OID 20120)
+-- Dependencies: 189
 -- Name: lista_colunas_listacolunas_fkindex1; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6817,6 +7137,8 @@ CREATE INDEX lista_colunas_listacolunas_fkindex1 ON lista_colunas USING btree (l
 
 
 --
+-- TOC entry 2107 (class 1259 OID 20121)
+-- Dependencies: 193
 -- Name: lista_form_formlista_fkindex1; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6824,6 +7146,8 @@ CREATE INDEX lista_form_formlista_fkindex1 ON lista_form USING btree (forms_id);
 
 
 --
+-- TOC entry 2117 (class 2606 OID 20122)
+-- Dependencies: 185 193 2108
 -- Name: lista_actions__lista_form__idlista; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6832,12 +7156,16 @@ ALTER TABLE ONLY lista_actions
 
 
 --
+-- TOC entry 2118 (class 2606 OID 20127)
+-- Dependencies: 189 193 2108
 -- Name: lista_colunas__lista_form; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY lista_colunas
     ADD CONSTRAINT lista_colunas__lista_form FOREIGN KEY (lista_form_id) REFERENCES lista_form(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
+
+-- Completed on 2012-05-16 00:03:30
 
 --
 -- PostgreSQL database dump complete

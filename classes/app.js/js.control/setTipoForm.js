@@ -7,7 +7,7 @@ function setTipoForm(ob) {
 		ob = $('#' + ob);
 	}
 
-	if ($(ob).val() == "F" && $(ob).attr('checked') == 'checked') {
+	if ($(ob).val() == "F" && ($(ob).attr('checked') == 'checked' || $(ob).attr('checked') == true)) {
 		pF.css('display', 'block').find(':input').attr('manter', true);
 		pJ.css('display', 'none').find(':input').removeAttr('manter');
 	} else {

@@ -59,7 +59,7 @@ class TMatricula {
                   
              $trasacao = new TTransacao();
              //$trasacao->setDataFixa($dataFixa);
-
+			 print_r($obInscricao->vencimentomatricula);
              $trasacao->setVencimento($obInscricao->vencimentomatricula);
              $trasacao->setInstrincoesPagamento($infoDescontos);
 
@@ -184,47 +184,47 @@ class TMatricula {
                     if($retUsuario){
                             $priv = array();
 
-                            $priv[] = array("0 ","10 ","0");
-                            $priv[] = array("10 ","25 ","1");
-                            $priv[] = array("10 ","26 ","1");
-                            $priv[] = array("10 ","27 ","1");
-                            $priv[] = array("76 ","1 ","2");
-                            $priv[] = array("76 ","2 ","2");
-                            $priv[] = array("222 ","459 ","3");
-                            $priv[] = array("222 ","460 ","3");
-                            $priv[] = array("222 ","461 ","3");
-                            $priv[] = array("222 ","462 ","3");
-                            $priv[] = array("76 ","230 ","5");
-                            $priv[] = array("230 ","158 ","6");
-                            $priv[] = array("158 ","682 ","7");
-                            $priv[] = array("682 ","682 ","8");
-                            $priv[] = array("158 ","683 ","7");
-                            $priv[] = array("683 ","683 ","8");
-                            $priv[] = array("158 ","684 ","7");
-                            $priv[] = array("684 ","684 ","8");
-                            $priv[] = array("158 ","685 ","7");
-                            $priv[] = array("685 ","685 ","8");
-                            $priv[] = array("158 ","686 ","7");
-                            $priv[] = array("686 ","686 ","8");
-                            $priv[] = array("10 ","86 ","1");
-                            $priv[] = array("10 ","92 ","1");
-                            $priv[] = array("331 ","717 ","3");
-                      /*    $priv[] = array("10 ","115 ","1");
-                            $priv[] = array("274 ","516 ","3");
-                            $priv[] = array("274 ","616 ","3");
-                            $priv[] = array("274 ","615 ","3");
-                            $priv[] = array("274 ","614 ","3");
-                            $priv[] = array("274 ","613 ","3");
-                            $priv[] = array("274 ","612 ","3");
-                            $priv[] = array("274 ","611 ","3");
-                            $priv[] = array("274 ","610 ","3");
-                            $priv[] = array("274 ","609 ","3");
-                            $priv[] = array("274 ","608 ","3");
-                            $priv[] = array("274 ","607 ","3");
-                            $priv[] = array("274 ","606 ","3");
-                            $priv[] = array("274 ","605 ","3");
-                            $priv[] = array("274 ","517 ","3");
-                            $priv[] = array("274 ","515 ","3"); */
+                            $priv[] = array("0","10","0");
+                            $priv[] = array("10","25","1");
+                            $priv[] = array("10","26","1");
+                            $priv[] = array("10","27","1");
+                            $priv[] = array("76","1","2");
+                            $priv[] = array("76","2","2");
+                            $priv[] = array("222","459","3");
+                            $priv[] = array("222","460","3");
+                            $priv[] = array("222","461","3");
+                            $priv[] = array("222","462","3");
+                            $priv[] = array("76","230","5");
+                            $priv[] = array("230","158","6");
+                            $priv[] = array("158","682","7");
+                            $priv[] = array("682","682","8");
+                            $priv[] = array("158","683","7");
+                            $priv[] = array("683","683","8");
+                            $priv[] = array("158","684","7");
+                            $priv[] = array("684","684","8");
+                            $priv[] = array("158","685","7");
+                            $priv[] = array("685","685","8");
+                            $priv[] = array("158","686","7");
+                            $priv[] = array("686","686","8");
+                            $priv[] = array("10","86","1");
+                            $priv[] = array("10","92","1");
+                            $priv[] = array("331","717","3");
+                      /*    $priv[] = array("10","115","1");
+                            $priv[] = array("274","516","3");
+                            $priv[] = array("274","616","3");
+                            $priv[] = array("274","615","3");
+                            $priv[] = array("274","614","3");
+                            $priv[] = array("274","613","3");
+                            $priv[] = array("274","612","3");
+                            $priv[] = array("274","611","3");
+                            $priv[] = array("274","610","3");
+                            $priv[] = array("274","609","3");
+                            $priv[] = array("274","608","3");
+                            $priv[] = array("274","607","3");
+                            $priv[] = array("274","606","3");
+                            $priv[] = array("274","605","3");
+                            $priv[] = array("274","517","3");
+                            $priv[] = array("274","515","3"); */
 
                             foreach($priv as $vl){
                                 $TUsuario->setPrivilegio($retUsuario["codigo"], $vl[2], $vl[0],$vl[1],'1');

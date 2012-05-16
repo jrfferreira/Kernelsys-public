@@ -1688,13 +1688,6 @@
       <ativo>1</ativo>
       <ordem>1</ordem>
     </row>
-    <row id="230">
-      <id>230</id>
-      <formid>15</formid>
-      <abaid>328</abaid>
-      <ativo>1</ativo>
-      <ordem>5</ordem>
-    </row>
     <row id="237">
       <id>237</id>
       <formid>460</formid>
@@ -1792,6 +1785,13 @@
       <abaid>53</abaid>
       <ativo>1</ativo>
       <ordem>3</ordem>
+    </row>
+    <row id="230">
+      <id>230</id>
+      <formid>15</formid>
+      <abaid>328</abaid>
+      <ativo>0</ativo>
+      <ordem>2</ordem>
     </row>
   </formXAbas>
 </kernelsys>

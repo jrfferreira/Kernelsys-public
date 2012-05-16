@@ -4,12 +4,12 @@
 */
 function setConcluir(idForm, action){
 
-    var bot = document.getElementById("concluir_botform"+idForm);
+    var bot = $("#concluir_botform"+idForm);
 
     if(action == '1'){
-        bot.disabled = false;
+        bot.removeAttr('disabled');
     }
     else if(action == '2'){
-        bot.disabled = true;
+    	bot.attr('disabled','disabled');
     }
 }

@@ -11,6 +11,8 @@ class TSecretaria {
         try {
             if($codigoaluno) {
             	
+            	include_once('TAluno.class.php');
+            	
                 $TAluno = new TAluno();
                 $getAcademico = $TAluno->getAcademico($codigoaluno);
                 $tabHead = new TElement("fieldset");
@@ -253,36 +255,6 @@ class TSecretaria {
                 $datagrid->addColumn(new TDataGridColumn('frequencia', 'Frequência', 'center', '100px'));
                 $datagrid->addColumn(new TDataGridColumn('situacao', 'Situaçao', 'center', '100px'));
                 $datagrid->createModel('100%');
-
-/*				$obAlunos = $TTurmaDisciplina->getAlunos($codigoTurmaDisciplina,'all');
-                foreach($obAlunos as $codigoaluno => $aluno) {
-                	
-	                $TAluno = new TAluno();
-	                $getAcademico = $TAluno->getAcademico($codigoaluno);
-	                $obDisc = $getAcademico->academico->disciplinas[$codigoTurmaDisciplina];
-	                    $tempDisc['matricula'] = $aluno->codigo;
-	                    $tempDisc['aluno'] = $aluno->nomepessoa;
-	
-	                    $media = new TElement('div');
-	                    if ($obDisc->aprovacaonotas) {
-	                        $media->class = 'ui-state';
-	                    }else {
-	                        $media->class = 'ui-state-error';
-	                    }
-	                    $media->add($obDisc->media ? $obDisc->media : '--');
-	                    $tempDisc['media'] = $media;
-	                    $frequencia = new TElement('div');
-	                    if ($obDisc->aprovacaofrequencias) {
-	                        $frequencia->class = 'ui-state';
-	                    }else {
-	                        $frequencia->class = 'ui-state-error';
-	                    }
-	                    $frequencia->add($obDisc->frequencia ? $obDisc->frequencia."%" : '--');
-	                    $tempDisc['frequencia'] = $frequencia;
-	                    $tempDisc['situacao'] = $obDisc->situacao;
-	                    $datagrid->addItem($tempDisc);
-	                    
-                }*/
                 
                 $content = new TElement('div');
                 $content->class = "ui_bloco_conteudo";

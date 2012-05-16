@@ -82,7 +82,7 @@ if(isset($_POST['executar'])) {
     $Arq_tamanho=$_FILES['ArqRet']['size'];
     $Arq_erro=$_FILES['ArqRet']['error'];
 
-    $local = 'retornoCaixa/'.$Arq_nome;
+    $local = '../app.tmp/retornoCaixa/'.$Arq_nome;
 
     if(is_uploaded_file($Arq_local)) {//upload de arquivo
         if(!move_uploaded_file($Arq_local,$local)) {//move arquivo

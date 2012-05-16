@@ -145,15 +145,15 @@ class TConciliacaoCaixa{
                         $rowRet->add('<span class="tlabel">Valor do desconto:</span> '.$obMasc->setValor($dadosRet['valor_desconto']).'<br>');
                         $rowRet->add('<span class="tlabel">Valor pago:</span> '.$obMasc->setValor($dadosRet['valor_pago']).'<br>');
                         $rowRet->add('<span class="tlabel">Data do pagamento:</span> '.$obMasc->setData($dadosRet['data_pagamento']).'<br>');
-                        $rowRet->show();
-
                            // valida baixa já realizada da duplicata
-                           if($obDup->statusduplicata == '1'){
+                           if($obDup->statusduplicata == '1' || $obDup->statusduplicata == '9' ){
 
                                 //baixa conta
                                 $obCaixa = new TCaixa();
                                 $obCaixa->baixaContaCaixa($obDup->codigoconta, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $dadosRet['nosso_numero'], 'Boleto Caixa', $obDadosBoleto->codigocontacaixa);
-
+                                
+                                $retBaixada = new TElement('div');
+                                $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
                             if($obCaixa){
                                 //modifica status da duplicata baixada
                                 $dboDupUp = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
@@ -161,16 +161,32 @@ class TConciliacaoCaixa{
                                     $criteriaDupUp->add(new TFilter('codigo','=',$obDup->codigo));
                                 $dboDupUp->update(array('dataBaixa'=>date("Y-m-d"), 'statusDuplicata'=>2), $criteriaDupUp);
                                 
-                                echo 'Conta baixada com sucesso.<br>';
+                                if($obDup->statusduplicata == '9'){
+                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_BOLETO_INATIVO);
+                                }else{
+                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_CONTA);
+                                }
+                                $rowRet->add($retBaixada);
+                            }else{
+                                print_r($obCaixa);
+                                $rowRet->add($retBaixada);                            	
                             }
 
                            }
                            else{
                                 $retBaixada = new TElement('div');
                                 $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
-                                $retBaixada->add(TMensagem::MSG_CONTA_BAIXADA);
-                                $retBaixada->show();
+                                if($obDup->statusduplicata == '2'){
+                                	$retBaixada->add(TMensagem::MSG_CONTA_BAIXADA);
+                                }elseif($obDup->statusduplicata == '9'){
+                                	$retBaixada->add(TMensagem::MSG_BOLETO_INATIVO);
+                                }
+                                $rowRet->add($retBaixada);
                            }
+                           
+                           
+                           $rowRet->show();
+                            
 
                         //zera dados
                         $dadosRet = array();
@@ -179,7 +195,7 @@ class TConciliacaoCaixa{
 
                         $rowRet = new TElement('div');
                         $rowRet->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
-                        $rowRet->add('<span class="tlabelDestaque">Não foram encontradas duplicatas associadas ao boleto de N°: </span> '.$dadosRet['nosso_numero'].'<br>');
+                        $rowRet->add('<span class="tlabelDestaque">Não foram encontrados registros associados ao boleto de N°: </span> '.$dadosRet['nosso_numero'].'<br>');
                         $rowRet->add('<span class="tlabelDestaque">Valor nominal:</span> '.$obMasc->setValor($dadosRet['valor_nominal']).'<br>');
                         $rowRet->add('<span class="tlabelDestaque">Valor do desconto:</span> '.$obMasc->setValor($dadosRet['valor_desconto']).'<br>');
                         $rowRet->add('<span class="tlabelDestaque">Valor da tafifa:</span> '.$obMasc->setValor($dadosRet['valor_tarifa']).'<br>');

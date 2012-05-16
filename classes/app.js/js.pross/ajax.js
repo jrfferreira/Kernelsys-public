@@ -74,7 +74,10 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
 }
 
 //Executa ações nos campos do formulario
-function exeCampo(setUrl, dados, tipoReq){
+function exeCampo(setUrl, dados, tipoReq, Async){
+	if(Async = null){
+		 Async = false;
+	}
     var rand = null;
     if(tipoReq == 'GET'){
         rand = "&rand="+new Date().getTime();
@@ -84,12 +87,12 @@ function exeCampo(setUrl, dados, tipoReq){
     //setUrl = setUrl+rand;
     
        retCampo = $.ajax({
-               type: tipoReq,
-               url: setUrl,
-               data:dados,
-               cache: false,
-               async: false,
-               success: function(ret){}
+               'type': tipoReq,
+               'url': setUrl,
+               'data':dados,
+               'cache': false,
+               'async': Async,
+               'success': function(ret){}
 
        }).responseText;
 

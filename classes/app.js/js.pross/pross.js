@@ -87,7 +87,7 @@ function pross(obj,idForm,codigo){
     if(valor && valor != ""){
         var valField = 'idForm='+idForm+'&campo='+nameCampo+'&valor='+valor+'&codigo='+codigo;
 
-        var retorno =  exeCampo(getPath()+'/app.dbo/compilerData.php?loc=x', valField, 'POST');
+        exeCampo(getPath()+'/app.dbo/compilerData.php?loc=x', valField, 'POST', true);
 
     }else{
         var valField = null;

@@ -24,7 +24,7 @@ class setException extends Exception {
 		// $this->cod = $cod;
 
 		// trata a exeção
-		if (get_class ( $Exeption ) == "ErrorException") {
+		if (is_object($Exeption) && get_class ( $Exeption ) == "ErrorException") {
 			if ($Exeption->getCode ()) {
 				$severidade = $Exeption->getCode ();
 			}

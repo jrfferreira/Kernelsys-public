@@ -109,18 +109,6 @@
       <blocoid>31</blocoid>
       <ordem>1</ordem>
     </row>
-    <row id="23">
-      <id>23</id>
-      <abaid>24</abaid>
-      <blocoid>32</blocoid>
-      <ordem></ordem>
-    </row>
-    <row id="24">
-      <id>24</id>
-      <abaid>24</abaid>
-      <blocoid>33</blocoid>
-      <ordem></ordem>
-    </row>
     <row id="25">
       <id>25</id>
       <abaid>26</abaid>
@@ -1111,6 +1099,12 @@
       <blocoid>238</blocoid>
       <ordem>1</ordem>
     </row>
+    <row id="24">
+      <id>24</id>
+      <abaid>24</abaid>
+      <blocoid>33</blocoid>
+      <ordem>2</ordem>
+    </row>
     <row id="235">
       <id>235</id>
       <abaid>305</abaid>
@@ -1559,6 +1553,12 @@
       <id>305</id>
       <abaid>376</abaid>
       <blocoid>295</blocoid>
+      <ordem>1</ordem>
+    </row>
+    <row id="23">
+      <id>23</id>
+      <abaid>24</abaid>
+      <blocoid>32</blocoid>
       <ordem>1</ordem>
     </row>
   </blocosXAbas>

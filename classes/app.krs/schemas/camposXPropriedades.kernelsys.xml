@@ -6125,7 +6125,7 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="1016">
       <campoid>160</campoid>
       <metodo>onChange</metodo>
-      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','salvar_botform13')</valor>
+      <valor>calculaMovimentacao();validaValorRecebido('valorentrada','concluir_botform13')</valor>
       <ativo>1</ativo>
       <id>1016</id>
     </row>
@@ -6996,6 +6996,20 @@ Zootecnia=&gt;Zootecnia; </valor>
       <valor>0=&gt;Aleatório;1=&gt;Custom_petrus;2=&gt;Eggplant;3=&gt;Redmond;4=&gt;Ui-lightness;5=&gt;Black-tie;6=&gt;Sunny;7=&gt;Pepper-grinder;8=&gt;Dot-luv;9=&gt;Ui-tolook;10=&gt;Blitzer;11=&gt;Petrusedu;12=&gt;Petrusedu_alternate;13=&gt;Bluestyle;14=&gt;Flick;15=&gt;Humanity;16=&gt;Overcast;17=&gt;Bluetzer;18=&gt;Fibratec;19=&gt;Remake_bluetzer;20=&gt;South-street;21=&gt;Cupertino;22=&gt;Petrus;</valor>
       <ativo>1</ativo>
       <id>882</id>
+    </row>
+    <row id="1145">
+      <campoid>913</campoid>
+      <metodo>onChange</metodo>
+      <valor>setCampoTurmaDisabled()</valor>
+      <ativo>1</ativo>
+      <id>1145</id>
+    </row>
+    <row id="1146">
+      <campoid>631</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1146</id>
     </row>
   </camposXPropriedades>
 </kernelsys>
