@@ -13,12 +13,9 @@ final class TSqlInsert extends TSqlInstruction {
 		$column = strtolower ( $column );
 		// monta um array indexado pelo nome da coluna
 		
-		if (empty ( $value )) {
-			//se estiver vazio
-			$this->columnValues [$column] = 'null';
-		} else if (is_numeric ( $value )) {
+		if (is_numeric ( $value )) {
 			//caso seja numero
-			$this->columnValues [$column] = $value;
+			$this->columnValues [$column] = "$value";
 		} else if (is_string ( $value )) {
 			// adiciona \ em aspas
 			$value = addslashes ( $value );
@@ -30,6 +27,9 @@ final class TSqlInsert extends TSqlInstruction {
 		} else if (isset ( $value )) {
 			// caso seja outro tipo de dado
 			$this->columnValues [$column] = "'$value'";
+		} else if (empty ( $value )) {
+			//se estiver vazio
+			$this->columnValues [$column] = 'null';
 		} else {
 			// caso seja NULL
 			$this->columnValues [$column] = "NULL";
