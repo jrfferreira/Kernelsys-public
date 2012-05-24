@@ -10,8 +10,9 @@ class TDbo_kernelsys {
     private $entity = NULL;
     private $conn   = NULL;
     private $autoClose = true;
+    private $iniFile = 'krs';
 
-    public function __construct($entity = NULL, $val = NULL) {
+    public function __construct($entity = NULL, $val = NULL, $iniFile = NULL) {
 
         if($entity and $entity != "") {
             $this->setEntidade($entity);
@@ -21,7 +22,7 @@ class TDbo_kernelsys {
 
         try {
 
-            TTransaction::open('../'.TOccupant::getPath().'app.config/krs');
+            TTransaction::open('../'.TOccupant::getPath().'app.config/'.$this->iniFile);
             $this->conn = TTransaction::get();
 
         }catch(Exception $e) {
