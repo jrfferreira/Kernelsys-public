@@ -112,6 +112,7 @@ class TDbo_kernelsys {
                     //TTransaction::log($sql->getInstruction());
 
                     //executa sql
+                    print_r($sql->getInstruction());
                     $result= $this->conn->Query($sql->getInstruction());
 
                     // se retornou algum dado
