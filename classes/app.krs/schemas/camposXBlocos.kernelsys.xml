@@ -6121,5 +6121,101 @@
       <formato></formato>
       <ordem>0</ordem>
     </row>
+    <row id="968">
+      <id>968</id>
+      <blocoid>297</blocoid>
+      <campoid>161</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>5</ordem>
+    </row>
+    <row id="969">
+      <id>969</id>
+      <blocoid>297</blocoid>
+      <campoid>881</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>6</ordem>
+    </row>
+    <row id="970">
+      <id>970</id>
+      <blocoid>297</blocoid>
+      <campoid>163</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>7</ordem>
+    </row>
+    <row id="971">
+      <id>971</id>
+      <blocoid>297</blocoid>
+      <campoid>165</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>11</ordem>
+    </row>
+    <row id="973">
+      <id>973</id>
+      <blocoid>297</blocoid>
+      <campoid>206</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>2</ordem>
+    </row>
+    <row id="974">
+      <id>974</id>
+      <blocoid>297</blocoid>
+      <campoid>567</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>13</ordem>
+    </row>
+    <row id="976">
+      <id>976</id>
+      <blocoid>297</blocoid>
+      <campoid>860</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>8</ordem>
+    </row>
+    <row id="977">
+      <id>977</id>
+      <blocoid>297</blocoid>
+      <campoid>861</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>4</ordem>
+    </row>
+    <row id="978">
+      <id>978</id>
+      <blocoid>297</blocoid>
+      <campoid>977</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>1</ordem>
+    </row>
+    <row id="980">
+      <id>980</id>
+      <blocoid>298</blocoid>
+      <campoid>980</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>2</ordem>
+    </row>
+    <row id="981">
+      <id>981</id>
+      <blocoid>298</blocoid>
+      <campoid>981</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>3</ordem>
+    </row>
+    <row id="979">
+      <id>979</id>
+      <blocoid>298</blocoid>
+      <campoid>978</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>1</ordem>
+    </row>
   </camposXBlocos>
 </kernelsys>

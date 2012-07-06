@@ -7011,5 +7011,54 @@ Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>1146</id>
     </row>
+    <row id="1147">
+      <campoid>980</campoid>
+      <metodo>addItems</metodo>
+      <valor>select codigo,nome_razaosocial from  dbpessoas where ativo='1' order by nome_razaosocial</valor>
+      <ativo>1</ativo>
+      <id>1147</id>
+    </row>
+    <row id="1148">
+      <campoid>980</campoid>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <ativo>1</ativo>
+      <id>1148</id>
+    </row>
+    <row id="1149">
+      <campoid>980</campoid>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <ativo>1</ativo>
+      <id>1149</id>
+    </row>
+    <row id="1150">
+      <campoid>981</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1150</id>
+    </row>
+    <row id="1151">
+      <campoid>981</campoid>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <ativo>1</ativo>
+      <id>1151</id>
+    </row>
+    <row id="1152">
+      <campoid>977</campoid>
+      <metodo>addItems</metodo>
+      <valor>C=&gt;Crédito;D=&gt;Débito</valor>
+      <ativo>1</ativo>
+      <id>1152</id>
+    </row>
+    <row id="1153">
+      <campoid>977</campoid>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <ativo>1</ativo>
+      <id>1153</id>
+    </row>
   </camposXPropriedades>
 </kernelsys>

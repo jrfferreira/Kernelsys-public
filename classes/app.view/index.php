@@ -159,7 +159,7 @@ HEADER
 *******************/
 
 .login-form .header {
-	padding: 40px 30px 30px 30px;
+	padding: 25px 10px 17px 10px;
 }
 
 .login-form .header h1 {
@@ -577,7 +577,7 @@ input[type=checkbox]:not(:disabled) ~ label:hover {
     <form action="" method="POST" name="sistema" id="sistema" class="login-form" style="margin:2px; ">
 	
 		<div class="header">
-		<h1>Petrus Edu</h1>
+		<h1><img src="app.images/logo.png"/></h1>
 		<div>Todos os direitos reservados - <a href="http://www.bitup.com.br" target="blank">Bitup</a></div>
 		</div>
 	

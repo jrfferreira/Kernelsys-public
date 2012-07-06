@@ -16381,6 +16381,48 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
+    <row id="977">
+      <id>977</id>
+      <colunadb>tipomovimentacao</colunadb>
+      <campo>tipomovimentacao</campo>
+      <label>Tipo de Movimentação:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>21</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>0</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="978">
+      <id>978</id>
+      <colunadb>codigoconta</colunadb>
+      <campo>codigoconta</campo>
+      <label>Cod. Conta:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol></outcontrol>
+      <incontrol></incontrol>
+      <trigger></trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>0</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="295">
       <id>295</id>
       <colunadb>ferias</colunadb>
@@ -16484,6 +16526,48 @@
       <ativo>1</ativo>
       <valornull>0</valornull>
       <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="980">
+      <id>980</id>
+      <colunadb>codigopessoa</colunadb>
+      <campo>codigopessoa</campo>
+      <label>Pessoa:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TCombo</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>0</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="981">
+      <id>981</id>
+      <colunadb>valorreal</colunadb>
+      <campo>valorreal</campo>
+      <label>Valor da conta:</label>
+      <mascara></mascara>
+      <seletor>CLASS_MASCARA_VALOR</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>0</alteravel>
       <autosave>0</autosave>
     </row>
   </campos>

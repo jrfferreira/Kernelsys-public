@@ -2941,5 +2941,50 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
+    <row id="478">
+      <id>478</id>
+      <form>form_estorno</form>
+      <nomeform>Estorno de Caixa</nomeform>
+      <entidade>65</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista></idlista>
+      <formainclude>one</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="480">
+      <id>480</id>
+      <form>form_movimentosEstorno</form>
+      <nomeform>Movimentos da Conta</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai>478</formpai>
+      <idlista>481</idlista>
+      <formainclude>one</formainclude>
+      <dimensao></dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
+    <row id="482">
+      <id>482</id>
+      <form>form_efetivacaoEstorno</form>
+      <nomeform>Efetivação de Estorno</nomeform>
+      <entidade>21</entidade>
+      <ativo>1</ativo>
+      <formpai></formpai>
+      <idlista></idlista>
+      <formainclude>one</formainclude>
+      <dimensao>700;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+    </row>
   </forms>
 </kernelsys>

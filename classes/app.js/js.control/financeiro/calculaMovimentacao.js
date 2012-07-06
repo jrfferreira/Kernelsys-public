@@ -8,6 +8,9 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_caixatroco,c_valor
     c_valorpago = (c_valorpago == null) ? '#valorpago' : '#'+ c_valorpago;
     c_valorcalculado = (c_valorcalculado == null) ? '#valorcalculado' : '#'+ c_valorcalculado;
 
+    if($(c_valorreal).length == 0){
+    	c_valorreal = c_valorpago;
+    }
 
     var valorReal = $(c_valorreal).val() ? $(c_valorreal).val() : '0,00';
     var multaAcrecimo = $(c_multa).val() ? $(c_multa).val() : '0,00';

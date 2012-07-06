@@ -13177,5 +13177,328 @@
       <ordem>0</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="949">
+      <id>949</id>
+      <listaFormId>479</listaFormId>
+      <coluna>codigo</coluna>
+      <label>Cod.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>80</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="950">
+      <id>950</id>
+      <listaFormId>479</listaFormId>
+      <coluna>nomepessoa</coluna>
+      <label>Clientes</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>300</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="947">
+      <id>947</id>
+      <listaFormId>479</listaFormId>
+      <coluna>valorreal</coluna>
+      <label>Valor</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>60</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>6</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="952">
+      <id>952</id>
+      <listaFormId>479</listaFormId>
+      <coluna>tipomovimentacao</coluna>
+      <label>Mov.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>50</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="946">
+      <id>946</id>
+      <listaFormId>479</listaFormId>
+      <coluna>numparcela</coluna>
+      <label>Parcela</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>60</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="945">
+      <id>945</id>
+      <listaFormId>479</listaFormId>
+      <coluna>valornominal</coluna>
+      <label>Valor Nominal</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>90</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="948">
+      <id>948</id>
+      <listaFormId>479</listaFormId>
+      <coluna>vencimento</coluna>
+      <label>Vencimento</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>80</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>7</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="951">
+      <id>951</id>
+      <listaFormId>479</listaFormId>
+      <coluna>statusconta</coluna>
+      <label>Status</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>100</largura>
+      <colfunction>TSetModel,setStatusConta</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>8</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="953">
+      <id>953</id>
+      <listaFormId>481</listaFormId>
+      <coluna>codigo</coluna>
+      <label>Cod.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>110</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>0</ativo>
+    </row>
+    <row id="956">
+      <id>956</id>
+      <listaFormId>481</listaFormId>
+      <coluna>tipomovimentacao</coluna>
+      <label>Mov.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>40</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="954">
+      <id>954</id>
+      <listaFormId>481</listaFormId>
+      <coluna>nomepessoa</coluna>
+      <label>Cliente/Fornecedor</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>200</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>2</ordem>
+      <ativo>0</ativo>
+    </row>
+    <row id="955">
+      <id>955</id>
+      <listaFormId>481</listaFormId>
+      <coluna>numdoc</coluna>
+      <label>Nº Documento</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="957">
+      <id>957</id>
+      <listaFormId>481</listaFormId>
+      <coluna>valorreal</coluna>
+      <label>Valor Nominal</label>
+      <alinhalabel>rigth</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>100</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="959">
+      <id>959</id>
+      <listaFormId>481</listaFormId>
+      <coluna>valorpago</coluna>
+      <label>Valor Pago</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>80</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="958">
+      <id>958</id>
+      <listaFormId>481</listaFormId>
+      <coluna>vencimento</coluna>
+      <label>Data Venc.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>70</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="961">
+      <id>961</id>
+      <listaFormId>481</listaFormId>
+      <coluna>formapag</coluna>
+      <label>Forma Pag</label>
+      <alinhalabel>center </alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>70</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>8</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="960">
+      <id>960</id>
+      <listaFormId>481</listaFormId>
+      <coluna>datacad</coluna>
+      <label>Data Pag</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>70</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>6</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="963">
+      <id>963</id>
+      <listaFormId>481</listaFormId>
+      <coluna>nomeplanoconta</coluna>
+      <label>Plano de Contas</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>150</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>7</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="964">
+      <id>964</id>
+      <listaFormId>481</listaFormId>
+      <coluna>nomeconta</coluna>
+      <label>Origem / Destino</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>150</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>9</ordem>
+      <ativo>1</ativo>
+    </row>
   </listaColunas>
 </kernelsys>

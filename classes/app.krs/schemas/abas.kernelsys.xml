@@ -2341,5 +2341,23 @@
       <impressao>&#13;</impressao>
       <ordem>0</ordem>
     </row>
+    <row id="377">
+      <id>377</id>
+      <idaba>estornoMovimentos</idaba>
+      <nomeaba>Lista de Movimentos</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>1</ordem>
+    </row>
+    <row id="378">
+      <id>378</id>
+      <idaba>estornoDados</idaba>
+      <nomeaba>Informações do Estorno</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>2</ordem>
+    </row>
   </abas>
 </kernelsys>

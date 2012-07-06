@@ -1129,5 +1129,17 @@
       <ordem>15</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="129">
+      <id>129</id>
+      <modulo>estornoCaixa</modulo>
+      <labelmodulo>Estorno de Caixa</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>479</argumento>
+      <form>478</form>
+      <nivel>2</nivel>
+      <moduloprincipal>3</moduloprincipal>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
+    </row>
   </menuModulos>
 </kernelsys>

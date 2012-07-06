@@ -3100,5 +3100,41 @@
       <obapendice></obapendice>
       <idform>476</idform>
     </row>
+    <row id="296">
+      <id>296</id>
+      <blocoid>blocoEstornoMovimento</blocoid>
+      <nomebloco>Movimentos de caixa</nomebloco>
+      <formato>lst</formato>
+      <entidade>21</entidade>
+      <blocoheight>380px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>478</formpai>
+      <obapendice></obapendice>
+      <idform>480</idform>
+    </row>
+    <row id="297">
+      <id>297</id>
+      <blocoid>blocoEstornoDados</blocoid>
+      <nomebloco>Dados do Estorno</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>482</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
+    <row id="298">
+      <id>298</id>
+      <blocoid>blocoEstornoContaInfo</blocoid>
+      <nomebloco>Informações da Conta</nomebloco>
+      <formato>frm</formato>
+      <entidade>0</entidade>
+      <blocoheight>200px</blocoheight>
+      <ativo>1</ativo>
+      <formpai>482</formpai>
+      <obapendice></obapendice>
+      <idform></idform>
+    </row>
   </blocos>
 </kernelsys>

@@ -22,7 +22,111 @@ class TCaixa {
         $this->obsession = new TSession();
         $this->mascara = new TSetMascaras();
     }
-
+    
+    public function apendiceMovimentosEstorno($codigo, $idForm) {
+    
+    	$divq = new TElement('div');
+    	$divq->id = 'ret_setMovimentosEstorno';
+    	$button = new TElement('input');
+    	$button->id = "setMovimentosEstorno";
+    	$button->type = "button";
+    	$button->onclick = "setMovimentosEstorno('ret_setMovimentosEstorno','$idForm')";
+    	$button->class = "ui-state-default ui-corner-all";
+    	$button->style = "font-weight: bolder;";
+    	$button->title = 'Estornar Movimentos selecionados';
+    	$button->value = "Estornar Movimentos selecionados";
+    
+    	$div = new TElement('div');
+    	$div->style = "text-align: center; padding: 5px;";
+    	$div->class = "ui-widget-content";
+    	$div->add($divq);
+    	$div->add($button);
+    	return $div;
+    }
+    /**
+     * Efetivação do estorno
+     * @param $idForm = ID do formulário em questão.
+     */
+    public function setMovimentosEstorno($idForm) {
+    	try {
+    		$transaction = new TDbo();
+    		
+    		$obHeader = new TSetHeader();
+    		$headerForm = $obHeader->getHead('481');
+    		$listaSelecao = $headerForm['listaSelecao'];
+    		
+    		$transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
+    		$critConta = new TCriteria();
+    		$critConta->add(new TFilter('codigo','=',$headerForm['codigoPai']));
+    		$conta = $transaction->select('*',$critConta)->fetchObject();
+    		
+    		$valorTotal = 0;
+    		$obs = "Estorno do(s) Movimento(s):";
+    		if (count($listaSelecao)) {
+    			 $criterioUpdateMov = new TCriteria();
+    			foreach ($listaSelecao as $ch => $vl) {
+    				$filtro = new Tfilter('codigo', '=', $vl);
+    				$filtro->setTipoFiltro('codigos');
+    				$criterioUpdateMov->add($filtro, 'OR');
+    			}
+    			
+    			$transaction->setEntidade(TConstantes::DBCAIXA);
+    			$movimentos = $transaction->select('*',$criterioUpdateMov);
+    			
+    			while($mov = $movimentos->fetchObject()){
+    				if($mov->tipomovimentacao == 'C'){
+    					$valorTotal = $valorTotal - $mov->valorpago;
+    				}else{
+    					$valorTotal = $valorTotal + $mov->valorpago;
+    				}
+    				
+    				$obs .= " \r\n\t - {$mov->codigo};";
+    			}  			
+    			    
+    			if(!$transaction->update(array('statusmovimento' => '4'), $criterioUpdateMov)){
+    				throw new ErrorException("Impossivel concluir.", 1);
+    			}
+    			
+    			$novoMovimento['unidade'] = $conta->unidade;
+    			$novoMovimento['codigoconta'] = $conta->codigo;
+    			$novoMovimento['codigoplanoconta'] = $conta->codigoplanoconta;
+    			$novoMovimento['codigopessoa'] = $conta->codigopessoa;
+    			$novoMovimento['codigotransacao'] = $conta->codigotransacao;
+    			$novoMovimento['codigofuncionario'] = $this->obUser->codigofuncionario;
+    			$novoMovimento['tipomovimentacao'] = ($valorTotal < 0) ? 'D' : 'C';
+    			$novoMovimento['valorreal'] = $conta->valorreal - $valorTotal;
+    			$novoMovimento['valorpago'] = abs($valorTotal);
+    			$novoMovimento['valorentrada'] = abs($valorTotal);
+    			$novoMovimento['datapag'] = date('Y-m-d');
+    			$novoMovimento['statusmovimento'] = 1;
+    			$novoMovimento['statusconta'] =  abs($valorTotal) == $conta->valorreal ? 1 : 3;
+    			$novoMovimento['ativo'] = 1;
+    			$novoMovimento['obs'] = $obs;
+    			    			
+    			$retTransacao = $transaction->insert($novoMovimento);
+    			
+    			$dadosUpdateConta["statusconta"] = $novoMovimento['statusconta'];
+    			$dadosUpdateConta["valorreal"] = $novoMovimento['valorreal'];
+    			$transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
+    			$criteriaUpContas = new TCriteria();
+    			$criteriaUpContas->add(new TFilter('codigo', '=', $conta->codigo));
+    			$exeUpConta = $transaction->update($dadosUpdateConta, $criteriaUpContas);
+    			
+    			if($retTransacao){
+    				$transaction->commit();
+    				return $retTransacao['codigo'];
+    			}else{
+    				throw new ErrorException("Não foi possivel inserir o movimento de caixa para o estorno.", 1);
+    			}
+    			
+    		} else {
+    			throw new ErrorException("É necessário escolher ao menos uma movimentação para estorno.", 1);
+    		}
+    	} catch (Exception $e) {
+    		$transaction->rollback();
+    		new setException($e, 2);
+    	}
+    }
     /**
      * Retorna o movimento de caixa solicitado com todas as colunuas por padrão
      * param <codigo> $codigoCaixa
