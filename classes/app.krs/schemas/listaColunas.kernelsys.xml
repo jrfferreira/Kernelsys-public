@@ -902,23 +902,6 @@
       <ordem>3</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="76">
-      <id>76</id>
-      <listaFormId>144</listaFormId>
-      <coluna>codigo</coluna>
-      <label>Cod.</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>110</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>1</ordem>
-      <ativo>0</ativo>
-    </row>
     <row id="77">
       <id>77</id>
       <listaFormId>144</listaFormId>
@@ -1377,6 +1360,23 @@
       <link>0</link>
       <ordem>0</ordem>
       <ativo>0</ativo>
+    </row>
+    <row id="76">
+      <id>76</id>
+      <listaFormId>144</listaFormId>
+      <coluna>codigo</coluna>
+      <label>Cod.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>110</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
     </row>
     <row id="178">
       <id>178</id>

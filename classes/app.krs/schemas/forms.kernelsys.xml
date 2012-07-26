@@ -2982,7 +2982,7 @@
       <formainclude>one</formainclude>
       <dimensao>700;500</dimensao>
       <botconcluir>1</botconcluir>
-      <botcancelar>0</botcancelar>
+      <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
     </row>
