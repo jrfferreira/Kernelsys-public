@@ -29,7 +29,7 @@ if($codigoLista) {
     $idLista = $THeader->getHead($codigoLista,'idLista');
     $obsession = new TSession();
     
-    print_r($obsession);
+    //print_r($obsession);
     
     $cabecalho = $obsession->getValue("boxFiltro_$idLista");
 

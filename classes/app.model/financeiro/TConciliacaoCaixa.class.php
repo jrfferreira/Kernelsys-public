@@ -146,31 +146,31 @@ class TConciliacaoCaixa{
                         $rowRet->add('<span class="tlabel">Valor pago:</span> '.$obMasc->setValor($dadosRet['valor_pago']).'<br>');
                         $rowRet->add('<span class="tlabel">Data do pagamento:</span> '.$obMasc->setData($dadosRet['data_pagamento']).'<br>');
                            // valida baixa já realizada da duplicata
+                           
                            if($obDup->statusduplicata == '1' || $obDup->statusduplicata == '9' ){
-
                                 //baixa conta
                                 $obCaixa = new TCaixa();
                                 $obCaixa->baixaContaCaixa($obDup->codigoconta, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $dadosRet['nosso_numero'], 'Boleto Caixa', $obDadosBoleto->codigocontacaixa);
                                 
                                 $retBaixada = new TElement('div');
                                 $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
-                            if($obCaixa){
-                                //modifica status da duplicata baixada
-                                $dboDupUp = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
-                                    $criteriaDupUp = new TCriteria();
-                                    $criteriaDupUp->add(new TFilter('codigo','=',$obDup->codigo));
-                                $dboDupUp->update(array('dataBaixa'=>date("Y-m-d"), 'statusDuplicata'=>2), $criteriaDupUp);
-                                
-                                if($obDup->statusduplicata == '9'){
-                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_BOLETO_INATIVO);
-                                }else{
-                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_CONTA);
-                                }
-                                $rowRet->add($retBaixada);
-                            }else{
-                                print_r($obCaixa);
-                                $rowRet->add($retBaixada);                            	
-                            }
+	                            if($obCaixa){
+	                                //modifica status da duplicata baixada
+	                                $dboDupUp = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
+	                                    $criteriaDupUp = new TCriteria();
+	                                    $criteriaDupUp->add(new TFilter('codigo','=',$obDup->codigo));
+	                                $dboDupUp->update(array('dataBaixa'=>date("Y-m-d"), 'statusDuplicata'=>2), $criteriaDupUp);
+	                                
+	                                if($obDup->statusduplicata == '9'){
+	                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_BOLETO_INATIVO);
+	                                }else{
+	                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_CONTA);
+	                                }
+	                                $rowRet->add($retBaixada);
+	                            }else{
+	                                print_r($obCaixa);
+	                                $rowRet->add($retBaixada);                            	
+	                            }
 
                            }
                            else{

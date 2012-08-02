@@ -105,13 +105,14 @@ class TCaixa {
     			    			
     			$retTransacao = $transaction->insert($novoMovimento);
     			
-    			$dadosUpdateConta["statusconta"] = $novoMovimento['statusconta'];
-    			$dadosUpdateConta["valorreal"] = $novoMovimento['valorreal'];
-    			$transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
-    			$criteriaUpContas = new TCriteria();
-    			$criteriaUpContas->add(new TFilter('codigo', '=', $conta->codigo));
-    			$exeUpConta = $transaction->update($dadosUpdateConta, $criteriaUpContas);
-    			
+    			/* 
+	    			$dadosUpdateConta["statusconta"] = $novoMovimento['statusconta'];
+	    			$dadosUpdateConta["valorreal"] = $novoMovimento['valorreal'];
+	    			$transaction->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
+	    			$criteriaUpContas = new TCriteria();
+	    			$criteriaUpContas->add(new TFilter('codigo', '=', $conta->codigo));
+	    			$exeUpConta = $transaction->update($dadosUpdateConta, $criteriaUpContas);
+    			 */
     			if($retTransacao){
     				$transaction->commit();
     				return $retTransacao['codigo'];
@@ -286,13 +287,14 @@ class TCaixa {
                         }
 
                         //Altera status da conta
+                        /* 
                         $dadosUpdateConta["statusconta"] = $statusConta;
                         $dadosUpdateConta["valorreal"] = $novoValorReal;
                         $obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
                         $criteriaUpContas = new TCriteria();
                         $criteriaUpContas->add(new TFilter('codigo', '=', $obMovimentoCaixa->codigoconta));
                         $exeUpConta = $obTDbo->update($dadosUpdateConta, $criteriaUpContas);
-
+ 						*/
                         $obTDbo->close();
 
                         if (!$exeUpConta) {
