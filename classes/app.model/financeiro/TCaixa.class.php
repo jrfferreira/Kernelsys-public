@@ -11,13 +11,13 @@ class TCaixa {
     private $mascara = NULL;
 
     public function __construct() {
-
         //Retorna Usuario logado===================================
         $this->obUser = new TCheckLogin();
         $this->obUser = $this->obUser->getUser();
         //=========================================================
 
         $this->obTDbo = new TDbo();
+
 
         $this->obsession = new TSession();
         $this->mascara = new TSetMascaras();
@@ -287,14 +287,14 @@ class TCaixa {
                         }
 
                         //Altera status da conta
-                        /* 
+                         
                         $dadosUpdateConta["statusconta"] = $statusConta;
-                        $dadosUpdateConta["valorreal"] = $novoValorReal;
+                        //$dadosUpdateConta["valorreal"] = $novoValorReal;
                         $obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
                         $criteriaUpContas = new TCriteria();
                         $criteriaUpContas->add(new TFilter('codigo', '=', $obMovimentoCaixa->codigoconta));
                         $exeUpConta = $obTDbo->update($dadosUpdateConta, $criteriaUpContas);
- 						*/
+ 						
                         $obTDbo->close();
 
                         if (!$exeUpConta) {

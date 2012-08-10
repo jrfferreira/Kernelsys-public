@@ -746,7 +746,7 @@
     <row id="7">
       <campoid>1</campoid>
       <metodo>setAction</metodo>
-      <valor>onSave&#13;
+      <valor>onSave
 </valor>
       <ativo>0</ativo>
       <id>7</id>
@@ -1790,15 +1790,15 @@
     <row id="285">
       <campoid>298</campoid>
       <metodo>addItems</metodo>
-      <valor>=&gt;;&#13;
-1=&gt;Ens. Fundamental;&#13;
-2=&gt;Ens. Primeira Fase (1º Grau);&#13;
-3=&gt;Ens. Segunda Fase (1º Grau);&#13;
-4=&gt;Ens. 2º Grau;&#13;
-5=&gt;Ens. Superior;&#13;
-6=&gt;Especialização;&#13;
-7=&gt;Mestrado;&#13;
-8=&gt;Doutorado;&#13;
+      <valor>=&gt;;
+1=&gt;Ens. Fundamental;
+2=&gt;Ens. Primeira Fase (1º Grau);
+3=&gt;Ens. Segunda Fase (1º Grau);
+4=&gt;Ens. 2º Grau;
+5=&gt;Ens. Superior;
+6=&gt;Especialização;
+7=&gt;Mestrado;
+8=&gt;Doutorado;
 9=&gt;Pos-Doutorado;</valor>
       <ativo>1</ativo>
       <id>285</id>
@@ -1834,7 +1834,7 @@
     <row id="290">
       <campoid>314</campoid>
       <metodo>setProperty</metodo>
-      <valor>disabled;disabled&#13;
+      <valor>disabled;disabled
 </valor>
       <ativo>1</ativo>
       <id>290</id>
@@ -1877,15 +1877,15 @@
     <row id="296">
       <campoid>59</campoid>
       <metodo>addItems</metodo>
-      <valor>=&gt;;&#13;
-1=&gt;Ens. Fundamental;&#13;
-2=&gt;Ens. Primeira Fase (1º Grau);&#13;
-3=&gt;Ens. Segunda Fase (1º Grau);&#13;
-4=&gt;Ens. 2º Grau;&#13;
-5=&gt;Ens. Superior;&#13;
-6=&gt;Especialização;&#13;
-7=&gt;Mestrado;&#13;
-8=&gt;Doutorado;&#13;
+      <valor>=&gt;;
+1=&gt;Ens. Fundamental;
+2=&gt;Ens. Primeira Fase (1º Grau);
+3=&gt;Ens. Segunda Fase (1º Grau);
+4=&gt;Ens. 2º Grau;
+5=&gt;Ens. Superior;
+6=&gt;Especialização;
+7=&gt;Mestrado;
+8=&gt;Doutorado;
 9=&gt;Pos-Doutorado</valor>
       <ativo>1</ativo>
       <id>296</id>
@@ -2152,7 +2152,7 @@
     <row id="334">
       <campoid>454</campoid>
       <metodo>setSize</metodo>
-      <valor>180&#13;
+      <valor>180
 </valor>
       <ativo>1</ativo>
       <id>334</id>
@@ -3350,15 +3350,15 @@
     <row id="514">
       <campoid>112</campoid>
       <metodo>addItems</metodo>
-      <valor>=&gt;;&#13;
-1=&gt;Ens. Fundamental;&#13;
-2=&gt;Ens. Primeira Fase (1º Grau);&#13;
-3=&gt;Ens. Segunda Fase (1º Grau);&#13;
-4=&gt;Ens. 2º Grau;&#13;
-5=&gt;Ens. Superior;&#13;
-6=&gt;Especialização;&#13;
-7=&gt;Mestrado;&#13;
-8=&gt;Doutorado;&#13;
+      <valor>=&gt;;
+1=&gt;Ens. Fundamental;
+2=&gt;Ens. Primeira Fase (1º Grau);
+3=&gt;Ens. Segunda Fase (1º Grau);
+4=&gt;Ens. 2º Grau;
+5=&gt;Ens. Superior;
+6=&gt;Especialização;
+7=&gt;Mestrado;
+8=&gt;Doutorado;
 9=&gt;Pos-Doutorado</valor>
       <ativo>1</ativo>
       <id>514</id>
@@ -3891,7 +3891,7 @@
     <row id="598">
       <campoid>552</campoid>
       <metodo>addItems</metodo>
-      <valor>1=&gt;Aberta;4=&gt;Concluida;5=&gt;Em Andamento;2=&gt;Adiada;3=&gt;Cancelada&#13;
+      <valor>1=&gt;Aberta;4=&gt;Concluida;5=&gt;Em Andamento;2=&gt;Adiada;3=&gt;Cancelada
 </valor>
       <ativo>1</ativo>
       <id>598</id>
@@ -3906,7 +3906,7 @@
     <row id="600">
       <campoid>554</campoid>
       <metodo>setSize</metodo>
-      <valor>450;40	&#13;
+      <valor>450;40	
 </valor>
       <ativo>1</ativo>
       <id>600</id>
@@ -4103,7 +4103,7 @@
     <row id="737">
       <campoid>727</campoid>
       <metodo>setSize</metodo>
-      <valor>100%;400&#13;
+      <valor>100%;400
 </valor>
       <ativo>1</ativo>
       <id>737</id>
@@ -4111,79 +4111,79 @@
     <row id="623">
       <campoid>578</campoid>
       <metodo>addItems</metodo>
-      <valor>Administrativa=&gt;Administrativa;&#13;
-Administrativo Comercial=&gt;Administrativo Comercial;&#13;
-Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
-Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
-Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
-Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
-Artes=&gt;Artes;&#13;
-Artes Gráficas=&gt;Artes Gráficas;&#13;
-Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
-Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
-Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
-Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
-Biblioteconomia=&gt;Biblioteconomia;&#13;
-Biologia=&gt;Biologia;&#13;
-Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
-Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
-Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
-Compras=&gt;Compras;&#13;
-Contabilidade=&gt;Contabilidade;&#13;
-Departamento Pessoal=&gt;Departamento Pessoal;&#13;
-Desenho Industrial=&gt;Desenho Industrial;&#13;
-Economia=&gt;Economia;&#13;
-Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
-Enfermagem=&gt;Enfermagem;&#13;
-Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
-Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
-Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
-Engenharia de Minas=&gt;Engenharia de Minas;&#13;
-Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
-Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
-Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
-Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
-Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
-Estética Corporal=&gt;Estética Corporal;&#13;
-Farmácia=&gt;Farmácia;&#13;
-Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
-Fisioterapia=&gt;Fisioterapia;&#13;
-Fonoaudiologia=&gt;Fonoaudiologia;&#13;
-Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
-Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
-Industrial=&gt;Industrial;&#13;
-Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
-Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
-Jornalismo=&gt;Jornalismo;&#13;
-Jurídica=&gt;Jurídica;&#13;
-Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
-Manutenção=&gt;Manutenção;&#13;
-Marketing=&gt;Marketing;&#13;
-Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
-Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
-Moda=&gt;Moda;&#13;
-Nutrição=&gt;Nutrição;&#13;
-Odontologia=&gt;Odontologia;&#13;
-Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
-Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
-Qualidade=&gt;Qualidade;&#13;
-Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
-Recursos Humanos=&gt;Recursos Humanos;&#13;
-Relações Internacionais=&gt;Relações Internacionais;&#13;
-Relações Públicas=&gt;Relações Públicas;&#13;
-Restaurante=&gt;Restaurante;&#13;
-Secretariado=&gt;Secretariado;&#13;
-Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
-Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
-Seguros=&gt;Seguros;&#13;
-Serviço Social=&gt;Serviço Social;&#13;
-Técnica=&gt;Técnica;&#13;
-Técnico-Comercial=&gt;Técnico-Comercial;&#13;
-Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
-Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
-Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
-Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
-Transportes=&gt;Transportes;&#13;
+      <valor>Administrativa=&gt;Administrativa;
+Administrativo Comercial=&gt;Administrativo Comercial;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;
+Artes=&gt;Artes;
+Artes Gráficas=&gt;Artes Gráficas;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;
+Biblioteconomia=&gt;Biblioteconomia;
+Biologia=&gt;Biologia;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;
+Comercial/ Vendas=&gt;Comercial/ Vendas;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;
+Compras=&gt;Compras;
+Contabilidade=&gt;Contabilidade;
+Departamento Pessoal=&gt;Departamento Pessoal;
+Desenho Industrial=&gt;Desenho Industrial;
+Economia=&gt;Economia;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;
+Enfermagem=&gt;Enfermagem;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;
+Engenharia de Materiais=&gt;Engenharia de Materiais;
+Engenharia de Minas=&gt;Engenharia de Minas;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;
+Estética Corporal=&gt;Estética Corporal;
+Farmácia=&gt;Farmácia;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;
+Fisioterapia=&gt;Fisioterapia;
+Fonoaudiologia=&gt;Fonoaudiologia;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;
+Industrial=&gt;Industrial;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;
+Jornalismo=&gt;Jornalismo;
+Jurídica=&gt;Jurídica;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;
+Manutenção=&gt;Manutenção;
+Marketing=&gt;Marketing;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;
+Moda=&gt;Moda;
+Nutrição=&gt;Nutrição;
+Odontologia=&gt;Odontologia;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;
+Qualidade=&gt;Qualidade;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;
+Recursos Humanos=&gt;Recursos Humanos;
+Relações Internacionais=&gt;Relações Internacionais;
+Relações Públicas=&gt;Relações Públicas;
+Restaurante=&gt;Restaurante;
+Secretariado=&gt;Secretariado;
+Segurança do Trabalho=&gt;Segurança do Trabalho;
+Segurança Patrimonial=&gt;Segurança Patrimonial;
+Seguros=&gt;Seguros;
+Serviço Social=&gt;Serviço Social;
+Técnica=&gt;Técnica;
+Técnico-Comercial=&gt;Técnico-Comercial;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;
+Terapia Ocupacional=&gt;Terapia Ocupacional;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;
+Transportes=&gt;Transportes;
 Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>623</id>
@@ -4387,79 +4387,79 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="646">
       <campoid>581</campoid>
       <metodo>addItems</metodo>
-      <valor>Administrativa=&gt;Administrativa;&#13;
-Administrativo Comercial=&gt;Administrativo Comercial;&#13;
-Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
-Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
-Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
-Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
-Artes=&gt;Artes;&#13;
-Artes Gráficas=&gt;Artes Gráficas;&#13;
-Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
-Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
-Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
-Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
-Biblioteconomia=&gt;Biblioteconomia;&#13;
-Biologia=&gt;Biologia;&#13;
-Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
-Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
-Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
-Compras=&gt;Compras;&#13;
-Contabilidade=&gt;Contabilidade;&#13;
-Departamento Pessoal=&gt;Departamento Pessoal;&#13;
-Desenho Industrial=&gt;Desenho Industrial;&#13;
-Economia=&gt;Economia;&#13;
-Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
-Enfermagem=&gt;Enfermagem;&#13;
-Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
-Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
-Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
-Engenharia de Minas=&gt;Engenharia de Minas;&#13;
-Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
-Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
-Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
-Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
-Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
-Estética Corporal=&gt;Estética Corporal;&#13;
-Farmácia=&gt;Farmácia;&#13;
-Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
-Fisioterapia=&gt;Fisioterapia;&#13;
-Fonoaudiologia=&gt;Fonoaudiologia;&#13;
-Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
-Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
-Industrial=&gt;Industrial;&#13;
-Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
-Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
-Jornalismo=&gt;Jornalismo;&#13;
-Jurídica=&gt;Jurídica;&#13;
-Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
-Manutenção=&gt;Manutenção;&#13;
-Marketing=&gt;Marketing;&#13;
-Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
-Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
-Moda=&gt;Moda;&#13;
-Nutrição=&gt;Nutrição;&#13;
-Odontologia=&gt;Odontologia;&#13;
-Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
-Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
-Qualidade=&gt;Qualidade;&#13;
-Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
-Recursos Humanos=&gt;Recursos Humanos;&#13;
-Relações Internacionais=&gt;Relações Internacionais;&#13;
-Relações Públicas=&gt;Relações Públicas;&#13;
-Restaurante=&gt;Restaurante;&#13;
-Secretariado=&gt;Secretariado;&#13;
-Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
-Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
-Seguros=&gt;Seguros;&#13;
-Serviço Social=&gt;Serviço Social;&#13;
-Técnica=&gt;Técnica;&#13;
-Técnico-Comercial=&gt;Técnico-Comercial;&#13;
-Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
-Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
-Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
-Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
-Transportes=&gt;Transportes;&#13;
+      <valor>Administrativa=&gt;Administrativa;
+Administrativo Comercial=&gt;Administrativo Comercial;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;
+Artes=&gt;Artes;
+Artes Gráficas=&gt;Artes Gráficas;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;
+Biblioteconomia=&gt;Biblioteconomia;
+Biologia=&gt;Biologia;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;
+Comercial/ Vendas=&gt;Comercial/ Vendas;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;
+Compras=&gt;Compras;
+Contabilidade=&gt;Contabilidade;
+Departamento Pessoal=&gt;Departamento Pessoal;
+Desenho Industrial=&gt;Desenho Industrial;
+Economia=&gt;Economia;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;
+Enfermagem=&gt;Enfermagem;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;
+Engenharia de Materiais=&gt;Engenharia de Materiais;
+Engenharia de Minas=&gt;Engenharia de Minas;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;
+Estética Corporal=&gt;Estética Corporal;
+Farmácia=&gt;Farmácia;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;
+Fisioterapia=&gt;Fisioterapia;
+Fonoaudiologia=&gt;Fonoaudiologia;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;
+Industrial=&gt;Industrial;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;
+Jornalismo=&gt;Jornalismo;
+Jurídica=&gt;Jurídica;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;
+Manutenção=&gt;Manutenção;
+Marketing=&gt;Marketing;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;
+Moda=&gt;Moda;
+Nutrição=&gt;Nutrição;
+Odontologia=&gt;Odontologia;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;
+Qualidade=&gt;Qualidade;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;
+Recursos Humanos=&gt;Recursos Humanos;
+Relações Internacionais=&gt;Relações Internacionais;
+Relações Públicas=&gt;Relações Públicas;
+Restaurante=&gt;Restaurante;
+Secretariado=&gt;Secretariado;
+Segurança do Trabalho=&gt;Segurança do Trabalho;
+Segurança Patrimonial=&gt;Segurança Patrimonial;
+Seguros=&gt;Seguros;
+Serviço Social=&gt;Serviço Social;
+Técnica=&gt;Técnica;
+Técnico-Comercial=&gt;Técnico-Comercial;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;
+Terapia Ocupacional=&gt;Terapia Ocupacional;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;
+Transportes=&gt;Transportes;
 Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>646</id>
@@ -4481,15 +4481,15 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="649">
       <campoid>701</campoid>
       <metodo>addItems</metodo>
-      <valor>=&gt;;&#13;
-1=&gt;Ens. Fundamental;&#13;
-2=&gt;Ens. Primeira Fase (1º Grau);&#13;
-3=&gt;Ens. Segunda Fase (1º Grau);&#13;
-4=&gt;Ens. 2º Grau;&#13;
-5=&gt;Ens. Superior;&#13;
-6=&gt;Especialização;&#13;
-7=&gt;Mestrado;&#13;
-8=&gt;Doutorado;&#13;
+      <valor>=&gt;;
+1=&gt;Ens. Fundamental;
+2=&gt;Ens. Primeira Fase (1º Grau);
+3=&gt;Ens. Segunda Fase (1º Grau);
+4=&gt;Ens. 2º Grau;
+5=&gt;Ens. Superior;
+6=&gt;Especialização;
+7=&gt;Mestrado;
+8=&gt;Doutorado;
 9=&gt;Pos-Doutorado</valor>
       <ativo>1</ativo>
       <id>649</id>
@@ -4735,79 +4735,79 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="661">
       <campoid>582</campoid>
       <metodo>addItems</metodo>
-      <valor>Administrativa=&gt;Administrativa;&#13;
-Administrativo Comercial=&gt;Administrativo Comercial;&#13;
-Administrativo/ Operacional=&gt;Administrativo/ Operacional;&#13;
-Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;&#13;
-Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;&#13;
-Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;&#13;
-Artes=&gt;Artes;&#13;
-Artes Gráficas=&gt;Artes Gráficas;&#13;
-Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;&#13;
-Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;&#13;
-Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;&#13;
-Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;&#13;
-Biblioteconomia=&gt;Biblioteconomia;&#13;
-Biologia=&gt;Biologia;&#13;
-Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;&#13;
-Comercial/ Vendas=&gt;Comercial/ Vendas;&#13;
-Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;&#13;
-Compras=&gt;Compras;&#13;
-Contabilidade=&gt;Contabilidade;&#13;
-Departamento Pessoal=&gt;Departamento Pessoal;&#13;
-Desenho Industrial=&gt;Desenho Industrial;&#13;
-Economia=&gt;Economia;&#13;
-Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;&#13;
-Enfermagem=&gt;Enfermagem;&#13;
-Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;&#13;
-Engenharia de Alimentos=&gt;Engenharia de Alimentos;&#13;
-Engenharia de Materiais=&gt;Engenharia de Materiais;&#13;
-Engenharia de Minas=&gt;Engenharia de Minas;&#13;
-Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;&#13;
-Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;&#13;
-Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;&#13;
-Esportes/ Educação Física=&gt;Esportes/ Educação Física;&#13;
-Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;&#13;
-Estética Corporal=&gt;Estética Corporal;&#13;
-Farmácia=&gt;Farmácia;&#13;
-Financeira/ Administrativa=&gt;Financeira/ Administrativa;&#13;
-Fisioterapia=&gt;Fisioterapia;&#13;
-Fonoaudiologia=&gt;Fonoaudiologia;&#13;
-Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;&#13;
-Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;&#13;
-Industrial=&gt;Industrial;&#13;
-Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;&#13;
-Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;&#13;
-Jornalismo=&gt;Jornalismo;&#13;
-Jurídica=&gt;Jurídica;&#13;
-Logística/ Suprimentos=&gt;Logística/ Suprimentos;&#13;
-Manutenção=&gt;Manutenção;&#13;
-Marketing=&gt;Marketing;&#13;
-Médico/ Hospitalar=&gt;Médico/ Hospitalar;&#13;
-Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;&#13;
-Moda=&gt;Moda;&#13;
-Nutrição=&gt;Nutrição;&#13;
-Odontologia=&gt;Odontologia;&#13;
-Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;&#13;
-Publicidade e Propaganda=&gt;Publicidade e Propaganda;&#13;
-Qualidade=&gt;Qualidade;&#13;
-Química/ Engenharia Química=&gt;Química/ Engenharia Química;&#13;
-Recursos Humanos=&gt;Recursos Humanos;&#13;
-Relações Internacionais=&gt;Relações Internacionais;&#13;
-Relações Públicas=&gt;Relações Públicas;&#13;
-Restaurante=&gt;Restaurante;&#13;
-Secretariado=&gt;Secretariado;&#13;
-Segurança do Trabalho=&gt;Segurança do Trabalho;&#13;
-Segurança Patrimonial=&gt;Segurança Patrimonial;&#13;
-Seguros=&gt;Seguros;&#13;
-Serviço Social=&gt;Serviço Social;&#13;
-Técnica=&gt;Técnica;&#13;
-Técnico-Comercial=&gt;Técnico-Comercial;&#13;
-Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;&#13;
-Terapia Ocupacional=&gt;Terapia Ocupacional;&#13;
-Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;&#13;
-Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;&#13;
-Transportes=&gt;Transportes;&#13;
+      <valor>Administrativa=&gt;Administrativa;
+Administrativo Comercial=&gt;Administrativo Comercial;
+Administrativo/ Operacional=&gt;Administrativo/ Operacional;
+Agronômica/ Engenharia Agronômica/ Agribusiness=&gt;Agronômica/ Engenharia Agronômica/ Agribusiness;
+Agropecuária/ Veterinária/ Agrobusiness=&gt;Agropecuária/ Veterinária/ Agrobusiness;
+Arquitetura/ Decoração/ Urbanismo=&gt;Arquitetura/ Decoração/ Urbanismo;
+Artes=&gt;Artes;
+Artes Gráficas=&gt;Artes Gráficas;
+Atendimento ao Cliente/ Call Center/ Telemarketing=&gt;Atendimento ao Cliente/ Call Center/ Telemarketing;
+Automação Industrial/ Comercial=&gt;Automação Industrial/ Comercial;
+Aviação/ Aeronáutica=&gt;Aviação/ Aeronáutica;
+Bancária/ Private Corporate Bank=&gt;Bancária/ Private Corporate Bank;
+Biblioteconomia=&gt;Biblioteconomia;
+Biologia=&gt;Biologia;
+Biotecnologia/ Biomédicas/ Bioquímica=&gt;Biotecnologia/ Biomédicas/ Bioquímica;
+Comercial/ Vendas=&gt;Comercial/ Vendas;
+Comércio Exterior/ Trade/ Importação/ Exportação=&gt;Comércio Exterior/ Trade/ Importação/ Exportação;
+Compras=&gt;Compras;
+Contabilidade=&gt;Contabilidade;
+Departamento Pessoal=&gt;Departamento Pessoal;
+Desenho Industrial=&gt;Desenho Industrial;
+Economia=&gt;Economia;
+Educação/ Ensino/ Idiomas=&gt;Educação/ Ensino/ Idiomas;
+Enfermagem=&gt;Enfermagem;
+Engenharia Civil/Construção Civil=&gt;Engenharia Civil/Construção Civil;
+Engenharia de Alimentos=&gt;Engenharia de Alimentos;
+Engenharia de Materiais=&gt;Engenharia de Materiais;
+Engenharia de Minas=&gt;Engenharia de Minas;
+Engenharia de Produção/ Industrial=&gt;Engenharia de Produção/ Industrial;
+Engenharia Elétrica/ Eletrônica=&gt;Engenharia Elétrica/ Eletrônica;
+Engenharia Mecânica/ Mecatrônica=&gt;Engenharia Mecânica/ Mecatrônica;
+Esportes/ Educação Física=&gt;Esportes/ Educação Física;
+Estatística /Matemática /Atuária=&gt;Estatística /Matemática /Atuária;
+Estética Corporal=&gt;Estética Corporal;
+Farmácia=&gt;Farmácia;
+Financeira/ Administrativa=&gt;Financeira/ Administrativa;
+Fisioterapia=&gt;Fisioterapia;
+Fonoaudiologia=&gt;Fonoaudiologia;
+Geologia /Engenharia Agrimensura=&gt;Geologia /Engenharia Agrimensura;
+Hotelaria/ Turismo=&gt;Hotelaria/ Turismo;
+Industrial=&gt;Industrial;
+Informática /TI / Engenharia da Computação=&gt;Informática /TI / Engenharia da Computação;
+Internet/ E-Commerce/ E-Business/ Web/ Web Designer=&gt;Internet/ E-Commerce/ E-Business/ Web/ Web Designer;
+Jornalismo=&gt;Jornalismo;
+Jurídica=&gt;Jurídica;
+Logística/ Suprimentos=&gt;Logística/ Suprimentos;
+Manutenção=&gt;Manutenção;
+Marketing=&gt;Marketing;
+Médico/ Hospitalar=&gt;Médico/ Hospitalar;
+Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente=&gt;Meio Ambiente/ Ecologia/ Engenharia de Meio Ambiente;
+Moda=&gt;Moda;
+Nutrição=&gt;Nutrição;
+Odontologia=&gt;Odontologia;
+Psicologia Clínica/ Hospitalar=&gt;Psicologia Clínica/ Hospitalar;
+Publicidade e Propaganda=&gt;Publicidade e Propaganda;
+Qualidade=&gt;Qualidade;
+Química/ Engenharia Química=&gt;Química/ Engenharia Química;
+Recursos Humanos=&gt;Recursos Humanos;
+Relações Internacionais=&gt;Relações Internacionais;
+Relações Públicas=&gt;Relações Públicas;
+Restaurante=&gt;Restaurante;
+Secretariado=&gt;Secretariado;
+Segurança do Trabalho=&gt;Segurança do Trabalho;
+Segurança Patrimonial=&gt;Segurança Patrimonial;
+Seguros=&gt;Seguros;
+Serviço Social=&gt;Serviço Social;
+Técnica=&gt;Técnica;
+Técnico-Comercial=&gt;Técnico-Comercial;
+Telecomunicações/ Engenharia de Telecomunicações=&gt;Telecomunicações/ Engenharia de Telecomunicações;
+Terapia Ocupacional=&gt;Terapia Ocupacional;
+Têxtil/ Engenharia Têxtil=&gt;Têxtil/ Engenharia Têxtil;
+Tradutor/ Intérprete=&gt;Tradutor/ Intérprete;
+Transportes=&gt;Transportes;
 Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>661</id>
@@ -5389,7 +5389,7 @@ Zootecnia=&gt;Zootecnia; </valor>
     <row id="793">
       <campoid>631</campoid>
       <metodo>addItems</metodo>
-      <valor>0 =&gt; -&#13;
+      <valor>0 =&gt; -
 </valor>
       <ativo>1</ativo>
       <id>793</id>

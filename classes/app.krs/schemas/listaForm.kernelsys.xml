@@ -281,34 +281,6 @@
       <ordem>id/desc</ordem>
       <aclimite>1</aclimite>
     </row>
-    <row id="146">
-      <id>146</id>
-      <tipo>pesq</tipo>
-      <formsId>11</formsId>
-      <filtropai>0</filtropai>
-      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,valorpago=valorreal,vencimento=vencimento</pesquisa>
-      <lista>listaPesqCDebito</lista>
-      <label>Contas a Pagar</label>
-      <entidade>65</entidade>
-      <listapai>146</listapai>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <accolunas>0 </accolunas>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>tipomovimentacao/=/AND/D;statusconta/=/AND/1;ativo/=/AND/1</filtro>
-      <ativo>1</ativo>
-      <formainclude>one</formainclude>
-      <trigger></trigger>
-      <incontrol></incontrol>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>id/desc</ordem>
-      <aclimite>1</aclimite>
-    </row>
     <row id="321">
       <id>321</id>
       <tipo>form</tipo>
@@ -358,7 +330,7 @@
       <filtro></filtro>
       <ativo>1</ativo>
       <formainclude>one</formainclude>
-      <trigger>&#13;
+      <trigger>
 </trigger>
       <incontrol></incontrol>
       <acreplicar>0</acreplicar>
@@ -786,34 +758,6 @@
       <ordem>id/desc</ordem>
       <aclimite>1</aclimite>
     </row>
-    <row id="145">
-      <id>145</id>
-      <tipo>pesq</tipo>
-      <formsId>145</formsId>
-      <filtropai>0</filtropai>
-      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento,codigocontacaixa=codigocontacaixa,multaacrecimo=multaacrecimo,formapag=formapag</pesquisa>
-      <lista>listaContasCredito</lista>
-      <label>Contas a Receber</label>
-      <entidade>65</entidade>
-      <listapai>145</listapai>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <accolunas>0 </accolunas>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>ativo/=/AND/1;tipomovimentacao/=/AND/C;statusconta/=/AND/1;statusconta/=/OR/3;statusconta/=/OR/5;</filtro>
-      <ativo>1</ativo>
-      <formainclude>one</formainclude>
-      <trigger></trigger>
-      <incontrol></incontrol>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>id/desc</ordem>
-      <aclimite>1</aclimite>
-    </row>
     <row id="184">
       <id>184</id>
       <tipo>pesq</tipo>
@@ -1234,6 +1178,34 @@
       <ordem>id/desc</ordem>
       <aclimite>1</aclimite>
     </row>
+    <row id="146">
+      <id>146</id>
+      <tipo>pesq</tipo>
+      <formsId>11</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal</pesquisa>
+      <lista>listaPesqCDebito</lista>
+      <label>Contas a Pagar</label>
+      <entidade>65</entidade>
+      <listapai>146</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipomovimentacao/=/AND/D;statusconta/=/AND/1;ativo/=/AND/1</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
     <row id="205">
       <id>205</id>
       <tipo>pesq</tipo>
@@ -1386,7 +1358,7 @@
       <listapai>240</listapai>
       <obapendice>-</obapendice>
       <acfiltro>1</acfiltro>
-      <acincluir>Novo Registro&#13;
+      <acincluir>Novo Registro
 </acincluir>
       <accolunas>0 </accolunas>
       <acdeletar>1</acdeletar>
@@ -1443,7 +1415,7 @@
       <listapai>176</listapai>
       <obapendice>-</obapendice>
       <acfiltro>1</acfiltro>
-      <acincluir>Novo Registro&#13;
+      <acincluir>Novo Registro
 </acincluir>
       <accolunas>0 </accolunas>
       <acdeletar>1</acdeletar>
@@ -1808,7 +1780,7 @@
       <listapai>160</listapai>
       <obapendice>-</obapendice>
       <acfiltro>1</acfiltro>
-      <acincluir>Novo Registro&#13;
+      <acincluir>Novo Registro
 </acincluir>
       <accolunas>0 </accolunas>
       <acdeletar>1</acdeletar>
@@ -3489,7 +3461,7 @@
       <listapai>402</listapai>
       <obapendice>-</obapendice>
       <acfiltro>0</acfiltro>
-      <acincluir>Novo Registro&#13;
+      <acincluir>Novo Registro
 </acincluir>
       <accolunas>0 </accolunas>
       <acdeletar>1</acdeletar>
@@ -3567,7 +3539,7 @@
       <tipo>pesq</tipo>
       <formsId>70</formsId>
       <filtropai>codigoconta</filtropai>
-      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valornominal=valornominal,vencimento=vencimento,&#13;
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valornominal=valornominal,vencimento=vencimento,
 codigocontacd=codigo,codigoPessoacd=codigopessoa,valornominalcd=valornominal,vencimentocd=vencimento</pesquisa>
       <lista>pesqContas</lista>
       <label>Contas</label>
@@ -3975,7 +3947,7 @@ codigocontacd=codigo,codigoPessoacd=codigopessoa,valornominalcd=valornominal,ven
       <acenviar>1</acenviar>
       <filtro>ativo/=/AND/1</filtro>
       <ativo>1</ativo>
-      <formainclude>one&#13;
+      <formainclude>one
 one</formainclude>
       <trigger></trigger>
       <incontrol></incontrol>
@@ -4794,6 +4766,34 @@ one</formainclude>
       <acreplicar>0</acreplicar>
       <acselecao>1</acselecao>
       <ordem>datacad/desc</ordem>
+      <aclimite>1</aclimite>
+    </row>
+    <row id="145">
+      <id>145</id>
+      <tipo>pesq</tipo>
+      <formsId>145</formsId>
+      <filtropai>0</filtropai>
+      <pesquisa>codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a Receber</label>
+      <entidade>65</entidade>
+      <listapai>145</listapai>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <accolunas>0 </accolunas>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>ativo/=/AND/1;tipomovimentacao/=/AND/C;statusconta/=/AND/1;statusconta/=/OR/3;statusconta/=/OR/5;</filtro>
+      <ativo>1</ativo>
+      <formainclude>one</formainclude>
+      <trigger></trigger>
+      <incontrol></incontrol>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>id/desc</ordem>
       <aclimite>1</aclimite>
     </row>
   </listaForm>

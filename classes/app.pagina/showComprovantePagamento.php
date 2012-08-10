@@ -29,6 +29,25 @@ $valor = $TSetModel->setValorMonetario($obMovimentoCaixa->valorpago);
 $formapag = $obMovimentoCaixa->formapag;
 $movimentacao = $obMovimentoCaixa->codigo;
 
+$obTDbo = new TDbo(TConstantes::VIEW_TRANSACOES_CONTAS);
+$criteriaConta = new TCriteria();
+$criteriaConta->add(new TFilter('codigo', '=', $obMovimentoCaixa->codigoconta));
+$retConta = $obTDbo->select('*', $criteriaConta);
+
+$obConta = $retConta->fetchObject();
+
+$obTDbo = new TDbo(TConstantes::VIEW_TRANSACOES_CONTAS);
+$criteriaTransacao = new TCriteria();
+$criteriaTransacao->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
+$retTransacao = $obTDbo->select('count(1) as total', $criteriaTransacao);
+
+$obTransacao = $retTransacao->fetchObject();
+
+$num = $obConta->numparcela;
+$tot = $obTransacao->total;
+$codconta = $obConta->codigo;
+$codtransacao = $obConta->codigotransacao;
+
 $obTDbo = new TDbo(TConstantes::VIEW_UNIDADES);
 $criteriaUnidade = new TCriteria();
 $criteriaUnidade->add(new TFilter('codigo', '=', $obMovimentoCaixa->unidade));
@@ -62,7 +81,7 @@ $assinatura = "Ass.: __________________________";
 
 $titulo = "Comprovante de Pagamento";
 
-$texto = "A <b>{$unidade}</b> confirma que <b>{$nomepessoa}</b> efetivou o pagamento da quantia de <b>{$valor}</b> em {$formapag} na data de <b>{$data}</b> referente à movimentação <b>{$movimentacao}</b>.";
+$texto = "A <b>{$unidade}</b> confirma que <b>{$nomepessoa}</b> efetivou o pagamento da quantia de <b>{$valor}</b> em {$formapag} na data de <b>{$data}</b> referente à movimentação <b>{$movimentacao}</b>.<br/><br/>Parcela: <b>{$num}/{$tot}</b><br/>Conta: {$codconta}<br/>Transação: {$codtransacao}";
 
 
 $tabela = new TTable();

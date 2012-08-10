@@ -1361,23 +1361,6 @@
       <ordem>0</ordem>
       <ativo>0</ativo>
     </row>
-    <row id="76">
-      <id>76</id>
-      <listaFormId>144</listaFormId>
-      <coluna>codigo</coluna>
-      <label>Cod.</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>110</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>1</ordem>
-      <ativo>1</ativo>
-    </row>
     <row id="178">
       <id>178</id>
       <listaFormId>166</listaFormId>
@@ -5577,23 +5560,6 @@
       <ordem>3</ordem>
       <ativo>1</ativo>
     </row>
-    <row id="89">
-      <id>89</id>
-      <listaFormId>144</listaFormId>
-      <coluna>codigotransacao</coluna>
-      <label>Transação</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>80</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <entidadePai>0</entidadePai>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>4</ordem>
-      <ativo>0</ativo>
-    </row>
     <row id="404">
       <id>404</id>
       <listaFormId>145</listaFormId>
@@ -7979,7 +7945,7 @@
       <listaFormId>319</listaFormId>
       <coluna>titulo</coluna>
       <label>Titulo</label>
-      <alinhalabel>left&#13;
+      <alinhalabel>left
 </alinhalabel>
       <alinhadados>left</alinhadados>
       <largura>300</largura>
@@ -13498,6 +13464,40 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>9</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="76">
+      <id>76</id>
+      <listaFormId>144</listaFormId>
+      <coluna>codigo</coluna>
+      <label>Cod. Movimento</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>110</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="89">
+      <id>89</id>
+      <listaFormId>144</listaFormId>
+      <coluna>codigotransacao</coluna>
+      <label>Transação</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>80</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
       <ativo>1</ativo>
     </row>
   </listaColunas>

@@ -13,7 +13,7 @@
       <id>15</id>
       <tabela>dbfuncionarios_professores</tabela>
       <tabelaView>view_funcionarios_professores</tabelaView>
-      <tabpai>dbfuncionarios_professores&#13;
+      <tabpai>dbfuncionarios_professores
 </tabpai>
       <ativo>1</ativo>
       <colunafilho>codigoprofessor</colunafilho>
@@ -396,7 +396,7 @@
     </row>
     <row id="34">
       <id>34</id>
-      <tabela>dbfuncionarios_treinamentos&#13;
+      <tabela>dbfuncionarios_treinamentos
 </tabela>
       <tabelaView>view_funcionarios_treinamentos </tabelaView>
       <tabpai>dbpessoas_funcionarios</tabpai>
