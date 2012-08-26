@@ -631,6 +631,8 @@ class TSetInscricao {
                             if($this->produto['valortaxa'] > 0){
                                 $codigoTransacaoTaxa = $this->setTaxaInscricao($dboPessoa['codigo'], $this->produto['codigo']);
                             }
+                            
+                            
 
                         //instancia dados da inscricao
                         $this->inscricao['codigopessoa'] = $dboPessoa['codigo'];
@@ -641,6 +643,8 @@ class TSetInscricao {
                        // $this->inscricao['tipocurso'] = $this->produto['tipocurso'];
                         $this->inscricao['opcobranca'] = '1';
                         $this->inscricao['ativo'] = '1';
+             			$this->inscricao['vencimentomatricula'] = $this->produto['datainicio'];
+             			$this->inscricao['vencimentotaxa'] = date('d/m/Y',strtotime('+5 days'));
 
                         $this->dbo->setEntidade("dbpessoas_inscricoes");
                         $obInscricao = $this->dbo->insert($this->inscricao);

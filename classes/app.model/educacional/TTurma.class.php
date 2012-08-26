@@ -16,7 +16,7 @@ class TTurma {
      * Retorna um objeto turma complento
      * param <codigo> $codigoturma = codigo da turma
      */
-    public function getTurma($codigoturma, $disciplinas = true) {
+    public function getTurma($codigoturma, $disciplinas = true, $fullObject = true) {
         try {
             $this->obTDbo = new TDbo();
             if($codigoturma) {
@@ -42,7 +42,7 @@ class TTurma {
                 }
 
                 if($disciplinas){
-                    $this->obTurma->disciplinas = $this->getTurmaDiciplinas($codigoturma);
+                    $this->obTurma->disciplinas = $this->getTurmaDiciplinas($codigoturma, null, $fullObject);
                 }
                 
                 $this->obTurma->labelStatus = $this->getStatus($this->obTurma->status);
@@ -252,7 +252,7 @@ class TTurma {
      * Retorna a lista de objetos turmaDiciplinas
      * param <type> $codigoturma
      */
-    public function getTurmaDiciplinas($codigoturma, $cols = NULL) {
+    public function getTurmaDiciplinas($codigoturma, $cols = NULL, $fullObject = true) {
 
         try {
             if($codigoturma) {
@@ -270,7 +270,11 @@ class TTurma {
                 $objs = NULL;
 
                 while($objs = $retTurmaDisciplinas->fetchObject()) {
-                    $retObDisp = $obDiscplina->getTurmaDisciplina($objs->codigo);        
+                    if($objs->codigo){
+                    	$retObDisp = $obDiscplina->getTurmaDisciplina($objs->codigo, $fullObject);        
+                    }else{
+                    	$objs->codigo;
+                    }
                     $disciplinas[$retObDisp->codigo] = $retObDisp;
                 }
 

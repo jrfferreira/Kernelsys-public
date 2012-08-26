@@ -19,7 +19,7 @@ class TTurmaDisciplinas {
      * Retorna o objeto correspondente ao relacionamento Turma x Disciplina
      * param <type> $codigoaluno
      */
-    public function getTurmaDisciplina($codigoTurmaDisciplina) {
+    public function getTurmaDisciplina($codigoTurmaDisciplina, $fullObject = true) {
 
         try {
             if ($codigoTurmaDisciplina) {
@@ -39,8 +39,8 @@ class TTurmaDisciplinas {
                 $obProfessor->nomeacao = (($obProfessor->nomeacao != 'Alfabetizado') || ($obProfessor->nomeacao != 'Graduado')) ? "({$obProfessor->nomeacao})" : "";
                 $obTurmaDisciplinas->nomeprofessor = $obProfessor->nomeprofessor . " {$obProfessor->nomeacao}";
 
-                $obTurmaDisciplinas->aulas = $this->getAula($codigoTurmaDisciplina);
-                $avaliacoes = $this->getAvaliacao($codigoTurmaDisciplina);
+                if($fullObject) $obTurmaDisciplinas->aulas = $this->getAula($codigoTurmaDisciplina);
+                if($fullObject) $avaliacoes = $this->getAvaliacao($codigoTurmaDisciplina);
                 if ($avaliacoes) {
                     foreach ($avaliacoes as $ch => $vl) {
                         if ($vl->codigopai) {

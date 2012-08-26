@@ -49,17 +49,22 @@ class TMatricula {
 	            }
             }
 
+            
+            
              //=========================================================
              // Gera contas na transação da turma
 
-                  $vetorData = explode('-', $obInscricao->vencimentomatricula);
-                  $dataFixa = $vetorData[2];
+			if(!$obInscricao->vencimentomatricula){
+                throw new Exception('A inscrição está incompleta, a data de vencimento da matricula não existe.');				
+			}
+            $vetorData = explode('-', $obInscricao->vencimentomatricula);
+
+            $dataFixa = $vetorData[2];
 
              $codigotransacao = $obInscricao->codigotransacao;
                   
              $trasacao = new TTransacao();
              //$trasacao->setDataFixa($dataFixa);
-			 print_r($obInscricao->vencimentomatricula);
              $trasacao->setVencimento($obInscricao->vencimentomatricula);
              $trasacao->setInstrincoesPagamento($infoDescontos);
 

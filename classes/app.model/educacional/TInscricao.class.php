@@ -29,7 +29,7 @@ class TInscricao{
                //instancia objeto turma
                 if($turma){
                    $obTurma = new TTurma();
-                   $turma = $obTurma->getTurma($obInscrito->codigoturma);
+                   $turma = $obTurma->getTurma($obInscrito->codigoturma, true, false);
                    //$turma->descontos = $obTurma->getTurmaDescontos($obInscrito->codigoturma);
                    $obInscrito->turma = $turma;
                 }
