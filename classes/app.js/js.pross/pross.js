@@ -811,3 +811,19 @@ function populaCampo(campoRet,campoFk,colunaFk,tabela,coluna){
         $('#'+campoRet).val(resposta);
     }
 }
+
+ 
+function selecionaDataCalendario(calendario, title, start, end, allDay, callback) {
+    calendar.fullCalendar('renderEvent',
+        {
+            title: title,
+            start: start,
+            end: end,
+            allDay: allDay
+        },
+        false // make the event "stick"
+    );
+    calendar.fullCalendar('unselect');
+
+    callback();
+}

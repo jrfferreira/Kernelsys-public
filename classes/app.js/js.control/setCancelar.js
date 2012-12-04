@@ -1,6 +1,6 @@
 
 /**
-**manipula o botão comcluir dos formulários padrões
+**manipula o botão concluir dos formulários padrões
 *action =  1 = ativo / 2 = inativo
 */
 function setCancelar(idForm, action){

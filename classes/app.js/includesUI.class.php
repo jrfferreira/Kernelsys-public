@@ -124,6 +124,16 @@ class includesUI{
             $css6->href = $dir."app.ui/css/ui.multiselect.css";
             $css6->rel = "Stylesheet";
 
+            $css7 = new TElement('link');
+            $css7->href= $dir."styles/fullcalendar.css";
+            $css7->type="text/css";
+            $css7->rel="stylesheet";
+
+            $css8 = new TElement('link');
+            $css8->href= $dir."styles/fullcalendar.print.css";
+            $css8->type="text/css";
+            $css8->rel="stylesheet";
+
 
             $icon = new TElement('link');
             $icon->rel="shortcut icon";
