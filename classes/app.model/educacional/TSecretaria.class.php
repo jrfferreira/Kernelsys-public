@@ -874,4 +874,85 @@ class TSecretaria {
         }
      }
 
+     public function viewConsolidacaoNotasFrequencias($codigo = ''){
+        try {
+            $TTurmasDisciplinas = new TTurmaDisciplinas();
+            $obTurmaDisciplinas = $TTurmasDisciplinas->getTurmasDisciplinasAtivas();
+
+            $listaCursos = array();
+
+            foreach ($obTurmaDisciplinas as $ch=>$vl) {
+                if(!$listaCursos[$vl->codigocurso])
+                    $listaCursos[$vl->codigocurso] = array('nome'=>$vl->nomecurso,'turmas'=>array());
+
+                if(!$listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma])
+                    $listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma] = array('nome'=>$vl->nometurma,'disciplinas'=> array());
+
+                if(!$listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigoturmadisciplina])
+                    $listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigoturmadisciplina] = $vl;
+            }
+
+            $container = new TElement('div');
+            $container->id = 'consolidacaoNotasFrequencias';
+            foreach ($listaCursos as $chCurso=>$curso) {
+                $fieldSet = new TElement("fieldset");
+                $fieldSet->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
+                $fieldSet->id ='curso'.$chCurso;
+                $fieldSetLegenda = new TElement("legend");
+                $fieldSetLegenda->class = "ui-widget-content ui-corner-all";
+
+                $campoReq = new TCheckButton("check-curso".$chCurso);
+                $campoReq->setValue($chCurso);
+                $campoReq->setProperty('onChange','$(\'#curso'.$chCurso.' input[type=checkbox]\').attr(\'checked\',$(\'#check-curso'.$chCurso.'\').attr(\'checked\'))');
+
+
+                $div = new TElement("div");
+                $div->id = 'turmas'.$chCurso;
+                $div->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
+                $div->class="ui_bloco_conteudo";
+
+                foreach($listaCursos[$chCurso]['turmas'] as $chTurma => $turma){
+                    $fieldSetTurma = new TElement("fieldset");
+                    $fieldSetTurma->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
+                    $fieldSetTurma->id = 'turma'.$chTurma;
+                    $fieldSetTurmaLegenda = new TElement("legend");
+                    $fieldSetTurmaLegenda->class = "ui-widget-content ui-corner-all";
+
+                    $campoReqTurma = new TCheckButton("check-turma".$chTurma);
+                    $campoReqTurma->setValue($chTurma);
+                    $campoReqTurma->setProperty('onChange','$(\'#turma'.$chTurma.' input[type=checkbox]\').attr(\'checked\',$(\'#check-turma'.$chTurma.'\').attr(\'checked\'))');
+
+                    $fieldSetTurmaLegenda->add($campoReqTurma);
+                    $fieldSetTurmaLegenda->add(" <span class='ui_bloco_legendas'>".$turma['nome']."</span>");
+                    $fieldSetTurma->add($fieldSetTurmaLegenda);
+
+                    foreach($turma['disciplinas'] as $chDisc=>$disciplina){
+                        $divDisc = new TElement('div');
+                        $divDisc->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
+
+                        $campoReqDisc = new TCheckButton("check-disc".$chDisc);
+                        $campoReqDisc->setValue($chDisc);
+
+                        $divDisc->add($campoReqDisc);
+                        $divDisc->add($disciplina->nomedisciplina);
+
+                        $fieldSetTurma->add($divDisc);
+                    }
+
+                    $div->add($fieldSetTurma);
+                }
+
+                $fieldSetLegenda->add($campoReq);
+                $fieldSetLegenda->add(" <span class='ui_bloco_legendas'>".$curso['nome']."</span>");
+                $fieldSet->add($fieldSetLegenda);
+                $fieldSet->add($div);
+                $container->add($fieldSet);
+            }
+            return $container;
+        }catch (Exception $e) {
+            new setException($e);  
+        }   
+     }
+
+     
 }

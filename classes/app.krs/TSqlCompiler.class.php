@@ -20,6 +20,7 @@ class TSqlCompiler extends TKrs {
 		$this->xmlDomain->formatOutput = true;
 				
 		$this->dbo = new TDbo_kernelsys();
+		var_dump($this->dbo);
 		
 	}
 	

@@ -2,258 +2,258 @@
 <kernelsys>
   <listaActions>
     <row id="2">
-      <actionjs>onMarcador</actionjs>
-      <ativo>0</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>2</id>
       <idlista>163</idlista>
-      <img></img>
-      <label>Selecionar</label>
-      <metodoexe></metodoexe>
-      <nameAction>onSelect</nameAction>
-      <ordem>1</ordem>
       <tipocampo>TCheckButton</tipocampo>
+      <nameAction>onSelect</nameAction>
+      <label>Selecionar</label>
+      <actionjs>onMarcador</actionjs>
+      <metodoexe></metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img></img>
+      <ordem>1</ordem>
+      <ativo>0</ativo>
       <tiporetorno>lista</tiporetorno>
     </row>
     <row id="1">
-      <actionjs>prossExe</actionjs>
-      <ativo>0</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>1</id>
       <idlista>147</idlista>
-      <img>new_ico_set.png</img>
-      <label>Efetivar Matrícula</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onMatricula</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onMatricula</nameAction>
+      <label>Efetivar Matrícula</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <ativo>0</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="15">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm>Deseja realmente efetivar a devolução deste livro?</confirm>
       <id>15</id>
       <idlista>269</idlista>
-      <img>new_ico_set.png</img>
-      <label>Devolver</label>
-      <metodoexe>onView</metodoexe>
-      <nameAction>onSetDevolucao</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onSetDevolucao</nameAction>
+      <label>Devolver</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onView</metodoexe>
+      <confirm>Deseja realmente efetivar a devolução deste livro?</confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="9">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>9</id>
       <idlista>185</idlista>
-      <img>new_ico_set.png</img>
-      <label>Lançar Inscrição</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onInscricao</nameAction>
-      <ordem>0</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onInscricao</nameAction>
+      <label>Lançar Inscrição</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="5">
-      <actionjs>prossExe</actionjs>
-      <ativo>0</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>5</id>
       <idlista>182</idlista>
-      <img>new_ico_set.png</img>
-      <label>Visualizar turma</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onViewTurma</nameAction>
-      <ordem>2</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onViewTurma</nameAction>
+      <label>Visualizar turma</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <ativo>0</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="4">
-      <actionjs>selectTurma</actionjs>
-      <ativo>0</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>4</id>
       <idlista>182</idlista>
-      <img>new_ico_set.png</img>
-      <label>Gerenciar Turma</label>
-      <metodoexe></metodoexe>
-      <nameAction>onConfigTurma</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onConfigTurma</nameAction>
+      <label>Gerenciar Turma</label>
+      <actionjs>selectTurma</actionjs>
+      <metodoexe></metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <ativo>0</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="6">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>6</id>
       <idlista>193</idlista>
-      <img>new_ico_config.png</img>
-      <label>Atualizar Diário</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onDiario</nameAction>
-      <ordem>0</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onDiario</nameAction>
+      <label>Atualizar Diário</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="7">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>7</id>
       <idlista>199</idlista>
-      <img>new_ico_config.png</img>
-      <label>Atualizar Diário</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onDiarioCoord</nameAction>
-      <ordem>0</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onDiarioCoord</nameAction>
+      <label>Atualizar Diário</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>0</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="10">
-      <actionjs>showListaPresenca</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>10</id>
       <idlista>217</idlista>
-      <img>new_ico_print.png</img>
-      <label>Lista de Presença</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onListaPresenca</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onListaPresenca</nameAction>
+      <label>Lista de Presença</label>
+      <actionjs>showListaPresenca</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="17">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>17</id>
       <idlista>331</idlista>
-      <img>new_ico_view.png</img>
-      <label>Informações do Livro</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onLivro</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onLivro</nameAction>
+      <label>Informações do Livro</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_view.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="3">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>3</id>
       <idlista>148</idlista>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onViewHistorico</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onViewHistorico</nameAction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="18">
-      <actionjs>showComprovantePagamento</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>18</id>
       <idlista>425</idlista>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Comprovante</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onComprovante</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onComprovante</nameAction>
+      <label>Imprimir Comprovante</label>
+      <actionjs>showComprovantePagamento</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="19">
-      <actionjs>showComprovantePagamento</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>19</id>
       <idlista>144</idlista>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Comprovante</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onComprovante</nameAction>
-      <ordem>2</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onComprovante</nameAction>
+      <label>Imprimir Comprovante</label>
+      <actionjs>showComprovantePagamento</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="20">
-      <actionjs>showBoletoLst</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>20</id>
       <idlista>142</idlista>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Boleto</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>showBoleto</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>showBoleto</nameAction>
+      <label>Imprimir Boleto</label>
+      <actionjs>showBoletoLst</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="21">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>21</id>
       <idlista>457</idlista>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onViewHistFinanceiro</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onViewHistFinanceiro</nameAction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="22">
-      <actionjs>prossExe</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>22</id>
       <idlista>458</idlista>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <metodoexe>onEdit</metodoexe>
-      <nameAction>onViewProcAcademicos</nameAction>
-      <ordem>1</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onViewProcAcademicos</nameAction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
     <row id="23">
-      <actionjs>showAtaAvaliacao</actionjs>
-      <ativo>1</ativo>
-      <campoparam>codigo</campoparam>
-      <confirm></confirm>
       <id>23</id>
       <idlista>217</idlista>
-      <img>new_ico_set.png</img>
-      <label>Ata de Avaliação</label>
-      <metodoexe>onSet</metodoexe>
-      <nameAction>onAtaAvaliacao</nameAction>
-      <ordem>2</ordem>
       <tipocampo></tipocampo>
+      <nameAction>onAtaAvaliacao</nameAction>
+      <label>Ata de Avaliação</label>
+      <actionjs>showAtaAvaliacao</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm></confirm>
+      <campoparam>codigo</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <ativo>1</ativo>
       <tiporetorno>form</tiporetorno>
     </row>
   </listaActions>

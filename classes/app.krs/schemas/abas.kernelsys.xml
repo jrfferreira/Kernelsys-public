@@ -2,2371 +2,2371 @@
 <kernelsys>
   <abas>
     <row id="1">
-      <action>-</action>
       <id>1</id>
       <idaba>dadosPrincipais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="2">
-      <action>-</action>
       <id>2</id>
       <idaba>contato</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contato</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="3">
-      <action>-</action>
       <id>3</id>
       <idaba>formacao_Profissao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação / Profissão</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="4">
-      <action>-</action>
       <id>4</id>
       <idaba>cobranca</idaba>
-      <impressao>1</impressao>
       <nomeaba>Cobrança</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="11">
-      <action>-</action>
       <id>11</id>
       <idaba>disciplina</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="13">
-      <action>-</action>
       <id>13</id>
       <idaba>programa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Programa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="14">
-      <action>-</action>
       <id>14</id>
       <idaba>competencias</idaba>
-      <impressao>1</impressao>
       <nomeaba>Competências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="15">
-      <action>-</action>
       <id>15</id>
       <idaba>bibliografia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Bibliografia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="16">
-      <action>-</action>
       <id>16</id>
       <idaba>metodologia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Metodologia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="17">
-      <action>-</action>
       <id>17</id>
       <idaba>formacaoProfissional</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação profissional</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="18">
-      <action>-</action>
       <id>18</id>
       <idaba>curso</idaba>
-      <impressao>1</impressao>
       <nomeaba>Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="19">
-      <action>-</action>
       <id>19</id>
       <idaba>disciplinas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="20">
-      <action>-</action>
       <id>20</id>
       <idaba>dadosPrincipais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="21">
-      <action>-</action>
       <id>21</id>
       <idaba>disciplinas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="22">
-      <action>-</action>
       <id>22</id>
       <idaba>dadosPessoais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="23">
-      <action>-</action>
       <id>23</id>
       <idaba>dadosPrincipais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="24">
-      <action>-</action>
       <id>24</id>
       <idaba>dados</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="26">
-      <action>-</action>
       <id>26</id>
       <idaba>gerenciamentoDuplicata</idaba>
-      <impressao>1</impressao>
       <nomeaba>Gerenciar Duplicatas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="27">
-      <action>-</action>
       <id>27</id>
       <idaba>obs</idaba>
-      <impressao>1</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="28">
-      <action>-</action>
       <id>28</id>
       <idaba>infoConta</idaba>
-      <impressao>1</impressao>
       <nomeaba>Conta caixa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="29">
-      <action>-</action>
       <id>29</id>
       <idaba>dadosConta</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="30">
-      <action>-</action>
       <id>30</id>
       <idaba>dadosCredito</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados do Crédito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="35">
-      <action>-</action>
       <id>35</id>
       <idaba>abaContasCaixa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas Caixa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="37">
-      <action>-</action>
       <id>37</id>
       <idaba>infoUsuarios</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações de acesso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="39">
-      <action>-</action>
       <id>39</id>
       <idaba>discAvaliacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="42">
-      <action>-</action>
       <id>42</id>
       <idaba>cargo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações do Cargo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="43">
-      <action>-</action>
       <id>43</id>
       <idaba>dado</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="44">
-      <action>-</action>
       <id>44</id>
       <idaba>formacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="45">
-      <action>-</action>
       <id>45</id>
       <idaba>dadosPessoais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="46">
-      <action>-</action>
       <id>46</id>
       <idaba>dadosComplementares</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="47">
-      <action>-</action>
       <id>47</id>
       <idaba>patrimonios</idaba>
-      <impressao>1</impressao>
       <nomeaba>Patrimonios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="48">
-      <action>-</action>
       <id>48</id>
       <idaba>conhecimentos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Competências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="49">
-      <action>-</action>
       <id>49</id>
       <idaba>hierarquia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Hierarquia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="50">
-      <action>-</action>
       <id>50</id>
       <idaba>treinamento</idaba>
-      <impressao>1</impressao>
       <nomeaba>Treinamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="52">
-      <action>-</action>
       <id>52</id>
       <idaba>atributos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Atributos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="53">
-      <action>-</action>
       <id>53</id>
       <idaba>dadosAdministrativos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Administrativos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="54">
-      <action>-</action>
       <id>54</id>
       <idaba>dadosCurriculares</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Curriculares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="55">
-      <action>-</action>
       <id>55</id>
       <idaba>financeiro</idaba>
-      <impressao>1</impressao>
       <nomeaba>Financeiro</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="57">
-      <action>-</action>
       <id>57</id>
       <idaba>filiais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Cadastrar Filial</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="58">
-      <action>-</action>
       <id>58</id>
       <idaba>dadosPrincipais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="59">
-      <action>-</action>
       <id>59</id>
       <idaba>contato</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contato</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="60">
-      <action>-</action>
       <id>60</id>
       <idaba>insumos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Insumos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="61">
-      <action>-</action>
       <id>61</id>
       <idaba>historico</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="63">
-      <action>-</action>
       <id>63</id>
       <idaba>cotacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Cotação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="64">
-      <action>-</action>
       <id>64</id>
       <idaba>gerNegociacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Gerenciar Negociação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="65">
-      <action>-</action>
       <id>65</id>
       <idaba>dadosContrato</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="66">
-      <action>-</action>
       <id>66</id>
       <idaba>dadosUsuario</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="68">
-      <action>-</action>
       <id>68</id>
       <idaba>dadosFerias</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="69">
-      <action>-</action>
       <id>69</id>
       <idaba>dadosSala</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="70">
-      <action>-</action>
       <id>70</id>
       <idaba>patrimoniosHistorico</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="71">
-      <action>-</action>
       <id>71</id>
       <idaba>dadosAreaCurso</idaba>
-      <impressao>1</impressao>
       <nomeaba>Area de Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="73">
-      <action>-</action>
       <id>73</id>
       <idaba>solicitacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="74">
-      <action>-</action>
       <id>74</id>
       <idaba>dadosCompra</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados da Compra</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="77">
-      <action>-</action>
       <id>77</id>
       <idaba>interesses</idaba>
-      <impressao>1</impressao>
       <nomeaba>Cursos Interessados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="80">
-      <action>-</action>
       <id>80</id>
       <idaba>parametrosComercial</idaba>
-      <impressao>1</impressao>
       <nomeaba>Comercial</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="81">
-      <action>-</action>
       <id>81</id>
       <idaba>parametrosSecretaria</idaba>
-      <impressao>1</impressao>
       <nomeaba>Secretaria</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="82">
-      <action>-</action>
       <id>82</id>
       <idaba>parametrosFinanceiro</idaba>
-      <impressao>1</impressao>
       <nomeaba>Financeiro</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="83">
-      <action>-</action>
       <id>83</id>
       <idaba>parametrosAdministrativo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Administrativo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="84">
-      <action>-</action>
       <id>84</id>
       <idaba>parametrosRH</idaba>
-      <impressao>1</impressao>
       <nomeaba>Recursos Humanos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="85">
-      <action>-</action>
       <id>85</id>
       <idaba>parametrosCoordenador</idaba>
-      <impressao>1</impressao>
       <nomeaba>Coordenador</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="86">
-      <action>-</action>
       <id>86</id>
       <idaba>parametrosProfessores</idaba>
-      <impressao>1</impressao>
       <nomeaba>Professores</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="88">
-      <action>-</action>
       <id>88</id>
       <idaba>matdidaticos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Materiais Didáticos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="90">
-      <action>-</action>
       <id>90</id>
       <idaba>historioFechaCaixa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="99">
-      <action>-</action>
       <id>99</id>
       <idaba>histOcorrencia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Ocorrências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="200">
-      <action>-</action>
       <id>200</id>
       <idaba>experienciaCurriculo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Experiência</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="201">
-      <action>-</action>
       <id>201</id>
       <idaba>obsCurriculo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="202">
-      <action>-</action>
       <id>202</id>
       <idaba>resumo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Resumo do Curriculo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="203">
-      <action>-</action>
       <id>203</id>
       <idaba>projetoEscopo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Escopo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="204">
-      <action>-</action>
       <id>204</id>
       <idaba>projetoRecursos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Recursos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="205">
-      <action>-</action>
       <id>205</id>
       <idaba>projetoRiscos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Riscos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="206">
-      <action>-</action>
       <id>206</id>
       <idaba>projetoProduto</idaba>
-      <impressao>1</impressao>
       <nomeaba>Produto Final</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="207">
-      <action>-</action>
       <id>207</id>
       <idaba>projetoRH</idaba>
-      <impressao>1</impressao>
       <nomeaba>R.H.</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="208">
-      <action>-</action>
       <id>208</id>
       <idaba>projetoReceita</idaba>
-      <impressao>1</impressao>
       <nomeaba>Receita</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="209">
-      <action>-</action>
       <id>209</id>
       <idaba>projetoCusto</idaba>
-      <impressao>1</impressao>
       <nomeaba>Custos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="211">
-      <action>-</action>
       <id>211</id>
       <idaba>gerTurmaDisc</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplina</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="212">
-      <action>-</action>
       <id>212</id>
       <idaba>planoaulaDisciplina</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplina</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="213">
-      <action>-</action>
       <id>213</id>
       <idaba>planoaulaConteudo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Conteudo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="214">
-      <action>-</action>
       <id>214</id>
       <idaba>planoaulaRecursos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Recursos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
     </row>
     <row id="215">
-      <action>-</action>
       <id>215</id>
       <idaba>planoaulaMetodologia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Metodologia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
     </row>
     <row id="217">
-      <action>-</action>
       <id>217</id>
       <idaba>abaGeraArquivos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Arquivos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="34">
-      <action>-</action>
       <id>34</id>
       <idaba>turmasDisicplinasRequisitos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="36">
-      <action>-</action>
       <id>36</id>
       <idaba>lanFaltas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lançar Faltas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="210">
-      <action>-</action>
       <id>210</id>
       <idaba>historicoFinanceiro</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Financeiro</nomeaba>
       <obapendice>TSecretaria/viewGetFinanceiro</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="62">
-      <action>-</action>
       <id>62</id>
       <idaba>produtoCaracteristicas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Características</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="216">
-      <action>-</action>
       <id>216</id>
       <idaba>abaGeraDisciplina</idaba>
-      <impressao>1</impressao>
       <nomeaba>Adicionar Disciplinas</nomeaba>
       <obapendice>confirmaGeraDisciplina/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="87">
-      <action>-</action>
       <id>87</id>
       <idaba>conciliaBoletos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Conciliação Bancária</nomeaba>
       <obapendice>TConciliacaoCaixa/setForm</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="93">
-      <action>-</action>
       <id>93</id>
       <idaba>notasAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="56">
-      <action>-</action>
       <id>56</id>
       <idaba>historicoCliente</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="92">
-      <action>-</action>
       <id>92</id>
       <idaba>dadosFolhaPag</idaba>
-      <impressao>1</impressao>
       <nomeaba>Folha de Pagamento</nomeaba>
       <obapendice>setCriterioFolhaPag/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="91">
-      <action>-</action>
       <id>91</id>
       <idaba>mostraDuplicatasAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Boletos</nomeaba>
       <obapendice>TAluno/viewGetFinanceiro</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="33">
-      <action>-</action>
       <id>33</id>
       <idaba>matricula</idaba>
-      <impressao>1</impressao>
       <nomeaba>Gerenciador Matrícula</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="79">
-      <action>-</action>
       <id>79</id>
       <idaba>dre</idaba>
-      <impressao>1</impressao>
       <nomeaba>DRE</nomeaba>
       <obapendice>setPeriodoDRE/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="78">
-      <action>-</action>
       <id>78</id>
       <idaba>balancoPatrimonial</idaba>
-      <impressao>1</impressao>
       <nomeaba>Balanço Patrimonial</nomeaba>
       <obapendice>setDataBP/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="76">
-      <action>-</action>
       <id>76</id>
       <idaba>relatorioCaixaD</idaba>
-      <impressao>1</impressao>
       <nomeaba>Relatório de Despesa</nomeaba>
       <obapendice>relatorioCaixaD/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="75">
-      <action>-</action>
       <id>75</id>
       <idaba>relatorioCaixaR</idaba>
-      <impressao>1</impressao>
       <nomeaba>Relatório de Receita</nomeaba>
       <obapendice>relatorioCaixaR/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="67">
-      <action>-</action>
       <id>67</id>
       <idaba>usuarioPrivilegios</idaba>
-      <impressao>1</impressao>
       <nomeaba>Privilégios</nomeaba>
       <obapendice>TPrivilegios/viewGetModulos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="219">
-      <action>-</action>
       <id>219</id>
       <idaba>estatistica</idaba>
-      <impressao>1</impressao>
       <nomeaba>Estatistica</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="94">
-      <action>-</action>
       <id>94</id>
       <idaba>faltasAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Faltas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="38">
-      <action>-</action>
       <id>38</id>
       <idaba>lanNotas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lançar Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="31">
-      <action>-</action>
       <id>31</id>
       <idaba>contaReceber</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="32">
-      <action>-</action>
       <id>32</id>
       <idaba>contasPagar</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="220">
-      <action>-</action>
       <id>220</id>
       <idaba>lancaExtorno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lançamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="221">
-      <action>-</action>
       <id>221</id>
       <idaba>transac_InfoC</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="222">
-      <action>-</action>
       <id>222</id>
       <idaba>transac_infoD</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="223">
-      <action>-</action>
       <id>223</id>
       <idaba>transac_condC</idaba>
-      <impressao>1</impressao>
       <nomeaba>Condições de Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="225">
-      <action>-</action>
       <id>225</id>
       <idaba>permissaoPessoa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Permissões</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="226">
-      <action>-</action>
       <id>226</id>
       <idaba>transac_condD</idaba>
-      <impressao>1</impressao>
       <nomeaba>Condições de Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="227">
-      <action>-</action>
       <id>227</id>
       <idaba>justFaltas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Justificar Falta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="228">
-      <action>-</action>
       <id>228</id>
       <idaba>dadosProdutos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="229">
-      <action>-</action>
       <id>229</id>
       <idaba>conteudoMinistradoProd</idaba>
-      <impressao>1</impressao>
       <nomeaba>Conteudo Ministrado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="230">
-      <action>-</action>
       <id>230</id>
       <idaba>solicitacaoAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="231">
-      <action>-</action>
       <id>231</id>
       <idaba>departamentoInfo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="232">
-      <action>-</action>
       <id>232</id>
       <idaba>departamentoPessoas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Funcionários</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="233">
-      <action>-</action>
       <id>233</id>
       <idaba>setDisciplinasAlunos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lista de Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="234">
-      <action>-</action>
       <id>234</id>
       <idaba>solicitacaoEncaminhdada</idaba>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="239">
-      <action>-</action>
       <id>239</id>
       <idaba>livrosInfoPrincipais</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="241">
-      <action>-</action>
       <id>241</id>
       <idaba>scoreCardParametrizacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Parametrização</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="244">
-      <action>-</action>
       <id>244</id>
       <idaba>insumoDet</idaba>
-      <impressao>1</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="245">
-      <action>-</action>
       <id>245</id>
       <idaba>abaTiposCurso</idaba>
-      <impressao>1</impressao>
       <nomeaba>Tipos de curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="246">
-      <action>-</action>
       <id>246</id>
       <idaba>miniCurriculo</idaba>
-      <impressao>1</impressao>
       <nomeaba>Curriculo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="249">
-      <action>-</action>
       <id>249</id>
       <idaba>disciplinas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="250">
-      <action>-</action>
       <id>250</id>
       <idaba>questionarioDados</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="251">
-      <action>-</action>
       <id>251</id>
       <idaba>questionarioPerguntas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Questões</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="252">
-      <action>-</action>
       <id>252</id>
       <idaba>questionarioPessoas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Usuários Autorizados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
     </row>
     <row id="253">
-      <action>-</action>
       <id>253</id>
       <idaba>cursoAtivo</idaba>
-      <impressao>0</impressao>
       <nomeaba>Vincular Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="248">
-      <action>-</action>
       <id>248</id>
       <idaba>alunoRequisitos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Pré-Requisitos</nomeaba>
       <obapendice>TAluno/viewSetRequisitos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
     </row>
     <row id="247">
-      <action>-</action>
       <id>247</id>
       <idaba>disciplinasTurma</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>viewDisciplinasTurma/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="243">
-      <action>-</action>
       <id>243</id>
       <idaba>scoreteste</idaba>
-      <impressao>1</impressao>
       <nomeaba>Teste</nomeaba>
       <obapendice>TScoreCard/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="89">
-      <action>-</action>
       <id>89</id>
       <idaba>abaFechamentoCaixa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Fechamento de caixa</nomeaba>
       <obapendice>TFechaCaixa/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="273">
-      <action>-</action>
       <id>273</id>
       <idaba>contasDebito</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações do Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="274">
-      <action>-</action>
       <id>274</id>
       <idaba>listaContasCredito</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações do Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="254">
-      <action>-</action>
       <id>254</id>
       <idaba>setFaltaAlunos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Faltas</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetFaltasAlunos</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="256">
-      <action>-</action>
       <id>256</id>
       <idaba>setNotaAlunos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="240">
-      <action>-</action>
       <id>240</id>
       <idaba>livrosInfoComplementares</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
     </row>
     <row id="257">
-      <action>-</action>
       <id>257</id>
       <idaba>livrosInformacoesSinopse</idaba>
-      <impressao>1</impressao>
       <nomeaba>Sinópse</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="258">
-      <action>-</action>
       <id>258</id>
       <idaba>livrosInformacoesSumario</idaba>
-      <impressao>1</impressao>
       <nomeaba>Sumário</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
     </row>
     <row id="259">
-      <action>-</action>
       <id>259</id>
       <idaba>informacoesPrincipaisCDU</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="5">
-      <action>-</action>
       <id>5</id>
       <idaba>bibliotecaLocacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Locação de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="260">
-      <action>-</action>
       <id>260</id>
       <idaba>bibliotecaLocacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Locação de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="261">
-      <action>-</action>
       <id>261</id>
       <idaba>bibliotecaReserv</idaba>
-      <impressao>1</impressao>
       <nomeaba>Reserva de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="262">
-      <action>-</action>
       <id>262</id>
       <idaba>bibliotecaDevolucao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Devolução de Livros</nomeaba>
       <obapendice>TBiblioteca/viewSetDevolucao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="6">
-      <action>-</action>
       <id>6</id>
       <idaba>prerequisitos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos</nomeaba>
       <obapendice>TMatricula/viewSetRequisitos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="95">
-      <action>-</action>
       <id>95</id>
       <idaba>histAcademicoAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Acadêmico</nomeaba>
       <obapendice>TAluno/viewGetAcademico</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="266">
-      <action>-</action>
       <id>266</id>
       <idaba>dadosConvenio</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados do convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="267">
-      <action>-</action>
       <id>267</id>
       <idaba>pessoaConvenios</idaba>
-      <impressao>1</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="72">
-      <action>-</action>
       <id>72</id>
       <idaba>historicoAcademico</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Acadêmico</nomeaba>
       <obapendice>TSecretaria/viewGetAcademico</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="268">
-      <action>-</action>
       <id>268</id>
       <idaba>orientacoesArquivos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Orientações e Arquivos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
     </row>
     <row id="270">
-      <action>-</action>
       <id>270</id>
       <idaba>prodCaracteristicas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Características</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="271">
-      <action>-</action>
       <id>271</id>
       <idaba>prodInfoComplementares</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="272">
-      <action>-</action>
       <id>272</id>
       <idaba>dadosFuncionarioCaixa</idaba>
-      <impressao>0</impressao>
       <nomeaba>Funcionário Autorizado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="275">
-      <action>-</action>
       <id>275</id>
       <idaba>aba_cobranca</idaba>
-      <impressao>1</impressao>
       <nomeaba>Dados para Cobrança</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="276">
-      <action>-</action>
       <id>276</id>
       <idaba>aba_inforDisciplinasTurma</idaba>
-      <impressao>1</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="277">
-      <action>-</action>
       <id>277</id>
       <idaba>aba_datasDisciplinas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Datas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="278">
-      <action>-</action>
       <id>278</id>
       <idaba>aba_blocoProfAreas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Professores Relacionados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="279">
-      <action>-</action>
       <id>279</id>
       <idaba>aba_blocoParticipantes</idaba>
-      <impressao>1</impressao>
       <nomeaba>Participantes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="280">
-      <action>-</action>
       <id>280</id>
       <idaba>aba_fornecedoresProdutos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="281">
-      <action>-</action>
       <id>281</id>
       <idaba>aba_produtoCotacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Cotação do Produto</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="282">
-      <action>-</action>
       <id>282</id>
       <idaba>aba_blocoClienteFormacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação Acadêmica</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="283">
-      <action>-</action>
       <id>283</id>
       <idaba>aba_blocoListaInteresses</idaba>
-      <impressao>1</impressao>
       <nomeaba>Interesses</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="284">
-      <action>-</action>
       <id>284</id>
       <idaba>aba_matdidaticos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lista de Materiais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="285">
-      <action>-</action>
       <id>285</id>
       <idaba>aba_blocoOcorrencia</idaba>
-      <impressao>1</impressao>
       <nomeaba>Ocorrencia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="286">
-      <action>-</action>
       <id>286</id>
       <idaba>aba_blprojetoRecursos</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="287">
-      <action>-</action>
       <id>287</id>
       <idaba>aba_blprojetoRH</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="288">
-      <action>-</action>
       <id>288</id>
       <idaba>aba_privilegios</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="289">
-      <action>-</action>
       <id>289</id>
       <idaba>aba_blocolistObs</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="290">
-      <action>-</action>
       <id>290</id>
       <idaba>aba_blocoFormacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="291">
-      <action>-</action>
       <id>291</id>
       <idaba>aba_blocoFormProf</idaba>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="292">
-      <action>-</action>
       <id>292</id>
       <idaba>aba_blocoAreasProf</idaba>
-      <impressao>1</impressao>
       <nomeaba>Áreas Relacionadas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="293">
-      <action>-</action>
       <id>293</id>
       <idaba>aba_listaContasNegociacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas a receber</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="294">
-      <action>-</action>
       <id>294</id>
       <idaba>aba_discCursoDisp</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas do Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="295">
-      <action>-</action>
       <id>295</id>
       <idaba>aba_discCurso</idaba>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas do curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="296">
-      <action>-</action>
       <id>296</id>
       <idaba>aba_requisitosCurso</idaba>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos da turma</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="297">
-      <action>-</action>
       <id>297</id>
       <idaba>aba_blprojetoCusto</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="298">
-      <action>-</action>
       <id>298</id>
       <idaba>aba_blocQuestinarioQuestoes</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="299">
-      <action>-</action>
       <id>299</id>
       <idaba>aba_scorecardSentenças</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="300">
-      <action>-</action>
       <id>300</id>
       <idaba>aba_blocoDepartamentoPessoas</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="301">
-      <action>-</action>
       <id>301</id>
       <idaba>aba_blocoListaDiscAluno</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="302">
-      <action>-</action>
       <id>302</id>
       <idaba>aba_listTreinamento</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="303">
-      <action>-</action>
       <id>303</id>
       <idaba>aba_blocoContMinistProf</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="304">
-      <action>-</action>
       <id>304</id>
       <idaba>aba_blJustFalta</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="305">
-      <action>-</action>
       <id>305</id>
       <idaba>aba_blocoContMinistCoord</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="306">
-      <action>-</action>
       <id>306</id>
       <idaba>aba_listContasTransacaoD</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="309">
-      <action>-</action>
       <id>309</id>
       <idaba>aba_blocolistObsProf</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="311">
-      <action>-</action>
       <id>311</id>
       <idaba>aba_blocoContMinistProf</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="312">
-      <action>-</action>
       <id>312</id>
       <idaba>aba_listContasTransacaoC</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="313">
-      <action>-</action>
       <id>313</id>
       <idaba>aba_lstProdutosTransacaoC</idaba>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="314">
-      <action>-</action>
       <id>314</id>
       <idaba>aba_blocPessoaConvenios</idaba>
-      <impressao>1</impressao>
       <nomeaba>Lista de convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="315">
-      <action>-</action>
       <id>315</id>
       <idaba>aba_blocDescProgressivos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Descontos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="316">
-      <action>-</action>
       <id>316</id>
       <idaba>aba_blocOrientacoesArquivos</idaba>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="317">
-      <action>-</action>
       <id>317</id>
       <idaba>aba_lstProdutosTransacaoD</idaba>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="318">
-      <action>-</action>
       <id>318</id>
       <idaba>aba_blocContasDebito</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas a Pagar</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="319">
-      <action>-</action>
       <id>319</id>
       <idaba>aba_cheques</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações do Cheque</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="320">
-      <action>-</action>
       <id>320</id>
       <idaba>aba_detalhamentoCaixa</idaba>
-      <impressao>1</impressao>
       <nomeaba>Informações</nomeaba>
       <obapendice>TCaixa/viewDetalhamentoCaixa</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="321">
-      <action>-</action>
       <id>321</id>
       <idaba>transacaoContasDebito</idaba>
-      <impressao>1</impressao>
       <nomeaba>Contas a pagar</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="323">
-      <action>-</action>
       <id>323</id>
       <idaba>movimentosProgramadosD</idaba>
-      <impressao>0</impressao>
       <nomeaba>Movimentos de débito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="322">
-      <action>-</action>
       <id>322</id>
       <idaba>movimentosProgramadosC</idaba>
-      <impressao>1</impressao>
       <nomeaba>Movimentos de crédito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="324">
-      <action>-</action>
       <id>324</id>
       <idaba>planosdeAulaProfessor</idaba>
-      <impressao>0</impressao>
       <nomeaba>Plano de Aula</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="325">
-      <action>-</action>
       <id>325</id>
       <idaba>infoLivroAluno</idaba>
-      <impressao>0</impressao>
       <nomeaba>Informações do Livro</nomeaba>
       <obapendice>TBiblioteca/viewReserva</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="310">
-      <action>-</action>
       <id>310</id>
       <idaba>aba_blocLancamentoNotas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="255">
-      <action>-</action>
       <id>255</id>
       <idaba>lancamentoNotas</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="263">
-      <action>-</action>
       <id>263</id>
       <idaba>lancamentoAulas</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Aulas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="264">
-      <action>-</action>
       <id>264</id>
       <idaba>obsAlunos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="265">
-      <action>-</action>
       <id>265</id>
       <idaba>lancamentoNotas</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="326">
-      <action>-</action>
       <id>326</id>
       <idaba>informacoesCaixa</idaba>
-      <impressao>0</impressao>
       <nomeaba>Movimentações</nomeaba>
       <obapendice>TCaixa/viewsCaixa</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="327">
-      <action>-</action>
       <id>327</id>
       <idaba>movimentacaoInterna</idaba>
-      <impressao>0</impressao>
       <nomeaba>Transferência</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="328">
-      <action>-</action>
       <id>328</id>
       <idaba>historicoAcademicoCompleto</idaba>
-      <impressao>0</impressao>
       <nomeaba>Histórico Completo</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoCompleto</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="307">
-      <action>-</action>
       <id>307</id>
       <idaba>aba_blocLancamentoNotas</idaba>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="331">
-      <action>-</action>
       <id>331</id>
       <idaba>prof-histAlunos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="330">
-      <action>-</action>
       <id>330</id>
       <idaba>coord-histAlunos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="329">
-      <action>-</action>
       <id>329</id>
       <idaba>sec-histAlunos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="332">
-      <action>-</action>
       <id>332</id>
       <idaba>sec-taxaOcupacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="333">
-      <action>-</action>
       <id>333</id>
       <idaba>coord-taxaOcupacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="334">
-      <action>-</action>
       <id>334</id>
       <idaba>prof-taxaOcupacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="335">
-      <action>-</action>
       <id>335</id>
       <idaba>sec-ProcessosAcademicos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Processos Acadêmicos</nomeaba>
       <obapendice>TSecretaria/viewProcessosAcademicos</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>6</ordem>
     </row>
     <row id="336">
-      <action>-</action>
       <id>336</id>
       <idaba>disciplinasSemelhantes</idaba>
-      <impressao>0</impressao>
       <nomeaba>Disciplinas Semelhantes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>7</ordem>
     </row>
     <row id="337">
-      <action>-</action>
       <id>337</id>
       <idaba>discSemelhante</idaba>
-      <impressao>0</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="338">
-      <action>-</action>
       <id>338</id>
       <idaba>histCaixa-Contas</idaba>
-      <impressao>0</impressao>
       <nomeaba>Movimentações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="339">
-      <action>-</action>
       <id>339</id>
       <idaba>histCaixa-Grafico</idaba>
-      <impressao>0</impressao>
       <nomeaba>Gráfico</nomeaba>
       <obapendice>TCaixa/viewGraficoHistorico</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
     </row>
     <row id="340">
-      <action>-</action>
       <id>340</id>
       <idaba>solicitacao-Atendimento</idaba>
-      <impressao>0</impressao>
       <nomeaba>Atendimento</nomeaba>
       <obapendice>TSecretaria/viewAtendimentoSolicitacao</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
     </row>
     <row id="341">
-      <action>-</action>
       <id>341</id>
       <idaba>historicoMovimentacoes</idaba>
-      <impressao>0</impressao>
       <nomeaba>Hist. Movimentações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>6</ordem>
     </row>
     <row id="342">
-      <action>-</action>
       <id>342</id>
       <idaba>recado</idaba>
-      <impressao>0</impressao>
       <nomeaba>Recado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="343">
-      <action>-</action>
       <id>343</id>
       <idaba>listaAproveitamento</idaba>
-      <impressao>0</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="344">
-      <action>-</action>
       <id>344</id>
       <idaba>listAprovDisc</idaba>
-      <impressao>0</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="345">
-      <action>-</action>
       <id>345</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="346">
-      <action>-</action>
       <id>346</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="357">
-      <action>-</action>
       <id>357</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="356">
-      <action>-</action>
       <id>356</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="355">
-      <action>-</action>
       <id>355</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="354">
-      <action>-</action>
       <id>354</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="352">
-      <action>-</action>
       <id>352</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="351">
-      <action>-</action>
       <id>351</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="350">
-      <action>-</action>
       <id>350</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="349">
-      <action>-</action>
       <id>349</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="347">
-      <action>-</action>
       <id>347</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="353">
-      <action>-</action>
       <id>353</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="348">
-      <action>-</action>
       <id>348</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="358">
-      <action>-</action>
       <id>358</id>
       <idaba>justificativaFalta</idaba>
-      <impressao>0</impressao>
       <nomeaba>Justificativa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="218">
-      <action>-</action>
       <id>218</id>
       <idaba>viewArquivos</idaba>
-      <impressao>1</impressao>
       <nomeaba>Arquivos</nomeaba>
       <obapendice>TAluno/viewArquivos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
     </row>
     <row id="269">
-      <action>-</action>
       <id>269</id>
       <idaba>viewOrientacoes</idaba>
-      <impressao>1</impressao>
       <nomeaba>Orientações</nomeaba>
       <obapendice>TAluno/viewOrientacoes</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
     </row>
     <row id="359">
-      <action>-</action>
       <id>359</id>
       <idaba>avaliacaoCurso</idaba>
-      <impressao>0</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>4</ordem>
     </row>
     <row id="360">
-      <action>-</action>
       <id>360</id>
       <idaba>avaliacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Avaliação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="361">
-      <action>-</action>
       <id>361</id>
       <idaba>descontos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Descontos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
     </row>
     <row id="362">
-      <action>-</action>
       <id>362</id>
       <idaba>detalheDesconto</idaba>
-      <impressao>0</impressao>
       <nomeaba>Informações do Desconto</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="363">
-      <action>-</action>
       <id>363</id>
       <idaba>transacoesConvenios</idaba>
-      <impressao>0</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>3</ordem>
     </row>
     <row id="364">
-      <action>-</action>
       <id>364</id>
       <idaba>transacConvenioAba</idaba>
-      <impressao>0</impressao>
       <nomeaba>Convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="366">
-      <action>-</action>
       <id>366</id>
       <idaba>turmaConvenioAba</idaba>
-      <impressao>0</impressao>
       <nomeaba>Convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="365">
-      <action>-</action>
       <id>365</id>
       <idaba>turmaConvenio</idaba>
-      <impressao>0</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="367">
-      <action>-</action>
       <id>367</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="308">
-      <action>-</action>
       <id>308</id>
       <idaba>aba_dAvaliacao</idaba>
-      <impressao>1</impressao>
       <nomeaba>Avaliações X</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
     </row>
     <row id="368">
-      <action>-</action>
       <id>368</id>
       <idaba>gradeAvaliacoes</idaba>
-      <impressao>0</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="369">
-      <action>-</action>
       <id>369</id>
       <idaba>infoAvaliacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Informações da Avaliação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="370">
-      <action>-</action>
       <id>370</id>
       <idaba>descAvaliacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Descriminação de Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
     </row>
     <row id="40">
-      <action>-</action>
       <id>40</id>
       <idaba>lancamentoAulas</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Aulas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="41">
-      <action>-</action>
       <id>41</id>
       <idaba>obsAlunos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="371">
-      <action>-</action>
       <id>371</id>
       <idaba>descAvaliacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Descriminação de Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="372">
-      <action>-</action>
       <id>372</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="373">
-      <action>-</action>
       <id>373</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="374">
-      <action>-</action>
       <id>374</id>
       <idaba>processoEfetivacao</idaba>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="375">
-      <action>-</action>
       <id>375</id>
       <idaba>configUsuario-AlteracaoSenha</idaba>
-      <impressao>0</impressao>
       <nomeaba>Alteração de Senha</nomeaba>
       <obapendice>TUsuario/apendicePassword</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
     </row>
     <row id="376">
-      <action>-</action>
       <id>376</id>
       <idaba>discProjetoDeCursoConcluido</idaba>
-      <impressao>
-</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>
+</impressao>
       <ordem>0</ordem>
     </row>
     <row id="377">
-      <action>-</action>
       <id>377</id>
       <idaba>estornoMovimentos</idaba>
-      <impressao>0</impressao>
       <nomeaba>Lista de Movimentos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
     </row>
     <row id="378">
-      <action>-</action>
       <id>378</id>
       <idaba>estornoDados</idaba>
-      <impressao>0</impressao>
       <nomeaba>Informações do Estorno</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
     </row>
     <row id="379">
-      <action>-</action>
       <id>379</id>
-      <idaba>dadosPrincipais</idaba>
+      <idaba>aba_consolidNotasFrequencias</idaba>
+      <nomeaba>Consolidação</nomeaba>
+      <obapendice>TSecretaria/viewConsolidacaoNotasFrequencias</obapendice>
+      <action>-</action>
       <impressao>0</impressao>
-      <nomeaba>Dados Principais</nomeaba>
-      <obapendice>-</obapendice>
       <ordem>1</ordem>
     </row>
   </abas>

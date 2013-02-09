@@ -2,44 +2,44 @@
 <kernelsys>
   <listaBnav>
     <row id="1">
-      <argumento>13</argumento>
-      <funcaojs>prossExe</funcaojs>
       <id>1</id>
-      <label> Contas a Receber </label>
       <listaFormId>144</listaFormId>
-      <metodo>onNew</metodo>
       <nome>botContaCredito</nome>
       <tipocampo>TButton</tipocampo>
+      <label> Contas a Receber </label>
+      <metodo>onNew</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>13</argumento>
     </row>
     <row id="2">
-      <argumento>333</argumento>
-      <funcaojs>prossExe</funcaojs>
       <id>2</id>
-      <label> Contas a Pagar </label>
       <listaFormId>144</listaFormId>
-      <metodo>onNew</metodo>
       <nome>botContaDebito</nome>
       <tipocampo>TButton</tipocampo>
+      <label> Contas a Pagar </label>
+      <metodo>onNew</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>333</argumento>
     </row>
     <row id="3">
-      <argumento>383</argumento>
-      <funcaojs>prossExe</funcaojs>
       <id>3</id>
-      <label> Movimentos Programados </label>
       <listaFormId>144</listaFormId>
-      <metodo>onFormOpen</metodo>
       <nome>botMovimentoProgramado</nome>
       <tipocampo>TButton</tipocampo>
+      <label> Movimentos Programados </label>
+      <metodo>onFormOpen</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>383</argumento>
     </row>
     <row id="4">
-      <argumento>404</argumento>
-      <funcaojs>prossExe</funcaojs>
       <id>4</id>
-      <label>Movimentação Interna</label>
       <listaFormId>391</listaFormId>
-      <metodo>onFormOpen</metodo>
       <nome>botMovInterna</nome>
       <tipocampo>TButton</tipocampo>
+      <label>Movimentação Interna</label>
+      <metodo>onFormOpen</metodo>
+      <funcaojs>prossExe</funcaojs>
+      <argumento>404</argumento>
     </row>
   </listaBnav>
 </kernelsys>

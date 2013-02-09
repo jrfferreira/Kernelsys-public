@@ -15,6 +15,31 @@ class TTurmaDisciplinas {
         $this->obTDbo = new TDbo ( );
     }
 
+
+    public function getTurmasDisciplinasAtivas(){
+        $this->obTDbo->setEntidade(TConstantes::VIEW_TURMAS_DISCIPLINAS);
+        $criteria = new TCriteria();
+        $criteria->add(new TFilter('status','=','1'));
+        $retTurmaDisciplina = $this->obTDbo->select('codigo,
+                                                     codigocurso,
+                                                     nomecurso,
+                                                     codigoturma,
+                                                     nometurma,
+                                                     codigodisciplina,
+                                                     nomedisciplina,
+                                                     cargahoraria,
+                                                     nomeprofessor,
+                                                     alunos,
+                                                     codigograde', $criteria);
+        $obTurmaDisciplinas = $retTurmaDisciplina->fetchObject();
+
+        $listaTurmaDisciplinas = array();
+        while ($obTurmaDisciplinas = $retTurmaDisciplina->fetchObject()) {
+            $listaTurmaDisciplinas[] = $obTurmaDisciplinas;
+        }
+        return $listaTurmaDisciplinas;
+    }
+
     /**
      * Retorna o objeto correspondente ao relacionamento Turma x Disciplina
      * param <type> $codigoaluno
@@ -716,6 +741,34 @@ class TTurmaDisciplinas {
                         
                 }
         } catch (Exception $e) {
+            new setException($e, 2);
+        }
+    }
+
+    public function consolidaNotasFrequencias($listaTurmasDisciplinas = array()){
+        try {
+
+            $this->obTDbo->setEntidade(TConstantes::DBALUNOS_DISCIPLINAS);
+            $criteria = new TCriteria();
+            $criteria->add(new TFilter('situacao','=','2'),'AND');  
+            foreach($listaTurmasDisciplinas as $turmadisciplina){
+                $criteria->add(new TFilter('codigoturmadisciplina','=',$turmadisciplina,'99'),'OR');
+            }
+            $retAlunos = $this->obTDbo->select('codigoaluno,codigoturmadisciplina',$criteria);
+
+            $listaAlunos = array();
+            while($obAluno = $retAlunos->fetchObject()){
+                if(!$listaAlunos[$obAluno->codigoturmadisciplina])
+                    $listaAlunos[$obAluno->codigoturmadisciplina] = array();
+                
+                $listaAlunos[$obAluno->codigoturmadisciplina][] = $obAluno->codigoaluno;
+            }                
+
+            $TAluno = new TAluno();
+            foreach($listaAlunos as $turmadisciplina=>$aluno){
+                print_r($turmadisciplina.'=>'.$aluno);
+            }
+        }catch(Exception $e){
             new setException($e, 2);
         }
     }
