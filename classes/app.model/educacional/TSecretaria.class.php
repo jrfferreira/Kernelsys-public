@@ -60,22 +60,22 @@ class TSecretaria {
                 $datagrid->addColumn(new TDataGridColumn('professor', 'Professor', 'center', '200px'));
                 $datagrid->addColumn(new TDataGridColumn('media', 'Média', 'center', '100px'));
                 $datagrid->addColumn(new TDataGridColumn('frequencia', 'Frequência', 'center', '100px'));
-                $datagrid->addColumn(new TDataGridColumn('situacao', 'Situaçao', 'center', '100px'));
+                //$datagrid->addColumn(new TDataGridColumn('situacao', 'Situaçao', 'center', '100px'));
                 $datagrid->createModel('100%');
 
-                foreach($getAcademico->academico->disciplinas as $key => $obDisc) {
-                    $tempDisc['disciplina'] = $obDisc->nomedisciplina;
+                foreach($getAcademico->academico as $key => $obDisc) {
+                    $tempDisc['disciplina'] = $obDisc->disciplina;
                      if($obDisc->cargahoraria){
                         $tempDisc['disciplina'] .= " ({$obDisc->cargahoraria} hs)";
                     }
-                    $tempDisc['professor'] = $obDisc->nomeprofessor;
+                    $tempDisc['professor'] = $obDisc->professor;
                     $media = new TElement('div');
-                    if ($obDisc->aprovacaonotas) {
+                    if ($obDisc->aprovacaomedia) {
                         $media->class = 'ui-state';
                     } else {
                         $media->class = 'red-text';
                     }
-                    $media->add($obDisc->media ? $obDisc->media : '--');
+                    $media->add($obDisc->nota ? $obDisc->nota : '--');
                     $tempDisc['media'] = $media;
                     $frequencia = new TElement('div');
                     if ($obDisc->aprovacaofrequencias) {
@@ -85,7 +85,7 @@ class TSecretaria {
                     }
                     $frequencia->add($obDisc->frequencia ? $obDisc->frequencia."%" : '--');
                     $tempDisc['frequencia'] = $frequencia;
-                    $tempDisc['situacao'] = $obDisc->situacao;
+                    //$tempDisc['situacao'] = $obDisc->situacao;
                     $datagrid->addItem($tempDisc);
                 }
                 $content = new TElement('div');
@@ -888,8 +888,8 @@ class TSecretaria {
                 if(!$listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma])
                     $listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma] = array('nome'=>$vl->nometurma,'disciplinas'=> array());
 
-                if(!$listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigoturmadisciplina])
-                    $listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigoturmadisciplina] = $vl;
+                if(!$listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigo])
+                    $listaCursos[$vl->codigocurso]['turmas'][$vl->codigoturma]['disciplinas'][$vl->codigo] = $vl;
             }
 
             $container = new TElement('div');
@@ -931,6 +931,7 @@ class TSecretaria {
                         $divDisc->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
 
                         $campoReqDisc = new TCheckButton("check-disc".$chDisc);
+                        $campoReqDisc->class = "check-disc";
                         $campoReqDisc->setValue($chDisc);
 
                         $divDisc->add($campoReqDisc);

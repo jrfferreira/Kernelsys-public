@@ -1,8 +1,10 @@
-function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado){
+function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado){
 
     c_valorreal = (c_valorreal == null) ? '#valorreal' :'#'+ c_valorreal;
     c_multa = (c_multa == null) ? '#multaacrecimo' : '#'+ c_multa;
     c_desconto = (c_desconto == null) ? '#desconto' : '#'+ c_desconto;
+    c_juros = (c_juros == null) ? '#juros' : '#'+ c_juros;
+    c_convenios = (c_convenios == null) ? '#convenios' : '#'+ c_convenios;
     c_caixatroco = (c_caixatroco == null) ? '#caixatroco' : '#'+ c_caixatroco;
     c_valorentrada = (c_valorentrada == null) ? '#valorentrada' : '#'+ c_valorentrada;
     c_valorpago = (c_valorpago == null) ? '#valorpago' : '#'+ c_valorpago;
@@ -15,6 +17,8 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_caixatroco,c_valor
     var valorReal = $(c_valorreal).val() ? $(c_valorreal).val() : '0,00';
     var multaAcrecimo = $(c_multa).val() ? $(c_multa).val() : '0,00';
     var desconto = $(c_desconto).val() ? $(c_desconto).val() : '0,00';
+    var juros = $(c_juros).val() ? $(c_juros).val() : '0,00';
+    var convenios = $(c_convenios).val() ? $(c_convenios).val() : '0,00';
     var caixaTroco = $(c_caixatroco).val() ? $(c_caixatroco).val() : '0,00';
     var valorRecebido = $(c_valorentrada).val() ? $(c_valorentrada).val() : '0,00';
     var valorPago = $(c_valorpago).val() ? $(c_valorpago).val() : '0,00';
@@ -40,7 +44,7 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_caixatroco,c_valor
     valorRecebido = parseFloat(valorRecebido.replace(',','.'));
     valorPago = parseFloat(valorPago.replace(',','.'));
 
-    var valorTotal = parseFloat(valorReal) + parseFloat(multaAcrecimo) - parseFloat(desconto);
+    var valorTotal = parseFloat(valorReal) + parseFloat(multaAcrecimo) - parseFloat(desconto) + parseFloat(juros) - parseFloat(convenios);
     valorRecebido = (valorRecebido == 0) ? valorTotal : valorRecebido;
     
     caixaTroco = parseFloat(valorRecebido) - parseFloat(valorTotal);
@@ -52,6 +56,8 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_caixatroco,c_valor
     $(c_valorreal).val(setMoney(valorReal)).blur();
     $(c_multa).val(setMoney(multaAcrecimo)).blur();
     $(c_desconto).val(setMoney(desconto)).blur();
+    $(c_juros).val(setMoney(juros)).blur();
+    $(c_convenios).val(setMoney(convenios)).blur();
     $(c_caixatroco).val(setMoney(caixaTroco)).blur();
     $(c_valorpago).val(setMoney(valorPago)).blur();
 

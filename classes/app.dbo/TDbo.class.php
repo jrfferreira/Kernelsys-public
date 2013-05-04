@@ -136,7 +136,7 @@ class TDbo {
      * author Wagner Borba
      * param colunas = Colunas da entidade a serem retornadas (*) retorna todas
      */
-    public function select($cols, TCriteria $criteria = NULL) {
+    public function select($cols, TCriteria $criteria = NULL, $ignoreDefaultCols = false) {
         try { 	
         	
             if($cols) {
@@ -164,7 +164,7 @@ class TDbo {
                 // verifica se o creterio de seleção foi definido
                 if($criteria) {
                     //adiciona criterio de seleção por unidade automaticamente
-                    if($this->obUser) {
+                    if($this->obUser && !$ignoreDefaultCols) {
                         if($this->obUser->unidade->codigo != 'x' && $this->realUser){
                             $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->codigo,'unidade'),'OR');
                             $criteria->add(new TFilter('unidade','=','x','unidade'),'OR');
@@ -179,6 +179,8 @@ class TDbo {
                 if ($this->conn) {
                     // grava log de select (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
+                    
+                    
                     
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());
@@ -398,12 +400,16 @@ class TDbo {
                     $col = 'codigo';
                 }
 
-                // cria critério de seleção de dados
-                $criteria = new TCriteria;
-                $criteria->add(new TFilter($col, '=', $param));
+                if(is_string($param)){
+                    // cria critério de seleção de dados
+                    $criteria = new TCriteria;
+                    $criteria->add(new TFilter($col, '=', $param));
 
-                // define o critério de seleção baseado no ID
-                $sql->setCriteria($criteria);
+                    // define o critério de seleção baseado no ID
+                    $sql->setCriteria($criteria);                    
+                }else{                    
+                    $sql->setCriteria($param); 
+                }
 
                 // inicia transação
                 if ($this->conn) {
@@ -416,7 +422,6 @@ class TDbo {
 
                     // se retornou algum dado
                     if (!$result) {
-
                         // Lança exeção de erro na execução da sql
                         throw new ErrorException($this->setErro(), 2);
                     }

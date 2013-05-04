@@ -13500,5 +13500,73 @@
       <ordem>9</ordem>
       <ativo>1</ativo>
     </row>
+    <row id="966">
+      <id>966</id>
+      <listaFormId>148</listaFormId>
+      <coluna>email1</coluna>
+      <label>E-mail</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>280</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>15</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="965">
+      <id>965</id>
+      <listaFormId>148</listaFormId>
+      <coluna>tel1</coluna>
+      <label>Telefone</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>TSetModel,setTelefone</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>14</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="967">
+      <id>967</id>
+      <listaFormId>457</listaFormId>
+      <coluna>tel1</coluna>
+      <label>Telefone</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>TSetModel,setTelefone</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>14</ordem>
+      <ativo>1</ativo>
+    </row>
+    <row id="968">
+      <id>968</id>
+      <listaFormId>457</listaFormId>
+      <coluna>email1</coluna>
+      <label>E-mail</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>280</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <entidadePai>0</entidadePai>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>15</ordem>
+      <ativo>1</ativo>
+    </row>
   </listaColunas>
 </kernelsys>

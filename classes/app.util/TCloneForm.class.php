@@ -81,7 +81,7 @@ class TCloneForm {
                     $obNovoRegistro[$ch] = $vl;
                 }
             }
-            $obNovoRegistro['ativo'] = '8';
+            $obNovoRegistro['ativo'] = '1';//'8';
             if ($obNovoRegistro) {
                 $n = $this->clones;
                 while($n > 0) {
@@ -101,7 +101,7 @@ class TCloneForm {
                                             $obNovoRegistroFilho[$ch] = $vl;
                                         }
 
-                                        $obNovoRegistroFilho['ativo'] = '8';
+                                        $obNovoRegistroFilho['ativo'] = '1';//'8';
                                     }
 
                                     $obNovoRegistroFilho[$tabelas['p']->colunafilho] = $novoRegistro['codigo'];

@@ -43,6 +43,18 @@ $retTransacao = $obTDbo->select('count(1) as total', $criteriaTransacao);
 
 $obTransacao = $retTransacao->fetchObject();
 
+$obTDbo = new TDbo(TConstantes::VIEW_PESSOAS_ALUNOS);
+$criteriaTransacaoAluno = new TCriteria();
+$criteriaTransacaoAluno->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
+$retTransacaoAluno = $obTDbo->select('codigo,nometurma,nomecurso', $criteriaTransacaoAluno);
+
+$obTransacaoAluno = $retTransacaoAluno->fetchObject();
+if($obTransacaoAluno && $obTransacaoAluno->codigo){
+    $textoAluno = "<br/>Matrícula do Aluno: ".$obTransacaoAluno->codigo."<br/>Turma: ".$obTransacaoAluno->nometurma." - ".$obTransacaoAluno->nomecurso;
+}else{
+    $textoAluno = "";
+}
+
 $num = $obConta->numparcela;
 $tot = $obTransacao->total;
 $codconta = $obConta->codigo;
@@ -81,7 +93,7 @@ $assinatura = "Ass.: __________________________";
 
 $titulo = "Comprovante de Pagamento";
 
-$texto = "A <b>{$unidade}</b> confirma que <b>{$nomepessoa}</b> efetivou o pagamento da quantia de <b>{$valor}</b> em {$formapag} na data de <b>{$data}</b> referente à movimentação <b>{$movimentacao}</b>.<br/><br/>Parcela: <b>{$num}/{$tot}</b><br/>Conta: {$codconta}<br/>Transação: {$codtransacao}";
+$texto = "A <b>{$unidade}</b> confirma que <b>{$nomepessoa}</b> efetivou o pagamento da quantia de <b>{$valor}</b> em {$formapag} na data de <b>{$data}</b> referente à movimentação de caixa Cod. <b>{$movimentacao}</b>.<br/><br/>Parcela: <b>{$num}/{$tot}</b><br/>Conta: {$codconta}<br/>Transação: {$codtransacao}{$textoAluno}";
 
 
 $tabela = new TTable();

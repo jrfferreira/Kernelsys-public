@@ -34,7 +34,7 @@ class TSetControl {
                     $metodoMain = $metodoArgs[0]."Main";
 
                     if($this->argumento['valor'] !== null and $this->status === true) {
-                        $this->argumento = call_user_func(array($this, $metodoMain),$this->argumento);
+                         $this->argumento = call_user_func(array($this, $metodoMain),$this->argumento);
                     }
                     else {
                         $this->argumento = false;
@@ -308,7 +308,7 @@ class TSetControl {
 	            $crit = new TCriteria();
 	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
 	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
-	            $filter = new TFilter('codigo','=',$headerForm['codigo']);
+	            $filter = new TFilter('codigo','!=',$headerForm['codigo']);
 	            $filter->tipoFiltro = 6;
 	            $crit->add($filter,'AND');
 	

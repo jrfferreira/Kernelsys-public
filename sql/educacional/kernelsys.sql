@@ -2,9 +2,9 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.1.2
--- Dumped by pg_dump version 9.1.2
--- Started on 2012-08-01 22:24:57
+-- Dumped from database version 9.1.8
+-- Dumped by pg_dump version 9.1.8
+-- Started on 2013-02-23 09:14:50 BRT
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -13,7 +13,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- TOC entry 201 (class 3079 OID 11639)
+-- TOC entry 201 (class 3079 OID 11681)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -21,7 +21,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2143 (class 0 OID 0)
+-- TOC entry 2205 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
 --
@@ -31,12 +31,14 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 SET search_path = public, pg_catalog;
 
+SET default_tablespace = '';
+
 SET default_with_oids = false;
 
 --
--- TOC entry 161 (class 1259 OID 19849)
--- Dependencies: 1971 1972 1973 1974 5
--- Name: abas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 161 (class 1259 OID 20601)
+-- Dependencies: 2011 2012 2013 2014 5
+-- Name: abas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE abas (
@@ -51,7 +53,7 @@ CREATE TABLE abas (
 
 
 --
--- TOC entry 162 (class 1259 OID 19856)
+-- TOC entry 162 (class 1259 OID 20608)
 -- Dependencies: 161 5
 -- Name: abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -65,7 +67,7 @@ CREATE SEQUENCE abas_id_seq
 
 
 --
--- TOC entry 2144 (class 0 OID 0)
+-- TOC entry 2206 (class 0 OID 0)
 -- Dependencies: 162
 -- Name: abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -74,18 +76,9 @@ ALTER SEQUENCE abas_id_seq OWNED BY abas.id;
 
 
 --
--- TOC entry 2145 (class 0 OID 0)
--- Dependencies: 162
--- Name: abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('abas_id_seq', 377, true);
-
-
---
--- TOC entry 163 (class 1259 OID 19858)
--- Dependencies: 1976 1977 1978 1979 5
--- Name: blocos; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 163 (class 1259 OID 20610)
+-- Dependencies: 2016 2017 2018 2019 5
+-- Name: blocos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE blocos (
@@ -103,7 +96,7 @@ CREATE TABLE blocos (
 
 
 --
--- TOC entry 2146 (class 0 OID 0)
+-- TOC entry 2207 (class 0 OID 0)
 -- Dependencies: 163
 -- Name: COLUMN blocos.obapendice; Type: COMMENT; Schema: public; Owner: -
 --
@@ -115,7 +108,7 @@ ps. o metodo chamado como apêndice deve retornar sempre um objeto TElement vál
 
 
 --
--- TOC entry 164 (class 1259 OID 19868)
+-- TOC entry 164 (class 1259 OID 20620)
 -- Dependencies: 5 163
 -- Name: blocos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -129,7 +122,7 @@ CREATE SEQUENCE blocos_id_seq
 
 
 --
--- TOC entry 2147 (class 0 OID 0)
+-- TOC entry 2208 (class 0 OID 0)
 -- Dependencies: 164
 -- Name: blocos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -138,18 +131,9 @@ ALTER SEQUENCE blocos_id_seq OWNED BY blocos.id;
 
 
 --
--- TOC entry 2148 (class 0 OID 0)
--- Dependencies: 164
--- Name: blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('blocos_id_seq', 298, true);
-
-
---
--- TOC entry 165 (class 1259 OID 19870)
--- Dependencies: 1981 5
--- Name: blocos_x_abas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 165 (class 1259 OID 20622)
+-- Dependencies: 2021 5
+-- Name: blocos_x_abas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE blocos_x_abas (
@@ -161,7 +145,7 @@ CREATE TABLE blocos_x_abas (
 
 
 --
--- TOC entry 166 (class 1259 OID 19874)
+-- TOC entry 166 (class 1259 OID 20626)
 -- Dependencies: 5 165
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -175,7 +159,7 @@ CREATE SEQUENCE blocos_x_abas_id_seq
 
 
 --
--- TOC entry 2149 (class 0 OID 0)
+-- TOC entry 2209 (class 0 OID 0)
 -- Dependencies: 166
 -- Name: blocos_x_abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -184,18 +168,9 @@ ALTER SEQUENCE blocos_x_abas_id_seq OWNED BY blocos_x_abas.id;
 
 
 --
--- TOC entry 2150 (class 0 OID 0)
--- Dependencies: 166
--- Name: blocos_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('blocos_x_abas_id_seq', 308, true);
-
-
---
--- TOC entry 167 (class 1259 OID 19876)
--- Dependencies: 1983 1984 1985 1986 1987 1988 1989 1990 5
--- Name: campos; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 167 (class 1259 OID 20628)
+-- Dependencies: 2023 2024 2025 2026 2027 2028 2029 2030 5
+-- Name: campos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE campos (
@@ -222,7 +197,7 @@ CREATE TABLE campos (
 
 
 --
--- TOC entry 2151 (class 0 OID 0)
+-- TOC entry 2210 (class 0 OID 0)
 -- Dependencies: 167
 -- Name: COLUMN campos.trigger; Type: COMMENT; Schema: public; Owner: -
 --
@@ -231,7 +206,7 @@ COMMENT ON COLUMN campos.trigger IS 'função a ser executada quando o campo for
 
 
 --
--- TOC entry 2152 (class 0 OID 0)
+-- TOC entry 2211 (class 0 OID 0)
 -- Dependencies: 167
 -- Name: COLUMN campos.autosave; Type: COMMENT; Schema: public; Owner: -
 --
@@ -242,7 +217,7 @@ COMMENT ON COLUMN campos.autosave IS 'Esepecifica se o campo vai ter a capacidad
 
 
 --
--- TOC entry 168 (class 1259 OID 19890)
+-- TOC entry 168 (class 1259 OID 20642)
 -- Dependencies: 5 167
 -- Name: campos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -256,7 +231,7 @@ CREATE SEQUENCE campos_id_seq
 
 
 --
--- TOC entry 2153 (class 0 OID 0)
+-- TOC entry 2212 (class 0 OID 0)
 -- Dependencies: 168
 -- Name: campos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -265,18 +240,9 @@ ALTER SEQUENCE campos_id_seq OWNED BY campos.id;
 
 
 --
--- TOC entry 2154 (class 0 OID 0)
--- Dependencies: 168
--- Name: campos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('campos_id_seq', 981, true);
-
-
---
--- TOC entry 169 (class 1259 OID 19892)
--- Dependencies: 1992 5
--- Name: campos_x_blocos; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 169 (class 1259 OID 20644)
+-- Dependencies: 2032 5
+-- Name: campos_x_blocos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE campos_x_blocos (
@@ -290,7 +256,7 @@ CREATE TABLE campos_x_blocos (
 
 
 --
--- TOC entry 170 (class 1259 OID 19896)
+-- TOC entry 170 (class 1259 OID 20648)
 -- Dependencies: 5 169
 -- Name: campos_x_blocos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -304,7 +270,7 @@ CREATE SEQUENCE campos_x_blocos_id_seq
 
 
 --
--- TOC entry 2155 (class 0 OID 0)
+-- TOC entry 2213 (class 0 OID 0)
 -- Dependencies: 170
 -- Name: campos_x_blocos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -313,16 +279,7 @@ ALTER SEQUENCE campos_x_blocos_id_seq OWNED BY campos_x_blocos.id;
 
 
 --
--- TOC entry 2156 (class 0 OID 0)
--- Dependencies: 170
--- Name: campos_x_blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('campos_x_blocos_id_seq', 981, true);
-
-
---
--- TOC entry 171 (class 1259 OID 19898)
+-- TOC entry 171 (class 1259 OID 20650)
 -- Dependencies: 5
 -- Name: campos_x_propriedades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -336,18 +293,9 @@ CREATE SEQUENCE campos_x_propriedades_id_seq
 
 
 --
--- TOC entry 2157 (class 0 OID 0)
--- Dependencies: 171
--- Name: campos_x_propriedades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('campos_x_propriedades_id_seq', 1153, true);
-
-
---
--- TOC entry 172 (class 1259 OID 19900)
--- Dependencies: 1994 1995 5
--- Name: campos_x_propriedades; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 172 (class 1259 OID 20652)
+-- Dependencies: 2034 2035 5
+-- Name: campos_x_propriedades; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE campos_x_propriedades (
@@ -360,7 +308,7 @@ CREATE TABLE campos_x_propriedades (
 
 
 --
--- TOC entry 2158 (class 0 OID 0)
+-- TOC entry 2214 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: COLUMN campos_x_propriedades.valor; Type: COMMENT; Schema: public; Owner: -
 --
@@ -380,9 +328,9 @@ chaveAlocaDados; ( Informa a chave de onde está armazenado no AlocaDados o valo
 
 
 --
--- TOC entry 173 (class 1259 OID 19908)
--- Dependencies: 1996 1997 5
--- Name: form_button; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 173 (class 1259 OID 20660)
+-- Dependencies: 2036 2037 5
+-- Name: form_button; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE form_button (
@@ -399,7 +347,7 @@ CREATE TABLE form_button (
 
 
 --
--- TOC entry 174 (class 1259 OID 19916)
+-- TOC entry 174 (class 1259 OID 20668)
 -- Dependencies: 5 173
 -- Name: form_button_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -413,7 +361,7 @@ CREATE SEQUENCE form_button_id_seq
 
 
 --
--- TOC entry 2159 (class 0 OID 0)
+-- TOC entry 2215 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: form_button_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -422,18 +370,9 @@ ALTER SEQUENCE form_button_id_seq OWNED BY form_button.id;
 
 
 --
--- TOC entry 2160 (class 0 OID 0)
--- Dependencies: 174
--- Name: form_button_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('form_button_id_seq', 4, true);
-
-
---
--- TOC entry 175 (class 1259 OID 19918)
--- Dependencies: 1999 5
--- Name: form_validacao; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 175 (class 1259 OID 20670)
+-- Dependencies: 2039 5
+-- Name: form_validacao; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE form_validacao (
@@ -443,7 +382,7 @@ CREATE TABLE form_validacao (
 
 
 --
--- TOC entry 176 (class 1259 OID 19922)
+-- TOC entry 176 (class 1259 OID 20674)
 -- Dependencies: 5 175
 -- Name: form_validacao_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -457,7 +396,7 @@ CREATE SEQUENCE form_validacao_id_seq
 
 
 --
--- TOC entry 2161 (class 0 OID 0)
+-- TOC entry 2216 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: form_validacao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -466,18 +405,9 @@ ALTER SEQUENCE form_validacao_id_seq OWNED BY form_validacao.id;
 
 
 --
--- TOC entry 2162 (class 0 OID 0)
--- Dependencies: 176
--- Name: form_validacao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('form_validacao_id_seq', 1, true);
-
-
---
--- TOC entry 177 (class 1259 OID 19924)
--- Dependencies: 2001 2002 5
--- Name: form_x_abas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 177 (class 1259 OID 20676)
+-- Dependencies: 2041 2042 5
+-- Name: form_x_abas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE form_x_abas (
@@ -490,7 +420,7 @@ CREATE TABLE form_x_abas (
 
 
 --
--- TOC entry 178 (class 1259 OID 19929)
+-- TOC entry 178 (class 1259 OID 20681)
 -- Dependencies: 5 177
 -- Name: form_x_abas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -504,7 +434,7 @@ CREATE SEQUENCE form_x_abas_id_seq
 
 
 --
--- TOC entry 2163 (class 0 OID 0)
+-- TOC entry 2217 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: form_x_abas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -513,18 +443,9 @@ ALTER SEQUENCE form_x_abas_id_seq OWNED BY form_x_abas.id;
 
 
 --
--- TOC entry 2164 (class 0 OID 0)
--- Dependencies: 178
--- Name: form_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('form_x_abas_id_seq', 280, true);
-
-
---
--- TOC entry 179 (class 1259 OID 19931)
--- Dependencies: 2004 5
--- Name: form_x_tabelas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 179 (class 1259 OID 20683)
+-- Dependencies: 2044 5
+-- Name: form_x_tabelas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE form_x_tabelas (
@@ -536,7 +457,7 @@ CREATE TABLE form_x_tabelas (
 
 
 --
--- TOC entry 180 (class 1259 OID 19935)
+-- TOC entry 180 (class 1259 OID 20687)
 -- Dependencies: 5 179
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -550,7 +471,7 @@ CREATE SEQUENCE form_x_tabelas_id_seq
 
 
 --
--- TOC entry 2165 (class 0 OID 0)
+-- TOC entry 2218 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: form_x_tabelas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -559,18 +480,9 @@ ALTER SEQUENCE form_x_tabelas_id_seq OWNED BY form_x_tabelas.id;
 
 
 --
--- TOC entry 2166 (class 0 OID 0)
--- Dependencies: 180
--- Name: form_x_tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('form_x_tabelas_id_seq', 211, true);
-
-
---
--- TOC entry 181 (class 1259 OID 19937)
--- Dependencies: 2006 2007 2008 2009 2010 2011 5
--- Name: forms; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 181 (class 1259 OID 20689)
+-- Dependencies: 2046 2047 2048 2049 2050 2051 5
+-- Name: forms; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE forms (
@@ -591,7 +503,7 @@ CREATE TABLE forms (
 
 
 --
--- TOC entry 2167 (class 0 OID 0)
+-- TOC entry 2219 (class 0 OID 0)
 -- Dependencies: 181
 -- Name: COLUMN forms.dimensao; Type: COMMENT; Schema: public; Owner: -
 --
@@ -601,7 +513,7 @@ largura;altura';
 
 
 --
--- TOC entry 2168 (class 0 OID 0)
+-- TOC entry 2220 (class 0 OID 0)
 -- Dependencies: 181
 -- Name: COLUMN forms.botconcluir; Type: COMMENT; Schema: public; Owner: -
 --
@@ -613,7 +525,7 @@ COMMENT ON COLUMN forms.botconcluir IS 'Habilita ou desabilita o botão padrão 
 
 
 --
--- TOC entry 2169 (class 0 OID 0)
+-- TOC entry 2221 (class 0 OID 0)
 -- Dependencies: 181
 -- Name: COLUMN forms.botcancelar; Type: COMMENT; Schema: public; Owner: -
 --
@@ -625,7 +537,7 @@ COMMENT ON COLUMN forms.botcancelar IS 'Habilita ou desabilita o botão padrão 
 
 
 --
--- TOC entry 182 (class 1259 OID 19946)
+-- TOC entry 182 (class 1259 OID 20698)
 -- Dependencies: 5 181
 -- Name: forms_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -639,7 +551,7 @@ CREATE SEQUENCE forms_id_seq
 
 
 --
--- TOC entry 2170 (class 0 OID 0)
+-- TOC entry 2222 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: forms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -648,18 +560,9 @@ ALTER SEQUENCE forms_id_seq OWNED BY forms.id;
 
 
 --
--- TOC entry 2171 (class 0 OID 0)
--- Dependencies: 182
--- Name: forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('forms_id_seq', 482, true);
-
-
---
--- TOC entry 183 (class 1259 OID 19948)
+-- TOC entry 183 (class 1259 OID 20700)
 -- Dependencies: 5
--- Name: info_empresa; Type: TABLE; Schema: public; Owner: -
+-- Name: info_empresa; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE info_empresa (
@@ -679,7 +582,7 @@ CREATE TABLE info_empresa (
 
 
 --
--- TOC entry 184 (class 1259 OID 19954)
+-- TOC entry 184 (class 1259 OID 20706)
 -- Dependencies: 183 5
 -- Name: info_empresa_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -693,7 +596,7 @@ CREATE SEQUENCE info_empresa_id_seq
 
 
 --
--- TOC entry 2172 (class 0 OID 0)
+-- TOC entry 2223 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: info_empresa_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -702,18 +605,9 @@ ALTER SEQUENCE info_empresa_id_seq OWNED BY info_empresa.id;
 
 
 --
--- TOC entry 2173 (class 0 OID 0)
--- Dependencies: 184
--- Name: info_empresa_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('info_empresa_id_seq', 1, true);
-
-
---
--- TOC entry 185 (class 1259 OID 19956)
--- Dependencies: 2014 2015 2016 2017 2018 2019 2020 2021 5
--- Name: lista_actions; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 185 (class 1259 OID 20708)
+-- Dependencies: 2054 2055 2056 2057 2058 2059 2060 2061 5
+-- Name: lista_actions; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE lista_actions (
@@ -734,7 +628,7 @@ CREATE TABLE lista_actions (
 
 
 --
--- TOC entry 186 (class 1259 OID 19970)
+-- TOC entry 186 (class 1259 OID 20722)
 -- Dependencies: 185 5
 -- Name: lista_actions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -748,7 +642,7 @@ CREATE SEQUENCE lista_actions_id_seq
 
 
 --
--- TOC entry 2174 (class 0 OID 0)
+-- TOC entry 2224 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: lista_actions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -757,18 +651,9 @@ ALTER SEQUENCE lista_actions_id_seq OWNED BY lista_actions.id;
 
 
 --
--- TOC entry 2175 (class 0 OID 0)
--- Dependencies: 186
--- Name: lista_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('lista_actions_id_seq', 22, true);
-
-
---
--- TOC entry 187 (class 1259 OID 19972)
--- Dependencies: 2023 2024 5
--- Name: lista_bnav; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 187 (class 1259 OID 20724)
+-- Dependencies: 2063 2064 5
+-- Name: lista_bnav; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE lista_bnav (
@@ -784,7 +669,7 @@ CREATE TABLE lista_bnav (
 
 
 --
--- TOC entry 188 (class 1259 OID 19980)
+-- TOC entry 188 (class 1259 OID 20732)
 -- Dependencies: 187 5
 -- Name: lista_bnav_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -798,7 +683,7 @@ CREATE SEQUENCE lista_bnav_id_seq
 
 
 --
--- TOC entry 2176 (class 0 OID 0)
+-- TOC entry 2225 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: lista_bnav_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -807,18 +692,9 @@ ALTER SEQUENCE lista_bnav_id_seq OWNED BY lista_bnav.id;
 
 
 --
--- TOC entry 2177 (class 0 OID 0)
--- Dependencies: 188
--- Name: lista_bnav_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('lista_bnav_id_seq', 4, true);
-
-
---
--- TOC entry 189 (class 1259 OID 19982)
--- Dependencies: 2026 2027 2028 2029 2030 2031 2032 2033 2034 5
--- Name: lista_colunas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 189 (class 1259 OID 20734)
+-- Dependencies: 2066 2067 2068 2069 2070 2071 2072 2073 2074 5
+-- Name: lista_colunas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE lista_colunas (
@@ -841,7 +717,7 @@ CREATE TABLE lista_colunas (
 
 
 --
--- TOC entry 190 (class 1259 OID 19997)
+-- TOC entry 190 (class 1259 OID 20749)
 -- Dependencies: 5 189
 -- Name: lista_colunas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -855,7 +731,7 @@ CREATE SEQUENCE lista_colunas_id_seq
 
 
 --
--- TOC entry 2178 (class 0 OID 0)
+-- TOC entry 2226 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: lista_colunas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -864,18 +740,9 @@ ALTER SEQUENCE lista_colunas_id_seq OWNED BY lista_colunas.id;
 
 
 --
--- TOC entry 2179 (class 0 OID 0)
--- Dependencies: 190
--- Name: lista_colunas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('lista_colunas_id_seq', 964, true);
-
-
---
--- TOC entry 191 (class 1259 OID 19999)
--- Dependencies: 2036 2037 2038 2039 2040 5
--- Name: lista_fields; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 191 (class 1259 OID 20751)
+-- Dependencies: 2076 2077 2078 2079 2080 5
+-- Name: lista_fields; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE lista_fields (
@@ -890,7 +757,7 @@ CREATE TABLE lista_fields (
 
 
 --
--- TOC entry 192 (class 1259 OID 20007)
+-- TOC entry 192 (class 1259 OID 20759)
 -- Dependencies: 5 191
 -- Name: lista_fields_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -904,7 +771,7 @@ CREATE SEQUENCE lista_fields_id_seq
 
 
 --
--- TOC entry 2180 (class 0 OID 0)
+-- TOC entry 2227 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: lista_fields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -913,18 +780,9 @@ ALTER SEQUENCE lista_fields_id_seq OWNED BY lista_fields.id;
 
 
 --
--- TOC entry 2181 (class 0 OID 0)
--- Dependencies: 192
--- Name: lista_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('lista_fields_id_seq', 1, true);
-
-
---
--- TOC entry 193 (class 1259 OID 20009)
--- Dependencies: 2042 2043 2044 2045 2046 2047 2048 2049 2050 2051 2052 2053 2054 2055 2056 5
--- Name: lista_form; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 193 (class 1259 OID 20761)
+-- Dependencies: 2082 2083 2084 2085 2086 2087 2088 2089 2090 2091 2092 2093 2094 2095 2096 5
+-- Name: lista_form; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE lista_form (
@@ -958,7 +816,7 @@ CREATE TABLE lista_form (
 
 
 --
--- TOC entry 2182 (class 0 OID 0)
+-- TOC entry 2228 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.pesquisa; Type: COMMENT; Schema: public; Owner: -
 --
@@ -969,7 +827,7 @@ campo do formulário=coluna entidade[>coluna label],campo do formulário=coluna 
 
 
 --
--- TOC entry 2183 (class 0 OID 0)
+-- TOC entry 2229 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.filtro; Type: COMMENT; Schema: public; Owner: -
 --
@@ -984,7 +842,7 @@ pos 5 = se o metodo da classe vai receber o idLista ou não
 
 
 --
--- TOC entry 2184 (class 0 OID 0)
+-- TOC entry 2230 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.formainclude; Type: COMMENT; Schema: public; Owner: -
 --
@@ -993,7 +851,7 @@ COMMENT ON COLUMN lista_form.formainclude IS 'define a forma de inclusão da lis
 
 
 --
--- TOC entry 2185 (class 0 OID 0)
+-- TOC entry 2231 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.trigger; Type: COMMENT; Schema: public; Owner: -
 --
@@ -1004,7 +862,7 @@ COMMENT ON COLUMN lista_form.trigger IS 'Ações [JavaScript] a serem executadas
 
 
 --
--- TOC entry 2186 (class 0 OID 0)
+-- TOC entry 2232 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.incontrol; Type: COMMENT; Schema: public; Owner: -
 --
@@ -1015,7 +873,7 @@ padrão de execução TSetControl';
 
 
 --
--- TOC entry 2187 (class 0 OID 0)
+-- TOC entry 2233 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: COLUMN lista_form.ordem; Type: COMMENT; Schema: public; Owner: -
 --
@@ -1025,7 +883,7 @@ Ex: id/desc;datacad';
 
 
 --
--- TOC entry 194 (class 1259 OID 20030)
+-- TOC entry 194 (class 1259 OID 20782)
 -- Dependencies: 193 5
 -- Name: lista_form_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1039,7 +897,7 @@ CREATE SEQUENCE lista_form_id_seq
 
 
 --
--- TOC entry 2188 (class 0 OID 0)
+-- TOC entry 2234 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: lista_form_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1048,16 +906,7 @@ ALTER SEQUENCE lista_form_id_seq OWNED BY lista_form.id;
 
 
 --
--- TOC entry 2189 (class 0 OID 0)
--- Dependencies: 194
--- Name: lista_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('lista_form_id_seq', 335, true);
-
-
---
--- TOC entry 195 (class 1259 OID 20032)
+-- TOC entry 195 (class 1259 OID 20784)
 -- Dependencies: 5
 -- Name: menu_modulos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1071,18 +920,9 @@ CREATE SEQUENCE menu_modulos_id_seq
 
 
 --
--- TOC entry 2190 (class 0 OID 0)
--- Dependencies: 195
--- Name: menu_modulos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('menu_modulos_id_seq', 129, true);
-
-
---
--- TOC entry 196 (class 1259 OID 20034)
--- Dependencies: 2057 2058 2059 2060 2061 2062 5
--- Name: menu_modulos; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 196 (class 1259 OID 20786)
+-- Dependencies: 2097 2098 2099 2100 2101 2102 5
+-- Name: menu_modulos; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE menu_modulos (
@@ -1100,9 +940,9 @@ CREATE TABLE menu_modulos (
 
 
 --
--- TOC entry 197 (class 1259 OID 20043)
--- Dependencies: 2063 2064 5
--- Name: modulos_principais; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 197 (class 1259 OID 20795)
+-- Dependencies: 2103 2104 5
+-- Name: modulos_principais; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE modulos_principais (
@@ -1116,7 +956,7 @@ CREATE TABLE modulos_principais (
 
 
 --
--- TOC entry 198 (class 1259 OID 20048)
+-- TOC entry 198 (class 1259 OID 20800)
 -- Dependencies: 5 197
 -- Name: modulos_principais_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1130,7 +970,7 @@ CREATE SEQUENCE modulos_principais_id_seq
 
 
 --
--- TOC entry 2191 (class 0 OID 0)
+-- TOC entry 2235 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: modulos_principais_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1139,18 +979,9 @@ ALTER SEQUENCE modulos_principais_id_seq OWNED BY modulos_principais.id;
 
 
 --
--- TOC entry 2192 (class 0 OID 0)
--- Dependencies: 198
--- Name: modulos_principais_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('modulos_principais_id_seq', 13, true);
-
-
---
--- TOC entry 199 (class 1259 OID 20050)
--- Dependencies: 2066 2067 2068 5
--- Name: tabelas; Type: TABLE; Schema: public; Owner: -
+-- TOC entry 199 (class 1259 OID 20802)
+-- Dependencies: 2106 2107 2108 5
+-- Name: tabelas; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE tabelas (
@@ -1164,7 +995,7 @@ CREATE TABLE tabelas (
 
 
 --
--- TOC entry 2193 (class 0 OID 0)
+-- TOC entry 2236 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: COLUMN tabelas.colunafilho; Type: COMMENT; Schema: public; Owner: -
 --
@@ -1173,7 +1004,7 @@ COMMENT ON COLUMN tabelas.colunafilho IS 'Nome da coluna necessar para todos os 
 
 
 --
--- TOC entry 200 (class 1259 OID 20056)
+-- TOC entry 200 (class 1259 OID 20808)
 -- Dependencies: 199 5
 -- Name: tabelas_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1187,7 +1018,7 @@ CREATE SEQUENCE tabelas_id_seq
 
 
 --
--- TOC entry 2194 (class 0 OID 0)
+-- TOC entry 2237 (class 0 OID 0)
 -- Dependencies: 200
 -- Name: tabelas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1196,170 +1027,161 @@ ALTER SEQUENCE tabelas_id_seq OWNED BY tabelas.id;
 
 
 --
--- TOC entry 2195 (class 0 OID 0)
--- Dependencies: 200
--- Name: tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('tabelas_id_seq', 109, true);
-
-
---
--- TOC entry 1975 (class 2604 OID 20058)
+-- TOC entry 2015 (class 2604 OID 20810)
 -- Dependencies: 162 161
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE abas ALTER COLUMN id SET DEFAULT nextval('abas_id_seq'::regclass);
+ALTER TABLE ONLY abas ALTER COLUMN id SET DEFAULT nextval('abas_id_seq'::regclass);
 
 
 --
--- TOC entry 1980 (class 2604 OID 20059)
+-- TOC entry 2020 (class 2604 OID 20811)
 -- Dependencies: 164 163
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE blocos ALTER COLUMN id SET DEFAULT nextval('blocos_id_seq'::regclass);
+ALTER TABLE ONLY blocos ALTER COLUMN id SET DEFAULT nextval('blocos_id_seq'::regclass);
 
 
 --
--- TOC entry 1982 (class 2604 OID 20060)
+-- TOC entry 2022 (class 2604 OID 20812)
 -- Dependencies: 166 165
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE blocos_x_abas ALTER COLUMN id SET DEFAULT nextval('blocos_x_abas_id_seq'::regclass);
+ALTER TABLE ONLY blocos_x_abas ALTER COLUMN id SET DEFAULT nextval('blocos_x_abas_id_seq'::regclass);
 
 
 --
--- TOC entry 1991 (class 2604 OID 20061)
+-- TOC entry 2031 (class 2604 OID 20813)
 -- Dependencies: 168 167
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE campos ALTER COLUMN id SET DEFAULT nextval('campos_id_seq'::regclass);
+ALTER TABLE ONLY campos ALTER COLUMN id SET DEFAULT nextval('campos_id_seq'::regclass);
 
 
 --
--- TOC entry 1993 (class 2604 OID 20062)
+-- TOC entry 2033 (class 2604 OID 20814)
 -- Dependencies: 170 169
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE campos_x_blocos ALTER COLUMN id SET DEFAULT nextval('campos_x_blocos_id_seq'::regclass);
+ALTER TABLE ONLY campos_x_blocos ALTER COLUMN id SET DEFAULT nextval('campos_x_blocos_id_seq'::regclass);
 
 
 --
--- TOC entry 1998 (class 2604 OID 20063)
+-- TOC entry 2038 (class 2604 OID 20815)
 -- Dependencies: 174 173
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE form_button ALTER COLUMN id SET DEFAULT nextval('form_button_id_seq'::regclass);
+ALTER TABLE ONLY form_button ALTER COLUMN id SET DEFAULT nextval('form_button_id_seq'::regclass);
 
 
 --
--- TOC entry 2000 (class 2604 OID 20064)
+-- TOC entry 2040 (class 2604 OID 20816)
 -- Dependencies: 176 175
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE form_validacao ALTER COLUMN id SET DEFAULT nextval('form_validacao_id_seq'::regclass);
+ALTER TABLE ONLY form_validacao ALTER COLUMN id SET DEFAULT nextval('form_validacao_id_seq'::regclass);
 
 
 --
--- TOC entry 2003 (class 2604 OID 20065)
+-- TOC entry 2043 (class 2604 OID 20817)
 -- Dependencies: 178 177
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE form_x_abas ALTER COLUMN id SET DEFAULT nextval('form_x_abas_id_seq'::regclass);
+ALTER TABLE ONLY form_x_abas ALTER COLUMN id SET DEFAULT nextval('form_x_abas_id_seq'::regclass);
 
 
 --
--- TOC entry 2005 (class 2604 OID 20066)
+-- TOC entry 2045 (class 2604 OID 20818)
 -- Dependencies: 180 179
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE form_x_tabelas ALTER COLUMN id SET DEFAULT nextval('form_x_tabelas_id_seq'::regclass);
+ALTER TABLE ONLY form_x_tabelas ALTER COLUMN id SET DEFAULT nextval('form_x_tabelas_id_seq'::regclass);
 
 
 --
--- TOC entry 2012 (class 2604 OID 20067)
+-- TOC entry 2052 (class 2604 OID 20819)
 -- Dependencies: 182 181
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE forms ALTER COLUMN id SET DEFAULT nextval('forms_id_seq'::regclass);
+ALTER TABLE ONLY forms ALTER COLUMN id SET DEFAULT nextval('forms_id_seq'::regclass);
 
 
 --
--- TOC entry 2013 (class 2604 OID 20068)
+-- TOC entry 2053 (class 2604 OID 20820)
 -- Dependencies: 184 183
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE info_empresa ALTER COLUMN id SET DEFAULT nextval('info_empresa_id_seq'::regclass);
+ALTER TABLE ONLY info_empresa ALTER COLUMN id SET DEFAULT nextval('info_empresa_id_seq'::regclass);
 
 
 --
--- TOC entry 2022 (class 2604 OID 20069)
+-- TOC entry 2062 (class 2604 OID 20821)
 -- Dependencies: 186 185
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE lista_actions ALTER COLUMN id SET DEFAULT nextval('lista_actions_id_seq'::regclass);
+ALTER TABLE ONLY lista_actions ALTER COLUMN id SET DEFAULT nextval('lista_actions_id_seq'::regclass);
 
 
 --
--- TOC entry 2025 (class 2604 OID 20070)
+-- TOC entry 2065 (class 2604 OID 20822)
 -- Dependencies: 188 187
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE lista_bnav ALTER COLUMN id SET DEFAULT nextval('lista_bnav_id_seq'::regclass);
+ALTER TABLE ONLY lista_bnav ALTER COLUMN id SET DEFAULT nextval('lista_bnav_id_seq'::regclass);
 
 
 --
--- TOC entry 2035 (class 2604 OID 20071)
+-- TOC entry 2075 (class 2604 OID 20823)
 -- Dependencies: 190 189
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE lista_colunas ALTER COLUMN id SET DEFAULT nextval('lista_colunas_id_seq'::regclass);
+ALTER TABLE ONLY lista_colunas ALTER COLUMN id SET DEFAULT nextval('lista_colunas_id_seq'::regclass);
 
 
 --
--- TOC entry 2041 (class 2604 OID 20072)
+-- TOC entry 2081 (class 2604 OID 20824)
 -- Dependencies: 192 191
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE lista_fields ALTER COLUMN id SET DEFAULT nextval('lista_fields_id_seq'::regclass);
+ALTER TABLE ONLY lista_fields ALTER COLUMN id SET DEFAULT nextval('lista_fields_id_seq'::regclass);
 
 
 --
--- TOC entry 2065 (class 2604 OID 20073)
+-- TOC entry 2105 (class 2604 OID 20825)
 -- Dependencies: 198 197
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE modulos_principais ALTER COLUMN id SET DEFAULT nextval('modulos_principais_id_seq'::regclass);
+ALTER TABLE ONLY modulos_principais ALTER COLUMN id SET DEFAULT nextval('modulos_principais_id_seq'::regclass);
 
 
 --
--- TOC entry 2069 (class 2604 OID 20074)
+-- TOC entry 2109 (class 2604 OID 20826)
 -- Dependencies: 200 199
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE tabelas ALTER COLUMN id SET DEFAULT nextval('tabelas_id_seq'::regclass);
+ALTER TABLE ONLY tabelas ALTER COLUMN id SET DEFAULT nextval('tabelas_id_seq'::regclass);
 
 
 --
--- TOC entry 2119 (class 0 OID 19849)
--- Dependencies: 161
+-- TOC entry 2159 (class 0 OID 20601)
+-- Dependencies: 161 2199
 -- Data for Name: abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1622,14 +1444,25 @@ INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALU
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (373, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (374, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (375, 'configUsuario-AlteracaoSenha', 'Alteração de Senha', 'TUsuario/apendicePassword', '-', '0', 0);
-INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (376, 'discProjetoDeCursoConcluido', 'Disciplinas', '-', '-', '', 0);
+INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (376, 'discProjetoDeCursoConcluido', 'Disciplinas', '-', '-', '
+', 0);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (377, 'estornoMovimentos', 'Lista de Movimentos', '-', '-', '0', 1);
 INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (378, 'estornoDados', 'Informações do Estorno', '-', '-', '0', 2);
+INSERT INTO abas (id, idaba, nomeaba, obapendice, action, impressao, ordem) VALUES (379, 'aba_consolidNotasFrequencias', 'Consolidação', 'TSecretaria/viewConsolidacaoNotasFrequencias', '-', '0', 1);
 
 
 --
--- TOC entry 2120 (class 0 OID 19858)
--- Dependencies: 163
+-- TOC entry 2238 (class 0 OID 0)
+-- Dependencies: 162
+-- Name: abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('abas_id_seq', 379, true);
+
+
+--
+-- TOC entry 2161 (class 0 OID 20610)
+-- Dependencies: 163 2199
 -- Data for Name: blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1900,8 +1733,17 @@ INSERT INTO blocos (id, blocoid, nomebloco, formato, entidade, blocoheight, ativ
 
 
 --
--- TOC entry 2121 (class 0 OID 19870)
--- Dependencies: 165
+-- TOC entry 2239 (class 0 OID 0)
+-- Dependencies: 164
+-- Name: blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('blocos_id_seq', 298, true);
+
+
+--
+-- TOC entry 2163 (class 0 OID 20622)
+-- Dependencies: 165 2199
 -- Data for Name: blocos_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -2171,8 +2013,17 @@ INSERT INTO blocos_x_abas (id, abaid, blocoid, ordem) VALUES (307, 378, 297, 2);
 
 
 --
--- TOC entry 2122 (class 0 OID 19876)
--- Dependencies: 167
+-- TOC entry 2240 (class 0 OID 0)
+-- Dependencies: 166
+-- Name: blocos_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('blocos_x_abas_id_seq', 308, true);
+
+
+--
+-- TOC entry 2165 (class 0 OID 20628)
+-- Dependencies: 167 2199
 -- Data for Name: campos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -2968,8 +2819,17 @@ INSERT INTO campos (id, colunadb, campo, label, mascara, seletor, tipo, entidade
 
 
 --
--- TOC entry 2123 (class 0 OID 19892)
--- Dependencies: 169
+-- TOC entry 2241 (class 0 OID 0)
+-- Dependencies: 168
+-- Name: campos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('campos_id_seq', 981, true);
+
+
+--
+-- TOC entry 2167 (class 0 OID 20644)
+-- Dependencies: 169 2199
 -- Data for Name: campos_x_blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -3753,8 +3613,17 @@ INSERT INTO campos_x_blocos (id, blocoid, campoid, mostrarcampo, formato, ordem)
 
 
 --
--- TOC entry 2124 (class 0 OID 19900)
--- Dependencies: 172
+-- TOC entry 2242 (class 0 OID 0)
+-- Dependencies: 170
+-- Name: campos_x_blocos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('campos_x_blocos_id_seq', 981, true);
+
+
+--
+-- TOC entry 2170 (class 0 OID 20652)
+-- Dependencies: 172 2199
 -- Data for Name: campos_x_propriedades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -4994,27 +4863,55 @@ INSERT INTO campos_x_propriedades (campoid, metodo, valor, ativo, id) VALUES (97
 
 
 --
--- TOC entry 2125 (class 0 OID 19908)
--- Dependencies: 173
+-- TOC entry 2243 (class 0 OID 0)
+-- Dependencies: 171
+-- Name: campos_x_propriedades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('campos_x_propriedades_id_seq', 1153, true);
+
+
+--
+-- TOC entry 2171 (class 0 OID 20660)
+-- Dependencies: 173 2199
 -- Data for Name: form_button; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (1, 49, 'fecharCaixa', 'Fechar Caixa', 'Você deseja Realmente executar esta ação?', 'closeCaixaDia', NULL, '1 ', '1');
 INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (2, 13, 'concluir_botform', 'Baixar conta', 'Você deseja realmente executar o pagamento desta conta?', 'onClose', 'onClose', '2 ', '0');
 INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (4, 8, 'concluir_inscricao', 'Concluir', NULL, 'onClose', 'onClose', '2 ', '1');
+INSERT INTO form_button (id, form, botao, labelbotao, confirmacao, actionjs, metodo, ordem, ativo) VALUES (5, 483, 'bot_consolidarNotasFrequencias', 'Consolidar', 'Atenção, apenas as disciplinas selecionadas serão consolidadas, deseja continuar?', 'closeConsolidacaoNotasFrequencias', 'onClose', '1 ', '1');
 
 
 --
--- TOC entry 2126 (class 0 OID 19918)
--- Dependencies: 175
+-- TOC entry 2244 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: form_button_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('form_button_id_seq', 5, true);
+
+
+--
+-- TOC entry 2173 (class 0 OID 20670)
+-- Dependencies: 175 2199
 -- Data for Name: form_validacao; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2127 (class 0 OID 19924)
--- Dependencies: 177
+-- TOC entry 2245 (class 0 OID 0)
+-- Dependencies: 176
+-- Name: form_validacao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('form_validacao_id_seq', 1, true);
+
+
+--
+-- TOC entry 2175 (class 0 OID 20676)
+-- Dependencies: 177 2199
 -- Data for Name: form_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5276,11 +5173,21 @@ INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (49, 6, 53, '1'
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (230, 15, 328, '0', 2);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (279, 478, 377, '1', 1);
 INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (280, 482, 378, '1', 1);
+INSERT INTO form_x_abas (id, formid, abaid, ativo, ordem) VALUES (281, 483, 379, '1', 1);
 
 
 --
--- TOC entry 2128 (class 0 OID 19931)
--- Dependencies: 179
+-- TOC entry 2246 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: form_x_abas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('form_x_abas_id_seq', 281, true);
+
+
+--
+-- TOC entry 2177 (class 0 OID 20683)
+-- Dependencies: 179 2199
 -- Data for Name: form_x_tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5466,11 +5373,21 @@ INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (208, 475, 9, '1
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (209, 475, 10, '1');
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (210, 478, 65, '1');
 INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (211, 480, 21, '1');
+INSERT INTO form_x_tabelas (id, formid, tabelaid, ativo) VALUES (212, 483, 12, '1');
 
 
 --
--- TOC entry 2129 (class 0 OID 19937)
--- Dependencies: 181
+-- TOC entry 2247 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: form_x_tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('form_x_tabelas_id_seq', 212, true);
+
+
+--
+-- TOC entry 2179 (class 0 OID 20689)
+-- Dependencies: 181 2199
 -- Data for Name: forms; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5673,19 +5590,38 @@ INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formai
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (478, 'form_estorno', 'Estorno de Caixa', '65', '1', NULL, NULL, 'one', '900;500', '0', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (480, 'form_movimentosEstorno', 'Movimentos da Conta', '21', '1', '478', '481', 'one', NULL, '1', '1', '0', '0');
 INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (482, 'form_efetivacaoEstorno', 'Efetivação de Estorno', '21', '1', NULL, NULL, 'one', '700;500', '1', '1', '0', '0');
+INSERT INTO forms (id, form, nomeform, entidade, ativo, formpai, idlista, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave) VALUES (483, 'form_consolidacaoNotasFrequencias', 'Consolidação de Notas e Frequências', '12', '1', NULL, NULL, 'one', '800;500', '0', '0', '0', '0');
 
 
 --
--- TOC entry 2130 (class 0 OID 19948)
--- Dependencies: 183
+-- TOC entry 2248 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('forms_id_seq', 483, true);
+
+
+--
+-- TOC entry 2181 (class 0 OID 20700)
+-- Dependencies: 183 2199
 -- Data for Name: info_empresa; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2131 (class 0 OID 19956)
--- Dependencies: 185
+-- TOC entry 2249 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: info_empresa_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('info_empresa_id_seq', 1, true);
+
+
+--
+-- TOC entry 2183 (class 0 OID 20708)
+-- Dependencies: 185 2199
 -- Data for Name: lista_actions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5709,8 +5645,17 @@ INSERT INTO lista_actions (id, idlista, tipocampo, "nameAction", label, actionjs
 
 
 --
--- TOC entry 2132 (class 0 OID 19972)
--- Dependencies: 187
+-- TOC entry 2250 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: lista_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('lista_actions_id_seq', 22, true);
+
+
+--
+-- TOC entry 2185 (class 0 OID 20724)
+-- Dependencies: 187 2199
 -- Data for Name: lista_bnav; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5721,8 +5666,17 @@ INSERT INTO lista_bnav (id, lista_form_id, nome, tipocampo, label, metodo, funca
 
 
 --
--- TOC entry 2133 (class 0 OID 19982)
--- Dependencies: 189
+-- TOC entry 2251 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: lista_bnav_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('lista_bnav_id_seq', 4, true);
+
+
+--
+-- TOC entry 2187 (class 0 OID 20734)
+-- Dependencies: 189 2199
 -- Data for Name: lista_colunas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6524,16 +6478,34 @@ INSERT INTO lista_colunas (id, lista_form_id, coluna, label, alinhalabel, alinha
 
 
 --
--- TOC entry 2134 (class 0 OID 19999)
--- Dependencies: 191
+-- TOC entry 2252 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: lista_colunas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('lista_colunas_id_seq', 964, true);
+
+
+--
+-- TOC entry 2189 (class 0 OID 20751)
+-- Dependencies: 191 2199
 -- Data for Name: lista_fields; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2135 (class 0 OID 20009)
--- Dependencies: 193
+-- TOC entry 2253 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: lista_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('lista_fields_id_seq', 1, true);
+
+
+--
+-- TOC entry 2191 (class 0 OID 20761)
+-- Dependencies: 193 2199
 -- Data for Name: lista_form; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6566,7 +6538,6 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (412, 'form', 407, '0', '0', 'prof-relatorioTurma', 'Disciplinas', 12, 412, '-', '1', '0', '0 ', '0', '0', '1', '0', 'ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (417, 'form', 413, '0', '1', 'discSemelhantes', 'Disciplinas', 97, 417, '-', '1', '1', '0 ', '1', '1', '0', '0', 'ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (419, 'form', 418, '0', '0', 'historicoCaixa', 'Históricos de Caixa', 98, 419, '-', '1', '0', '0 ', '0', '0', '1', '0', 'ativo/!=/AND/9', '1', 'multiple', NULL, NULL, '0', '0', 'id/desc', '1');
-INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (145, 'pesq', 145, '0', 'codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento,codigocontacaixa=codigocontacaixa,multaacrecimo=multaacrecimo,formapag=formapag', 'listaContasCredito', 'Contas a Receber', 65, 145, '-', '1', '0', '0 ', '0', '0', '0', '1', 'ativo/=/AND/1;tipomovimentacao/=/AND/C;statusconta/=/AND/1;statusconta/=/OR/3;statusconta/=/OR/5;', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (184, 'pesq', 4, '0', 'codigocursoativo=codigo>titulo,codigocurso=codigocurso>nome', 'pesqCursos', 'Cursos', 85, 184, '-', '1', '0', '0 ', '0', '0', '0', '1', 'ativo/!=/AND/8;ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (427, 'form', 426, '0', '0', 'anotacoes', 'Anotações', 99, 427, '-', '1', '1', '0 ', '1', '1', '1', '0', 'ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (166, 'form', 30, 'codigo', '0', 'listaContratos', 'Contratos e Convênios', 39, 166, '-', '1', 'Novo Registro', '0 ', '1', '1', '1', '0', NULL, '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
@@ -6715,11 +6686,21 @@ INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, e
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (477, 'form', 476, 'codigocurso', '0', 'listDisciplinas', 'Disciplinas', 10, 242, 'TCurso/getCargaHoraria', '0', '0', '0 ', '0', '0', '0', '0', 'ativo/!=/AND/9', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (479, 'form', 478, 'codigo', '0', 'listaContasEstorno', 'Lista de Contas com Movimento de Caixa', 65, 478, '-', '1', '0', '0 ', '0', '1', '0', '0', 'statusconta::bigint/in/AND/(2,3)', '1', 'one', NULL, NULL, '0', '0', 'datacad/desc;id/desc', '1');
 INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (481, 'form', 480, 'codigoconta', '0', 'listaMovimentosEstorno', 'Movimentações', 21, 478, 'TCaixa/apendiceMovimentosEstorno', '1', '0', '0 ', '0', '0', '0', '0', 'statusmovimento::bigint/in/AND/(1,2,5)', '1', 'one', NULL, NULL, '0', '1', 'datacad/desc', '1');
+INSERT INTO lista_form (id, tipo, forms_id, filtropai, pesquisa, lista, label, entidade, listapai, obapendice, acfiltro, acincluir, accolunas, acdeletar, aceditar, acviews, acenviar, filtro, ativo, formainclude, trigger, incontrol, acreplicar, acselecao, ordem, aclimite) VALUES (145, 'pesq', 145, '0', 'codigoconta=codigo,codigopessoa=codigopessoa,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento', 'listaContasCredito', 'Contas a Receber', 65, 145, '-', '1', '0', '0 ', '0', '0', '0', '1', 'ativo/=/AND/1;tipomovimentacao/=/AND/C;statusconta/=/AND/1;statusconta/=/OR/3;statusconta/=/OR/5;', '1', 'one', NULL, NULL, '0', '0', 'id/desc', '1');
 
 
 --
--- TOC entry 2136 (class 0 OID 20034)
--- Dependencies: 196
+-- TOC entry 2254 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: lista_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('lista_form_id_seq', 335, true);
+
+
+--
+-- TOC entry 2194 (class 0 OID 20786)
+-- Dependencies: 196 2199
 -- Data for Name: menu_modulos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6818,11 +6799,21 @@ INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nive
 INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nivel, moduloprincipal, ordem, ativo) VALUES (127, 'gradeAvaliacoes', 'Grades de Avaliações', 'getList', 466, 463, '2', 7, 10, '1');
 INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nivel, moduloprincipal, ordem, ativo) VALUES (128, 'notasAlunos', 'Notas de Alunos', 'getList', 470, 469, '2', 2, 15, '1');
 INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nivel, moduloprincipal, ordem, ativo) VALUES (129, 'estornoCaixa', 'Estorno de Caixa', 'getList', 479, 478, '2', 3, 0, '1');
+INSERT INTO menu_modulos (id, modulo, labelmodulo, metodo, argumento, form, nivel, moduloprincipal, ordem, ativo) VALUES (130, 'consolidacaoNotasFrequencias', 'Consolidação de Notas e Frenquencias', 'getForm', 483, 483, '2', 13, 0, '1');
 
 
 --
--- TOC entry 2137 (class 0 OID 20043)
--- Dependencies: 197
+-- TOC entry 2255 (class 0 OID 0)
+-- Dependencies: 195
+-- Name: menu_modulos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('menu_modulos_id_seq', 130, true);
+
+
+--
+-- TOC entry 2195 (class 0 OID 20795)
+-- Dependencies: 197 2199
 -- Data for Name: modulos_principais; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6842,8 +6833,17 @@ INSERT INTO modulos_principais (id, modulo, labelmodulo, nivel, ordem, ativo) VA
 
 
 --
--- TOC entry 2138 (class 0 OID 20050)
--- Dependencies: 199
+-- TOC entry 2256 (class 0 OID 0)
+-- Dependencies: 198
+-- Name: modulos_principais_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('modulos_principais_id_seq', 13, true);
+
+
+--
+-- TOC entry 2197 (class 0 OID 20802)
+-- Dependencies: 199 2199
 -- Data for Name: tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6943,9 +6943,18 @@ INSERT INTO tabelas (id, tabela, tabela_view, tabpai, ativo, colunafilho) VALUES
 
 
 --
--- TOC entry 2071 (class 2606 OID 20076)
--- Dependencies: 161 161
--- Name: pk_abas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2257 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: tabelas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('tabelas_id_seq', 109, true);
+
+
+--
+-- TOC entry 2111 (class 2606 OID 20828)
+-- Dependencies: 161 161 2200
+-- Name: pk_abas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY abas
@@ -6953,9 +6962,9 @@ ALTER TABLE ONLY abas
 
 
 --
--- TOC entry 2073 (class 2606 OID 20078)
--- Dependencies: 163 163
--- Name: pk_blocos; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2113 (class 2606 OID 20830)
+-- Dependencies: 163 163 2200
+-- Name: pk_blocos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY blocos
@@ -6963,9 +6972,9 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2075 (class 2606 OID 20080)
--- Dependencies: 165 165
--- Name: pk_blocos_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2115 (class 2606 OID 20832)
+-- Dependencies: 165 165 2200
+-- Name: pk_blocos_x_abas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY blocos_x_abas
@@ -6973,9 +6982,9 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2078 (class 2606 OID 20082)
--- Dependencies: 167 167
--- Name: pk_campos; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2118 (class 2606 OID 20834)
+-- Dependencies: 167 167 2200
+-- Name: pk_campos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY campos
@@ -6983,9 +6992,9 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2081 (class 2606 OID 20084)
--- Dependencies: 169 169
--- Name: pk_campos_x_blocos; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2121 (class 2606 OID 20836)
+-- Dependencies: 169 169 2200
+-- Name: pk_campos_x_blocos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY campos_x_blocos
@@ -6993,9 +7002,9 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
--- TOC entry 2084 (class 2606 OID 20086)
--- Dependencies: 172 172
--- Name: pk_campos_x_propriedades; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2124 (class 2606 OID 20838)
+-- Dependencies: 172 172 2200
+-- Name: pk_campos_x_propriedades; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY campos_x_propriedades
@@ -7003,9 +7012,9 @@ ALTER TABLE ONLY campos_x_propriedades
 
 
 --
--- TOC entry 2086 (class 2606 OID 20088)
--- Dependencies: 173 173
--- Name: pk_form_button; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2126 (class 2606 OID 20840)
+-- Dependencies: 173 173 2200
+-- Name: pk_form_button; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY form_button
@@ -7013,9 +7022,9 @@ ALTER TABLE ONLY form_button
 
 
 --
--- TOC entry 2088 (class 2606 OID 20090)
--- Dependencies: 175 175
--- Name: pk_form_validacao; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2128 (class 2606 OID 20842)
+-- Dependencies: 175 175 2200
+-- Name: pk_form_validacao; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY form_validacao
@@ -7023,9 +7032,9 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2090 (class 2606 OID 20092)
--- Dependencies: 177 177
--- Name: pk_form_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2130 (class 2606 OID 20844)
+-- Dependencies: 177 177 2200
+-- Name: pk_form_x_abas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY form_x_abas
@@ -7033,9 +7042,9 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
--- TOC entry 2092 (class 2606 OID 20094)
--- Dependencies: 179 179
--- Name: pk_form_x_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2132 (class 2606 OID 20846)
+-- Dependencies: 179 179 2200
+-- Name: pk_form_x_tabelas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY form_x_tabelas
@@ -7043,9 +7052,9 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2094 (class 2606 OID 20096)
--- Dependencies: 181 181
--- Name: pk_forms; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2134 (class 2606 OID 20848)
+-- Dependencies: 181 181 2200
+-- Name: pk_forms; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY forms
@@ -7053,9 +7062,9 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2096 (class 2606 OID 20098)
--- Dependencies: 183 183
--- Name: pk_info_empresa; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2136 (class 2606 OID 20850)
+-- Dependencies: 183 183 2200
+-- Name: pk_info_empresa; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY info_empresa
@@ -7063,9 +7072,9 @@ ALTER TABLE ONLY info_empresa
 
 
 --
--- TOC entry 2099 (class 2606 OID 20100)
--- Dependencies: 185 185
--- Name: pk_lista_actions; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2139 (class 2606 OID 20852)
+-- Dependencies: 185 185 2200
+-- Name: pk_lista_actions; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY lista_actions
@@ -7073,9 +7082,9 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2101 (class 2606 OID 20102)
--- Dependencies: 187 187
--- Name: pk_lista_bnav; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2141 (class 2606 OID 20854)
+-- Dependencies: 187 187 2200
+-- Name: pk_lista_bnav; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY lista_bnav
@@ -7083,9 +7092,9 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2104 (class 2606 OID 20104)
--- Dependencies: 189 189
--- Name: pk_lista_colunas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2144 (class 2606 OID 20856)
+-- Dependencies: 189 189 2200
+-- Name: pk_lista_colunas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY lista_colunas
@@ -7093,9 +7102,9 @@ ALTER TABLE ONLY lista_colunas
 
 
 --
--- TOC entry 2106 (class 2606 OID 20106)
--- Dependencies: 191 191
--- Name: pk_lista_fields; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2146 (class 2606 OID 20858)
+-- Dependencies: 191 191 2200
+-- Name: pk_lista_fields; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY lista_fields
@@ -7103,9 +7112,9 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2109 (class 2606 OID 20108)
--- Dependencies: 193 193
--- Name: pk_lista_form; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2149 (class 2606 OID 20860)
+-- Dependencies: 193 193 2200
+-- Name: pk_lista_form; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY lista_form
@@ -7113,9 +7122,9 @@ ALTER TABLE ONLY lista_form
 
 
 --
--- TOC entry 2112 (class 2606 OID 20110)
--- Dependencies: 196 196
--- Name: pk_menu_modulos; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2152 (class 2606 OID 20862)
+-- Dependencies: 196 196 2200
+-- Name: pk_menu_modulos; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY menu_modulos
@@ -7123,9 +7132,9 @@ ALTER TABLE ONLY menu_modulos
 
 
 --
--- TOC entry 2114 (class 2606 OID 20112)
--- Dependencies: 197 197
--- Name: pk_modulos_principais; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2154 (class 2606 OID 20864)
+-- Dependencies: 197 197 2200
+-- Name: pk_modulos_principais; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY modulos_principais
@@ -7133,9 +7142,9 @@ ALTER TABLE ONLY modulos_principais
 
 
 --
--- TOC entry 2116 (class 2606 OID 20114)
--- Dependencies: 199 199
--- Name: pk_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
+-- TOC entry 2156 (class 2606 OID 20866)
+-- Dependencies: 199 199 2200
+-- Name: pk_tabelas; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY tabelas
@@ -7143,71 +7152,71 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2097 (class 1259 OID 20115)
--- Dependencies: 185
--- Name: fki_lista_actions__lista_form__idlista; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2137 (class 1259 OID 20867)
+-- Dependencies: 185 2200
+-- Name: fki_lista_actions__lista_form__idlista; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX fki_lista_actions__lista_form__idlista ON lista_actions USING btree (idlista);
 
 
 --
--- TOC entry 2110 (class 1259 OID 20116)
--- Dependencies: 196
--- Name: fki_menu_modulos__lista_form__lista; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2150 (class 1259 OID 20868)
+-- Dependencies: 196 2200
+-- Name: fki_menu_modulos__lista_form__lista; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX fki_menu_modulos__lista_form__lista ON menu_modulos USING btree (argumento);
 
 
 --
--- TOC entry 2079 (class 1259 OID 20117)
--- Dependencies: 169 169
--- Name: idx_campos_blocos; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2119 (class 1259 OID 20869)
+-- Dependencies: 169 169 2200
+-- Name: idx_campos_blocos; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX idx_campos_blocos ON campos_x_blocos USING btree (blocoid, campoid);
 
 
 --
--- TOC entry 2076 (class 1259 OID 20118)
--- Dependencies: 167
--- Name: idx_campos_id; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2116 (class 1259 OID 20870)
+-- Dependencies: 167 2200
+-- Name: idx_campos_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX idx_campos_id ON campos USING btree (id);
 
 
 --
--- TOC entry 2082 (class 1259 OID 20119)
--- Dependencies: 172
--- Name: idx_campos_propriedades; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2122 (class 1259 OID 20871)
+-- Dependencies: 172 2200
+-- Name: idx_campos_propriedades; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX idx_campos_propriedades ON campos_x_propriedades USING btree (campoid);
 
 
 --
--- TOC entry 2102 (class 1259 OID 20120)
--- Dependencies: 189
--- Name: lista_colunas_listacolunas_fkindex1; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2142 (class 1259 OID 20872)
+-- Dependencies: 189 2200
+-- Name: lista_colunas_listacolunas_fkindex1; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX lista_colunas_listacolunas_fkindex1 ON lista_colunas USING btree (lista_form_id);
 
 
 --
--- TOC entry 2107 (class 1259 OID 20121)
--- Dependencies: 193
--- Name: lista_form_formlista_fkindex1; Type: INDEX; Schema: public; Owner: -
+-- TOC entry 2147 (class 1259 OID 20873)
+-- Dependencies: 193 2200
+-- Name: lista_form_formlista_fkindex1; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX lista_form_formlista_fkindex1 ON lista_form USING btree (forms_id);
 
 
 --
--- TOC entry 2117 (class 2606 OID 20122)
--- Dependencies: 185 193 2108
+-- TOC entry 2157 (class 2606 OID 20874)
+-- Dependencies: 185 193 2148 2200
 -- Name: lista_actions__lista_form__idlista; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7216,8 +7225,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2118 (class 2606 OID 20127)
--- Dependencies: 189 193 2108
+-- TOC entry 2158 (class 2606 OID 20879)
+-- Dependencies: 189 193 2148 2200
 -- Name: lista_colunas__lista_form; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7225,7 +7234,7 @@ ALTER TABLE ONLY lista_colunas
     ADD CONSTRAINT lista_colunas__lista_form FOREIGN KEY (lista_form_id) REFERENCES lista_form(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2012-08-01 22:24:58
+-- Completed on 2013-02-23 09:14:51 BRT
 
 --
 -- PostgreSQL database dump complete

@@ -334,9 +334,9 @@ class TAluno {
         try {
             if ($codigoaluno) {
                 $obAluno = $this->getAluno($codigoaluno);
-                $TTurma = new TTurma();
-                $obTurma = $TTurma->getTurma($obAluno->codigoturma);
-
+                /*$TTurma = new TTurma();
+                $obTurma = $TTurma->getTurma($obAluno->codigoturma);*/
+/*
                 $TUnidade = new TUnidade();
                 $TParametros = $TUnidade->getParametro();
 
@@ -345,50 +345,21 @@ class TAluno {
 
                 $TAvaliacao = new TAvaliacao();
                 $medias = $TAvaliacao->getMedia($codigoaluno);
-               
+               */
 
-             if($disciplinas){
-                foreach ($disciplinas as $ch => $disciplina) {
-                    $ch = ($disciplina->codigoturmadisciplina) ? $disciplina->codigoturmadisciplina : $ch;
-                    //if(($disciplina->situacao == "2") and ($ch)){
-                    $obDiscs->disciplinas[$ch] = $disciplina->codigoturmadisciplina ? $TTurmaDisciplinas->getTurmaDisciplina($disciplina->codigoturmadisciplina) : $disciplina;
+             $this->obTDbo->setEntidade(TConstantes::RELATORIO_ALUNOS_NOTAS_FREQUENCIAS);
+             $criteria = new TCriteria();
+             $criteria->add(new TFilter('matricula','=',$codigoaluno));
+                
+             $retDiscs = $this->obTDbo->select('*',$criteria, true);
 
-                    $faltas = $this->getFalta($codigoaluno, $disciplina->codigoturmadisciplina);
-                    $frequencia = $obDiscs->disciplinas[$ch]->frequencia;
-                    if ($frequencia > 0) {
-                        $obDiscs->disciplinas[$ch]->frequencia = round(((100 * ($frequencia - $faltas)) / $frequencia) * 10) / 10;
-                    } else {
-                        $obDiscs->disciplinas[$ch]->frequencia = null;
-                    }
-                    if ($obDiscs->disciplinas[$ch]->frequencia >= $TParametros->academico_mediapresenca) {
-                        $obDiscs->disciplinas[$ch]->aprovacaofrequencias = true;
-                    } else {
-                        $obDiscs->disciplinas[$ch]->aprovacaofrequencias = false;
-                    }
-
-                    $obDiscs->disciplinas[$ch]->media = $medias[$ch]->media;
-
-                    if ($obDiscs->disciplinas[$ch]->media >= $TParametros->academico_medianotas) {
-                        $obDiscs->disciplinas[$ch]->aprovacaonotas = true;
-                    } else {
-                        $obDiscs->disciplinas[$ch]->aprovacaonotas = false;
-                    }
+             $retorno->academico = array();
+             while($obDisc = $retDiscs->fetchObject())
+                $retorno->academico[$obDisc->codigoturmadisciplina] = $obDisc;
 
 
-                    if ($obDiscs->disciplinas[$ch]->aprovacaonotas and $obDiscs->disciplinas[$ch]->aprovacaofrequencias) {
-                        $obDiscs->disciplinas[$ch]->aprovacaogeral = true;
-                    } else {
-                        $obDiscs->disciplinas[$ch]->aprovacaogeral = false;
-                    }
-
-
-                    $obDiscs->disciplinas[$ch]->situacao = $this->getSituacaoAlunoDisciplina($disciplina->situacao);
-                }
-            }
-            
-                $retorno->aluno = $obAluno;
-                $retorno->academico = $obDiscs;
-                return $retorno;
+             $retorno->aluno = $obAluno;
+             return $retorno;
                 
                 
             } else {
@@ -501,23 +472,23 @@ class TAluno {
                 $datagrid->addColumn(new TDataGridColumn('professor', 'Professor', 'center', '200px'));
                 $datagrid->addColumn(new TDataGridColumn('media', 'Média', 'center', '100px'));
                 $datagrid->addColumn(new TDataGridColumn('frequencia', 'Frequência', 'center', '100px'));
-                $datagrid->addColumn(new TDataGridColumn('inicio', 'Início', 'center', '100px'));
+                //$datagrid->addColumn(new TDataGridColumn('inicio', 'Início', 'center', '100px'));
                 $datagrid->createModel('100%');
 
-                foreach ($getAcademico->academico->disciplinas as $key => $obDisc) {
-                    $tempDisc['disciplina'] = $obDisc->nomedisciplina;
+                foreach ($getAcademico->academico as $key => $obDisc) {
+                    $tempDisc['disciplina'] = $obDisc->disciplina;
 
                     if($obDisc->cargahoraria){
                         $tempDisc['disciplina'] .= " ({$obDisc->cargahoraria} hs)";
                     }
-                    $tempDisc['professor'] = $obDisc->nomeprofessor;
+                    $tempDisc['professor'] = $obDisc->professor;
                     $media = new TElement('div');
-                    if ($obDisc->aprovacaonotas) {
+                    if ($obDisc->aprovacaomedia) {
                         $media->class = 'ui-state';
                     } else {
                         $media->class = 'ui-state red-text';
                     }
-                    $media->add($obDisc->media ? $obDisc->media : '--');
+                    $media->add($obDisc->nota ? $obDisc->nota : '--');
                     $tempDisc['media'] = $media;
                     $frequencia = new TElement('div');
                     if ($obDisc->aprovacaofrequencias) {
@@ -527,7 +498,7 @@ class TAluno {
                     }
                     $frequencia->add($obDisc->frequencia ? $obDisc->frequencia . "%" : '--');
                     $tempDisc['frequencia'] = $frequencia;
-                    $tempDisc['inicio'] = $obDisc->datainicio;
+                    //$tempDisc['inicio'] = $obDisc->datainicio;
                     $datagrid->addItem($tempDisc);
                 }
                 $content = new TElement('div');

@@ -10,7 +10,7 @@ function closeConsolidacaoNotasFrequencias(confirme,ridform,key,obRetorno){
 function consolidaNotasFrequencias(confirme,ridform,key,obRetorno){
 
     var dados = 'classe=TTurmaDisciplinas&metodo=consolidaNotasFrequencias';
-	$.each($('#consolidacaoNotasFrequencias input[type=checkbox]:checked'),function(i,el){
+	$.each($('#consolidacaoNotasFrequencias .check-disc:checked'),function(i,el){
 		if($(el).val())
 			dados += '&disc[]='+$(el).val();
 	});

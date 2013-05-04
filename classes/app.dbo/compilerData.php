@@ -93,7 +93,6 @@ $campo         = $getDados['campo'];
 //                $obTDbo->setEntidade($entidade);
 //                $Query = $obTDbo->insert($dados);
 //
-//                print_r($Query);
 //        }
 //
 //    }

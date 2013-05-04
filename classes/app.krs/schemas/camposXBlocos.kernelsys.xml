@@ -449,46 +449,6 @@
       <formato></formato>
       <ordem>3</ordem>
     </row>
-    <row id="174">
-      <id>174</id>
-      <blocoid>43</blocoid>
-      <campoid>163</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>7</ordem>
-    </row>
-    <row id="176">
-      <id>176</id>
-      <blocoid>43</blocoid>
-      <campoid>165</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>11</ordem>
-    </row>
-    <row id="171">
-      <id>171</id>
-      <blocoid>43</blocoid>
-      <campoid>160</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>10</ordem>
-    </row>
-    <row id="177">
-      <id>177</id>
-      <blocoid>43</blocoid>
-      <campoid>166</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>12</ordem>
-    </row>
-    <row id="173">
-      <id>173</id>
-      <blocoid>43</blocoid>
-      <campoid>881</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>6</ordem>
-    </row>
     <row id="715">
       <id>715</id>
       <blocoid>167</blocoid>
@@ -568,14 +528,6 @@
       <mostrarcampo>N</mostrarcampo>
       <formato></formato>
       <ordem>10</ordem>
-    </row>
-    <row id="857">
-      <id>857</id>
-      <blocoid>43</blocoid>
-      <campoid>861</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>4</ordem>
     </row>
     <row id="211">
       <id>211</id>
@@ -672,22 +624,6 @@
       <mostrarcampo>S</mostrarcampo>
       <formato></formato>
       <ordem>3</ordem>
-    </row>
-    <row id="172">
-      <id>172</id>
-      <blocoid>43</blocoid>
-      <campoid>161</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>5</ordem>
-    </row>
-    <row id="856">
-      <id>856</id>
-      <blocoid>43</blocoid>
-      <campoid>860</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>8</ordem>
     </row>
     <row id="235">
       <id>235</id>
@@ -1256,6 +1192,54 @@
       <mostrarcampo>S</mostrarcampo>
       <formato></formato>
       <ordem>0</ordem>
+    </row>
+    <row id="172">
+      <id>172</id>
+      <blocoid>43</blocoid>
+      <campoid>161</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>7</ordem>
+    </row>
+    <row id="174">
+      <id>174</id>
+      <blocoid>43</blocoid>
+      <campoid>163</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>9</ordem>
+    </row>
+    <row id="856">
+      <id>856</id>
+      <blocoid>43</blocoid>
+      <campoid>860</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>10</ordem>
+    </row>
+    <row id="171">
+      <id>171</id>
+      <blocoid>43</blocoid>
+      <campoid>160</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>11</ordem>
+    </row>
+    <row id="176">
+      <id>176</id>
+      <blocoid>43</blocoid>
+      <campoid>165</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>12</ordem>
+    </row>
+    <row id="177">
+      <id>177</id>
+      <blocoid>43</blocoid>
+      <campoid>166</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>13</ordem>
     </row>
     <row id="283">
       <id>283</id>
@@ -2392,14 +2376,6 @@
       <mostrarcampo>S</mostrarcampo>
       <formato></formato>
       <ordem>6</ordem>
-    </row>
-    <row id="570">
-      <id>570</id>
-      <blocoid>43</blocoid>
-      <campoid>567</campoid>
-      <mostrarcampo>S</mostrarcampo>
-      <formato></formato>
-      <ordem>13</ordem>
     </row>
     <row id="869">
       <id>869</id>
@@ -6216,6 +6192,46 @@
       <mostrarcampo>S</mostrarcampo>
       <formato></formato>
       <ordem>1</ordem>
+    </row>
+    <row id="982">
+      <id>982</id>
+      <blocoid>43</blocoid>
+      <campoid>982</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>4</ordem>
+    </row>
+    <row id="983">
+      <id>983</id>
+      <blocoid>43</blocoid>
+      <campoid>983</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>5</ordem>
+    </row>
+    <row id="857">
+      <id>857</id>
+      <blocoid>43</blocoid>
+      <campoid>861</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>6</ordem>
+    </row>
+    <row id="173">
+      <id>173</id>
+      <blocoid>43</blocoid>
+      <campoid>881</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>8</ordem>
+    </row>
+    <row id="570">
+      <id>570</id>
+      <blocoid>43</blocoid>
+      <campoid>567</campoid>
+      <mostrarcampo>S</mostrarcampo>
+      <formato></formato>
+      <ordem>14</ordem>
     </row>
   </camposXBlocos>
 </kernelsys>

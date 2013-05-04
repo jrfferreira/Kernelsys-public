@@ -86,6 +86,9 @@ class TConstantes{
     const DBCURSOS_AVALIACOES               = "dbcursos_avaliacoes";
     const DBTURMAS_CONVENIOS                = "dbturmas_convenios";
     const DBTRANSACOES_CONVENIOS		    = "dbtransacoes_convenios";
+
+    //Relatorios
+    const RELATORIO_ALUNOS_NOTAS_FREQUENCIAS= "relatorios.alunos_notas_frequencias";
    
      //Visualizações
     const VIEW_UNIDADES                     = "view_unidades";

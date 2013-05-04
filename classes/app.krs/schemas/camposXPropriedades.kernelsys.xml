@@ -6178,13 +6178,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <ativo>1</ativo>
       <id>1039</id>
     </row>
-    <row id="1040">
-      <campoid>157</campoid>
-      <metodo>onchange</metodo>
-      <valor>setMoney(this.value,this)</valor>
-      <ativo>1</ativo>
-      <id>1040</id>
-    </row>
     <row id="1022">
       <campoid>859</campoid>
       <metodo>onChange</metodo>
@@ -7059,6 +7052,20 @@ Zootecnia=&gt;Zootecnia; </valor>
       <valor>disabled</valor>
       <ativo>1</ativo>
       <id>1153</id>
+    </row>
+    <row id="1040">
+      <campoid>157</campoid>
+      <metodo>onchange</metodo>
+      <valor>setMoney(this.value,this);calculaMultas();</valor>
+      <ativo>1</ativo>
+      <id>1040</id>
+    </row>
+    <row id="1154">
+      <campoid>158</campoid>
+      <metodo>onChange</metodo>
+      <valor>calculaMultas();</valor>
+      <ativo>1</ativo>
+      <id>1154</id>
     </row>
   </camposXPropriedades>
 </kernelsys>

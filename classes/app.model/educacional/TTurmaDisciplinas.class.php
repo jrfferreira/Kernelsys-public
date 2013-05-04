@@ -748,26 +748,172 @@ class TTurmaDisciplinas {
     public function consolidaNotasFrequencias($listaTurmasDisciplinas = array()){
         try {
 
-            $this->obTDbo->setEntidade(TConstantes::DBALUNOS_DISCIPLINAS);
             $criteria = new TCriteria();
             $criteria->add(new TFilter('situacao','=','2'),'AND');  
+            $criteriaNotas = new TCriteria();
+            $criteriaFaltas = new TCriteria();            
+            $criteriaFaltas->add(new TFilter('situacao', '=', 'F'),'AND');
+            $criteriaTurmasDisciplinas = new TCriteria();
+
+            $sqlDelete = "delete from ".TConstantes::RELATORIO_ALUNOS_NOTAS_FREQUENCIAS." where codigoturmadisciplina = '1'";
+
             foreach($listaTurmasDisciplinas as $turmadisciplina){
                 $criteria->add(new TFilter('codigoturmadisciplina','=',$turmadisciplina,'99'),'OR');
+                $criteriaFaltas->add(new TFilter('codigoturmadisciplina','=',$turmadisciplina,'99'),'OR');
+                $criteriaNotas->add(new TFilter('codigoturmadisciplina','=',$turmadisciplina),'OR');
+                $criteriaTurmasDisciplinas->add(new TFilter('codigo','=',$turmadisciplina),'OR');
+                $sqlDelete .= " or codigoturmadisciplina = '{$turmadisciplina}'";
             }
+
+            $this->obTDbo->sqlExec($sqlDelete);
+
+            $this->obTDbo->setEntidade(TConstantes::DBALUNOS_DISCIPLINAS);
             $retAlunos = $this->obTDbo->select('codigoaluno,codigoturmadisciplina',$criteria);
 
             $listaAlunos = array();
+
+            $sqlAlunos = "select al.codigo,pe.nome_razaosocial as aluno from dbpessoas pe inner join dbpessoas_alunos al on al.codigopessoa = pe.codigo and (pe.codigo = '1' ";
             while($obAluno = $retAlunos->fetchObject()){
                 if(!$listaAlunos[$obAluno->codigoturmadisciplina])
                     $listaAlunos[$obAluno->codigoturmadisciplina] = array();
-                
-                $listaAlunos[$obAluno->codigoturmadisciplina][] = $obAluno->codigoaluno;
-            }                
+                $sqlAlunos .= " or al.codigo = '{$obAluno->codigoaluno}'";
+                $listaAlunos[$obAluno->codigoturmadisciplina][$obAluno->codigoaluno] = array("notas"=>array(),"faltas"=>0);
+            }  
 
-            $TAluno = new TAluno();
-            foreach($listaAlunos as $turmadisciplina=>$aluno){
-                print_r($turmadisciplina.'=>'.$aluno);
+            $sqlAlunos .= ')';          
+
+            $this->obTDbo->setEntidade("dbalunos_notas");
+            $notasQuery = $this->obTDbo->select("codigoaluno,codigoavaliacao, codigoturmadisciplina, nota, ordemavaliacao", $criteriaNotas);
+
+            while ($obNota = $notasQuery->fetchObject()) {
+               $listaAlunos[$obNota->codigoturmadisciplina][$obNota->codigoaluno]["notas"][$obNota->ordemavaliacao] = $obNota->nota;
             }
+
+            $alunosNomes = array();
+            $retAlunosNomes = $this->obTDbo->sqlExec($sqlAlunos);
+            while ($obAlunoNome = $retAlunosNomes->fetchObject()) {
+                $alunosNomes[$obAlunoNome->codigo] = $obAlunoNome->aluno;
+            }
+
+            $gradeAvaliacoes = array();
+
+            $this->obTDbo->setEntidade("dbavaliacoes");
+            $critGrade = new TCriteria();
+            $critGrade->add(new TFilter("ativo", "=", '1'));
+            $critGrade->setProperty('order', 'ordem');
+            $gradeQuery = $this->obTDbo->select("*", $critGrade);            
+            
+            while ($obAvaliacao = $gradeQuery->fetchObject()) {
+                if(!$gradeAvaliacoes[$obAvaliacao->codigograde])
+                    $gradeAvaliacoes[$obAvaliacao->codigograde] = array();
+                $gradeAvaliacoes[$obAvaliacao->codigograde][$obAvaliacao->ordem] = $obAvaliacao;
+            }
+            
+            $this->obTDbo->setEntidade(TConstantes::DBALUNOS_FALTAS);
+            $retFaltas = $this->obTDbo->select("*", $criteria);
+
+            while ($obFaltas = $retFaltas->fetchObject()) {
+                $listaAlunos[$obFaltas->codigoturmadisciplina][$obFaltas->codigoaluno]["faltas"]++;
+            }
+
+            $this->obTDbo->setEntidade(TConstantes::VIEW_TURMAS_DISCIPLINAS);
+            $retTurmasDisciplinas = $this->obTDbo->select("*",$criteriaTurmasDisciplinas);
+            $listaTurmasDisciplinas = array();
+
+            while($obTurmaDisciplina = $retTurmasDisciplinas->fetchObject())
+                $listaTurmasDisciplinas[$obTurmaDisciplina->codigo] = $obTurmaDisciplina;
+
+            $TUnidade = new TUnidade();
+            $TParametros = $TUnidade->getParametro();
+            $TAluno = new TAluno();
+            $TAvaliacao = new TAvaliacao();
+
+            $cols = "aluno,
+                     matricula,
+                     codigoturmadisciplina,
+                     disciplina,
+                     curso,
+                     turma,
+                     nota,
+                     frequencia,
+                     professor,
+                     aprovacaofrequencias,
+                     aprovacaomedia,
+                     aprovacaogeral";      
+
+            $sql = "insert into ".TConstantes::RELATORIO_ALUNOS_NOTAS_FREQUENCIAS." ({$cols}) values ";
+
+            foreach($listaAlunos as $turmadisciplina=>$alunos){
+                foreach($alunos as $aluno=>$listaNotasFrequencias){
+                    $media = 'NULL';
+                    
+                    $avaliacoes = $gradeAvaliacoes[$listaTurmasDisciplinas[$turmadisciplina]->codigograde];
+                    if(sizeof($avaliacoes) > 0){
+
+                        foreach($avaliacoes as $ordem => $av)
+                            $avaliacoes[$ordem]->nota = "0.00";
+
+                        if(sizeof($listaNotasFrequencias["notas"])  > 0)
+                            foreach($listaNotasFrequencias["notas"] as $ordem => $nota)
+                                $avaliacoes[$ordem]->nota = $nota;
+
+                        $media = $TAvaliacao->processaMedia($avaliacoes);
+
+                    }
+                    
+
+                    $faltas = $listaNotasFrequencias["faltas"];
+                    $frequencia = $listaTurmasDisciplinas[$turmadisciplina]->frequencia;
+
+                    if ($frequencia > 0)
+                        $frequencia = round(((100 * ($frequencia - $faltas)) / $frequencia) * 10) / 10;
+                    else
+                        $frequencia = "NULL";
+
+                    if ($frequencia >= $TParametros->academico_mediapresenca)
+                        $aprovacaofrequencias = "TRUE";
+                    else
+                        $aprovacaofrequencias = "FALSE";
+
+                    if ($media != 'NULL' && $media >= $TParametros->academico_medianotas)
+                        $aprovacaonotas = "TRUE";
+                    else
+                        $aprovacaonotas = "FALSE";
+
+                    if ($aprovacaonotas == "TRUE" and $aprovacaofrequencias == "TRUE")
+                        $aprovacaogeral = "TRUE";
+                    else
+                        $aprovacaogeral = "FALSE";
+
+                    $sql .= "('{$alunosNomes[$aluno]}',
+                             '{$aluno}',
+                             '{$turmadisciplina}',
+                             '{$listaTurmasDisciplinas[$turmadisciplina]->nomedisciplina}',
+                             '{$listaTurmasDisciplinas[$turmadisciplina]->nomecurso}',
+                             '{$listaTurmasDisciplinas[$turmadisciplina]->nometurma}',
+                              {$media},
+                              {$frequencia},
+                             '{$listaTurmasDisciplinas[$turmadisciplina]->nomeprofessor}',
+                              {$aprovacaofrequencias},
+                              {$aprovacaonotas},
+                              {$aprovacaogeral}),";
+                }
+            }
+
+            $sql = substr($sql,0,-1);
+
+            $this->obTDbo->sqlExec($sql);
+
+            $this->obTDbo->commit();
+
+            $ob = new TElement('div');
+            $ob->align = "center";
+            $ob->style = "background-color:#FFFF99; margin: 10px; padding: 10px;";
+            $ob->class = "ui-state-highlight";
+            $ob->add("Todas as disciplinas selecionadas foram consolidadas.");
+
+            return $ob;
+
         }catch(Exception $e){
             new setException($e, 2);
         }

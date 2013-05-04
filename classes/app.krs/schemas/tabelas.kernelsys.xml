@@ -435,14 +435,6 @@
       <ativo>1</ativo>
       <colunafilho></colunafilho>
     </row>
-    <row id="40">
-      <id>40</id>
-      <tabela>dbusuarios_privilegios</tabela>
-      <tabelaView>view_usuarios_privilegios</tabelaView>
-      <tabpai>-</tabpai>
-      <ativo>1</ativo>
-      <colunafilho></colunafilho>
-    </row>
     <row id="23">
       <id>23</id>
       <tabela>dbturmas_requisitos</tabela>
@@ -730,6 +722,14 @@
       <tabpai>dbtransacoes</tabpai>
       <ativo>1</ativo>
       <colunafilho>codigo</colunafilho>
+    </row>
+    <row id="40">
+      <id>40</id>
+      <tabela>dbusuarios_privilegios</tabela>
+      <tabelaView>view_usuarios_privilegios</tabelaView>
+      <tabpai>dbusuarios</tabpai>
+      <ativo>1</ativo>
+      <colunafilho></colunafilho>
     </row>
   </tabelas>
 </kernelsys>

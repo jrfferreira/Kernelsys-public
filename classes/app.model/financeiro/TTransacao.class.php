@@ -16,7 +16,6 @@ class TTransacao {
      */
 
     public function __construct() {
-
         // Checa usuario logado e retona o mesmo
         $this->obUser = new TCheckLogin();
         $this->obUser = $this->obUser->getUser();
@@ -234,12 +233,14 @@ class TTransacao {
             $criteriaTransacaoContas->setProperty('order', 'numparcela::integer');
             $retTransacaoContas = $obTDbo->select("*", $criteriaTransacaoContas);
 
-            if(!$codigoconta){
+            if(!$codigoconta){  
 	            while ($obTransacaoContas = $retTransacaoContas->fetchObject()) {
 	                $contas[$obTransacaoContas->codigo] = $obTransacaoContas;
+                    $contas[$obTransacaoContas->codigo]->valorpago = $obTransacaoContas->valorpago_credito - $obTransacaoContas->valorpago_debito;
 	            }
             }else{
             	$contas = $retTransacaoContas->fetchObject();
+                $contas[$contas->codigo]->valorpago = $contas->valorpago_credito - $contas->valorpago_debito;
             }
 
             return $contas;
@@ -1568,4 +1569,43 @@ class TTransacao {
         $texto = $TConvenios->getTextoConvenios($arrayConvenios,$obConta);
         return $texto;
     }
+
+    public function getValorDescontoConvenio($codigoConta, $data){
+        try  {
+            if(!$data)
+                $data = time();
+            $dboConta = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
+            $criteriaConta = new TCriteria();
+            $criteriaConta->add(new TFilter('codigo','=',$codigoConta));
+            $retConta = $dboConta->select("*", $criteriaConta);
+            $obConta = $retConta->fetchObject();
+        
+            $valorConta = $obConta->valorreal;
+            
+            $dt = Date("-", $obConta->vencimento);
+            $dataVencimento = mktime(23,59,59,$dt[1],$dt[2],$dt[0]);
+
+            $transacs = new TDbo('dbtransacoes_convenios');
+            $crit = new TCriteria();
+            $crit->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
+            $retTransacs = $transacs->select('codigoconvenio', $crit);
+
+            $TConvenios = new TConvenios();
+
+            $listaConvenios = array();
+            while ($obTransacoes = $retTransacs->fetchObject()) {
+                $listaConvenios[] = $obTransacoes->codigoconvenio;
+            }
+
+            if($dataVencimento >= time()){
+                return $TConvenios->calculaDesconto($listaConvenios,$valorreal,$data);
+            } else {
+                return 0;                
+            }
+
+        } catch (Exception $e) {
+            new setException($e);
+        }
+    }
+
 }

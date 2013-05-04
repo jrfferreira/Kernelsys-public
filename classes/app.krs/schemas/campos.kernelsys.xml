@@ -14617,27 +14617,6 @@
       <alteravel>1</alteravel>
       <autosave>0</autosave>
     </row>
-    <row id="402">
-      <id>402</id>
-      <colunadb>usuario</colunadb>
-      <campo>usuario</campo>
-      <label>Nome de usuário:</label>
-      <mascara></mascara>
-      <seletor></seletor>
-      <tipo>TEntry</tipo>
-      <entidade>26</entidade>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help></help>
-      <ativo>1</ativo>
-      <valornull>1</valornull>
-      <alteravel>2</alteravel>
-      <autosave>0</autosave>
-    </row>
     <row id="403">
       <id>403</id>
       <colunadb>senha</colunadb>
@@ -15646,6 +15625,27 @@
       <alteravel>1</alteravel>
       <autosave>1</autosave>
     </row>
+    <row id="402">
+      <id>402</id>
+      <colunadb>usuario</colunadb>
+      <campo>usuario</campo>
+      <label>Nome de usuário:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>26</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>1</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+    </row>
     <row id="834">
       <id>834</id>
       <colunadb>valortotal</colunadb>
@@ -16556,6 +16556,48 @@
       <label>Valor da conta:</label>
       <mascara></mascara>
       <seletor>CLASS_MASCARA_VALOR</seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>0</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="983">
+      <id>983</id>
+      <colunadb>convenios</colunadb>
+      <campo>convenios</campo>
+      <label>Convênios:</label>
+      <mascara></mascara>
+      <seletor></seletor>
+      <tipo>TEntry</tipo>
+      <entidade>21</entidade>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setMoney</outcontrol>
+      <incontrol>setFloat</incontrol>
+      <trigger>0</trigger>
+      <help></help>
+      <ativo>1</ativo>
+      <valornull>0</valornull>
+      <alteravel>0</alteravel>
+      <autosave>0</autosave>
+    </row>
+    <row id="982">
+      <id>982</id>
+      <colunadb>juros</colunadb>
+      <campo>juros</campo>
+      <label>Multa e Juros:</label>
+      <mascara></mascara>
+      <seletor></seletor>
       <tipo>TEntry</tipo>
       <entidade>21</entidade>
       <ativafunction>1</ativafunction>
