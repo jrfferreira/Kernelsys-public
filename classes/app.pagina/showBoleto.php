@@ -85,13 +85,13 @@ $dboCkBoleto = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
 $retCkBoleto = $dboCkBoleto->select(array("codigo"=>"codigo", "bkp"=>"bkp"), $criteriaCkBoleto);
 $obCkBoleto= $retCkBoleto->fetchObject();
 
-/**
+
 if($obCkBoleto->codigo != "") {
     echo "<div style='font-size: 9px; text-align: center; font-family: sans-serif; border-bottom: 1px dotted #666; COLOR: #666; width: 666px'>REIMPRESSÃO</div>";
     echo $obCkBoleto->bkp;
     exit();
 }
-*/
+
 
     $criteriaTransacAluno = new TCriteria();
     $criteriaTransacAluno->add(new TFilter('codigopessoa','=',$obCliente->codigo));

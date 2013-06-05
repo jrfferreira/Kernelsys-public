@@ -269,14 +269,13 @@ class TTurma {
                 $obDiscplina = new TTurmaDisciplinas();
                 $objs = NULL;
 
+                $lista = array();
                 while($objs = $retTurmaDisciplinas->fetchObject()) {
-                    if($objs->codigo){
-                    	$retObDisp = $obDiscplina->getTurmaDisciplina($objs->codigo, $fullObject);        
-                    }else{
-                    	$objs->codigo;
-                    }
-                    $disciplinas[$retObDisp->codigo] = $retObDisp;
+                    if($objs->codigo)
+                        $lista[] = $objs->codigo;
                 }
+
+                $disciplinas = $obDiscplina->getListaTurmaDisciplina($lista,$fullObject);
 
                 //Valida existencia das disciplinas na turma ===================
                 if(count($disciplinas) == 0) {

@@ -19,7 +19,8 @@ class TTurmaDisciplinas {
     public function getTurmasDisciplinasAtivas(){
         $this->obTDbo->setEntidade(TConstantes::VIEW_TURMAS_DISCIPLINAS);
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('status','=','1'));
+        $criteria->add(new TFilter('status','=','1'),"OR");
+        $criteria->add(new TFilter('status','=','5'),"OR");
         $retTurmaDisciplina = $this->obTDbo->select('codigo,
                                                      codigocurso,
                                                      nomecurso,
@@ -89,6 +90,68 @@ class TTurmaDisciplinas {
         }
     }
 
+/**
+     * Retorna o objeto correspondente ao relacionamento Turma x Disciplina
+     * param <type> $codigoaluno
+     */
+    public function getListaTurmaDisciplina($codigoListaTurmaDisciplina, $fullObject = true) {
+
+        try {
+            if ($codigoListaTurmaDisciplina) {
+                
+                $this->obTDbo->setEntidade(TConstantes::VIEW_TURMAS_DISCIPLINAS);
+                $criteria = new TCriteria ( );
+                foreach($codigoListaTurmaDisciplina as $codigoTurmaDisciplina){
+                    $criteria->add(new TFilter('codigo', '=', $codigoTurmaDisciplina), 'OR');
+                }
+                $retTurmaDisciplina = $this->obTDbo->select("*", $criteria);
+                $listaTurmaDisciplina = array();
+                while($obTurmaDisciplinas = $retTurmaDisciplina->fetchObject()){
+                    $listaTurmaDisciplina[$obTurmaDisciplinas->codigo] = $obTurmaDisciplinas;
+                }
+
+                $this->obTDbo->setEntidade(TConstantes::VIEW_FUNCIONARIOS_PROFESSORES);
+                $criteriaProf = new TCriteria ( );
+                foreach($listaTurmaDisciplina as $obTurmaDisciplinas){
+                    $criteriaProf->add(new TFilter('codigo', '=', $obTurmaDisciplinas->codigoprofessor),'OR');                    
+                }
+                $retProfessor = $this->obTDbo->select("codigo,nomeprofessor,nomeacao", $criteriaProf);
+                
+                $listaProfessor = array();
+                while($obProfessor = $retProfessor->fetchObject()){
+                    $obProfessor->nomeacao = (($obProfessor->nomeacao != 'Alfabetizado') || ($obProfessor->nomeacao != 'Graduado')) ? "({$obProfessor->nomeacao})" : "";
+                    $listaProfessor[$obProfessor->codigo] = $obProfessor;
+                }
+
+                foreach($listaTurmaDisciplina as $turmaDisciplina=>$codigo){
+                    $obProfessor = $listaProfessor[$turmaDisciplinas->codigoprofessor];
+                    $listaTurmaDisciplina[$codigo]->nomeprofessor = $obProfessor->nomeprofessor . " {$obProfessor->nomeacao}";
+                
+                    if($fullObject) $listaTurmaDisciplina[$codigo]->aulas = $this->getAula($codigo);
+                    if($fullObject) $avaliacoes = $this->getAvaliacao($codigo);
+                    if ($avaliacoes) {
+                        foreach ($avaliacoes as $ch => $vl) {
+                            if ($vl->codigopai) {
+                                $listaTurmaDisciplina[$codigo]->recuperacoes[$ch] = $vl;
+                            } else {
+                                $listaTurmaDisciplina[$codigo]->avaliacoes[$ch] = $vl;
+                            }
+                        }
+                    } else {
+                        $listaTurmaDisciplina[$codigo]->avaliacoes = null;
+                        $listaTurmaDisciplina[$codigo]->recuperacoes = null;
+                    }
+                }
+
+                return $listaTurmaDisciplina;
+            } else {
+                throw new ErrorException("O codigo do relacionamento Turma x Disciplina é invalido.");
+            }
+        } catch (Exception $e) {
+            $this->obTDbo->rollback();
+            new setException($e);
+        }
+    }
     /**
      * Lança a nota correspondente ao aluno
      * param <type> $codigoavaliacao

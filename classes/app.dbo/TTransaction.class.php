@@ -122,6 +122,7 @@ final class TTransaction{
      */
     public static function log($message){
 	
+        echo "<script>(function(message){console.log(new Date(),message);})(\"{$message}\")</script>";
         // verifica existe um logger
         if (is_object(self::$logger)){
 		

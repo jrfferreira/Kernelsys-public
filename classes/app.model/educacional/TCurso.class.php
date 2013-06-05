@@ -33,8 +33,8 @@ class TCurso{
     }
     public function buttonAddCursoDisciplina($idForm){
 
-        $div = new TElement('div');
-        $div->id = 'ret_addCursoDisciplinas';
+        $div = new TElement('div'); 
+       $div->id = 'ret_addCursoDisciplinas';
         $button = new TElement('input');
         $button->id = "addCursoDisciplinas";
         $button->type = "button";
@@ -93,15 +93,13 @@ class TCurso{
                 $criteriaDisicplina->add(new TFilter("codigocurso","=",$codigoCurso));
             $retDisciplinas = $dboDisciplina->select("*",$criteriaDisicplina);
 
+            $disciplinas = array();
             while($disciplina = $retDisciplinas->fetchObject()){
-                if($disciplina->codigodisciplina){
-                    $obDisciplina = new TDisciplina();
-                    $obDisciplina = $obDisciplina->getDiciplina($disciplina->codigodisciplina);
-
-                    $disciplinas[$obDisciplina->codigo] = $obDisciplina;
-                }
+                $disciplinas[] = $disciplina->codigodisciplina;
             }
 
+            $TDisciplinas = new TDisciplina();
+            $disciplinas = $TDisciplinas->getListaDisciplinas($disciplinas);
             return $disciplinas;
             
         }catch (Exception $e){
