@@ -25,7 +25,7 @@ class TMatricula {
             $curso = $obCurso->getCurso($obInscricao->codigocurso);
 
             $obTurma = new TTurma();
-            $turma  = $obTurma->getTurma($obInscricao->codigoturma);
+            $turma  = $obTurma->getTurma($obInscricao->codigoturma,true,false);
             $descontos = $obTurma->getTurmaDescontos($obInscricao->codigoturma);
             $convenios = $obTurma->getTurmaConvenios($obInscricao->codigoturma);
 

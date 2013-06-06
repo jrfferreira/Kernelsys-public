@@ -123,10 +123,10 @@ class TTurmaDisciplinas {
                     $listaProfessor[$obProfessor->codigo] = $obProfessor;
                 }
 
-                foreach($listaTurmaDisciplina as $turmaDisciplina=>$codigo){
+                foreach($listaTurmaDisciplina as $codigo=>$turmaDisciplina){
                     $obProfessor = $listaProfessor[$turmaDisciplinas->codigoprofessor];
                     $listaTurmaDisciplina[$codigo]->nomeprofessor = $obProfessor->nomeprofessor . " {$obProfessor->nomeacao}";
-                
+
                     if($fullObject) $listaTurmaDisciplina[$codigo]->aulas = $this->getAula($codigo);
                     if($fullObject) $avaliacoes = $this->getAvaliacao($codigo);
                     if ($avaliacoes) {

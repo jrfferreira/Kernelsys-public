@@ -99,7 +99,7 @@ class TCurso{
             }
 
             $TDisciplinas = new TDisciplina();
-            $disciplinas = $TDisciplinas->getListaDisciplinas($disciplinas);
+            $disciplinas = $TDisciplinas->getListaDisciplina($disciplinas);
             return $disciplinas;
             
         }catch (Exception $e){
