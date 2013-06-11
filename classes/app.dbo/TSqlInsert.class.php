@@ -40,7 +40,7 @@ final class TSqlInsert extends TSqlInstruction {
 	 * método setCriteria() não existe no contexto desta classe, logo, ir�
 	 * lan�ar um erro ser for executado
 	 */
-	public function setCriteria($criteria) {
+	public function setCriteria(TCriteria $criteria) {
 		
 		// lança o erro
 		new setException ( "Cannot call setCriteria from " . __CLASS__ );
