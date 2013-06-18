@@ -2,48 +2,59 @@
 <kernelsys>
   <formButton>
     <row id="1">
-      <id>1</id>
-      <form>49</form>
-      <botao>fecharCaixa</botao>
-      <labelbotao>Fechar Caixa</labelbotao>
-      <confirmacao>Você deseja Realmente executar esta ação?</confirmacao>
       <actionjs>closeCaixaDia</actionjs>
-      <metodo></metodo>
-      <ordem>1 </ordem>
       <ativo>1</ativo>
+      <botao>fecharCaixa</botao>
+      <confirmacao>Você deseja Realmente executar esta ação?</confirmacao>
+      <form>49</form>
+      <id>1</id>
+      <labelbotao>Fechar Caixa</labelbotao>
+      <metodo/>
+      <ordem>1 </ordem>
     </row>
     <row id="2">
-      <id>2</id>
-      <form>13</form>
-      <botao>concluir_botform</botao>
-      <labelbotao>Baixar conta</labelbotao>
-      <confirmacao>Você deseja realmente executar o pagamento desta conta?</confirmacao>
       <actionjs>onClose</actionjs>
+      <ativo>0</ativo>
+      <botao>concluir_botform</botao>
+      <confirmacao>Você deseja realmente executar o pagamento desta conta?</confirmacao>
+      <form>13</form>
+      <id>2</id>
+      <labelbotao>Baixar conta</labelbotao>
       <metodo>onClose</metodo>
       <ordem>2 </ordem>
-      <ativo>0</ativo>
     </row>
     <row id="4">
-      <id>4</id>
-      <form>8</form>
-      <botao>concluir_inscricao</botao>
-      <labelbotao>Concluir</labelbotao>
-      <confirmacao></confirmacao>
       <actionjs>onClose</actionjs>
+      <ativo>1</ativo>
+      <botao>concluir_inscricao</botao>
+      <confirmacao/>
+      <form>8</form>
+      <id>4</id>
+      <labelbotao>Concluir</labelbotao>
       <metodo>onClose</metodo>
       <ordem>2 </ordem>
-      <ativo>1</ativo>
     </row>
     <row id="5">
-      <id>5</id>
-      <form>483</form>
-      <botao>bot_consolidarNotasFrequencias</botao>
-      <labelbotao>Consolidar</labelbotao>
-      <confirmacao>Atenção, apenas as disciplinas selecionadas serão consolidadas, deseja continuar?</confirmacao>
       <actionjs>closeConsolidacaoNotasFrequencias</actionjs>
+      <ativo>1</ativo>
+      <botao>bot_consolidarNotasFrequencias</botao>
+      <confirmacao>Atenção, apenas as disciplinas selecionadas serão consolidadas, deseja continuar?</confirmacao>
+      <form>483</form>
+      <id>5</id>
+      <labelbotao>Consolidar</labelbotao>
       <metodo>onClose</metodo>
       <ordem>1 </ordem>
+    </row>
+    <row id="6">
+      <actionjs>setBaixaMultipla</actionjs>
       <ativo>1</ativo>
+      <botao>bot_baixaMultipla</botao>
+      <confirmacao>Você deseja realmente executar a baixa de todas as contas selecionadas?</confirmacao>
+      <form>484</form>
+      <id>6</id>
+      <labelbotao>Baixar Contas</labelbotao>
+      <metodo>onClose</metodo>
+      <ordem>1 </ordem>
     </row>
   </formButton>
 </kernelsys>

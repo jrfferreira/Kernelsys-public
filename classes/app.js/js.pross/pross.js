@@ -195,18 +195,17 @@ function onSelecao(ob, idLista, codigoRegistro){
     
     var registro = ob.parentNode.parentNode;
     var campos = registro.getElementsByTagName('input');
-    var dados = new Array();
+    var dados = "";
     
     var x = 0;
     while(campos.length > x){
-    	dados[x] = campos[x].value;
+    	dados += '&dados[]='+campos[x].value;
     	x=x+1;
     }
-    dados = JSON.stringify(dados);
     
     var metodo = 'onSelecao';
     var resp = codigoRegistro == 'all' ? 'contLista'+idLista : 'winRet';
-    var retorno = exe(resp, getPath()+'/app.view/TExecs.class.php?method='+metodo+'&acselecao='+acSelecao+'&dados='+dados+'&idForm='+idLista, '', 'GET', 'Sucesso');
+    var retorno = exe(resp, getPath()+'/app.view/TExecs.class.php?method='+metodo+'&acselecao='+acSelecao+dados+'&idForm='+idLista, '', 'GET', 'Sucesso');
 }
 
 /*

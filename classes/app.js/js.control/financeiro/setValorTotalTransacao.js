@@ -4,8 +4,8 @@ function setValorTotalTransacao(){
     var valorTotal          = document.getElementById('valortotal');
     var valorCorrigido      = document.getElementById('valorcorrigido');
 
-    valorTotal.value = somaTotalProdutos.value;
-    valorCorrigido.value = somaTotalProdutos.value;
+    valorTotal.value = somaTotalProdutos?somaTotalProdutos.value:0;
+    valorCorrigido.value = somaTotalProdutos?somaTotalProdutos.value:0;
     valorCorrigido.blur();
 }
 

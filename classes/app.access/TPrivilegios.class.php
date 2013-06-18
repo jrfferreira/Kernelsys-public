@@ -10,7 +10,7 @@ class TPrivilegios {
 
         $TDbo_modulos = new TKrs('modulos_principais');
         $crit = new TCriteria();
-        $crit->add(new TFilter('ativo','=','1'));
+        $crit->add(new TFilter('ativo','!=','0'));
         $crit->getProperty("order by labelmodulo");
         if($id) {
             $crit->add(new TFilter("id","=",$id));
@@ -109,7 +109,7 @@ class TPrivilegios {
         $crit = new TCriteria();
         $crit->add(new TFilter("moduloprincipal","=",$modulo));
         $crit->add(new TFilter("labelmodulo","!=",""));
-        $crit->add(new TFilter("ativo","=","1"));
+        $crit->add(new TFilter("ativo","!=","0"));
         if($modulo) {
             $crit->add(new TFilter("moduloprincipal","=",$modulo));
         }
@@ -187,7 +187,7 @@ class TPrivilegios {
                 $abas = $this->viewGetFormAbas($codigousuario,$obDbo->id);
                 $divMenu->add($abas);
 
-                $fieldSetMenu->add("<b>Formulário:</b> {$obDbo->nomeform}");
+                $fieldSetMenu->add("<b>Formul√°rio:</b> {$obDbo->nomeform}");
 
                 $fieldSetMenu->add($divMenu);
                 $obMenu->add($fieldSetMenu);
@@ -335,6 +335,26 @@ class TPrivilegios {
                 }
                 $fieldSetOpcoesLista->add($campoReqMenu);
                 $fieldSetOpcoesLista->add("Multipla Seleção de registros");
+
+                $obLista->add($fieldSetOpcoesLista);
+
+            }
+
+            if($obOpcoesLista->obapendice != '-') {
+
+                $fieldSetOpcoesLista = new TElement("div");
+
+                $campoReqMenu = new TCheckButton("opcoesLista-6");
+                $campoReqMenu->setValue("1");
+                $campoReqMenu->setId("2".$obOpcoesLista->forms_id."6");
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$codigousuario.'\',\'2\',\''.$obOpcoesLista->forms_id.'\',\'6\')');
+
+                if($obUsuario["2"][$obOpcoesLista->forms_id]["6"]["1"]) {
+                    $checklistoptions = true;
+                    $campoReqMenu->checked = "checked";
+                }
+                $fieldSetOpcoesLista->add($campoReqMenu);
+                $fieldSetOpcoesLista->add("Visualização de Apêndice");
 
                 $obLista->add($fieldSetOpcoesLista);
 

@@ -70,6 +70,8 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback) {
   }
   if(retorno) {
     return retorno;
+  }else{
+	  return true;
   }
 }
 

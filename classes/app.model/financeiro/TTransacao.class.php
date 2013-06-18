@@ -1607,5 +1607,29 @@ class TTransacao {
             new setException($e);
         }
     }
+    
+    public function removeContaDuplicata($codigoConta){
+    	try {
+    		$obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
+    		if(!$obTDbo->delete($codigoConta,"codigoconta"))
+    			throw new ErrorException("Não foi possivel remover a duplicata informada.", 1);
+    	} catch (Exception $e) {
+    		new setException($e);
+    	}
+    }
+    
+    public function limpaInformacoesBoleto($idForm){
+    	try {
+	    	$obHeader = new TSetHeader();
+	    	$headerForm = $obHeader->getHead($idForm);
+	    	
+	    	if($headerForm['codigo']){
+	    		$this->removeContaDuplicata($headerForm['codigo']);
+	    	}
+	    	
+    	} catch (Exception $e) {
+            new setException($e);
+        }
+    }
 
 }

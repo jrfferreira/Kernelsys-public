@@ -719,7 +719,7 @@ class TSetlista {
             
         }else{
         	
-        	$vetorRegistro = json_decode($registro);
+        	$vetorRegistro = $registro;
         	
             if($action == '1'){
                 $listaSelecao[$vetorRegistro[0]] = $vetorRegistro[0];

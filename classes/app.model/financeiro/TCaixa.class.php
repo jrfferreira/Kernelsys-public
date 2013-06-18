@@ -137,21 +137,19 @@ class TCaixa {
     public function getMovimentoCaixa($codigocaixa = null, $colunas = '*'){
         try{
 
-            $obTDbo = new TDbo();
-            $obTDbo->setEntidade(TConstantes::DBCAIXA);
+            $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
 
                 if(!$codigocaixa){
                     //gera um registro de movimento de caixa
-                    $retorno = $obTDbo->insert();
+                    $retorno = $this->obTDbo->insert();
                     $codigocaixa = $retorno['codigo'];
                 }
 
             $criteriaCaixa = new TCriteria();
             $criteriaCaixa->add(new TFilter('codigo', '=', $codigocaixa));
-            $retCaixa = $obTDbo->select($colunas, $criteriaCaixa);
+            $retCaixa = $this->obTDbo->select($colunas, $criteriaCaixa);
             $obMovimentoCaixa = $retCaixa->fetchObject();
 
-            $obTDbo->close();
 
             return $obMovimentoCaixa;
             
@@ -175,12 +173,16 @@ class TCaixa {
                 $obHeader = new TSetHeader();
                 $obHeader = $obHeader->getHead($idform);
                 $codigocaixa = $obHeader['codigo'];
+                
+                $this->obTDbo->commit();
 
                 $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
 
                 //executa baixa no caixa
                 $this->baixaContaCaixa($obMovimentoCaixa->codigoconta, $obMovimentoCaixa->valorpago, $obMovimentoCaixa->desconto, $obMovimentoCaixa->numdoc, $obMovimentoCaixa->multaacrecimo, $obMovimentoCaixa->formapag, $obMovimentoCaixa->codigocontacaixa, $obMovimentoCaixa->codigo);
-
+				
+                $this->obTDbo->commit();
+                $this->obTDbo->close();
             }
 
         } catch (Exception $e) {
@@ -204,10 +206,10 @@ class TCaixa {
         
         try {
 
-            $obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
+            $this->obTDbo->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
             $critBase = new TCriteria();
             $critBase->add(new TFilter("codigo", "=", $codigoconta));
-            $obBase = $obTDbo->select("*", $critBase);
+            $obBase = $this->obTDbo->select("*", $critBase);
             $dados = $obBase->fetchObject();
 
             if(!$dados) {
@@ -215,10 +217,10 @@ class TCaixa {
             }
 
             //Retorna informações da transação
-            $obTDbo = new TDbo(TConstantes::DBTRANSACOES);
+            $this->obTDbo->setEntidade(TConstantes::DBTRANSACOES);
             $criteriaTransac = new TCriteria();
             $criteriaTransac->add(new TFilter('codigo', '=', $dados->codigotransacao));
-            $retTransac = $obTDbo->select('codigoplanoconta', $criteriaTransac);
+            $retTransac = $this->obTDbo->select('codigoplanoconta', $criteriaTransac);
             $obTransac = $retTransac->fetchObject();
 
                 //retorna dados do movimento de caixa
@@ -235,7 +237,7 @@ class TCaixa {
                     switch($formapagamento){
                         case 'Dinheiro': $valorDisponivel = $saldoCaixa['saldoReceitaDinheiro'] - $saldoCaixa['saldoDespesaDinheiro']; break;
                         case 'Cheque': $valorDisponivel = $saldoCaixa['saldoReceitaCheque'] - $saldoCaixa['saldoDespesaCheque']; break;
-                        case 'Cartão': $valorDisponivel = $saldoCaixa['saldoReceitaCartao'] - $saldoCaixa['saldoDespesaCartao']; break;
+                        case 'Cart�o': $valorDisponivel = $saldoCaixa['saldoReceitaCartao'] - $saldoCaixa['saldoDespesaCartao']; break;
                     }
                         if($valorNecessario <= $valorDisponivel){
                             $validavalor = true;
@@ -262,10 +264,10 @@ class TCaixa {
                         $args["formapag"]           = $formapagamento;
                         $args["ativo"]              = $dados->ativo;
                     
-                        $obTDbo = new TDbo(TConstantes::DBCAIXA);
+                        $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
                         $criteriaUpdate = new TCriteria();
                         $criteriaUpdate->add(new TFilter("codigo", "=", $codigocaixa));
-                        $retCaixa = $obTDbo->update($args, $criteriaUpdate);
+                        $retCaixa = $this->obTDbo->update($args, $criteriaUpdate);
 
                     if($retCaixa) {
 
@@ -289,14 +291,12 @@ class TCaixa {
                         //Altera status da conta
                          
                         $dadosUpdateConta["statusconta"] = $statusConta;
-                        //$dadosUpdateConta["valorreal"] = $novoValorReal;
-                        $obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
+                        $dadosUpdateConta["valorreal"] = $novoValorReal < 0 ? 0 : $novoValorReal;
+                        $this->obTDbo->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
                         $criteriaUpContas = new TCriteria();
                         $criteriaUpContas->add(new TFilter('codigo', '=', $obMovimentoCaixa->codigoconta));
-                        $exeUpConta = $obTDbo->update($dadosUpdateConta, $criteriaUpContas);
+                        $exeUpConta = $this->obTDbo->update($dadosUpdateConta, $criteriaUpContas);
  						
-                        $obTDbo->close();
-
                         if (!$exeUpConta) {
                             throw new ErrorException("O estado da conta não pode ser alterado.");
                         }
@@ -1031,10 +1031,9 @@ class TCaixa {
      */
 
     public function fechaCaixaFuncionario($codigocontacaixa = null) {
-        $obTDbo = new TDbo();
         try {
             //Altera status dos movimentos de caixa
-            $obTDbo->setEntidade(TConstantes::DBCAIXA);
+            $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
             $criteriaUPCaixa = new TCriteria();
             //$criteriaUPCaixa->add(new TFilter('datacad','=',$dataBase));
             $criteriaUPCaixa->add(new TFilter('ativo', '=', '1'));
@@ -1043,17 +1042,17 @@ class TCaixa {
             if ($codigocontacaixa) {
                 $criteriaUPCaixa->add(new TFilter('codigocontacaixa', '=', $codigocontacaixa));
             }
-            $dboUpMCaixa = $obTDbo->update(array('statusmovimento' => '2'), $criteriaUPCaixa);
+            $dboUpMCaixa = $this->obTDbo->update(array('statusmovimento' => '2'), $criteriaUPCaixa);
 
-            $obTDbo->setEntidade(TConstantes::DBCAIXA_FUNCIONARIOS);
+            $this->obTDbo->setEntidade(TConstantes::DBCAIXA_FUNCIONARIOS);
             $criteriaUPCaixaFuncionario = new TCriteria();
             if ($codigocontacaixa) {
                 $criteriaUPCaixaFuncionario->add(new TFilter('codigocontacaixa', '=', $codigocontacaixa));
             }
             $criteriaUPCaixaFuncionario->add(new TFilter('codigofuncionario', '=', $this->obUser->codigofuncionario));
-            $dboUpCaixaFuncionario = $obTDbo->update(array('situacao' => '2'), $criteriaUPCaixaFuncionario);
+            $dboUpCaixaFuncionario = $this->obTDbo->update(array('situacao' => '2'), $criteriaUPCaixaFuncionario);
 
-            if ($obTDbo->commit()) {
+            if ($this->obTDbo->commit()) {
                 $divValCaixa = new TElement('div');
                 $divValCaixa->class = "ui-state-highlight";
                 $divValCaixa->add('<h3>Contas conferidas com sucesso.</h3>');
@@ -1063,7 +1062,7 @@ class TCaixa {
                 throw new ErrorException('Não foi possivel completar a ação, tente mais tarde');
             }
         } catch (Exception $e) {
-            $obTDbo->rollBack();
+            $this->obTDbo->rollBack();
             new setException($e);
         }
     }
@@ -1367,5 +1366,102 @@ class TCaixa {
             $this->obTDbo->rollBack();
             new setException($e);
         }
+    }
+    
+    /**
+     * Gera apendice da lista de Baixa Multiplas
+     * @param INT $idForm = Id do formulario.
+     */
+    public function apendiceBaixaMultipla($codigo,$idForm){
+    
+    	$div = new TElement('div');
+    	$div->id = 'divBaixaMultipla';
+    	$button = new TElement('input');
+    	$button->id = "runBaixaMultipla";
+    	$button->type = "button";
+    	$button->onclick = "setBaixaMultipla('ret_BaixaMultipla','$idForm')";
+    	$button->class = "ui-state-default ui-corner-all";
+    	$button->title = 'Baixar Contas Selecionadas';
+    	$button->value = "Baixar Contas Selecionadas";
+    
+    	$div->style = "text-align: center; padding: 5px;";
+    	$div->class = "ui-widget-content";
+    	$div->add($button);
+
+    	$div2 = new TElement('div');
+    	$div2->id = 'ret_BaixaMultipla';
+    	$div->add($div2);
+    	
+    	return $div;
+    }
+    
+    public function setBaixaMultipla($idForm){
+    	$obHeader = new TSetHeader();
+    	$headerForm = $obHeader->getHead($idForm);
+    	
+    	try {
+    		$listaObjetoContas = array();
+	    	$listaContas = $obHeader->getHead(485,'listaSelecao');
+	    	$codigocontacaixa = $headerForm['camposSession']['codigocontacaixa']['valor'];
+	    	$formapag = $headerForm['camposSession']['formapag']['valor'];
+	    	$acrescimo = $headerForm['camposSession']['multaacrecimo']['valor'];
+	    	$desconto = $headerForm['camposSession']['desconto']['valor'];
+	    	$obs = $headerForm['camposSession']['obs']['valor'];
+    		if(!$listaContas || count($listaContas) < 2)
+    			throw new Exception('Informe ao menos duas contas para o pagamento.');
+    		if(!$codigocontacaixa || !$formapag)
+    			throw new Exception('Informe uma forma de pagamento.');
+    			
+    		$this->obTDbo->setEntidade(TConstantes::DBTRANSACOES_CONTAS);
+    		$crit = new TCriteria();
+    		$crit->add(new TFilter('statusconta','in','(1,3)'),'AND');
+    		foreach($listaContas as $conta)
+    			$crit->add(new TFilter('codigo','=',$conta, 9),'OR');
+    		$retContas = $this->obTDbo->select('*',$crit);
+    		
+    		while($conta = $retContas->fetchObject()){
+    			$novoMovimento = array();
+    			$novoMovimento['unidade'] = $conta->unidade;
+    			$novoMovimento['codigoconta'] = $conta->codigo;
+    			$novoMovimento['codigoplanoconta'] = $conta->codigoplanoconta;
+    			$novoMovimento['codigopessoa'] = $conta->codigopessoa;
+    			$novoMovimento['codigotransacao'] = $conta->codigotransacao;
+    			$novoMovimento['codigofuncionario'] = $this->obUser->codigofuncionario;
+    			$novoMovimento['tipomovimentacao'] = 'C';
+    			$novoMovimento['valorreal'] = $conta->valorreal;
+    			$novoMovimento['valorpago'] = $conta->valorreal-$desconto+$acrescimo;
+    			$novoMovimento['valorentrada'] = $conta->valorreal-$desconto+$acrescimo;
+    			$novoMovimento['datapag'] = date('Y-m-d');
+    			$novoMovimento['statusmovimento'] = 1;
+    			$novoMovimento['statusconta'] =  1;
+    			$novoMovimento['ativo'] = 1;
+    			$novoMovimento['obs'] = $obs;
+
+    			$this->obTDbo->setEntidade(TConstantes::DBCAIXA);
+    			$retTransacao = $this->obTDbo->insert($novoMovimento);
+    			
+    			$this->obTDbo->commit();
+
+    			if($retTransacao){
+    				if($this->baixaContaCaixa($novoMovimento['codigoconta'], $novoMovimento['valorpago'], $desconto, $acrescimo, null, $formapag, $codigocontacaixa, $retTransacao['codigo']))
+						$this->obTDbo->commit();
+    			
+    			}else{
+    				throw new ErrorException("N�o foi possivel inserir o movimento de caixa.", 1);
+    			}
+    			
+    		}
+    			
+	if($conta){
+    		$this->obTDbo->commit();
+    		$this->obTDbo->close();
+		
+	}
+    		
+    	}catch (Exception $e){
+    		$this->obTDbo->rollBack();
+    		new setException($e);
+    	}
+    	
     }
 }

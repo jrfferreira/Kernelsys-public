@@ -35,7 +35,7 @@ class TCompLista {
         //Instancia manipulador de sessão
         $this->obsession = new TSession();
         $this->editable = $this->obsession->getValue('statusViewForm');
-
+		
         
             if ($this->idLista != "") {                
                 $tKrs = new TKrs('lista_form');
@@ -46,8 +46,43 @@ class TCompLista {
                 $retLista = $tKrs->select('*',$crit);
                 
                 $this->listaInfo = $retLista->fetchObject();
-
                 $this->idForm = $this->listaInfo->forms_id;
+                
+                //==================================================================\\
+                //Acessa e checa os PRIVILEGIOS de acesso as funcionalidades da lista
+                $nivel = 2; //nivel das opções da lista [1 = adicionar / 2 = editar / 3 = deletar]
+                $obPrivilegios = new TGetPrivilegio($this->idForm, $nivel);
+                $privilegios = $obPrivilegios->get();
+                
+                $privilegioIncluir = array_search('1', $privilegios);
+                if (!$privilegioIncluir) {
+                	$this->listaInfo->acincluir = 0;
+                }
+                $privilegioEditar = array_search('2', $privilegios);
+                if (!$privilegioEditar) {
+                	$this->listaInfo->aceditar = 0;
+                }
+                $privilegioDeletar = array_search('3', $privilegios);
+                if (!$privilegioDeletar) {
+                	$this->listaInfo->acdeletar = 0;
+                }
+                
+                $privilegioReplicar = array_search('4', $privilegios);
+                if (!$privilegioReplicar) {
+                	$this->listaInfo->acreplicar = 0;
+                }
+                
+                $privilegioSelecionar = array_search('5', $privilegios);
+                if (!$privilegioSelecionar) {
+                	$this->listaInfo->acselecao = 0;
+                }
+                
+                $privilegioApendice = array_search('6', $privilegios);
+                if (!$privilegioApendice) {
+                	$this->listaInfo->obapendice = 0;
+                }
+                //==================================================================\\
+
                 
                 $tKrs = new TKrs('tabelas');
                 $crit = new TCriteria();
@@ -182,7 +217,7 @@ class TCompLista {
         
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //verifica e compila objeto APÊNDICE
-        if ($this->listaInfo->obapendice and $this->listaInfo->obapendice != "-" and $this->listaInfo->obapendice != "" and $this->listaInfo->obapendice != "0") {
+        if ($this->listaInfo->obapendice && $this->listaInfo->obapendice != "-" && $this->listaInfo->obapendice != "" && $this->listaInfo->obapendice != "0") {
 
             if ($this->obHeader['idFormPai']) {
                 $chaveApendice = $this->obHeader['idFormPai'];
@@ -241,7 +276,7 @@ class TCompLista {
      * a definida no registro do sistema
      * acoes -> [incluir, filtrar, exluir, editar, viazualizar, enviar]
      */
-    public function setViewAction($ac1, $ac2, $ac3, $ac4, $ac5, $ac6, $ac7, $ac8) {
+    public function setViewAction($ac1, $ac2, $ac3, $ac4, $ac5, $ac6, $ac7, $ac8, $ac9) {
 
         $this->listaInfo->acincluir = $ac1;
         $this->listaInfo->acfiltrar = $ac2;
@@ -251,6 +286,8 @@ class TCompLista {
         $this->listaInfo->acenviar = $ac6;
         $this->listaInfo->acreplicar = $ac7;
         $this->listaInfo->acselecao = $ac8;
+        $this->listaInfo->acapendice = $ac9;
+        
     }
 
     /* método de configuração da lista de dados
@@ -278,35 +315,7 @@ class TCompLista {
             $this->obLista->onLimite();
         }
 
-        //==================================================================\\
-        //Acessa e checa os PRIVILEGIOS de acesso as funcionalidades da lista
-        $nivel = 2; //nivel das opções da lista [1 = adicionar / 2 = editar / 3 = deletar]
-        $obPrivilegios = new TGetPrivilegio($this->idForm, $nivel);
-        $privilegios = $obPrivilegios->get();
-
-        $privilegioIncluir = array_search('1', $privilegios);
-        if (!$privilegioIncluir) {
-            $this->listaInfo->acincluir = 0;
-        }
-        $privilegioEditar = array_search('2', $privilegios);
-        if (!$privilegioEditar) {
-            $this->listaInfo->aceditar = 0;
-        }
-        $privilegioDeletar = array_search('3', $privilegios);
-        if (!$privilegioDeletar) {
-            $this->listaInfo->acdeletar = 0;
-        }
-
-        $privilegioReplicar = array_search('4', $privilegios);
-        if (!$privilegioReplicar) {
-            $this->listaInfo->acreplicar = 0;
-        }
-
-        $privilegioSelecionar = array_search('5', $privilegios);
-        if (!$privilegioSelecionar) {
-            $this->listaInfo->acselecao = 0;
-        }
-        //==================================================================\\
+        
         //adiciona Elementos na barra de navegação das listas
         if (count($this->actionsBarraNav) > 0) {
 

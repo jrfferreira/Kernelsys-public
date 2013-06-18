@@ -2,108 +2,108 @@
 <kernelsys>
   <modulosPrincipais>
     <row id="1">
+      <ativo>1</ativo>
       <id>1</id>
-      <modulo>comercial</modulo>
       <labelmodulo>Comercial</labelmodulo>
+      <modulo>comercial</modulo>
       <nivel>1</nivel>
       <ordem>1</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="2">
+      <ativo>1</ativo>
       <id>2</id>
-      <modulo>secretaria</modulo>
       <labelmodulo>Secretaria</labelmodulo>
+      <modulo>secretaria</modulo>
       <nivel>1</nivel>
       <ordem>2</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="3">
+      <ativo>1</ativo>
       <id>3</id>
-      <modulo>financeiro</modulo>
       <labelmodulo>Financeiro</labelmodulo>
+      <modulo>financeiro</modulo>
       <nivel>1</nivel>
       <ordem>5</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="4">
+      <ativo>1</ativo>
       <id>4</id>
-      <modulo>administrativo</modulo>
       <labelmodulo>Administrativo</labelmodulo>
+      <modulo>administrativo</modulo>
       <nivel>1</nivel>
       <ordem>4</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="5">
+      <ativo>1</ativo>
       <id>5</id>
-      <modulo>rh</modulo>
       <labelmodulo>Recursos Humanos</labelmodulo>
+      <modulo>rh</modulo>
       <nivel>1</nivel>
       <ordem>3</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="6">
+      <ativo>0</ativo>
       <id>6</id>
-      <modulo>paramentros</modulo>
       <labelmodulo>Parametros</labelmodulo>
+      <modulo>paramentros</modulo>
       <nivel>1</nivel>
       <ordem>12</ordem>
-      <ativo>0</ativo>
     </row>
     <row id="7">
+      <ativo>1</ativo>
       <id>7</id>
-      <modulo>coordenador</modulo>
       <labelmodulo>Coordenador</labelmodulo>
+      <modulo>coordenador</modulo>
       <nivel>1</nivel>
       <ordem>7</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="12">
+      <ativo>1</ativo>
       <id>12</id>
-      <modulo>biblioteca</modulo>
       <labelmodulo>Biblioteca</labelmodulo>
+      <modulo>biblioteca</modulo>
       <nivel>1</nivel>
       <ordem>10</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="13">
+      <ativo>1</ativo>
       <id>13</id>
-      <modulo>academico</modulo>
       <labelmodulo>Acadêmico</labelmodulo>
+      <modulo>academico</modulo>
       <nivel>1</nivel>
       <ordem>6</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="8">
+      <ativo>0</ativo>
       <id>8</id>
-      <modulo>questionarios</modulo>
       <labelmodulo>Questionarios</labelmodulo>
+      <modulo>questionarios</modulo>
       <nivel>1</nivel>
       <ordem>13</ordem>
-      <ativo>0</ativo>
     </row>
     <row id="11">
+      <ativo>0</ativo>
       <id>11</id>
-      <modulo>projetos</modulo>
       <labelmodulo>Projetos</labelmodulo>
+      <modulo>projetos</modulo>
       <nivel>1</nivel>
       <ordem>11</ordem>
-      <ativo>0</ativo>
     </row>
     <row id="9">
+      <ativo>1</ativo>
       <id>9</id>
-      <modulo>professores</modulo>
       <labelmodulo>Professores</labelmodulo>
+      <modulo>professores</modulo>
       <nivel>1</nivel>
       <ordem>8</ordem>
-      <ativo>1</ativo>
     </row>
     <row id="10">
+      <ativo>1</ativo>
       <id>10</id>
-      <modulo>alunos</modulo>
       <labelmodulo>Alunos</labelmodulo>
+      <modulo>alunos</modulo>
       <nivel>1</nivel>
       <ordem>9</ordem>
-      <ativo>1</ativo>
     </row>
   </modulosPrincipais>
 </kernelsys>

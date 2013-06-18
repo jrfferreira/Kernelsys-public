@@ -108,7 +108,7 @@ CREATE TABLE dbusuarios
 (
   id serial NOT NULL,
   classeuser character varying(20),
-  pessseq integer,
+  pessseq character varying(30),
   usuario character varying(80) NOT NULL DEFAULT 'user'::character varying,
   senha character varying(60),
   entidadepai character varying(255),
