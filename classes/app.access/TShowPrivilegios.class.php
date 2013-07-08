@@ -37,11 +37,11 @@ class TShowPrivilegios {
 				while ( $retMenu = $runMenu->fetchObject () ) {
 					
 					// checa privilegio liberado
-					$sqlUser = "select * from dbusuarios where codigo='" . $this->param . "'";
+					$sqlUser = "select * from dbusuario where codigo='" . $this->param . "'";
 					$runUser = $conn->Query ( $sqlUser );
 					$retUser = $runUser->fetchObject ();
 					
-					$sqlCkPriv = "select id,ativo from dbusuarios_privilegios where codigo='" . $retUser->codigopessoa . "' and nivel='0' and modulo='" . $retMenu->id . "'";
+					$sqlCkPriv = "select id,ativo from dbusuario_privilegio where codigo='" . $retUser->codigopessoa . "' and nivel='0' and modulo='" . $retMenu->id . "'";
 					$runCkPriv = $conn->Query ( $sqlCkPriv );
 					$retCkPriv = $runCkPriv->fetchObject ();
 					

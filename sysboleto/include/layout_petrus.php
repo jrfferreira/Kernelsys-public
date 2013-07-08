@@ -28,7 +28,7 @@ $htmlBoleto = '
 
 $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <tr>
-<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC="../'.TOccupant::getPath().'app.config/logo.jpg" style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
+<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC=../'.TOccupant::getPath().'app.config/logo.jpg style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
 <td colspan=2 align="center" height=40><span class=ld>
 <span class="campotitulo">
 ' . $dadosboleto["linha_digitavel"] . '
@@ -98,7 +98,7 @@ do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cell
 $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0><tr><td class=ct width=666></td></tr><tbody><tr><td class=ct width=666>
 <div align=right>Corte na linha pontilhada</div></td></tr><tr><td class=ct width=666><img height=1 src=imagens/6.png width=665 border=0></td></tr></tbody></table><br><table cellspacing=0 cellpadding=0 width=666 border=0><tr><td class=cp width=150> 
   <span class="campo"><IMG 
-      src="imagens/logocaixa.jpg" width="120" border=0></span></td>
+      src=../../sysboleto/imagens/logocaixa.jpg width="120" border=0></span></td>
 <td width=3 valign=bottom><img height=22 src=imagens/3.png width=2 border=0></td><td class=cpt width=58 valign=bottom><div align=center><font class=bc>'.$dadosboleto["codigo_banco_com_dv"].'</font></div></td><td width=3 valign=bottom><img height=22 src=imagens/3.png width=2 border=0></td><td class=ld align=right width=453 valign=bottom><span class=ld> 
 <span class="campotitulo">
 '.$dadosboleto["linha_digitavel"].'

@@ -54,7 +54,7 @@ $retTransacaoContas = $dboTransacaoContas->select("*", $criteriaTransacaoContas)
 
 while($obContas = $retTransacaoContas->fetch()){
         switch($obContas['statusconta']){
-            case '1': $situacao = 'Vencida';break;
+            case '1': $situacao = 'Não Informado';break;
             case '2': $situacao = 'Paga';break;
             case '3': $situacao = 'Parcialmente Paga';break;
         

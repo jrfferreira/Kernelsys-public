@@ -47,18 +47,18 @@ if($conn = TTransaction::get()){
 		
 	if($conn = TTransaction::get()){
 	
-		$sqlCkPriv = "select id from dbusuarios_privilegios where ativo='1' and codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
+		$sqlCkPriv = "select id from dbusuario_privilegio where ativo='1' and codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
 		$runCkPriv = $conn->Query($sqlCkPriv);
 		$retCkPriv = $runCkPriv->fetchObject();
 		
 		if($retCkPriv->id){
 			
-			$upPriv = "UPDATE dbusuarios_privilegios set ativo='".$param['sit']."' where codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
+			$upPriv = "UPDATE dbusuario_privilegio set ativo='".$param['sit']."' where codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
 			$runUp  = $conn->Query($upPriv);
 		}
 		else{
 		
-			$inPriv = "insert into dbusuarios_privilegios set codigo='".$param['cd']."', unidade='".$obUser->unidade->codigo."', nivel='0', modulo='".$param['rid']."',datacad='".date("Y-m-d")."', ativo='1'";
+			$inPriv = "insert into dbusuario_privilegio set codigo='".$param['cd']."', unidade='".$obUser->unidade->codigo."', nivel='0', modulo='".$param['rid']."',datacad='".date("Y-m-d")."', ativo='1'";
 			$runIn  = $conn->Query($inPriv);
 			
 			if(!$runIn){

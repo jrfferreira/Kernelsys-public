@@ -15,7 +15,7 @@ function __autoload($classe) {
      
 $dbo = new TDbo(TConstantes::VIEW_PESSOAS_ALUNOS);
 $crit = new TCriteria();
-$crit->add(new TFilter('codigopessoa','not in','(select codigopessoa from dbusuarios)'));
+$crit->add(new TFilter('codigopessoa','not in','(select codigopessoa from dbusuario)'));
 $ret = $dbo->select('nomepessoa,codigo,codigopessoa',$crit);
 
 while($aluno = $ret->fetchObject()){

@@ -23,7 +23,7 @@ class TSetUnidade{
             $criteria->add(new TFilter("ativo","=","1"));
             $qrUd = $sql->select("*", $criteria);
 		
-			//$sql = "select * from dbunidades where ativo='1'";
+			//$sql = "select * from dbunidade where ativo='1'";
 			//$qrUd = $this->conn->Query($sql);
 				$retUnid = $qrUd->fetchAll();
 			

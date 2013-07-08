@@ -77,10 +77,10 @@ class TCompLista {
                 	$this->listaInfo->acselecao = 0;
                 }
                 
-                $privilegioApendice = array_search('6', $privilegios);
-                if (!$privilegioApendice) {
-                	$this->listaInfo->obapendice = 0;
-                }
+//                 $privilegioApendice = array_search('6', $privilegios);
+//                 if (!$privilegioApendice) {
+//                 	$this->listaInfo->obapendice = 0;
+//                 }
                 //==================================================================\\
 
                 

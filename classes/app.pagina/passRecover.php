@@ -20,7 +20,7 @@ class PassRecover {
 	}
 	
 	public function request($codigoUsuario){
-		$this->dbo->setEntidade('dbusuarios');
+		$this->dbo->setEntidade('dbusuario');
         $criterio = new TCriteria();
         $criterio->add(new TFilter('usuario','='),$codigoUsuario);
         $retUsuario = $this->dbo->select('codigo', $criterio);

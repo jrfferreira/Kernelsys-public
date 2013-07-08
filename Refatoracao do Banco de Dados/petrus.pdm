@@ -8226,7 +8226,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362945903</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbunidades_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbunidade_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -26098,8 +26098,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o226">
 <a:ObjectID>95DC4A8E-B1B8-42FA-B68E-63B2B9998C38</a:ObjectID>
-<a:Name>dbunidades_parametros</a:Name>
-<a:Code>dbunidades_parametros</a:Code>
+<a:Name>dbunidade_parametros</a:Name>
+<a:Code>dbunidade_parametros</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1367162523</a:ModificationDate>
@@ -26126,7 +26126,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbunidades_parametros_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbunidade_parametros_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -26263,7 +26263,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362947480</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -26441,8 +26441,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o230">
 <a:ObjectID>251A2977-0389-46E2-AE17-D278B26249F3</a:ObjectID>
-<a:Name>dbusuarios_erros</a:Name>
-<a:Code>dbusuarios_erros</a:Code>
+<a:Name>dbusuario_erros</a:Name>
+<a:Code>dbusuario_erros</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1367240539</a:ModificationDate>
@@ -26469,7 +26469,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_erros_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_erros_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -26586,8 +26586,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o232">
 <a:ObjectID>7AB39EB1-BF16-4F77-9312-8FFCAE93A311</a:ObjectID>
-<a:Name>dbusuarios_historico</a:Name>
-<a:Code>dbusuarios_historico</a:Code>
+<a:Name>dbusuario_historico</a:Name>
+<a:Code>dbusuario_historico</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1367240786</a:ModificationDate>
@@ -26614,7 +26614,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_historico_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_historico_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -26731,8 +26731,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o234">
 <a:ObjectID>A554636A-C641-4A2F-BACA-6685931C6E99</a:ObjectID>
-<a:Name>dbusuarios_privilegios</a:Name>
-<a:Code>dbusuarios_privilegios</a:Code>
+<a:Name>dbusuario_privilegio</a:Name>
+<a:Code>dbusuario_privilegio</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1367240603</a:ModificationDate>
@@ -26759,7 +26759,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_privilegios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_privilegio_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -26874,8 +26874,8 @@ Caso a funcionalidade seja o modulo principal o valor padrÃ£o Ã© [0]</a:Comm
 <c:Keys>
 <o:Key Id="o1865">
 <a:ObjectID>C22785EB-39F7-4F91-9340-AFFE046F59E5</a:ObjectID>
-<a:Name>PK_DBUSUARIOS_PRIVILEGIOS</a:Name>
-<a:Code>PK_DBUSUARIOS_PRIVILEGIOS</a:Code>
+<a:Name>PK_DBUSUARIO_PRIVILEGIO</a:Name>
+<a:Code>PK_DBUSUARIO_PRIVILEGIO</a:Code>
 <a:CreationDate>1367240553</a:CreationDate>
 <a:Creator>Allan</a:Creator>
 <a:ModificationDate>1367240603</a:ModificationDate>
@@ -27109,7 +27109,7 @@ Caso a funcionalidade seja o modulo principal o valor padrÃ£o Ã© [0]</a:Comm
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362948414</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -44529,8 +44529,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3309">
 <a:ObjectID>5249B1E7-D41F-4F58-8F7C-28A96510ED01</a:ObjectID>
-<a:Name>dbunidades_id_seq</a:Name>
-<a:Code>dbunidades_id_seq</a:Code>
+<a:Name>dbunidade_id_seq</a:Name>
+<a:Code>dbunidade_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -45972,8 +45972,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3419">
 <a:ObjectID>CCEB1581-D880-4EF8-AA65-4FED92CDA1C8</a:ObjectID>
-<a:Name>dbunidades_parametros_id_seq</a:Name>
-<a:Code>dbunidades_parametros_id_seq</a:Code>
+<a:Name>dbunidade_parametros_id_seq</a:Name>
+<a:Code>dbunidade_parametros_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -45985,8 +45985,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3420">
 <a:ObjectID>17D765F8-EE9A-41AD-820C-D41B82D46D4B</a:ObjectID>
-<a:Name>dbusuarios_id_seq</a:Name>
-<a:Code>dbusuarios_id_seq</a:Code>
+<a:Name>dbusuario_id_seq</a:Name>
+<a:Code>dbusuario_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -45998,8 +45998,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3421">
 <a:ObjectID>42A21D35-E357-4289-85B8-4736C0F0C559</a:ObjectID>
-<a:Name>dbusuarios_erros_id_seq</a:Name>
-<a:Code>dbusuarios_erros_id_seq</a:Code>
+<a:Name>dbusuario_erros_id_seq</a:Name>
+<a:Code>dbusuario_erros_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -46011,8 +46011,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3422">
 <a:ObjectID>E5EB4444-26C7-49B2-9F63-ABCFC31B3450</a:ObjectID>
-<a:Name>dbusuarios_historico_id_seq</a:Name>
-<a:Code>dbusuarios_historico_id_seq</a:Code>
+<a:Name>dbusuario_historico_id_seq</a:Name>
+<a:Code>dbusuario_historico_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -46024,8 +46024,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3423">
 <a:ObjectID>69BDE5CF-A944-4438-86EB-34E36FD7AC8C</a:ObjectID>
-<a:Name>dbusuarios_privilegios_id_seq</a:Name>
-<a:Code>dbusuarios_privilegios_id_seq</a:Code>
+<a:Name>dbusuario_privilegio_id_seq</a:Name>
+<a:Code>dbusuario_privilegio_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -54722,7 +54722,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362945903</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbunidades_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbunidade_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -71044,8 +71044,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o326">
 <a:ObjectID>95DC4A8E-B1B8-42FA-B68E-63B2B9998C38</a:ObjectID>
-<a:Name>dbunidades_parametros</a:Name>
-<a:Code>dbunidades_parametros</a:Code>
+<a:Name>dbunidade_parametros</a:Name>
+<a:Code>dbunidade_parametros</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453330</a:ModificationDate>
@@ -71060,7 +71060,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbunidades_parametros_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbunidade_parametros_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -71192,7 +71192,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362947480</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -71369,8 +71369,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o330">
 <a:ObjectID>251A2977-0389-46E2-AE17-D278B26249F3</a:ObjectID>
-<a:Name>dbusuarios_erros</a:Name>
-<a:Code>dbusuarios_erros</a:Code>
+<a:Name>dbusuario_erros</a:Name>
+<a:Code>dbusuario_erros</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453330</a:ModificationDate>
@@ -71385,7 +71385,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_erros_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_erros_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -71497,8 +71497,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o332">
 <a:ObjectID>7AB39EB1-BF16-4F77-9312-8FFCAE93A311</a:ObjectID>
-<a:Name>dbusuarios_historico</a:Name>
-<a:Code>dbusuarios_historico</a:Code>
+<a:Name>dbusuario_historico</a:Name>
+<a:Code>dbusuario_historico</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453330</a:ModificationDate>
@@ -71513,7 +71513,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_historico_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_historico_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -71625,8 +71625,8 @@ FOR EACH ROW
 </o:Table>
 <o:Table Id="o334">
 <a:ObjectID>A554636A-C641-4A2F-BACA-6685931C6E99</a:ObjectID>
-<a:Name>dbusuarios_privilegios</a:Name>
-<a:Code>dbusuarios_privilegios</a:Code>
+<a:Name>dbusuario_privilegio</a:Name>
+<a:Code>dbusuario_privilegio</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453330</a:ModificationDate>
@@ -71641,7 +71641,7 @@ FOR EACH ROW
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_privilegios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_privilegio_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>integer</a:DataType>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
@@ -71987,7 +71987,7 @@ Caso a funcionalidade seja o modulo principal o valor padrÃ£o Ã© [0]</a:Comm
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362948414</a:ModificationDate>
 <a:Modifier>Wagner</a:Modifier>
-<a:DefaultValue>~nextval(&#39;dbusuarios_id_seq&#39;::regclass)~</a:DefaultValue>
+<a:DefaultValue>~nextval(&#39;dbusuario_id_seq&#39;::regclass)~</a:DefaultValue>
 <a:DataType>INT8</a:DataType>
 <a:Length>8</a:Length>
 <a:Column.Mandatory>1</a:Column.Mandatory>
@@ -88957,8 +88957,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3242">
 <a:ObjectID>5249B1E7-D41F-4F58-8F7C-28A96510ED01</a:ObjectID>
-<a:Name>dbunidades_id_seq</a:Name>
-<a:Code>dbunidades_id_seq</a:Code>
+<a:Name>dbunidade_id_seq</a:Name>
+<a:Code>dbunidade_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -90400,8 +90400,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3352">
 <a:ObjectID>CCEB1581-D880-4EF8-AA65-4FED92CDA1C8</a:ObjectID>
-<a:Name>dbunidades_parametros_id_seq</a:Name>
-<a:Code>dbunidades_parametros_id_seq</a:Code>
+<a:Name>dbunidade_parametros_id_seq</a:Name>
+<a:Code>dbunidade_parametros_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -90413,8 +90413,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3353">
 <a:ObjectID>17D765F8-EE9A-41AD-820C-D41B82D46D4B</a:ObjectID>
-<a:Name>dbusuarios_id_seq</a:Name>
-<a:Code>dbusuarios_id_seq</a:Code>
+<a:Name>dbusuario_id_seq</a:Name>
+<a:Code>dbusuario_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -90426,8 +90426,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3354">
 <a:ObjectID>42A21D35-E357-4289-85B8-4736C0F0C559</a:ObjectID>
-<a:Name>dbusuarios_erros_id_seq</a:Name>
-<a:Code>dbusuarios_erros_id_seq</a:Code>
+<a:Name>dbusuario_erros_id_seq</a:Name>
+<a:Code>dbusuario_erros_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -90439,8 +90439,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3355">
 <a:ObjectID>E5EB4444-26C7-49B2-9F63-ABCFC31B3450</a:ObjectID>
-<a:Name>dbusuarios_historico_id_seq</a:Name>
-<a:Code>dbusuarios_historico_id_seq</a:Code>
+<a:Name>dbusuario_historico_id_seq</a:Name>
+<a:Code>dbusuario_historico_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>
@@ -90452,8 +90452,8 @@ from
 </o:Sequence>
 <o:Sequence Id="o3356">
 <a:ObjectID>69BDE5CF-A944-4438-86EB-34E36FD7AC8C</a:ObjectID>
-<a:Name>dbusuarios_privilegios_id_seq</a:Name>
-<a:Code>dbusuarios_privilegios_id_seq</a:Code>
+<a:Name>dbusuario_privilegio_id_seq</a:Name>
+<a:Code>dbusuario_privilegio_id_seq</a:Code>
 <a:CreationDate>1362453306</a:CreationDate>
 <a:Creator>Wagner</a:Creator>
 <a:ModificationDate>1362453306</a:ModificationDate>

@@ -1611,7 +1611,10 @@ class TTransacao {
     public function removeContaDuplicata($codigoConta){
     	try {
     		$obTDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS_DUPLICATAS);
-    		if(!$obTDbo->delete($codigoConta,"codigoconta"))
+    		$crit = new TCriteria();
+    		$crit->add(new TFilter('codigoconta', '=', $codigoConta));
+    		$dados = array('statusduplicata'=>'9');
+    		if($obTDbo->update($dados,$crit))
     			throw new ErrorException("Não foi possivel remover a duplicata informada.", 1);
     	} catch (Exception $e) {
     		new setException($e);

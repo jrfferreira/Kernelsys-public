@@ -12,7 +12,7 @@ class TDbo_out {
     private $autoClose = true;
     private $unidade = NULL;
 
-    public function __construct($unidade, $entity = NULL) {
+    public function __construct($unidade = null, $entity = NULL) {
 
         if($entity and $entity != "") {
             $this->setEntidade($entity);
@@ -25,8 +25,6 @@ class TDbo_out {
             //valida unidade
             if($unidade){
                $this->unidade = $unidade;
-            }else{
-                throw new ErrorException("não há uma unidade definida.");
             }
 
             //inicia objeto sesseion
@@ -127,7 +125,8 @@ class TDbo_out {
                 if($criteria) {
 
                     //adiciona criterio de seleção por unidade automaticamente
-                    $criteria->add(new TFilter('unidade','=',$this->unidade));
+                    if($this->unidade)
+                    	$criteria->add(new TFilter('unidade','=',$this->unidade));
 
                     // define o critério de seleção de dados
                     $sql->setCriteria($criteria);
@@ -191,7 +190,7 @@ class TDbo_out {
                 //$this->id = $this->getLast() +1;
 
                 //acrecenta dados pad�es no insert
-                if(!$dados['unidade']) {
+                if(!$dados['unidade'] && $this->unidade) {
                     $dados['unidade'] = $this->unidade;
                 }
 

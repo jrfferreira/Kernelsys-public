@@ -184,7 +184,7 @@ class TUsuario {
 							$critCheck3->add(new TFilter("nivel", "=", $nivel));
 							$critCheck3->add(new TFilter("modulo", "=", $modulo));
 							$critCheck3->add(new TFilter("codigousuario", "=", $usuario));
-							$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIOS_PRIVILEGIOS);
+							$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retHierarquia = $TDbo_privilegio->select("id", $critCheck3);
 							$obHierarquia = $retHierarquia->fetchObject();
 
@@ -196,7 +196,7 @@ class TUsuario {
 								$dtModulo["codigousuario"] = $usuario;
 								$dtModulo['ativo'] = '1';
 
-								$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIOS_PRIVILEGIOS);
+								$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 
 								$retorno = $TDbo_privilegio->insert($dtModulo);
 							}
@@ -213,7 +213,7 @@ class TUsuario {
 							$dSituacaoCrit->add(new TFilter("modulo", "=", $modulo));
 							$dSituacaoCrit->add(new TFilter("codigousuario", "=", $usuario));
 
-							$TDbo_Situacao = new TDbo(TConstantes :: DBUSUARIOS_PRIVILEGIOS);
+							$TDbo_Situacao = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retornoSituacao = $TDbo_Situacao->update($dSituacao, $dSituacaoCrit);
 
 							return $retorno;
@@ -241,7 +241,7 @@ class TUsuario {
 				if ($rt) {
 					$crit = new TCriteria();
 					$crit->add(new TFilter("codigousuario", "=", $usuario));
-					$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIOS_PRIVILEGIOS);
+					$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 					$retPrivilegio = $TDbo_privilegio->select("*", $crit);
 
 					while ($obPrivilegio = $retPrivilegio->fetchObject()) {

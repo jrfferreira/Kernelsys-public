@@ -16,7 +16,7 @@ class TGetPrivilegio{
 	
 		$this->obsession = new TSession();
 		
-            $sql = new TDbo(TConstantes::DBUSUARIOS_PRIVILEGIOS);
+            $sql = new TDbo(TConstantes::DBUSUARIO_PRIVILEGIO);
                 $criteria = new TCriteria();
                 $criteria->add(new TFilter("codigousuario","=",$this->obUser->codigouser));
                 $criteria->add(new TFilter("funcionalidade","=",$funcionalidade));

@@ -186,13 +186,7 @@ class TConvenios{
         $descontos = null;
         if(is_array($arrayConvenios)){
             foreach ($arrayConvenios as $codigoConvenio) {
-            	$dboConvenio = new TDbo_out('14303-1','dbconvenios');
-            	$critConvenio = new TCriteria();
-            	$critConvenio->add(new TFilter('codigo', '=', $codigoConvenio));
-            	$retConvenio = $dboConvenio->select('*', $critConvenio);
-            	$obConvenio = $retConvenio->fetchObject();
-            	
-            	$desconto = new TDbo_out('14303-1','dbconvenios_descontos');
+            	$desconto = new TDbo_out(null,'dbconvenios_descontos');
             	$critDesconto = new TCriteria();
             	$critDesconto->add(new TFilter('codigoconvenio', '=', $codigoConvenio));
             	$retDesconto = $desconto->select('*', $critDesconto);

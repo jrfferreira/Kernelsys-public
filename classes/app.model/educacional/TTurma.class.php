@@ -275,7 +275,9 @@ class TTurma {
                         $lista[] = $objs->codigo;
                 }
 
-                $disciplinas = $obDiscplina->getListaTurmaDisciplina($lista,$fullObject);
+                if(count($lista) > 0){
+                	$disciplinas = $obDiscplina->getListaTurmaDisciplina($lista,$fullObject);
+                }
 
                 //Valida existencia das disciplinas na turma ===================
                 if(count($disciplinas) == 0) {
