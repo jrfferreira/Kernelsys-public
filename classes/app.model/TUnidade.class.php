@@ -10,34 +10,34 @@ class TUnidade {
     private $obUnidadeParametro = NULL;
 
 
-    public function __construct($codigounidade = null){
+    public function __construct($sequnidade = null){
         $obUser = new TCheckLogin();
         $obUser = $obUser->getUser();
-        if($codigounidade){
-            $this->unidade = $codigounidade;
+        if($sequnidade){
+            $this->unidade = $sequnidade;
         }else{
-            $this->unidade = $obUser->unidade->codigo;
+            $this->unidade = $obUser->unidade->seq;
         }
 
     }
 
 	/**
      * Retorna um objeto Unidade complento
-     * param <codigo> $codigounidade = codigo da unidade
+     * param <seq> $sequnidade = seqda unidade
      */
     public function getUnidade(){
         try{
             if($this->unidade) {
                     $this->obTDbo = new TDbo();
-                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADES);
+                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADE);
                     $criteria = new TCriteria();
-                    $criteria->add(new TFilter('codigo','=',$this->unidade));
+                    $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$this->unidade));
                     $retUnidade = $this->obTDbo->select("*", $criteria);
                     $this->obUnidade = $retUnidade->fetchObject();
 
                     return $this->obUnidade;
              }else{
-                 throw new ErrorException("A unidade ".$codigounidade." não foi encontrada.");
+                 throw new ErrorException("A unidade ".$sequnidade." não foi encontrada.");
              }
          }catch (Exception $e) {
             new setException($e);
@@ -47,13 +47,13 @@ class TUnidade {
     }
     /**
      * Retorna um objeto Unidade complento
-     * param <codigo> $codigounidade = codigo da unidade
+     * param <seq> $sequnidade = seqda unidade
      */
     public function getParametro($parametro = null){
         try{
             if($this->unidade) {
                     $this->obTDbo = new TDbo();
-                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADES_PARAMETROS);
+                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADE_PARAMETRO);
                     $criteria = new TCriteria();
                     $criteria->add(new TFilter('unidade','=',$this->unidade));
                     if($parametro){

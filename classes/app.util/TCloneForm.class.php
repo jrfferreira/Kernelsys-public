@@ -17,7 +17,7 @@ class TCloneForm {
      */
 
     private $form = null;
-    private $codigo = null;
+    private $seq= null;
     private $clones = 1;
 
     function __construct() {
@@ -28,33 +28,33 @@ class TCloneForm {
     /*
      * Função de clonagem
      *
-     * @param string $id Id do Formulario
-     * @param string $cod Codigo do Elemento
+     * @param string $seq Id do Formulario
+     * @param string $cod seqdo Elemento
      * @param string $clon Quantidade de clones
      */
-    public function run($id, $cod, $clon) {
-        $this->form = $id;
-        $this->codigo = $cod;
+    public function run($seq, $cod, $clon) {
+        $this->form = $seq;
+        $this->seq= $cod;
         $this->clones = $clon;
 
         try {
             $this->dbok->setEntidade('forms');
             $critForm = new TCriteria();
-            $critForm->add(new TFilter('id', '=', $this->form));
+            $critForm->add(new TFilter('seq', '=', $this->form));
             $retForm = $this->dbok->select('*', $critForm);
             $obForm = $retForm->fetchObject();
 
             $this->dbok->setEntidade('form_x_tabelas');
             $critTab = new TCriteria();
-            $critTab->add(new TFilter('formid', '=', $this->form));
-            $critTab->add(new TFilter('ativo', '=', '1'));
-            $retTab = $this->dbok->select('tabelaid', $critTab);
+            $critTab->add(new TFilter('formseq', '=', $this->form));
+            $critTab->add(new TFilter('statseq', '=', '1'));
+            $retTab = $this->dbok->select('tabseq', $critTab);
 
 
             $this->dbok->setEntidade('tabelas');
             $critTabela = new TCriteria();
             while ($obTab = $retTab->fetchObject()) {
-                $critTabela->add(new TFilter('id', '=', $obTab->tabelaid), 'OR');
+                $critTabela->add(new TFilter('seq', '=', $obTab->tabseq), 'OR');
             }
             $retTabela = $this->dbok->select('*', $critTabela);
 
@@ -62,49 +62,49 @@ class TCloneForm {
             $this->dbo = new TDbo();
 
             while ($obTabela = $retTabela->fetchObject()) {
-                if ($obTabela->id == $obForm->entidade) {
+                if ($obTabela->seq == $obForm->tabseq) {
                     $tabelas['p'] = $obTabela;
                 } else {
-                    $tabelas['c'][$obTabela->id] = $obTabela;
+                    $tabelas['c'][$obTabela->seq] = $obTabela;
                 }
             }
 
             $this->dbo->setEntidade($tabelas['p']->tabela);
             $critRegistro = new TCriteria();
-            $critRegistro->add(new TFilter('codigo', '=', $this->codigo));
+            $critRegistro->add(new TFilter(TConstantes::SEQUENCIAL, '=', $this->seq));
             $retRegistro = $this->dbo->select('*', $critRegistro);
 
             $obRegistro = $retRegistro->fetchObject();
 
             foreach ($obRegistro as $ch => $vl) {
-                if (($ch != 'id') and ($ch != 'codigo') and ($ch != 'unidade') and ($ch != 'codigoautor') and ($ch != 'datacad') and ($ch != 'ativo')) {
+                if (($ch != 'seq') and ($ch != TConstantes::SEQUENCIAL) and ($ch != 'unidade') and ($ch != 'usuaseq') and ($ch != 'datacad') and ($ch != 'statseq')) {
                     $obNovoRegistro[$ch] = $vl;
                 }
             }
-            $obNovoRegistro['ativo'] = '1';//'8';
+            $obNovoRegistro['statseq'] = '8';
             if ($obNovoRegistro) {
                 $n = $this->clones;
                 while($n > 0) {
                     $this->dbo->setEntidade($tabelas['p']->tabela);
                     $novoRegistro = $this->dbo->insert($obNovoRegistro);
-                    if ($novoRegistro['codigo']) {
+                    if ($novoRegistro[TConstantes::SEQUENCIAL]) {
                         if ($colunafilho = $tabelas['p']->colunafilho) {
                             foreach ($tabelas['c'] as $children) {
                                 $this->dbo->setEntidade($children->tabela);
                                 $critRegistroFilho = new TCriteria();
-                                $critRegistroFilho->add(new TFilter("$colunafilho", '=', "$this->codigo"));
+                                $critRegistroFilho->add(new TFilter("$colunafilho", '=', "$this->seq"));
                                 $retRegistroFilho = $this->dbo->select('*', $critRegistroFilho);
 
                                 while ($obRegistroFilho = $retRegistroFilho->fetchObject()) {
                                     foreach ($obRegistroFilho as $ch => $vl) {
-                                        if (($ch != 'id') and ($ch != 'codigo') and ($ch != 'unidade') and ($ch != 'codigoautor') and ($ch != 'datacad') and ($ch != 'ativo')) {
+                                        if (($ch != 'seq') and ($ch != TConstantes::SEQUENCIAL) and ($ch != 'unidade') and ($ch != 'usuaseq') and ($ch != 'datacad') and ($ch != 'statseq')) {
                                             $obNovoRegistroFilho[$ch] = $vl;
                                         }
 
-                                        $obNovoRegistroFilho['ativo'] = '1';//'8';
+                                        $obNovoRegistroFilho['statseq'] = '8';
                                     }
 
-                                    $obNovoRegistroFilho[$tabelas['p']->colunafilho] = $novoRegistro['codigo'];
+                                    $obNovoRegistroFilho[$tabelas['p']->colunafilho] = $novoRegistro[TConstantes::SEQUENCIAL];
 
                                     $this->dbo->setEntidade($children->tabela);
                                     $ret = $this->dbo->insert($obNovoRegistroFilho);
@@ -132,9 +132,9 @@ class TCloneForm {
         }
     }
 
-    public function confirm($id, $cod, $lista) {
-        $this->form = $id;
-        $this->codigo = $cod;
+    public function confirm($seq, $cod, $lista) {
+        $this->form = $seq;
+        $this->seq= $cod;
         $this->lista = $lista;
 
         $texto = "<p><b>Atenção,<br/> as alterações feitas pela replicação não poderam ser revertidas.</b></p>";
@@ -159,7 +159,7 @@ class TCloneForm {
 
         $button = new TElement('input');
         $button->type = "button";
-        $button->onclick = "cloneForm('" . $this->form . "','" . $this->codigo . "','".$this->lista."',$('#quantidadeReplicacoes').val());";
+        $button->onclick = "cloneForm('" . $this->form . "','" . $this->seq. "','".$this->lista."',$('#quantidadeReplicacoes').val());";
         $button->name = "replicarForm";
         $button->id = "replicarForm";
         $button->class = "ui-corner-all ui-widget ui-state-default";

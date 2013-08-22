@@ -33,7 +33,7 @@ class TUpload {
 				break;
 			case '999':
 			default:
-				$error = 'O codigo de erro não é valido';
+				$error = 'O seqde erro não é valido';
 		}
                 throw new ErrorException("<span style='font-family:verdana; font-size: 12px;'>{$error}</span>");
 
@@ -69,12 +69,12 @@ function __autoload($classe) {
 
 new TCheckLogin();
 
-if($_POST['upload_form'] && $_POST['upload_codigo'] && $_POST['upload_campo']){
+if($_POST['upload_form'] && $_POST['upload_seq'] && $_POST['upload_campo']){
 
         $idCampo = $_POST['upload_campo'];
-        $idForm = $_POST['upload_form'];
-        $codigo = $_POST['upload_codigo'];
-        $file = 'reg'.$_POST['upload_codigo'].'arquivo'.$_POST['upload_campo'].'_'. date("YmdHms");
+        $formseq = $_POST['upload_form'];
+        $seq= $_POST['upload_seq'];
+        $file = 'reg'.$_POST['upload_seq'].'arquivo'.$_POST['upload_campo'].'_'. date("YmdHms");
 
         $TUpload = new TUpload();
         $upFile = $TUpload->uploadFile($idCampo,$file);
@@ -82,25 +82,25 @@ if($_POST['upload_form'] && $_POST['upload_codigo'] && $_POST['upload_campo']){
 
             $dbo_kernelsys = new TKrs('forms');
             $critForm = new TCriteria();
-            $critForm->add(new TFilter('id','=',$idForm));
-            $retForm = $dbo_kernelsys->select('entidade',$critForm);
+            $critForm->add(new TFilter('seq','=',$formseq));
+            $retForm = $dbo_kernelsys->select(TConstantes::ENTIDADE,$critForm);
             $form = $retForm->fetchObject();
 
             $dbo_kernelsys = new TKrs('tabelas');
             $critEntidade = new TCriteria();
-            $critEntidade->add(new TFilter('id','=',$form->entidade));
+            $critEntidade->add(new TFilter('seq','=',$form->tabseq));
             $retEntidade = $dbo_kernelsys->select('tabela',$critEntidade);
             $entidade = $retEntidade->fetchObject();
 
             $dataUp[$idCampo] = $upFile;
             $dbo = new TDbo($entidade->tabela);
             $crit = new TCriteria();
-            $crit->add(new TFilter('codigo','=',$codigo));
+            $crit->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seq));
             $update = $dbo->update($dataUp,$crit);
 
             if($update){
                 $fileFrame = new TFrame();
-                $fileFrame->show($idCampo,$idForm,$codigo,'1',$upFile);
+                $fileFrame->show($idCampo,$formseq,$seq,'1',$upFile);
             }
         }
 }

@@ -44,8 +44,8 @@ class TSetInscricao {
         $this->obSession = new TSession();
 
         //instancia label dos campos do furmul�rio
-        $this->label['nome_razaosocial'] = "Nome";
-        $this->label['cpf_cnpj'] = "CPF";
+        $this->label['pessnmrz'] = "Nome";
+        $this->label['pessnmrf'] = "CPF";
         $this->label['logradouro'] = "Endereço";
         $this->label['bairro'] = "Bairro";
         $this->label['cidade'] = "Cidade";
@@ -101,7 +101,7 @@ class TSetInscricao {
                     continue;
                 }
 
-                if($campo == 'cpf_cnpj'){
+                if($campo == 'pessnmrf'){
                         $TSetControl = new TSetControl();
                         $retCpf = $TSetControl->setTrueCpf($valor);
 
@@ -181,16 +181,16 @@ class TSetInscricao {
     private function setFields($dados = NULL) {
 
         //campos do formulario
-        $this->campos['nome_razaosocial'] = new TEntry('nome_razaosocial');
-        $this->campos['nome_razaosocial']->class = "campos";
-        $this->campos['nome_razaosocial']->setSize("280");
-        $this->campos['nome_razaosocial']->setEditable($this->editable);
+        $this->campos['pessnmrz'] = new TEntry('pessnmrz');
+        $this->campos['pessnmrz']->class = "campos";
+        $this->campos['pessnmrz']->setSize("280");
+        $this->campos['pessnmrz']->setEditable($this->editable);
 
-        $this->campos['cpf_cnpj'] = new TEntry('cpf_cnpj');
-        $this->campos['cpf_cnpj']->class = "campos";
-        $this->campos['cpf_cnpj']->setSize("100");
-        $this->campos['cpf_cnpj']->setEditable($this->editable);
-        $this->campos['cpf_cnpj']->maxlength = '11';
+        $this->campos['pessnmrf'] = new TEntry('pessnmrf');
+        $this->campos['pessnmrf']->class = "campos";
+        $this->campos['pessnmrf']->setSize("100");
+        $this->campos['pessnmrf']->setEditable($this->editable);
+        $this->campos['pessnmrf']->maxlength = '11';
 
         $this->campos['logradouro'] = new TEntry('logradouro');
         $this->campos['logradouro']->class = "campos";
@@ -244,7 +244,7 @@ class TSetInscricao {
         $this->campos['tel1'] = new TEntry('tel1');
         $this->campos['tel1']->class = "campos";
         $this->campos['tel1']->setSize("100");
-        $this->campos['nome_razaosocial']->setEditable($this->editable);
+        $this->campos['pessnmrz']->setEditable($this->editable);
 
         $this->campos['cel1'] = new TEntry('cel1');
         $this->campos['cel1']->class = "campos";
@@ -293,15 +293,15 @@ class TSetInscricao {
         $this->box->colspan = '2';
 
         $row1 = $this->conteiner->addRow();
-        $cellLabel1 = $row1->addCell($this->label['nome_razaosocial'].':* ');
+        $cellLabel1 = $row1->addCell($this->label['pessnmrz'].':* ');
         $cellLabel1->class = 'titulo_campo';
-        $cellCampo1 = $row1->addCell($this->campos['nome_razaosocial']);
+        $cellCampo1 = $row1->addCell($this->campos['pessnmrz']);
         $cellCampo1->class = 'conteiner_campo';
 
         $row2 = $this->conteiner->addRow();
-        $cellLabel2 = $row2->addCell($this->label['cpf_cnpj'].':* ');
+        $cellLabel2 = $row2->addCell($this->label['pessnmrf'].':* ');
         $cellLabel2->class = 'titulo_campo';
-        $cellCampo2 = $row2->addCell($this->campos['cpf_cnpj']);
+        $cellCampo2 = $row2->addCell($this->campos['pessnmrf']);
         $cellCampo2->class = 'conteiner_campo';
 
         $row3 = $this->conteiner->addRow();
@@ -591,7 +591,7 @@ class TSetInscricao {
                     
 
                     $dados['tipo']    = 'F';
-                    $dados['cliente'] = '1';
+                    $dados['cliente'] = true;
                     $dados['ativo']   = '1';
 
                 //valida pessoa
@@ -681,7 +681,7 @@ class TSetInscricao {
 
             $TDbo = new TDbo_out('14303-1','dbpessoas');
                 $criteriaPessoa = new TCriteria();
-                $criteriaPessoa->add(new TFilter('cpf_cnpj','=',$dados['cpf_cnpj']));
+                $criteriaPessoa->add(new TFilter('pessnmrf','=',$dados['pessnmrf']));
             $retPessoa = $TDbo->select('codigo', $criteriaPessoa);
             $obPessoa = $retPessoa->fetch(PDO::FETCH_ASSOC);
 

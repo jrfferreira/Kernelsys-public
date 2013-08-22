@@ -139,7 +139,7 @@ class TSetModel {
 
                 $principal = explode('/', $argumento);
                 $entity = $principal[1];
-                $campoCodigo = $principal[2];
+                $camposeq= $principal[2];
                 $label = $principal[3];
 
                 $args = explode(';', $principal[4]);
@@ -156,9 +156,9 @@ class TSetModel {
                 }
 
                 $dboItens = new TDbo($entity);
-                $retItens = $dboItens->select($campoCodigo . ',' . $label, $criteria);
+                $retItens = $dboItens->select($camposeq. ',' . $label, $criteria);
                 while ($obItens = $retItens->fetchObject()) {
-                    $itens[$obItens->$campoCodigo] = $obItens->$label;
+                    $itens[$obItens->$camposeq] = $obItens->$label;
                 }
 
                 return $itens;
@@ -266,20 +266,19 @@ class TSetModel {
      * @param $valor
      */
     public function setTelefone($valor) {
-        $valor = preg_replace('{\D}', '', $valor);
-        if (strlen($valor) < 10) {
+        $valor = preg_replace('@[^0-9]@', '', $valor);
+        if (strlen($valor) < 8) {
             $count = strlen($valor);
-            for ($index = 0; $index < (10 - $count); $index++) {
+            for ($index = 0; $index < (8 - $count); $index++) {
                 $valor = '0' . $valor;
             }
         }
-        $valor = substr($valor, (strlen($valor) - 10), 10);
+        $valor = substr($valor, (strlen($valor) - 8), 8);
 
-        $b1 = substr($valor, 0, 2);
-        $b2 = substr($valor, 2, 4);
-        $b3 = substr($valor, 6, 4);
-        if ($b1 || $b2 || $b3) {
-            return "($b1)$b2-$b3";
+        $b2 = substr($valor, 0, 4);
+        $b3 = substr($valor, 4, 4);
+        if ($b2 || $b3) {
+            return "$b2-$b3";
         } else {
             return $valor;
         }
@@ -302,7 +301,7 @@ class TSetModel {
      */
     public function setValorMonetario($valor) {
         try {
-            $valor = 'R$ ' . number_format($valor, 4, ',', '.');
+            $valor = 'R$ ' . number_format($valor, 2, ',', '.');
             return $valor;
         } catch (Exception $e) {
             new setException($e);
@@ -355,18 +354,11 @@ class TSetModel {
      * return <type>
      */
     public function setStatusMovimento($tp) {
-        if ($tp == "1") {
-            $tp = "Em aberto";
-        } elseif ($tp == "2") {
-            $tp = "Conferido";
-        } elseif ($tp == "3") {
-            $tp = "Programado";
-        } elseif ($tp == "4") {
-            $tp = "Extornado";
-        } elseif ($tp == "5") {
-            $tp = "Consolidado";
-        }
-        return $tp;
+    	$dbo = new TDbo(TConstantes::DBSITUACAO_MOVIMENTO);
+    	$ret = $dbo->select('titulo',$tp);
+        $tp = $ret->fetchObject();
+        
+        return $tp->titulo;
     }
 
     /**

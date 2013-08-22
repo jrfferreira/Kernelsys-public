@@ -12,19 +12,23 @@ class TSetlista {
     public  $obCols         = array();
     public  $actions        = array();
     private $listCols       = array();
-    public  $posicao        = "0";// armazena o posicionamento da listagem
-    private $limitePadrao   = "20"; // delimita o número de registro da listagem
+    public  $posicao        = 0;// armazena o posicionamento da listagem
+    public  $limite 		= 20;
+    private $limitePadrao   = 20; // delimita o número de registro da listagem
     private $visibilidade   = NULL;
     private $criteria       = NULL;
     private $trigger;
     private $itens          = array();
     private $listaSelecao   = null;
-    public  $limite 		= 20;
+    protected $obHeader		= NULL;
+    protected  $objHeader   = NULL;
 
-    public function __construct($idLista, $entidade, $label, $retGlobal = NULL) {
+    public function __construct($listseq, $entidade, $label, $conteinerRetorno = NULL) {
     	
-
-        $this->idLista = $idLista;
+        $this->listseq = $listseq;
+        
+        $this->objHeader = new TSetHeader();
+        $this->obHeader = $this->objHeader->getHead($this->listseq);
 
         //Retorna Usuario logado===================================
         $obUser = new TCheckLogin();
@@ -32,7 +36,7 @@ class TSetlista {
         //=========================================================
 
 //        $this->obHeader = new TSetHeader();
-//        $this->headerLista = $this->obHeader->getHead($this->idLista);
+//        $this->headerLista = $this->obHeader->getHead($this->listseq);
 
         $this->obsession = new TSession();
         $this->pathDB = $this->obsession->getValue('pathDB');
@@ -41,23 +45,23 @@ class TSetlista {
         $this->datagrid = new TDataGrid;
         $this->entity 	  = $entidade;
         $this->label 	  = $label;
-        $this->campoChave = $campoChave; //configura coluna que representa o campo chave da lista
-        $this->listCols['id'] = "id";
-        $this->listCols['codigo'] = "codigo";
+//        $this->campoChave = $campoChave; //configura coluna que representa o campo chave da lista
+//        $this->listCols['id'] = "id";
+        $this->listCols[TConstantes::SEQUENCIAL] = "seq";
 
         //Objeto criteria
         $this->criteria = new TCriteria();
 
-        $limite = $this->obsession->getValue("comboLimite" . $idLista);
+        $limite = $this->obsession->getValue("comboLimite" . $listseq);
         if(!empty($limite)){
-	        $this->limite = $limite;
+        	$this->limite = $limite;
         }
         if(!$this->limite) {
             $this->setLimite($this->limitePadrao);
         }
 
-        $this->paneRet = $retGlobal;
-        $this->idForm = $idForm;
+        $this->conteinerRetorno = $conteinerRetorno;
+        $this->formseq = $this->obHeader[TConstantes::FORM];
 
         $this->itens['*'] = "Todos as colunas";
     }
@@ -69,30 +73,37 @@ class TSetlista {
     public function setCampoChave($campoChave) {
         $this->campoChave = $campoChave;
     }
+    
+    /**
+     * Seta o load da lista caso seje necessario recarregar de forma deliberada
+     */
+    public function setLoad($load){
+    	$this->load = $load;
+    }
 
     /**
      * Configura ivisibilidade das colunas da listagem
-     *param coluna = coluna a ser aplicada a visibilidade
-     *param visibilidade = tipo da visibilidade (true / false)
+     *param col = coluna a ser aplicada a visibilidade
+     *param visibilidade = tipo da visibilidade (TRUE / FALSE)
      */
     public function setVisibilidade($col, $visibilidade) {
         $this->visibilidade[$col] = $visibilidade;
     }
 
-    /*Método addTop
+    /*m�todo addTop
 	* adiciona colunas
     */
     public function addTop($obCol) {
         
         //Valida duplicação de colunas
-        if(array_key_exists($obCol->coluna, $this->obCols) === false) {
+        if(array_key_exists($obCol->coluna, $this->obCols) === FALSE) {
 
 
             //largura total da lista
             $this->totalWidth = $this->totalWidth+$obCol->largura;
 
             //configura os itens do combo de colunas
-            $this->itens[$obCol->coluna] = $obCol->label;
+            $this->itens[$obCol->coluna.'__'.$obCol->tipodado] = $obCol->label;
 
             //aloca objetos coluna
             $this->obCols[$obCol->coluna] = $obCol;
@@ -103,15 +114,15 @@ class TSetlista {
             //instacia objeto coluna para a datagrid
              $this->topCols[$obCol->coluna] = new TDataGridColumn($obCol->coluna, $obCol->label, $obCol->alinhadados, $obCol->largura);
 
-            //compilia visibilidade da coluna
-            if($this->visibilidade[$obCol->coluna] == NULL or $this->visibilidade[$obCol->coluna] == true) {
-                $this->topCols[$obCol->coluna]->setVisibilidade(true);
+            //compila visibilidade da coluna
+            if($this->visibilidade[$obCol->coluna] == NULL or $this->visibilidade[$obCol->coluna] == TRUE) {
+                $this->topCols[$obCol->coluna]->setVisibilidade(TRUE);
             }
             else {
-                $this->topCols[$obCol->coluna]->setVisibilidade(false);
+                $this->topCols[$obCol->coluna]->setVisibilidade(FALSE);
             }
 
-            //instancia fun��es para a coluna
+            //instancia funções para a coluna
             if($obCol->colfunction != "-") {
                 $this->topCols[$obCol->coluna]->setTransformer($obCol->colfunction);
             }
@@ -123,9 +134,9 @@ class TSetlista {
             $ActionOrdem = new TSetAction('prossExe');
             $ActionOrdem->setMetodo($metodo);
             $ActionOrdem->setTipoRetorno('lista');
-            $ActionOrdem->setIdForm($this->idLista);
+            $ActionOrdem->setIdForm($this->listseq);
             $ActionOrdem->setKey($obCol->coluna);
-            $ActionOrdem->setAlvo($this->paneRet);
+            $ActionOrdem->setAlvo($this->conteinerRetorno);
             $this->topCols[$obCol->coluna]->setAction($ActionOrdem->getAction());
 
             $this->datagrid->addColumn($this->topCols[$obCol->coluna]);
@@ -154,24 +165,44 @@ class TSetlista {
     * param <type> $dado = argumento do criterio
     * param <type> $comp = operador lógico ex: =, <, !=
     * param <type> $operador = operador ex: AND, OR
-    * param <type> $tipoFiltro = tipo do criterio ( 1 = filtro padrão 2 = criterio de pesquisa )
+    * param <type> $tipoFiltro = tipo do criterio ( 1 = filtro Padrão 2 = criterio de pesquisa 3 = filtro pai )
     */
-    public function addCriterio($col, $dado, $comp, $operador = NULL, $tipoFiltro = "1") {
+    public function addCriterio($col, $dado, $comp, $operador = NULL,$tipodado = 'string',$tipoFiltro = 1) {
 
-        if($col) {
-            if($comp == 'ILIKE') {
-                $dado =  '%'.$dado.'%';
-            }
-            $obFiltro = new TFilter($col, $comp, $dado);
-            $obFiltro->tipoFiltro = $tipoFiltro;
-            $obFiltro->operador = $operador;
+        if($col and $dado) {
+        	
+        	$control = new TSetControl();
 
-            $this->listaCriterios[] = $obFiltro;
+        	if($tipodado == 'string' and is_string($dado)){
+        		   
+        		$incluir = true; 		
+        	}else if($tipodado == 'numeric' and is_numeric($dado)){ 
+        				
+        		$incluir = true;
+        	}else if($tipodado == 'date' and $control->is_date($dado)){
+        		
+        		$incluir = true;
+        	}else if(count($dado) == 2 and $comp = 'BETWEEN'){
+        		
+        		$incluir = true;
+        	}else if($tipodado == 'filtroLista'){
+        		$incluir = true;
+        	}else{
+        		$incluir = false;
+        	}
+        	
+        	if($incluir){
+	        	$obFiltro = new TFilter($col, $comp, $dado, $tipodado);
+	            $obFiltro->tipoFiltro = $tipoFiltro;
+	            $obFiltro->operador = $operador;
+	
+	            $this->listaCriterios[] = $obFiltro;
+        	}
         }
     }
 
     /**
-     *Método clear()
+     *método clear()
      *limpa fitros da lista de dados
      */
     public function clear($codCriteria = NULL) {
@@ -186,69 +217,74 @@ class TSetlista {
         }
 
         $this->criteria = new TCriteria();
-        $this->obsession->setValue('boxFiltro_'.$this->idLista, NULL);
-        $this->loaded = false;
-        unset($_SESSION['boxFiltro_'.$this->idLista]);
+        $this->obsession->setValue('boxFiltro_'.$this->listseq, NULL);
+        $this->load = TRUE;
+        unset($_SESSION['boxFiltro_'.$this->listseq]);
+        
+        $this->load = true;
     }
 
 
     /**
-     * Método setFiltro Padrão
-     * configura um filtro padrão para lista
+     * método setFiltro Padrão
+     * configura um filtro Padrão para lista
      * param dados = Dados do filtro expressão / coluna / manter filtro
      */
     public function setFiltro($dados) {
+    	
+        if($dados['expre'.$this->listseq] != "") {
 
-        if($dados['expre'.$this->idLista] != "") {
-
-            // Verifica o campo data a ser aplicada na expressão do filtro padrão ======
+            // Verifica o campo data a ser aplicada na expressão do filtro Padrão ======
             $obMasc = new TSetMascaras();
-            $dados['expre'.$this->idLista] = $obMasc->setDataDb($dados['expre'.$this->idLista]);
+            $dados['expre'.$this->listseq] = $obMasc->setDataDb($dados['expre'.$this->listseq]);
             //==========================================================================
 
             // Se manter filtro for ativado
-            if($dados['Manterfilt'.$this->idLista] == 'true') {
+            if($dados['Manterfilt'.$this->listseq] == 'TRUE') {
 
                 //garda argumetos do filtro
-                $argFiltro = $this->obsession->getValue('boxFiltro_'.$this->idLista);
-                $argFiltro['Manterfilt'.$this->idLista] = $dados['Manterfilt'.$this->idLista];
+                $argFiltro = $this->obsession->getValue('boxFiltro_'.$this->listseq);
+                $argFiltro['Manterfilt'.$this->listseq] = $dados['Manterfilt'.$this->listseq];
 
-                if(!is_array($dados['expre'.$this->idLista])) {
+                if(!is_array($dados['expre'.$this->listseq])) {
 
-                    if(!is_array($argFiltro['expre'.$this->idLista])) {
-                        $vetArgs[0] = $argFiltro['expre'.$this->idLista];
+                    if(!is_array($argFiltro['expre'.$this->listseq])) {
+                        $vetArgs[0] = $argFiltro['expre'.$this->listseq];
                     }else {
-                        $vetArgs = $argFiltro['expre'.$this->idLista];
+                        $vetArgs = $argFiltro['expre'.$this->listseq];
                     }
-                    $vetArgs[] = $dados['expre'.$this->idLista];
+                    $vetArgs[] = $dados['expre'.$this->listseq];
                 }else {
-                    $vetArgs = $dados['expre'.$this->idLista];
+                    $vetArgs = $dados['expre'.$this->listseq];
                 }
-                $argFiltro['expre'.$this->idLista] = $vetArgs;
+                $argFiltro['expre'.$this->listseq] = $vetArgs;
 
-                if(!is_array($dados['cols'.$this->idLista])) {
+                if(!is_array($dados['cols'.$this->listseq])) {
 
-                    if(!is_array($argFiltro['cols'.$this->idLista])) {
-                        $vetcols[0] = $argFiltro['cols'.$this->idLista];
+                    if(!is_array($argFiltro['cols'.$this->listseq])) {
+                        $vetcols[0] = $argFiltro['cols'.$this->listseq];
                     }else {
-                        $vetcols = $argFiltro['cols'.$this->idLista];
+                        $vetcols = $argFiltro['cols'.$this->listseq];
                     }
-                    $vetcols[] = $dados['cols'.$this->idLista];
+                    $vetcols[] = $dados['cols'.$this->listseq];
                 }else {
-                    $vetcols = $dados['cols'.$this->idLista];
+                    $vetcols = $dados['cols'.$this->listseq];
                 }
-                $argFiltro['cols'.$this->idLista] = $vetcols;
-                $this->obsession->setValue('boxFiltro_'.$this->idLista, $argFiltro);
+                $argFiltro['cols'.$this->listseq] = $vetcols;
+                $this->obsession->setValue('boxFiltro_'.$this->listseq, $argFiltro);
 
                 //----------------------------------------------------------------------
-                //monta critério de pesquisa em todas as colunas da tabela em questão.
-                if($dados['cols'.$this->idLista] === "*") {
+                //monta crit�rio de pesquisa em todas as colunas da tabela em questão.
+                if($dados['cols'.$this->listseq] === "*") {
 
                     //while($getcols = $runCols->fetchObject()){
-                    foreach($this->listCols as $colId=>$colLabel) {
-                        foreach($argFiltro['expre'.$this->idLista] as $mArgs) {
-                            if($colId != "id" and $colId != "codigo" and $colId != "unidade" and $colId != "ativo") {
-                                $this->addCriterio($colId, $mArgs, 'ILIKE', $operadorFiltro, $tipoFiltro = "2");
+                    foreach($this->itens as $colId=>$colLabel) {
+                    	$operadorFiltro = '';
+                        foreach($argFiltro['expre'.$this->listseq] as $mArgs) {
+                            if($colId != "id" and $colId != "seq" and $colId != "unidseq" and $colId != "statseq") {
+                            	
+                            	$dadosCol = explode('__', $colId);
+                                $this->addCriterio($dadosCol[0],$mArgs,'ILIKE',$operadorFiltro,$dadosCol[1],$tipoFiltro = "2");
                                 $operadorFiltro = "OR";
                             }
                         }
@@ -258,9 +294,11 @@ class TSetlista {
                     //}
 
                 }else {
-                    foreach($argFiltro['expre'.$this->idLista] as $ct=>$mArgs) {
+                    foreach($argFiltro['expre'.$this->listseq] as $ct=>$mArgs) {
                         $operadorFiltro = "AND";
-                        $this->addCriterio($argFiltro['cols'.$this->idLista][$ct], $mArgs, 'ILIKE', $operadorFiltro, $tipoFiltro = "2");
+                        
+                        $dadosCol = explode('__', $argFiltro['cols'.$this->listseq][$ct]);
+                        $this->addCriterio($dadosCol[0], $mArgs, 'ILIKE', $operadorFiltro,$dadosCol[1],$tipoFiltro = "2");
                     }
                 }
 
@@ -269,45 +307,80 @@ class TSetlista {
 
                 //limpa filtro
                 $this->clear();
-                $this->obsession->setValue('boxFiltro_'.$this->idLista, NULL);
+                $this->obsession->setValue('boxFiltro_'.$this->listseq, NULL);
                 $argFiltro = array();
 
                 //garda argumetos do filtro
-                $this->obsession->delValue('boxFiltro_'.$this->idLista);
-                $argFiltro['cols'.$this->idLista] = $dados['cols'.$this->idLista];
-                $argFiltro['Manterfilt'.$this->idLista] = $dados['Manterfilt'.$this->idLista];
-                $argFiltro['expre'.$this->idLista] = $dados['expre'.$this->idLista];
-                $this->obsession->setValue('boxFiltro_'.$this->idLista, $argFiltro);
+                $this->obsession->delValue('boxFiltro_'.$this->listseq);
+                $argFiltro['cols'.$this->listseq] = $dados['cols'.$this->listseq];
+                $argFiltro['Manterfilt'.$this->listseq] = $dados['Manterfilt'.$this->listseq];
+                $argFiltro['expre'.$this->listseq] = $dados['expre'.$this->listseq];
+                $this->obsession->setValue('boxFiltro_'.$this->listseq, $argFiltro);
 
                 //----------------------------------------------------------------------
                 //monta criterio de pesquisa em todas as colunas da tabela em questão.
-                if($dados['cols'.$this->idLista] === "*") {
+                if($dados['cols'.$this->listseq] === "*") {
 
-                    foreach($this->listCols as $colId=>$colLabel) {
-                        if($colId != "id" and $colId != "codigo" and $colId != "unidade" and $colId != "ativo") {
-                            $this->addCriterio($colId, $dados['expre'.$this->idLista], 'ILIKE', 'OR', "2");
+                    foreach($this->itens as $colId=>$colLabel) {
+                        if($colId != '*'){// and $colId != "seq" and $colId != "unidseq" and $colId != "statseq") {
+                        	
+                        	$dadosCol = explode('__', $colId);
+                            $this->addCriterio($dadosCol[0], $dados['expre'.$this->listseq], 'ILIKE','OR',$dadosCol[1], "2");
                         }
                     }
 
                 }else {
-                    $this->addCriterio($dados['cols'.$this->idLista], $dados['expre'.$this->idLista], 'ILIKE', NULL, "2");
+                	
+                	$dadosCol = explode('__', $dados['cols'.$this->listseq]);
+                    $this->addCriterio($dadosCol[0], $dados['expre'.$this->listseq], 'ILIKE',NULL,$dadosCol[1], "2");
                 }
             }
-            $this->loaded = false;
+             
         }
+        
+        if(count($dados) > 0 and !array_key_exists ('expre'.$this->listseq,$dados)){//filtro normal
+        	
+        	//limpa filtro
+        	$this->clear();
+        	$this->obsession->setValue('boxFiltro_'.$this->listseq, NULL);
+        	$argFiltro = array();
+        	
+        	$obControl = new TSetControl();
+        	
+        	foreach ($dados as $col=>$valor){
+        		
+        		$arg = explode(';', $valor);        		
+        		if($obControl->is_date($arg[0], 'dd/mm/yyyy') and $obControl->is_date($arg[1],'dd/mm/yyyy')){
+        			
+        			$arg[0] = $obControl->setDataDB($arg[0]);
+        			$arg[1] = $obControl->setDataDB($arg[1]);
+        			
+        			$dadosCol = explode('__', $col);
+        			$this->addCriterio($dadosCol[0], $arg, 'BETWEEN', NULL,$dadosCol[1], "2");
+        		}else{
+        			
+        			$dadosCol = explode('__', $col);
+        			
+        			$this->addCriterio($dadosCol[0], $valor, 'ILIKE', NULL,$dadosCol[1],"2");
+        		}
+        	}        	
+        	
+        }
+        $this->load = TRUE;
     }
 
     /**
      * Adiciona criterio de ordenação ao
      * objeto criteria
-     * param coluna = creterio de ordenação
+     * param coluna = criterio de ordenação
      */
     public function setOrdem($ordem) {
+    	    	
         if($this->listaOrder == $ordem) {
             $ordem .= ' desc';
         }
         $this->listaOrder = $ordem;
-        $this->loaded = false;
+        $this->load = TRUE;
     }
 
     /**
@@ -317,45 +390,80 @@ class TSetlista {
      */
     public function setLimite($lim = null) {
     	if(!empty($lim)){
-        	$this->limite = $lim;
+        $this->limite = $lim;
     	}else{
-        	$this->limite = $this->limitePadrao;    		
+        $this->limite = $this->limitePadrao;    		
     	}
     	
-    	$this->loaded = false;
+    	$this->load = TRUE;
     }
 
 
     /**
-     * Método setPosition()
+     * metodo setPosition()
      * Gerencia os criterios da posição da lista.
      * param  posição = posição da paginação da listagem
      */
     public function setPosition($posicao) {
         $this->posicao = $posicao;
         //paginação
-        if($this->posicao == "") {
-            $this->posicao = '0';
+        if(!$this->posicao) {
+            $this->posicao = 0;
         }
         if($this->limite && is_numeric($this->limite)){
             $limite = $this->limite.' OFFSET '.$this->posicao;
         }
         $this->limiteParam = $limite;
-        $this->loaded = false;
+        
+        $this->load = TRUE;
     }
+    
+/**
+     * m�todo setLimite
+     * monta formul�rio de limite da Lista
+     */
+    public function onLimite() {
+
+    	$itens = array( 10=>10,
+    					20=>20,
+    					30=>30,
+    					40=>40,
+    					50=>50,
+    					60=>60,
+    					80=>80,
+    					100=>100,
+    					120=>120);
+    					//'all'=>'Todos');
+    					
+    	$ActionLimite = new TSetAction('prossExe');
+        $ActionLimite->setMetodo('onChangeLimit');
+        $ActionLimite->setTipoRetorno('lista');
+        $ActionLimite->setIdForm($this->listseq);
+        $ActionLimite->setAlvo($this->conteinerRetorno);
+        
+        $this->comboLimite = new TCombo('comboLimite'.$this->listseq, FALSE);
+	    $this->comboLimite->class = 'button icons ui-corner-all ui-state-default';
+        $this->comboLimite->setSize('80');
+        $this->comboLimite->onchange = 'alocaDado(this); '.$ActionLimite->getAction()->serialize();
+        $this->comboLimite->addItems($itens);
+        $this->comboLimite->value = $this->limite;
+
+        
+    }
+    
 
     /**
      * Deleta registro da lista
-     * param codigo = codigo do registro a ser deletado
+     * param seq= seqdo registro a ser deletado
      * param endidade = entidade(tabela) alvo da ação
      */
-    public function onDelete($codigo, $entidade) {
+    public function onDelete($seq, $entidade) {
 
         //deleta o registro baseado no campoChave passado na definição da lista pelo construtor
         $dbo = new TDbo($entidade);
-        $result = $dbo->delete($codigo, $this->campoChave);
+        $result = $dbo->delete($seq, $this->campoChave);
 
-        $this->loaded = false;
+        $this->load = TRUE;
     }
 
     /**
@@ -366,23 +474,23 @@ class TSetlista {
         $this->botsNav[] = $botNav;
     }
 
-    /*Método setNav()
+    /*m�todo setNav()
 	* configura a barra navegadora do browser
 	* param    idFiltro = id para configuração do botão filtrar( Id da janela)
     */
     private function setNav($idFiltro){
 
-        // configura botões de navegação =======================================
+        // configura bot�es de navegação =======================================
         $ActionBack = new TSetAction('prossExe');
         $ActionBack->setMetodo('onBack');
         $ActionBack->setTipoRetorno('lista');
-        $ActionBack->setIdForm($this->idLista);
-        $ActionBack->setAlvo($this->paneRet);
+        $ActionBack->setIdForm($this->listseq);
+        $ActionBack->setAlvo($this->conteinerRetorno);
         $this->bt['btBack'] = new TIcon("ui-icon-seek-prev", "icons_btBack");
         $this->bt['btBack']->setAction($ActionBack);
         $this->bt['btBack']->setTitle("Voltar");
         if($this->posicao<=1) {
-            $this->bt['btBack']->setEditable(false);
+            $this->bt['btBack']->setEditable(FALSE);
         }
         //$this->bt['btBack'] = new TButton('btBack');
         //$this->bt['btBack']->setAction($ActionBack, '<<');
@@ -391,13 +499,13 @@ class TSetlista {
         $ActionNext = new TSetAction('prossExe');
         $ActionNext->setMetodo('onNext');
         $ActionNext->setTipoRetorno('lista');
-        $ActionNext->setIdForm($this->idLista);
-        $ActionNext->setAlvo($this->paneRet);
+        $ActionNext->setIdForm($this->listseq);
+        $ActionNext->setAlvo($this->conteinerRetorno);
         $this->bt['btNext'] = new TIcon("ui-icon-seek-next", "icons_btNext");
         $this->bt['btNext']->setAction($ActionNext);
         $this->bt['btNext']->setTitle("Avançar");
         if($this->NumRows<=$this->limite or ($this->posicao+$this->limite)>=$this->NumRows) {
-            $this->bt['btNext']->setEditable(false);
+            $this->bt['btNext']->setEditable(FALSE);
         }
         //$this->bt['btNext'] = new TButton('btNext');
         //$this->bt['btNext']->setAction($ActionNext, '>>');
@@ -410,16 +518,16 @@ class TSetlista {
             $ActionSetCols = new TSetAction('prossExe');
             $ActionSetCols->setMetodo('onVisibilidade');
             $ActionSetCols->setTipoRetorno('lista');
-            $ActionSetCols->setIdForm($this->idLista);
-            $ActionSetCols->setAlvo($this->paneRet);
+            $ActionSetCols->setIdForm($this->listseq);
+            $ActionSetCols->setAlvo($this->conteinerRetorno);
             $this->bt['btColunas']->setAction($ActionSetCols->getAction(), 'Colunas');
             $this->bt['btColunas']->style = "width:60px;";
         }
         //======================================================================
 
-        // configura botões de navegação =======================================
+        // configura bot�es de navegação =======================================
         $this->bt['btPrint'] = new TIcon("ui-icon-print", "icons_btPrint");
-        $this->bt['btPrint']->setAction('printDataGrid('.$this->idLista.','.$this->paneRet.')');
+        $this->bt['btPrint']->setAction('printDataGrid('.$this->listseq.','.$this->conteinerRetorno.')');
         $this->bt['btPrint']->setTitle("Imprimir");
 
         $NavLista = new TElement('div');
@@ -472,7 +580,7 @@ class TSetlista {
 
         $NavLista->add($this->bt['btPrint']);
         
-        $this->onLimite();
+    	//$this->onLimite();
         if($this->comboLimite){
         	$LabelLimite = new TElement('span');
 	        $LabelLimite->add($this->comboLimite);
@@ -483,7 +591,7 @@ class TSetlista {
     }
 
     /**
-     * Método setColunas
+     * m�todo setColunas
      * monta formulario de configuração da visibilidade das colunas
      */
     public function setColunas() {
@@ -491,72 +599,71 @@ class TSetlista {
     }
 
     /**
-     * Método setFiltro
-     * monta formulário de filtro da lista de dados
+     * m�todo setFiltro
+     * monta formul�rio de filtro da lista de dados
      */
     public function onFiltro() {
 
-        //Instacia campos do formulário de filtro de dados
-        $this->Campos['expre'.$this->idLista] = new TEntry('expre'.$this->idLista);
-        $this->Campos['expre'.$this->idLista]->setSize('220');
-        $this->Campos['expre'.$this->idLista]->onkeyup = "runEnter('icons_Pesq".$this->idLista."', event)";
+        //Instacia campos do formul�rio de filtro de dados
+        $this->Campos['expre'.$this->listseq] = new TEntry('expre'.$this->listseq);
+        $this->Campos['expre'.$this->listseq]->view = true;
+        $this->Campos['expre'.$this->listseq]->setSize('220');
+        $this->Campos['expre'.$this->listseq]->setProperty('autocomplete','on');
+        
+        $this->Campos['expre'.$this->listseq]->onkeyup = "runEnter('icons_Pesq".$this->listseq."', event)";
 
         // manter o ultimo argumento no campo de expressão =============
-//        $argumentoFiltro = $this->obsession->getValue('boxFiltro_'.$this->idLista);
+//        $argumentoFiltro = $this->obsession->getValue('boxFiltro_'.$this->listseq);
 //
-//        if(is_array($argumentoFiltro['expre'.$this->idLista])) {
-//            $numArg = count($argumentoFiltro['expre'.$this->idLista])-1;
+//        if(is_array($argumentoFiltro['expre'.$this->listseq])) {
+//            $numArg = count($argumentoFiltro['expre'.$this->listseq])-1;
 //
-//            $this->Campos['expre'.$this->idLista]->setValue($argumentoFiltro['expre'.$this->idLista][$numArg]);
+//            $this->Campos['expre'.$this->listseq]->setValue($argumentoFiltro['expre'.$this->listseq][$numArg]);
 //        }else {
-//            $this->Campos['expre'.$this->idLista]->setValue($argumentoFiltro['expre'.$this->idLista]);
+//            $this->Campos['expre'.$this->listseq]->setValue($argumentoFiltro['expre'.$this->listseq]);
 //        }
         //==============================================================
 
 
-        $this->Campos['cols'.$this->idLista] = new TCombo('cols'.$this->idLista, false);
-        $this->Campos['cols'.$this->idLista]->setSize('150');
-            if(is_array($argumentoFiltro['cols'.$this->idLista]) and $numArg) {
-                $this->Campos['cols'.$this->idLista]->setValue($argumentoFiltro['cols'.$this->idLista][$numArg]);
+        $this->Campos['cols'.$this->listseq] = new TCombo('cols'.$this->listseq, FALSE);
+        $this->Campos['cols'.$this->listseq]->view = true;
+        $this->Campos['cols'.$this->listseq]->setSize('150');        
+            if(is_array($argumentoFiltro['cols'.$this->listseq]) and $numArg) {
+                $this->Campos['cols'.$this->listseq]->setValue($argumentoFiltro['cols'.$this->listseq][$numArg]);
             }
 //            if(is_array($this->itens)) {
 //                array_unshift($this->itens, "todas as colunas");
 //            }
-        $this->Campos['cols'.$this->idLista]->addItems($this->itens);
+        $this->Campos['cols'.$this->listseq]->addItems($this->itens);
 
-        $this->Campos['Manterfilt'.$this->idLista] = new TCheckButton('Manterfilt'.$this->idLista);
-        $this->Campos['Manterfilt'.$this->idLista]->setValue(1);
+        $this->Campos['Manterfilt'.$this->listseq] = new TCheckButton('Manterfilt'.$this->listseq);
+        $this->Campos['Manterfilt'.$this->listseq]->view = true;
+        $this->Campos['Manterfilt'.$this->listseq]->setValue(1);
 
-        //$this->Campos['filtrar'] = new TButton('filtrar');
-        $ActionFilter = new TSetAction('prossExe');
-        $ActionFilter->setMetodo('onFilter');
-        $ActionFilter->setTipoRetorno('lista');
-        $ActionFilter->setIdForm($this->idLista);
-        $ActionFilter->setAlvo($this->paneRet);
-        //$this->Campos['filtrar']->setAction($ActionFilter, 'Filtrar');
-        //$this->Campos['filtrar']->style = "width:80px;";
-
-        //$this->Campos['lpfiltro'] = new TButton('lpfiltro');
-        $ActionClearFilter = new TSetAction('prossExe');
-        $ActionClearFilter->setMetodo('onClearFilter');
-        $ActionClearFilter->setTipoRetorno('lista');
-        $ActionClearFilter->setIdForm($this->idLista);
-        $ActionClearFilter->setAlvo($this->paneRet);
-        //$this->Campos['lpfiltro']->setAction($ActionClearFilter, 'Limpar Filtro');
-        //$this->Campos['lpfiltro']->style = "width:80px;";
+	        $ActionFilter = new TSetAction('onFilter');
+	        $ActionFilter->setIdForm($this->listseq);
+	        $ActionFilter->setTipoRetorno('lista');
+	        $ActionFilter->setAlvo($this->conteinerRetorno);
 
         //bontão de pesquisa
-        $botPesq = new TIcon("ui-icon-search", "icons_Pesq".$this->idLista);
+        $botPesq = new TIcon("ui-icon-search", "icons_Pesq".$this->listseq);
         $botPesq->setAction($ActionFilter);
         $botPesq->setTitle("Filtrar");
 
+        
+	        $ActionClearFilter = new TSetAction('prossExe');
+	        $ActionClearFilter->setMetodo('onClearFilter');
+	        $ActionClearFilter->setTipoRetorno('lista');
+	        $ActionClearFilter->setIdForm($this->listseq);
+	        $ActionClearFilter->setAlvo($this->conteinerRetorno);
+        
         //bontão limpa pesquisa
-        $botLimpa = new TIcon("ui-icon-refresh", "icons_Limpar".$this->idLista);
+        $botLimpa = new TIcon("ui-icon-refresh", "icons_Limpar".$this->listseq);
         $botLimpa->setAction($ActionClearFilter);
         $botLimpa->setTitle("Limpar Filtro");
 
         //bontão de informação da pesquisa
-        $botInfo = new TIcon("ui-icon-info", "icons_Pesq".$this->idLista);
+        $botInfo = new TIcon("ui-icon-info", "icons_Pesq".$this->listseq);
         //$botInfo->setAction($ActionClearFilter);
         $botInfo->setTitle("Informações do Filtro");
 
@@ -573,24 +680,24 @@ class TSetlista {
 
         $cellExp = $RowExp->addCell('Expressão: ');
         $cellExp->style = 'width:300px; text-align:left;';
-        $cellExp->add($this->Campos['expre'.$this->idLista]);
+        $cellExp->add($this->Campos['expre'.$this->listseq]);
 
         $cellColsB = $RowExp->addCell('Buscar em: ');
         $cellColsB->style = 'width:230px; text-align:left;';
-        $cellColsB->add($this->Campos['cols'.$this->idLista]);
+        $cellColsB->add($this->Campos['cols'.$this->listseq]);
 
         $cellAc = $RowExp->addCell('Acumular filtro?');
         $cellAc->style = 'width:120px; text-align:left;';
-        $cellAc->add($this->Campos['Manterfilt'.$this->idLista]);
+        $cellAc->add($this->Campos['Manterfilt'.$this->listseq]);
 
         $CellPesq = $RowExp->addCell(" ");
         $CellPesq->add($botPesq);
         $CellPesq->add($botLimpa);
         $CellPesq->add($botInfo);
 
-        //formulário
-        $formFiltro = new TForm('filtro'.$this->idLista);
-        $formFiltro->setSubmit("false");
+        //formul�rio
+        $formFiltro = new TForm('filtro'.$this->listseq);
+        $formFiltro->setSubmit("FALSE");
 
         $formFiltro->setFields($this->Campos);
 
@@ -601,43 +708,9 @@ class TSetlista {
             $this->setFiltro($argumentoFiltro);
         }
 
-        $this->botFiltro = true;
+        $this->botFiltro = TRUE;
         $this->obFiltro = $formFiltro;
     }
-
-    
-        /**
-     * Método setFiltro
-     * monta formulário de limite da Lista
-     */
-    public function onLimite() {
-
-    	$itens = array( 10=>10,
-    					20=>20,
-    					30=>30,
-    					40=>40,
-    					50=>50,
-    					60=>60,
-    					80=>80,
-    					100=>100,
-    					120=>120);
-    					
-    	$ActionLimite = new TSetAction('prossExe');
-        $ActionLimite->setMetodo('onChangeLimit');
-        $ActionLimite->setTipoRetorno('lista');
-        $ActionLimite->setIdForm($this->idLista);
-        $ActionLimite->setAlvo($this->paneRet);
-        
-        $this->comboLimite = new TCombo('comboLimite'.$this->idLista, false);
-	    $this->comboLimite->class = 'button icons ui-corner-all ui-state-default';
-        $this->comboLimite->setSize('60');
-        $this->comboLimite->onchange = 'alocaDado(this); '.$ActionLimite->getAction()->serialize();
-        $this->comboLimite->addItems($itens);
-        $this->comboLimite->value = $this->limite;
-
-        
-    }
-    
     
     
     /**
@@ -684,16 +757,16 @@ class TSetlista {
      * Metodo de seleção multipla de registros na lista
      * param <type> $action
      */
-    public function setSelecao($idLista, $registro, $action){
+    public function setSelecao($listseq, $registro, $action){
 
         $obHeaderSelecao = new TSetHeader();
-        $headerLista     = $obHeaderSelecao->getHead($idLista);
-        $listaSelecao    = $headerLista['listaSelecao'];
+        $headerLista     = $obHeaderSelecao->getHead($listseq);
+        $listaSelecao    = $headerLista[TConstantes::LIST_SELECAO];
 
         if($registro == 'all'){
             if($action == '1'){
 
-                $dboSel = new TDbo($headerLista['entidade']);
+                $dboSel = new TDbo($headerLista[TConstantes::ENTIDADE]);
                         //monta filtro para a seleção
                         $criteriaSel = new TCriteria();
                         if(count($this->listaCriterios) >0){
@@ -706,20 +779,20 @@ class TSetlista {
                                 }
                             }
                         }
-                $retSel = $dboSel->select('codigo', $criteriaSel);
+                $retSel = $dboSel->select(TConstantes::SEQUENCIAL, $criteriaSel);
                 while($obSel = $retSel->fetchObject()){
-                   $listaSelecao[$obSel->codigo] = $obSel->codigo;
+                   $listaSelecao[$obSel->seq] = $obSel->seq;
                 }
-                $obHeaderSelecao->addHeader($idLista, 'allSelecao', '1');
+                $obHeaderSelecao->addHeader($listseq, 'allSelecao', '1');
             }
             elseif($action == '2'){
-              $obHeaderSelecao->addHeader($idLista, 'allSelecao', '2');
+              $obHeaderSelecao->addHeader($listseq, 'allSelecao', '2');
               $listaSelecao = '-';
             }
             
         }else{
         	
-        	$vetorRegistro = $registro;
+        	$vetorRegistro = json_decode($registro);
         	
             if($action == '1'){
                 $listaSelecao[$vetorRegistro[0]] = $vetorRegistro[0];
@@ -728,11 +801,10 @@ class TSetlista {
             }
         }
 
-        if($listaSelecao){
-           $obHeaderSelecao->addHeader($idLista, 'listaSelecao', $listaSelecao);
-        }
+        
+        $obHeaderSelecao->addHeader($listseq, 'listaSelecao', $listaSelecao);
         $this->listaSelecao = $listaSelecao;
-        $this->headerLista = $obHeaderSelecao->getHead($idLista);
+        $this->headerLista = $obHeaderSelecao->getHead($listseq);
     }
 
     /**
@@ -740,93 +812,22 @@ class TSetlista {
     */
     public function clearSelecao(){
 
-        if($this->idLista){
+        if($this->listseq){
             $obHeaderSelecao = new TSetHeader();
-            $obHeaderSelecao->addHeader($this->idLista, 'listaSelecao', array());
+            $obHeaderSelecao->addHeader($this->listseq, TConstantes::LIST_SELECAO, array());
         }
     }
 
-    /**
-    * Método onReload()
-    * Carrega a DataGrid com os objetos do banco de dados
-    */
-    private function onReload($setPrint = false) {
+       
+    /*
+     * Carrega dos objetos em uma tabela HTML para exibição
+     * Param <array> $dados = vetor de objetos a serem carregados na tela
+     */
+    private function loadData($dados){   
+        
+            if($dados){
 
-        // inicia transação com o banco
-        TTransaction::open($this->pathDB);
-
-        // instancia um repositório
-        $this->repository = new TRepository($this->entity);
-
-        //configura colunas padrões (codigoautor e ativo)
-        if($this->listCols) {
-            if(!array_key_exists("codigoautor", $this->listCols)) {
-                //  $this->listCols["codigoautor"] = "codigoautor";
-            }
-            if(!array_key_exists("ativo", $this->listCols)) {
-                $this->listCols["ativo"] = "ativo";
-            }
-        }
-        //==============================================
-
-        // configura colunas de retorno do repositorio
-        $this->repository->setCols($this->listCols);
-
-        //Seta posição inicial da listagem
-        if($this->posicao == 0) {
-            $this->setPosition('');
-        }
-
-
-        //========= CRITERIOS ==================================================
-        //percorre e define os criterios da lista
-
-        if(count($this->listaCriterios) >0) {
-            $this->listaCriterios = array_reverse($this->listaCriterios);
-            foreach($this->listaCriterios as $fitro) {
-                if($fitro->operador) {
-                    $this->criteria->add($fitro, $fitro->operador);
-                }else {
-                    $this->criteria->add($fitro);
-                }
-            }
-        }
-        // Retorna a quantidade total de registros =============================
-        $this->NumRows = $this->repository->count($this->criteria);
-        // Quantidade ==========================================================
-
-         //ordenação padrão das listas
-        //$this->criteria->setProperty('order', 'id DESC');
-
-        //aplica ordenação
-        if($this->listaOrder) {
-            $this->criteria->setProperty('order', $this->listaOrder);
-        }
-
-
-        //Aplica limitador a lista
-        if($this->limiteParam != 0 and $setPrint === false){
-            $this->criteria->setProperty('limit', $this->limiteParam);
-        }else{
-            $this->criteria->setProperty('limit', null);
-        }
-        //configura criteio de acesso a unidade fabril==========================
-        //$this->criteria->add(new TFilter('unidade', '=', $this->obUser->unidade->codigo));
-        //$this->criteria->add(new TFilter('unidade', '=', 'x'),'OR');
-
-        //configura criterio de registros não comcluidos
-        //$this->criteria->add(new TFilter('ativo', '!=', '9'));
-        //=======================================================================
-        // carrega os objetos da entidade e armazena em um repositório de objetos
-        $objRegistros = $this->repository->load($this->criteria);
-        $this->datagrid->clear();
-
-        // finaliza a transação
-        TTransaction::close();
-
-        if($objRegistros) {
-
-            foreach ($objRegistros as $keyCol=>$ObjEntity) {
+            foreach ($dados as $seqCol=>$ObjEntity) {
 
                 //==============================================================
                 //configura ação enviar da PESQUISA se habilitada
@@ -838,13 +839,13 @@ class TSetlista {
                             $psqColunas = explode("=", $psqCols);
 
                                 //verifica se o valor de retorno contem uma coluna label associada
-                                if(strpos($psqColunas[1], '>') !== false){
+                                if(strpos($psqColunas[1], '>') !== FALSE){
                                     $psqValor = explode('>', $psqColunas[1]);
                                     $psqColunas[1] = $psqValor[0].','.$psqValor[1];
                                     $grupoCampos[$psqColunas[0]] = $psqValor;
                                 }
                                 else{
-                                    $grupoCampos[$psqColunas[0]] = $psqColunas[1];//campo do formulário
+                                    $grupoCampos[$psqColunas[0]] = $psqColunas[1];//campo do formul�rio
                                 }
                             
                             $grupoCols[$psqColunas[1]] = $psqColunas[1]; //coluna da entidade
@@ -852,7 +853,7 @@ class TSetlista {
 
                             $psqDbo = new TDbo($this->entity);
                                 $criteriaPsq = new TCriteria();
-                                $criteriaPsq->add(new TFilter('codigo', '=', $ObjEntity->codigo));
+                                $criteriaPsq->add(new TFilter(TConstantes::SEQUENCIAL, '=', $ObjEntity->seq));
                             $retDadosPsq = $psqDbo->select(implode(',',$grupoCols), $criteriaPsq);
                             
                             $dadosPsq = $retDadosPsq->fetch(PDO::FETCH_ASSOC);
@@ -867,7 +868,7 @@ class TSetlista {
                             }
 
 
-                    $this->vetDados[$keyCol] = htmlspecialchars(implode("(sp)",$setValue));
+                    $this->vetDados[$seqCol] = htmlspecialchars(implode("(sp)",$setValue));
                     $setValue = NULL;
                 }
                 //==============================================================
@@ -876,18 +877,175 @@ class TSetlista {
                 $this->objetosLista[] = $ObjEntity;
             }
         }
-        $this->loaded = true;
-
+    	
+    }
+    
+    /**
+    * m�todo onReload()
+    * Carrega a DataGrid com os objetos do banco de dados
+    */
+    private function onReload($setPrint = FALSE) {
+    	
+    	//$results = $this->objHeader->getHead($this->listseq, TConstantes::LIST_OBJECT);
+    	
+    	    	
+    	//Se a lista de objetos ainda não estiver sido carregada do banco ------ count($results) == 0 or 
+        if($this->load === TRUE){
+        	        	
+	        //configura colunas padrões (seqautor e statseq)
+	        if($this->listCols) {
+	            if(!array_key_exists("usuaseq", $this->listCols)) {
+	                //  $this->listCols["seqautor"] = "seqautor";
+	            }
+	            if(!array_key_exists("statseq", $this->listCols)) {
+	                $this->listCols["statseq"] = "statseq";
+	            }
+	        }
+	        //==============================================
+	    
+	
+	        //Seta posição inicial da listagem
+	        if($this->posicao == 0) {
+	            $this->setPosition($this->posicao);
+	        }
+	
+	
+	        //========= CRITERIOS ==================================================
+	        //percorre e define os criterios da lista
+	
+	        if(count($this->listaCriterios)>0) {
+	            $this->listaCriterios = array_reverse($this->listaCriterios);
+	            foreach($this->listaCriterios as $fitro) {
+	                if($fitro->operador) {
+	                    $this->criteria->add($fitro, $fitro->operador);
+	                }else {
+	                    $this->criteria->add($fitro);
+	                }
+	            }
+	        }
+	
+	         //ordenação Padrão das listas
+	     	 //$this->criteria->setProperty('order', 'seq DESC');
+	
+	        //aplica ordenação
+	        if($this->listaOrder) {
+	            $this->criteria->setProperty('order', $this->listaOrder);
+	        }
+	
+	        //Aplica limitador a lista
+	        if($this->limiteParam){       	
+	            $this->criteria->setProperty('limit', $this->limiteParam);
+	        }else{
+	            $this->criteria->setProperty('limit', null);
+	        }
+	        
+        	$results = $this->loadObject($this->entity, $this->criteria);
+        }
+        
+        $this->datagrid->clear();
+        
+        $this->loadData($results);
+        
+        $this->load = FALSE;
     }
 
 
+    /*
+     * Carrega a lista de Objetos do banco de dados em memoria
+     */
+    private function loadObject($entity, $criteria){
+    	
+    	$listCount = $this->objHeader->getHead($this->obHeader[TConstantes::LISTA], TConstantes::LIST_COUNT);
+    	
+    	// inicia transação com o banco
+        TTransaction::open($this->pathDB);
+                
+            //Seta filtro Padrão para o contexto do registro pai
+            if($this->obHeader > 1 and $this->obHeader['frmpseq']){
+            	
+            	$obHeadPai = $this->objHeader->getHead($this->obHeader['frmpseq']);
+            	
+            	if($obHeadPai[TConstantes::SEQUENCIAL] or $obHeadPai[TConstantes::STATUS_FORM] == 'new'){
+            		$criteria->add(new TFilter($obHeadPai[TConstantes::HEAD_COLUNAFK], '=',$obHeadPai[TConstantes::SEQUENCIAL]));  
+            	}          	
+            }
+   
+            $colunas = '*';
+            $dbo = new TDbo($entity);
+            $result = $dbo->select($colunas, $criteria);
+            if($result){
+            	
+                // percorre os resultados da consulta, retornando um objeto
+                while ($row = $result->fetchObject()) {
+
+                    //converte data Padrão internacional para Padrão brasileiro ====================
+                    foreach($row as $kDado=>$dado) {
+                        if (preg_match("/([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/", $dado, $newData)) {
+                            $row->$kDado = "$newData[3]/$newData[2]/$newData[1]";
+                        }
+                    }
+                    //==============================================================================
+
+					//if($this->obHeader[TConstantes::HEAD_NIVEL] == 1){
+						// armazena no array $results;
+                    	$results[] = $row;
+					//}else{
+
+						//$campoSession = $this->objHeader->formHeader($this->obHeader[TConstantes::FORM]);
+						
+						//foreach($campoSession as $cmp){
+
+						//}
+						
+					//}
+                    //incrementa n�mero de registro da base na quatidade de registros
+                    $listCount++;
+                }
+            }
+
+            //recupera campos armazenado em senssão que ainda não foram salvos e injeta na lista de objetos
+            $results_session = $this->objHeader->getHead($this->listseq, TConstantes::LIST_OBJECT);
+                        
+            //verifica existencia de itens na lista em sessão
+            if($results_session){
+            		
+            	foreach($results_session as $record){
+            		            		
+            		$objResult = new stdClass();
+            		            		
+              		foreach($record as $campo){      		
+              			$objResult->seq = $campo['seq'];	
+            			$objResult->$campo['colunadb'] = $campo['valor'];
+            		}
+			            		
+            		$objResult->statseq = 1;
+
+            		$results[] = $objResult;
+            		
+            		//incrementa registros ainda em sessão
+            		$listCount++;
+            	}
+            }
+
+        //atualiza na memoria quantidade de registro da lista
+        $this->objHeader->addHeader($this->obHeader[TConstantes::LISTA], TConstantes::LIST_COUNT, $listCount);
+            
+        //Retorna número de registros na lista de acordo com a criteria
+        $this->NumRows = $dbo->count($criteria);
+            
+        // finaliza a transação
+        TTransaction::close();
+        
+        return $results;
+    }   
+    
     /**
      * Retorna lista formatada para impressão
      */
     public function setPrint() {
 
-            $this->onReload(true);
-            $this->datagrid->createModel($this->totalWidth, false);
+            $this->onReload(TRUE);
+            $this->datagrid->createModel($this->totalWidth, FALSE);
 
         /**
          * Adiciona objetos na lista
@@ -929,11 +1087,12 @@ class TSetlista {
     * Retorna lista configurada
     */
     public function getLista() {
-
+    	
         // carrega ou recarrega dados na lista
-        // caso alguam ação tenha alterado o status do loaded
-        if($this->loaded == false) {
-            $this->onReload();
+        // caso alguam ação tenha sido executada
+        if($this->load) {
+            $this->onReload();       
+            
             $this->datagrid->createModel($this->totalWidth);
         }
         /**
@@ -952,36 +1111,36 @@ class TSetlista {
                     if($this->actions['acselecao']){
                         if(is_array($this->listaSelecao)){
                             if($this->headerLista['allSelecao'] == '1'){
-                                 $this->actions['acselecao']->checked = true;
-                                 $this->actions['acselecao']->label->checked = true;
+                                 $this->actions['acselecao']->checked = TRUE;
+                                 $this->actions['acselecao']->label->checked = TRUE;
                                  $this->actions['acselecao']->class   = 'ui-widget-header';
                             }elseif($this->headerLista['allSelecao'] == '2'){
-                                 $this->actions['acselecao']->label->checked = false;
-                                 $this->actions['acselecao']->checked = false;
+                                 $this->actions['acselecao']->label->checked = FALSE;
+                                 $this->actions['acselecao']->checked = FALSE;
                             }else{
-                                $regSelecionado = array_search($obs->codigo, $this->listaSelecao);
+                                $regSelecionado = array_search($obs->seq, $this->listaSelecao);
                                 if($regSelecionado){
-                                    $this->actions['acselecao']->checked = true;
+                                    $this->actions['acselecao']->checked = TRUE;
                                     $this->actions['acselecao']->class   = 'ui-widget-header';
                                 }else{
-                                    $this->actions['acselecao']->checked = false;
+                                    $this->actions['acselecao']->checked = FALSE;
                                 }
                            }
                      }
                 }
 
                 //marca linha da tabela de acordo com o status
-                if($obs->ativo == "9") {
-                    $mkup = $this->setMarc($obs->codigoautor, '1');
+                /* if($obs->statseq == "9") {
+                    $mkup = $this->setMarc($obs->seqautor, '1');
                 }
-                elseif($obs->ativo == "8") {
+                elseif($obs->statseq == "8") {
                     $msg = 'Este registro pode apresentar inconsistências. O Modo de edição não foi adequadamente concluido.';
-                    $mkup = $this->setMarc($obs->codigoautor, '2', $msg);
+                    $mkup = $this->setMarc($obs->seqautor, '2', $msg);
                 }else {
                     $mkup = NULL;
-                }
+                } */
                 $obs->align = $obs->alinhadados;
-                $this->datagrid->addItem($obs, $mkup);
+                $this->datagrid->addItem($obs);
             }
             $this->objetosLista = array();
         }
@@ -1113,7 +1272,7 @@ class TSetlista {
      */
     public function getDatagrid() {
 
-        if($this->loaded == false) {
+        if($this->load == TRUE) {
             $this->onReload();
         }
         $this->datagrid->createModel();
@@ -1122,7 +1281,7 @@ class TSetlista {
 
     /**
      * Configura vetor com a marcação dos registro não concluidos
-     * param <codigo> $user  = Codigo do usuario autro do registro
+     * param <seq> $user  = seqdo usuario autro do registro
      */
     private function setMarc($user, $tipo, $msg = NULL) {
         $markup[0] = $tipo;

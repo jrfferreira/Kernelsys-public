@@ -52,7 +52,7 @@ final class TRepository {
                 // percorre os resultados da consulta, retornando um objeto
                 while ($row = $result->fetchObject()) {
 
-                    //converti data padr�o internacional para padrão brasileiro====================
+                    //converti data padrão internacional para padrão brasileiro====================
                     foreach($row as $kDado=>$dado) {
                         if (preg_match("/([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/", $dado, $newData)) {
                             $row->$kDado = "$newData[3]/$newData[2]/$newData[1]";
@@ -107,7 +107,7 @@ final class TRepository {
 
         // instancia instrução de SELECT
         $sql = new TSqlSelect;
-        $sql->addColumn('count(id)');
+        $sql->addColumn('count(seq)');
         $sql->setEntity($this->entidade);
         // atribui o critério passado como parâmetro
         if($criteria) {

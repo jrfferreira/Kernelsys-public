@@ -67,7 +67,7 @@ class TAction {
             $param = implode(',', $this->param);
         }
 
-        //injeta argumento chave nos paramentos da ação JS. Exp:Codigo = 90984-03
+        //injeta argumento chave nos paramentos da ação JS. Exp:seq= 90984-03
         //if($this->pkey!=""){ $param = $param.','.$this->pkey; }
         //agrega objeto de retono aos paramentos da ação JS
         //if($this->ret!=""){ $param = $param.','.$this->ret; }

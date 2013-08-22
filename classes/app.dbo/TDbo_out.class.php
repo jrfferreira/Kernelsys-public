@@ -52,6 +52,12 @@ class TDbo_out {
         // }
     }
 
+    
+    public function commit() {
+    	
+        $this->conn->commit();
+    	return true;
+    }
     /**
      *
      */
@@ -126,11 +132,11 @@ class TDbo_out {
 
                     //adiciona criterio de seleção por unidade automaticamente
                     if($this->unidade)
-                    	$criteria->add(new TFilter('unidade','=',$this->unidade));
+                    $criteria->add(new TFilter('unidade','=',$this->unidade));
 
                     // define o critério de seleção de dados
                     $sql->setCriteria($criteria);
-                    //$criteria->add(new TFilter('id', '=', $id));
+                    //$criteria->add(new TFilter('seq', '=', $seq));
                 }
 
                 // inicia transação
@@ -187,16 +193,13 @@ class TDbo_out {
         try {
             if($dados != NULL and $dados != "" and is_array($dados)) {
                 // incrementa o ID
-                //$this->id = $this->getLast() +1;
+                //$this->seq = $this->getLast() +1;
 
                 //acrecenta dados pad�es no insert
                 if(!$dados['unidade'] && $this->unidade) {
                     $dados['unidade'] = $this->unidade;
                 }
 
-                if(!$dados['codigoautor']) {
-                    $dados['codigoautor'] = "010101-11";
-                }
                 //adiciona data do cadastro no registro
                 $dados['dataCad'] = date("Y-m-d");
 
@@ -206,9 +209,9 @@ class TDbo_out {
                 $sql->setEntity($this->entity);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
+                foreach ($dados as $seq => $value) {
                     // passa os dados do objeto para o SQL
-                    $sql->setRowData($key, $value);
+                    $sql->setRowData($seq, $value);
                 }
 
                 // inicia transação
@@ -217,36 +220,19 @@ class TDbo_out {
                     // grava log de insert (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
 
-                    //executa sql
-                    $result = $this->conn->Query($sql->getInstruction());
+                     //executa sql
+                    $result = $this->conn->Query($sql->getInstruction(). " RETURNING ".TConstantes::SEQUENCIAL);
+                    
+                    if($result) {
+                    	
+                    	$lastId = $result->fetchObject();
+                    	
 
-                    if($result){
-
-                        if(!$dados['codigo']) {
-
+                        if(!$dados[TConstantes::SEQUENCIAL]) {
                              //retorna id da operação
-                            $idRegAtual = $this->conn->lastInsertId($this->entity."_id_seq");
-
-                                $criteriaCodigo = new TCriteria();
-                                $criteriaCodigo->add(new TFilter('id', '=', $idRegAtual));
-                                $retCodigo = $this->select('codigo', $criteriaCodigo);
-                                $obCodigo =  $retCodigo->fetchObject();
-
-                            $codRegistro = $obCodigo->codigo;
-
-                            ////Gera codigo do registro
-                            //$codRegistro = new geraCodigo($idRegAtual);
-                            //$codRegistro = $codRegistro->get();
-                            //
-                            //$criteriaUpCod = new TCriteria();
-                            //$criteriaUpCod->add(new TFilter('id','=',$idRegAtual));
-                            //
-                            //$dadoCod['codigo'] = $codRegistro;
-                            //$this->update($dadoCod,  $criteriaUpCod);
-
-                        }
-                        else {
-                            $codRegistro = $dados['codigo'];
+                            $idRegAtual = $codRegistro = $lastId->seq;
+                        } else {
+                            $idRegAtual = $codRegistro = $dados[TConstantes::SEQUENCIAL];
                         }
 
                         //fecha tansação
@@ -255,7 +241,7 @@ class TDbo_out {
                         }
 
                         $retorno['id']     = $idRegAtual;
-                        $retorno['codigo'] = $codRegistro;
+                        $retorno[TConstantes::SEQUENCIAL] = $codRegistro;
 
                         return $retorno;
                     }
@@ -281,6 +267,13 @@ class TDbo_out {
             echo $e.'<br><br>';
         }
     }
+    public function sqlExec($sql){
+        if($sql){
+
+            $result = $this->conn->Query($sql);
+            return $result;
+        }
+    }
 
 
     /**
@@ -297,7 +290,7 @@ class TDbo_out {
 
                 //adiciona criterio de seleção por unidade automaticamente
                 if($this->obUser) {
-                    $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->codigo));
+                    $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->seq));
                 }
 
                 // instancia instrução de update
@@ -306,14 +299,14 @@ class TDbo_out {
 
                 // define o critério de seleção de dados
                 $sql->setCriteria($criteria);
-                //$criteria->add(new TFilter('id', '=', $id));
+                //$criteria->add(new TFilter('seq', '=', $seq));
                 //$sql->setCriteria($criteria);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
-                    if ($key !== 'id'  and $value !== "") { // o ID não precisa ir no UPDATE
+                foreach ($dados as $seq => $value) {
+                    if ($seq !== 'seq'  and $value !== "") { // o seq não precisa ir no UPDATE
                         // passa os dados do objeto para o SQL
-                        $sql->setRowData($key, $value);
+                        $sql->setRowData($seq, $value);
                     }
                 }
 

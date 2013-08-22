@@ -40,7 +40,7 @@ $edit = '1';
 
        }
         //$frame->style = 'border: 0px; overflow: hidden; text-align: center;';
-        //$frame->src = '../app.util/TSec.php?classe=TFileFrame&metodo=show&id='.$this->tag->properties['id'].'&form='.$this->tag->properties['form'].'&codigo='.$this->tag->properties['codigo'].'&edit='.$edit.$endLine;
+        //$frame->src = '../app.util/TSec.php?classe=TFileFrame&metodo=show&id='.$this->tag->properties['id'].'&form='.$this->tag->properties['form'].'&seq='.$this->tag->properties[TConstantes::SEQUENCIAL].'&edit='.$edit.$endLine;
 
         //$frame->show();
     }

@@ -37,7 +37,7 @@ class TRodape {
         $infoUser->id    = "obUser";
         $infoUser->add('<img src="app.images/new_user.png" border="0" style="margin-top: 2px;" title="Usuário"/>'.$this->nome.'<br/><img src="app.images/new_home.png" border="0" title="Unidade"/>'. $this->unidade);
         $infoUser->add("<span id='retLoad'></span>");
-		$infoUser->onClick = "prossExe('onView', 'form', 474, '{$this->obUser->codigo}', 'winRet','')";
+		$infoUser->onClick = "prossExe('onView', 'form', 474, '{$this->obUser->seq}', 'winRet','')";
 		
 
         $logout = new TElement('span');

@@ -7,8 +7,8 @@ class TIndexSession{
  */
 
 const FORM_RCOD                             = "rcod";
-const FORM_RIDFORM                          = "iidForm";
-const FORM_CODIGOATUAL                      = "codigoAtual";
+const FORM_RFORMSEQ                          = "iformseq";
+const FORM_seqATUAL                      = "seqAtual";
 const FORM_STATUSVIEWFORM                   = "statusViewForm";
 const FORM_FORMOUTCONTROL                   = "formOutControl";
 const FORM_STATUSFORMEDITION                = "statusFormEdition";
@@ -22,7 +22,7 @@ const FORM_TEMPBLOCO                        = "tempBloco";
  *
  */
 
-const LIST_IDLISTAPRIMARIA                  = "idListaPrimaria";
+const LIST_IDLISTAPRIMARIA                  = "listseq";
 const LIST_DADOSFILTROLISTAATUAL            = "dadosFiltroListaAtual";
 const LIST_STATUSFORMEDITION                = "statusFormEdition";
 const LIST_OBJETOLISTADADOS                 = "objetoListaDados";
@@ -39,7 +39,7 @@ const GERAL_PATHDB                          = "pathDB";
 const GERAL_CONTENT                         = "content";
 const GERAL_NIVELEXEC                       = "nivelExec";
 const GERAL_IDREFLIXEIRO                    = "idRefLixeiro";
-const GERAL_CODIGOMESTRA                    = "codigoMestra";
+const GERAL_seqMESTRA                    = "seqMestra";
 
 
 /*

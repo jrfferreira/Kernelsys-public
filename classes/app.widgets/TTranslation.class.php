@@ -74,13 +74,13 @@ class TTranslation
         // obt�m a inst�ncia atual
         $instance = self::getInstance();
         // busca o �ndice num�rico da palavra dentro do vetor
-        $key = array_search($word, $instance->messages['en']);
+        $seq = array_search($word, $instance->messages['en']);
         
         // obt�m a linguagem para tradução
         $language = self::getLanguage();
         // retorna a palavra traduzida
-        // vetor indexado pela linguagem e pela codigo
-        return $instance->messages[$language][$key];
+        // vetor indexado pela linguagem e pela seq
+        return $instance->messages[$language][$seq];
     }
 }
 

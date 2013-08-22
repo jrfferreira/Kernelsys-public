@@ -8,14 +8,18 @@
  *
  */
 class TKrs {
+	
 	protected $xmlFolder = "../app.krs/schemas";
 	protected $xmlFile = "kernelsys.xml";
+	protected $obSession;
 	
 	private $table;
 	private $tableName;
-	private $keySort;
+	private $seqSort;
 	
 	public function __construct($table = null){
+		$this->obSession = new TSession();
+		$this->xmlFolder .= '/'.$this->obSession->getValue('package');
 		if(!empty($table)){
 			$this->loadXmlTable($table);
 		}
@@ -110,20 +114,21 @@ class TKrs {
 			$this->table->load($this->xmlFolder.'/'.$this->formatName($table).'.'.$this->xmlFile);			
 	}
 
-	public function sortBy(&$items, $key){
+	public function sortBy(&$items, $seq){
 	  if (is_array($items)){
-	  	$_REQUEST['key'] = $key;
+	  	$_REQUEST['key'] = $seq;
 	    return usort($items, "krsSort");
 	  }
 	  return false;
 	}
+	
 }
 
 function krsSort ($a, $b){
-	$key = $_REQUEST['key'];
-	if($a[$key] == $b[$key]){
+	$seq = $_REQUEST['key'];
+	if($a[$seq] == $b[$seq]){
 		return 0;
-	}else if($a[$key] > $b[$key]){
+	}else if($a[$seq] > $b[$seq]){
 		return 1;
 	}else{
 		return -1;

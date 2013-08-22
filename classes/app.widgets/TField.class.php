@@ -11,7 +11,6 @@ abstract class TField {
     protected $value;
     protected $editable;
     protected $tag;
-    protected $disab;
     protected $classField;
     public    $outControl;
     public    $label;
@@ -39,10 +38,6 @@ abstract class TField {
     public function __set($prop, $valor) {
 
         $this->tag->$prop = $valor;
-
-        if($prop == 'readonly' or $prop == 'disabled') {
-            $this->disab = $prop;
-        }
     }
 
     /**

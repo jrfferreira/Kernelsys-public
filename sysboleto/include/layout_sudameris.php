@@ -62,7 +62,7 @@ do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cell
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
     <td width=41><IMG SRC="imagens/logo_empresa.png"></td>
-    <td class=ti width=455><?php echo $dadosboleto["identificacao"]; ?> <?php echo isset($dadosboleto["cpf_cnpj"]) ? "<br>".$dadosboleto["cpf_cnpj"] : '' ?><br>
+    <td class=ti width=455><?php echo $dadosboleto["identificacao"]; ?> <?php echo isset($dadosboleto["pessnmrf"]) ? "<br>".$dadosboleto["pessnmrf"] : '' ?><br>
 	<?php echo $dadosboleto["endereco"]; ?><br>
 	<?php echo $dadosboleto["cidade_uf"]; ?><br>
     </td>
@@ -128,7 +128,7 @@ do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cell
 	</tr>
 	<tr>
 		<td height=13><img src=imagens/1.png width=1 height=13></td>
-		<td class=cp><?php echo $dadosboleto["cpf_cnpj"]?></td>
+		<td class=cp><?php echo $dadosboleto["pessnmrf"]?></td>
 		<td><img src=imagens/1.png width=1 height=13></td>
 		<td class=cp><?php echo $dadosboleto["numero_documento"]?></td>
 		<td><img src=imagens/1.png width=1 height=13></td>

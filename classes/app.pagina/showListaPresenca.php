@@ -5,7 +5,7 @@
 //==========================================================
 session_start();
 
-$codigo = $_GET['rcod'];
+$seq= $_GET['rcod'];
 
 function __autoload($classe){
 
@@ -15,7 +15,7 @@ function __autoload($classe){
 
 $TTurmaDisciplina = new TTurmaDisciplinas();
 
-$obDisciplina = $TTurmaDisciplina->getTurmaDisciplina($codigo);
+$obDisciplina = $TTurmaDisciplina->getTurmaDisciplina($seq);
 
 $turma = $obDisciplina->nometurma;
 $curso = $obDisciplina->nomecurso;
@@ -170,7 +170,7 @@ while($n < $numDatas){
 
 $tabelaNomes->add($tr);
 
-$retAlunosDisc = $TTurmaDisciplina->getAlunos($codigo);
+$retAlunosDisc = $TTurmaDisciplina->getAlunos($seq);
 
 foreach ($retAlunosDisc as $obAlunos){
 	$tr = new TElement("tr");

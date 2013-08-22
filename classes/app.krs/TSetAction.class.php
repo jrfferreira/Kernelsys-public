@@ -24,12 +24,15 @@ class TSetAction{
             new setException($e);
         }
     }
-
+	
+    /**
+     * Retorna o ação
+     */
     public function getAction(){
         
          $this->obAction->setParameter('metodo',$this->param['metodo']);
          $this->obAction->setParameter('tipoRetorno',$this->param['tipoRetorno']);
-         $this->obAction->setParameter('idForm',$this->param['idForm']);
+         $this->obAction->setParameter(TConstantes::FORM,$this->param[TConstantes::FORM]);
          $this->obAction->setParameter('key',$this->param['key']);
          $this->obAction->setParameter('alvo',$this->param['alvo']);
          $this->obAction->setParameter('confirme',$this->param['confirme']);
@@ -38,8 +41,8 @@ class TSetAction{
     }
 
     //Intercepta atributos não declarados e os instancia
-    public function __set($key, $value){
-            $this->obAction->$key = $value;
+    public function __set($seq, $value){
+            $this->obAction->$seq = $value;
     }
 
     /**
@@ -76,14 +79,14 @@ class TSetAction{
 
     /**
      *
-     * param <type> $idForm
+     * param <type> $formseq
      */
-    public function setIdForm($idForm){
+    public function setIdForm($formseq){
          try{
-            if($idForm){
-                $this->param['idForm'] = $idForm;
+            if($formseq){
+                $this->param[TConstantes::FORM] = $formseq;
             }else{
-                throw new ErrorException("O nome do idForm é inválido.");
+                throw new ErrorException("O nome do formseq é inválido.");
             }
         }catch (Exception $e){
             new setException($e);
@@ -92,12 +95,12 @@ class TSetAction{
 
     /**
      *
-     * param <type> $key
+     * param <type> $seq
      */
-    public function setKey($key){
+    public function setKey($seq){
          try{
-            if($key){
-                $this->param['key'] = $key;
+            if($seq){
+                $this->param['key'] = $seq;
             }else{
                 throw new ErrorException("A valor para key é inválido.");
             }
@@ -112,16 +115,26 @@ class TSetAction{
      */
     public function setAlvo($alvo){
          try{
+         	
+       //	echo $alvo.'<- aqui era pra ter o alvo   ';
+        	
+         	
             if($alvo){
                 $this->param['alvo'] = $alvo;
             }else{
-                throw new ErrorException("A valor para alvo é inválido.");
+            	
+            	$this->param['alvo'] = "this";
+               //throw new ErrorException("A valor para alvo é inválido.");
             }
         }catch (Exception $e){
             new setException($e);
         }
     }
 
+    /**
+     * 
+     * @param unknown_type $msg
+     */
     public function setConfirme($msg){
          try{
             if($msg){

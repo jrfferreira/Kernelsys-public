@@ -1,0 +1,158 @@
+<?php
+/* 
+ * Prove todos os metodos especificos para gerenciamento
+ * dos dados do curso
+ * Autor: Wagner Borba
+ * Data: 22/03/2010
+ */
+
+class TCurso{
+    /**
+     * Retorna um objeto curso e suas informações
+     *
+     */
+    public function getCurso($codigoCurso,$disciplinas = true){
+        try{
+
+            $dboCurso = new TDbo(TConstantes::DBCURSO);
+                $criteriaCurso = new TCriteria();
+                $criteriaCurso->add(new TFilter("seq","=",$codigoCurso));
+            $retCurso = $dboCurso->select("*",$criteriaCurso);
+            $obCurso = $retCurso->fetchObject();
+
+            if($disciplinas){
+            $obCurso->disciplinas = $this->getListaDisciplinas($obCurso->seq);
+            }
+
+            return $obCurso;
+
+        }catch (Exception $e){
+            new setException($e);
+        }
+
+    }
+    public function buttonAddCursoDisciplina($formseq){
+
+        $div = new TElement('div'); 
+       $div->id = 'ret_addCursoDisciplinas';
+        $button = new TElement('input');
+        $button->id = "addCursoDisciplinas";
+        $button->type = "button";
+        $button->onclick = "addAllDisciplinasCurso('ret_addCursoDisciplinas','$formseq')";
+        $button->class = "ui-state-default ui-corner-all";        
+        $button->title = 'Adicionar os Registros Selecionados';
+        $button->value = "Adicionar os Registros Selecionados";
+
+        $div->style = "text-align: center; padding: 5px;";
+        $div->class = "ui-widget-content";
+        $div->add($button);
+        return $div;
+    }
+
+    public function addCursoDisciplina($formseq){
+
+        $obHeader = new TSetHeader();
+        $headerForm = $obHeader->getHead($formseq);
+
+        $data['codigocurso'] = $obHeader->getHead($headerForm['frmpseq'],'codigoPai');
+        $data['ativo'] = '1';
+
+        $headerLista = $obHeader->getHead($headerForm['idLista'],'listaSelecao');
+        $listaDisciplinas = $this->getListaDisciplinas($data['cursseq']);
+
+        //foreach($headerLista as $ch=>$vl){
+        //    echo "<i>$ch</i> = <b>$vl</b><br/>";
+        //}
+
+        $cont = 0;
+        foreach($headerLista as $ch=>$vl){
+            if(!$listaDisciplinas[$ch]){
+                $data['discseq'] = str_replace(array('[',']','"',"'"), '', $vl);
+                $dboDisciplina = new TDbo(TConstantes::DBCURSO_DISCIPLINA);
+                $dboDisciplina->insert($data);
+                $cont++;
+            }
+        }
+        
+        if($cont > 1){
+        	$plural = 's';
+        }else{
+        	$plural = '';
+        }
+        
+        if($cont == 0){
+        	$cont = "Nenhuma";
+        }
+        return $cont." disciplina{$plural} adicionada{$plural} com sucesso.";
+    }
+
+    public function getListaDisciplinas($codigoCurso){
+        try{
+            $dboDisciplina = new TDbo(TConstantes::VIEW_CURSO_DISCIPLINA);
+                $criteriaDisicplina = new TCriteria();
+                $criteriaDisicplina->add(new TFilter("seq","=",$codigoCurso));
+            $retDisciplinas = $dboDisciplina->select("*",$criteriaDisicplina);
+
+            $disciplinas = array();
+            while($disciplina = $retDisciplinas->fetchObject()){
+                $disciplinas[] = $disciplina->discseq;
+            }
+
+            $TDisciplinas = new TDisciplina();
+            $disciplinas = $TDisciplinas->getListaDisciplina($disciplinas);
+            return $disciplinas;
+            
+        }catch (Exception $e){
+            new setException($e);
+        }
+    }
+
+    /**
+     *
+     * param <type> $codigoCurso
+     * return <type> 
+     */
+    public function getCargaHoraria($codigoCurso){
+         try{
+
+            $disciplinas = $this->getListaDisciplinas($codigoCurso);
+
+            $soma = 0;
+            if($disciplinas){
+                foreach($disciplinas as $disc){
+                    $soma = $soma + $disc->cargahoraria;
+                }
+            }
+
+            $vetInsert['cargahortotal'] = $soma;
+            $sqlInsertCHT = new TDbo(TConstantes::DBCURSO);
+                $critInsert = new TCriteria();
+                $critInsert->add(new TFilter("seq","=",$codigoCurso));
+            $sqlInsertCHT = $sqlInsertCHT->update($vetInsert, $critInsert);
+
+            $string = "Carga Horaria Total: ".$soma;
+            $this->ob = new TElement('div');
+            $this->ob->align = "right";
+            $this->ob->class = "ui-box ui-widget-content ui-state-default";
+            $this->ob->add ($string);
+
+            return $this->ob;
+
+         }catch (Exception $e){
+             new setException($e);
+         }
+    }
+
+    /**
+     * Retorna o nome do curso (label)
+     * param <type> $codigoCurso
+     */
+    public function getLabel($codigoCurso){
+        try{
+            $obCurso = $this->getCurso($codigoCurso);
+            return $obCurso->nome;
+        }catch (Exception $e){
+            new setException($e);
+        }
+    }
+}

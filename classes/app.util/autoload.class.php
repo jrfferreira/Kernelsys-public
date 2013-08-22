@@ -72,7 +72,7 @@ class autoload {
     	}
     	
 	    if( is_array( $classMap->getClasses() ) ){ 
-	        foreach( $classMap->getClasses() as $key=> $val ) 
+	        foreach( $classMap->getClasses() as $seq=> $val ) 
 	        { 
 	           if( preg_match( '/'. $classe .'(.class)/i', $val ) ){
 	               include_once($val);
@@ -134,11 +134,11 @@ class autoload {
             	$chave = preg_grep('@(.*)/(.*?)(\.class\.php)@i', $vl);
             	$file .= '$this->classes['.$chave[1].'] = \''.$vl.'\';';
             }
-                
+            
             $file .= '}';
             $file .= 'public function getClasses($class = null){ ';
 			$file .= '  	if(!empty($class)){';
-			$file .= '  		$returnClass = $this->classes[$class];';
+			$file .= '  		$returnClass = $this->classes [$class] || $this->package [ $this->obsession->getValue(\'package\') ] [$class];';
 			$file .= '  		if(empty($returnClass)){';
 			$file .= '  			return false;';
 			$file .= '  		}else{';

@@ -6,30 +6,30 @@ function __autoload($classe) {
 }
 
 class PassRecover {
-	private $keyCode;
+	private $seqCode;
 	private $dbo;
 	public $unidade;
-	public $codigoUser;
+	public $seq;
 	
-	public function PassRecover($keyCode){
-		$this->keyCode = $keyCode;
+	public function PassRecover($seqCode){
+		$this->keyCode = $seqCode;
 		
 		$this->unidade = "14303-1";
-        $this->codigoUser = "010101-11";
+        $this->seq = "010101-11";
         $this->dbo = new TDbo_out($this->unidade);
 	}
 	
-	public function request($codigoUsuario){
+	public function request($seqUsuario){
 		$this->dbo->setEntidade('dbusuario');
         $criterio = new TCriteria();
-        $criterio->add(new TFilter('usuario','='),$codigoUsuario);
-        $retUsuario = $this->dbo->select('codigo', $criterio);
+        $criterio->add(new TFilter('usuario','='),$seqUsuario);
+        $retUsuario = $this->dbo->select(TConstantes::SEQUENCIAL, $criterio);
         $obUsuario = $retUsuario->fetchObject();
-        $codigoUsuario = $obUsuario->codigo;
+        $seqUsuario = $obUsuario->seq;
         
-        if(!empty($codigoUsuario)){
+        if(!empty($seqUsuario)){
 			$tUsuario = new TUsuario();
-        	$tUsuario->requestRecoverPassword($codigoUsuario);
+        	$tUsuario->requestRecoverPassword($seqUsuario);
         }
 	}
 	

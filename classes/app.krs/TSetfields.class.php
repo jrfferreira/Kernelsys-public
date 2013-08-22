@@ -27,8 +27,6 @@ class TSetfields {
         //inicia objeto sesseion
         $this->obsession = new TSession();
 
-        $this->editable = $this->obsession->getValue('statusViewForm');
-
         $this->conteiner = new TTable($propriedades);
         $this->conteiner->style   	= 'border:0px';
         $this->conteiner->cellpadding	= "1";
@@ -70,7 +68,7 @@ class TSetfields {
         $obField = $campo->getCampo();
         $obField->label = $lab;
 
-        $this->fields[$campo->getId()] = $obField;
+        $this->fields[$nomeCampo] = $obField;
 
 
         if($actPesquisa) {
@@ -85,7 +83,11 @@ class TSetfields {
      * param <type> $valor
      */
     public function setProperty($campo, $prop, $valor) {
+    	if(method_exists($this->fields[$campo],$prop)){
+    		$this->fields[$campo]->$prop($valor);
+    	}else{
         $this->fields[$campo]->$prop = $valor;
+    }
     }
 
     /*
@@ -189,7 +191,27 @@ class TSetfields {
 
             //atribui botao de pesquisa
             if($obField->actPesquisa) {
-              
+            	
+            	
+            	//cria campo hidden para o sequencial
+            	$campoLabel = new TSetCampo();
+            	$campoLabel->setId($obField->getId().'Label');            	
+            	$campoLabel->setCampo($obField->getId().'Label','TEntry', '');
+            	$campoLabel = $campoLabel->getCampo();
+            	$campoLabel->setSize('300');
+            	$campoLabel->disabled = 'disabled';
+            	
+            	          	
+	            	//redefine o nome do campo label
+	            	//$obField->setName($obField->getName().'Label');
+	            	//$obField->setId($obField->getId().'Label');
+	            	//$obField->manter = false;
+	            	//$obField->getElement()->properties['view'] = 'false';
+	            	
+            	$cellCont->add($campoLabel);
+	            	
+            	
+
                 $contPesq = new TElement('img');
                 $contPesq->id 		= 'botPesq'.$ch;
                 $contPesq->src 		= "../app.view/app.images/ico_view.png";
@@ -198,10 +220,8 @@ class TSetfields {
                 $contPesq->align	= "absbottom";
                 $contPesq->hspace	= "0";
                 $contPesq->vspace	= "0";
-                $contPesq->onClick	= "prossExe('onPesquisa', 'lista', '','".$obField->actPesquisa."', 'winRet', '')";
+                $contPesq->onClick	= "prossExe('onPesquisa', 'lista', '".$obField->actPesquisa."','".$obField->actPesquisa."', 'winRet', '')";
                 $cellCont->add($contPesq);
-                //desabilita o campo de retorno da pesquisa
-                $obField->disabled = "disabled";
             }
 
             // injeta [HELP] no escopo do campo

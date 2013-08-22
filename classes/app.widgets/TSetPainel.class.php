@@ -83,7 +83,7 @@ $fields->geraCampo('teste2','teste2','TEntry', '');
 $fields->geraCampo('teste3','teste3','TEntry', '');
 $fields->geraCampo('teste4','teste4','TEntry', '');
 
-$fields->geraCampo('botão','bot','TButton', '');
+$fields->geraCampo('bot�o','bot','TButton', '');
 	$fields->setProperty('bot','setAction','onView');
 
 $form = new TSetAbas('teste');

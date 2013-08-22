@@ -33,8 +33,8 @@ class TKrsStatement {
 	private function getOutput(){
 		if(count($this->statement) > 0){
 		$output = current($this->statement);
-		$key = @key(current($this->statement));
-		unset($this->statement[$key]);
+		$seq = @key(current($this->statement));
+		unset($this->statement[$seq]);
 		next($this->statement);
 		
 		return $output;

@@ -10,30 +10,34 @@ class TBloco{
 
 	private $objetos;
 	public $formato;
+	public $formseq;
+	public $blocseq;
+	public $idPai;
+	public $seq;
 	
 	/*método construtor
 	*instancia o objeto forms
 	*param		id = identificador do objeto na base de dados
 	*/
-	public function __construct($idForm, $id, $codigo, $auto = NULL){
+	public function __construct($formseq, $blocseq, $seq, $auto = NULL){
 	
 		//inicia objeto sesseion
 		$this->obsession = new TSession();
 
-                $this->idForm   = $idForm;
-                $this->codigo   = $codigo;
-				$this->idBloco  = $id;
+                $this->formseq   = $formseq;
+                $this->seq  	= $seq;
+				$this->blocseq  = $blocseq;
 				$this->idPai    = $idPai;
                     
                     $criterio = new TCriteria();
-                    $criterio->add(new TFilter('id', '=', $this->idBloco));
-                    $criterio->add(new TFilter('ativo', '=', '1'));
+                    $criterio->add(new TFilter('seq', '=', $this->blocseq));
+                    $criterio->add(new TFilter('statseq', '=', '1'));
                     
                     $tKrs = new TKrs('blocos');
                     $RetObBloco = $tKrs->select('*',$criterio);
                     
                     $this->ObjBloco = $RetObBloco->fetchObject();
-
+                    
                     $this->formato = $this->ObjBloco->formato;
 
                     if($auto != NULL){
@@ -44,9 +48,9 @@ class TBloco{
                     }
 	}
 
-        /**
-        *
-        */
+    /**
+    *
+    */
 	public function setBloco(){
 
             if($this->formato == 'frm'){
@@ -55,51 +59,50 @@ class TBloco{
                     if($this->ObjBloco->obapendice and $this->ObjBloco->obapendice != "-" ){
 
                         $obApendice = new TApendices();
-                        $obElement = $obApendice->main($this->ObjBloco->obapendice, $this->idForm);
+                        $obElement = $obApendice->main($this->ObjBloco->obapendice, $this->formseq);
 
                         $addObj = $obElement;
                     }else{
 
-                        $paneObj = new TCompForm($this->idForm, $this->idBloco, $this->formato, $this->codigo);
+                        $paneObj = new TCompForm($this->formseq, $this->blocseq, $this->formato, $this->seq);
                         $addObj = $paneObj->setFields();
                         $this->campos = $paneObj->getCamp();
                     }
 
             }
             elseif($this->formato == 'lst'){
-
                 //Verifica tabela de destino do bloco
                 $dboTab = new TKrs('tabelas');
                 $criteriaFormTab = new TCriteria();
-                $criteriaFormTab->add(new TFilter('id','=',$this->ObjBloco->entidade));                
+                $criteriaFormTab->add(new TFilter('seq','=',$this->ObjBloco->tabseq));                
                 $retTab = $dboTab->select('*', $criteriaFormTab);
                 $obTabela = $retTab->fetchObject();
 
                     //retorna dados do formulario
                     $dboForm = new TKrs('forms');
                         $criteriaForm = new TCriteria();
-                        $criteriaForm->add(new TFilter('id','=',$this->ObjBloco->idform));
+                        $criteriaForm->add(new TFilter('seq','=',$this->ObjBloco->formseq));
                     $retForm = $dboForm->select('*', $criteriaForm);
                     $obForm = $retForm->fetchObject();
 
                     //retorna a lista
-                    $dboLista = new TKrs('lista_form');
+                    $dboLista = new TKrs('lista');
                         $criteriaLista = new TCriteria();
-                        $criteriaLista->add(new TFilter('id','=',$obForm->idlista));
-                    $retLista = $dboLista->select('id', $criteriaLista);
+                        $criteriaLista->add(new TFilter('seq','=',$obForm->listseq));
+                    $retLista = $dboLista->select('seq', $criteriaLista);
                     $obLista = $retLista->fetchObject();
 
                 //gera id do conteiner da lista
-                $paneRet = 'contLista'.$obLista->id;
+                $paneRet = TConstantes::CONTEINER_LISTA.$obLista->seq;
 
-                $listObj = new TCompLista($obLista->id, $paneRet);
+                $listObj = new TCompLista($obLista->seq);
                 $lista = $listObj->get();
 
                 $listDados = $listObj->getListDados();
 
                     // permanece objeto lista em sessão \\
                     $listaBox = "listaBox";
-                    $this->obsession->setValue('obListaBox_'.$obLista->id, $lista, $listaBox);
+                    $this->obsession->setValue('obListaBox_'.$obLista->seq, $lista, $listaBox);
 
                 //cria conteiner para a lista
                 $panelLista = new TElement('div');
@@ -128,7 +131,7 @@ class TBloco{
             }
 	}
 	
-	public function getIdbloco(){
+	public function getBlocoSeq(){
 		return $this->ObjBloco->blocoid;
 	}
 	
@@ -153,6 +156,8 @@ class TBloco{
 	*  Retorna o formulario montado com suas respequitivas abas
 	*/
 	public function getBloco(){
+				$obsession = new TSession();
+				$developer = $obsession->getValue('developer');
 
                 //Cria elemento fieldset
                 $Bloco = new TElement('fieldset');
@@ -160,7 +165,7 @@ class TBloco{
                 $Bloco->class = $this->visibilidade." ui_bloco_fieldset ui-corner-all ui-widget-content";
                     $legBloco = new TElement('legend');
                     $legBloco->class = "ui_bloco_legendas ui-widget-content ui-corner-all";
-                    $legBloco->add($this->ObjBloco->nomebloco);
+                    $legBloco->add(($developer ? $this->ObjBloco->seq.' - ' : '').$this->ObjBloco->nomebloco);
                 $Bloco->add($legBloco);
 
                 $content = new TElement('div');

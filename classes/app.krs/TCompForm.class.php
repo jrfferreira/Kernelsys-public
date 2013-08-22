@@ -14,30 +14,30 @@ class TCompForm {
      * método __construct()
      * Gera um formulário
      * Autor : Wagner Borba
-     * param $idForm = id do formulário em questão
+     * param $formseq = id do formulário em questão
      * param $idPai = id do objeto pai
      * param $tipo = tipo do formulário (form / bloco)
-     * param Codigo = código id do registro caso o formulário seja secundário
+     * param seq = código sequência do registro
      * param mostraid = Modo de desenvolvimento, mostrar id do campo
      */
-    public function __construct($idForm, $idBloco, $tipo, $codigo) {
+    public function __construct($formseq, $blocseq, $tipo, $seq) {
 
         //inicia objeto sesseion
         $this->obsession = new TSession();
         $mostraid = $this->obsession->getValue('developer');
-        $this->editable = $this->obsession->getValue('statusViewForm');
+        $this->editable = $this->obsession->getValue(TConstantes::STATUS_VIEWFORM);
 
-        //codigo do formulario em execução
-        $this->idForm = $idForm;
-        $this->idBloco = $idBloco;
-        $this->codigo = $codigo;
+        //seqdo formulario em execução
+        $this->formseq = $formseq;
+        $this->blocseq = $blocseq;
+        $this->seq = $seq;
         
             //==================================================================
             //retorna o cabeçalho do formulário
             $this->obHeaderForm = new TSetHeader();
-            $this->headerForm = $this->obHeaderForm->getHead($this->idForm);
-            $codigoPai          = $this->headerForm['codigoPai'];
-            $camposSession      = $this->headerForm['camposSession'];
+            $this->headerForm   = $this->obHeaderForm->getHead($this->formseq);
+            $seqPai             = $this->headerForm['seqPai'];
+            $camposFormulario   = $this->headerForm[TConstantes::CAMPOS_FORMULARIO];
             //==================================================================
 
         //inicia uma transação com a camada de dados do form
@@ -45,72 +45,115 @@ class TCompForm {
 
         $this->obKDbo->setEntidade('campos_x_blocos');
             $criteriaCamposBlocos = new TCriteria();
-            $criteriaCamposBlocos->add(new TFilter('blocoid','=',$this->idBloco),'AND');
+            $criteriaCamposBlocos->add(new TFilter('blocseq','=',$this->blocseq),'AND');
             $criteriaCamposBlocos->add(new TFilter('mostrarcampo','=','S'), 'AND');
             $criteriaCamposBlocos->setProperty('order', 'ordem');
         $RetIdCampos = $this->obKDbo->select("*", $criteriaCamposBlocos);
+   
+        $listaTipoCampo = array();
+        
+        $this->obKDbo->setEntidade('tipo_campo');
+        $criteriaTipoCampo = new TCriteria();
+        $criteriaTipoCampo->add(new TFilter('statseq','=',1));
+        $retTipoCampo = $this->obKDbo->select('tpcadesc,tipodado,seq',$criteriaTipoCampo);
+        while($obTipoCampo = $retTipoCampo->fetchObject())
+        	$listaTipoCampo[$obTipoCampo->seq] = $obTipoCampo;
 
         while($camposId = $RetIdCampos->fetchObject()) {
             $this->obKDbo->setEntidade('campos');
                 $criteriaCampos = new TCriteria();
-                $criteriaCampos->add(new TFilter('id','=',$camposId->campoid),'AND');
-                $criteriaCampos->add(new TFilter('ativo','=','1'),'AND');
+                $criteriaCampos->add(new TFilter('seq','=',$camposId->campseq),'AND');
+                $criteriaCampos->add(new TFilter('statseq','=','1'),'AND');
             $RetCampo = $this->obKDbo->select("*", $criteriaCampos);
             $cmp = $RetCampo->fetchObject();
-
-            //Verifica tabela de destino do bloco
+            
+            $cmp->tipo = $listaTipoCampo[$cmp->tpcaseq]->tpcadesc;
+            
+            //retorna tabela de destino do bloco
             $this->obKDbo->setEntidade('tabelas');
                 $criteriaTabela = new TCriteria();
-                $criteriaTabela->add(new TFilter('id','=',$cmp->entidade));
-                $criteriaTabela->setProperty('order', 'id');
+                $criteriaTabela->add(new TFilter('seq','=',$cmp->tabseq));
+                $criteriaTabela->setProperty('order', 'seq');
             $retTab = $this->obKDbo->select("*", $criteriaTabela);
             $obTabela = $retTab->fetchObject();
 
-            $cmp->label =  $mostraid ? $cmp->label.'-'.$cmp->id : $cmp->label;
+            $cmp->label =  $mostraid ? $cmp->label.'-'.$cmp->seq : $cmp->label;
+            
+            //coloca campo de pesquisa como hiddem
+            if($cmp->ativapesquisa){
+            	$cmp->tipo = 'THidden';
+            	$cmp->tpcaseq = '7';
+            }
 
             //verifica se o campo esta ativado
-            if($cmp->ativafunction and $obTabela->tabela != "" and $cmp->tipo != 'TButton' and !$this->editable) {
+            if($cmp->ativafunction and $obTabela->tabela && $cmp->tipo != 'TButton') {
 
                 //==============================================================
                 //testa a existencia de função na permanecia do campo em DB
                 if($cmp->incontrol) {
                     $inControl = $cmp->incontrol;
                 }
+                
+                //==================================================================
+                //compila valor padrão
+                if($cmp->valorpadrao != "-"){
+
+                    $valorDefalt = $cmp->valorpadrao;
+                    
+                    if(strpos($cmp->valorpadrao, "function/") !== false) {
+                        $getfunc = explode("/", $cmp->valorpadrao);
+                        $obValPadrao = new $getfunc[1]();
+                       $valorDefalt = call_user_func(array($obValPadrao,$getfunc[2]));
+                    }
+
+                    //converte datas para o padrão internacional
+                    $obMascara = new TSetMascaras();
+                    $valorDefalt = $obMascara->setData($valorDefalt);
+                    
+                    $cmp->valorpadrao = $valorDefalt;
+                }else{
+                	$valorDefalt = null;
+                	$cmp->valorpadrao = '';
+                }
+                //==================================================================
 
                 //==============================================================
                 // monta estrutura de campos na sessão
-                if($cmp->colunadb and $cmp->entidade != "0"){
-                    $infoCampos['idForm']      = $this->idForm;
-                    $infoCampos['label']       = $cmp->label;
-                    $infoCampos['entidade']    = $obTabela->tabela;
-                    $infoCampos['codigo']      = $this->codigo;
-                    $infoCampos['incontrol']   = $inControl;
-                    $infoCampos['tipoform']    = $tipoForm;
-                    $infoCampos['obrigatorio'] = $cmp->valornull;
-                    $infoCampos['valor']       = '';
-                    $infoCampos['status']      = 0; //0 = não salvo / 1 = salvo
-                    $camposSession[strtolower($cmp->colunadb)] = $infoCampos;
+                if($cmp->colunadb && $cmp->colunadb != TConstantes::SEQUENCIAL){
+                	
+                	$infoCampos[TConstantes::FIELD_SEQUENCIAL]  =$this->seq;
+                    $infoCampos[TConstantes::FORM]      		=$this->formseq;
+                    $infoCampos[TConstantes::FIELD_COLUMN]     	=$cmp->colunadb;
+                    $infoCampos[TConstantes::FIELD_ID]	     	=$cmp->campo;
+                    $infoCampos[TConstantes::FIELD_TIPO]		=$listaTipoCampo[$cmp->tpcaseq]->tipodado;
+                    $infoCampos[TConstantes::FIELD_LABEL]      	=$cmp->label;
+                    $infoCampos[TConstantes::ENTIDADE]    		=$obTabela->tabela;
+                    $infoCampos[TConstantes::FIELD_INCONTROL]   =$inControl;
+                    $infoCampos[TConstantes::FIELD_NOTNULL] 	=$cmp->required;
+                    $infoCampos[TConstantes::FIELD_VALOR]       =$valorDefalt;
+                    $infoCampos[TConstantes::FIELD_STATUS]      =0; //0 = não salvo / 1 = salvo
+                    
+                    $camposFormulario[strtolower($cmp->colunadb)] 	= $infoCampos;
                 }
 
 
                 //==============================================================
                 // monta lista de campos obrigatorios
-                if($cmp->valornull){               
+                if($cmp->riquired){               
                     if($cmp->label != ""){
                         $cmp->label ='*'.$cmp->label;
                     }
                 }
 
-                $cmp->codigoregistro = $this->codigo;
+                //identifica o tipo do formulário
                 if($tipo == "frm") {
                    $tipoForm = "form";
                 }else {
                    $tipoForm = "lista";
                 }
-                $cmp->funct = "pross(this,'".$this->idForm."','".$this->codigo."')";
-
-                if($cmp->autosave){
-                    $cmp->funct .= "; onSave('".$this->idForm."', false)";
+                //Define se o campo sera gravando no banco de dados
+				if($cmp->colunadb!=TConstantes::SEQUENCIAL){
+					$cmp->manter = true;
                 }
 
                 $agregFunc = NULL;
@@ -135,20 +178,20 @@ class TCompForm {
             //==========================================================
 
             if($cmp->tipo != 'TBloco' ) {
-                $campos[$cmp->campo]           = $cmp;
+                $campos[$cmp->campo]  = $cmp;
                 $campos[$cmp->campo]->entidade = $obTabela->tabela;
-                $campos[$cmp->campo]->props    = $this->getPropriedade($cmp->id);
+                $campos[$cmp->campo]->props    = $this->getPropriedade($cmp->seq);
             }
             else {
                 $blocos[$cmp->campo] =  $cmp;
             }
 
         }//fim do while
-
+        
         //======================================================================
         //Acrescenta a lista de de campos no cabeçalo do formulário
-        if($camposSession){
-            $this->obHeaderForm->addHeader($this->idForm, 'camposSession', $camposSession);
+        if($camposFormulario){
+            $this->obHeaderForm->addHeader($this->formseq, TConstantes::CAMPOS_FORMULARIO, $camposFormulario);
         }
 
         $this->obBloco->campos = $campos;
@@ -161,21 +204,21 @@ class TCompForm {
 
     /**
      * Metodo getPropriedade()
-     * Retorna todas as propriedades do campo representado no [id]
-     * Autor: recebe codigo do objeto pai
+     * Retorna todas as propriedades do campo representado no [seq]
+     * Autor: Wagner Borba
      * param ID = ID do campo gerando no registro kernelsys
      */
-    private function getPropriedade($id) {
+    private function getPropriedade($seq) {
 
         // instancia a instrução de SELECT
         $this->obKDbo->setEntidade('campos_x_propriedades');
             $criteriaCampoProps = new TCriteria();
-            $criteriaCampoProps->add(new TFilter('campoid','=',$id));
-            $criteriaCampoProps->add(new TFilter('ativo','=','1'));
+            $criteriaCampoProps->add(new TFilter('campseq','=',$seq));
+            $criteriaCampoProps->add(new TFilter('statseq','=','1'));
         $Result = $this->obKDbo->select("*", $criteriaCampoProps);
 
         //Zera vetor de objetos propriedades
-        $this->props = array();
+        $this->props = null;
 
         // retorna consulta no banco de propriedades
         while($props = $Result->fetchObject()) {
@@ -249,6 +292,8 @@ class TCompForm {
         }
     }
 
+
+
     /**
      * Metodo setFields()
      * Retorna o bloco do tipo TSetFields() devidamente configurado
@@ -260,33 +305,47 @@ class TCompForm {
         $this->blocoCampos = new TSetfields();
 
         if(count($this->obBloco->campos) > 0){
-            foreach($this->obBloco->campos as $key=>$dadosCampo){
-
-                //valida campos alteraveis
-                if($this->headerForm['status'] == 'edit'){
-                    if($dadosCampo->alteravel == '2'){
-                        $dadosCampo->funct = null;
-                        $dadosCampo->ativapesquisa = null;
-                    }
-                }
+            foreach($this->obBloco->campos as $seq=>$dadosCampo){
 
                 //instancia objetos campos
                 $setCampo = new TSetCampo();
                 $setCampo->setOutControl($dadosCampo->outcontrol);
                 $setCampo->setNome($dadosCampo->colunadb);
+                $setCampo->setId($dadosCampo->campo);
                 $setCampo->setLabel($dadosCampo->label);
-                    // atribui function de gravação do objeto [se abilitado]
-                    //if(empty($dadosCampo->funct)){
-                        $setCampo->setAction('onblur', $dadosCampo->funct);
-                        //$setCampo->setAction('onchange','$(this).blur()');
-                    //}
-                $setCampo->setCampo($key, $dadosCampo->tipo, $dadosCampo->seletorJQ);
+                
+                $tipoCampo = $setCampo->getTipoCampo($dadosCampo->tpcaseq);
+                $setCampo->setTipoDado($tipoCampo->tipodado);
+                
+                $setCampo->setCampo($seq, $tipoCampo->tpcadesc, $dadosCampo->seletorJQ);
                 $setCampo->setPropriedade('alteravel', $dadosCampo->alteravel);
+                $setCampo->setValue($dadosCampo->valorpadrao);
+                
+                 if($dadosCampo->manter == true){
+                	$setCampo->setPropriedade('manter', 'true');
+                }else{
+                	if($dadosCampo->tipo != 'TButton'){
+                		$setCampo->setPropriedade('view', 'true');
+                	}
+                }
+                
+                // atribui atributo para gravação do objeto [se abilitado]
+                 if($this->headerForm[TConstantes::FIELD_STATUS] == 'edit'){
+                 	
+                 	if($dadosCampo->alteravel == '0'){
+                 		
+                 		$dadosCampo->ativapesquisa = null;
+                 		$setCampo->setPropriedade('manter', 'false');
+                 	
+                 	
+		                if($dadosCampo->tipo === 'TRadio' or $dadosCampo->tipo === 'TRadioGroup'){
+		                 	$setCampo->setPropriedade('onClick', 'return false');
+		                }else{
+		                 	$setCampo->setPropriedade('readonly', '');
+		                }  
+                 	}
+                 }
 
-                    // verifica se o campo pode ser editado e atribui a propriedade somente leitura
-                    if($this->editable){
-                       $setCampo->setPropriedade('readonly','true');
-                    }
 
                     //Aplica mascara nos campos
                     if(!empty($dadosCampo->mascara) and $dadosCampo->mascara != "" and $dadosCampo->tipo != 'TButton') {
@@ -294,13 +353,13 @@ class TCompForm {
                         $setCampo->setPropriedade('onkeyup',"livemask(this,".$dadosCampo->mascara.",this)");
                     }
 
-                    //atribui uma propriedade codigo ao botão para ações associadas
+                    //atribui uma propriedade seqao botão para ações associadas
                     if($dadosCampo->tipo == 'TButton') {
-                        $setCampo->setPropriedade('codigo',$this->codigo);
+                        $setCampo->setPropriedade(TConstantes::SEQUENCIAL,$this->seq);
                     }
                     if($dadosCampo->tipo == 'TFrameFile' or $dadosCampo->tipo == 'TVoiceFrameFile' or $dadosCampo->tipo == 'TCsvFrameFile') {
-                        $setCampo->setPropriedade('codigo',$this->codigo);
-                        $setCampo->setPropriedade('form',$this->idForm);
+                        $setCampo->setPropriedade(TConstantes::SEQUENCIAL,$this->seq);
+                        $setCampo->setPropriedade('form',$this->formseq);
                     }
 
                     //atribui PROPRIEDADE DOS CAMPOS
@@ -311,52 +370,20 @@ class TCompForm {
                         }
                     }
 
-               //borbulha mensagem [help] para o metodo responsavel
+                // Injeta campo no conteiner TSetFields
+                $obCampo = $setCampo->getCampo();
+                $this->blocoCampos->addCampo($dadosCampo->label, $obCampo, $dadosCampo->ativapesquisa);
+
+                //borbulha mensagem [help] para o metodo responsavel
                 if($dadosCampo->help) {
-                    $this->blocoCampos->setHelp($key, $dadosCampo->help);
+                    $this->blocoCampos->setHelp($seq, $dadosCampo->help);
                 }
 
                 //configura trigger onload no campo
                 if($dadosCampo->trigger) {
-                    $this->blocoCampos->addTrigger($key, $dadosCampo->trigger);
+                    $this->blocoCampos->addTrigger($seq, $dadosCampo->trigger);
                 }
 
-                //==================================================================
-                //compila valor padrão
-                if($dadosCampo->valorpadrao != "-" && $this->headerForm['status'] == 'new'){
-                	$obHeader = new TSetHeader();
-				 	$headerForm = $obHeader->getHead($this->idForm);
-				 	$listaCamposSession = $headerForm['camposSession'];
-
-                    $vDefalt = $dadosCampo->valorpadrao;
-                    if(strpos($dadosCampo->valorpadrao, "function/") !== false) {
-                        $getfunc = explode("/", $dadosCampo->valorpadrao);
-                        $obValPadrao = new $getfunc[1]();
-                        $vDefalt = call_user_func(array($obValPadrao,$getfunc[2]));
-                    }
-
-                    //armazena valor padrão em base de dados atravez dos paramentos do campo
-                    if(!empty($dadosCampo->entidade)){
-	                    $dboVPad = new TDbo($dadosCampo->entidade);
-	                    $cretiriaVpad = new TCriteria();
-	                    $cretiriaVpad->add(new TFilter($this->headerForm['entidade'] != $dadosCampo->entidade ? $this->headerForm['colunafilho'] : 'codigo' ,'=',$dadosCampo->codigoregistro));
-	                    $dboVPad->update(array($dadosCampo->colunadb=>$vDefalt), $cretiriaVpad);
-                    }
-
-                    //converte datas para o padrão nacional
-                    $obMascara = new TSetMascaras();
-                    $vDefalt = $obMascara->setData($vDefalt);
-                    
-                    //Atualiza o valor do campo na sessão
-                    $listaCamposSession[$dadosCampo->colunadb]['valor'] = $vDefalt;
-                    $listaCamposSession[$dadosCampo->colunadb]['status'] = 1;
-                    $obHeader->addHeader($this->idForm, 'camposSession', $listaCamposSession);
-                    $setCampo->setValue($vDefalt);
-                }
-                //==================================================================
-                // Injeta campo no conteinar TSetFields
-                $obCampo = $setCampo->getCampo();
-                $this->blocoCampos->addCampo($dadosCampo->label, $obCampo, $dadosCampo->ativapesquisa);
             }//foreach principal
         }
 
@@ -368,7 +395,7 @@ class TCompForm {
         }
 
         $panel = new TElement('div');
-        $panel->id = 'contFields'.$this->idBloco;
+        $panel->id = 'contFields'.$this->blocseq;
         $panel->add($this->blocoCampos->getConteiner());
 
         //============================================================================================
@@ -378,10 +405,10 @@ class TCompForm {
             foreach($this->obBloco->blocos as $bl) {
 
                 $panelLista = new TElement('div');
-                $panelLista->id = 'contLista'.$bl->campo;
+                $panelLista->id = TConstantes::CONTEINER_LISTA.$bl->campo;
                 $panelLista->style = 'border:1px solid #999999; padding:4px;';
 
-                $nbloco = new TCompLista($bl->campo, 'contLista'.$bl->campo);
+                $nbloco = new TCompLista($bl->campo, TConstantes::CONTEINER_LISTA.$bl->campo);
                 $lb = $nbloco->get();
 
                 //$listDados = $listObj->getListDados();

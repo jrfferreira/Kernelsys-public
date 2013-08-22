@@ -15,52 +15,21 @@ class TPessoa{
 
     /**
      * Retorna um objeto contendo os dados da pessoa
-     * param <codigo> $codigopessoa = codigo pessoa
+     * param <seq> $seqpessoa = seqpessoa
      * return <objeto> pessoa
      */
-    public function getPessoa($codigopessoa){
+    public function getPessoa($seqpessoa){
          try{
-            if($codigopessoa){
-            	$this->obTDbo->setEntidade(TConstantes::DBPESSOAS);
+            if($seqpessoa){
+            	$this->obTDbo->setEntidade(TConstantes::DBPESSOA);
                     $criteria = new TCriteria();
-                    $criteria->add(new TFilter('codigo','=',$codigopessoa));
+                    $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seqpessoa));
                 $retPessoa = $this->obTDbo->select("*", $criteria);
                 $this->obPessoa = $retPessoa->fetchObject();
-/*
-                $entidades = new TKrs('tabelas');
-                $critEntidades = new TCriteria();
-                $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_TITULARIDADES%'),'OR');
-                $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_FUNCIONARIOS%'),'OR');
-                $critEntidades->add(new TFilter('tabela_view','ilike','%FUNCIONARIOS_PROFESSORES%'),'OR');
-                $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_ALUNOS%'),'OR');
-                $critEntidades->add(new TFilter('tabela_view','ilike','%PESSOAS_FORMACOES%'),'OR');
-                $retEntidades = $entidades->select('tabela_view',$critEntidades);
-
-                while($t = $retEntidades->fetchObject()){
-                    $tabelas = strtoupper($t->tabela_view) . ";";
-                }
-*/
-             
-                if($this->obTDbo->checkEntidade("DBPESSOAS_FORMACOES")){
-                	$this->obPessoa->formacao = $this->getFormacao($codigopessoa);
-                }                
-                if($this->obTDbo->checkEntidade("DBPESSOAS_TITULARIDADES")){
-                	$this->obPessoa->titularidade = $this->getTitularidade($codigopessoa);
-                }
-                if($this->obTDbo->checkEntidade("DBPESSOAS_FUNCIONARIOS")){
-                	$this->obPessoa->funcionario = $this->getFuncionario($codigopessoa);
-                }
-                if($this->obTDbo->checkEntidade("DBPESSOAS_ALUNOS")){
-                	$this->obPessoa->aluno = $this->getAluno($codigopessoa);
-                }
-             	if($this->obTDbo->checkEntidade("DBFUNCIONARIOS_PROFESSORES")){
-                	$this->obPessoa->professor = $this->getProfessor($codigopessoa);
-                }
-
 
                 return $this->obPessoa;
             }else{
-                throw new ErrorException("O codigo da pessoa é invalido.");
+                throw new ErrorException("O seqda pessoa é invalido.");
             }
         }catch (Exception $e){
         	$this->obTDbo->rollback();
@@ -68,19 +37,19 @@ class TPessoa{
         }
     }
 
-     /**
+    /**
     * Retorna um objeto contendo os dados do funcionario
-    * param <codigo> $codigopessoa = codigo pessoa
+    * param <seq> $seqpessoa = seqpessoa
     */
 
-    public function getFuncionario($codigopessoa){
+    public function getFuncionario($seqpessoa){
          try{
-            if($codigopessoa){
+            if($seqpessoa){
 
             	$this->obTDbo->setEntidade(TConstantes::VIEW_PESSOAS_FUNCIONARIOS);
                 $criteriaFunc = new TCriteria();
-                $criteriaFunc->add(new TFilter('codigo','=',$codigopessoa));
-                $retFuncionario = $this->obTDbo->select("codigofuncionario as codigo,codigocargo,nomecargo,codigodepartamento,nomedepartamento,lotacao,nomesala,dataadmissao", $criteriaFunc);
+                $criteriaFunc->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seqpessoa));
+                $retFuncionario = $this->obTDbo->select("funcseq as seq,cargseq,nomecargo,deptseq,nomedepartamento,salaseq,nomesala,dataadmissao", $criteriaFunc);
 
                 if($this->obFuncionario = $retFuncionario->fetchObject()){
                     return $this->obFuncionario;
@@ -89,96 +58,41 @@ class TPessoa{
                 }
 
             }else{
-                throw new ErrorException("O codigo da pessoa é invalido.");
+                throw new ErrorException("O seq da pessoa é invalido.");
             }
         }catch (Exception $e){
         	$this->obTDbo->rollback();
             new setException($e);
         }
     }
-         /**
-    * Retorna um objeto contendo os dados do funcionario
-    * param <codigo> $codigopessoa = codigo pessoa
-    */
 
-    public function getProfessor($codigopessoa){
-         try{
-            if($codigopessoa){
-
-                $funcionario = $this->getFuncionario($codigopessoa);
-            	$obTDbo = new TDbo(TConstantes::VIEW_FUNCIONARIOS_PROFESSORES);
-	                $criteriaProfessor = new TCriteria();
-	                $criteriaProfessor->add(new TFilter('codigofuncionario','=',$funcionario->codigo));
-                $retProfessor = $obTDbo->select("codigo,curriculo,titularidade", $criteriaProfessor);
-                if($this->obProfessor = $retProfessor->fetchObject()){
-                    return $this->obProfessor;
-                }else{
-                    return null;
-                }
-
-            }else{
-                throw new ErrorException("O codigo da pessoa é invalido.");
-            }
-        }catch (Exception $e){
-        	$this->obTDbo->rollback();
-            new setException($e);
-        }
-    }
-/**
-    * Retorna um objeto contendo os dados do funcionario
-    * param <codigo> $codigopessoa = codigo pessoa
-    */
-
-    public function getAluno($codigopessoa){
-         try{
-            if($codigopessoa){
-
-            	$obTDbo = new TDbo(TConstantes::VIEW_PESSOAS_ALUNOS);
-	                $criteriaAluno = new TCriteria();
-	                $criteriaAluno->add(new TFilter('codigopessoa','=',$codigopessoa));
-                $retAluno = $obTDbo->select("codigo", $criteriaAluno);
-                $this->obAluno = $retAluno->fetchObject();
-                if($this->obAluno){
-                    return $this->obAluno;
-                }else{
-                    return null;
-                }
-
-            }else{
-                throw new ErrorException("O codigo da pessoa é invalido.");
-            }
-        }catch (Exception $e){
-        	$this->obTDbo->rollback();
-            new setException($e);
-        }
-    }
     /**
     * Retorna um objeto contendo os dados da pessoa
-    * param <codigo> $codigopessoa = codigo pessoa
+    * param <seq> $seqpessoa = seqpessoa
     * param <colunas> $cols = colunas a serem retornadas ex: ["coluna1, coluna2, coluna3..."]
     * return <objeto> pessoa
     */
-    public function getFormacao($codigopessoa, $cols = NULL){
+    public function getFormacao($seqpessoa, $cols = NULL){
        try{
-            if($codigopessoa){
+            if($seqpessoa){
 
                 if(!$cols){ $cols = "*";}
 
             	$this->obTDbo->setEntidade(TConstantes::VIEW_PESSOAS_FORMACOES);
                     $criteria = new TCriteria();
-                    $criteria->add(new TFilter('codigopessoa','=',$codigopessoa));
+                    $criteria->add(new TFilter('pessseq','=',$seqpessoa));
                 $retFormacao = $this->obTDbo->select($cols, $criteria);
 
                 $this->obPessoaFormacao = null;
                 if($retFormacao){
                     while($this->obPessoaFormacao = $retFormacao->fetchObject()){
-                        $this->vetPessoaFormacao[$this->obPessoaFormacao->codigo] = $this->obPessoaFormacao;
+                        $this->vetPessoaFormacao[$this->obPessoaFormacao->seq] = $this->obPessoaFormacao;
                     }
                 }
                 return $this->vetPessoaFormacao;
 
             }else{
-                throw new ErrorException("O codigo da pessoa é invalido.");
+                throw new ErrorException("O seqda pessoa é invalido.");
             }
        }catch (Exception $e){
         	$this->obTDbo->rollback();
@@ -188,19 +102,19 @@ class TPessoa{
 
     /**
     * Retorna um objeto contendo os dados da pessoa
-    * param <codigo> $codigopessoa = codigo pessoa
+    * param <seq> $seqpessoa = seqpessoa
     * return <objeto> pessoa
     */
-    public function getTitularidade($codigopessoa){
+    public function getTitularidade($seqpessoa){
 
         try{
-            $vetFormacao = $this->getFormacao($codigopessoa, "peso");
+            $vetFormacao = $this->getFormacao($seqpessoa, "peso");
 
             if($vetFormacao){
             foreach($vetFormacao as $obFormacao){
                 $escolaridades[$obFormacao->peso] = $obFormacao->peso;
             }
-                $this->obTDbo->setEntidade(TConstantes::DBPESSOAS_TITULARIDADES);
+                $this->obTDbo->setEntidade(TConstantes::DBPESSOA_TITULARIDADES);
                     $criteria = new TCriteria();
                     $criteria->add(new TFilter('peso','=',max($escolaridades)));
                 $retFormacao = $this->obTDbo->select('nomeacao', $criteria);

@@ -10,33 +10,33 @@
 class TStatus{
 
     /**
-     * Altera o valor do estatus no registro correspondente ao codigo passado
+     * Altera o valor do estatus no registro correspondente ao seqpassado
      * 
-     * param <codigo> $codigo = codigo do registro do qual sera alterado o estatus.
+     * param <seq> $seq= seqdo registro do qual sera alterado o estatus.
      * param <string> $entidade = nome da entidade [tabela] onde est� contido o registro.
      * param <string> $estatus1 = valor do estatus atual do registro.
      * param <string> $estatus2 = novo valor do estatus.
      */
-    public function setStatus($codigo, $entidade, $estatus1, $estatus2){
+    public function setStatus($seq, $entidade, $estatus1, $estatus2){
 
-         //autera estatus de edição para Ativo
-        if($codigo and $entidade){
+         //autera estatus de edição para statseq
+        if($seq && $entidade){
 
             $obTDboStatus = new TDbo();
             $obTDboStatus->setEntidade($entidade);
 
                 $criteriaStatus = new TCriteria();
-                $criteriaStatus->add(new TFilter('codigo','=',$codigo));
-                $criteriaStatus->add(new TFilter('ativo','=',$estatus1));
+                $criteriaStatus->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seq));
+                $criteriaStatus->add(new TFilter('statseq','=',$estatus1));
 
-            $retStatus = $obTDboStatus->select("ativo", $criteriaStatus);
+            $retStatus = $obTDboStatus->select("statseq", $criteriaStatus);
             $obStatus = $retStatus->fetchObject();
-            if($obStatus->ativo == $estatus1){
-                $retUpStatus = $obTDboStatus->update(array("ativo"=>$estatus2), $criteriaStatus);
+            if($obStatus->statseq == $estatus1){
+                $retUpStatus = $obTDboStatus->update(array("statseq"=>$estatus2), $criteriaStatus);
                 if(!$retUpStatus){
                     $obTDboStatus->rollback();
                     $obTDboStatus->close();
-                    new setException("Erro ao atualizar o estatus do resgistro [".$codigo."] da tabela [".$entidade."] - TStatus - Line - 28.");
+                    new setException("Erro ao atualizar o estatus do resgistro [".$seq."] da tabela [".$entidade."] - TStatus - Line - 28.");
                 }
             }
             $obTDboStatus->close();

@@ -42,7 +42,7 @@ class TDataGridAction{
 	
 	/**
      * método getMetodo()
-     * retorna o Metodo a ser executada no TExecs
+     * retorna o Metodo a ser executada no TMain
      */
     public function getMetodo()
     {

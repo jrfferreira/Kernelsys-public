@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <listaBnav>
+    <row seq="1">
+      <argumento>13</argumento>
+      <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Contas a Receber </label>
+      <listseq>144</listseq>
+      <metodo>onNew</metodo>
+      <nome>botContaCredito</nome>
+      <seq>1</seq>
+      <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="2">
+      <argumento>333</argumento>
+      <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Contas a Pagar </label>
+      <listseq>144</listseq>
+      <metodo>onNew</metodo>
+      <nome>botContaDebito</nome>
+      <seq>2</seq>
+      <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="3">
+      <argumento>383</argumento>
+      <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Movimentos Programados </label>
+      <listseq>144</listseq>
+      <metodo>onFormOpen</metodo>
+      <nome>botMovimentoProgramado</nome>
+      <seq>3</seq>
+      <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="4">
+      <argumento>404</argumento>
+      <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Movimentação Interna</label>
+      <listseq>391</listseq>
+      <metodo>onFormOpen</metodo>
+      <nome>botMovInterna</nome>
+      <seq>4</seq>
+      <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+  </listaBnav>
+</kernelsys>

@@ -7,7 +7,7 @@
 //==========================================================
 session_start();
 
-$codigo = $_GET['cod'];
+$seq= $_GET['cod'];
 
 function __autoload($classe) {
 
@@ -18,7 +18,7 @@ $TSetModel = new TSetModel();
 
 $obTDbo = new TDbo(TConstantes::VIEW_CAIXA);
 $criteriaCaixa = new TCriteria();
-$criteriaCaixa->add(new TFilter('codigo', '=', $codigo));
+$criteriaCaixa->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq));
 $retCaixa = $obTDbo->select('*', $criteriaCaixa);
 
 $obMovimentoCaixa = $retCaixa->fetchObject();
@@ -27,23 +27,23 @@ $nomepessoa = $obMovimentoCaixa->nomepessoa;
 $data = $obMovimentoCaixa->datacad;
 $valor = $TSetModel->setValorMonetario($obMovimentoCaixa->valorpago);
 $formapag = $obMovimentoCaixa->formapag;
-$movimentacao = $obMovimentoCaixa->codigo;
+$movimentacao = $obMovimentoCaixa->seq;
 
-$obTDbo = new TDbo(TConstantes::VIEW_TRANSACOES_CONTAS);
+$obTDbo = new TDbo(TConstantes::VIEW_PARCELA);
 $criteriaConta = new TCriteria();
-$criteriaConta->add(new TFilter('codigo', '=', $obMovimentoCaixa->codigoconta));
+$criteriaConta->add(new TFilter('seq', '=', $obMovimentoCaixa->parcseq));
 $retConta = $obTDbo->select('*', $criteriaConta);
 
 $obConta = $retConta->fetchObject();
 
-$obTDbo = new TDbo(TConstantes::VIEW_TRANSACOES_CONTAS);
+$obTDbo = new TDbo(TConstantes::VIEW_PARCELA);
 $criteriaTransacao = new TCriteria();
-$criteriaTransacao->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
+$criteriaTransacao->add(new TFilter('transeq', '=', $obConta->transeq));
 $retTransacao = $obTDbo->select('count(1) as total', $criteriaTransacao);
 
 $obTransacao = $retTransacao->fetchObject();
 
-$obTDbo = new TDbo(TConstantes::VIEW_PESSOAS_ALUNOS);
+$obTDbo = new TDbo(TConstantes::VIEW_ALUNO);
 $criteriaTransacaoAluno = new TCriteria();
 $criteriaTransacaoAluno->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
 $retTransacaoAluno = $obTDbo->select('codigo,nometurma,nomecurso', $criteriaTransacaoAluno);
@@ -62,7 +62,7 @@ $codtransacao = $obConta->codigotransacao;
 
 $obTDbo = new TDbo(TConstantes::VIEW_UNIDADES);
 $criteriaUnidade = new TCriteria();
-$criteriaUnidade->add(new TFilter('codigo', '=', $obMovimentoCaixa->unidade));
+$criteriaUnidade->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obMovimentoCaixa->unidade));
 $retUnidade = $obTDbo->select('*', $criteriaUnidade);
 $obUnidade = $retUnidade->fetchObject();
 
@@ -88,7 +88,7 @@ $rodape = "<i>{$obUnidade->cidade},{$obUnidade->estado}: {$dia} de {$mes} de {$a
 
 $logomarca = '<IMG SRC="../'.TOccupant::getPath().'app.config/logo.jpg" style="width: 100px;">';
 
-$assinatura_digital = $TSetModel->setCertificacaoDigitial($obMovimentoCaixa->codigo);
+$assinatura_digital = $TSetModel->setCertificacaoDigitial($obMovimentoCaixa->seq);
 $assinatura = "Ass.: __________________________";
 
 $titulo = "Comprovante de Pagamento";

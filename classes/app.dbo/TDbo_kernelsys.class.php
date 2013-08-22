@@ -10,9 +10,8 @@ class TDbo_kernelsys {
     private $entity = NULL;
     private $conn   = NULL;
     private $autoClose = true;
-    private $iniFile = 'krs';
 
-    public function __construct($entity = NULL, $val = NULL, $iniFile = NULL) {
+    public function __construct($entity = NULL, $val = NULL) {
 
         if($entity and $entity != "") {
             $this->setEntidade($entity);
@@ -22,7 +21,7 @@ class TDbo_kernelsys {
 
         try {
 
-            TTransaction::open('../'.TOccupant::getPath().'app.config/'.$this->iniFile);
+            TTransaction::open('../'.TOccupant::getPath().'app.config/krs');
             $this->conn = TTransaction::get();
 
         }catch(Exception $e) {
@@ -30,6 +29,10 @@ class TDbo_kernelsys {
         }
     }
 
+    public function commit() {
+        $this->conn->commit();
+    	return true;
+    }
     /**
      *
      */
@@ -102,7 +105,7 @@ class TDbo_kernelsys {
                 if($criteria) {
                     // define o critério de seleção de dados
                     $sql->setCriteria($criteria);
-                    //$criteria->add(new TFilter('id', '=', $id));
+                    //$criteria->add(new TFilter('seq', '=', $seq));
                 }
 
                 // inicia transação
@@ -111,8 +114,9 @@ class TDbo_kernelsys {
                     // grava log de select (data - hora | autor | ação)
                     //TTransaction::log($sql->getInstruction());
 
+//echo  $sql->getInstruction();               	
+
                     //executa sql
-                    //print_r($sql->getInstruction());
                     $result= $this->conn->Query($sql->getInstruction());
 
                     // se retornou algum dado
@@ -156,16 +160,16 @@ class TDbo_kernelsys {
         try {
             if($dados != NULL and $dados != "" and is_array($dados)) {
                 // incrementa o ID
-                //$this->id = $this->getLast() +1;
+                //$this->seq = $this->getLast() +1;
 
                 // cria uma instrução de insert
                 $sql = new TSqlInsert;
                 $sql->setEntity($this->entity);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
+                foreach ($dados as $seq => $value) {
                     // passa os dados do objeto para o SQL
-                    $sql->setRowData($key, $value);
+                    $sql->setRowData($seq, $value, true);
                 }
 
                 // inicia transação
@@ -174,10 +178,10 @@ class TDbo_kernelsys {
                     // grava log de insert (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
 
-                    //executa sql
-                    $result = $this->conn->Query($sql->getInstruction());
-
-                            $idRegAtual = $this->conn->lastInsertId($this->entity.'_id_seq');
+                    $result = $this->conn->Query($sql->getInstruction(). " RETURNING ".TConstantes::SEQUENCIAL);
+                    
+                    if($result)
+                    	$idRegAtual = $result->fetchObject()->seq;
 
                     if(!$result) {
                         throw new ErrorException("Ouve um problema ao inserir os dados");
@@ -188,7 +192,7 @@ class TDbo_kernelsys {
                         TTransaction::close();
                     }
 
-                    $retorno['id']     = $idRegAtual;
+                    $retorno[TConstantes::SEQUENCIAL]     = $idRegAtual;
 
                     return $retorno;
 
@@ -230,9 +234,9 @@ class TDbo_kernelsys {
                 $sql->setCriteria($criteria);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
+                foreach ($dados as $seq => $value) {
                     // passa os dados do objeto para o SQL
-                    $sql->setRowData($key, $value);
+                    $sql->setRowData($seq, $value);
                 }
 
                 // inicia transação
@@ -270,19 +274,26 @@ class TDbo_kernelsys {
             new setException($e);
         }
     }
+    public function sqlExec($sql){
+        if($sql){
+
+            $result = $this->conn->Query($sql);
+            return $result;
+        }
+    }
 
     /**
      * Monta e executa uma sql delete e retona o resultado da execução
      * Data: 28/04/2009
      * author Wagner Borba
-     * param Parametro = Codigo do registro que sera deletado da entidade(table)
-     *  param # coluna = Coluna na qual o criterio sera aplicado para a exclus�o
-     *                    caso não haja o pad�o � [codigo]
+     * param Parametro = seq do registro que sera deletado da entidade(table)
+     *  param # coluna = Coluna na qual o criterio sera aplicado para a exclusão
+     *                    caso não haja o pad�o � [seq]
      */
     public function delete($param, $col = NULL) {
 
-        // o ID � o parâmetro ou a propriedade ID
-        //$id = $id ? $id : $this->id;
+        // o ID é o parâmetro ou a propriedade ID
+        //$seq = $seq ? $seq : $this->seq;
         try {
             if($param != NULL and $param != "") {
 
@@ -292,7 +303,7 @@ class TDbo_kernelsys {
 
                 // define coluna padr�o para o objeto criteria
                 if(!$col) {
-                    $col = 'id';
+                    $col = 'seq';
                 }
 
                 // cria critério de seleção de dados

@@ -12,10 +12,10 @@ function __autoload($classe) {
 
 class TMenu {
 
-    public function __construct($id) {
+    public function __construct($seq) {
 
         // Retorna privilegios do usuario
-        $inPriv = new TGetPrivilegio($id, "1");
+        $inPriv = new TGetPrivilegio($seq, "1");
         $obPriv = $inPriv->get();
 
         // Monta botões dos menu secundário \\
@@ -35,24 +35,24 @@ class TMenu {
         $criteriaModulosPriv = new TCriteria();
 
         //===== monta criterios de acesso do uruario ======\\
-        if(is_array($obPriv)) {
+        if(is_array($obPriv) && count($obPriv)>0) {
             foreach($obPriv as $mp) {
-                $filtro = new TFilter('id','=',$mp);
+                $filtro = new TFilter('seq','=',$mp);
                 $criteriaModulosPriv->add($filtro,'OR');
             }
-            $filtro = new TFilter('ativo','=','1','2');
+            $filtro = new TFilter('statseq','=','1','numeric', '2');
             $criteriaModulosPriv->add($filtro);
         }
         else {
-            exit('Usuario sem privilégios.');
+            exit(TMensagem::ERRO_PRIVILEGIO);
         }
-            $filtro = new TFilter('moduloprincipal','=',$id,'2');
+            $filtro = new TFilter('modseq','=',$seq,'numeric','2');
             $criteriaModulosPriv->add($filtro,'AND');
             $criteriaModulosPriv->setProperty('order', 'ordem');
         //=================================================\\
 
         // Percorre menus===========================================================
-        $this->obKDbo->setEntidade("menu_modulos");
+        $this->obKDbo->setEntidade("menu");
         $execSql = $this->obKDbo->select("*", $criteriaModulosPriv);
 
         $this->obKDbo->close();
@@ -70,8 +70,8 @@ class TMenu {
             else {
 
                 //prepara path do botão
-                $path  = "TExecs.class.php?method=".$retMenus->metodo;
-                $path .= "&idForm=".$retMenus->argumento;
+                $path  = "TMain.class.php?method=".$retMenus->metodo;
+                $path .= "&formseq=".$retMenus->argumento;
                 $path .= '&nivel=1';
 
                 $bot = new TElement('div');
@@ -127,4 +127,4 @@ class TMenu {
 
 }
 
-$obMenu = new TMenu($_GET['id']);
+$obMenu = new TMenu($_GET['seq']);

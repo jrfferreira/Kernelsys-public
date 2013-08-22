@@ -5,6 +5,7 @@ function __autoload($classe) {
 	$autoload = new autoload('../',$classe);
 }
 include_once('TKrs.class.php');
+
 class TSqlCompiler extends TKrs {
 	
 	private $tableNames = array();
@@ -13,20 +14,21 @@ class TSqlCompiler extends TKrs {
 	private $xmlDomain;
 	private $xmlRoot;
 	private $xmlTableEstructureTemplate = array();
+	protected $package;
 	
 	public function __construct(){
+		$this->obSession = new TSession();
 		$this->xmlDomain = new DomDocument("1.0", "UTF-8");
 		$this->xmlDomain->preserveWhiteSpace = false;
 		$this->xmlDomain->formatOutput = true;
-				
 		$this->dbo = new TDbo_kernelsys();
-		var_dump($this->dbo);
-		
+		$this->package = $this->obSession->getValue('package');
 	}
 	
 	public function main(){
 		if($this->selectTables()){
-			echo "compiled...";
+			echo "<bR>Dados compilados com sucesso!<br>Local: ";
+			echo $this->xmlFolder.'/'.$this->package.'/';
 		}
 	}
 	
@@ -34,6 +36,7 @@ class TSqlCompiler extends TKrs {
 		$criteria = new TCriteria();
 		$criteria->add(new TFilter('table_schema','=','public'));
 		$criteria->add(new TFilter('table_type','=','BASE TABLE'));
+		$criteria->add(new TFilter('table_name','not in',"('dbunidade','dbunidade_parametro','dbpessoa','dbusuario','dbusuario_privilegio')"));
 		$this->dbo->setEntidade('information_schema.tables');
 		$tableList = $this->dbo->select('table_name',$criteria);
 
@@ -41,55 +44,71 @@ class TSqlCompiler extends TKrs {
 		$this->tableNames = $tables;
 		
 		foreach($tables as $tableName){
-			$this->createTablesEstructure($tableName);
+			$return = $this->createTablesEstructure($tableName);
+			
+			if($return){
+				echo $tableName.' - compilado '.time().' <br><br>';
+			}
+			
 		}
 		
 		return true;
-		
 	}
 	
 	private function createTablesEstructure($table){
-		$xmlDomain = clone $this->xmlDomain;
-		$xmlRoot =  $xmlDomain->createElement('kernelsys');
-		
-		$this->xmlTableEstructureTemplate[$table] = $xmlDomain->createElement($this->formatName($table));			
+		try{
+			$xmlDomain = clone $this->xmlDomain;
+			$xmlRoot =  $xmlDomain->createElement('kernelsys');
 			
-		$criteria = new TCriteria();
-		$criteria->add(new TFilter('typname','=',$table));
-		$criteria->add(new TFilter('attrelid','=','(typrelid)'));
-		$criteria->add(new TFilter('attname','not in',"('cmin', 'cmax', 'ctid', 'oid', 'tableoid', 'xmin', 'xmax')"));
-		$this->dbo->setEntidade('pg_attribute, pg_type');
-		$estructureList = $this->dbo->select('attname',$criteria);
-
-		$estructure = $estructureList->fetchAll(PDO::FETCH_COLUMN, 0);
-		
-		$this->tableEstructures[$table] = $estructure;
-		
-		$this->dbo->setEntidade($table);
-		$rowList = $this->dbo->select('*');
-		$rows = $rowList->fetchAll();
-		
-		$n = 0;
-		foreach($rows as $row){
-			$tempRow = $xmlDomain->createElement('row');
-			foreach($estructure as $rowName){
-				$tempRow->appendChild($xmlDomain->createElement($this->formatName($rowName),$row[$rowName]));
+			$this->xmlTableEstructureTemplate[$table] = $xmlDomain->createElement($this->formatName($table));			
 				
-				if($rowName == 'id'){
-					$tempRow->setAttribute('id', $row[$rowName]);
+			$criteria = new TCriteria();
+			$criteria->add(new TFilter('typname','=',$table));
+			$criteria->add(new TFilter('attrelid','=','(typrelid)'));
+			$criteria->add(new TFilter('attname','not in',"('cmin', 'cmax', 'ctid', 'oid', 'tableoid', 'xmin', 'xmax')"));
+			$this->dbo->setEntidade('pg_attribute, pg_type');
+			$estructureList = $this->dbo->select('attname',$criteria);
+	
+			$estructure = $estructureList->fetchAll(PDO::FETCH_COLUMN, 0);
+			
+			$this->tableEstructures[$table] = $estructure;
+			
+			$this->dbo->setEntidade($table);
+			$rowList = $this->dbo->select('*');
+			$rows = $rowList->fetchAll();
+			
+			$n = 0;
+			foreach($rows as $row){
+				$tempRow = $xmlDomain->createElement('row');
+				foreach($estructure as $rowName){
+					$tempRow->appendChild($xmlDomain->createElement($this->formatName($rowName),$row[$rowName]));
+					
+					if($rowName == 'seq'){
+						$tempRow->setAttribute('seq', $row[$rowName]);
+					}
 				}
+				$this->xmlTableEstructureTemplate[$table]->appendChild($tempRow);
 			}
-			$this->xmlTableEstructureTemplate[$table]->appendChild($tempRow);
-		}
-		
-		$xmlRoot->appendChild($this->xmlTableEstructureTemplate[$table]);
-		
-		$xmlDomain->appendChild($xmlRoot);
-		
-		$xml = $xmlDomain->save($this->xmlFolder.'/'.$this->formatName($table).'.'.$this->xmlFile);
+			
+			$xmlRoot->appendChild($this->xmlTableEstructureTemplate[$table]);
+			
+			$xmlDomain->appendChild($xmlRoot);
+			
+			$xml = $xmlDomain->save($this->xmlFolder.'/'.$this->package.'/'.$this->formatName($table).'.'.$this->xmlFile);
+			
+			//echo $xml;
+			
+		}catch (Exception $e) {
+            new setException($e);
+        }
+        return true;
 	}
 }
 
 
 $TSqlCompiler = new TSqlCompiler();
 $TSqlCompiler->main();
+
+if($_GET['reload']){
+	echo '<script>setTimeout(function(){window.location.reload()},12000);</script>';
+}

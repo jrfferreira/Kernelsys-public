@@ -73,7 +73,7 @@ class TVoice {
     public function exeCall($mensagem,$dest = 'all') {
         $this->obTDbo->setEntidade('dbvoice_mensagem');
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('codigo','=',$mensagem));
+        $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$mensagem));
         $select = $this->obTDbo->select('*',$criteria);
 
         $obMsg = $select->fetchObject();
@@ -86,7 +86,7 @@ class TVoice {
             $ret_dataDir = $this->getAudioDir($_dataDir);
             if($ret_dataDir) {
                 $critUpdate = new TCriteria();
-                $critUpdate->add(new TFilter('codigo','=',$audio));
+                $critUpdate->add(new TFilter(TConstantes::SEQUENCIAL,'=',$audio));
                 $update = $this->obTDbo->update($ret_dataDir, $critUpdate);
                 $this->obTDbo->commit();
             }
@@ -106,7 +106,7 @@ class TVoice {
         if($dest == 'all') {
             $this->obTDbo->setEntidade('dbvoice_ligacao');
             $criteria = new TCriteria();
-            $criteria->add(new TFilter('codigomensagem','=',$mensagem),'AND');
+            $criteria->add(new TFilter('seqmensagem','=',$mensagem),'AND');
             $criteria->add(new TFilter('call_cd_status', 'IS DISTINCT FROM', 'OK'),'AND');
             $select = $this->obTDbo->select('id,call_dest',$criteria);
             while($ret = $select->fetchObject()) {
@@ -175,7 +175,7 @@ class TVoice {
     public function sendAudio($audio,$ttswrt = 0) {
         $this->obTDbo->setEntidade('dbvoice_audio');
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('codigo','=',$audio));
+        $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$audio));
         $select = $this->obTDbo->select('*',$criteria);
 
         $obMsg = $select->fetchObject();
@@ -184,7 +184,7 @@ class TVoice {
 
         if($ret) {
             $critUpdate = new TCriteria();
-            $critUpdate->add(new TFilter('codigo','=',$audio));
+            $critUpdate->add(new TFilter(TConstantes::SEQUENCIAL,'=',$audio));
             $update = $this->obTDbo->update($ret, $criteria);
             $this->obTDbo->commit();
         }
@@ -206,7 +206,7 @@ class TVoice {
 
         $this->obTDbo->setEntidade('dbvoice_audio');
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('codigo','=',$mensagem));
+        $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$mensagem));
         $select = $this->obTDbo->select('*',$criteria);
 
         $obMsg = $select->fetchObject();
@@ -217,7 +217,7 @@ class TVoice {
 
             $button = new TElement('input');
             $button->type = "button";
-            $button->onclick = "$('#respostaAudio').html('Gerando audio... Aguarde...');sendAudio('codigo','0');";
+            $button->onclick = "$('#respostaAudio').html('Gerando audio... Aguarde...');sendAudio(TConstantes::SEQUENCIAL,'0');";
             $button->name = "testaAudio";
             $button->id = "testaAudio";
             $button->class = "ui-corner-all ui-widget ui-state-default";
@@ -228,7 +228,7 @@ class TVoice {
 
             $button1 = new TElement('input');
             $button1->type = "button";
-            $button1->onclick = "$('#respostaAudio').html('Gerando audio... Aguarde...');sendAudio('codigo','1');";
+            $button1->onclick = "$('#respostaAudio').html('Gerando audio... Aguarde...');sendAudio(TConstantes::SEQUENCIAL,'1');";
             $button1->name = "gravarAudio";
             $button1->id = "gravarAudio";
             $button1->class = "ui-corner-all ui-widget ui-state-default";
@@ -264,7 +264,7 @@ class TVoice {
 
         $this->obTDbo->setEntidade('dbvoice_audio');
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('codigo','=',$mensagem));
+        $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$mensagem));
         //      $select = $this->obTDbo->select('*',$crit);
 
         //      $obMsg = $select->fetchObject();
@@ -274,7 +274,7 @@ class TVoice {
         /*
         $button = new TElement('input');
         $button->type = "button";
-        $button->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest('codigo','telefoneTeste');";
+        $button->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest(TConstantes::SEQUENCIAL,'telefoneTeste');";
         $button->name = "enviarMensagem";
         $button->id = "enviarMensagem";
         $button->class = "ui-corner-all ui-widget ui-state-default";
@@ -283,7 +283,7 @@ class TVoice {
         */
         $button1 = new TElement('input');
         $button1->type = "button";
-        $button1->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest('codigo','telefoneTeste');";
+        $button1->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest(TConstantes::SEQUENCIAL,'telefoneTeste');";
         $button1->name = "enviarTeste";
         $button1->id = "enviarTeste";
         $button1->class = "ui-corner-all ui-widget ui-state-default";
@@ -324,7 +324,7 @@ class TVoice {
         /*
         $button = new TElement('input');
         $button->type = "button";
-        $button->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest('codigo','telefoneTeste');";
+        $button->onclick = "$('#respostaAudio').html('Enviando... Aguarde...');sendTest(TConstantes::SEQUENCIAL,'telefoneTeste');";
         $button->name = "enviarMensagem";
         $button->id = "enviarMensagem";
         $button->class = "ui-corner-all ui-widget ui-state-default";
@@ -333,7 +333,7 @@ class TVoice {
         */
         $button1 = new TElement('input');
         $button1->type = "button";
-        $button1->onclick = "$('#respostaAudioAll').html('Enviando... Aguarde...');sendTest('codigo','all');";
+        $button1->onclick = "$('#respostaAudioAll').html('Enviando... Aguarde...');sendTest(TConstantes::SEQUENCIAL,'all');";
         $button1->name = "enviarTeste";
         $button1->id = "enviarTeste";
         $button1->class = "ui-corner-all ui-widget ui-state-default";
@@ -360,18 +360,18 @@ class TVoice {
 
     }
 
-    public function getAudioID($codigo) {
+    public function getAudioID($seq) {
         $dbo = new TDbo('dbvoice_audio');
         $crit = new TCriteria();
-        $crit->add(new TFilter('codigo','=',$codigo));
+        $crit->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seq));
         $ret = $dbo->select('cdw_file',$crit);
         $ob = $ret->fetchObject();
         return $ob->cdw_file;
     }
 
-    public function addDest($codigoMensagem,$telefone) {
+    public function addDest($seqMensagem,$telefone) {
         $dbo = new TDbo('dbvoice_ligacao');
-        $data = array('codigomensagem'=>$codigoMensagem,'ativo'=>'1');
+        $data = array('seqmensagem'=>$seqMensagem,'statseq'=>'1');
         $count = 0;
         if(is_array($telefone)) {
             foreach($telefone as $vl) {
@@ -393,8 +393,8 @@ class TVoice {
 
     }
 
-    public function addAllDest($codigoMensagem,$telefones) {
-        $data = array('codigomensagem'=>$codigoMensagem,'ativo'=>'1');
+    public function addAllDest($seqMensagem,$telefones) {
+        $data = array('seqmensagem'=>$seqMensagem,'statseq'=>'1');
         $count = 0;
 
         $telefones = substr($telefones, 1, -1);
@@ -425,13 +425,13 @@ class TVoice {
                 $TCrit->add($filtro,'AND');
 
 
-            $lista = $TCrit ? $dbo_find->select("codigo,$coluna", $TCrit) : $dbo_find->select("codigo,$coluna");
+            $lista = $TCrit ? $dbo_find->select("seq,$coluna", $TCrit) : $dbo_find->select("seq,$coluna");
 
 
             $dbo = new TDbo();
             $dbo->setEntidade('dbvoice_ligacao');
             while($telefone = $lista->fetchObject()){
-                $data['codigopessoa'] = $telefone->codigo;
+                $data['seqpessoa'] = $telefone->seq;
                 $data['call_dest'] = $telefone->$coluna;
                 $ret = $dbo->insert($data);
 
@@ -443,9 +443,9 @@ class TVoice {
         return $count;
     }
 
-    public function appendAddAll($idLista) {
+    public function appendAddAll($listseq) {
         $div = new TElement('div');
-        $div->add($idLista);
+        $div->add($listseq);
 
         return $div;
     }
@@ -471,7 +471,7 @@ class TVoice {
         $button->type="button";
         $button->value="Adicionar";
         $button->class="ui-state-default ui-corner-all";
-        $button->onclick = 'addSingleDest(\''.$cabecalho['codigoPai'].'\')';
+        $button->onclick = 'addSingleDest(\''.$cabecalho['seqPai'].'\')';
 
         $div->add($input);
         $div->add($button);
@@ -483,7 +483,7 @@ class TVoice {
         return $div;
     }
 
-    public function appendAddListaPessoas($codigopai) {
+    public function appendAddListaPessoas($seqpai) {
 
         $div = new TElement('div');
         $header = new TSetHeader();
@@ -604,7 +604,7 @@ class TVoice {
         $button->type="button";
         $button->value="Adicionar";
         $button->class="ui-state-default ui-corner-all";
-        $button->onclick = 'addAllDest(\''.$cabecalho['codigoPai'].'\')';
+        $button->onclick = 'addAllDest(\''.$cabecalho['seqPai'].'\')';
 
         $div = new TElement('div');
         $div->id = "allDestForm";
@@ -659,21 +659,21 @@ class TVoice {
 
         $dbo = new TDbo('view_voice_mensagem');
         $crit = new TCriteria();
-        $crit->add(new TFilter('ativo','=','1'));
+        $crit->add(new TFilter('statseq','=','1'));
         $crit->setProperty('limit', '5');
         $crit->setProperty('order by', 'datacad desc');
         $retOb = $dbo->select('*',$crit);
 
         while($ob = $retOb->fetchObject()){
-            $ret->mensagem[$ob->codigo]['label'] = $ob->label;
-            $ret->mensagem[$ob->codigo]['envios'] = $ob->count_envios;
-            $ret->mensagem[$ob->codigo]['atendimentos'] = $ob->count_atendimentos;
-            $ret->mensagem[$ob->codigo]['aproveitamento'] = number_format((round((100 * $ob->count_atendimentos / $ob->count_envios) * 100) / 100),2,',','') . '%';
-            $ret->mensagem[$ob->codigo]['media'] = $ob->avg_time;
-            $ret->mensagem[$ob->codigo]['fixos'] = $ob->count_destfixo;
-            $ret->mensagem[$ob->codigo]['celulares'] = $ob->count_destcel;
-            $ret->mensagem[$ob->codigo]['fixos_porcentagem'] = number_format((round(((100 *  $ob->count_destfixo)/($ob->count_destfixo + $ob->count_destcel)) * 100) / 100),2,',','') . '%';;
-            $ret->mensagem[$ob->codigo]['celulares_porcentagem'] = number_format((round(((100 *  $ob->count_destcel)/($ob->count_destfixo + $ob->count_destcel)) * 100) / 100),2,',','') . '%';
+            $ret->mensagem[$ob->seq][TConstantes::FIELD_LABEL] = $ob->label;
+            $ret->mensagem[$ob->seq]['envios'] = $ob->count_envios;
+            $ret->mensagem[$ob->seq]['atendimentos'] = $ob->count_atendimentos;
+            $ret->mensagem[$ob->seq]['aproveitamento'] = number_format((round((100 * $ob->count_atendimentos / $ob->count_envios) * 100) / 100),2,',','') . '%';
+            $ret->mensagem[$ob->seq]['media'] = $ob->avg_time;
+            $ret->mensagem[$ob->seq]['fixos'] = $ob->count_destfixo;
+            $ret->mensagem[$ob->seq]['celulares'] = $ob->count_destcel;
+            $ret->mensagem[$ob->seq]['fixos_porcentagem'] = number_format((round(((100 *  $ob->count_destfixo)/($ob->count_destfixo + $ob->count_destcel)) * 100) / 100),2,',','') . '%';;
+            $ret->mensagem[$ob->seq]['celulares_porcentagem'] = number_format((round(((100 *  $ob->count_destcel)/($ob->count_destfixo + $ob->count_destcel)) * 100) / 100),2,',','') . '%';
 
 
 
@@ -708,7 +708,7 @@ class TVoice {
             $spanMsg->add('<table border=0 width="100%" rowspacin=5 >');
         foreach($infos->mensagem as $msg){
 
-            $spanMsg->add('<tr><td style="font-size: 20px; text-align: left; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px;"><span style="font-size: 10px; font-weight: normal;">Mensagem</span><br/>'.$msg['label'].'<td/><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Envios/Atend.</span><br/>'.$msg['envios'].'/'.$msg['atendimentos'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Aproveitamento</span><br/>'.$msg['aproveitamento'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Celulares</span><br/>'.$msg['celulares'].' ('.$msg['celulares_porcentagem'].')</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Fixos</span><br/>'.$msg['fixos'].' ('.$msg['fixos_porcentagem'].')</td></tr><tr><td colspan="5" style="font-size: 11px; height: 10px"> </td></tr>');
+            $spanMsg->add('<tr><td style="font-size: 20px; text-align: left; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px;"><span style="font-size: 10px; font-weight: normal;">Mensagem</span><br/>'.$msg[TConstantes::FIELD_LABEL].'<td/><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Envios/Atend.</span><br/>'.$msg['envios'].'/'.$msg['atendimentos'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Aproveitamento</span><br/>'.$msg['aproveitamento'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Celulares</span><br/>'.$msg['celulares'].' ('.$msg['celulares_porcentagem'].')</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Fixos</span><br/>'.$msg['fixos'].' ('.$msg['fixos_porcentagem'].')</td></tr><tr><td colspan="5" style="font-size: 11px; height: 10px"> </td></tr>');
 
         }
         $spanMsg->add('</table>');

@@ -12,26 +12,26 @@ class TUsuario {
 
 	public function __construct() {
 		$check = new TCheckLogin();
-		$this->user = $check->getUser();
+		$this->usuario = $check->getUser();
 	}
 
-	public function getUser($codigo = null) {
+	public function getUser($seq= null) {
 		try {
-			if ($codigo && $codigo != '') {
+			if ($seq&& $seq!= '') {
 
-				$TDbo_user = new TDbo(TConstantes :: DBUSUARIOS);
+				$TDbo_user = new TDbo(TConstantes :: DBUSUARIO);
 				$crit_user = new TCriteria();
-				$crit_user->add(new TFilter('codigo', '=', $codigo));
+				$crit_user->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq));
 				$retUser = $TDbo_user->select("*", $crit_user);
 				$obUser = $retUser->fetchObject();
 
-				if ($obUser->id) {
+				if ($obUser->seq) {
 					return $obUser;
 				} else {
-					throw new ErrorException("Usuário $codigo inexistente.");
+					throw new ErrorException("Usuário inexistente.");
 				}
 			} else {
-				return $this->user;
+				return $this->usuario;
 			}
 		} catch (Exception $e) {
 			$TDbo_user->rollback();
@@ -43,78 +43,102 @@ class TUsuario {
 	 *
 	 * return <type>
 	 */
-	public function getCodigoUsuario() {
-		$usuario = $this->user;
-		$codigo = $usuario->codigouser;
-		return $codigo;
+	public function getSeqUsuario() {
+		$usuario = $this->usuario;
+		$seq= $usuario->usuaseq;
+		return $seq;
 	}
 
 	/**
 	 *
 	 * return <type>
 	 */
-	public function getCodigoPessoa() {
-		$usuario = $this->user;
-		$codigo = $usuario->codigopessoa;
-		return $codigo;
+	public function getSeqPessoa() {
+		$usuario = $this->usuario;
+		$seq= $usuario->pessseq;
+		return $seq;
 	}
 
 	/**
 	 *
 	 * return <type>
 	 */
-	public function getCodigoFuncionario() {
+	public function getSeqFuncionario() {
 
-		$usuario = $this->user;
-		$codigo = $usuario->codigofuncionario;
-		return $codigo;
+		$usuario = $this->usuario;
+		if($usuario && !$usuario->funcseq){
+			$dbo = new TDbo(TConstantes::DBFUNCIONARIO);
+			$criteria = new TCriteria();
+			$criteria->add(new TFilter('pessseq', '=', $usuario->pessseq, 'numeric'));
+			$ret = $dbo->select('seq',$criteria);
+			$obRet = $ret->fetchObject();
+			$this->usuario->funcseq = $obRet->seq;
+		}
+		$seq= $usuario->funcseq;
+		return $seq;
 	}
 
 	/**
 	 *
 	 * return <type>
 	 */
-	public function getCodigoProfessor() {
+	public function getSeqProfessor() {
 
-		$usuario = $this->user;
-		$codigo = $usuario->codigoprofessor;
-		return $codigo;
+		$usuario = $this->usuario;
+		if($usuario && !$usuario->profseq){
+			$dbo = new TDbo(TConstantes::DBPROFESSOR);
+			$criteria = new TCriteria();
+			$criteria->add(new TFilter('pessseq', '=', $usuario->pessseq, 'numeric'));
+			$ret = $dbo->select('seq',$criteria);
+			$obRet = $ret->fetchObject();
+			$this->usuario->profseq = $obRet->seq;
+		}
+		$seq = $usuario->profseq;
+		return $seq;
 	}
 
 	/**
 	 *
 	 * return <type>
 	 */
-	public function getCodigoAluno() {
+	public function getSeqAluno() {
 
-		$usuario = $this->user;
-		$codigo = $usuario->codigoaluno;
-		return $codigo;
+		$usuario = $this->usuario;
+		if($usuario && !$usuario->alunseq){
+			$dbo = new TDbo(TConstantes::DBALUNO);
+			$criteria = new TCriteria();
+			$criteria->add(new TFilter('pessseq', '=', $usuario->pessseq, 'numeric'));
+			$ret = $dbo->select('seq',$criteria);
+			$obRet = $ret->fetchObject();
+			$this->usuario->alunseq = $obRet->seq;
+		}
+		$seq= $usuario->alunseq;
+		return $seq;
 	}
 
 	/**
 	 *
-	 * param <type> $codigopessoa
+	 * param <type> $pessseq
 	 * param <type> $login
 	 * param <type> $senha
-	 * param <type> $codigotema
+	 * param <type> $temaseq
 	 * return <type>
 	 */
-	public function setUsuario($codigopessoa, $login, $senha, $codigotema = null) {
+	public function setUsuario($pessseq, $login, $senha, $temaseq = null) {
 		try {
-			if ($codigotema == null) {
-				$codigotema = 17;
+			if ($temaseq == null) {
+				$temaseq = 17;
 			}
-			if ($codigopessoa) {
+			if ($pessseq) {
 
-				$TDbo = new TDbo(TConstantes :: DBUSUARIOS);
+				$TDbo = new TDbo(TConstantes :: DBUSUARIO);
 				$TPessoa = new TPessoa();
-				$obPessoa = $TPessoa->getPessoa($codigopessoa);
-				if ($obPessoa->codigo) {
+				$obPessoa = $TPessoa->getPessoa($pessseq);
+				if ($obPessoa->seq) {
 
 					$crit = new TCriteria();
-					$crit->add(new TFilter('codigopessoa', '=', $codigopessoa));
-					$TDbo = new TDbo(TConstantes :: DBUSUARIOS);
+					$crit->add(new TFilter('pessseq', '=', $pessseq));
+					$TDbo = new TDbo(TConstantes :: DBUSUARIO);
 					$retUser = $TDbo->select("usuario", $crit);
 					$obUser = $retUser->fetchObject();
 
@@ -125,7 +149,7 @@ class TUsuario {
 						$login = trim($login);
 						$critUserName = new TCriteria();
 						$critUserName->add(new TFilter('usuario', '=', $login));
-						$TDbo = new TDbo(TConstantes :: DBUSUARIOS);
+						$TDbo = new TDbo(TConstantes :: DBUSUARIO);
 						$retUserUserName = $TDbo->select("usuario", $critUserName);
 						$obCheckUserName = $retUserUserName->fetchObject();
 
@@ -144,24 +168,24 @@ class TUsuario {
 						$setControl = new TSetControl();
 						$senha = $setControl->setPass($senha);
 
-						$dt['codigopessoa'] = $codigopessoa;
+						$dt['pessseq'] = $pessseq;
 						$dt['classeuser'] = 'a';
 						$dt['usuario'] = $login;
 						$dt['senha'] = $senha;
-						$dt['entidadepai'] = '1';
-						$dt['ativo'] = '1';
-						$dt['codigotema'] = $codigotema;
+						$dt['tabseq'] = '1';
+						$dt['statseq'] = '1';
+						$dt['temaseq'] = $temaseq;
 
-						$TDbo = new TDbo(TConstantes :: DBUSUARIOS);
+						$TDbo = new TDbo(TConstantes :: DBUSUARIO);
 						$insert = $TDbo->insert($dt);
 						$insert['usuario'] = $login;
 						return $insert;
 					}
 				} else {
-					throw new ErrorException("O codigo de pessoa $codigopessoa é inexistente.");
+					throw new ErrorException("O seq de pessoa $pessseq é inexistente.");
 				}
 			} else {
-				throw new ErrorException("O codigo de pessoa $codigopessoa é invalido.");
+				throw new ErrorException("O seq de pessoa $pessseq é invalido.");
 			}
 		} catch (Exception $e) {
 			$TDbo->rollback();
@@ -180,21 +204,21 @@ class TUsuario {
 					if ($modulo >= 0) {
 						if ($nivel >= 0) {
 							$critCheck3 = new TCriteria();
-							$critCheck3->add(new TFilter("funcionalidade", "=", $funcionalidade));
-							$critCheck3->add(new TFilter("nivel", "=", $nivel));
-							$critCheck3->add(new TFilter("modulo", "=", $modulo));
-							$critCheck3->add(new TFilter("codigousuario", "=", $usuario));
+								$critCheck3->add(new TFilter("funcionalidade", "=", $funcionalidade));
+								$critCheck3->add(new TFilter("nivel", "=", $nivel));
+								$critCheck3->add(new TFilter("modulo", "=", $modulo));
+								$critCheck3->add(new TFilter("usuaseq", "=", $usuario));
 							$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
-							$retHierarquia = $TDbo_privilegio->select("id", $critCheck3);
+							$retHierarquia = $TDbo_privilegio->select("seq", $critCheck3);
 							$obHierarquia = $retHierarquia->fetchObject();
-
-							if ($obHierarquia->id == null) {
+							
+							if ($obHierarquia->seq == null) {
 
 								$dtModulo["nivel"] = $nivel;
 								$dtModulo["funcionalidade"] = $funcionalidade;
 								$dtModulo["modulo"] = $modulo;
-								$dtModulo["codigousuario"] = $usuario;
-								$dtModulo['ativo'] = '1';
+								$dtModulo["usuaseq"] = $usuario;
+								$dtModulo['statseq'] = '1';
 
 								$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 
@@ -203,15 +227,15 @@ class TUsuario {
 							$retorno["nivel"] = $nivel;
 							$retorno["funcionalidade"] = $funcionalidade;
 							$retorno["modulo"] = $modulo;
-							$retorno["codigousuario"] = $usuario;
+							$retorno["usuaseq"] = $usuario;
 
-							$dSituacao['ativo'] = $situacao;
+							$dSituacao['statseq'] = $situacao;
 
 							$dSituacaoCrit = new TCriteria();
 							$dSituacaoCrit->add(new TFilter("funcionalidade", "=", $funcionalidade));
 							$dSituacaoCrit->add(new TFilter("nivel", "=", $nivel));
 							$dSituacaoCrit->add(new TFilter("modulo", "=", $modulo));
-							$dSituacaoCrit->add(new TFilter("codigousuario", "=", $usuario));
+							$dSituacaoCrit->add(new TFilter("usuaseq", "=", $usuario));
 
 							$TDbo_Situacao = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retornoSituacao = $TDbo_Situacao->update($dSituacao, $dSituacaoCrit);
@@ -224,35 +248,39 @@ class TUsuario {
 						throw new ErrorException("O menu $menu é invalido.");
 					}
 				} else {
-					throw new ErrorException("O codigo de usuario $usuario é invalido.");
+					throw new ErrorException("O seq do usuario $usuario é invalido.");
 				}
 			} else {
-				throw new ErrorException("O codigo de usuario $usuario é invalido.");
+				throw new ErrorException("O seq do usuario $usuario é invalido.");
 			}
 		} catch (Exception $e) {
 			new setException($e);
 		}
 	}
 
+	/**
+	 * 
+	 * @param unknown_type $usuario
+	 */
 	public function getPrivilegios($usuario) {
 		try {
 			if ($usuario) {
 				$rt = $this->getUser($usuario);
 				if ($rt) {
 					$crit = new TCriteria();
-					$crit->add(new TFilter("codigousuario", "=", $usuario));
+					$crit->add(new TFilter("usuaseq", "=", $usuario));
 					$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 					$retPrivilegio = $TDbo_privilegio->select("*", $crit);
 
 					while ($obPrivilegio = $retPrivilegio->fetchObject()) {
-						$ob[$obPrivilegio->nivel][$obPrivilegio->funcionalidade][$obPrivilegio->modulo][$obPrivilegio->ativo] = $obPrivilegio;
+						$ob[$obPrivilegio->nivel][$obPrivilegio->funcionalidade][$obPrivilegio->modulo][$obPrivilegio->statseq] = $obPrivilegio;
 					}
 					return $ob;
 				} else {
-					throw new ErrorException("O codigo de usuario $usuario é invalido.");
+					throw new ErrorException("O seq do usuario $usuario é invalido.");
 				}
 			} else {
-				throw new ErrorException("O codigo de usuario $usuario é invalido.");
+				throw new ErrorException("O seq do usuario $usuario é invalido.");
 			}
 		} catch (Exception $e) {
 			$TDbo->rollback();
@@ -269,9 +297,9 @@ class TUsuario {
 		$confirm = $TSetControl->setPass($confirm);
 
 		if ($new_pass === $confirm) {
-			$dbo = new TDbo(TConstantes :: DBUSUARIOS);
+			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter('codigo', '=', $usuario));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario));
 			$ret = $dbo->select('senha', $crit);
 			$obSenha = $ret->fetchObject();
 
@@ -296,10 +324,10 @@ class TUsuario {
 	//Função para recuperação de password
 	public function recoverPassword($chave, $new_pass, $confirm) {
 
-		$dbo = new TDbo(TConstantes :: DBUSUARIOS_SENHAS_RECUPERACAO);
+		$dbo = new TDbo(TConstantes :: DBUSUARIO_SENHAS_RECUPERACAO);
 		$crit = new TCriteria();
 		$crit->add(new TFilter('chave', '=', $chave));
-		$ret = $dbo->select('codigousuario,senhaantiga', $crit);
+		$ret = $dbo->select('usuaseq,senhaantiga', $crit);
 		$obChave = $ret->fetchObject();
 
 		$TSetControl = new TSetControl();
@@ -307,9 +335,9 @@ class TUsuario {
 		$confirm = $TSetControl->setPass($confirm);
 
 		if ($new_pass === $confirm) {
-			$dbo = new TDbo(TConstantes :: DBUSUARIOS);
+			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter('codigo', '=', $obChave->codigousuario));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obChave->usuaseq));
 			$ret = $dbo->select('senha', $crit);
 			$obSenha = $ret->fetchObject();
 
@@ -332,11 +360,11 @@ class TUsuario {
 	}
 	
 	//Função para solicitação de recuperação de Senha
-	public function requestRecoverPassword($codigoUsuario){
+	public function requestRecoverPassword($seqUsuario){
 		
-		$dbo = new TDbo(TConstantes :: DBUSUARIOS);
+		$dbo = new TDbo(TConstantes :: DBUSUARIO);
 		$crit = new TCriteria();
-		$crit->add(new TFilter('codigo', '=', $codigoUsuario));
+		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seqUsuario));
 		$ret = $dbo->select('senha', $crit);
 		$obSenha = $ret->fetchObject();
 		
@@ -344,15 +372,15 @@ class TUsuario {
 	
 		if(!empty($old_pass)){
 			$TSetControl = new TSetControl();
-			$chave = $TSetControl->setPass(md5(rand(1,99) . $codigoUsuario . time() . 'recoverPass'));
+			$chave = $TSetControl->setPass(md5(rand(1,99) . $seqUsuario . time() . 'recoverPass'));
 		
-			$dbo = new TDbo(TConstantes :: DBUSUARIOS_SENHAS_RECUPERACAO);
+			$dbo = new TDbo(TConstantes :: DBUSUARIO_SENHAS_RECUPERACAO);
 		
 			$retorno = $dbo->insert(array('senhaantiga'=>$old_pass,
-							   'codigousuario'=>$codigoUsuario,
+							   'usuaseq'=>$seqUsuario,
 							   'chave'=>$chave));
 							   
-			if(is_array($retorno) && $retorno['codigo']){
+			if(is_array($retorno) && $retorno[TConstantes::SEQUENCIAL]){
 				return $chave;
 			}
 		}else{
@@ -370,9 +398,9 @@ class TUsuario {
 
 		if ($pass === $confirm) {
 
-			$dbo = new TDbo(TConstantes :: DBUSUARIOS);
+			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter('codigo', '=', $usuario));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario));
 			$update = $dbo->update(array (
 				'senha' => $pass
 			), $crit);
@@ -418,10 +446,10 @@ class TUsuario {
 	}
 
 	// Interface de mudança de senha
-	public function apendicePassword($codigo, $idForm) {
-		$dbo = new TDbo(TConstantes :: DBUSUARIOS);
+	public function apendicePassword($seq, $formseq = null) {
+		$dbo = new TDbo(TConstantes :: DBUSUARIO);
 		$crit = new TCriteria();
-		$crit->add(new TFilter('codigo', '=', $codigo));
+		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq));
 		$ret = $dbo->select('senha', $crit);
 		$obSenha = $ret->fetchObject();
 
@@ -448,7 +476,7 @@ class TUsuario {
 			$obButton = new TButton('change_Password');
 			$obButton->id = "change_Password";
 			$obButton->value = "Atualizar";
-			$obButton->setProperty("onclick", "changePassword('{$codigo}','old_Password','new_Password','confirm_Password')");
+			$obButton->setProperty("onclick", "changePassword('{$seq}','old_Password','new_Password','confirm_Password')");
 			$obButton->setAction(new TAction(""), "Atualizar");
 
 			$obFieds->addObjeto($obButton);
@@ -456,13 +484,13 @@ class TUsuario {
 			$obFieds->geraCampo("Nova Senha:", 'new_Password', "TPassword", '');
 			$obFieds->setProperty('new_Password', 'size', '20');
 			$obFieds->setProperty('new_Password', 'id', 'new_Password');
-			$obFieds->setProperty('new_Password', 'onchange', "createPassword('{$codigo}','new_Password','confirm_Password')");
+			$obFieds->setProperty('new_Password', 'onchange', "createPassword('{$seq}','new_Password','confirm_Password')");
 			$obFieds->setValue("new_Password", "");
 
 			$obFieds->geraCampo("Confirmação:", 'confirm_Password', "TPassword", '');
 			$obFieds->setProperty('confirm_Password', 'size', '20');
 			$obFieds->setProperty('confirm_Password', 'id', 'confirm_Password');
-			$obFieds->setProperty('confirm_Password', 'onchange', "createPassword('{$codigo}','new_Password','confirm_Password')");
+			$obFieds->setProperty('confirm_Password', 'onchange', "createPassword('{$seq}','new_Password','confirm_Password')");
 			$obFieds->setValue("confirm_Password", "");
 		}
 

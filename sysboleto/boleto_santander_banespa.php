@@ -79,7 +79,7 @@ $dadosboleto["carteira_descricao"] = "COBRAN�A SIMPLES - CSR";  // Descrição
 
 // SEUS DADOS
 $dadosboleto["identificacao"] = "Paulo Henrique de Freitas Miranda";
-$dadosboleto["cpf_cnpj"] = "999.999.999-99";
+$dadosboleto["pessnmrf"] = "999.999.999-99";
 $dadosboleto["endereco"] = "RUA 17 de Setembro, 499";
 $dadosboleto["cidade_uf"] = "An�polis - GO";
 $dadosboleto["cedente"] = "Paulo Henrique de Freitas Miranda";

@@ -18,7 +18,7 @@ class TApendices{
 
                 $getHeaderForm = new TSetHeader();
                 $obHeaderForm = $getHeaderForm->getHead($chaveHeader);
-                $argumento = $obHeaderForm['codigo'];
+                $argumento = $obHeaderForm[TConstantes::SEQUENCIAL];
 
                 if(!$argumento){
                    $argumento = $chaveHeader;

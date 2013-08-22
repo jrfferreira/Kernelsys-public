@@ -11,7 +11,9 @@ function __autoload($classe) {
     $autoload = new autoload('../',$classe);
 }
 
+$obSession = new TSession();
 $obCheckLogin = new TCheckLogin();
+
 
 // Retorna privilegios do usuario
 $inPriv = new TGetPrivilegio("0", "0");
@@ -27,13 +29,13 @@ $obUser = $inPriv->getUser();
 
 
     //===== monta criterios de acesso do uruario ======\\
-    if(is_array($obPriv)) {
+    if(is_array($obPriv) and count($obPriv)>0) {
     	
     $criterio = new TCriteria();
-    	$criterio->add(new TFilter('ativo','=','1'),'AND');
+    	$criterio->add(new TFilter('statseq','=','1'),'AND');
     
         foreach($obPriv as $mp) {
-        	$filter = new TFilter('id','=',$mp);
+        	$filter = new TFilter('seq','=',$mp);
         	$filter->setTipoFiltro('idSelecao');        	
     		$criterio->add($filter,"OR");
         }
@@ -42,7 +44,7 @@ $obUser = $inPriv->getUser();
         new setException(TMensagem::ERRO_PRIVILEGIOS);
     }
     //=================================================\\
-    $tKrs = new TKrs('modulos_principais');
+    $tKrs = new TKrs('modulo');
     $execSql = $tKrs->select('*',$criterio);
 
     $obLogo = new TElement('div');
@@ -74,7 +76,7 @@ $obUser = $inPriv->getUser();
         $mbotCont->alt    = $retMods->labelmodulo;
         $mbotCont->add($botPrincipal);
 
-        $mbotCont->onclick = "prossInter(this,'".$retMods->id."');";
+        $mbotCont->onclick = "prossInter(this,'".$retMods->seq."');";
 
        // $BarraMenu->add($mbotCont);
         $BarraPrincipal->add($mbotCont);
@@ -180,6 +182,14 @@ $content->style = "width: 100%; height:100%;background-image:url(app.images/bg.p
 $content->add($BarraPrincipal);
 $content->add($DCorpo);
 $content->add($DRodaPe->show());
+
+if($obSession->getValue('developer')){
+	$aviso = new TElement('div');
+	$aviso->id = 'testAlert';
+	$aviso->add('<h1>Atenção!!<h1>');
+	$aviso->add('<h2>Esta versão é para testes!<h2>');
+	$content->add($aviso);
+}
 
 $pageSys->add($content);
 //$pageSys->add($BarraPrincipal);

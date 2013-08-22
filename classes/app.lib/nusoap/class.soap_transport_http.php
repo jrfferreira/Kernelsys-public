@@ -776,8 +776,8 @@ class soap_transport_http extends nusoap_base {
 	  	} else {
 	  	}
 		// insert custom user-set cURL options
-		foreach ($this->ch_options as $key => $val) {
-			$this->setCurlOption($key, $val);
+		foreach ($this->ch_options as $seq => $val) {
+			$this->setCurlOption($seq, $val);
 		}
 
 		$this->debug('set cURL payload');

@@ -45,12 +45,12 @@ class TMultiSelect extends TField {
     *
     *
     */
-    public function setPadrao($codigo,$valor) {
+    public function setPadrao($seq,$valor) {
 
         // cria uma TAG <option> com um valor padrão
         $this->optionPD = new TElement('option');
         $this->optionPD->add($valor);
-        $this->optionPD->value = $codigo;   // valor da TAG
+        $this->optionPD->value = $seq;   // valor da TAG
 
     }
 
@@ -73,25 +73,25 @@ class TMultiSelect extends TField {
 
             // percorre os itens adicionados
             $qtd = 1;
-            foreach ($this->items as $codigo => $item) {
+            foreach ($this->items as $seq=> $item) {
 
                 if($item == null) {
-                    $item = $codigo;
+                    $item = $seq;
                 }
                 // cria uma TAG <option> para o item
                 $option = new TElement('option');
                 $option->name = $this->name;
                 $option->id   = $this->name.$qtd;
                 $option->type = 'option';
-                $option->value = $codigo;  // define o índice da opção
+                $option->value = $seq;  // define o índice da opção
                 $option->onclick = 'multiSelect_'.$this->actionOption;
-                $option->add($codigo);
+                $option->add($seq);
                 $option->add(' - ');
                 $option->add($item);     // adiciona o texto da opção
                 
 
                 // caso seja a opção selecionada
-                if ($codigo == $this->value) {
+                if ($seq== $this->value) {
 
                     // seleciona o item da combo
                     $option->selected = 1;

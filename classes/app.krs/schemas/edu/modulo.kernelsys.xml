@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <modulo>
+    <row seq="1">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Comercial</labelmodulo>
+      <modulo>comercial</modulo>
+      <nivel>1</nivel>
+      <ordem>1</ordem>
+      <seq>1</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="2">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Secretaria</labelmodulo>
+      <modulo>secretaria</modulo>
+      <nivel>1</nivel>
+      <ordem>2</ordem>
+      <seq>2</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="3">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Financeiro</labelmodulo>
+      <modulo>financeiro</modulo>
+      <nivel>1</nivel>
+      <ordem>5</ordem>
+      <seq>3</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="5">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Recursos Humanos</labelmodulo>
+      <modulo>rh</modulo>
+      <nivel>1</nivel>
+      <ordem>3</ordem>
+      <seq>5</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="6">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Parametros</labelmodulo>
+      <modulo>paramentros</modulo>
+      <nivel>1</nivel>
+      <ordem>12</ordem>
+      <seq>6</seq>
+      <statseq>0</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="7">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Coordenador</labelmodulo>
+      <modulo>coordenador</modulo>
+      <nivel>1</nivel>
+      <ordem>7</ordem>
+      <seq>7</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="12">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Biblioteca</labelmodulo>
+      <modulo>biblioteca</modulo>
+      <nivel>1</nivel>
+      <ordem>10</ordem>
+      <seq>12</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="13">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Acadêmico</labelmodulo>
+      <modulo>academico</modulo>
+      <nivel>1</nivel>
+      <ordem>6</ordem>
+      <seq>13</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="8">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Questionarios</labelmodulo>
+      <modulo>questionarios</modulo>
+      <nivel>1</nivel>
+      <ordem>13</ordem>
+      <seq>8</seq>
+      <statseq>0</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="11">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Projetos</labelmodulo>
+      <modulo>projetos</modulo>
+      <nivel>1</nivel>
+      <ordem>11</ordem>
+      <seq>11</seq>
+      <statseq>0</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="9">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Professores</labelmodulo>
+      <modulo>professores</modulo>
+      <nivel>1</nivel>
+      <ordem>8</ordem>
+      <seq>9</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="10">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Alunos</labelmodulo>
+      <modulo>alunos</modulo>
+      <nivel>1</nivel>
+      <ordem>9</ordem>
+      <seq>10</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="4">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Administrativo</labelmodulo>
+      <modulo>administrativo</modulo>
+      <nivel>1</nivel>
+      <ordem>4</ordem>
+      <seq>4</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+  </modulo>
+</kernelsys>

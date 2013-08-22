@@ -9,7 +9,7 @@ class TMensagem{
      //Mensagem em geral
 
      const MSG_CONF_PADRAO              = "Você deseja realmente executar esta ação?";
-     const MSG_CONF_ANUNAR_MATRICULA    = "Você deseja realmente ANULAR esta matricula e envia-la para a lista de demanda?";
+     const MSG_CONF_ANULAR_MATRICULA    = "Você deseja realmente ANULAR esta matricula e envia-la para a lista de demanda?";
      
      //Inscriçãoes
      const MSG_CONF_INSCRICAO           = "A inscrição foi concluída com sucesso.";
@@ -25,11 +25,12 @@ class TMensagem{
      const ERRO_VALOR_DUPLICADO         = "O valor já existe na base de dados e não pode ser duplicado.";
      const ERRO_VALOR_INVALIDO          = "O valor fornecido é inválido.";
      const ERRO_VALOR_NULL              = "O campo <campo> deve ser preenchido.";
+     const ERRO_OBRIGATORIEDADELISTA	= "A lista deve conter ao menos um item.";
      const ERRO_SEM_REGISTRO            = "registro não encontrado.";
 
     //Mensagem ERRO DE ACESSO ao sistema
-    const ERRO_ACESSO_PRIVILEGIOS       = "Problema ao tentar carregar o perfil do usuario.";
-    const ERRO_PRIVILEGIOS              = 'Usuario sem privilégios definidos.';
+    const ERRO_ACESSO_PRIVILEGIO       = "Problema ao tentar carregar o perfil do usuario.";
+    const ERRO_PRIVILEGIO              = 'Usuario sem privilégios definidos.';
 
     //Mensagens ERRO referentes ao academico
      const ERRO_TURMA_DISCIPLINA        = "não há disciplinas associadas a turma.";
@@ -38,10 +39,6 @@ class TMensagem{
 
      //Mensagem gerais do Caixa
      const MSG_CONTA_BAIXADA            = "A conta já foi baixada";
-     const MSG_SUCESSO_BAIXAR_CONTA     = "A conta foi baixada com sucesso.";
-     const MSG_SUCESSO_BAIXAR_BOLETO_INATIVO     = "A conta foi baixada com sucesso, porem a partir de um boleto inativo.";
-     
-     const MSG_BOLETO_INATIVO           = "Esta duplicata não está mais ativa (Outro boleto foi gerado no seu lugar)";
      const MSG_SUCESSO_FECHA_CAIXA      = "O caixa foi fechado com sucesso.";
      const ERRO_FECHAR_CAIXA            = "Ouve um problema ao fechar o caixa - Entre em contato com o administrador.";
 
@@ -57,7 +54,7 @@ class TMensagem{
 
      const ERRO_GERAL_SISTEMA           = "Erro geral do sistema";
 
-     //Codigos dos alerta
+     //seqs dos alerta
      const ERRO_VALIDACAO               = "Erro de Validação";
      const ERRO_DUPLICACAO              = "Duplicação de dados";
      const ERRO_ACESSO_SISTEMA          = "Erro ao acessar o sitema";
@@ -66,7 +63,7 @@ class TMensagem{
      const ERRO_ENTIDADE_NULA           = "A entidade não foi definida";
 
      //Mensagens do financeiro
-     const ERRO_CODIGO_TRANSACAO_FINAN  =  "Não foi possivel retornar a transação com o código fornecido.";
+     const ERRO_SEQ_TRANSACAO_FINAN  =  "Não foi possivel retornar a transação com o código fornecido.";
 
 
      //Erro do banco
@@ -74,7 +71,7 @@ class TMensagem{
      const ERRO_TIPODADOS_PESQUISA      = "Desculpe!<br> A pesquisa não pode ser executada pois exitem campos não compativeis com o valor fornecido. Defina a coluna para a pesquisa e tente novamente por favor.";
 
      //Inscrição de alunos
-     const ERRO_CODIGO_INSCRICAO        = "O codigo da inscrição não é válido";
+     const ERRO_SEQ_INSCRICAO        = "O seq da inscrição não é válido";
      
      //TDados
      const ERRO_VINCULO_TABELA_NAO_ENCONTRADO = "Não foi encontrado nenhum vínculo de tabela para este formulário.";

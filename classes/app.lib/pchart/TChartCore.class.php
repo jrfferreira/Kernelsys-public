@@ -405,13 +405,13 @@
         {
          if ( $ScaleMode == SCALE_START0 ) { $this->VMin = 0; }
 
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+           foreach ( $DataDescription["Values"] as $seq2 => $ColName )
             {
-             if (isset($Data[$Key][$ColName]))
+             if (isset($Data[$seq][$ColName]))
               {
-               $Value = $Data[$Key][$ColName];
+               $Value = $Data[$seq][$ColName];
 
                if ( is_numeric($Value) )
                 {
@@ -426,14 +426,14 @@
         {
          if ( $ScaleMode == SCALE_ADDALLSTART0 ) { $this->VMin = 0; }
 
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
            $Sum = 0;
-           foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+           foreach ( $DataDescription["Values"] as $seq2 => $ColName )
             {
-             if (isset($Data[$Key][$ColName]))
+             if (isset($Data[$seq][$ColName]))
               {
-               $Value = $Data[$Key][$ColName];
+               $Value = $Data[$seq][$ColName];
                if ( is_numeric($Value) )
                 $Sum  += $Value;
               }
@@ -589,12 +589,12 @@
      /* Horizontal Axis */
      $XPos = $this->GArea_X1 + $this->GAreaXOffset;
      $ID = 1; $YMax = NULL;
-     foreach ( $Data as $Key => $Values )
+     foreach ( $Data as $seq => $Values )
       {
        if ( $ID % $SkipLabels == 0 )
         {
          $this->drawLine(floor($XPos),$this->GArea_Y2,floor($XPos),$this->GArea_Y2+5,$R,$G,$B);
-         $Value      = $Data[$Key][$DataDescription["Position"]];
+         $Value      = $Data[$seq][$DataDescription["Position"]];
          if ( $DataDescription["Format"]["X"] == "number" )
           $Value = $Value.$DataDescription["Unit"]["X"];
          if ( $DataDescription["Format"]["X"] == "time" )
@@ -657,11 +657,11 @@
        $this->VMin = $Data[0][$YSerieName];
        $this->VMax = $Data[0][$YSerieName];
 
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if (isset($Data[$Key][$YSerieName]))
+         if (isset($Data[$seq][$YSerieName]))
           {
-           $Value = $Data[$Key][$YSerieName];
+           $Value = $Data[$seq][$YSerieName];
            if ( $this->VMax < $Value) { $this->VMax = $Value; }
            if ( $this->VMin > $Value) { $this->VMin = $Value; }
           }
@@ -764,11 +764,11 @@
        $this->VXMin = $Data[0][$XSerieName];
        $this->VXMax = $Data[0][$XSerieName];
 
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if (isset($Data[$Key][$XSerieName]))
+         if (isset($Data[$seq][$XSerieName]))
           {
-           $Value = $Data[$Key][$XSerieName];
+           $Value = $Data[$seq][$XSerieName];
            if ( $this->VXMax < $Value) { $this->VXMax = $Value; }
            if ( $this->VXMin > $Value) { $this->VXMin = $Value; }
           }
@@ -966,7 +966,7 @@
 
      /* <-10->[8]<-4->Text<-10-> */
      $MaxWidth = 0; $MaxHeight = 8;
-     foreach($DataDescription["Description"] as $Key => $Value)
+     foreach($DataDescription["Description"] as $seq => $Value)
       {
        $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Value);
        $TextWidth  = $Position[2]-$Position[0];
@@ -993,7 +993,7 @@
 
      /* <-10->[8]<-4->Text<-10-> */
      $MaxWidth = 0; $MaxHeight = 8;
-     foreach($DataDescription["Description"] as $Key => $Value)
+     foreach($DataDescription["Description"] as $seq => $Value)
       {
        $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Value);
        $TextWidth  = $Position[2]-$Position[0];
@@ -1014,7 +1014,7 @@
       }
 
      $YOffset = 4 + $this->FontSize; $ID = 0;
-     foreach($DataDescription["Description"] as $Key => $Value)
+     foreach($DataDescription["Description"] as $seq => $Value)
       {
        $this->drawFilledRoundedRectangle($XPos+10,$YPos+$YOffset-4,$XPos+14,$YPos+$YOffset-4,2,$this->Palette[$ID]["R"],$this->Palette[$ID]["G"],$this->Palette[$ID]["B"]);
        imagettftext($this->Picture,$this->FontSize,0,$XPos+22,$YPos+$YOffset,$C_TextColor,$this->FontName,$Value);
@@ -1041,7 +1041,7 @@
 
      /* <-10->[8]<-4->Text<-10-> */
      $MaxWidth = 0; $MaxHeight = 8;
-     foreach($Data as $Key => $Value)
+     foreach($Data as $seq => $Value)
       {
        $Value2 = $Value[$DataDescription["Position"]];
        $Position  = imageftbbox($this->FontSize,0,$this->FontName,$Value2);
@@ -1058,7 +1058,7 @@
      $this->drawFilledRoundedRectangle($XPos,$YPos,$XPos+$MaxWidth,$YPos+$MaxHeight,5,$R,$G,$B);
 
      $YOffset = 4 + $this->FontSize; $ID = 0;
-     foreach($Data as $Key => $Value)
+     foreach($Data as $seq => $Value)
       {
        $Value2     = $Value[$DataDescription["Position"]];
        $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Value2);
@@ -1172,10 +1172,10 @@
      $C_TextColor  =$this->AllocateColor($this->Picture,0,0,0);
 
      $Cp = 0; $Found = FALSE;
-     foreach ( $Data as $Key => $Value )
+     foreach ( $Data as $seq => $Value )
       {
-       if ( $Data[$Key][$DataDescription["Position"]] == $ValueName )
-        { $NumericalValue = $Data[$Key][$SerieName]; $Found = TRUE; }
+       if ( $Data[$seq][$DataDescription["Position"]] == $ValueName )
+        { $NumericalValue = $Data[$seq][$SerieName]; $Found = TRUE; }
        if ( !$Found )
         $Cp++;
       }
@@ -1215,11 +1215,11 @@
      $GraphID = 0;
      $Ro = $R2; $Go = $G2; $Bo = $B2;
 
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $R = $this->Palette[$ColorID]["R"];
        $G = $this->Palette[$ColorID]["G"];
@@ -1239,14 +1239,14 @@
        $XPos  = $this->GArea_X1 + $this->GAreaXOffset;
        $Hsize = round($BigRadius/2);
        $R3 = -1; $G3 = -1; $B3 = -1;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         $Value = $Data[$Key][$ColName];
+         $Value = $Data[$seq][$ColName];
          $YPos  = $this->GArea_Y2 - (($Value-$this->VMin) * $this->DivisionRatio);
 
          /* Save point into the image map if option activated */
          if ( $this->BuildMap )
-          $this->addToImageMap($XPos-$Hsize,$YPos-$Hsize,$XPos+1+$Hsize,$YPos+$Hsize+1,$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"Plot");
+          $this->addToImageMap($XPos-$Hsize,$YPos-$Hsize,$XPos+1+$Hsize,$YPos+$Hsize+1,$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"Plot");
 
          if ( is_numeric($Value) )
           {
@@ -1303,12 +1303,12 @@
      $R3 = -1; $G3 = -1; $B3 = -1;
 
      $YLast = -1; $XLast = -1;
-     foreach ( $Data as $Key => $Values )
+     foreach ( $Data as $seq => $Values )
       {
-       if ( isset($Data[$Key][$YSerieName]) && isset($Data[$Key][$XSerieName]) )
+       if ( isset($Data[$seq][$YSerieName]) && isset($Data[$seq][$XSerieName]) )
         {
-         $X = $Data[$Key][$XSerieName];
-         $Y = $Data[$Key][$YSerieName];
+         $X = $Data[$seq][$XSerieName];
+         $Y = $Data[$seq][$YSerieName];
 
          $Y = $this->GArea_Y2 - (($Y-$this->VMin) * $this->DivisionRatio);
          $X = $this->GArea_X1 + (($X-$this->VXMin) * $this->XDivisionRatio);
@@ -1361,10 +1361,10 @@
 
      $XPos     = $this->GAreaXOffset;
      $LastXPos = -1;
-     foreach ( $Data as $Key => $Values )
+     foreach ( $Data as $seq => $Values )
       {
-       $Value1 = $Data[$Key][$Serie1];
-       $Value2 = $Data[$Key][$Serie2];
+       $Value1 = $Data[$seq][$Serie1];
+       $Value2 = $Data[$seq][$Serie2];
        $YPos1  = $LayerHeight - (($Value1-$this->VMin) * $this->DivisionRatio);
        $YPos2  = $LayerHeight - (($Value2-$this->VMin) * $this->DivisionRatio);
 
@@ -1400,19 +1400,19 @@
 
      if ( !is_array($Series) ) { $Series = array($Series); }     
 
-     foreach($Series as $Key => $Serie)
+     foreach($Series as $seq => $Serie)
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $Serie ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $Serie ) { $ColorID = $ID; }; $ID++; }
 
        $XPos  = $this->GArea_X1 + $this->GAreaXOffset;
        $XLast = -1;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$Serie]) && is_numeric($Data[$Key][$Serie]))
+         if ( isset($Data[$seq][$Serie]) && is_numeric($Data[$seq][$Serie]))
           {
-           $Value = $Data[$Key][$Serie];
+           $Value = $Data[$seq][$Serie];
            $YPos = $this->GArea_Y2 - (($Value-$this->VMin) * $this->DivisionRatio);
 
            $Positions = imagettfbbox($this->FontSize,0,$this->FontName,$Value);
@@ -1436,26 +1436,26 @@
      $this->validateData("drawLineGraph",$Data);
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        if ( $SerieName == "" || $SerieName == $ColName )
         {
          $XPos  = $this->GArea_X1 + $this->GAreaXOffset;
          $XLast = -1;
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
+           if ( isset($Data[$seq][$ColName]))
             {
-             $Value = $Data[$Key][$ColName];
+             $Value = $Data[$seq][$ColName];
              $YPos = $this->GArea_Y2 - (($Value-$this->VMin) * $this->DivisionRatio);
 
              /* Save point into the image map if option activated */
              if ( $this->BuildMap )
-              $this->addToImageMap($XPos-3,$YPos-3,$XPos+3,$YPos+3,$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"Line");
+              $this->addToImageMap($XPos-3,$YPos-3,$XPos+3,$YPos+3,$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"Line");
 
              if (!is_numeric($Value)) { $XLast = -1; }
              if ( $XLast != -1 )
@@ -1476,12 +1476,12 @@
    function drawXYGraph($Data,$DataDescription,$YSerieName,$XSerieName,$PaletteID=0)
     {
      $YLast = -1; $XLast = -1;
-     foreach ( $Data as $Key => $Values )
+     foreach ( $Data as $seq => $Values )
       {
-       if ( isset($Data[$Key][$YSerieName]) && isset($Data[$Key][$XSerieName]) )
+       if ( isset($Data[$seq][$YSerieName]) && isset($Data[$seq][$XSerieName]) )
         {
-         $X = $Data[$Key][$XSerieName];
-         $Y = $Data[$Key][$YSerieName];
+         $X = $Data[$seq][$XSerieName];
+         $Y = $Data[$seq][$YSerieName];
 
          $Y = $this->GArea_Y2 - (($Y-$this->VMin) * $this->DivisionRatio);
          $X = $this->GArea_X1 + (($X-$this->VXMin) * $this->XDivisionRatio);
@@ -1505,7 +1505,7 @@
      $this->validateData("drawCubicCurve",$Data);
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        if ( $SerieName == "" || $SerieName == $ColName )
         {
@@ -1513,16 +1513,16 @@
          $XIn[0] = 0; $YIn[0] = 0;
 
          $ID = 0;
-         foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-          { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+         foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+          { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
          $Index = 1;
          $XLast = -1; $Missing = "";
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]) )
+           if ( isset($Data[$seq][$ColName]) )
             {
-             $Value = $Data[$Key][$ColName];
+             $Value = $Data[$seq][$ColName];
              $XIn[$Index] = $Index;
              $YIn[$Index] = $Value;
              if ( !is_numeric($Value) ) { $Missing[$Index] = TRUE; }
@@ -1607,20 +1607,20 @@
      if ( $YZero > $LayerHeight ) { $YZero = $LayerHeight; }
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $XIn = ""; $Yin = ""; $Yt = ""; $U = "";
        $XIn[0] = 0; $YIn[0] = 0;
 
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $Index = 1;
        $XLast = -1; $Missing = "";
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         $Value = $Data[$Key][$ColName];
+         $Value = $Data[$seq][$ColName];
          $XIn[$Index] = $Index;
          $YIn[$Index] = $Value;
          if ( !is_numeric($Value) ) { $Missing[$Index] = TRUE; }
@@ -1772,11 +1772,11 @@
      $LayerHeight = $this->GArea_Y2-$this->GArea_Y1;
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $aPoints   = "";
        $aPoints[] = $this->GAreaXOffset;
@@ -1793,14 +1793,14 @@
        if ( $YZero > $LayerHeight ) { $YZero = $LayerHeight; }
 
        $YLast = $Empty;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         $Value = $Data[$Key][$ColName];
+         $Value = $Data[$seq][$ColName];
          $YPos = $LayerHeight - (($Value-$this->VMin) * $this->DivisionRatio);
 
          /* Save point into the image map if option activated */
          if ( $this->BuildMap )
-          $this->addToImageMap($XPos-3,$YPos-3,$XPos+3,$YPos+3,$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"FLine");
+          $this->addToImageMap($XPos-3,$YPos-3,$XPos+3,$YPos+3,$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"FLine");
 
          if ( !is_numeric($Value) )
           {
@@ -1865,11 +1865,11 @@
      $LayerHeight = $this->GArea_Y2-$this->GArea_Y1;
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $this->Layers[$GraphID] = imagecreatetruecolor($LayerWidth,$LayerHeight);
        $C_White                = $this->AllocateColor($this->Layers[$GraphID],255,255,255);
@@ -1881,11 +1881,11 @@
        $XPos   = $this->GAreaXOffset;
        $YZero  = $LayerHeight - ((0-$this->VMin) * $this->DivisionRatio);
        $XLast  = -1; $PointsCount = 2;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$ColName]) )
+         if ( isset($Data[$seq][$ColName]) )
           {
-           $Value = $Data[$Key][$ColName];
+           $Value = $Data[$seq][$ColName];
            if ( is_numeric($Value) )
             {
              $YPos  = $LayerHeight - (($Value-$this->VMin) * $this->DivisionRatio);
@@ -1899,7 +1899,7 @@
 
              /* Save point into the image map if option activated */
              if ( $this->BuildMap )
-              $this->addToImageMap($X1,min($Y1,$Y2),$X2,max($Y1,$Y2),$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"oBar");
+              $this->addToImageMap($X1,min($Y1,$Y2),$X2,max($Y1,$Y2),$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"oBar");
 
              $this->drawLine($X1,$Y1,$X2,$Y1,$this->Palette[$ColorID]["R"],$this->Palette[$ColorID]["G"],$this->Palette[$ColorID]["B"],TRUE);
             }
@@ -1933,27 +1933,27 @@
      if ( $YZero > $this->GArea_Y2 ) { $YZero = $this->GArea_Y2; }
 
      $SerieID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $XPos  = $this->GArea_X1 + $this->GAreaXOffset - $SerieXOffset + $SeriesWidth * $SerieID;
        $XLast = -1;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$ColName]))
+         if ( isset($Data[$seq][$ColName]))
           {
-           if ( is_numeric($Data[$Key][$ColName]) )
+           if ( is_numeric($Data[$seq][$ColName]) )
             {
-             $Value = $Data[$Key][$ColName];
+             $Value = $Data[$seq][$ColName];
              $YPos = $this->GArea_Y2 - (($Value-$this->VMin) * $this->DivisionRatio);
 
              /* Save point into the image map if option activated */
              if ( $this->BuildMap )
               {
-               $this->addToImageMap($XPos+1,min($YZero,$YPos),$XPos+$SeriesWidth-1,max($YZero,$YPos),$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"Bar");
+               $this->addToImageMap($XPos+1,min($YZero,$YPos),$XPos+$SeriesWidth-1,max($YZero,$YPos),$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"Bar");
               }
            
              if ( $Shadow && $Alpha == 100 )
@@ -1986,38 +1986,38 @@
      if ( $YZero > $this->GArea_Y2 ) { $YZero = $this->GArea_Y2; }
 
      $SerieID = 0; $LastValue = "";
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $XPos  = $this->GArea_X1 + $this->GAreaXOffset - $SeriesWidth / 2;
        $XLast = -1; 
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$ColName]))
+         if ( isset($Data[$seq][$ColName]))
           {
-           if ( is_numeric($Data[$Key][$ColName]) )
+           if ( is_numeric($Data[$seq][$ColName]) )
             {
-             $Value = $Data[$Key][$ColName];
+             $Value = $Data[$seq][$ColName];
 
-             if ( isset($LastValue[$Key]) )
+             if ( isset($LastValue[$seq]) )
               {
-               $YPos    = $this->GArea_Y2 - ((($Value+$LastValue[$Key])-$this->VMin) * $this->DivisionRatio);
-               $YBottom = $this->GArea_Y2 - (($LastValue[$Key]-$this->VMin) * $this->DivisionRatio);
-               $LastValue[$Key] += $Value;
+               $YPos    = $this->GArea_Y2 - ((($Value+$LastValue[$seq])-$this->VMin) * $this->DivisionRatio);
+               $YBottom = $this->GArea_Y2 - (($LastValue[$seq]-$this->VMin) * $this->DivisionRatio);
+               $LastValue[$seq] += $Value;
               }
              else
               {
                $YPos    = $this->GArea_Y2 - (($Value-$this->VMin) * $this->DivisionRatio);
                $YBottom = $YZero;
-               $LastValue[$Key] = $Value;
+               $LastValue[$seq] = $Value;
               }
 
              /* Save point into the image map if option activated */
              if ( $this->BuildMap )
-              $this->addToImageMap($XPos+1,min($YBottom,$YPos),$XPos+$SeriesWidth-1,max($YBottom,$YPos),$DataDescription["Description"][$ColName],$Data[$Key][$ColName].$DataDescription["Unit"]["Y"],"sBar");
+              $this->addToImageMap($XPos+1,min($YBottom,$YPos),$XPos+$SeriesWidth-1,max($YBottom,$YPos),$DataDescription["Description"][$ColName],$Data[$seq][$ColName].$DataDescription["Unit"]["Y"],"sBar");
 
              $this->drawFilledRectangle($XPos+1,$YBottom,$XPos+$SeriesWidth-1,$YPos,$this->Palette[$ColorID]["R"],$this->Palette[$ColorID]["G"],$this->Palette[$ColorID]["B"],TRUE,$Alpha);
             }
@@ -2038,22 +2038,22 @@
      $XWidth = $this->DivisionWidth / 4;
      $XPos   = $this->GArea_X1 + $this->GAreaXOffset;
 
-     foreach ( $Data as $Key => $Values )
+     foreach ( $Data as $seq => $Values )
       {
-       $Min     = $Data[$Key][$DataDescription["Values"][0]];
-       $Max     = $Data[$Key][$DataDescription["Values"][0]];
+       $Min     = $Data[$seq][$DataDescription["Values"][0]];
+       $Max     = $Data[$seq][$DataDescription["Values"][0]];
        $GraphID = 0; $MaxID = 0; $MinID = 0;
-       foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+       foreach ( $DataDescription["Values"] as $seq2 => $ColName )
         {
-         if ( isset($Data[$Key][$ColName]) )
+         if ( isset($Data[$seq][$ColName]) )
           {
-           if ( $Data[$Key][$ColName] > $Max && is_numeric($Data[$Key][$ColName]))
-            { $Max = $Data[$Key][$ColName]; $MaxID = $GraphID; }
+           if ( $Data[$seq][$ColName] > $Max && is_numeric($Data[$seq][$ColName]))
+            { $Max = $Data[$seq][$ColName]; $MaxID = $GraphID; }
           }
-         if ( isset($Data[$Key][$ColName]) && is_numeric($Data[$Key][$ColName]))
+         if ( isset($Data[$seq][$ColName]) && is_numeric($Data[$seq][$ColName]))
           {
-           if ( $Data[$Key][$ColName] < $Min )
-            { $Min = $Data[$Key][$ColName]; $MinID = $GraphID; }
+           if ( $Data[$seq][$ColName] < $Min )
+            { $Min = $Data[$seq][$ColName]; $MinID = $GraphID; }
            $GraphID++;
           }
         }
@@ -2094,12 +2094,12 @@
      /* Search for the max value */
      if ( $MaxValue == -1 )
       {
-       foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+       foreach ( $DataDescription["Values"] as $seq2 => $ColName )
         {
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
-            if ( $Data[$Key][$ColName] > $MaxValue ) { $MaxValue = $Data[$Key][$ColName]; }
+           if ( isset($Data[$seq][$ColName]))
+            if ( $Data[$seq][$ColName] > $MaxValue ) { $MaxValue = $Data[$seq][$ColName]; }
           }
         }
       }
@@ -2229,30 +2229,30 @@
      /* Search for the max value */
      if ( $MaxValue == -1 )
       {
-       foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+       foreach ( $DataDescription["Values"] as $seq2 => $ColName )
         {
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
-            if ( $Data[$Key][$ColName] > $MaxValue ) { $MaxValue = $Data[$Key][$ColName]; }
+           if ( isset($Data[$seq][$ColName]))
+            if ( $Data[$seq][$ColName] > $MaxValue ) { $MaxValue = $Data[$seq][$ColName]; }
           }
         }
       }
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $Angle = -90;
        $XLast = -1;
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$ColName]))
+         if ( isset($Data[$seq][$ColName]))
           {
-           $Value    = $Data[$Key][$ColName];
+           $Value    = $Data[$seq][$ColName];
            $Strength = ( $Radius / $MaxValue ) * $Value;
 
            $XPos = cos($Angle * 3.1418 / 180 ) * $Strength + $XCenter;
@@ -2291,31 +2291,31 @@
      /* Search for the max value */
      if ( $MaxValue == -1 )
       {
-       foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+       foreach ( $DataDescription["Values"] as $seq2 => $ColName )
         {
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
-            if ( $Data[$Key][$ColName] > $MaxValue && is_numeric($Data[$Key][$ColName])) { $MaxValue = $Data[$Key][$ColName]; }
+           if ( isset($Data[$seq][$ColName]))
+            if ( $Data[$seq][$ColName] > $MaxValue && is_numeric($Data[$seq][$ColName])) { $MaxValue = $Data[$seq][$ColName]; }
           }
         }
       }
 
      $GraphID = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        $ID = 0;
-       foreach ( $DataDescription["Description"] as $keyI => $ValueI )
-        { if ( $keyI == $ColName ) { $ColorID = $ID; }; $ID++; }
+       foreach ( $DataDescription["Description"] as $seqI => $ValueI )
+        { if ( $seqI == $ColName ) { $ColorID = $ID; }; $ID++; }
 
        $Angle = -90;
        $XLast = -1;
        $Plots = "";
-       foreach ( $Data as $Key => $Values )
+       foreach ( $Data as $seq => $Values )
         {
-         if ( isset($Data[$Key][$ColName]))
+         if ( isset($Data[$seq][$ColName]))
           {
-           $Value    = $Data[$Key][$ColName];
+           $Value    = $Data[$seq][$ColName];
            if ( !is_numeric($Value) ) { $Value = 0; }
            $Strength = ( $Radius / $MaxValue ) * $Value;
 
@@ -2364,15 +2364,15 @@
 
      /* Determine pie sum */
      $Series = 0; $PieSum = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        if ( $ColName != $DataDescription["Position"] )
         {
          $Series++;
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
-            $PieSum = $PieSum + $Data[$Key][$ColName]; $iValues[] = $Data[$Key][$ColName]; $iLabels[] = $Data[$Key][$DataDescription["Position"]];
+           if ( isset($Data[$seq][$ColName]))
+            $PieSum = $PieSum + $Data[$seq][$ColName]; $iValues[] = $Data[$seq][$ColName]; $iLabels[] = $Data[$seq][$DataDescription["Position"]];
           }
         }
       }
@@ -2386,10 +2386,10 @@
 
      /* Calculate all polygons */
      $Angle    = 0; $TopPlots = "";
-     foreach($iValues as $Key => $Value)
+     foreach($iValues as $seq => $Value)
       {
-       $TopPlots[$Key][] = $XPos;
-       $TopPlots[$Key][] = $YPos;
+       $TopPlots[$seq][] = $XPos;
+       $TopPlots[$seq][] = $YPos;
 
        /* Process labels position & size */
        $Caption = "";
@@ -2399,11 +2399,11 @@
          if ($DrawLabels == PIE_PERCENTAGE)
           $Caption  = (round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
          elseif ($DrawLabels == PIE_LABELS)
-          $Caption  = $iLabels[$Key];
+          $Caption  = $iLabels[$seq];
          elseif ($DrawLabels == PIE_PERCENTAGE_LABEL)
-          $Caption  = $iLabels[$Key]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = $iLabels[$seq]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
          elseif ($DrawLabels == PIE_PERCENTAGE_LABEL)
-          $Caption  = $iLabels[$Key]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = $iLabels[$seq]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
 
          $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Caption);
          $TextWidth  = $Position[2]-$Position[0];
@@ -2429,36 +2429,36 @@
          $TopX = cos($iAngle * 3.1418 / 180 ) * $Radius + $XPos;
          $TopY = sin($iAngle * 3.1418 / 180 ) * $Radius + $YPos;
 
-         $TopPlots[$Key][] = $TopX; 
-         $TopPlots[$Key][] = $TopY;
+         $TopPlots[$seq][] = $TopX; 
+         $TopPlots[$seq][] = $TopY;
         }
 
-       $TopPlots[$Key][] = $XPos;
-       $TopPlots[$Key][] = $YPos;
+       $TopPlots[$seq][] = $XPos;
+       $TopPlots[$seq][] = $YPos;
 
        $Angle = $iAngle;
       }
      $PolyPlots = $TopPlots;
 
      /* Set array values type to float --- PHP Bug with imagefilledpolygon casting to integer */
-     foreach ($TopPlots as $Key => $Value)
-      { foreach ($TopPlots[$Key] as $Key2 => $Value2) { settype($TopPlots[$Key][$Key2],"float"); } }
+     foreach ($TopPlots as $seq => $Value)
+      { foreach ($TopPlots[$seq] as $seq2 => $Value2) { settype($TopPlots[$seq][$seq2],"float"); } }
 
      /* Draw Top polygons */
-     foreach ($PolyPlots as $Key => $Value)
+     foreach ($PolyPlots as $seq => $Value)
       { 
-       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$Key]["R"],$this->Palette[$Key]["G"],$this->Palette[$Key]["B"]);
-       imagefilledpolygon($this->Picture,$PolyPlots[$Key],(count($PolyPlots[$Key])+1)/2,$C_GraphLo);
+       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$seq]["R"],$this->Palette[$seq]["G"],$this->Palette[$seq]["B"]);
+       imagefilledpolygon($this->Picture,$PolyPlots[$seq],(count($PolyPlots[$seq])+1)/2,$C_GraphLo);
       }
 
      $this->drawCircle($XPos-.5,$YPos-.5,$Radius,$R,$G,$B);
      $this->drawCircle($XPos-.5,$YPos-.5,$Radius+.5,$R,$G,$B);
 
      /* Draw Top polygons */
-     foreach ($TopPlots as $Key => $Value)
+     foreach ($TopPlots as $seq => $Value)
       { 
-       for($j=0;$j<=count($TopPlots[$Key])-4;$j=$j+2)
-        $this->drawLine($TopPlots[$Key][$j],$TopPlots[$Key][$j+1],$TopPlots[$Key][$j+2],$TopPlots[$Key][$j+3],$R,$G,$B);
+       for($j=0;$j<=count($TopPlots[$seq])-4;$j=$j+2)
+        $this->drawLine($TopPlots[$seq][$j],$TopPlots[$seq][$j+1],$TopPlots[$seq][$j+2],$TopPlots[$seq][$j+3],$R,$G,$B);
       }
     }
 
@@ -2479,15 +2479,15 @@
 
      /* Determine pie sum */
      $Series = 0; $PieSum = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        if ( $ColName != $DataDescription["Position"] )
         {
          $Series++;
-         foreach ( $Data as $Key => $Values )
+         foreach ( $Data as $seq => $Values )
           {
-           if ( isset($Data[$Key][$ColName]))
-            $PieSum = $PieSum + $Data[$Key][$ColName]; $iValues[] = $Data[$Key][$ColName]; $iLabels[] = $Data[$Key][$DataDescription["Position"]];
+           if ( isset($Data[$seq][$ColName]))
+            $PieSum = $PieSum + $Data[$seq][$ColName]; $iValues[] = $Data[$seq][$ColName]; $iLabels[] = $Data[$seq][$DataDescription["Position"]];
           }
         }
       }
@@ -2504,18 +2504,18 @@
 
      /* Calculate all polygons */
      $Angle = 0; $TopPlots = "";
-     foreach($iValues as $Key => $Value)
+     foreach($iValues as $seq => $Value)
       {
        $XOffset = cos(($Angle+($Value/2*$SpliceRatio)) * 3.1418 / 180 ) * $SpliceDistance;
        $YOffset = sin(($Angle+($Value/2*$SpliceRatio)) * 3.1418 / 180 ) * $SpliceDistance;
 
-       $TopPlots[$Key][] = round($XPos + $XOffset);
-       $TopPlots[$Key][] = round($YPos + $YOffset);
+       $TopPlots[$seq][] = round($XPos + $XOffset);
+       $TopPlots[$seq][] = round($YPos + $YOffset);
 
        if ( $AllBlack )
         { $Rc = $this->ShadowRColor; $Gc = $this->ShadowGColor; $Bc = $this->ShadowBColor; }
        else
-        { $Rc = $this->Palette[$Key]["R"]; $Gc = $this->Palette[$Key]["G"]; $Bc = $this->Palette[$Key]["B"]; }
+        { $Rc = $this->Palette[$seq]["R"]; $Gc = $this->Palette[$seq]["G"]; $Bc = $this->Palette[$seq]["B"]; }
 
        $XLineLast = ""; $YLineLast = "";
 
@@ -2527,11 +2527,11 @@
          if ($DrawLabels == PIE_PERCENTAGE)
           $Caption  = (round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
          elseif ($DrawLabels == PIE_LABELS)
-          $Caption  = $iLabels[$Key];
+          $Caption  = $iLabels[$seq];
          elseif ($DrawLabels == PIE_PERCENTAGE_LABEL)
-          $Caption  = $iLabels[$Key]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = $iLabels[$seq]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
          elseif ($DrawLabels == PIE_PERCENTAGE_LABEL)
-          $Caption  = $iLabels[$Key]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = $iLabels[$seq]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
 
          $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Caption);
          $TextWidth  = $Position[2]-$Position[0];
@@ -2563,7 +2563,7 @@
          $PosX = cos($iAngle * 3.1418 / 180 ) * $Radius + $XPos + $XOffset;
          $PosY = sin($iAngle * 3.1418 / 180 ) * $Radius + $YPos + $YOffset;
 
-         $TopPlots[$Key][] = round($PosX); $TopPlots[$Key][] = round($PosY);
+         $TopPlots[$seq][] = round($PosX); $TopPlots[$seq][] = round($PosY);
 
          if ( $iAngle == $Angle || $iAngle == $Angle+$Value*$SpliceRatio || $iAngle +.5 > $Angle+$Value*$SpliceRatio)
           $this->drawLine($XPos+$XOffset,$YPos+$YOffset,$PosX,$PosY,$Rc,$Gc,$Bc);
@@ -2574,21 +2574,21 @@
          $XLineLast = $PosX; $YLineLast = $PosY;
         }
 
-       $TopPlots[$Key][] = round($XPos + $XOffset);  $TopPlots[$Key][] = round($YPos + $YOffset);
+       $TopPlots[$seq][] = round($XPos + $XOffset);  $TopPlots[$seq][] = round($YPos + $YOffset);
 
        $Angle = $iAngle;
       }
      $PolyPlots = $TopPlots;
 
      /* Draw Top polygons */
-     foreach ($PolyPlots as $Key => $Value)
+     foreach ($PolyPlots as $seq => $Value)
       { 
        if ( !$AllBlack )
-        $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$Key]["R"],$this->Palette[$Key]["G"],$this->Palette[$Key]["B"]);
+        $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$seq]["R"],$this->Palette[$seq]["G"],$this->Palette[$seq]["B"]);
        else
         $C_GraphLo = $this->AllocateColor($this->Picture,$this->ShadowRColor,$this->ShadowGColor,$this->ShadowBColor);
 
-       imagefilledpolygon($this->Picture,$PolyPlots[$Key],(count($PolyPlots[$Key])+1)/2,$C_GraphLo);
+       imagefilledpolygon($this->Picture,$PolyPlots[$seq],(count($PolyPlots[$seq])+1)/2,$C_GraphLo);
       }
      $this->ShadowActive = $ShadowStatus;
     }
@@ -2602,19 +2602,19 @@
 
      /* Determine pie sum */
      $Series = 0; $PieSum = 0; $rPieSum = 0;
-     foreach ( $DataDescription["Values"] as $Key2 => $ColName )
+     foreach ( $DataDescription["Values"] as $seq2 => $ColName )
       {
        if ( $ColName != $DataDescription["Position"] )
         {
          $Series++;
-         foreach ( $Data as $Key => $Values )
-          if ( isset($Data[$Key][$ColName]))
+         foreach ( $Data as $seq => $Values )
+          if ( isset($Data[$seq][$ColName]))
            {
-            if ( $Data[$Key][$ColName] == 0 )
-             { $iValues[] = 0; $rValues[] = 0; $iLabels[] = $Data[$Key][$DataDescription["Position"]]; }
+            if ( $Data[$seq][$ColName] == 0 )
+             { $iValues[] = 0; $rValues[] = 0; $iLabels[] = $Data[$seq][$DataDescription["Position"]]; }
               // Removed : $PieSum++; $rValues[] = 1;
             else
-             { $PieSum += $Data[$Key][$ColName]; $iValues[] = $Data[$Key][$ColName]; $iLabels[] = $Data[$Key][$DataDescription["Position"]]; $rValues[] = $Data[$Key][$ColName]; $rPieSum += $Data[$Key][$ColName];}
+             { $PieSum += $Data[$seq][$ColName]; $iValues[] = $Data[$seq][$ColName]; $iLabels[] = $Data[$seq][$DataDescription["Position"]]; $rValues[] = $Data[$seq][$ColName]; $rPieSum += $Data[$seq][$ColName];}
            }
         }
       }
@@ -2633,17 +2633,17 @@
      $Angle    = 0; $CDev = 5;
      $TopPlots = ""; $BotPlots = "";
      $aTopPlots = ""; $aBotPlots = "";
-     foreach($iValues as $Key => $Value)
+     foreach($iValues as $seq => $Value)
       {
        $XCenterPos = cos(($Angle-$CDev+($Value*$SpliceRatio+$SpliceDistanceRatio)/2) * 3.1418 / 180 ) * $SpliceDistance + $XPos;
        $YCenterPos = sin(($Angle-$CDev+($Value*$SpliceRatio+$SpliceDistanceRatio)/2) * 3.1418 / 180 ) * $SpliceDistance + $YPos;
        $XCenterPos2 = cos(($Angle+$CDev+($Value*$SpliceRatio+$SpliceDistanceRatio)/2) * 3.1418 / 180 ) * $SpliceDistance + $XPos;
        $YCenterPos2 = sin(($Angle+$CDev+($Value*$SpliceRatio+$SpliceDistanceRatio)/2) * 3.1418 / 180 ) * $SpliceDistance + $YPos;
 
-       $TopPlots[$Key][] = round($XCenterPos); $BotPlots[$Key][] = round($XCenterPos);
-       $TopPlots[$Key][] = round($YCenterPos); $BotPlots[$Key][] = round($YCenterPos + $SpliceHeight);
-       $aTopPlots[$Key][] = $XCenterPos; $aBotPlots[$Key][] = $XCenterPos;
-       $aTopPlots[$Key][] = $YCenterPos; $aBotPlots[$Key][] = $YCenterPos + $SpliceHeight;
+       $TopPlots[$seq][] = round($XCenterPos); $BotPlots[$seq][] = round($XCenterPos);
+       $TopPlots[$seq][] = round($YCenterPos); $BotPlots[$seq][] = round($YCenterPos + $SpliceHeight);
+       $aTopPlots[$seq][] = $XCenterPos; $aBotPlots[$seq][] = $XCenterPos;
+       $aTopPlots[$seq][] = $YCenterPos; $aBotPlots[$seq][] = $YCenterPos + $SpliceHeight;
 
        /* Process labels position & size */
        $Caption = "";
@@ -2651,11 +2651,11 @@
         {
          $TAngle   = $Angle+($Value*$SpliceRatio/2);
          if ($DrawLabels == PIE_PERCENTAGE)
-          $Caption  = (round($rValues[$Key] * pow(10,$Decimals) * $rSplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = (round($rValues[$seq] * pow(10,$Decimals) * $rSplicePercent)/pow(10,$Decimals))."%";
          elseif ($DrawLabels == PIE_LABELS)
-          $Caption  = $iLabels[$Key];
+          $Caption  = $iLabels[$seq];
          elseif ($DrawLabels == PIE_PERCENTAGE_LABEL)
-          $Caption  = $iLabels[$Key]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
+          $Caption  = $iLabels[$seq]."\r\n".(round($Value * pow(10,$Decimals) * $SplicePercent)/pow(10,$Decimals))."%";
 
          $Position   = imageftbbox($this->FontSize,0,$this->FontName,$Caption);
          $TextWidth  = $Position[2]-$Position[0];
@@ -2681,41 +2681,41 @@
          $TopX = cos($iAngle * 3.1418 / 180 ) * $Radius + $XPos;
          $TopY = sin($iAngle * 3.1418 / 180 ) * $SkewHeight + $YPos;
 
-         $TopPlots[$Key][] = round($TopX); $BotPlots[$Key][] = round($TopX);
-         $TopPlots[$Key][] = round($TopY); $BotPlots[$Key][] = round($TopY + $SpliceHeight);
-         $aTopPlots[$Key][] = $TopX; $aBotPlots[$Key][] = $TopX;
-         $aTopPlots[$Key][] = $TopY; $aBotPlots[$Key][] = $TopY + $SpliceHeight;
+         $TopPlots[$seq][] = round($TopX); $BotPlots[$seq][] = round($TopX);
+         $TopPlots[$seq][] = round($TopY); $BotPlots[$seq][] = round($TopY + $SpliceHeight);
+         $aTopPlots[$seq][] = $TopX; $aBotPlots[$seq][] = $TopX;
+         $aTopPlots[$seq][] = $TopY; $aBotPlots[$seq][] = $TopY + $SpliceHeight;
         }
 
-       $TopPlots[$Key][] = round($XCenterPos2); $BotPlots[$Key][] = round($XCenterPos2);
-       $TopPlots[$Key][] = round($YCenterPos2); $BotPlots[$Key][] = round($YCenterPos2 + $SpliceHeight);
-       $aTopPlots[$Key][] = $XCenterPos2; $aBotPlots[$Key][] = $XCenterPos2;
-       $aTopPlots[$Key][] = $YCenterPos2; $aBotPlots[$Key][] = $YCenterPos2 + $SpliceHeight;
+       $TopPlots[$seq][] = round($XCenterPos2); $BotPlots[$seq][] = round($XCenterPos2);
+       $TopPlots[$seq][] = round($YCenterPos2); $BotPlots[$seq][] = round($YCenterPos2 + $SpliceHeight);
+       $aTopPlots[$seq][] = $XCenterPos2; $aBotPlots[$seq][] = $XCenterPos2;
+       $aTopPlots[$seq][] = $YCenterPos2; $aBotPlots[$seq][] = $YCenterPos2 + $SpliceHeight;
 
        $Angle = $iAngle + $SpliceDistanceRatio;
       }
 
      /* Draw Bottom polygons */
-     foreach($iValues as $Key => $Value)
+     foreach($iValues as $seq => $Value)
       {
-       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$Key]["R"],$this->Palette[$Key]["G"],$this->Palette[$Key]["B"],-20);
-       imagefilledpolygon($this->Picture,$BotPlots[$Key],(count($BotPlots[$Key])+1)/2,$C_GraphLo);
+       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$seq]["R"],$this->Palette[$seq]["G"],$this->Palette[$seq]["B"],-20);
+       imagefilledpolygon($this->Picture,$BotPlots[$seq],(count($BotPlots[$seq])+1)/2,$C_GraphLo);
 
        if ( $EnhanceColors ) { $En = -10; } else { $En = 0; }
  
-       for($j=0;$j<=count($aBotPlots[$Key])-4;$j=$j+2)
-        $this->drawLine($aBotPlots[$Key][$j],$aBotPlots[$Key][$j+1],$aBotPlots[$Key][$j+2],$aBotPlots[$Key][$j+3],$this->Palette[$Key]["R"]+$En,$this->Palette[$Key]["G"]+$En,$this->Palette[$Key]["B"]+$En);
+       for($j=0;$j<=count($aBotPlots[$seq])-4;$j=$j+2)
+        $this->drawLine($aBotPlots[$seq][$j],$aBotPlots[$seq][$j+1],$aBotPlots[$seq][$j+2],$aBotPlots[$seq][$j+3],$this->Palette[$seq]["R"]+$En,$this->Palette[$seq]["G"]+$En,$this->Palette[$seq]["B"]+$En);
       }
 
      /* Draw pie layers */
      if ( $EnhanceColors ) { $ColorRatio = 30 / $SpliceHeight; } else { $ColorRatio = 25 / $SpliceHeight; }
      for($i=$SpliceHeight-1;$i>=1;$i--)
       {
-       foreach($iValues as $Key => $Value)
+       foreach($iValues as $seq => $Value)
         {
-         $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$Key]["R"],$this->Palette[$Key]["G"],$this->Palette[$Key]["B"],-10);
+         $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$seq]["R"],$this->Palette[$seq]["G"],$this->Palette[$seq]["B"],-10);
          $Plots = ""; $Plot = 0;
-         foreach($TopPlots[$Key] as $Key2 => $Value2)
+         foreach($TopPlots[$seq] as $seq2 => $Value2)
           {
            $Plot++;
            if ( $Plot % 2 == 1 )
@@ -2728,21 +2728,21 @@
          $Index       = count($Plots);
          if ($EnhanceColors ) {$ColorFactor = -20 + ($SpliceHeight - $i) * $ColorRatio; } else { $ColorFactor = 0; }
 
-         $this->drawAntialiasPixel($Plots[0],$Plots[1],$this->Palette[$Key]["R"]+$ColorFactor,$this->Palette[$Key]["G"]+$ColorFactor,$this->Palette[$Key]["B"]+$ColorFactor);
-         $this->drawAntialiasPixel($Plots[2],$Plots[3],$this->Palette[$Key]["R"]+$ColorFactor,$this->Palette[$Key]["G"]+$ColorFactor,$this->Palette[$Key]["B"]+$ColorFactor);
-         $this->drawAntialiasPixel($Plots[$Index-4],$Plots[$Index-3],$this->Palette[$Key]["R"]+$ColorFactor,$this->Palette[$Key]["G"]+$ColorFactor,$this->Palette[$Key]["B"]+$ColorFactor);
+         $this->drawAntialiasPixel($Plots[0],$Plots[1],$this->Palette[$seq]["R"]+$ColorFactor,$this->Palette[$seq]["G"]+$ColorFactor,$this->Palette[$seq]["B"]+$ColorFactor);
+         $this->drawAntialiasPixel($Plots[2],$Plots[3],$this->Palette[$seq]["R"]+$ColorFactor,$this->Palette[$seq]["G"]+$ColorFactor,$this->Palette[$seq]["B"]+$ColorFactor);
+         $this->drawAntialiasPixel($Plots[$Index-4],$Plots[$Index-3],$this->Palette[$seq]["R"]+$ColorFactor,$this->Palette[$seq]["G"]+$ColorFactor,$this->Palette[$seq]["B"]+$ColorFactor);
         }
       }
 
      /* Draw Top polygons */
-     for($Key=count($iValues)-1;$Key>=0;$Key--)
+     for($seq=count($iValues)-1;$seq>=0;$seq--)
       { 
-       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$Key]["R"],$this->Palette[$Key]["G"],$this->Palette[$Key]["B"]);
-       imagefilledpolygon($this->Picture,$TopPlots[$Key],(count($TopPlots[$Key])+1)/2,$C_GraphLo);
+       $C_GraphLo = $this->AllocateColor($this->Picture,$this->Palette[$seq]["R"],$this->Palette[$seq]["G"],$this->Palette[$seq]["B"]);
+       imagefilledpolygon($this->Picture,$TopPlots[$seq],(count($TopPlots[$seq])+1)/2,$C_GraphLo);
 
        if ( $EnhanceColors ) { $En = 10; } else { $En = 0; }
-       for($j=0;$j<=count($aTopPlots[$Key])-4;$j=$j+2)
-        $this->drawLine($aTopPlots[$Key][$j],$aTopPlots[$Key][$j+1],$aTopPlots[$Key][$j+2],$aTopPlots[$Key][$j+3],$this->Palette[$Key]["R"]+$En,$this->Palette[$Key]["G"]+$En,$this->Palette[$Key]["B"]+$En);
+       for($j=0;$j<=count($aTopPlots[$seq])-4;$j=$j+2)
+        $this->drawLine($aTopPlots[$seq][$j],$aTopPlots[$seq][$j+1],$aTopPlots[$seq][$j+2],$aTopPlots[$seq][$j+3],$this->Palette[$seq]["R"]+$En,$this->Palette[$seq]["G"]+$En,$this->Palette[$seq]["B"]+$En);
       }
     }
 
@@ -3267,7 +3267,7 @@
        if (!isset($DataDescription["Description"]))
         {
          $this->Errors[] = "[Warning] ".$FunctionName." - Series descriptions are not set.";
-         foreach($DataDescription["Values"] as $key => $Value)
+         foreach($DataDescription["Values"] as $seq => $Value)
           {
            $DataDescription["Description"][$Value] = $Value;
           }
@@ -3276,7 +3276,7 @@
        if (count($DataDescription["Description"]) < count($DataDescription["Values"]))
         {
          $this->Errors[] = "[Warning] ".$FunctionName." - Some series descriptions are not set.";
-         foreach($DataDescription["Values"] as $key => $Value)
+         foreach($DataDescription["Values"] as $seq => $Value)
           {
            if ( !isset($DataDescription["Description"][$Value]))
             $DataDescription["Description"][$Value] = $Value;
@@ -3290,25 +3290,25 @@
     {
      $DataSummary = array();
 
-     foreach($Data as $key => $Values)
+     foreach($Data as $seq => $Values)
       {
-       foreach($Values as $key2 => $Value)
+       foreach($Values as $seq2 => $Value)
         {
-         if (!isset($DataSummary[$key2]))
-          $DataSummary[$key2] = 1;
+         if (!isset($DataSummary[$seq2]))
+          $DataSummary[$seq2] = 1;
          else
-          $DataSummary[$key2]++;
+          $DataSummary[$seq2]++;
         }
       }
 
      if ( max($DataSummary) == 0 )
       $this->Errors[] = "[Warning] ".$FunctionName." - No data set.";
 
-     foreach($DataSummary as $key => $Value)
+     foreach($DataSummary as $seq => $Value)
       {
        if ($Value < max($DataSummary))
         {
-         $this->Errors[] = "[Warning] ".$FunctionName." - Missing data in serie ".$key.".";
+         $this->Errors[] = "[Warning] ".$FunctionName." - Missing data in serie ".$seq.".";
         }
       }
     }
@@ -3321,14 +3321,14 @@
 
      if ( $Mode == "CLI" )
       {
-       foreach($this->Errors as $key => $Value)
+       foreach($this->Errors as $seq => $Value)
         echo $Value."\r\n";
       }
      elseif ( $Mode == "GD" )
       {
        $this->setLineStyle($Width=1);
        $MaxWidth = 0;
-       foreach($this->Errors as $key => $Value)
+       foreach($this->Errors as $seq => $Value)
         {
          $Position  = imageftbbox($this->ErrorFontSize,0,"../" . TOccupant::getPath() . $this->ErrorFontName,$Value);
          $TextWidth = $Position[2]-$Position[0];
@@ -3339,7 +3339,7 @@
 
        $C_TextColor = $this->AllocateColor($this->Picture,133,85,85);
        $YPos        = $this->YSize - (18 + (count($this->Errors)-1) * ($this->ErrorFontSize + 4));
-       foreach($this->Errors as $key => $Value)
+       foreach($this->Errors as $seq => $Value)
         {
          imagettftext($this->Picture,$this->ErrorFontSize,0,$this->XSize-($MaxWidth+15),$YPos,$C_TextColor,$this->ErrorFontName,$Value);
          $YPos = $YPos + ($this->ErrorFontSize + 4);
@@ -3410,7 +3410,7 @@
       }
      else
       {
-       foreach($this->ImageMap as $Key => $Value)
+       foreach($this->ImageMap as $seq => $Value)
         fwrite($Handle, htmlentities($Value)."\r");
       }
      fclose ($Handle);

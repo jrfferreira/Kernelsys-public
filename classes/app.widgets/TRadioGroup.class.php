@@ -7,6 +7,7 @@ class TRadioGroup extends TField{
 
     private $layout = 'horizontal';
     private $items;
+    private $valorPadrao = 0;
     
     /**
      * método setLayout()
@@ -18,8 +19,17 @@ class TRadioGroup extends TField{
     }
     
     /**
+     * seta um valor padrão para o campo que for predefinido
+     * $item = número do item que deve vir selecionado por padrão, de acordo 
+     * com a ordem de definição
+     */
+    public function setValorPadrao($item){
+    	$this->valorPadrao = $item;
+    }
+    
+    /**
      * method addItems($items)
-     * adiciona itens (bot�es de r�dio)
+     * adiciona itens (botões de r�dio)
      * param  $items = array idexado contendo os itens
      */
     public function addItems($items){
@@ -39,12 +49,12 @@ class TRadioGroup extends TField{
 	
         if ($this->items){
 		$cont = 1;
-            // percorre cadauma das opções do r�dio
+            // percorre cada uma das opções do rádio
             foreach ($this->items as $index => $label){
 			
                 $button = new TRadioButton($this->name);
                 $button->setValue($index);
-				$button->setId($this->name.$cont);
+				$button->setId($this->id.$cont);
 					$cont++;
 				
 				//atribui propriedades
@@ -58,7 +68,11 @@ class TRadioGroup extends TField{
                 if ($this->value == $index){
                     // marca o radio button
                     $button->setProperty('checked', '1');
-                }		
+                }
+                else if($this->valorPadrao == $index){
+                	$button->setProperty('checked', '1');
+                }	
+                	
                 $button->show();
               		$obj = new TElement('span');
 					$obj->add( $label);

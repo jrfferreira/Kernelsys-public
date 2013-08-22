@@ -64,7 +64,7 @@ if($_POST['salvar']!=""){
 	
 	// SEUS DADOS
 	$identificacao = $_POST['identificacao'];
-	$cpf_cnpj = $_POST['cpf_cnpj'];
+	$pessnmrf = $_POST['pessnmrf'];
 	$endereco = $_POST['endereco'];
 	$cidade_uf  = $_POST['cidade'];
 	$cedente = $_POST['cedente'];
@@ -99,7 +99,7 @@ if($_POST['salvar']!=""){
 	
 	// SEUS DADOS
 	$identificacao = $InfoBl[4];
-	$cpf_cnpj = $InfoBl[5];
+	$pessnmrf = $InfoBl[5];
 	$endereco = $InfoBl[6];
 	$cidade_uf  = $InfoBl[7];
 	$cedente = $InfoBl[8];
@@ -163,7 +163,7 @@ if($_POST['salvar']!=""){
   </tr>
   <tr>
     <td align="right">CPF/CNPJ do Cedente </td>
-    <td><input type="text" name="cpf_cnpj" id="cpf_cnpj" size="18"  value="<?php echo $cpf_cnpj;?>" maxlength="20"></td>
+    <td><input type="text" name="pessnmrf" id="pessnmrf" size="18"  value="<?php echo $pessnmrf;?>" maxlength="20"></td>
   </tr>
   <tr>
     <td align="right">Endere&ccedil;o do Cedente </td>
@@ -237,7 +237,7 @@ if($_POST['salvar']!=""){
 	$ObIn->addLine($carteira);
 	
 	$ObIn->addLine($identificacao);
-	$ObIn->addLine($cpf_cnpj);
+	$ObIn->addLine($pessnmrf);
 	$ObIn->addLine($endereco);
 	$ObIn->addLine($cidade_uf);
 	$ObIn->addLine($cedente);

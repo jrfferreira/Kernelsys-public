@@ -28,7 +28,7 @@ function __autoload($classe){
 	$ObInsert = new TInsert("regboleto");
 	
 	$ObInsert->sacado = $dadosboleto["sacado"];
-	$ObInsert->docsacado = $dadosboleto["cpf_cnpj_sacado"];
+	$ObInsert->docsacado = $dadosboleto["pessnmrf_sacado"];
 	$ObInsert->lndigitavel = $dadosboleto["linha_digitavel"];
 	$ObInsert->nossonumero = $dadosboleto["nosso_numero"];
 	$ObInsert->numerodoc = $dadosboleto["numero_documento"];

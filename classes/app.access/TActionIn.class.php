@@ -21,8 +21,8 @@ class TActionIn{
 
         //if($conn = TTransaction::get()){
             //configura nome da sessão
-            $setcodigo = new TSetControl();
-            $idSessao = $setcodigo->setPass($setcodigo->getSessionPass('portaCopo'));
+            $setseq= new TSetControl();
+            $idSessao = $setseq->setPass($setseq->getSessionPass('portaCopo'));
             //armazena usuario em sessão
             $obUser = $this->obsession->getValue($idSessao);
 
@@ -31,7 +31,7 @@ class TActionIn{
             $hora = date(H.":".i.":".s);
             
             
-            $dados['codigo'] = $obUser->id;
+            $dados[TConstantes::SEQUENCIAL] = $obUser->seq;
             $dados['dataAc'] = $data;
             $dados['horaAc'] = $hora;
             $dados['acao'] = $action;

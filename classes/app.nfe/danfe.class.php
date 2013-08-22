@@ -37,7 +37,7 @@
  * @todo Adaptação para a nova versão 2.0 do manual SEFAZ
  */
 
-//comente a linha abaixo para nao permitir qualquer aviso no codigo pdf, a linha abaixo é utilizada para debug
+//comente a linha abaixo para nao permitir qualquer aviso no seqpdf, a linha abaixo é utilizada para debug
 //error_reporting(E_ALL);
 //ajuste do tempo limite de resposta do processo
 set_time_limit(1800);
@@ -475,7 +475,7 @@ class DanfeNFePHP {
         $this->__textBox($x,$y1,$w,$h,$texto,$aFont,'C','C',0,'');
 
         //####################################################################################
-        //coluna codigo de barras
+        //coluna seqde barras
         $x += $w;
         $w = 85;
         $h = 32;
@@ -484,7 +484,7 @@ class DanfeNFePHP {
         $chave_acesso = str_replace('NFe', '', $this->infNFe->getAttribute("Id"));
         $bW = 75;
         $bH = 12;
-        //codigo de barras
+        //seqde barras
         $this->pdf->Code128($x+(($w-$bW)/2),$y+2,$chave_acesso,$bW,$bH);
         //linhas divisorias
         $this->pdf->Line($x,$y+4+$bH,$x+$w,$y+4+$bH);
@@ -1360,7 +1360,7 @@ class DanfeNFePHP {
                     break;
                 }
 				
-                //codigo do produto				
+                //seqdo produto				
                 $aFont = array('font'=>$this->fontePadrao,'size'=>7,'style'=>'');
                 $texto = (is_numeric($prod->getElementsByTagName("cProd")->item(0)->nodeValue)) ? abs($prod->getElementsByTagName("cProd")->item(0)->nodeValue) : $prod->getElementsByTagName("cProd")->item(0)->nodeValue;
 		$this->__textBox($x,$y,$w,$h,$texto,$aFont,'T','C',0,'');				

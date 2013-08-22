@@ -29,4 +29,11 @@ class TEntry extends TField{
         // exibe a tag
         $this->tag->show();
     }
+    
+    /**
+     * Retorna o elemento criando em TField
+     */
+    public function getElement(){
+    	return $this->tag;
+    }
 }

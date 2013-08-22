@@ -22,5 +22,7 @@ const CLASS_UI_TELEFONE                = "ui_mascara_telefone";
 const CLASS_DESTAQUE                   = "ui-state-highlight";
 const CLASS_MULTISELECT                = "ui-jquery-multiselect";// atribui funcionalidade de multi seleção baseada no JQuery-Ui na combo
 const CLASS_UI_H2                      = "ui-h2";
+const CLASS_MASCARA_NUMERICO		   = "ui_mascara_numerico";
+
 
 }
