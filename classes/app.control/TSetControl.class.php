@@ -317,7 +317,6 @@ class TSetControl {
 	        if($cnpj){
 	            $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
 	            $crit = new TCriteria();
-	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
 	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
 	            $filter = new TFilter(TConstantes::SEQUENCIAL,'=',$headerForm[TConstantes::SEQUENCIAL]);
 	            $filter->tipoFiltro = 6;
@@ -355,7 +354,7 @@ class TSetControl {
     public function setTrueCnpj($valor){
         // Valida entrada
         $cnpj = sprintf('%014s', preg_replace('@[^0-9]@', '', $valor));
-        if ((strlen($cnpj) != 14) || (intval(substr($cnpj, -4)) == 0)) {
+        if ((strlen($cnpj) != 14)) {
             return false;
         }else{
         // Valida checagem
@@ -385,7 +384,6 @@ class TSetControl {
         if($cpf){
             $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
             $crit = new TCriteria();
-            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
             $crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
             $filter = new TFilter(TConstantes::SEQUENCIAL,'!=',$headerForm[TConstantes::SEQUENCIAL]);
             $filter->tipoFiltro = 6;
@@ -662,5 +660,19 @@ class TSetControl {
         }
     	
     	
+    }
+    
+
+    public function validaCpfCnpjMain($vetor){
+    	try{
+    		$valor = $vetor['valor'];
+    		if($this->setTrueCpf($valor)){
+    			return $this->validaCpfMain($vetor);
+    		}else{
+    			return $this->validaCnpjMain($vetor);
+    		}
+    	}catch (Exception $e){
+    		new setException($e);
+    	}
     }
 }

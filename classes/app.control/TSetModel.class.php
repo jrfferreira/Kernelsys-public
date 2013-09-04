@@ -199,7 +199,7 @@ class TSetModel {
         return $vetor;
     }
 
-    public function setCpfcnpj($valor) {
+    public function setCpfCnpj($valor) {
 
         $val = preg_replace('{\D}', '', $valor);
         $model = new TSetModel();

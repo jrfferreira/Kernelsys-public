@@ -3980,16 +3980,6 @@
       <usuaseq>1</usuaseq>
       <valor>450</valor>
     </row>
-    <row seq="441">
-      <campseq>439</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>setSize</metodo>
-      <seq>441</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>450</valor>
-    </row>
     <row seq="442">
       <campseq>440</campseq>
       <datacad>1900-01-01</datacad>
@@ -4529,6 +4519,16 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>100</valor>
+    </row>
+    <row seq="441">
+      <campseq>12</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>setSize</metodo>
+      <seq>441</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>450</valor>
     </row>
     <row seq="513">
       <campseq>332</campseq>
@@ -5521,16 +5521,6 @@
       <usuaseq>1</usuaseq>
       <valor>650;140</valor>
     </row>
-    <row seq="479">
-      <campseq>482</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>addItems</metodo>
-      <seq>479</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>select seq,titularidade from dbpessoa_titularidade order by peso</valor>
-    </row>
     <row seq="752">
       <campseq>741</campseq>
       <datacad>1900-01-01</datacad>
@@ -5704,16 +5694,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>select seq,nome from dbsala where statseq=1 order by nome</valor>
-    </row>
-    <row seq="633">
-      <campseq>754</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>addItems</metodo>
-      <seq>633</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>1=&gt;statseq;0=&gt;Instatseq</valor>
     </row>
     <row seq="634">
       <campseq>671</campseq>
@@ -6004,6 +5984,16 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>400</valor>
+    </row>
+    <row seq="633">
+      <campseq>754</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>addItems</metodo>
+      <seq>633</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,statdesc from dbstatus</valor>
     </row>
     <row seq="646">
       <campseq>581</campseq>
@@ -9879,6 +9869,16 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>40</valor>
+    </row>
+    <row seq="479">
+      <campseq>482</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>addItems</metodo>
+      <seq>479</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,titulo from dbtitularidade order by peso</valor>
     </row>
   </camposXPropriedades>
 </kernelsys>

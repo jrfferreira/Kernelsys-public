@@ -6,6 +6,6 @@ function setPrivilegio(ob,usuaseq,nivel,funcionalidade,modulo){
     var dados = 'classe=TUsuario&metodo=setPrivilegio'+valores;
     var retorno = exe('', getPath()+'/app.util/TSec.php',dados,'POST','Sucesso');
 
-    getOpcoesPrivilegios(sequsuario,nivel,funcionalidade,modulo,situacao);
+    getOpcoesPrivilegios(usuaseq,nivel,funcionalidade,modulo,situacao);
 
 }

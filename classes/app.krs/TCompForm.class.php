@@ -56,8 +56,9 @@ class TCompForm {
         $criteriaTipoCampo = new TCriteria();
         $criteriaTipoCampo->add(new TFilter('statseq','=',1));
         $retTipoCampo = $this->obKDbo->select('tpcadesc,tipodado,seq',$criteriaTipoCampo);
-        while($obTipoCampo = $retTipoCampo->fetchObject())
+        while($obTipoCampo = $retTipoCampo->fetchObject()){
         	$listaTipoCampo[$obTipoCampo->seq] = $obTipoCampo;
+        }
 
         while($camposId = $RetIdCampos->fetchObject()) {
             $this->obKDbo->setEntidade('campos');
@@ -85,18 +86,9 @@ class TCompForm {
             	$cmp->tpcaseq = '7';
             }
 
-            //verifica se o campo esta ativado
-            if($cmp->ativafunction and $obTabela->tabela && $cmp->tipo != 'TButton') {
-
-                //==============================================================
-                //testa a existencia de função na permanecia do campo em DB
-                if($cmp->incontrol) {
-                    $inControl = $cmp->incontrol;
-                }
-                
                 //==================================================================
                 //compila valor padrão
-                if($cmp->valorpadrao != "-"){
+            if($cmp->valorpadrao != '-'){
 
                     $valorDefalt = $cmp->valorpadrao;
                     
@@ -116,6 +108,15 @@ class TCompForm {
                 	$cmp->valorpadrao = '';
                 }
                 //==================================================================
+
+            //verifica se o campo esta ativado
+            if($cmp->ativafunction and $obTabela->tabela && $cmp->tipo != 'TButton') {
+
+                //==============================================================
+                //testa a existencia de função na permanecia do campo em DB
+                if($cmp->incontrol) {
+                    $inControl = $cmp->incontrol;
+                }
 
                 //==============================================================
                 // monta estrutura de campos na sessão

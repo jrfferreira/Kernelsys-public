@@ -2,8 +2,8 @@ function setTipoForm(ob, flag){
 	if(!flag){
 		flag = 0;
 	}
-    var pF = document.getElementById('bloc_pessoaFisica');
-    var pJ = document.getElementById('bloc_pessoaJuridica');
+    var pF = $('#bloc_pessoaFisica');
+    var pJ = $('#bloc_pessoaJuridica');
     
     if(typeof(ob) == "string"){
         ob = document.getElementById(ob);
@@ -15,19 +15,19 @@ function setTipoForm(ob, flag){
     
     if(ob.id == 'tipo1'){
         if(ob.value == "F" & ob.checked == true){
-            pF.style.display = "block";
-            pJ.style.display  = "none";
+            pF.show().find('[manter]').attr('manter', true);
+            pJ.hide().find('[manter]').attr('manter', false);
         }else{
-            pF.style.display = "none";
-            pJ.style.display  = "block";
+            pF.hide().find('[manter]').attr('manter', false);
+            pJ.show().find('[manter]').attr('manter', true);
         }
     }else{
         if(ob.value == "J" & ob.checked == true){
-            pF.style.display = "none";
-            pJ.style.display  = "block";
+            pF.hide().find('[manter]').attr('manter', false);
+            pJ.show().find('[manter]').attr('manter', true);
         }else{
-            pF.style.display = "block";
-            pJ.style.display  = "none";
+            pF.show().find('[manter]').attr('manter', true);
+            pJ.hide().find('[manter]').attr('manter', false);
         }
     }
 }

@@ -69,7 +69,7 @@ class TRadioGroup extends TField{
                     // marca o radio button
                     $button->setProperty('checked', '1');
                 }
-                else if($this->valorPadrao == $index){
+                else if(!$this->value and $this->valorPadrao == $index){
                 	$button->setProperty('checked', '1');
                 }	
                 	

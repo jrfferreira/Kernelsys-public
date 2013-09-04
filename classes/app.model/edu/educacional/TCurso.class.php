@@ -124,8 +124,8 @@ class TCurso{
                 }
             }
 
-            $vetInsert['cargahortotal'] = $soma;
-            $sqlInsertCHT = new TDbo(TConstantes::DBCURSO);
+            $vetInsert['cargahoraria'] = $soma;
+            $sqlInsertCHT = new TDbo(TConstantes::DBPROJETO_CURSO);
                 $critInsert = new TCriteria();
                 $critInsert->add(new TFilter("seq","=",$codigoCurso));
             $sqlInsertCHT = $sqlInsertCHT->update($vetInsert, $critInsert);

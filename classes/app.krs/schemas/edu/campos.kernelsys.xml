@@ -7911,7 +7911,7 @@
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
-      <label>Endereço:</label>
+      <label>Logradouro:</label>
       <manter/>
       <mascara/>
       <outcontrol>-</outcontrol>
@@ -14710,11 +14710,11 @@
       <colunadb>pessnmrf</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
-      <incontrol>validaCpf</incontrol>
+      <incontrol>validaCpfCnpj</incontrol>
       <label>CPF:</label>
       <manter/>
       <mascara>'999.999.999-99',1</mascara>
-      <outcontrol>setCPF</outcontrol>
+      <outcontrol> </outcontrol>
       <seletor/>
       <seq>423</seq>
       <statseq>1</statseq>
@@ -14735,11 +14735,11 @@
       <colunadb>pessnmrf</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
-      <incontrol>validaCnpj</incontrol>
+      <incontrol>validaCpfCnpj</incontrol>
       <label>CNPJ:</label>
       <manter/>
       <mascara>'99.999.999/9999-99',1</mascara>
-      <outcontrol>setCNPJ</outcontrol>
+      <outcontrol>setCpfCnpj</outcontrol>
       <seletor/>
       <seq>348</seq>
       <statseq>1</statseq>
@@ -16801,31 +16801,6 @@
       <valornull>0</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="340">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cpfFornecedor</campo>
-      <colunadb>pessnmrf</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>validaCpf</incontrol>
-      <label>CPF:</label>
-      <manter/>
-      <mascara>'999.999.999-99',1</mascara>
-      <outcontrol>setCPF</outcontrol>
-      <seletor/>
-      <seq>340</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valornull>0</valornull>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="782">
       <alteravel>1</alteravel>
       <ativafunction>0</ativafunction>
@@ -16835,15 +16810,40 @@
       <colunadb>pessnmrf</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
-      <incontrol>validaCpf</incontrol>
+      <incontrol>validaCpfCnpj</incontrol>
       <label>CPF:</label>
       <manter/>
       <mascara>'999.999.999-99',1</mascara>
-      <outcontrol>setCPF</outcontrol>
+      <outcontrol>setCpfCnpj</outcontrol>
       <seletor/>
       <seq>782</seq>
       <statseq>1</statseq>
       <tabseq>2</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valornull>0</valornull>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="340">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>cpfFornecedor</campo>
+      <colunadb>pessnmrf</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>validaCpfCnpj</incontrol>
+      <label>CPF:</label>
+      <manter/>
+      <mascara>'999.999.999-99',1</mascara>
+      <outcontrol>setCpfCnpj</outcontrol>
+      <seletor/>
+      <seq>340</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
@@ -19576,6 +19576,31 @@
       <valornull>0</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="433">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>cnpj</campo>
+      <colunadb>pessnmrf</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>validaCpfCnpj</incontrol>
+      <label>CNPJ:</label>
+      <manter/>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <outcontrol>setCpfCnpj</outcontrol>
+      <seletor/>
+      <seq>433</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valornull>1</valornull>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="243">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -19585,11 +19610,11 @@
       <colunadb>pessnmrf</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
-      <incontrol>validaCpf</incontrol>
+      <incontrol>validaCpfCnpj</incontrol>
       <label>CPF:</label>
       <manter/>
       <mascara>'999.999.999-99',1</mascara>
-      <outcontrol>setCPF</outcontrol>
+      <outcontrol>setCpfCnpj</outcontrol>
       <seletor/>
       <seq>243</seq>
       <statseq>1</statseq>
@@ -19601,29 +19626,29 @@
       <valornull>1</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="433">
+    <row seq="12">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
-      <campo>cnpj</campo>
-      <colunadb>pessnmrf</colunadb>
-      <datacad>1900-01-01</datacad>
+      <campo>complemento</campo>
+      <colunadb>complemento</colunadb>
+      <datacad>2013-09-03</datacad>
       <help/>
-      <incontrol>validaCnpj</incontrol>
-      <label>CNPJ:</label>
+      <incontrol>0</incontrol>
+      <label>Complemento:</label>
       <manter/>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <outcontrol>setCNPJ</outcontrol>
+      <mascara/>
+      <outcontrol>-</outcontrol>
       <seletor/>
-      <seq>433</seq>
+      <seq>12</seq>
       <statseq>1</statseq>
-      <tabseq>1</tabseq>
+      <tabseq>49</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
-      <valornull>1</valornull>
+      <valornull>0</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
   </campos>

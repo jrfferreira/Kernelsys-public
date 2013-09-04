@@ -31,7 +31,7 @@ function consultarParcela(formseq, obj){
 
 
 //Executa baixa de parcelas selecionadas
-function baixaParcela(tipoRetorno, formseq, obRetorno, confirme){
+function baixaParcela(tipoRetorno, formseq, obRetorno, confirme, listaParcela){
 	
 	if(confirme!=""){
 
@@ -50,7 +50,7 @@ function baixaParcela(tipoRetorno, formseq, obRetorno, confirme){
 	              "Confirmar": function() {	            	  
 	                  $(this).remove();
 	                  if(typeof(obRetorno) == "string"){
-	                      var view = obRetorno;
+	                      var view = 'winRet';
 	                  }
 	                  
 	                  
@@ -63,7 +63,12 @@ function baixaParcela(tipoRetorno, formseq, obRetorno, confirme){
 	                  
 	                  var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq, dados, 'POST', 'Sucesso');
 
-	                  setExcecao(formseq, view, 'close', retorno);
+	                  setExcecao(formseq, view, 'open', retorno);
+	                  
+	             	 var erro = getErro(retorno);
+	                 if(erro != 'erro'){
+	                	 listaRefresh(listaParcela);
+	                 }
 	              }
 	          }
 	      });

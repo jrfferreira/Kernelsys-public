@@ -1121,38 +1121,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="187">
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acenviar>1</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>statseq/=/AND/1</filtro>
-      <filtropai>seq</filtropai>
-      <formainclude>oneone</formainclude>
-      <formseq>3</formseq>
-      <incontrol/>
-      <label>Disciplinas</label>
-      <lista>pesqDisciplina</lista>
-      <listseq>187</listseq>
-      <nivel>2</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>discseq=seq,disiseq=seq</pesquisa>
-      <required/>
-      <seq>187</seq>
-      <statseq>1</statseq>
-      <tabseq>8</tabseq>
-      <tipo>pesq</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="423">
       <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
@@ -1953,38 +1921,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="134">
-      <acdeletar>1</acdeletar>
-      <aceditar>0</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>0</acfiltro>
-      <acincluir>Adicionar Disicplinas</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro/>
-      <filtropai>cursseq</filtropai>
-      <formainclude>multiple</formainclude>
-      <formseq>354</formseq>
-      <incontrol/>
-      <label>Disciplinas</label>
-      <lista>listDisciplinas</lista>
-      <listseq>132</listseq>
-      <nivel>2</nivel>
-      <obapendice>TCurso/getCargaHoraria</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>134</seq>
-      <statseq>1</statseq>
-      <tabseq>10</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="279">
       <acdeletar>1</acdeletar>
       <aceditar>1</aceditar>
@@ -2301,6 +2237,38 @@
       <statseq>1</statseq>
       <tabseq>70</tabseq>
       <tipo>pesq</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="134">
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>0</acfiltro>
+      <acincluir>Adicionar Disicplinas</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro/>
+      <filtropai>pjcuseq</filtropai>
+      <formainclude>multiple</formainclude>
+      <formseq>354</formseq>
+      <incontrol/>
+      <label>Disciplinas</label>
+      <lista>listDisciplinas</lista>
+      <listseq>132</listseq>
+      <nivel>2</nivel>
+      <obapendice>TCurso/getCargaHoraria</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>134</seq>
+      <statseq>1</statseq>
+      <tabseq>10</tabseq>
+      <tipo>form</tipo>
       <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -5565,6 +5533,38 @@
       <statseq>1</statseq>
       <tabseq>3</tabseq>
       <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="187">
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acenviar>1</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>statseq/=/AND/1</filtro>
+      <filtropai>seq</filtropai>
+      <formainclude>oneone</formainclude>
+      <formseq>3</formseq>
+      <incontrol/>
+      <label>Disciplinas</label>
+      <lista>pesqDisciplina</lista>
+      <listseq>187</listseq>
+      <nivel>2</nivel>
+      <obapendice>-</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>discseq=seq,disiseqLabel=titulo</pesquisa>
+      <required/>
+      <seq>187</seq>
+      <statseq>1</statseq>
+      <tabseq>8</tabseq>
+      <tipo>pesq</tipo>
       <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

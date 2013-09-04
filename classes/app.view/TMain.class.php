@@ -149,8 +149,8 @@ class TMain {
         /**
          * armazena seq do objeto(registro) em sessão para associações (chave estrangeira) dos objetos filhos
          */
-        if($dados[TConstantes::SEQUENCIAL]){
-        	$this->obHeader->addHeader($this->idObject,TConstantes::SEQUENCIAL, $dados[TConstantes::SEQUENCIAL]);
+        if($dados[$this->entidadeForm][TConstantes::SEQUENCIAL]){
+        	$this->obHeader->addHeader($this->idObject,TConstantes::SEQUENCIAL, $dados[$this->entidadeForm][TConstantes::SEQUENCIAL]);
         	$this->header = $this->obHeader->getHead($this->idObject);
         	//$this->obsession->setValue('seqatual'.$this->idObject, $dados['seq']);
         }
@@ -279,10 +279,15 @@ class TMain {
     				$valorCampo = null;
     			}
     			    			
-    			//carrega sequencial no campo se existir
+    			//carrega sequencial no campo se existir  - [Verifica necessidade]
     			if($this->header[TConstantes::SEQUENCIAL] and is_numeric($this->header[TConstantes::SEQUENCIAL])){
     				    				
-    				$camposSession[$nomeCampo]['seq'] = $this->header[TConstantes::SEQUENCIAL];
+    				if($this->header[TConstantes::ENTIDADE] == $camposSession[$nomeCampo][TConstantes::ENTIDADE]){
+    					$camposSession[$nomeCampo][TConstantes::SEQUENCIAL] = $this->header[TConstantes::SEQUENCIAL];
+    				}else{
+    					
+    					$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][$this->header[TConstantes::HEAD_COLUNAFK]] = $this->header[TConstantes::SEQUENCIAL];
+    				}
     			}
     			else if($this->nivelExec > 1){
     				    				    				
@@ -336,7 +341,7 @@ class TMain {
     			 
     			$camposSession[$nomeCampo] = $campoAtual;
     			
-    			//popula objeto de dados para persistencia
+    			//popula objeto de dados para persistencia agrupando por entidade
     			$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][$nomeCampo] = $valorCampo;
     			 
     			//Seta o sequêncial do registro caso exista
@@ -358,7 +363,7 @@ class TMain {
 		    			    			    			    			    	
 		    		$results_session = $this->obHeader->getHead($this->header[TConstantes::LISTA], TConstantes::LIST_OBJECT);
 		    				    		
-		    			//destri registro caso j� exista um item na sess�o da lista com o seq temporario
+		    			//destroi registro caso já exista um item na sessão da lista com o seq temporario
 		    			unset($results_session[$this->header[TConstantes::SEQUENCIAL]]);
 		    					    			    		
 		    		$results_session[$seq_tmp] = $camposSession;		    		
@@ -547,6 +552,8 @@ class TMain {
     *Recarrega a lista alvo
     */
     public function onRefresh(){
+
+    	$this->obHeader->clearHeader($this->idObject);
 
         //recarrega a lista
         $this->getList();

@@ -191,7 +191,13 @@ class TSetHeader{
                     $criteriaListaForm->add(new TFilter('seq', '=', $Form->listseq));
                 $retListaForm = $this->dboKs->select('tipo, entidade, label, formainclude', $criteriaListaForm);
                 $listaForm = $retListaForm->fetchObject();
+                
+                if($listaForm->tipo){
                 $tipoForm = $listaForm->tipo;
+                }else{
+                	$tipoForm = 'form';
+                }
+                
 
 
                 //==============================================================

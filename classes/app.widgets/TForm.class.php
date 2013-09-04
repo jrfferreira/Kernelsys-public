@@ -77,9 +77,21 @@ class TForm{
      */
     public function setData($object){
 
-        if(count($this->fields) > 0){
+        if(count($object) > 0){
+        	
+        	foreach ($object as $table => $campos){
+        		
+        		foreach($campos as $name=>$valorCampo){   
+        			     	
+	        			$coluna = $name;
+	        			if(is_object($this->fields[$coluna])){
+	        				$this->fields[$coluna]->setValue($valorCampo);
+	        			}
+	        	}
+        	}
+        	
 
-            foreach ($this->fields as $name => $field){
+		/*  foreach ($this->fields as $name => $field){
 
                     $coluna = $field->getName();
                 if ($coluna){ // labels não possuem nome
@@ -99,7 +111,7 @@ class TForm{
                      $field->setValue($valorCampo);
                      $valorCampo = NULL;
                 }
-            }
+            }*/
         }
     }
     

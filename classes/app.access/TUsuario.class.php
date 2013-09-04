@@ -239,6 +239,8 @@ class TUsuario {
 
 							$TDbo_Situacao = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retornoSituacao = $TDbo_Situacao->update($dSituacao, $dSituacaoCrit);
+							
+							$TDbo_Situacao->close();
 
 							return $retorno;
 						} else {

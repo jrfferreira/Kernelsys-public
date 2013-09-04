@@ -18,7 +18,7 @@ class TDados {
 
         $this->formseq = $formseq;
 
-            //retorna o cabeÃ§alho do formulário
+            //retorna o cabeçalho do formulário
             $this->obHeaderForm = new TSetHeader();
             $this->headerForm = $this->obHeaderForm->getHead($this->formseq);
 
@@ -29,11 +29,11 @@ class TDados {
 
             $this->entidades[$this->ent] = $this->ent;
 
-            $this->dados = $this->load($this->ent,$this->seqReg,$this->campoChave);
-            if($tipo == 'form') {
+            //$this->dados = $this->load($this->ent,$this->seqReg,$this->campoChave);
+            //if($tipo == 'form') {
                 $this->setDados($this->formseq);
+            //}
             }
-        }
 
     }
 
@@ -89,8 +89,8 @@ class TDados {
             if($sDados) {// verifica se há registro no vetor
                 foreach($sDados as $ec=>$ev) {
 
-                    if(!array_key_exists($ec, $this->dados)){
-                         $this->dados[$ec] = $ev;
+                    if(is_null($this->dados) || !array_key_exists($ec, $this->dados)){
+                         $this->dados[$entity][$ec] = $ev;
                     }
                 }
             }

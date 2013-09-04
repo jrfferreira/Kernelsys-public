@@ -107,6 +107,7 @@ class DocumentoBO{
 						$dbo->setEntidade($this->headList[TConstantes::ENTIDADE]);
 							$criteriaPc = new TCriteria();
 							$criteriaPc->add(new TFilter('seq','=',$parcela, 'numeric'));
+							$criteriaPc->add(new TFilter('stpcseq','=',1, 'numeric'));
 						$retParcela = $dbo->update($situacaoParcela, $criteriaPc);
 						
 						if(!$retParcela){

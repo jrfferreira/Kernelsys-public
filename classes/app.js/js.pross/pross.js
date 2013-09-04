@@ -368,7 +368,13 @@ function compAction(act, key){
  * @param formseq = Id fo formulário representado pela lista
  */
 function listaRefresh(listseq){
-    var obRetorno = 'contLista'+listseq;
+	
+	if(listseq != 'contLista'+listseq){
+		var obRetorno = 'contLista'+listseq;
+	}else{
+		var obRetorno = listseq;
+	}
+    
     var metodo = 'onRefresh';
     exe(obRetorno,getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno=lista&formseq='+listseq+'&ret='+obRetorno, '', 'POST','Sucesso');
 }

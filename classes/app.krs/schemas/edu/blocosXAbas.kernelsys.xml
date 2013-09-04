@@ -1,66 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <blocosXAbas>
-    <row seq="6">
-      <abaseq>11</abaseq>
-      <blocseq>14</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>6</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="7">
-      <abaseq>11</abaseq>
-      <blocseq>15</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>7</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="8">
-      <abaseq>13</abaseq>
-      <blocseq>19</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>8</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="9">
-      <abaseq>14</abaseq>
-      <blocseq>16</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>9</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="10">
-      <abaseq>15</abaseq>
-      <blocseq>17</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>10</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="11">
-      <abaseq>16</abaseq>
-      <blocseq>18</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>11</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="14">
       <abaseq>18</abaseq>
       <blocseq>22</blocseq>
@@ -491,16 +431,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="73">
-      <abaseq>68</abaseq>
-      <blocseq>84</blocseq>
-      <datacad>1900-01-01</datacad>
-      <ordem/>
-      <seq>73</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="74">
       <abaseq>68</abaseq>
       <blocseq>85</blocseq>
@@ -927,6 +857,76 @@
       <datacad>1900-01-01</datacad>
       <ordem>3</ordem>
       <seq>154</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="73">
+      <abaseq>68</abaseq>
+      <blocseq>84</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem/>
+      <seq>73</seq>
+      <statseq>9</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="6">
+      <abaseq>11</abaseq>
+      <blocseq>14</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>1</ordem>
+      <seq>6</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="7">
+      <abaseq>11</abaseq>
+      <blocseq>15</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>2</ordem>
+      <seq>7</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="8">
+      <abaseq>13</abaseq>
+      <blocseq>19</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>1</ordem>
+      <seq>8</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="9">
+      <abaseq>14</abaseq>
+      <blocseq>16</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>1</ordem>
+      <seq>9</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="10">
+      <abaseq>15</abaseq>
+      <blocseq>17</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>1</ordem>
+      <seq>10</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="11">
+      <abaseq>16</abaseq>
+      <blocseq>18</blocseq>
+      <datacad>1900-01-01</datacad>
+      <ordem>1</ordem>
+      <seq>11</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

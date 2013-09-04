@@ -25,14 +25,14 @@ class TPrivilegios {
 	
     /**
      * 
-     * @param $sequsuario
+     * @param $usuaseq
      */
-    public function viewGetModulos($sequsuario) {
+    public function viewGetModulos($usuaseq) {
     	
-        if($sequsuario) {
+        if($usuaseq) {
         	
             $TUsuario = new TUsuario();
-            $obUsuario = $TUsuario->getPrivilegios($sequsuario);
+            $obUsuario = $TUsuario->getPrivilegios($usuaseq);
             $obModulos = $this->getModulos();
 
             $this->ob = new TElement("div");
@@ -45,7 +45,7 @@ class TPrivilegios {
                 $campoReq = new TCheckButton("modulo-".$ch);
                 $campoReq->setValue("1");
                 $campoReq->setId('00'.$ch);
-                $campoReq->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'0\',\'0\',\''.$ch.'\')');
+                $campoReq->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'0\',\'0\',\''.$ch.'\')');
 
                 $div = new TElement("div");
                 $div->id = '0-0'.$ch;
@@ -53,7 +53,7 @@ class TPrivilegios {
                 $div->class="ui_bloco_conteudo";
 
                 if($obUsuario["0"]["0"][$ch]["1"]) {
-                    //$retMenuChecked = $this->viewGetMenu($sequsuario, $ch);
+                    //$retMenuChecked = $this->viewGetMenu($usuaseq, $ch);
                     //$div->add($retMenuChecked);
                     $campoReq->checked = "checked";
                     $campoReqSituacao = "1";
@@ -62,7 +62,7 @@ class TPrivilegios {
                     $div->add("");
                 }
                 $fieldSetLegenda->add($campoReq);
-                $fieldSetLegenda->add(" <span class='ui_bloco_legendas' onclick=\"getOpcoesPrivilegios('".$sequsuario."','0','0','".$ch."','".$campoReqSituacao."')\">".$vl->labelmodulo."</span>");
+                $fieldSetLegenda->add(" <span class='ui_bloco_legendas' onclick=\"getOpcoesPrivilegios('".$usuaseq."','0','0','".$ch."','".$campoReqSituacao."')\">".$vl->labelmodulo."</span>");
                 $fieldSet->add($fieldSetLegenda);
                 $fieldSet->add($div);
 
@@ -77,7 +77,7 @@ class TPrivilegios {
                 $campoReq = new TCheckButton("modulo-".$ch);
                 $campoReq->setValue("1");
                 $campoReq->setId('00'.$ch);
-                $campoReq->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'0\',\'0\',\''.$ch.'\')');
+                $campoReq->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'0\',\'0\',\''.$ch.'\')');
 
                 $div = new TElement("div");
                 $div->id = '0-0'.$ch;
@@ -87,7 +87,7 @@ class TPrivilegios {
                     $campoReqSituacao = "0";
                     $div->add("");
                 $fieldSetLegenda->add($campoReq);
-                $fieldSetLegenda->add(" <span class='ui_bloco_legendas' onclick=\"getOpcoesPrivilegios('".$sequsuario."','0','0','".$ch."','".$campoReqSituacao."')\">Outros</span>");
+                $fieldSetLegenda->add(" <span class='ui_bloco_legendas' onclick=\"getOpcoesPrivilegios('".$usuaseq."','0','0','".$ch."','".$campoReqSituacao."')\">Outros</span>");
                 $fieldSet->add($fieldSetLegenda);
                 $fieldSet->add($div);
 
@@ -107,7 +107,7 @@ class TPrivilegios {
         $TDbo_menus = new TKrs('menu');
 
         $crit = new TCriteria();
-        $crit->add(new TFilter("modseq","=",$modulo));
+        //$crit->add(new TFilter("modulo","=",$modulo));
         $crit->add(new TFilter("labelmodulo","!=",""));
         $crit->add(new TFilter("statseq","=","1"));
         if($modulo) {
@@ -124,13 +124,13 @@ class TPrivilegios {
 	
     /**
      * 
-     * @param $sequsuario
+     * @param $usuaseq
      * @param $funcionalidade
      */
-    public function viewGetMenu($sequsuario,$funcionalidade) {
+    public function viewGetMenu($usuaseq,$funcionalidade) {
 
             $TUsuario = new TUsuario();
-            $obUsuario = $TUsuario->getPrivilegios($sequsuario);
+            $obUsuario = $TUsuario->getPrivilegios($usuaseq);
         if($funcionalidade != '0') {
 
             $obMenus = $this->getMenu($funcionalidade);
@@ -141,14 +141,14 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("menus-".$ch);
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId('1'.$funcionalidade.$ch);
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'1\',\''.$funcionalidade.'\',\''.$ch.'\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'1\',\''.$funcionalidade.'\',\''.$ch.'\')');
 
                 $divMenu = new TElement("div");
                 $divMenu->id = '1-'.$funcionalidade.$ch;
                 $divMenu->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
 
                 if($obUsuario["1"][$funcionalidade][$ch]["1"]) {
-                    $retOpcoesListaChecked = $this->viewGetOpcoesLista($sequsuario, $ch);
+                    $retOpcoesListaChecked = $this->viewGetOpcoesLista($usuaseq, $ch);
                     $divMenu->add($retOpcoesListaChecked);
                     $campoReqMenu->checked = "checked";
                 }else {
@@ -158,7 +158,7 @@ class TPrivilegios {
                 $divMenu2 = new TElement("div");
                 $divMenu2->id = '4-'.$funcionalidade.$ch;
                 $divMenu2->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
-                $abas = $this->viewGetFormAbas($sequsuario,$vl->formseq);
+                $abas = $this->viewGetFormAbas($usuaseq,$vl->formseq);
                 $divMenu2->add($abas);
                 
 
@@ -184,7 +184,7 @@ class TPrivilegios {
                 $divMenu = new TElement("div");
                 $divMenu->id = '4-'.$funcionalidade.$ch;
                 $divMenu->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
-                $abas = $this->viewGetFormAbas($sequsuario,$obDbo->seq);
+                $abas = $this->viewGetFormAbas($usuaseq,$obDbo->seq);
                 $divMenu->add($abas);
 
                 $fieldSetMenu->add("<b>Formulário:</b> {$obDbo->nomeform}");
@@ -216,10 +216,10 @@ class TPrivilegios {
 	
     /**
      * 
-     * @param unknown_type $sequsuario
+     * @param unknown_type $usuaseq
      * @param unknown_type $funcionalidade
      */
-    public function viewGetOpcoesLista($sequsuario,$funcionalidade) {
+    public function viewGetOpcoesLista($usuaseq,$funcionalidade) {
         if($funcionalidade) {
             
         $TDbo_menus = new TKrs('menu');
@@ -230,7 +230,7 @@ class TPrivilegios {
         $obMenu = $retMenus->fetchObject();
             $obOpcoesLista = $this->getOpcoesLista($obMenu->argumento);
             $TUsuario = new TUsuario();
-            $obUsuario = $TUsuario->getPrivilegios($sequsuario);
+            $obUsuario = $TUsuario->getPrivilegios($usuaseq);
 
             $obLista = new TElement("fieldset");
             $obLista->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
@@ -249,7 +249,7 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("opcoesLista-1");
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId("2".$obOpcoesLista->formseq."1");
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'1\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'1\')');
 
                 if($obUsuario["2"][$obOpcoesLista->formseq]['1']["1"]) {
                     $checklistoptions = true;
@@ -268,7 +268,7 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("opcoesLista-2");
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId("2".$obOpcoesLista->formseq."2");
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'2\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'2\')');
 
                 if($obUsuario["2"][$obOpcoesLista->formseq]['2']["1"]) {
                     $checklistoptions = true;
@@ -287,7 +287,7 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("opcoesLista-3");
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId("2".$obOpcoesLista->formseq."3");
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'3\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'3\')');
 
                 if($obUsuario["2"][$obOpcoesLista->formseq]["3"]["1"]) {
                     $checklistoptions = true;
@@ -307,7 +307,7 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("opcoesLista-4");
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId("2".$obOpcoesLista->formseq."4");
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'4\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'4\')');
 
                 if($obUsuario["2"][$obOpcoesLista->formseq]["4"]["1"]) {
                     $checklistoptions = true;
@@ -327,7 +327,7 @@ class TPrivilegios {
                 $campoReqMenu = new TCheckButton("opcoesLista-5");
                 $campoReqMenu->setValue("1");
                 $campoReqMenu->setId("2".$obOpcoesLista->formseq."5");
-                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$sequsuario.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'5\')');
+                $campoReqMenu->setProperty('onclick','setPrivilegio(this, \''.$usuaseq.'\',\'2\',\''.$obOpcoesLista->formseq.'\',\'5\')');
 
                 if($obUsuario["2"][$obOpcoesLista->formseq]["5"]["1"]) {
                     $checklistoptions = true;
@@ -344,8 +344,8 @@ class TPrivilegios {
             $divMenu->id = '2-123';
             $divMenu->style="padding-left: 15px; padding-top: 5px; padding-bottom: 5px;";
 
-            $colunas = $this->viewGetColunasLista($sequsuario,$obOpcoesLista->seq);
-            //$abas    = $this->viewGetFormAbas($sequsuario,$obOpcoesLista->formseq);
+            $colunas = $this->viewGetColunasLista($usuaseq,$obOpcoesLista->seq);
+            //$abas    = $this->viewGetFormAbas($usuaseq,$obOpcoesLista->formseq);
             $divMenu->add($colunas);
             //$divMenu->add($abas);
             $obLista->add($divMenu);

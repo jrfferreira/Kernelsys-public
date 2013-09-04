@@ -56,8 +56,6 @@ class TDisciplina{
                     $lista[$disc->seq] = $tDisc;
                 }
                 return $lista;
-            }else{
-                throw new ErrorException("A lista de codigos de disciplinas é invalido.");
             }
         }catch (Exception $e){
             new setException($e);

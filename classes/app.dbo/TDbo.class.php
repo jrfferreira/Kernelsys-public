@@ -273,7 +273,7 @@ class TDbo {
                     	
                     	$idRegAtual = $result->fetchObject()->seq;
                     	
-                    	$idRegAtual = $this->conn->lastInsertId($this->entity."_".TConstantes::SEQUENCIAL."_seq");
+                    	//$idRegAtual = $this->conn->lastInsertId($this->entity."_".TConstantes::SEQUENCIAL."_seq");
 
                         $retorno['id']     = $idRegAtual;
                         $retorno[TConstantes::SEQUENCIAL] = $idRegAtual;

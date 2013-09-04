@@ -31,7 +31,7 @@ class MovimentoCaixaBO{
 		$dbo->setEntidade(TConstantes::DBCONTAFINANCEIRA);
 			$criteriaCF = new TCriteria();
 			$criteriaCF->add(new TFilter('seq', '=', $dados['ctfnseq'], 'numeric'));
-			$criteriaCF->add(new TFilter('ativo', '!=', '3', 'numeric'));
+			$criteriaCF->add(new TFilter('statseq', '!=', '3', 'numeric'));
 		$retContaFinanceira = $dbo->update($saldoContaFinanceira, $criteriaCF);
 			
 			
@@ -58,6 +58,11 @@ class MovimentoCaixaBO{
 		
 		//Instancia janela de retorno das parcelas baixadas
 		$listaParcelasBaixadas = new TElement('div');//TWindow('Baixa de documentos');
+		$listaParcelasBaixadas->id = 'dialogcaixa';
+		$listaParcelasBaixadas->class = 'TWindow';
+			$titulo = new TElement('div');
+			$titulo->id='ui-dialog-title-dialogcaixa';
+		$listaParcelasBaixadas->add($titulo);
 		//$listaParcelasBaixadas->setAutoOpen(true);
 		//$listaParcelasBaixadas->setSize('400px','300px');
 		
@@ -75,7 +80,7 @@ class MovimentoCaixaBO{
 			$mcaixa['mvcxobse'] = $documento->dcprobse;// Observações sobre o movimento
 			$mcaixa['mvcxdtcx'] = $dados['dcprdtbx'];// Data do caixa
 			$mcaixa['mvcxvlor'] = $parcela->dcpcvlpc;// Valor pago/recebido no movimento
-			$mcaixa['mvcxrefe'] = '';// Referencia do plano de contas
+			$mcaixa['mvcxrefe'] = $parcela->dcpcdtrf;// data de Referencia
 			$mcaixa['pessseq'] = $documento->pessseq;// Sequencial que identifica a pessoa
 			$mcaixa['depeseq'] = $parcela->depeseq;// Sequencial que identifica o departamento
 			$mcaixa['plctseq'] = $parcela->plctseq;// Sequencial do plano de contas
@@ -84,7 +89,7 @@ class MovimentoCaixaBO{
 			$mcaixa['dcstseq'] = 1;// Sequencial que identifica a situação do movimento/documento
 			$mcaixa['mvcxsdcx'] = $saldoAtualizado; //Saldo atual do caixa recalculado a cada movimento 
 			$mcaixa['datacad'] = date('Y-m-d');// Data de cadastro do registro
-			$mcaixa['ativo'] = 1;// Sequencial que identifica o Status do registro
+			$mcaixa['statseq'] = 1;// Sequencial que identifica o Status do registro
 			
 			
 			//gera movimento de caixa para cada parcela baixada
@@ -96,7 +101,7 @@ class MovimentoCaixaBO{
 			$dbo->setEntidade(TConstantes::DBCONTAFINANCEIRA);
 				$criteriaCF = new TCriteria();
 				$criteriaCF->add(new TFilter('seq', '=', $dados['ctfnseq'], 'numeric'));
-				$criteriaCF->add(new TFilter('ativo', '!=', '3', 'numeric'));
+				$criteriaCF->add(new TFilter('statseq', '!=', '3', 'numeric'));
 			$retContaFinanceira = $dbo->update($saldoContaFinanceira, $criteriaCF);
 			
 			
@@ -141,7 +146,7 @@ class MovimentoCaixaBO{
 				
 				$dbo->setEntidade(TConstantes::DBMOVIMENTOCAIXA);
 					$criteriaMC = new TCriteria();
-					$criteriaMC->add(new TFilter('ativo', '!=', '3', 'numeric'));
+					$criteriaMC->add(new TFilter('statseq', '!=', '3', 'numeric'));
 					$criteriaMC->add(new TFilter('mvcxsdcx', '>', 0.00, 'numeric'));
 					$criteriaMC->setProperty('order', 'seq DESC');
 					$criteriaMC->setProperty('limit', 1);
@@ -183,7 +188,7 @@ class MovimentoCaixaBO{
 				$dbo->setEntidade(TConstantes::DBCONTAFINANCEIRA);
 					$criteriaCF = new TCriteria();
 					$criteriaCF->add(new TFilter('seq', '=', $contaFinanceira));
-					$criteriaCF->add(new TFilter('ativo', '!=', '3'));
+					$criteriaCF->add(new TFilter('statseq', '!=', '3'));
 				$retContaFinanceira = $dbo->select('ctfnsdcf', $criteriaCF);
 		
 				$obContaFinanceira = $retContaFinanceira->fetchObject();

@@ -221,6 +221,8 @@ class TSetlista {
         $this->load = TRUE;
         unset($_SESSION['boxFiltro_'.$this->listseq]);
         
+        $this->NumRows = null;
+        
         $this->load = true;
     }
 
@@ -336,6 +338,8 @@ class TSetlista {
                 }
             }
              
+            $this->NumRows = null;
+            $this->setPosition(0);
         }
         
         if(count($dados) > 0 and !array_key_exists ('expre'.$this->listseq,$dados)){//filtro normal
@@ -1031,7 +1035,9 @@ class TSetlista {
         $this->objHeader->addHeader($this->obHeader[TConstantes::LISTA], TConstantes::LIST_COUNT, $listCount);
             
         //Retorna número de registros na lista de acordo com a criteria
+        if(!$this->NumRows){
         $this->NumRows = $dbo->count($criteria);
+        }
             
         // finaliza a transação
         TTransaction::close();

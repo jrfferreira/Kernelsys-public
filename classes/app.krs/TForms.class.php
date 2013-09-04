@@ -178,11 +178,17 @@ class TForms{
             $runBots = $this->dboKs->select('*', $criteriaFormBot);
             while($retBots = $runBots->fetchObject()){
 
-                $action = new TAction($retBots->actionjs);
+            	//verifica algum argumento estatico no bontão
+            	$dataAction = explode(';', $retBots->actionjs);
+
+                $action = new TAction($dataAction[0]);
                 $action->setParameter('tipoRetorno', 'lista');
                 $action->setParameter(TConstantes::FORM, $this->formseq);
                 $action->setParameter('alvo', $this->paneRet);
                 $action->setParameter('confirme', $retBots->confirmacao);
+                if($dataAction[1]){
+                	$action->setParameter('argEstatico', $dataAction[1]);
+                }
 
                 $this->setButton($retBots->botao, $retBots->labelbotao, $action);//.$this->formseq
             }
@@ -371,8 +377,10 @@ class TForms{
                     if($listaCamposSession and is_array($listaCamposSession)){
                     	
                         foreach($listaCamposSession as $campo=>$infoCampo){
-                        	 $infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[TConstantes::SEQUENCIAL];
-                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$campo];
+                        	
+                        	 $infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
+                        	 
+                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
                              $infoCampo[TConstantes::FIELD_STATUS] = 1;
                              $listaCamposSession[$campo] = $infoCampo;
                         }

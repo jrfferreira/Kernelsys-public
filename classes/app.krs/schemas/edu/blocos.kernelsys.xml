@@ -1366,21 +1366,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="87">
-      <blocoheight>200px</blocoheight>
-      <blocoid>blocoProfissao</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>frm</formato>
-      <formseq/>
-      <frmpseq>71</frmpseq>
-      <nomebloco>Dados Profissionais</nomebloco>
-      <obapendice/>
-      <seq>87</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="135">
       <blocoheight>400px</blocoheight>
       <blocoid>blplanoaulaMetodologia</blocoid>
@@ -1726,6 +1711,21 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="87">
+      <blocoheight>200px</blocoheight>
+      <blocoid>blocoProfissao</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>frm</formato>
+      <formseq/>
+      <frmpseq>71</frmpseq>
+      <nomebloco>Dados Profissionais</nomebloco>
+      <obapendice/>
+      <seq>87</seq>
+      <statseq>0</statseq>
+      <tabseq>1</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="81">
       <blocoheight>200px</blocoheight>
       <blocoid>contratos</blocoid>
@@ -1871,21 +1871,6 @@
       <nomebloco>-</nomebloco>
       <obapendice/>
       <seq>112</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="23">
-      <blocoheight>380px</blocoheight>
-      <blocoid>discCurso</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>lst</formato>
-      <formseq>354</formseq>
-      <frmpseq>4</frmpseq>
-      <nomebloco>Disciplinas do curso</nomebloco>
-      <obapendice/>
-      <seq>23</seq>
       <statseq>1</statseq>
       <tabseq>999</tabseq>
       <unidseq>1</unidseq>
@@ -3211,21 +3196,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="22">
-      <blocoheight>200px</blocoheight>
-      <blocoid>infoCurso</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>frm</formato>
-      <formseq/>
-      <frmpseq>4</frmpseq>
-      <nomebloco>Inforrmações do Curso</nomebloco>
-      <obapendice/>
-      <seq>22</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="24">
       <blocoheight>200px</blocoheight>
       <blocoid>cargaHorTotal</blocoid>
@@ -3538,6 +3508,21 @@
       <seq>58</seq>
       <statseq>1</statseq>
       <tabseq>999</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="22">
+      <blocoheight>200px</blocoheight>
+      <blocoid>infoCurso</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>frm</formato>
+      <formseq/>
+      <frmpseq>4</frmpseq>
+      <nomebloco>Inforrmações do Curso</nomebloco>
+      <obapendice/>
+      <seq>22</seq>
+      <statseq>1</statseq>
+      <tabseq>9</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
@@ -3988,6 +3973,21 @@
       <seq>6</seq>
       <statseq>1</statseq>
       <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="23">
+      <blocoheight>380px</blocoheight>
+      <blocoid>discCurso</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>lst</formato>
+      <formseq>354</formseq>
+      <frmpseq>4</frmpseq>
+      <nomebloco>Disciplinas do curso</nomebloco>
+      <obapendice/>
+      <seq>23</seq>
+      <statseq>1</statseq>
+      <tabseq>9</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

@@ -12,17 +12,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="107">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>107</seq>
-      <statseq>1</statseq>
-      <tabela>dbregra_avaliacao</tabela>
-      <tabelaView>dbregra_avaliacao</tabelaView>
-      <tabseq>106</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="102">
       <colunafilho>0</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -177,17 +166,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="45">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>45</seq>
-      <statseq>1</statseq>
-      <tabela>dbarea_curso</tabela>
-      <tabelaView>view_area_curso</tabelaView>
-      <tabseq>9</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="80">
       <colunafilho>0</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -287,17 +265,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="18">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>18</seq>
-      <statseq>1</statseq>
-      <tabela>dbplano_conta</tabela>
-      <tabelaView>view_plano_conta</tabelaView>
-      <tabseq/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="37">
       <colunafilho>0</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -339,17 +306,6 @@
       <tabela>--SEM USO-- dbprojetos_colaboradores</tabela>
       <tabelaView>--SEM USO-- view_projetos_colaboradores</tabelaView>
       <tabseq>58</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="75">
-      <colunafilho>profseq</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>75</seq>
-      <statseq>1</statseq>
-      <tabela>dbprofessor_area</tabela>
-      <tabelaView>--SEM USO-- dbprofessor_area</tabelaView>
-      <tabseq>15</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
@@ -606,6 +562,17 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="75">
+      <colunafilho>profseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>75</seq>
+      <statseq>1</statseq>
+      <tabela>dbprofessor_area</tabela>
+      <tabelaView>view_professor_area</tabelaView>
+      <tabseq>45</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="2">
       <colunafilho>seq</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -617,25 +584,25 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="5">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>5</seq>
-      <statseq>1</statseq>
-      <tabela>dbpessoa_fisica</tabela>
-      <tabelaView>view_pessoa_fisica</tabelaView>
-      <tabseq>1</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="6">
-      <colunafilho>0</colunafilho>
+      <colunafilho>pejuseq</colunafilho>
       <datacad>1900-01-01</datacad>
       <seq>6</seq>
       <statseq>1</statseq>
       <tabela>dbpessoa_juridica</tabela>
       <tabelaView>view_pessoa_juridica</tabelaView>
       <tabseq>1</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="18">
+      <colunafilho>plcoseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>18</seq>
+      <statseq>1</statseq>
+      <tabela>dbplano_conta</tabela>
+      <tabelaView>view_plano_conta</tabelaView>
+      <tabseq/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
@@ -705,6 +672,39 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="45">
+      <colunafilho>arcuseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>45</seq>
+      <statseq>1</statseq>
+      <tabela>dbarea_curso</tabela>
+      <tabelaView>view_area_curso</tabelaView>
+      <tabseq>9</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="5">
+      <colunafilho>pefiseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>5</seq>
+      <statseq>1</statseq>
+      <tabela>dbpessoa_fisica</tabela>
+      <tabelaView>view_pessoa_fisica</tabelaView>
+      <tabseq>1</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="107">
+      <colunafilho>rgavseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>107</seq>
+      <statseq>1</statseq>
+      <tabela>dbregra_avaliacao</tabela>
+      <tabelaView>dbregra_avaliacao</tabelaView>
+      <tabseq>106</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="83">
       <colunafilho>0</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -723,17 +723,6 @@
       <statseq>1</statseq>
       <tabela>--SEM USO-- dbquestoes_itens</tabela>
       <tabelaView>--SEM USO-- view_questoes_itens</tabelaView>
-      <tabseq/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="99">
-      <colunafilho>codigorecado</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>99</seq>
-      <statseq>1</statseq>
-      <tabela>dbrecado</tabela>
-      <tabelaView>view_recado</tabelaView>
       <tabseq/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -834,17 +823,6 @@
       <tabela>dbturma_disciplina_planoaula</tabela>
       <tabelaView>view_turma_disciplina_planoaula</tabelaView>
       <tabseq/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="23">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>23</seq>
-      <statseq>1</statseq>
-      <tabela>dbrequisito_turma</tabela>
-      <tabelaView>view_requisito_turma</tabelaView>
-      <tabseq>11</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
@@ -1002,8 +980,19 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="4">
+      <colunafilho>tituseq</colunafilho>
+      <datacad>2013-09-03</datacad>
+      <seq>4</seq>
+      <statseq>1</statseq>
+      <tabela>dbtitularidade</tabela>
+      <tabelaView>dbtitularidade</tabelaView>
+      <tabseq/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="43">
-      <colunafilho>0</colunafilho>
+      <colunafilho>petiseq</colunafilho>
       <datacad>1900-01-01</datacad>
       <seq>43</seq>
       <statseq>1</statseq>
@@ -1013,8 +1002,30 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="99">
+      <colunafilho>recaseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>99</seq>
+      <statseq>1</statseq>
+      <tabela>dbrecado</tabela>
+      <tabelaView>view_recado</tabelaView>
+      <tabseq/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="23">
+      <colunafilho>rqtuseq</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>23</seq>
+      <statseq>1</statseq>
+      <tabela>dbrequisito_turma</tabela>
+      <tabelaView>view_requisito_turma</tabelaView>
+      <tabseq>11</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="3">
-      <colunafilho>0</colunafilho>
+      <colunafilho>foneseq</colunafilho>
       <datacad>2013-08-21</datacad>
       <seq>3</seq>
       <statseq>1</statseq>

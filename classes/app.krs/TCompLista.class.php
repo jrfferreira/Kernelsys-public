@@ -447,10 +447,14 @@ class TCompLista {
         if (count($this->obAction) > 0) {
             foreach ($this->obAction as $seqAct => $actInfo) {
 
+            	$metodoExe = explode(';', $actInfo->metodoexe);
 
                 if ($actInfo->actionjs == "prossExe") {
                     $inAct = new TSetAction($actInfo->actionjs);
-                    $inAct->setMetodo($actInfo->metodoexe);
+                    $inAct->setMetodo($metodoExe[0]);
+                    	if($metodoExe[1]){
+                    		$inAct->metodoarg = $metodoExe[1];
+                    	}
                     $inAct->setTipoRetorno($actInfo->tiporetorno);
                     $inAct->setIdForm($this->formseq);
                     $inAct->setConfirme($actInfo->confirm);
@@ -467,8 +471,12 @@ class TCompLista {
                     if ($actInfo->tipocampo) {
                         $inAct->setParameter('this', "this");
                     }
-                    if ($actInfo->metodoexe) {
-                        $inAct->setParameter('metodo', $actInfo->metodoexe);
+                    if ($metodoExe[0]) {
+                        $inAct->setParameter('metodo', $metodoExe[0]);
+                        if($metodoExe[1]){
+                        	$inAct->setParameter('metodoarg',$metodoExe[1]);
+                        }
+                        
                     }
                     if ($actInfo->tiporetorno) {
                         $inAct->setParameter('tiporetorno', $actInfo->tiporetorno);

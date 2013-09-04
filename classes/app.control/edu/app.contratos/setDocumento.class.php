@@ -96,7 +96,7 @@ class setDocumento{
         $this->contrato->html = str_replace("[turma_tipoCurso]", $this->contrato->especializacao->pessnmrz, $this->contrato->html);
         $this->contrato->html = str_replace("[turma_nomeCurso]", $this->contrato->especializacao->nome, $this->contrato->html);
         $this->contrato->html = str_replace("[turma_nomeTurma]", $this->contrato->especializacao->nometurma, $this->contrato->html);
-        $this->contrato->html = str_replace("[turma_cargaHoraria]", $this->contrato->especializacao->cargahortotal, $this->contrato->html);
+        $this->contrato->html = str_replace("[turma_cargaHoraria]", $this->contrato->especializacao->cargahoraria, $this->contrato->html);
 
     }
     function html(){

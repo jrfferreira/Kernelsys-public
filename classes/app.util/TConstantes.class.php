@@ -17,6 +17,8 @@ class TConstantes{
     const DBTURMA_REQUISITO               = "dbrequisito_turma";
     const DBCONTA_FINANCEIRA                    = "dbconta_financeira";
     const DBCONTA_FINANCEIRA_HISTORICO          = "dbconta_financeira_historico";
+    const DBCONTAFINANCEIRA                	= "dbcontafinanceira";
+    const DBCONTAFINANCEIRAHISTORICO     	= "dbcontafinanceirahistorico";
     const DBFALTA                   		= "dbfalta";
     const DBUSUARIO                        = "dbusuario";
     const DBCARGOS                          = "dbcargo";
@@ -69,6 +71,7 @@ class TConstantes{
     const DBCURSO							= "dbcurso";
     const DBDISCIPLINA						= "dbdisciplina";
     const DBINSCRICAO						= "dbinscricao";
+    const DBPROJETO_CURSO					= "dbprojeto_curso";
    
    
      //Visualizações
