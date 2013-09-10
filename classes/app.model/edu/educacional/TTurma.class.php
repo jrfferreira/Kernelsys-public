@@ -553,7 +553,7 @@ class TTurma {
     }
 
 
-    public function getCodigoCurso($idLista){
+    public function getCursoSeq($idLista){
         $header = new TSetHeader();
         //$headerLista = $header->getHead($idLista,'formseq');
         //$headerForm = $header->getHead($headerLista,'frmpseq');

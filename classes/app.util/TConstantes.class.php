@@ -46,9 +46,9 @@ class TConstantes{
     const DBTRANSACAO                      = "dbtransacao";
     const DBPARCELA							= "dbparcela";
     const DBBOLETO							= "dbboleto";
-    const DBCURSO_TIPOS                    = "dbtipo_curso";
-    const DBUSUARIO_ERROS                  = "dbusuario_erro";
-    const DBUSUARIO_SENHAS_RECUPERACAO     = "dbusuario_senha_recuperacao";
+    const DBCURSO_TIPOS						= "dbtipo_curso";
+    const DBUSUARIO_ERROS					= "dbusuario_erro";
+    const DBUSUARIO_SENHAS_RECUPERACAO		= "dbusuario_senha_recuperacao";
     const DBDEPARTAMENTOS                   = "dbdepartamento";
     const DBDOCUMENTOPAGARRECEBER           = "dbdocumentopagarreceber";
     const DBDOCUMENTOPARCELA				= "dbdocumentoparcela";
@@ -72,6 +72,8 @@ class TConstantes{
     const DBDISCIPLINA						= "dbdisciplina";
     const DBINSCRICAO						= "dbinscricao";
     const DBPROJETO_CURSO					= "dbprojeto_curso";
+    const DBALUNO_DISCIPLINA				= "dbaluno_disciplina";
+    const DBTURMA_DISCIPLINA_AULA			= "dbturma_disciplina_aula";
    
    
      //Visualizações

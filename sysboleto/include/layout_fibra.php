@@ -38,7 +38,7 @@ de Impressão</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
 do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cellpadding=0 border=0><tr><td width=41></TD></tr></table>
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
-    <td width=41><IMG SRC="../'.TOccupant::getPath().'app.config/logo.jpg" style="width: 130px;"></td>
+    <td width=41><IMG SRC="../'.TOccupant::getPath().'app.config/logo.png" style="width: 130px;"></td>
     <td class=ti width=455>'.$dadosboleto["identificacao"].$cpf_cpnj_Layout.'<br>
 	'.$dadosboleto["endereco"].'<br>
 	'.$dadosboleto["cidade_uf"].'<br>

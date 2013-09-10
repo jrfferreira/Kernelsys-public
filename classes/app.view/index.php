@@ -34,7 +34,7 @@ if($_POST['logar'] != ""){
 <head>
 <link rel="shortcut icon" href="favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sistema Comercial - SCP</title>
+<title>PetrusEDU</title>
 <script type="text/javascript" src="<?php echo $enderecoGetPath; ?>"></script>
 <style>
 a {color: #666; text-decoration: none; font-weight: bolder;text-shadow: #999 0px 0px 1px;}
@@ -134,7 +134,7 @@ a :visited {color: #444; text-decoration: none; font-weight: bolder;text-shadow:
 
 <div style="text-align:center; positon: fixed; top: 15px; left: 50%; padding-left: -162px; z-index: 2"><!--<img src="app.images/logo_educacional_index.png" width="324" height="76" alt="">!--></div>
 <div style="width: 100%; padding-top:8px; color:#666; text-align:center; vertical-align: middle; font-family:Verdana, Arial, Helvetica; font-size:10px; height:100px;text-shadow: 1px 1px 0px #FFF; background:url(app.images/icone_educacional_index.png) top center no-repeat;">
-<p>Sistema Comercial - SCP<br/>Todos os direitos reservados - <a href="http://www.bitup.com.br" target="blank">BitUP S.i</a></p></div>
+<p>Bitup<br/>Todos os direitos reservados - <a href="http://www.bitup.com.br" target="blank">BitUP S.i</a></p></div>
     </div>
 <script type="text/javascript">
     

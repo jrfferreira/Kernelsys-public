@@ -28,7 +28,7 @@ $htmlBoleto = '
 
 $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <tr>
-<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC=../'.TOccupant::getPath().'app.config/logo.jpg style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
+<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC="../'.TOccupant::getPath().'app.config/logo.png" style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
 <td colspan=2 align="center" height=40><span class=ld>
 <span class="campotitulo">
 ' . $dadosboleto["linha_digitavel"] . '

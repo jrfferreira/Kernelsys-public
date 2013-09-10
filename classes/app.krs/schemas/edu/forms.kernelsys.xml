@@ -2870,25 +2870,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="90">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao/>
-      <formainclude>one</formainclude>
-      <formid>cursosstatseqs</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq/>
-      <listseq>259</listseq>
-      <nivel>1</nivel>
-      <nomeform>Cursos statseqs</nomeform>
-      <seq>90</seq>
-      <statseq>1</statseq>
-      <tabseq>85</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="266">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3874,6 +3855,25 @@
       <seq>2</seq>
       <statseq>1</statseq>
       <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="90">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>1900-01-01</datacad>
+      <dimensao/>
+      <formainclude>one</formainclude>
+      <formid>cursosativos</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq>259</listseq>
+      <nivel>1</nivel>
+      <nomeform>Cursos Ativos</nomeform>
+      <seq>90</seq>
+      <statseq>1</statseq>
+      <tabseq>85</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

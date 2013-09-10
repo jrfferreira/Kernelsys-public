@@ -7800,16 +7800,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <valor>350</valor>
     </row>
-    <row seq="49">
-      <campseq>73</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>addItems</metodo>
-      <seq>49</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>select seq,nome from dbcurso order by nome</valor>
-    </row>
     <row seq="749">
       <campseq>739</campseq>
       <datacad>1900-01-01</datacad>

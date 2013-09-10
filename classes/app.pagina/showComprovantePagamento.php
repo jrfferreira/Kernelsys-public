@@ -86,7 +86,7 @@ $ano = date('Y');
 
 $rodape = "<i>{$obUnidade->cidade},{$obUnidade->estado}: {$dia} de {$mes} de {$ano}.</i>";
 
-$logomarca = '<IMG SRC="../'.TOccupant::getPath().'app.config/logo.jpg" style="width: 100px;">';
+$logomarca = '<IMG SRC="../'.TOccupant::getPath().'app.config/logo.png" style="width: 100px;">';
 
 $assinatura_digital = $TSetModel->setCertificacaoDigitial($obMovimentoCaixa->seq);
 $assinatura = "Ass.: __________________________";

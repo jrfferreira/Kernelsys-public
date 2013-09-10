@@ -73,7 +73,7 @@ $td->__set("rowspan","3");
 $td->__set("scope","col");
 
 $img = new TElement("img");
-$img->__set("src","../".TOccupant::getPath()."app.config/logo.jpg");
+$img->__set("src","../".TOccupant::getPath()."app.config/logo.png");
 $img->__set("width","100px");
 $img->__set("style","max-width: 100px; max-height: auto");
 

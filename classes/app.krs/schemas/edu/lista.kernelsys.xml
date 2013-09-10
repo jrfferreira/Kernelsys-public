@@ -513,38 +513,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="396">
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>1</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>pjcuseq/=/AND/TTurma/getSeqCurso/1</filtro>
-      <filtropai>0</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>395</formseq>
-      <incontrol/>
-      <label>Disciplinas</label>
-      <lista>listaDisciplinasTurma</lista>
-      <listseq>395</listseq>
-      <nivel>2</nivel>
-      <obapendice>TTurma/buttonAddTurmaDisciplina</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>396</seq>
-      <statseq>1</statseq>
-      <tabseq>10</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="201">
       <acdeletar>1</acdeletar>
       <aceditar>1</aceditar>
@@ -5532,6 +5500,38 @@
       <seq>6</seq>
       <statseq>1</statseq>
       <tabseq>3</tabseq>
+      <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="396">
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>pjcuseq/=/AND/TTurma/getCursoSeq/1</filtro>
+      <filtropai>0</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>395</formseq>
+      <incontrol/>
+      <label>Disciplinas</label>
+      <lista>listaDisciplinasTurma</lista>
+      <listseq>395</listseq>
+      <nivel>2</nivel>
+      <obapendice>TTurma/buttonAddTurmaDisciplina</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>396</seq>
+      <statseq>1</statseq>
+      <tabseq>10</tabseq>
       <tipo>form</tipo>
       <trigger/>
       <unidseq>1</unidseq>

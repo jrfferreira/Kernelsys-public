@@ -13726,31 +13726,6 @@
       <valornull>0</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="73">
-      <alteravel>2</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>1</autosave>
-      <campo>cursseq</campo>
-      <colunadb>cursseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setAlocaDados</incontrol>
-      <label>Curso:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setAlocaDados</outcontrol>
-      <seletor/>
-      <seq>73</seq>
-      <statseq>1</statseq>
-      <tabseq>11</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valornull>1</valornull>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="697">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -14720,6 +14695,31 @@
       <statseq>1</statseq>
       <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valornull>1</valornull>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="73">
+      <alteravel>2</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>184</ativapesquisa>
+      <autosave>1</autosave>
+      <campo>cursseq</campo>
+      <colunadb>cursseq</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>setAlocaDados</incontrol>
+      <label>Curso:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>setAlocaDados</outcontrol>
+      <seletor/>
+      <seq>73</seq>
+      <statseq>1</statseq>
+      <tabseq>11</tabseq>
+      <tpcaseq>2</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
