@@ -9870,5 +9870,15 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <valor>select seq,titulo from dbtitularidade order by peso</valor>
     </row>
+    <row seq="118">
+      <campseq>80</campseq>
+      <datacad>2013-09-12</datacad>
+      <metodo>addItems</metodo>
+      <seq>118</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,nomeunidade from dbunidade where statseq != 9 order by nomeunidade</valor>
+    </row>
   </camposXPropriedades>
 </kernelsys>

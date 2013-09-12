@@ -456,7 +456,7 @@ class TTurmaDisciplinas {
                     $criterio = new TCriteria ( );
                     $criterio->add(new TFilter("tudiseq", "=", $codigoTurmaDisciplina));
                     $criterio->add(new TFilter("tdalseq", "=", $retorno->seq));
-                    $criterio->add(new TFilter("deferido", "=", true));
+                    $criterio->add(new TFilter("deferido", "=", 'true', 'boolean'));
                     $retornoFaltas = $this->obTDbo->select("tdalseq,alunseq,frequencia,justificativa,deferido", $criterio);
                     while ($ret = $retornoFaltas->fetchObject()) {
                         $num = $ret->frequencia;

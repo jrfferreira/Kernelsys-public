@@ -2726,31 +2726,6 @@
       <valornull>0</valornull>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="80">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>localAulas</campo>
-      <colunadb>localAulas</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Local das Aulas:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <seletor/>
-      <seq>80</seq>
-      <statseq>1</statseq>
-      <tabseq>11</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valornull>0</valornull>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="84">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -19645,6 +19620,31 @@
       <statseq>1</statseq>
       <tabseq>49</tabseq>
       <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valornull>0</valornull>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="80">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>localAulas</campo>
+      <colunadb>localaulas</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Local das Aulas:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <seletor/>
+      <seq>80</seq>
+      <statseq>1</statseq>
+      <tabseq>11</tabseq>
+      <tpcaseq>2</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

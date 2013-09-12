@@ -2851,36 +2851,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="157">
-      <blocoheight>200px</blocoheight>
-      <blocoid>blocFinanceiroRec</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>frm</formato>
-      <formseq/>
-      <frmpseq>5</frmpseq>
-      <nomebloco>Base de Receita</nomebloco>
-      <obapendice/>
-      <seq>157</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="177">
-      <blocoheight>200px</blocoheight>
-      <blocoid>blocCurso Turma</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>frm</formato>
-      <formseq/>
-      <frmpseq>5</frmpseq>
-      <nomebloco>Curso</nomebloco>
-      <obapendice/>
-      <seq>177</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="138">
       <blocoheight>200px</blocoheight>
       <blocoid>blSetTipoExtorno</blocoid>
@@ -3211,21 +3181,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="25">
-      <blocoheight>200px</blocoheight>
-      <blocoid>infoGeraisTurma</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>frm</formato>
-      <formseq/>
-      <frmpseq>5</frmpseq>
-      <nomebloco>Informações gerais</nomebloco>
-      <obapendice/>
-      <seq>25</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="27">
       <blocoheight>200px</blocoheight>
       <blocoid>blocFinanceiroCusto</blocoid>
@@ -3523,6 +3478,36 @@
       <seq>22</seq>
       <statseq>1</statseq>
       <tabseq>9</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="157">
+      <blocoheight>200px</blocoheight>
+      <blocoid>blocFinanceiroRec</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>frm</formato>
+      <formseq/>
+      <frmpseq>5</frmpseq>
+      <nomebloco>Base de Receita</nomebloco>
+      <obapendice/>
+      <seq>157</seq>
+      <statseq>9</statseq>
+      <tabseq>999</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="177">
+      <blocoheight>200px</blocoheight>
+      <blocoid>blocCurso Turma</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>frm</formato>
+      <formseq/>
+      <frmpseq>5</frmpseq>
+      <nomebloco>Curso</nomebloco>
+      <obapendice/>
+      <seq>177</seq>
+      <statseq>1</statseq>
+      <tabseq>11</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
@@ -3988,6 +3973,21 @@
       <seq>23</seq>
       <statseq>1</statseq>
       <tabseq>9</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="25">
+      <blocoheight>200px</blocoheight>
+      <blocoid>infoGeraisTurma</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>frm</formato>
+      <formseq/>
+      <frmpseq>5</frmpseq>
+      <nomebloco>Informações gerais</nomebloco>
+      <obapendice/>
+      <seq>25</seq>
+      <statseq>1</statseq>
+      <tabseq>11</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

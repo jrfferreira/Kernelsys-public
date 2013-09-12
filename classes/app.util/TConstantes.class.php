@@ -74,6 +74,8 @@ class TConstantes{
     const DBPROJETO_CURSO					= "dbprojeto_curso";
     const DBALUNO_DISCIPLINA				= "dbaluno_disciplina";
     const DBTURMA_DISCIPLINA_AULA			= "dbturma_disciplina_aula";
+    const DBTURMA_DISCIPLINA_AVALIACAO		= "dbturma_disciplina_avaliacao";
+    const DBBOLETO_ESTRUTURA				= "dbboleto_estrutura";
    
    
      //Visualizações
@@ -98,7 +100,8 @@ class TConstantes{
     const VIEW_PROFESSOR					= "view_professor";
     const VIEW_CAIXA_FUNCIONARIO			= "view_caixa_funcionario";
     const VIEW_CURSO_DISCIPLINA				= "view_curso_disciplina";
-    const VIEW_INSCRICAO					= "view_inscricao";	
+    const VIEW_INSCRICAO					= "view_inscricao";
+    const VIEW_BOLETO						= "view_boleto";
     
     //Relatorios
     const RELATORIO_ALUNOS_NOTAS_FREQUENCIAS = "aluno_nota_frequencia";

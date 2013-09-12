@@ -121,7 +121,7 @@ class TConciliacaoCaixa{
 
 
                  //acessa duplicatas
-                 $dboDup = new TDbo(TConstantes::DBBOLETO);
+                 $dboDup = new TDbo(TConstantes::VIEW_BOLETO);
                     $criteriaDup = new TCriteria();
                     $criteriaDup->add(new TFilter('ndocumento','=',$dadosRet['nosso_numero']));
                  $retDup =  $dboDup->select("*", $criteriaDup);
