@@ -150,7 +150,7 @@ class TConciliacaoCaixa{
                            if($obDup->stboseq == '1' || $obDup->stboseq == '9' ){
                                 //baixa conta
                                 $obCaixa = new TCaixa();
-                                $obCaixa->baixaContaCaixa($obDup->parcseq, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $dadosRet['nosso_numero'], 'Boleto Caixa', $obDadosBoleto->codigocontacaixa);
+                                $obCaixa->baixaContaCaixa($obDup->parcseq, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $obDup->seq, 2, $obDadosBoleto->cofiseq);
                                 
                                 $retBaixada = new TElement('div');
                                 $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";

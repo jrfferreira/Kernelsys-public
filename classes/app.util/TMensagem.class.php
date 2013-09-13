@@ -41,7 +41,9 @@ class TMensagem{
      const MSG_CONTA_BAIXADA            = "A conta já foi baixada";
      const MSG_SUCESSO_FECHA_CAIXA      = "O caixa foi fechado com sucesso.";
      const ERRO_FECHAR_CAIXA            = "Ouve um problema ao fechar o caixa - Entre em contato com o administrador.";
-
+     const MSG_SUCESSO_BAIXAR_BOLETO_INATIVO = "O boleto inatívo foi baixado com sucesso";
+     const MSG_SUCESSO_BAIXAR_CONTA = "A parcaela foi baixada com sucesso";
+     
      //Mensagem gerais do Sistema de Email
      const ERRO_MAIL_ACESSO             = "Falha ao acessar o servidor de e-mail.";
 

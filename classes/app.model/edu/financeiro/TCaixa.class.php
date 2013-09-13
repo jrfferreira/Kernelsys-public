@@ -202,7 +202,7 @@ class TCaixa {
      * param <type> $origemdestino = Código da conta caixa de origem/destino do valor
      * param <type> $codigocaixa = Código do movimento de caixa se já existir
      */
-    public function baixaContaCaixa($codigoconta, $valorpago, $desconto, $acrescimo, $numDocumento, $formapagamento, $contacaixa, $codigocaixa = null){
+    public function baixaContaCaixa($codigoconta, $valorpago, $desconto, $acrescimo, $boleseq, $formapagamento, $contacaixa, $codigocaixa = null){
         
         try {
 
@@ -220,12 +220,10 @@ class TCaixa {
             $this->obTDbo->setEntidade(TConstantes::DBTRANSACAO);
             $criteriaTransac = new TCriteria();
             $criteriaTransac->add(new TFilter('seq', '=', $dados->transeq));
-            $retTransac = $this->obTDbo->select('plcoseq', $criteriaTransac);
+            $retTransac = $this->obTDbo->select('plcoseq,seq', $criteriaTransac);
             $obTransac = $retTransac->fetchObject();
 
                 //retorna dados do movimento de caixa
-                $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
-                $codigocaixa = $obMovimentoCaixa->seq;
 
                 // Valida disponibilidade no saldo de caixa ====================
                 $saldoCaixa = $this->getTotalCaixa($this->obUser->funcseq);
@@ -248,53 +246,50 @@ class TCaixa {
                 //==============================================================
 
                 if($validavalor){
+                	
+	                	//identifica o status da conta =============================
+	                	$valorBase = ($valorpago + $desconto) - $acrescimo;
+	                	$novoValorReal = $dados->valorreal - $valorpago;
+	                	
+	                	if ($obMovimentoCaixa->stmoseq == "3") {
+	                		$statusConta = "5";
+	                	} else {
+	                		if ($valorBase < $obMovimentoCaixa->valorreal) {
+	                			$statusConta = "3"; // status conta parcialmente paga
+	                		} else {
+	                			$statusConta = "2"; // status conta paga
+	                		}
+	                		//==========================================================
+	                	}
 
                         //configura argumentos do movimento de caixa
                         $args["parcseq"]   = $codigoconta;
                         $args["plcoseq"]   = $obTransac->plcoseq;
-                        $args["pessseq"]   = $dados->pessseq;
-                        $args["funcseq"]   = $this->obUser->funcseq;
-                        $args["transeq"]   = $dados->transeq;
                         $args["cofiseq"]   = $contacaixa;
-                        $args["numdoc"]    = $numDocumento;
+                        $args["stpaseq"]   = $statusConta;
+                        $args['transeq']   = $obTransac->seq;
                         $args["tipo"]      = $dados->tipo;
-                        $args["valorreal"] = $dados->valorreal;
-                        $args["valorpago"] = $valorpago;
-                        $args["vencimento"]= $dados->vencimento;
-                        $args["formapag"]  = $formapagamento;
+                        $args["boleseq"]    = $boleseq;
+                        $args["valor"]     = $dados->valoratual;
+                        $args["valorfinal"]   = $valorpago;
+                        $args["valorentrada"] = $valorpago;
+                        $args["vencimento"]   = $dados->vencimento;
+                        $args["fmpgseq"]  	  = $formapagamento;
                         $args["statseq"]   = $dados->statseq;
+                        $args["cxfuseq"]   = $this->getSeqCaixaFuncionario($contacaixa);
                     
                         $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
-                        $criteriaUpdate = new TCriteria();
-                        $criteriaUpdate->add(new TFilter("seq", "=", $codigocaixa));
-                        $retCaixa = $this->obTDbo->update($args, $criteriaUpdate);
+                        $codigocaixa = $this->obTDbo->insert($args);
 
-                    if($retCaixa) {
-
-                        $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
-
-                        //identifica o status da conta =============================
-                        $valorBase = ($valorpago + $desconto) - $acrescimo;
-                        $novoValorReal = $dados->valorreal - $valorpago;
-
-                        if ($obMovimentoCaixa->stmoseq == "3") {
-                            $statusConta = "5";
-                        } else {
-                            if ($valorBase < $obMovimentoCaixa->valorreal) {
-                                $statusConta = "3"; // status conta parcialmente paga
-                            } else {
-                                $statusConta = "2"; // status conta paga
-                            }
-                            //==========================================================
-                        }
+                    if($codigocaixa) {
 
                         //Altera status da conta
                          
                         $dadosUpdateConta["stpaseq"] = $statusConta;
-                        $dadosUpdateConta["valorreal"] = $novoValorReal < 0 ? 0 : $novoValorReal;
+                        $dadosUpdateConta["valoratual"] = $novoValorReal < 0 ? 0 : $novoValorReal;
                         $this->obTDbo->setEntidade(TConstantes::DBPARCELA);
                         $criteriaUpContas = new TCriteria();
-                        $criteriaUpContas->add(new TFilter('seq', '=', $obMovimentoCaixa->parcseq));
+                        $criteriaUpContas->add(new TFilter('seq', '=', $codigoconta));
                         $exeUpConta = $this->obTDbo->update($dadosUpdateConta, $criteriaUpContas);
  						
                         if (!$exeUpConta) {
@@ -1463,5 +1458,18 @@ class TCaixa {
     		new setException($e);
     	}
     	
+    }
+    
+
+
+    public function getSeqCaixaFuncionario($cofiseq){
+    	$usuario = new TUsuario();
+    	$dbo = new TDbo(TConstantes::DBCAIXA_FUNCIONARIO);
+    		$criteria = new TCriteria();
+    		$criteria->add(new TFilter('funcseq', '=', $usuario->getSeqFuncionario(), 'numeric'));
+    		$criteria->add(new TFilter('cofiseq', '=', $cofiseq, 'numeric'));
+    		$ret = $dbo->select('seq',$criteria);
+    		$obRet = $ret->fetchObject();
+    	return $obRet->seq;
     }
 }
