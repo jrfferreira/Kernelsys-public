@@ -25,7 +25,7 @@ class TFilter extends TExpression{
         // armazena as propriedades
         $this->variable = strtolower($variable);
         $this->operator = $operator;
-        $this->tipodado = $tipodado;
+        $this->tipodado = strtolower($tipodado);
         // transforma o valor de acordo com certas regras
         // antes de atribuir à propriedade $this->value
         $this->value    = $this->transform($value);
@@ -40,6 +40,8 @@ class TFilter extends TExpression{
      * param $value = valor a ser transformado
      */
     private function transform($value){
+    	
+    	$tipodado = strtolower($this->tipodado);
 
         // caso seja um array
         if (is_array($value)) {
@@ -58,10 +60,10 @@ class TFilter extends TExpression{
 	            foreach ($value as $x) {
 	                
 	                // se for um inteiro
-	                if ($this->tipodado == 'numeric'){
+	                if ($tipodado == 'numeric'){
 	                    $foo[]= $x;
 	                    
-	                }else if ($this->tipodado == 'string'){
+	                }else if ($tipodado == 'string'){
 	                	
 	                    // se for string, adiciona aspas
 	                    if(preg_match('@\(.*?\)@',$x)){
@@ -76,7 +78,7 @@ class TFilter extends TExpression{
         	}
 
         // Caso o campo seja do tipo numérico
-        }else if($this->tipodado == 'numeric' and is_numeric($value)){
+        }else if($tipodado == 'numeric' and is_numeric($value)){
         	
         	$result = $value;	
         	if($this->operator == 'ILIKE' or $this->operator == 'LIKE') {
@@ -84,7 +86,7 @@ class TFilter extends TExpression{
         	}
 
         //Caso o campo seja do tipo string
-        }else if($this->tipodado == 'string'){
+        }else if($tipodado == 'string'){
         	
         	
         	if($this->operator == 'ILIKE' or $this->operator == 'LIKE') {
@@ -102,7 +104,7 @@ class TFilter extends TExpression{
            }
         }
         //campo do tipo date
-        else if($this->tipodado == 'date' and preg_match('|-(.*?-)|',$value)){
+        else if($tipodado == 'date' and preg_match('|-(.*?-)|',$value)){
         	$result = "'$value'";
         
         	if($this->operator == 'ILIKE' or $this->operator == 'LIKE') {

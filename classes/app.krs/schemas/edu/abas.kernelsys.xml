@@ -2,3462 +2,3462 @@
 <kernelsys>
   <abas>
     <row seq="21">
+      <seq>21</seq>
       <abaid>disciplinas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>21</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="22">
+      <seq>22</seq>
       <abaid>dadosPessoais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>22</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="23">
+      <seq>23</seq>
       <abaid>dadosPrincipais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>23</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="24">
+      <seq>24</seq>
       <abaid>dados</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>24</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="26">
+      <seq>26</seq>
       <abaid>gerenciamentoDuplicata</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Gerenciar Duplicatas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>26</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="27">
+      <seq>27</seq>
       <abaid>obs</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>27</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="28">
+      <seq>28</seq>
       <abaid>infoConta</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Conta caixa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>28</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="29">
+      <seq>29</seq>
       <abaid>dadosConta</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>29</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="30">
+      <seq>30</seq>
       <abaid>dadosCredito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados do Crédito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>30</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="35">
+      <seq>35</seq>
       <abaid>abaContasCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas Caixa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>35</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="37">
+      <seq>37</seq>
       <abaid>infoUsuarios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações de acesso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>37</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="39">
+      <seq>39</seq>
       <abaid>discAvaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>39</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="42">
+      <seq>42</seq>
       <abaid>cargo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações do Cargo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>42</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="43">
+      <seq>43</seq>
       <abaid>dado</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>43</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="44">
+      <seq>44</seq>
       <abaid>formacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>44</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="45">
+      <seq>45</seq>
       <abaid>dadosPessoais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Pessoais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>45</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="46">
+      <seq>46</seq>
       <abaid>dadosComplementares</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>46</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="47">
+      <seq>47</seq>
       <abaid>patrimonios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Patrimonios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>47</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="48">
+      <seq>48</seq>
       <abaid>conhecimentos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Competências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>48</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="49">
+      <seq>49</seq>
       <abaid>hierarquia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Hierarquia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>49</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="50">
+      <seq>50</seq>
       <abaid>treinamento</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Treinamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>50</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="52">
+      <seq>52</seq>
       <abaid>atributos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Atributos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>52</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="53">
+      <seq>53</seq>
       <abaid>dadosAdministrstatseqs</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Administrstatseqs</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>53</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="54">
+      <seq>54</seq>
       <abaid>dadosCurriculares</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Curriculares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>54</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="55">
+      <seq>55</seq>
       <abaid>financeiro</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Financeiro</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>55</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="57">
+      <seq>57</seq>
       <abaid>filiais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Cadastrar Filial</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>57</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="58">
+      <seq>58</seq>
       <abaid>dadosPrincipais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>58</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="59">
+      <seq>59</seq>
       <abaid>contato</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contato</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>59</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="60">
+      <seq>60</seq>
       <abaid>insumos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Insumos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>60</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="61">
+      <seq>61</seq>
       <abaid>historico</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>61</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="63">
+      <seq>63</seq>
       <abaid>cotacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Cotação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>63</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="64">
+      <seq>64</seq>
       <abaid>gerNegociacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Gerenciar Negociação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>64</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="65">
+      <seq>65</seq>
       <abaid>dadosContrato</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>65</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="66">
+      <seq>66</seq>
       <abaid>dadosUsuario</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>66</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="68">
+      <seq>68</seq>
       <abaid>dadosFerias</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>68</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="69">
+      <seq>69</seq>
       <abaid>dadosSala</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>69</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="70">
+      <seq>70</seq>
       <abaid>patrimoniosHistorico</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>70</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="71">
+      <seq>71</seq>
       <abaid>dadosAreaCurso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Area de Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>71</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="73">
+      <seq>73</seq>
       <abaid>solicitacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>73</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="74">
+      <seq>74</seq>
       <abaid>dadosCompra</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados da Compra</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>74</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="77">
+      <seq>77</seq>
       <abaid>interesses</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Cursos Interessados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>77</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="80">
+      <seq>80</seq>
       <abaid>parametrosComercial</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Comercial</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>80</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="81">
+      <seq>81</seq>
       <abaid>parametrosSecretaria</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Secretaria</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>81</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="82">
+      <seq>82</seq>
       <abaid>parametrosFinanceiro</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Financeiro</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>82</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="83">
+      <seq>83</seq>
       <abaid>parametrosAdministrstatseq</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Administrstatseq</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>83</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="84">
+      <seq>84</seq>
       <abaid>parametrosRH</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Recursos Humanos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>84</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="85">
+      <seq>85</seq>
       <abaid>parametrosCoordenador</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Coordenador</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>85</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="86">
+      <seq>86</seq>
       <abaid>parametrosProfessores</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Professores</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>86</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="88">
+      <seq>88</seq>
       <abaid>matdidaticos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Materiais Didáticos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>88</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="90">
+      <seq>90</seq>
       <abaid>historioFechaCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>90</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="99">
+      <seq>99</seq>
       <abaid>histOcorrencia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Ocorrências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>99</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="200">
+      <seq>200</seq>
       <abaid>experienciaCurriculo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Experiência</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>200</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="201">
+      <seq>201</seq>
       <abaid>obsCurriculo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>201</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="202">
+      <seq>202</seq>
       <abaid>resumo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Resumo do Curriculo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>202</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="203">
+      <seq>203</seq>
       <abaid>projetoEscopo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Escopo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>203</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="204">
+      <seq>204</seq>
       <abaid>projetoRecursos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Recursos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>204</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="205">
+      <seq>205</seq>
       <abaid>projetoRiscos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Riscos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>205</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="206">
+      <seq>206</seq>
       <abaid>projetoProduto</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Produto Final</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>206</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="207">
+      <seq>207</seq>
       <abaid>projetoRH</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>R.H.</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>207</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="208">
+      <seq>208</seq>
       <abaid>projetoReceita</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Receita</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>208</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="209">
+      <seq>209</seq>
       <abaid>projetoCusto</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Custos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>209</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="211">
+      <seq>211</seq>
       <abaid>gerTurmaDisc</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplina</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>211</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="212">
+      <seq>212</seq>
       <abaid>planoaulaDisciplina</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplina</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>212</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="213">
+      <seq>213</seq>
       <abaid>planoaulaConteudo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Conteudo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>213</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="214">
+      <seq>214</seq>
       <abaid>planoaulaRecursos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Recursos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
-      <seq>214</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="215">
+      <seq>215</seq>
       <abaid>planoaulaMetodologia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Metodologia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
-      <seq>215</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="217">
+      <seq>217</seq>
       <abaid>abaGeraArquivos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Arquivos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>217</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="34">
+      <seq>34</seq>
       <abaid>turmasDisicplinasRequisitos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>34</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="36">
+      <seq>36</seq>
       <abaid>lanFaltas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lançar Faltas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>36</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="210">
+      <seq>210</seq>
       <abaid>historicoFinanceiro</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Financeiro</nomeaba>
       <obapendice>TSecretaria/viewGetFinanceiro</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>210</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="62">
+      <seq>62</seq>
       <abaid>produtoCaracteristicas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Características</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>62</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="216">
+      <seq>216</seq>
       <abaid>abaGeraDisciplina</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Adicionar Disciplinas</nomeaba>
       <obapendice>confirmaGeraDisciplina/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>216</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="87">
+      <seq>87</seq>
       <abaid>conciliaBoletos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Conciliação Bancária</nomeaba>
       <obapendice>TConciliacaoCaixa/setForm</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>87</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="93">
+      <seq>93</seq>
       <abaid>notasAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>93</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="56">
+      <seq>56</seq>
       <abaid>historicoCliente</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>56</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="92">
+      <seq>92</seq>
       <abaid>dadosFolhaPag</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Folha de Pagamento</nomeaba>
       <obapendice>setCriterioFolhaPag/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>92</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="91">
+      <seq>91</seq>
       <abaid>mostraDuplicatasAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Boletos</nomeaba>
       <obapendice>TAluno/viewGetFinanceiro</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>91</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="33">
+      <seq>33</seq>
       <abaid>matricula</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Gerenciador Matrícula</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>33</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="79">
+      <seq>79</seq>
       <abaid>dre</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>DRE</nomeaba>
       <obapendice>setPeriodoDRE/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>79</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="78">
+      <seq>78</seq>
       <abaid>balancoPatrimonial</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Balanço Patrimonial</nomeaba>
       <obapendice>setDataBP/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>78</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="76">
+      <seq>76</seq>
       <abaid>relatorioCaixaD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Relatório de Despesa</nomeaba>
       <obapendice>relatorioCaixaD/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>76</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="75">
+      <seq>75</seq>
       <abaid>relatorioCaixaR</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Relatório de Receita</nomeaba>
       <obapendice>relatorioCaixaR/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>75</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="67">
+      <seq>67</seq>
       <abaid>usuarioPrivilegios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Privilégios</nomeaba>
       <obapendice>TPrivilegios/viewGetModulos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>67</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="219">
+      <seq>219</seq>
       <abaid>estatistica</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Estatistica</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>219</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="94">
+      <seq>94</seq>
       <abaid>faltasAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Faltas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>94</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="38">
+      <seq>38</seq>
       <abaid>lanNotas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lançar Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>38</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="31">
+      <seq>31</seq>
       <abaid>contaReceber</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>31</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="32">
+      <seq>32</seq>
       <abaid>contasPagar</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações da Conta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>32</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="220">
+      <seq>220</seq>
       <abaid>lancaExtorno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lançamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>220</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="221">
+      <seq>221</seq>
       <abaid>transac_InfoC</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>221</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="222">
+      <seq>222</seq>
       <abaid>transac_infoD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>222</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="223">
+      <seq>223</seq>
       <abaid>transac_condC</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Condições de Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>223</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="225">
+      <seq>225</seq>
       <abaid>permissaoPessoa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Permissões</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>225</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="226">
+      <seq>226</seq>
       <abaid>transac_condD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Condições de Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>226</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="227">
+      <seq>227</seq>
       <abaid>justFaltas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Justificar Falta</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>227</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="228">
+      <seq>228</seq>
       <abaid>dadosProdutos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>228</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="229">
+      <seq>229</seq>
       <abaid>conteudoMinistradoProd</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Conteudo Ministrado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>229</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="230">
+      <seq>230</seq>
       <abaid>solicitacaoAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>230</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="231">
+      <seq>231</seq>
       <abaid>departamentoInfo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>231</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="232">
+      <seq>232</seq>
       <abaid>departamentoPessoas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Funcionários</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>232</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="233">
+      <seq>233</seq>
       <abaid>setDisciplinasAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lista de Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>233</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="234">
+      <seq>234</seq>
       <abaid>solicitacaoEncaminhdada</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Solicitação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>234</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="239">
+      <seq>239</seq>
       <abaid>livrosInfoPrincipais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>239</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="241">
+      <seq>241</seq>
       <abaid>scoreCardParametrizacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Parametrização</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>241</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="244">
+      <seq>244</seq>
       <abaid>insumoDet</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>244</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="245">
+      <seq>245</seq>
       <abaid>abaTiposCurso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Tipos de curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>245</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="246">
+      <seq>246</seq>
       <abaid>miniCurriculo</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Curriculo</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>246</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="249">
+      <seq>249</seq>
       <abaid>disciplinas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>249</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="250">
+      <seq>250</seq>
       <abaid>questionarioDados</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>250</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="251">
+      <seq>251</seq>
       <abaid>questionarioPerguntas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Questões</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>251</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="252">
+      <seq>252</seq>
       <abaid>questionarioPessoas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Usuários Autorizados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
-      <seq>252</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="253">
+      <seq>253</seq>
       <abaid>cursostatseq</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Vincular Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>253</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="248">
+      <seq>248</seq>
       <abaid>alunoRequisitos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Pré-Requisitos</nomeaba>
       <obapendice>TAluno/viewSetRequisitos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
-      <seq>248</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="247">
+      <seq>247</seq>
       <abaid>disciplinasTurma</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>viewDisciplinasTurma/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>247</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="243">
+      <seq>243</seq>
       <abaid>scoreteste</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Teste</nomeaba>
       <obapendice>TScoreCard/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>243</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="89">
+      <seq>89</seq>
       <abaid>abaFechamentoCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Fechamento de caixa</nomeaba>
       <obapendice>TFechaCaixa/get</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>89</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="273">
+      <seq>273</seq>
       <abaid>contasDebito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações do Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>273</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="274">
+      <seq>274</seq>
       <abaid>listaContasCredito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações do Pagamento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>274</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="254">
+      <seq>254</seq>
       <abaid>setFaltaAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Faltas</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetFaltasAlunos</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>254</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="256">
+      <seq>256</seq>
       <abaid>setNotaAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>256</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="240">
+      <seq>240</seq>
       <abaid>livrosInfoComplementares</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
-      <seq>240</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="257">
+      <seq>257</seq>
       <abaid>livrosInformacoesSinopse</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Sinópse</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>257</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="258">
+      <seq>258</seq>
       <abaid>livrosInformacoesSumario</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Sumário</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>3</ordem>
-      <seq>258</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="259">
+      <seq>259</seq>
       <abaid>informacoesPrincipaisCDU</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>259</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="5">
+      <seq>5</seq>
       <abaid>bibliotecaLocacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Locação de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>5</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="260">
+      <seq>260</seq>
       <abaid>bibliotecaLocacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Locação de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>260</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="261">
+      <seq>261</seq>
       <abaid>bibliotecaReserv</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Reserva de Livros</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>261</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="262">
+      <seq>262</seq>
       <abaid>bibliotecaDevolucao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Devolução de Livros</nomeaba>
       <obapendice>TBiblioteca/viewSetDevolucao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>262</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="6">
+      <seq>6</seq>
       <abaid>prerequisitos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos</nomeaba>
       <obapendice>TMatricula/viewSetRequisitos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>6</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="95">
+      <seq>95</seq>
       <abaid>histAcademicoAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Acadêmico</nomeaba>
       <obapendice>TAluno/viewGetAcademico</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>95</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="266">
+      <seq>266</seq>
       <abaid>dadosConvenio</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados do convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>266</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="267">
+      <seq>267</seq>
       <abaid>pessoaConvenios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>267</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="72">
+      <seq>72</seq>
       <abaid>historicoAcademico</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Acadêmico</nomeaba>
       <obapendice>TSecretaria/viewGetAcademico</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>72</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="268">
+      <seq>268</seq>
       <abaid>orientacoesArquivos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Orientações e Arquivos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>4</ordem>
-      <seq>268</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="270">
+      <seq>270</seq>
       <abaid>prodCaracteristicas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Características</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>270</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="271">
+      <seq>271</seq>
       <abaid>prodInfoComplementares</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações Complementares</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>271</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="272">
+      <seq>272</seq>
       <abaid>dadosFuncionarioCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Funcionário Autorizado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>272</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="275">
+      <seq>275</seq>
       <abaid>aba_cobranca</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados para Cobrança</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>275</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="276">
+      <seq>276</seq>
       <abaid>aba_inforDisciplinasTurma</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>276</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="277">
+      <seq>277</seq>
       <abaid>aba_datasDisciplinas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Datas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>277</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="20">
+      <seq>20</seq>
       <abaid>dadosPrincipais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>20</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="278">
+      <seq>278</seq>
       <abaid>aba_blocoProfAreas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Professores Relacionados</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>278</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="279">
+      <seq>279</seq>
       <abaid>aba_blocoParticipantes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Participantes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>279</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="280">
+      <seq>280</seq>
       <abaid>aba_fornecedoresProdutos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>280</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="281">
+      <seq>281</seq>
       <abaid>aba_produtoCotacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Cotação do Produto</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>281</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="282">
+      <seq>282</seq>
       <abaid>aba_blocoClienteFormacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação Acadêmica</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>282</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="283">
+      <seq>283</seq>
       <abaid>aba_blocoListaInteresses</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Interesses</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>283</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="284">
+      <seq>284</seq>
       <abaid>aba_matdidaticos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lista de Materiais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>284</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="285">
+      <seq>285</seq>
       <abaid>aba_blocoOcorrencia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Ocorrencia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>285</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="286">
+      <seq>286</seq>
       <abaid>aba_blprojetoRecursos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>286</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="287">
+      <seq>287</seq>
       <abaid>aba_blprojetoRH</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>287</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="288">
+      <seq>288</seq>
       <abaid>aba_privilegios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>288</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="289">
+      <seq>289</seq>
       <abaid>aba_blocolistObs</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>289</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="290">
+      <seq>290</seq>
       <abaid>aba_blocoFormacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>290</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="291">
+      <seq>291</seq>
       <abaid>aba_blocoFormProf</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>291</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="292">
+      <seq>292</seq>
       <abaid>aba_blocoAreasProf</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Áreas Relacionadas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>292</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="293">
+      <seq>293</seq>
       <abaid>aba_listaContasNegociacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas a receber</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>293</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="294">
+      <seq>294</seq>
       <abaid>aba_discCursoDisp</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas do Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>294</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="295">
+      <seq>295</seq>
       <abaid>aba_discCurso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas do curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>295</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="296">
+      <seq>296</seq>
       <abaid>aba_requisitosCurso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Pré-requisitos da turma</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>296</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="297">
+      <seq>297</seq>
       <abaid>aba_blprojetoCusto</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>297</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="298">
+      <seq>298</seq>
       <abaid>aba_blocQuestinarioQuestoes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>298</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="299">
+      <seq>299</seq>
       <abaid>aba_scorecardSentenças</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>299</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="300">
+      <seq>300</seq>
       <abaid>aba_blocoDepartamentoPessoas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>300</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="301">
+      <seq>301</seq>
       <abaid>aba_blocoListaDiscAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>301</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="302">
+      <seq>302</seq>
       <abaid>aba_listTreinamento</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>302</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="303">
+      <seq>303</seq>
       <abaid>aba_blocoContMinistProf</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>303</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="304">
+      <seq>304</seq>
       <abaid>aba_blJustFalta</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>304</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="305">
+      <seq>305</seq>
       <abaid>aba_blocoContMinistCoord</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>305</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="306">
+      <seq>306</seq>
       <abaid>aba_listContasTransacaoD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>306</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="309">
+      <seq>309</seq>
       <abaid>aba_blocolistObsProf</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>309</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="311">
+      <seq>311</seq>
       <abaid>aba_blocoContMinistProf</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>311</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="312">
+      <seq>312</seq>
       <abaid>aba_listContasTransacaoC</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>312</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="313">
+      <seq>313</seq>
       <abaid>aba_lstProdutosTransacaoC</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>313</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="314">
+      <seq>314</seq>
       <abaid>aba_blocPessoaConvenios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Lista de convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>314</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="315">
+      <seq>315</seq>
       <abaid>aba_blocDescProgressivos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Descontos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>315</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="316">
+      <seq>316</seq>
       <abaid>aba_blocOrientacoesArquivos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>-</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>316</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="317">
+      <seq>317</seq>
       <abaid>aba_lstProdutosTransacaoD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Produtos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>317</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="318">
+      <seq>318</seq>
       <abaid>aba_blocContasDebito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas a Pagar</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>318</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="319">
+      <seq>319</seq>
       <abaid>aba_cheques</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações do Cheque</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>319</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="320">
+      <seq>320</seq>
       <abaid>aba_detalhamentoCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Informações</nomeaba>
       <obapendice>TCaixa/viewDetalhamentoCaixa</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>320</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="321">
+      <seq>321</seq>
       <abaid>transacaoContasDebito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contas a pagar</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>321</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="323">
+      <seq>323</seq>
       <abaid>movimentosProgramadosD</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Movimentos de débito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>323</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="322">
+      <seq>322</seq>
       <abaid>movimentosProgramadosC</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Movimentos de crédito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>322</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="324">
+      <seq>324</seq>
       <abaid>planosdeAulaProfessor</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Plano de Aula</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>324</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="325">
+      <seq>325</seq>
       <abaid>infoLivroAluno</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Informações do Livro</nomeaba>
       <obapendice>TBiblioteca/viewReserva</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>325</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="310">
+      <seq>310</seq>
       <abaid>aba_blocLancamentoNotas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>310</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="255">
+      <seq>255</seq>
       <abaid>lancamentoNotas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>255</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="263">
+      <seq>263</seq>
       <abaid>lancamentoAulas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Aulas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>263</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="264">
+      <seq>264</seq>
       <abaid>obsAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>264</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="265">
+      <seq>265</seq>
       <abaid>lancamentoNotas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Notas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>265</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="326">
+      <seq>326</seq>
       <abaid>informacoesCaixa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Movimentações</nomeaba>
       <obapendice>TCaixa/viewsCaixa</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>326</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="327">
+      <seq>327</seq>
       <abaid>movimentacaoInterna</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Transferência</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>327</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="328">
+      <seq>328</seq>
       <abaid>historicoAcademicoCompleto</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Histórico Completo</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoCompleto</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>328</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="307">
+      <seq>307</seq>
       <abaid>aba_blocLancamentoNotas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>TTurmaDisciplinas/viewSetNotasAlunos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>307</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="331">
+      <seq>331</seq>
       <abaid>prof-histAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>331</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="330">
+      <seq>330</seq>
       <abaid>coord-histAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>330</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="329">
+      <seq>329</seq>
       <abaid>sec-histAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Histórico Alunos</nomeaba>
       <obapendice>TSecretaria/viewGetAcademicoDisciplina</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>329</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="332">
+      <seq>332</seq>
       <abaid>sec-taxaOcupacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>332</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="333">
+      <seq>333</seq>
       <abaid>coord-taxaOcupacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>333</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="334">
+      <seq>334</seq>
       <abaid>prof-taxaOcupacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Taxa de Ocupação</nomeaba>
       <obapendice>TSecretaria/viewTaxaOcupacao</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>334</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="335">
+      <seq>335</seq>
       <abaid>sec-ProcessosAcademicos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Processos Acadêmicos</nomeaba>
       <obapendice>TSecretaria/viewProcessosAcademicos</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>6</ordem>
-      <seq>335</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="336">
+      <seq>336</seq>
       <abaid>disciplinasSemelhantes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Disciplinas Semelhantes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>7</ordem>
-      <seq>336</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="337">
+      <seq>337</seq>
       <abaid>discSemelhante</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>337</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="338">
+      <seq>338</seq>
       <abaid>histCaixa-Contas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Movimentações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>338</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="339">
+      <seq>339</seq>
       <abaid>histCaixa-Grafico</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Gráfico</nomeaba>
       <obapendice>TCaixa/viewGraficoHistorico</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
-      <seq>339</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="1">
+      <seq>1</seq>
       <abaid>dadosPrincipais</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Dados Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>1</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="2">
+      <seq>2</seq>
       <abaid>contato</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Contato</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>2</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="3">
+      <seq>3</seq>
       <abaid>formacao_Profissao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação / Profissão</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>3</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="4">
+      <seq>4</seq>
       <abaid>cobranca</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Cobrança</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>4</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="11">
+      <seq>11</seq>
       <abaid>disciplina</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>11</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="13">
+      <seq>13</seq>
       <abaid>programa</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Programa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>13</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="14">
+      <seq>14</seq>
       <abaid>competencias</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Competências</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>14</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="15">
+      <seq>15</seq>
       <abaid>bibliografia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Bibliografia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>15</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="16">
+      <seq>16</seq>
       <abaid>metodologia</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Metodologia</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>16</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="17">
+      <seq>17</seq>
       <abaid>formacaoProfissional</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Formação profissional</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>17</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="18">
+      <seq>18</seq>
       <abaid>curso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Curso</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>18</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="19">
+      <seq>19</seq>
       <abaid>disciplinas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>19</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="340">
+      <seq>340</seq>
       <abaid>solicitacao-Atendimento</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Atendimento</nomeaba>
       <obapendice>TSecretaria/viewAtendimentoSolicitacao</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
-      <seq>340</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="363">
+      <seq>363</seq>
       <abaid>transacoesConvenios</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>3</ordem>
-      <seq>363</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="364">
+      <seq>364</seq>
       <abaid>transacConvenioAba</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>364</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="366">
+      <seq>366</seq>
       <abaid>turmaConvenioAba</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Convênio</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>366</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="365">
+      <seq>365</seq>
       <abaid>turmaConvenio</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Convênios</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>365</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="367">
+      <seq>367</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>367</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="308">
+      <seq>308</seq>
       <abaid>aba_dAvaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Avaliações X</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>1</ordem>
-      <seq>308</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="368">
+      <seq>368</seq>
       <abaid>gradeAvaliacoes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Informações Principais</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>368</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="369">
+      <seq>369</seq>
       <abaid>infoAvaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Informações da Avaliação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>369</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="370">
+      <seq>370</seq>
       <abaid>descAvaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Descriminação de Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
-      <seq>370</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="40">
+      <seq>40</seq>
       <abaid>lancamentoAulas</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lançamento de Aulas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>40</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="41">
+      <seq>41</seq>
       <abaid>obsAlunos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Observações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>41</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="371">
+      <seq>371</seq>
       <abaid>descAvaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Descriminação de Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>371</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="372">
+      <seq>372</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>372</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="373">
+      <seq>373</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>373</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="374">
+      <seq>374</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>374</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="375">
+      <seq>375</seq>
       <abaid>configUsuario-AlteracaoSenha</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Alteração de Senha</nomeaba>
       <obapendice>TUsuario/apendicePassword</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>375</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="376">
+      <seq>376</seq>
       <abaid>discProjetoDeCursoConcluido</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao> </impressao>
       <nomeaba>Disciplinas</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao> </impressao>
       <ordem>0</ordem>
-      <seq>376</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="377">
+      <seq>377</seq>
       <abaid>estornoMovimentos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Lista de Movimentos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>377</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="378">
+      <seq>378</seq>
       <abaid>estornoDados</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Informações do Estorno</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
-      <seq>378</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="379">
+      <seq>379</seq>
       <abaid>aba_consolidNotasFrequencias</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Consolidação</nomeaba>
       <obapendice>TSecretaria/viewConsolidacaoNotasFrequencias</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>379</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="380">
+      <seq>380</seq>
       <abaid>aba_baixaMultiplaCredito</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Contas de Crédito</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>380</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="381">
+      <seq>381</seq>
       <abaid>aba_vencimentoConta</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Alteração da Data de Vencimento</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>381</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="341">
+      <seq>341</seq>
       <abaid>historicoMovimentacoes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Hist. Movimentações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>6</ordem>
-      <seq>341</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="342">
+      <seq>342</seq>
       <abaid>recado</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Recado</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>342</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="343">
+      <seq>343</seq>
       <abaid>listaAproveitamento</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>343</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="344">
+      <seq>344</seq>
       <abaid>listAprovDisc</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Detalhes</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>344</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="345">
+      <seq>345</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>345</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="346">
+      <seq>346</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>346</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="357">
+      <seq>357</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>357</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="356">
+      <seq>356</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>356</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="355">
+      <seq>355</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>355</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="354">
+      <seq>354</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>354</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="352">
+      <seq>352</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>352</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="351">
+      <seq>351</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>351</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="350">
+      <seq>350</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>350</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="349">
+      <seq>349</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>349</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="347">
+      <seq>347</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>347</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="353">
+      <seq>353</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>353</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="348">
+      <seq>348</seq>
       <abaid>processoEfetivacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Efetivação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>0</ordem>
-      <seq>348</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="358">
+      <seq>358</seq>
       <abaid>justificativaFalta</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Justificativa</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>358</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="218">
+      <seq>218</seq>
       <abaid>viewArquivos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Arquivos</nomeaba>
       <obapendice>TAluno/viewArquivos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>0</ordem>
-      <seq>218</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="269">
+      <seq>269</seq>
       <abaid>viewOrientacoes</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
       <nomeaba>Orientações</nomeaba>
       <obapendice>TAluno/viewOrientacoes</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
       <ordem>2</ordem>
-      <seq>269</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="359">
+      <seq>359</seq>
       <abaid>avaliacaoCurso</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Avaliações</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>4</ordem>
-      <seq>359</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="360">
+      <seq>360</seq>
       <abaid>avaliacao</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Avaliação</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>360</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="361">
+      <seq>361</seq>
       <abaid>descontos</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Descontos</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>2</ordem>
-      <seq>361</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="362">
+      <seq>362</seq>
       <abaid>detalheDesconto</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>0</impressao>
       <nomeaba>Informações do Desconto</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>362</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
     </row>
     <row seq="7">
+      <seq>7</seq>
       <abaid>aba_pess_fone</abaid>
-      <action>-</action>
-      <datacad>2013-08-21</datacad>
-      <impressao>0</impressao>
       <nomeaba>Telefone</nomeaba>
       <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
       <ordem>1</ordem>
-      <seq>7</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-08-21</datacad>
+      <statseq>1</statseq>
     </row>
   </abas>
 </kernelsys>

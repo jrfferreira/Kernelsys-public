@@ -167,7 +167,7 @@ class TSetlista {
     * param <type> $operador = operador ex: AND, OR
     * param <type> $tipoFiltro = tipo do criterio ( 1 = filtro Padrão 2 = criterio de pesquisa 3 = filtro pai )
     */
-    public function addCriterio($col, $dado, $comp, $operador = NULL,$tipodado = 'string',$tipoFiltro = 1) {
+    public function addCriterio($col, $dado, $comp, $operador = NULL, $tipodado = 'numeric',$tipoFiltro = 1) {
 
         if($col and $dado) {
         	

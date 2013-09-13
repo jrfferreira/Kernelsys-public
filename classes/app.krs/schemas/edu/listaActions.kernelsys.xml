@@ -2,310 +2,310 @@
 <kernelsys>
   <listaActions>
     <row seq="1">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Efetivar Matrícula</label>
-      <listseq>147</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onMatricula</nameaction>
-      <ordem>1</ordem>
       <seq>1</seq>
-      <statseq>0</statseq>
+      <listseq>147</listseq>
       <tipocampo/>
+      <nameaction>onMatricula</nameaction>
+      <label>Efetivar Matrícula</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <statseq>0</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="2">
-      <actionjs>onMarcador</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img/>
-      <label>Selecionar</label>
-      <listseq>163</listseq>
-      <metodoexe/>
-      <nameaction>onSelect</nameaction>
-      <ordem>1</ordem>
       <seq>2</seq>
-      <statseq>0</statseq>
+      <listseq>163</listseq>
       <tipocampo>TCheckButton</tipocampo>
+      <nameaction>onSelect</nameaction>
+      <label>Selecionar</label>
+      <actionjs>onMarcador</actionjs>
+      <metodoexe/>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img/>
+      <ordem>1</ordem>
+      <statseq>0</statseq>
       <tiporetorno>lista</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="23">
-      <actionjs>showAtaAvaliacao</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Ata de Avaliação</label>
-      <listseq>217</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onAtaAvaliacao</nameaction>
-      <ordem>2</ordem>
       <seq>23</seq>
-      <statseq>1</statseq>
+      <listseq>217</listseq>
       <tipocampo/>
+      <nameaction>onAtaAvaliacao</nameaction>
+      <label>Ata de Avaliação</label>
+      <actionjs>showAtaAvaliacao</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="22">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <listseq>458</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onViewProcAcademicos</nameaction>
-      <ordem>1</ordem>
       <seq>22</seq>
-      <statseq>1</statseq>
+      <listseq>458</listseq>
       <tipocampo/>
+      <nameaction>onViewProcAcademicos</nameaction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="21">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <listseq>457</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onViewHistFinanceiro</nameaction>
-      <ordem>1</ordem>
       <seq>21</seq>
-      <statseq>1</statseq>
+      <listseq>457</listseq>
       <tipocampo/>
+      <nameaction>onViewHistFinanceiro</nameaction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="20">
-      <actionjs>showBoletoLst</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Boleto</label>
-      <listseq>142</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>showBoleto</nameaction>
-      <ordem>1</ordem>
       <seq>20</seq>
-      <statseq>1</statseq>
+      <listseq>142</listseq>
       <tipocampo/>
+      <nameaction>showBoleto</nameaction>
+      <label>Imprimir Boleto</label>
+      <actionjs>showBoletoLst</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="19">
-      <actionjs>showComprovantePagamento</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Comprovante</label>
-      <listseq>144</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onComprovante</nameaction>
-      <ordem>2</ordem>
       <seq>19</seq>
-      <statseq>1</statseq>
+      <listseq>144</listseq>
       <tipocampo/>
+      <nameaction>onComprovante</nameaction>
+      <label>Imprimir Comprovante</label>
+      <actionjs>showComprovantePagamento</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="18">
-      <actionjs>showComprovantePagamento</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_print.png</img>
-      <label>Imprimir Comprovante</label>
-      <listseq>425</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onComprovante</nameaction>
-      <ordem>1</ordem>
       <seq>18</seq>
-      <statseq>1</statseq>
+      <listseq>425</listseq>
       <tipocampo/>
+      <nameaction>onComprovante</nameaction>
+      <label>Imprimir Comprovante</label>
+      <actionjs>showComprovantePagamento</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="17">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_view.png</img>
-      <label>Informações do Livro</label>
-      <listseq>331</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onLivro</nameaction>
-      <ordem>1</ordem>
       <seq>17</seq>
-      <statseq>1</statseq>
+      <listseq>331</listseq>
       <tipocampo/>
+      <nameaction>onLivro</nameaction>
+      <label>Informações do Livro</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_view.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="15">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm>Deseja realmente efetivar a devolução deste livro?</confirm>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Devolver</label>
-      <listseq>269</listseq>
-      <metodoexe>onView</metodoexe>
-      <nameaction>onSetDevolucao</nameaction>
-      <ordem>1</ordem>
       <seq>15</seq>
-      <statseq>1</statseq>
+      <listseq>269</listseq>
       <tipocampo/>
+      <nameaction>onSetDevolucao</nameaction>
+      <label>Devolver</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onView</metodoexe>
+      <confirm>Deseja realmente efetivar a devolução deste livro?</confirm>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="10">
-      <actionjs>showListaPresenca</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_print.png</img>
-      <label>Lista de Presença</label>
-      <listseq>217</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onListaPresenca</nameaction>
-      <ordem>1</ordem>
       <seq>10</seq>
-      <statseq>1</statseq>
+      <listseq>217</listseq>
       <tipocampo/>
+      <nameaction>onListaPresenca</nameaction>
+      <label>Lista de Presença</label>
+      <actionjs>showListaPresenca</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_print.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="9">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Lançar Inscrição</label>
-      <listseq>185</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onInscricao</nameaction>
-      <ordem>0</ordem>
       <seq>9</seq>
-      <statseq>1</statseq>
+      <listseq>185</listseq>
       <tipocampo/>
+      <nameaction>onInscricao</nameaction>
+      <label>Lançar Inscrição</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="7">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_config.png</img>
-      <label>Atualizar Diário</label>
-      <listseq>199</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onDiarioCoord</nameaction>
-      <ordem>0</ordem>
       <seq>7</seq>
-      <statseq>1</statseq>
+      <listseq>199</listseq>
       <tipocampo/>
+      <nameaction>onDiarioCoord</nameaction>
+      <label>Atualizar Diário</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="6">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_config.png</img>
-      <label>Atualizar Diário</label>
-      <listseq>193</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onDiario</nameaction>
-      <ordem>0</ordem>
       <seq>6</seq>
-      <statseq>1</statseq>
+      <listseq>193</listseq>
       <tipocampo/>
+      <nameaction>onDiario</nameaction>
+      <label>Atualizar Diário</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="5">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Visualizar turma</label>
-      <listseq>182</listseq>
-      <metodoexe>onSet</metodoexe>
-      <nameaction>onViewTurma</nameaction>
-      <ordem>2</ordem>
       <seq>5</seq>
-      <statseq>0</statseq>
+      <listseq>182</listseq>
       <tipocampo/>
+      <nameaction>onViewTurma</nameaction>
+      <label>Visualizar turma</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onSet</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <statseq>0</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="4">
-      <actionjs>selectTurma</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_set.png</img>
-      <label>Gerenciar Turma</label>
-      <listseq>182</listseq>
-      <metodoexe/>
-      <nameaction>onConfigTurma</nameaction>
-      <ordem>1</ordem>
       <seq>4</seq>
-      <statseq>0</statseq>
+      <listseq>182</listseq>
       <tipocampo/>
+      <nameaction>onConfigTurma</nameaction>
+      <label>Gerenciar Turma</label>
+      <actionjs>selectTurma</actionjs>
+      <metodoexe/>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>1</ordem>
+      <statseq>0</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
     <row seq="3">
-      <actionjs>prossExe</actionjs>
-      <campoparam>seq</campoparam>
-      <confirm/>
-      <datacad>1900-01-01</datacad>
-      <img>new_ico_config.png</img>
-      <label>Visualizar</label>
-      <listseq>148</listseq>
-      <metodoexe>onEdit</metodoexe>
-      <nameaction>onViewHistorico</nameaction>
-      <ordem>1</ordem>
       <seq>3</seq>
-      <statseq>1</statseq>
+      <listseq>148</listseq>
       <tipocampo/>
+      <nameaction>onViewHistorico</nameaction>
+      <label>Visualizar</label>
+      <actionjs>prossExe</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_config.png</img>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
       <tiporetorno>form</tiporetorno>
-      <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </listaActions>
 </kernelsys>

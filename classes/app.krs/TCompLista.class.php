@@ -177,7 +177,7 @@ class TCompLista {
                 // $filtro = array("expre" =>  $dadosFiltro, "cols" => $vetorFiltro[0], "Manterfilt" => true );
                 // $this->obsession->setValue("dadosFiltroListaAtual",$filtro);
 
-                $this->obLista->addCriterio($vetorFiltro[0], $dadosFiltro, $vetorFiltro[1], $vetorFiltro[2],'filtroLista');
+                $this->obLista->addCriterio($vetorFiltro[0], $dadosFiltro, $vetorFiltro[1], $vetorFiltro[2], $vetorFiltro[3], 'filtroLista');
             }
             $vetorFiltro = NULL;
         }
