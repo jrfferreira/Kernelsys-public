@@ -148,27 +148,6 @@
       <datacad>2013-08-21</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="620">
-      <seq>620</seq>
-      <listseq>259</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>Carga horária</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>90</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>5</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="477">
       <seq>477</seq>
       <listseq>227</listseq>
@@ -568,27 +547,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="224">
-      <seq>224</seq>
-      <listseq>132</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H. Total</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>60</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="363">
       <seq>363</seq>
       <listseq>132</listseq>
@@ -652,27 +610,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="548">
-      <seq>548</seq>
-      <listseq>242</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H. Total</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>60</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="549">
       <seq>549</seq>
       <listseq>242</listseq>
@@ -705,27 +642,6 @@
       <colfunction>-</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>1</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="830">
-      <seq>830</seq>
-      <listseq>417</listseq>
-      <coluna>cargahorariasemelhante</coluna>
-      <label>C.H.</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>120</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>2</tipocoluna>
       <tabseq>0</tabseq>
       <colunaaux>-</colunaaux>
       <link>0</link>
@@ -1008,6 +924,69 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
+    </row>
+    <row seq="620">
+      <seq>620</seq>
+      <listseq>259</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>Carga horária</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>90</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="548">
+      <seq>548</seq>
+      <listseq>242</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H. Total</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>60</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="224">
+      <seq>224</seq>
+      <listseq>132</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H. Total</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>60</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
     </row>
     <row seq="637">
       <seq>637</seq>
@@ -7834,48 +7813,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="560">
-      <seq>560</seq>
-      <listseq>243</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>30</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="570">
-      <seq>570</seq>
-      <listseq>134</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>30</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="576">
       <seq>576</seq>
       <listseq>134</listseq>
@@ -7912,48 +7849,6 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>2</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="763">
-      <seq>763</seq>
-      <listseq>396</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>30</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="937">
-      <seq>937</seq>
-      <listseq>477</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>30</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -8107,6 +8002,69 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
+    <row seq="763">
+      <seq>763</seq>
+      <listseq>396</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>30</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="570">
+      <seq>570</seq>
+      <listseq>134</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>30</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="560">
+      <seq>560</seq>
+      <listseq>243</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>30</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
     <row seq="527">
       <seq>527</seq>
       <listseq>240</listseq>
@@ -8212,27 +8170,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="659">
-      <seq>659</seq>
-      <listseq>310</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>Carga Horária</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>100</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="6">
       <seq>6</seq>
       <listseq>131</listseq>
@@ -8241,27 +8178,6 @@
       <alinhalabel>left</alinhalabel>
       <alinhadados>left</alinhadados>
       <largura>400</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="7">
-      <seq>7</seq>
-      <listseq>131</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>Carga horaria</label>
-      <alinhalabel>right</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>100</largura>
       <colfunction>-</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
@@ -8296,27 +8212,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="273">
-      <seq>273</seq>
-      <listseq>187</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>Carga Horaria</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>120</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="760">
       <seq>760</seq>
       <listseq>394</listseq>
@@ -8325,27 +8220,6 @@
       <alinhalabel>left</alinhalabel>
       <alinhadados>left</alinhadados>
       <largura>300</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="761">
-      <seq>761</seq>
-      <listseq>394</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>Carga Horária</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>120</largura>
       <colfunction>-</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
@@ -9135,6 +9009,69 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
+    </row>
+    <row seq="761">
+      <seq>761</seq>
+      <listseq>394</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>Carga Horária</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>120</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="659">
+      <seq>659</seq>
+      <listseq>310</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>Carga Horária</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>100</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="273">
+      <seq>273</seq>
+      <listseq>187</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>Carga Horaria</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>120</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
     </row>
     <row seq="638">
       <seq>638</seq>
@@ -13903,27 +13840,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="137">
-      <seq>137</seq>
-      <listseq>156</listseq>
-      <coluna>cargaHoraria</coluna>
-      <label>Carga Horaria</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>100</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="138">
       <seq>138</seq>
       <listseq>156</listseq>
@@ -14743,27 +14659,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="506">
-      <seq>506</seq>
-      <listseq>133</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>40</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>12</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="532">
       <seq>532</seq>
       <listseq>228</listseq>
@@ -15310,27 +15205,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="541">
-      <seq>541</seq>
-      <listseq>135</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>40</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="764">
       <seq>764</seq>
       <listseq>398</listseq>
@@ -15682,27 +15556,6 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>8</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="881">
-      <seq>881</seq>
-      <listseq>430</listseq>
-      <coluna>cargahoraria</coluna>
-      <label>C.H.</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>50</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>2</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -16170,6 +16023,27 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
+    </row>
+    <row seq="541">
+      <seq>541</seq>
+      <listseq>135</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>40</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
     </row>
     <row seq="180">
       <seq>180</seq>
@@ -16947,6 +16821,132 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
+    </row>
+    <row seq="7">
+      <seq>7</seq>
+      <listseq>131</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>Carga horaria</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>100</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="937">
+      <seq>937</seq>
+      <listseq>477</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>30</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="881">
+      <seq>881</seq>
+      <listseq>430</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>50</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="830">
+      <seq>830</seq>
+      <listseq>417</listseq>
+      <coluna>cargahorariasemelhante</coluna>
+      <label>C.H.</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>120</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>2</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="506">
+      <seq>506</seq>
+      <listseq>133</listseq>
+      <coluna>cargahoraria</coluna>
+      <label>C.H.</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>40</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>12</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="137">
+      <seq>137</seq>
+      <listseq>156</listseq>
+      <coluna>cargaHoraria</coluna>
+      <label>Carga Horaria</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>100</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
     </row>
   </coluna>
 </kernelsys>

@@ -251,13 +251,13 @@ class TSetlista {
                 if(!is_array($dados['expre'.$this->listseq])) {
 
                     if(!is_array($argFiltro['expre'.$this->listseq])) {
-                        $vetArgs[0] = $argFiltro['expre'.$this->listseq];
+                        $vetArgs[0] = str_replace("*", "%", $argFiltro['expre'.$this->listseq]);
                     }else {
-                        $vetArgs = $argFiltro['expre'.$this->listseq];
+                        $vetArgs = str_replace("*", "%", $argFiltro['expre'.$this->listseq]);
                     }
-                    $vetArgs[] = $dados['expre'.$this->listseq];
+                    $vetArgs[] = str_replace("*", "%", $dados['expre'.$this->listseq]);
                 }else {
-                    $vetArgs = $dados['expre'.$this->listseq];
+                    $vetArgs = str_replace("*", "%", $dados['expre'.$this->listseq]);
                 }
                 $argFiltro['expre'.$this->listseq] = $vetArgs;
 
@@ -316,7 +316,7 @@ class TSetlista {
                 $this->obsession->delValue('boxFiltro_'.$this->listseq);
                 $argFiltro['cols'.$this->listseq] = $dados['cols'.$this->listseq];
                 $argFiltro['Manterfilt'.$this->listseq] = $dados['Manterfilt'.$this->listseq];
-                $argFiltro['expre'.$this->listseq] = $dados['expre'.$this->listseq];
+                $argFiltro['expre'.$this->listseq] = str_replace("*", "%", $dados['expre'.$this->listseq]);
                 $this->obsession->setValue('boxFiltro_'.$this->listseq, $argFiltro);
 
                 //----------------------------------------------------------------------
@@ -325,16 +325,17 @@ class TSetlista {
 
                     foreach($this->itens as $colId=>$colLabel) {
                         if($colId != '*'){// and $colId != "seq" and $colId != "unidseq" and $colId != "statseq") {
+
                         	
                         	$dadosCol = explode('__', $colId);
-                            $this->addCriterio($dadosCol[0], $dados['expre'.$this->listseq], 'ILIKE','OR',$dadosCol[1], "2");
+                            $this->addCriterio($dadosCol[0], $argFiltro['expre'.$this->listseq], 'ILIKE','OR',$dadosCol[1], "2");
                         }
                     }
 
                 }else {
                 	
                 	$dadosCol = explode('__', $dados['cols'.$this->listseq]);
-                    $this->addCriterio($dadosCol[0], $dados['expre'.$this->listseq], 'ILIKE',NULL,$dadosCol[1], "2");
+                    $this->addCriterio($dadosCol[0], $argFiltro['expre'.$this->listseq], 'ILIKE',NULL,$dadosCol[1], "2");
                 }
             }
              

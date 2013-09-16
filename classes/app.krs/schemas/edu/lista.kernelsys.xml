@@ -481,6 +481,38 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="236">
+      <seq>236</seq>
+      <tipo>form</tipo>
+      <formseq>371</formseq>
+      <filtropai>transeq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTransacaoContasView</lista>
+      <label>Contas a receber</label>
+      <tabseq>65</tabseq>
+      <listseq>206</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/AND/C;stpaseq/in/AND/(1,3)</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="201">
       <seq>201</seq>
       <tipo>form</tipo>
@@ -2145,6 +2177,38 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="208">
+      <seq>208</seq>
+      <tipo>pesq</tipo>
+      <formseq>68</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>valornominal=valor,prodseq=seq,tabelaproduto=tabela</pesquisa>
+      <lista>pesqProdutosC</lista>
+      <label>Produto</label>
+      <tabseq>70</tabseq>
+      <listseq>208</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tpprseq/!=/AND/10004330-830</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="134">
       <seq>134</seq>
       <tipo>form</tipo>
@@ -2260,6 +2324,38 @@
       <acviews>0</acviews>
       <acenviar>0</acenviar>
       <filtro>statseq/!=/AND/9</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="445">
+      <seq>445</seq>
+      <tipo>form</tipo>
+      <formseq>444</formseq>
+      <filtropai>alunseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>faltas</lista>
+      <label>Faltas</label>
+      <tabseq>25</tabseq>
+      <listseq>445</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>situacao/=/AND/F</filtro>
       <trigger/>
       <formainclude>one</formainclude>
       <incontrol/>
@@ -2401,6 +2497,38 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="485">
+      <seq>485</seq>
+      <tipo>form</tipo>
+      <formseq>486</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listBaixaMultiplaCredito</lista>
+      <label>Contas de Crédito</label>
+      <tabseq>65</tabseq>
+      <listseq>485</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/AND/C;stpaseq/in/AND/(1,3)</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>datacad/desc;seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="143">
       <seq>143</seq>
       <tipo>pesq</tipo>
@@ -2521,6 +2649,134 @@
       <incontrol/>
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="382">
+      <seq>382</seq>
+      <tipo>form</tipo>
+      <formseq>389</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentosProgramadosC</lista>
+      <label>Movimentos de crédito programados</label>
+      <tabseq>21</tabseq>
+      <listseq>382</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/AND/C;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="388">
+      <seq>388</seq>
+      <tipo>form</tipo>
+      <formseq>390</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentosProgramadosD</lista>
+      <label>Movimentos de débitos programados</label>
+      <tabseq>21</tabseq>
+      <listseq>388</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/AND/D;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="481">
+      <seq>481</seq>
+      <tipo>form</tipo>
+      <formseq>480</formseq>
+      <filtropai>parcseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaMovimentosEstorno</lista>
+      <label>Movimentações</label>
+      <tabseq>21</tabseq>
+      <listseq>478</listseq>
+      <obapendice>TCaixa/apendiceMovimentosEstorno</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>stmoseq::bigint/in/AND/(1,2,5)</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>datacad/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="210">
+      <seq>210</seq>
+      <tipo>form</tipo>
+      <formseq>352</formseq>
+      <filtropai>transeq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasTransac</lista>
+      <label>Contas a receber</label>
+      <tabseq>65</tabseq>
+      <listseq>210</listseq>
+      <obapendice>TTransacao/apendiceContasNegociacao</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/ANC/C;stpaseq/in/AND/(1,3)</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
       <ordem>seq/desc</ordem>
       <aclimite>1</aclimite>
       <required/>
@@ -2849,6 +3105,38 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="218">
+      <seq>218</seq>
+      <tipo>form</tipo>
+      <formseq>75</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaProdutos</lista>
+      <label>Produtos</label>
+      <tabseq>70</tabseq>
+      <listseq>218</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Produto</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>1</acviews>
+      <acenviar>0</acenviar>
+      <filtro>label/!=/AND/Taxa de inscrição;tabela/!=/AND/dbturmas;tabela/!=/AND/dbtransacoes_contas;</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="410">
       <seq>410</seq>
       <tipo>form</tipo>
@@ -3105,191 +3393,31 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="218">
-      <seq>218</seq>
+    <row seq="141">
+      <seq>141</seq>
       <tipo>form</tipo>
-      <formseq>75</formseq>
-      <filtropai>0</filtropai>
+      <formseq>11</formseq>
+      <filtropai>seq</filtropai>
       <pesquisa>0</pesquisa>
-      <lista>listaProdutos</lista>
-      <label>Produtos</label>
-      <tabseq>70</tabseq>
-      <listseq>218</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>Novo Produto</acincluir>
-      <nivel>1</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>1</acviews>
-      <acenviar>0</acenviar>
-      <filtro>label/!=/AND/Taxa de inscrição/string;tabela/!=/AND/dbturmas/string;tabela/!=/AND/dbtransacoes_contas/string</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="382">
-      <seq>382</seq>
-      <tipo>form</tipo>
-      <formseq>389</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaMovimentosProgramadosC</lista>
-      <label>Movimentos de crédito programados</label>
-      <tabseq>21</tabseq>
-      <listseq>382</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/C/string;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="388">
-      <seq>388</seq>
-      <tipo>form</tipo>
-      <formseq>390</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaMovimentosProgramadosD</lista>
-      <label>Movimentos de débitos programados</label>
-      <tabseq>21</tabseq>
-      <listseq>388</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/D/string;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="445">
-      <seq>445</seq>
-      <tipo>form</tipo>
-      <formseq>444</formseq>
-      <filtropai>alunseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>faltas</lista>
-      <label>Faltas</label>
-      <tabseq>25</tabseq>
-      <listseq>445</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>situacao/=/AND/F/string</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="485">
-      <seq>485</seq>
-      <tipo>form</tipo>
-      <formseq>486</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listBaixaMultiplaCredito</lista>
-      <label>Contas de Crédito</label>
+      <lista>listaContasDebito</lista>
+      <label>Contas a pagar</label>
       <tabseq>65</tabseq>
-      <listseq>485</listseq>
+      <listseq>141</listseq>
       <obapendice>-</obapendice>
       <acfiltro>1</acfiltro>
       <acincluir>0</acincluir>
-      <nivel>2</nivel>
+      <nivel>1</nivel>
       <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
       <acviews>0</acviews>
       <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/C/string;stpaseq/in/AND/(1,3)</filtro>
+      <filtro>tipo/=/AND/D;stpaseq/=/AND/1</filtro>
       <trigger/>
       <formainclude>one</formainclude>
       <incontrol/>
       <acreplicar>0</acreplicar>
-      <acselecao>1</acselecao>
-      <ordem>datacad/desc;seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="481">
-      <seq>481</seq>
-      <tipo>form</tipo>
-      <formseq>480</formseq>
-      <filtropai>parcseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaMovimentosEstorno</lista>
-      <label>Movimentações</label>
-      <tabseq>21</tabseq>
-      <listseq>478</listseq>
-      <obapendice>TCaixa/apendiceMovimentosEstorno</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>stmoseq/in/AND/(1,2,5)</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>1</acselecao>
-      <ordem>datacad/desc</ordem>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
       <aclimite>1</aclimite>
       <required/>
       <usuaseq>1</usuaseq>
@@ -4289,6 +4417,38 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="142">
+      <seq>142</seq>
+      <tipo>form</tipo>
+      <formseq>12</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a receber</label>
+      <tabseq>65</tabseq>
+      <listseq>142</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>tipo/=/AND/C;stpaseq/in/AND/(1,3)</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="479">
       <seq>479</seq>
       <tipo>form</tipo>
@@ -4372,38 +4532,6 @@
       <acviews>1</acviews>
       <acenviar>0</acenviar>
       <filtro>alunseq/=/AND/TUsuario/getSeqAluno</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="142">
-      <seq>142</seq>
-      <tipo>form</tipo>
-      <formseq>12</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaContasCredito</lista>
-      <label>Contas a receber</label>
-      <tabseq>65</tabseq>
-      <listseq>142</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>1</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/C/string;stpaseq/in/AND/(1,3)</filtro>
       <trigger/>
       <formainclude>one</formainclude>
       <incontrol/>
@@ -5025,6 +5153,70 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="145">
+      <seq>145</seq>
+      <tipo>pesq</tipo>
+      <formseq>145</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a Receber</label>
+      <tabseq>65</tabseq>
+      <listseq>145</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>statseq/=/AND/1;tipo/=/AND/C;stpaseq/=/AND/1;stpaseq/=/OR/3;stpaseq/=/OR/5;</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="146">
+      <seq>146</seq>
+      <tipo>pesq</tipo>
+      <formseq>11</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,valorpago=valorreal,vencimento=vencimento</pesquisa>
+      <lista>listaPesqCDebito</lista>
+      <label>Contas a Pagar</label>
+      <tabseq>65</tabseq>
+      <listseq>146</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipo/=/AND/D;stpaseq/=/AND/1;statseq/=/AND/1</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="456">
       <seq>456</seq>
       <tipo>pesq</tipo>
@@ -5366,198 +5558,6 @@
       <filtro>statseq/=/AND/1</filtro>
       <trigger/>
       <formainclude>oneone</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="210">
-      <seq>210</seq>
-      <tipo>form</tipo>
-      <formseq>352</formseq>
-      <filtropai>transeq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaContasTransac</lista>
-      <label>Contas a receber</label>
-      <tabseq>65</tabseq>
-      <listseq>210</listseq>
-      <obapendice>TTransacao/apendiceContasNegociacao</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/ANC/C/string;stpaseq/in/AND/(1,3)</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>1</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="141">
-      <seq>141</seq>
-      <tipo>form</tipo>
-      <formseq>11</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaContasDebito</lista>
-      <label>Contas a pagar</label>
-      <tabseq>65</tabseq>
-      <listseq>141</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>1</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/D/string;stpaseq/=/AND/1</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="146">
-      <seq>146</seq>
-      <tipo>pesq</tipo>
-      <formseq>11</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,valorpago=valorreal,vencimento=vencimento</pesquisa>
-      <lista>listaPesqCDebito</lista>
-      <label>Contas a Pagar</label>
-      <tabseq>65</tabseq>
-      <listseq>146</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>tipo/=/AND/D/string;stpaseq/=/AND/1;statseq/=/AND/1</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="145">
-      <seq>145</seq>
-      <tipo>pesq</tipo>
-      <formseq>145</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento</pesquisa>
-      <lista>listaContasCredito</lista>
-      <label>Contas a Receber</label>
-      <tabseq>65</tabseq>
-      <listseq>145</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>statseq/=/AND/1;tipo/=/AND/C/string;stpaseq/=/AND/1;stpaseq/=/OR/3;stpaseq/=/OR/5;</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="208">
-      <seq>208</seq>
-      <tipo>pesq</tipo>
-      <formseq>68</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>valornominal=valor,prodseq=seq,tabelaproduto=tabela</pesquisa>
-      <lista>pesqProdutosC</lista>
-      <label>Produto</label>
-      <tabseq>70</tabseq>
-      <listseq>208</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>1</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>tpprseq/!=/AND/10004330-830/string</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="236">
-      <seq>236</seq>
-      <tipo>form</tipo>
-      <formseq>371</formseq>
-      <filtropai>transeq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaTransacaoContasView</lista>
-      <label>Contas a receber</label>
-      <tabseq>65</tabseq>
-      <listseq>206</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>1</acviews>
-      <acenviar>0</acenviar>
-      <filtro>tipo/=/AND/C/string;stpaseq/in/AND/(1,3)</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
       <incontrol/>
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>

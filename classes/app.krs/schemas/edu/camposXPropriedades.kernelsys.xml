@@ -9870,15 +9870,5 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="118">
-      <seq>118</seq>
-      <campseq>80</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomeunidade from dbunidade where statseq != 9 order by nomeunidade</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>2013-09-12</datacad>
-    </row>
   </camposXPropriedades>
 </kernelsys>

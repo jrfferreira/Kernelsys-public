@@ -2726,6 +2726,31 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="80">
+      <seq>80</seq>
+      <colunadb>localAulas</colunadb>
+      <campo>localAulas</campo>
+      <label>Local das Aulas:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>11</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="84">
       <seq>84</seq>
       <colunadb>numParcelas</colunadb>
@@ -6914,31 +6939,6 @@
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
       <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="774">
-      <seq>774</seq>
-      <colunadb>obs</colunadb>
-      <campo>obs</campo>
-      <label>Observações:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>9</tpcaseq>
-      <tabseq>83</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol/>
       <incontrol>0</incontrol>
       <trigger>0</trigger>
       <help/>
@@ -11609,6 +11609,31 @@
       <mascara/>
       <seletor/>
       <tpcaseq>2</tpcaseq>
+      <tabseq>83</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol/>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <valornull>0</valornull>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="774">
+      <seq>774</seq>
+      <colunadb>obs</colunadb>
+      <campo>obs</campo>
+      <label>Observações:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>9</tpcaseq>
       <tabseq>83</tabseq>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
@@ -19625,31 +19650,6 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-09-03</datacad>
-    </row>
-    <row seq="80">
-      <seq>80</seq>
-      <colunadb>localaulas</colunadb>
-      <campo>localAulas</campo>
-      <label>Local das Aulas:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>2</tpcaseq>
-      <tabseq>11</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
     </row>
   </campos>
 </kernelsys>
