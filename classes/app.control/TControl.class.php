@@ -281,6 +281,7 @@ class TControl {
 	        if($cnpj){
 	            $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
 	            $crit = new TCriteria();
+	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
 	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
 	            $filter = new TFilter(TConstantes::SEQUENCIAL,'=',$headerForm[TConstantes::SEQUENCIAL]);
 	            $filter->tipoFiltro = 6;
@@ -348,6 +349,7 @@ class TControl {
         if($cpf){
             $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
             $crit = new TCriteria();
+            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
             $crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
             $filter = new TFilter(TConstantes::SEQUENCIAL,'!=',$headerForm[TConstantes::SEQUENCIAL]);
             $filter->tipoFiltro = 6;

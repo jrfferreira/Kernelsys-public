@@ -57,14 +57,13 @@ class MovimentoCaixaBO{
 		$parcelas = $documentoBO->getParcela($parcelas);		
 		
 		//Instancia janela de retorno das parcelas baixadas
-		$listaParcelasBaixadas = new TElement('div');//TWindow('Baixa de documentos');
-		$listaParcelasBaixadas->id = 'dialogcaixa';
-		$listaParcelasBaixadas->class = 'TWindow';
-			$titulo = new TElement('div');
-			$titulo->id='ui-dialog-title-dialogcaixa';
-		$listaParcelasBaixadas->add($titulo);
-		//$listaParcelasBaixadas->setAutoOpen(true);
-		//$listaParcelasBaixadas->setSize('400px','300px');
+		$windowResp = new TWindow('Baixa de documentos');
+		$windowResp->setModal(true);
+		$windowResp->setSize('400px','300px');
+		$windowResp->setAutoOpen();
+		
+		$bloco = new TElement('div');
+		
 		
 		$dbo = new TDbo();
 		foreach ($parcelas as $seqPar=>$parcela){
@@ -82,6 +81,7 @@ class MovimentoCaixaBO{
 			$mcaixa['mvcxvlor'] = $parcela->dcpcvlpc;// Valor pago/recebido no movimento
 			$mcaixa['mvcxrefe'] = $parcela->dcpcdtrf;// data de Referencia
 			$mcaixa['pessseq'] = $documento->pessseq;// Sequencial que identifica a pessoa
+			$mcaixa['dcpcseq'] = $parcela->seq;// Sequencial que identifica a parcela
 			$mcaixa['depeseq'] = $parcela->depeseq;// Sequencial que identifica o departamento
 			$mcaixa['plctseq'] = $parcela->plctseq;// Sequencial do plano de contas
 			$mcaixa['ctfnseq'] = $dados['ctfnseq'];// Sequencial que identifica a conta financeira
@@ -109,8 +109,8 @@ class MovimentoCaixaBO{
 				
 				$box = new TElement('div');
 				$box->class = 'ui-state-highlight';
-				$box->add('Parcela '.$parcela->dcpcnmpc.' - Documento '.$documento->dcprdcid.' Baixada com sucesso.');
-				$listaParcelasBaixadas->add($box);
+				$box->add('Parcela '.$parcela->dcpcnmpc.' - Documento '.$documento->dcprdcid.' valor: R$'.$parcela->dcpcvlpc.' - Baixada com sucesso.');
+				$bloco->add($box);
 				
 			}else{
 				
@@ -118,16 +118,18 @@ class MovimentoCaixaBO{
 				$box->add('ERRO - Parcela '.$parcela->dcpcnmpc.' - Documento '.$documento->dcprdcid.' não foi baixada. O processo foi intenrrompido.');
 				$box->class = 'ui-state-error';
 				
-				$listaParcelasBaixadas->add($box);
-				$listaParcelasBaixadas->show();
+				$bloco->add($box);
+				$windowResp->show();
 				exit();
 			}
+			
+			$windowResp->add($bloco);
 			
 			$dbo->close();
 		
 		}
 		
-		return $listaParcelasBaixadas;
+		return $windowResp;
 	
 	}
 	
@@ -147,7 +149,7 @@ class MovimentoCaixaBO{
 				$dbo->setEntidade(TConstantes::DBMOVIMENTOCAIXA);
 					$criteriaMC = new TCriteria();
 					$criteriaMC->add(new TFilter('statseq', '!=', '3', 'numeric'));
-					$criteriaMC->add(new TFilter('mvcxsdcx', '>', 0.00, 'numeric'));
+					$criteriaMC->add(new TFilter('mvcxsdcx', '!=', 0.00, 'numeric'));
 					$criteriaMC->setProperty('order', 'seq DESC');
 					$criteriaMC->setProperty('limit', 1);
 				$retMovimento = $dbo->select('mvcxsdcx', $criteriaMC);

@@ -41,6 +41,13 @@ class TMain {
         $this->tipoRetorno = $this->param['tipoRetorno'];
         $this->idObject = $this->param[TConstantes::FORM];
                 
+        //define de a execução vai ser recursiva
+        if($this->param['typeRun']){
+        	$this->typeRun = $this->param['typeRun'];
+        }else{
+        	$this->typeRun = 'one';
+        }
+                
         //Retorna Usuario logado===================================
         $obUser = new TCheckLogin();
         $this->obUser = $obUser->getUser();
@@ -82,6 +89,9 @@ class TMain {
             // chaves de acesso a listabBox
             $this->idObjectBoxAtual = 'obListaBox_'.$this->header[TConstantes::LISTA];//$this->idObject;
             $this->listaBox = "listaBox";
+            
+            
+            $xx = $this->obsession->getValue('boxFiltro_'.$this->header[TConstantes::LISTA]);
             
             //Limpa sessão do listaBox
            /* if($this->param['nivel'] == 1){
@@ -271,6 +281,13 @@ class TMain {
    		$obControl = new TSetControl();
    		$seqRetorno = TConstantes::ERRO_0;
    		
+   		
+   		//executa a função de controle do formulário se existir
+   		if($this->header[TConstantes::HEAD_OUTCONTROL]){
+   			$formOutControl = explode('/', $this->header[TConstantes::HEAD_OUTCONTROL]);
+   			$retornoOutcontrol = $this->onMain($formOutControl);
+   		}
+   		
     	// percorre o retorno da tela e injeta o valor no bean
     	foreach($dadosForm as $nomeCampo=>$valorCampo){
     		if($camposSession){
@@ -285,7 +302,6 @@ class TMain {
     				if($this->header[TConstantes::ENTIDADE] == $camposSession[$nomeCampo][TConstantes::ENTIDADE]){
     					$camposSession[$nomeCampo][TConstantes::SEQUENCIAL] = $this->header[TConstantes::SEQUENCIAL];
     				}else{
-    					
     					$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][$this->header[TConstantes::HEAD_COLUNAFK]] = $this->header[TConstantes::SEQUENCIAL];
     				}
     			}
@@ -413,11 +429,15 @@ class TMain {
 		    		
 		    	//executa manter para os dados
 		    	
+		    		$obKrs = new TKrs();
 		    	//percorre os campos agrupados por entidade e mantem os dados em banco 
 		   		foreach($dados as $entidade=>$dado){
 		   			
 		   			if($entidade != TConstantes::HEAD_HEADCHILDS){
-		   				$seqAtual = $this->loadSave($entidade, $dado);		   				
+		   				if($entidade != $this->entidadeForm && !!$seqAtual){
+		   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqAtual;
+		   				}	   				
+		   				$seqAtual = $this->loadSave($entidade, $dado);	
 		   			}else{
 		   				
 		   				foreach($dado as $filho){
@@ -445,15 +465,10 @@ class TMain {
 		    //Atribui SEQ atual do registro salvo ao cabeçalho em questão.
 		    $this->header[TConstantes::SEQUENCIAL] =  $seqAtual;
     		
-		    
-		    //executa a função de controle do formulário se existir
-		    if($this->header[TConstantes::HEAD_OUTCONTROL]){
-		    	$formOutControl = explode('/', $this->header[TConstantes::HEAD_OUTCONTROL]);
-		    	$retornoOutcontrol = $this->onMain($formOutControl);
-		    }
-    		
     	//Fecha o formulário
+    	if($this->typeRun == 'one'){
     	$this->onClose();
+    	}
     	return $seqAtual;
     
     }
@@ -471,8 +486,8 @@ class TMain {
     			if($dados[TConstantes::SEQUENCIAL]) {
     				    				
     				$obDbo->setEntidade($entidade);
-    					$criteriaUpCampo = new TCriteria();
-    					$criteriaUpCampo->add(new TFilter(TConstantes::SEQUENCIAL, '=', $dados[TConstantes::SEQUENCIAL]));
+    				$criteriaUpCampo = new TCriteria();
+    				$criteriaUpCampo->add(new TFilter(TConstantes::SEQUENCIAL, '=', $dados[TConstantes::SEQUENCIAL]));
     				$retorno = $obDbo->update($dados, $criteriaUpCampo);	
 
     				$seq = $dados[TConstantes::SEQUENCIAL];
@@ -622,13 +637,15 @@ class TMain {
 	            //aplica regras de negocio na inclusão da lista
 	            $retorno = $this->setInControl();
 
+	            	$this->getObLista();
+
 	            	//onDelente TSetlista();
 		            $this->obLista->onDelete($this->param['key'], $this->entidadeForm);
 	
 					
 			 }
 			 
-			 $this->getObLista();//Substituir por backbone.js 
+			 $this->getList();//Substituir por backbone.js 
 			 $this->showlist();
     	
     	}else{
@@ -927,7 +944,9 @@ class TMain {
     			exit();
     		}
     		
+    		if($this->typeRun == 'one'){
     		$this->obHeader->clearHeader($this->header[TConstantes::FORM]);
+    	}
     	}
     	else{
     		// lança exeção de erro na execução da sql

@@ -172,7 +172,7 @@ class TSetfields {
             if($obField->label != ""){
                 $cellLabel = $row->addCell(" ");
                 $cellLabel->class = "tlabel";
-                if(get_class($obField) != 'TButton'){
+                if(get_class($obField) != 'TButton' && get_class($obField) != 'THidden'){
                     $cellLabel->add($obField->label);
                 }
             }

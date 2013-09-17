@@ -405,7 +405,7 @@ class TDbo {
 
                 // cria critério de seleção de dados
                 $criteria = new TCriteria;
-                $criteria->add(new TFilter($col, '=', $param));
+                $criteria->add(new TFilter($col, '=', $param,  'numeric'));
 
                 // define o critério de seleção baseado no ID
                 $sql->setCriteria($criteria);

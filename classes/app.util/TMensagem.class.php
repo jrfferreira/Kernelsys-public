@@ -43,6 +43,7 @@ class TMensagem{
      const ERRO_FECHAR_CAIXA            = "Ouve um problema ao fechar o caixa - Entre em contato com o administrador.";
      const MSG_SUCESSO_BAIXAR_BOLETO_INATIVO = "O boleto inatívo foi baixado com sucesso";
      const MSG_SUCESSO_BAIXAR_CONTA = "A parcaela foi baixada com sucesso";
+     const MSG_ERRO_PERMISSAO_CONTA_FINANCEIRA = "O funcionário não tem permissões para manusear a conta financeira";
      
      //Mensagem gerais do Sistema de Email
      const ERRO_MAIL_ACESSO             = "Falha ao acessar o servidor de e-mail.";

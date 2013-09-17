@@ -18,7 +18,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -43,7 +43,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -68,7 +68,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -93,7 +93,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -118,7 +118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -143,7 +143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -168,7 +168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -193,7 +193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -218,7 +218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -243,7 +243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -268,7 +268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -293,7 +293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -318,7 +318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -343,7 +343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -368,7 +368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -393,7 +393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -418,7 +418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -443,7 +443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -468,7 +468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -493,7 +493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -518,7 +518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -543,7 +543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -568,7 +568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -593,7 +593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -618,7 +618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -643,7 +643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -668,7 +668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -693,7 +693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -718,7 +718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -743,7 +743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -768,7 +768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -793,7 +793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -818,7 +818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -843,7 +843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -868,7 +868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -893,7 +893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -918,7 +918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -943,7 +943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -968,7 +968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -993,7 +993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1018,7 +1018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1043,7 +1043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1068,7 +1068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1093,7 +1093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1118,7 +1118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1143,7 +1143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1168,7 +1168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1193,7 +1193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1218,7 +1218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1243,7 +1243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1268,7 +1268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1293,7 +1293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1318,7 +1318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1343,7 +1343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1368,7 +1368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1393,7 +1393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1418,7 +1418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1443,7 +1443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1468,7 +1468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1493,7 +1493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1518,7 +1518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1543,7 +1543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1568,7 +1568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1593,7 +1593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1618,7 +1618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1643,7 +1643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1668,7 +1668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1693,7 +1693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1718,7 +1718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1743,7 +1743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1768,7 +1768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1793,7 +1793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1818,7 +1818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1843,7 +1843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1868,7 +1868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1893,7 +1893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1918,7 +1918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1943,7 +1943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1968,7 +1968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -1993,7 +1993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2018,7 +2018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2043,7 +2043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2068,7 +2068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2093,7 +2093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2118,7 +2118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2143,7 +2143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2168,7 +2168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2193,7 +2193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2218,7 +2218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2243,7 +2243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2268,7 +2268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2293,7 +2293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2318,7 +2318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2343,7 +2343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2368,7 +2368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2393,7 +2393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2418,7 +2418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2443,7 +2443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2468,7 +2468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2493,7 +2493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2518,7 +2518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2543,7 +2543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2568,7 +2568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2593,7 +2593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2618,7 +2618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2643,7 +2643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2668,7 +2668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2693,7 +2693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2718,7 +2718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2743,7 +2743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2768,7 +2768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2793,7 +2793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2818,7 +2818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2843,7 +2843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2868,7 +2868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2893,7 +2893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2918,7 +2918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2943,7 +2943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2968,7 +2968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -2993,7 +2993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3018,7 +3018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3043,7 +3043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3068,7 +3068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3093,7 +3093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3118,7 +3118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3143,7 +3143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3168,7 +3168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3193,7 +3193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3218,7 +3218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3243,7 +3243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3268,7 +3268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3293,7 +3293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3318,7 +3318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3343,7 +3343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3368,7 +3368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3393,7 +3393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3418,7 +3418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3443,7 +3443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3468,7 +3468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3493,7 +3493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3518,7 +3518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3543,7 +3543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3568,7 +3568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3593,7 +3593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3618,7 +3618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3643,7 +3643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3668,7 +3668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -3693,7 +3693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -3718,7 +3718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3743,7 +3743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3768,7 +3768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3793,7 +3793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3818,7 +3818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3843,7 +3843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3868,7 +3868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3893,7 +3893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3918,7 +3918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3943,7 +3943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3968,7 +3968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -3993,7 +3993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4018,7 +4018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4043,7 +4043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4068,7 +4068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4093,7 +4093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4118,7 +4118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4143,7 +4143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4168,7 +4168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4193,7 +4193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4218,7 +4218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4243,7 +4243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4268,7 +4268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4293,7 +4293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4318,7 +4318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4343,7 +4343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4368,7 +4368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4393,7 +4393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4418,7 +4418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4443,7 +4443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4468,7 +4468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4493,7 +4493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -4518,7 +4518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4543,7 +4543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4568,7 +4568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4593,7 +4593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4618,7 +4618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4643,7 +4643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4668,7 +4668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4693,7 +4693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4718,7 +4718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4743,7 +4743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4768,7 +4768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4793,7 +4793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4818,7 +4818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4843,7 +4843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4868,7 +4868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4893,7 +4893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4918,7 +4918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4943,7 +4943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4968,7 +4968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -4993,7 +4993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5018,7 +5018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5043,7 +5043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5068,7 +5068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5093,7 +5093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5118,7 +5118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5143,7 +5143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5168,7 +5168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5193,7 +5193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5218,7 +5218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5243,7 +5243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5268,7 +5268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5293,7 +5293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5318,7 +5318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5343,7 +5343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5368,7 +5368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5393,7 +5393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5418,7 +5418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5443,7 +5443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5468,7 +5468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5493,7 +5493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5518,7 +5518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5543,7 +5543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5568,7 +5568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5593,7 +5593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5618,7 +5618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5643,7 +5643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5668,7 +5668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5693,7 +5693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5718,7 +5718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5743,7 +5743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5768,7 +5768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5793,7 +5793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5818,7 +5818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5843,7 +5843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5868,7 +5868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5893,7 +5893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5918,7 +5918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5943,7 +5943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5968,7 +5968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -5993,7 +5993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6018,7 +6018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6043,7 +6043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6068,7 +6068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6093,7 +6093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6118,7 +6118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6143,7 +6143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6168,7 +6168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -6193,7 +6193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6218,7 +6218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6243,7 +6243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6268,7 +6268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6293,7 +6293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6318,7 +6318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6343,7 +6343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6368,7 +6368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6393,7 +6393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6418,7 +6418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6443,7 +6443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6468,7 +6468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6493,7 +6493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6518,7 +6518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6543,7 +6543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6568,7 +6568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6593,7 +6593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6618,7 +6618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6643,7 +6643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6668,7 +6668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6693,7 +6693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6718,7 +6718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6743,82 +6743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="441">
-      <seq>441</seq>
-      <colunadb>cidade</colunadb>
-      <campo>cidade</campo>
-      <label>Cidade:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="442">
-      <seq>442</seq>
-      <colunadb>estado</colunadb>
-      <campo>estado</campo>
-      <label>Estado:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>2</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="443">
-      <seq>443</seq>
-      <colunadb>cep</colunadb>
-      <campo>cep</campo>
-      <label>Cep:</label>
-      <mascara>'99.999-999',1</mascara>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6843,32 +6768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="422">
-      <seq>422</seq>
-      <colunadb>pessnmrz</colunadb>
-      <campo>pessnmrz</campo>
-      <label>Nome:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6893,7 +6793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6918,7 +6818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6943,7 +6843,57 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="442">
+      <seq>442</seq>
+      <colunadb>estado</colunadb>
+      <campo>estado</campo>
+      <label>Estado:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>2</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="422">
+      <seq>422</seq>
+      <colunadb>pessnmrz</colunadb>
+      <campo>pessnmrz</campo>
+      <label>Nome:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6968,7 +6918,7 @@
       <trigger>setTipoForm('tipo1')</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -6993,7 +6943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7018,7 +6968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7043,7 +6993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7068,7 +7018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7093,7 +7043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7118,7 +7068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7143,7 +7093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7168,7 +7118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7193,7 +7143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7218,7 +7168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7243,7 +7193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7268,7 +7218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7293,7 +7243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7318,7 +7268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7343,7 +7293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7368,7 +7318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7393,7 +7343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7418,7 +7368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7443,7 +7393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7468,7 +7418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7493,7 +7443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7518,7 +7468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7543,7 +7493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7568,7 +7518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7593,7 +7543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7618,7 +7568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7643,7 +7593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7668,7 +7618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7693,7 +7643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7718,7 +7668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7743,7 +7693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7768,7 +7718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7793,7 +7743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7818,7 +7768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7843,7 +7793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7868,7 +7818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7893,32 +7843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="439">
-      <seq>439</seq>
-      <colunadb>logradouro</colunadb>
-      <campo>logradouro</campo>
-      <label>Logradouro:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7943,7 +7868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7968,7 +7893,7 @@
       <trigger>setTipoForm('tipo1')</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -7993,7 +7918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8018,7 +7943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8043,7 +7968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8068,7 +7993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8093,7 +8018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8118,7 +8043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8143,7 +8068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8168,7 +8093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8193,7 +8118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8218,7 +8143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8243,7 +8168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8268,7 +8193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8293,7 +8218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8318,7 +8243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8343,7 +8268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8368,7 +8293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8393,7 +8318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8418,7 +8343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8443,7 +8368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8468,7 +8393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8493,7 +8418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8518,7 +8443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8543,7 +8468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8568,7 +8493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8593,7 +8518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8618,7 +8543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8643,7 +8568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8668,7 +8593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -8693,7 +8618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -8718,7 +8643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8743,7 +8668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8768,7 +8693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8793,7 +8718,7 @@
       <trigger>atualizaDataCampo('dataAtualizacao')</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8818,7 +8743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8843,7 +8768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8868,7 +8793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8893,7 +8818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8918,7 +8843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8943,7 +8868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8968,7 +8893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -8993,7 +8918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9018,7 +8943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9043,7 +8968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9068,7 +8993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9093,7 +9018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9118,7 +9043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9143,7 +9068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9168,7 +9093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9193,7 +9118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9218,7 +9143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9243,7 +9168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9268,7 +9193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9293,7 +9218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9318,7 +9243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9343,7 +9268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9368,7 +9293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9393,7 +9318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9418,7 +9343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9443,7 +9368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9468,7 +9393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9493,7 +9418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9518,7 +9443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9543,7 +9468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9568,7 +9493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9593,7 +9518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9618,7 +9543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9643,7 +9568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9668,7 +9593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9693,7 +9618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9718,7 +9643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9743,7 +9668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9768,7 +9693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9793,7 +9718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9818,7 +9743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9843,7 +9768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9868,7 +9793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9893,7 +9818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9918,7 +9843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9943,7 +9868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9968,7 +9893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -9993,7 +9918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10018,7 +9943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10043,7 +9968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10068,7 +9993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10093,7 +10018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10118,7 +10043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10143,7 +10068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10168,7 +10093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10193,7 +10118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10218,7 +10143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10243,7 +10168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10268,7 +10193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10293,7 +10218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10318,7 +10243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -10343,7 +10268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -10368,7 +10293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -10393,7 +10318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10418,7 +10343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10443,7 +10368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10468,7 +10393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10493,7 +10418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10518,7 +10443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10543,7 +10468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -10568,7 +10493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10593,7 +10518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10618,7 +10543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10643,7 +10568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10668,7 +10593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10693,7 +10618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10718,7 +10643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10743,7 +10668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10768,7 +10693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10793,7 +10718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10818,7 +10743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10843,7 +10768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10868,7 +10793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10893,7 +10818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10918,7 +10843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10943,7 +10868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10968,7 +10893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -10993,7 +10918,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11018,7 +10943,7 @@
       <trigger>0</trigger>
       <help>Número de vezes que um usuário pode abrir o questionário.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11043,7 +10968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11068,7 +10993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11093,7 +11018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11118,7 +11043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11143,7 +11068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11168,7 +11093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11193,7 +11118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11218,7 +11143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11243,7 +11168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11268,7 +11193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11293,7 +11218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11318,7 +11243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11343,7 +11268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11368,7 +11293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11393,7 +11318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11418,7 +11343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11443,7 +11368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11468,7 +11393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11493,7 +11418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -11518,7 +11443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -11543,7 +11468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -11568,7 +11493,7 @@
       <trigger>0</trigger>
       <help>Número de questões liberadas por usuário. Permite o usar randerização de questões.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11593,7 +11518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11618,7 +11543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11643,7 +11568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11668,7 +11593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11693,7 +11618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11718,7 +11643,7 @@
       <trigger>0</trigger>
       <help>Nome do tipo de curso.Ex: Treinamento</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11743,7 +11668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11768,7 +11693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11793,7 +11718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11818,7 +11743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11843,7 +11768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11868,7 +11793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11893,7 +11818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11918,7 +11843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11943,7 +11868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11968,7 +11893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -11993,7 +11918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12018,7 +11943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12043,7 +11968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12068,7 +11993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12093,7 +12018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12118,7 +12043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12143,7 +12068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12168,7 +12093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12193,7 +12118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12218,7 +12143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12243,7 +12168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12268,7 +12193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12293,7 +12218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12318,7 +12243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12343,7 +12268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12368,7 +12293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12393,7 +12318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12418,7 +12343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12443,7 +12368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12468,7 +12393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12493,7 +12418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12518,7 +12443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12543,7 +12468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12568,7 +12493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12593,7 +12518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12618,7 +12543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12643,7 +12568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12668,7 +12593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12693,7 +12618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12718,7 +12643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12743,7 +12668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12768,7 +12693,7 @@
       <trigger>0</trigger>
       <help>Define o tipo de movimento Ex: Movimento programado.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12793,7 +12718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12818,7 +12743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12843,7 +12768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12868,7 +12793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12893,7 +12818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12918,7 +12843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -12943,7 +12868,7 @@
       <trigger>0</trigger>
       <help>Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12968,7 +12893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -12993,7 +12918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13018,7 +12943,7 @@
       <trigger>0</trigger>
       <help>Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13043,7 +12968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13068,7 +12993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13093,7 +13018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13118,7 +13043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13143,7 +13068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13168,7 +13093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13193,7 +13118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13218,7 +13143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13243,7 +13168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13268,7 +13193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13293,7 +13218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13318,7 +13243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13343,7 +13268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -13368,7 +13293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13393,7 +13318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13418,7 +13343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13443,7 +13368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13468,7 +13393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13493,7 +13418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13518,7 +13443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13543,7 +13468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13568,7 +13493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13593,7 +13518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13618,32 +13543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="448">
-      <seq>448</seq>
-      <colunadb>telefone</colunadb>
-      <campo>telefone</campo>
-      <label>Telefone:</label>
-      <mascara/>
-      <seletor>CLASS_UI_TELEFONE</seletor>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>3</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setTelefone</outcontrol>
-      <incontrol>setTelefoneDB</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13668,7 +13568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13693,7 +13593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13718,7 +13618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13743,7 +13643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13768,7 +13668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13793,7 +13693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13818,7 +13718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13843,7 +13743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13868,7 +13768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13893,7 +13793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13918,7 +13818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13943,7 +13843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13968,7 +13868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -13993,7 +13893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14018,7 +13918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14043,7 +13943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14068,7 +13968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14093,7 +13993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14118,7 +14018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14143,7 +14043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14168,7 +14068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14193,7 +14093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14218,7 +14118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14243,7 +14143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14268,7 +14168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14293,7 +14193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14318,7 +14218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14343,7 +14243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14368,7 +14268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14393,7 +14293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14418,7 +14318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14443,7 +14343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14468,7 +14368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14493,7 +14393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14518,7 +14418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14543,7 +14443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14568,7 +14468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14593,7 +14493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14618,7 +14518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14643,7 +14543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14668,32 +14568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="423">
-      <seq>423</seq>
-      <colunadb>pessnmrf</colunadb>
-      <campo>cpf</campo>
-      <label>CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol> </outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14718,7 +14593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14743,7 +14618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14768,7 +14643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14793,7 +14668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14818,7 +14693,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14843,7 +14718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14868,7 +14743,7 @@
       <trigger>0</trigger>
       <help>Caso o desconto não tenha validade, mantenha o valor ''--'' (Mantendo o valor no campo ''Outras deduções/Abatimentos'' do boleto).</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14893,7 +14768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14918,7 +14793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -14943,7 +14818,7 @@
       <trigger>0</trigger>
       <help>Define se o valor pode sofrer alteração durante a negociação.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14968,7 +14843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -14993,7 +14868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15018,7 +14893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15043,7 +14918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15068,7 +14943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15093,7 +14968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15118,7 +14993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15143,7 +15018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15168,7 +15043,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15193,7 +15068,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15218,7 +15093,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15243,7 +15118,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15268,7 +15143,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15293,7 +15168,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15318,7 +15193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15343,7 +15218,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15368,7 +15243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15393,7 +15268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15418,7 +15293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15443,7 +15318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15468,7 +15343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15493,7 +15368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15518,7 +15393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15543,7 +15418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15568,7 +15443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15593,7 +15468,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15618,7 +15493,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15643,7 +15518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15668,7 +15543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15693,7 +15568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15718,7 +15593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15743,7 +15618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>0</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15768,7 +15643,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>0</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15793,7 +15668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15818,7 +15693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15843,7 +15718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15868,7 +15743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -15893,7 +15768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15918,7 +15793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>0</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15943,7 +15818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15968,7 +15843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -15993,7 +15868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16018,7 +15893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>0</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16043,7 +15918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16068,7 +15943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16093,7 +15968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16118,7 +15993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16143,7 +16018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16168,7 +16043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16193,7 +16068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16218,7 +16093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16243,7 +16118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16268,7 +16143,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16293,7 +16168,7 @@
       <trigger>validaValorAlteravel('valorNominal')</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16318,7 +16193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16343,7 +16218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16368,7 +16243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16393,7 +16268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16418,7 +16293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16443,7 +16318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16468,7 +16343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16493,7 +16368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16518,7 +16393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16543,7 +16418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16568,7 +16443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16593,7 +16468,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16618,7 +16493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>0</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16643,7 +16518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16668,7 +16543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16693,7 +16568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16718,7 +16593,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16743,7 +16618,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16768,7 +16643,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16793,7 +16668,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16818,7 +16693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16843,7 +16718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16868,7 +16743,7 @@
       <trigger>calculaDebitoProfessor()</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16893,7 +16768,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16918,7 +16793,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16943,7 +16818,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16968,7 +16843,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -16993,7 +16868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -17018,7 +16893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -17043,7 +16918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17068,7 +16943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17093,7 +16968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17118,7 +16993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17143,7 +17018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17168,7 +17043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17193,7 +17068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17218,7 +17093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17243,7 +17118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17268,7 +17143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17293,7 +17168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17318,7 +17193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17343,7 +17218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17368,7 +17243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17393,7 +17268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17418,7 +17293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17443,7 +17318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17468,7 +17343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17493,7 +17368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17518,7 +17393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17543,7 +17418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17568,7 +17443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17593,7 +17468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17618,7 +17493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17643,7 +17518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -17668,7 +17543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17693,7 +17568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17718,7 +17593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17743,7 +17618,7 @@
       <trigger>0</trigger>
       <help>Data em que o Convênio passa a valer</help>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17768,7 +17643,7 @@
       <trigger>setBotAbas('concluir_botform','0')</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17793,7 +17668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17818,7 +17693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -17843,7 +17718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -17868,7 +17743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17893,7 +17768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17918,7 +17793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17943,7 +17818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17968,7 +17843,7 @@
       <trigger>0</trigger>
       <help>Data base para o vemcimento das prestações da turma iniciando pela matrícula.</help>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -17993,7 +17868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18018,7 +17893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18043,7 +17918,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18068,7 +17943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18093,7 +17968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18118,7 +17993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18143,7 +18018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18168,7 +18043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18193,7 +18068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18218,7 +18093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18243,7 +18118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18268,7 +18143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18293,7 +18168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18318,7 +18193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18343,7 +18218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18368,7 +18243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18393,7 +18268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18418,7 +18293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18443,7 +18318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18468,7 +18343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18493,7 +18368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18518,7 +18393,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18543,7 +18418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18568,7 +18443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18593,7 +18468,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18618,7 +18493,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18643,7 +18518,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18668,7 +18543,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18693,7 +18568,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18718,7 +18593,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18743,7 +18618,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18768,7 +18643,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18793,7 +18668,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18818,7 +18693,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18843,7 +18718,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18868,7 +18743,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18893,7 +18768,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18918,7 +18793,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18943,7 +18818,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18968,7 +18843,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -18993,7 +18868,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -19018,7 +18893,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -19043,7 +18918,7 @@
       <trigger>0</trigger>
       <help>Desconto aplicado sobre o valor da parcela paga em dia.</help>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19068,7 +18943,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19093,7 +18968,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19118,7 +18993,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19143,7 +19018,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19168,7 +19043,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19193,7 +19068,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19218,7 +19093,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
       <manter/>
@@ -19243,7 +19118,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19268,7 +19143,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19293,7 +19168,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19318,7 +19193,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19343,7 +19218,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19368,7 +19243,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19393,7 +19268,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19418,7 +19293,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>2</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19443,7 +19318,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19468,32 +19343,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="440">
-      <seq>440</seq>
-      <colunadb>bairro</colunadb>
-      <campo>bairro</campo>
-      <label>Bairro:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19518,7 +19368,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19543,7 +19393,7 @@
       <trigger/>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19568,32 +19418,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="433">
-      <seq>433</seq>
-      <colunadb>pessnmrf</colunadb>
-      <campo>cnpj</campo>
-      <label>CNPJ:</label>
-      <mascara>'99.999.999/9999-99',1</mascara>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>setCpfCnpj</outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19618,7 +19443,7 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>1</valornull>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
@@ -19643,13 +19468,188 @@
       <trigger>0</trigger>
       <help/>
       <statseq>1</statseq>
-      <valornull>0</valornull>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-09-03</datacad>
+    </row>
+    <row seq="439">
+      <seq>439</seq>
+      <colunadb>logradouro</colunadb>
+      <campo>logradouro</campo>
+      <label>Logradouro:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="440">
+      <seq>440</seq>
+      <colunadb>bairro</colunadb>
+      <campo>bairro</campo>
+      <label>Bairro:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="441">
+      <seq>441</seq>
+      <colunadb>cidade</colunadb>
+      <campo>cidade</campo>
+      <label>Cidade:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="443">
+      <seq>443</seq>
+      <colunadb>cep</colunadb>
+      <campo>cep</campo>
+      <label>Cep:</label>
+      <mascara>'99.999-999',1</mascara>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="448">
+      <seq>448</seq>
+      <colunadb>telefone</colunadb>
+      <campo>telefone</campo>
+      <label>Telefone:</label>
+      <mascara/>
+      <seletor>CLASS_UI_TELEFONE</seletor>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>3</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setTelefone</outcontrol>
+      <incontrol>setTelefoneDB</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="423">
+      <seq>423</seq>
+      <colunadb>pessnmrf</colunadb>
+      <campo>cpf</campo>
+      <label>*CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol> </outcontrol>
+      <incontrol>validaCpfCnpj</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="433">
+      <seq>433</seq>
+      <colunadb>pessnmrf</colunadb>
+      <campo>cnpj</campo>
+      <label>*CNPJ:</label>
+      <mascara>'99.999.999/9999-99',1</mascara>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCpfCnpj</outcontrol>
+      <incontrol>validaCpfCnpj</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </campos>
 </kernelsys>

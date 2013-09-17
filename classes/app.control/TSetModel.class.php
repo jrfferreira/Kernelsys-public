@@ -391,5 +391,32 @@ class TSetModel {
         return 'CD#' . strtoupper(md5($movimentacao . date('Y-m-d'))) . date('Ymd');
     }
 
+    /**
+     * Verifica o situação do campo e define se poderá ser editado ou não
+     * @param unknown $valor = vetor de argumentos - campo, valor do campo, argumentos estaticos
+     */
+    public function checkSituacaoCampo($valor){
+    	
+    	if($valor['valor'] == $valor['argumento']){
+    		$retorno = 'disabled';
+    	}else{
+    		$retorno = '';
+    	}
+    	
+    	return $retorno;
+    }
+    
+    /**
+     *  Intermedia a execução do metodo checkSituacaoCampo
+     * @param unknown $valor = vetor de argumentos - campo, valor do campo, argumentos estaticos
+     */
+    public function checkSituacaoCampoMain($valor){
+    	 
+    	$retorno = $this->checkSituacaoCampo($valor);
+    	
+    	return $retorno;
+    	 
+    }
+
 
 }

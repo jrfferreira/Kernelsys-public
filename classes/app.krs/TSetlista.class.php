@@ -467,6 +467,7 @@ class TSetlista {
         //deleta o registro baseado no campoChave passado na definição da lista pelo construtor
         $dbo = new TDbo($entidade);
         $result = $dbo->delete($seq, $this->campoChave);
+        $dbo->close();
 
         $this->load = TRUE;
     }

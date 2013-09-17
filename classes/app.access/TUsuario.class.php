@@ -21,7 +21,7 @@ class TUsuario {
 
 				$TDbo_user = new TDbo(TConstantes :: DBUSUARIO);
 				$crit_user = new TCriteria();
-				$crit_user->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq));
+				$crit_user->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq, 'numeric'));
 				$retUser = $TDbo_user->select("*", $crit_user);
 				$obUser = $retUser->fetchObject();
 
@@ -204,10 +204,10 @@ class TUsuario {
 					if ($modulo >= 0) {
 						if ($nivel >= 0) {
 							$critCheck3 = new TCriteria();
-								$critCheck3->add(new TFilter("funcionalidade", "=", $funcionalidade));
-								$critCheck3->add(new TFilter("nivel", "=", $nivel));
-								$critCheck3->add(new TFilter("modulo", "=", $modulo));
-								$critCheck3->add(new TFilter("usuaseq", "=", $usuario));
+								$critCheck3->add(new TFilter("funcionalidade", "=", $funcionalidade, 'numeric'));
+								$critCheck3->add(new TFilter("nivel", "=", $nivel, 'numeric'));
+								$critCheck3->add(new TFilter("modulo", "=", $modulo, 'numeric'));
+								$critCheck3->add(new TFilter("usuaseq", "=", $usuario, 'numeric'));
 							$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retHierarquia = $TDbo_privilegio->select("seq", $critCheck3);
 							$obHierarquia = $retHierarquia->fetchObject();
@@ -223,6 +223,8 @@ class TUsuario {
 								$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 
 								$retorno = $TDbo_privilegio->insert($dtModulo);
+								
+								$TDbo_privilegio->close();
 							}
 							$retorno["nivel"] = $nivel;
 							$retorno["funcionalidade"] = $funcionalidade;
@@ -232,10 +234,10 @@ class TUsuario {
 							$dSituacao['statseq'] = $situacao;
 
 							$dSituacaoCrit = new TCriteria();
-							$dSituacaoCrit->add(new TFilter("funcionalidade", "=", $funcionalidade));
-							$dSituacaoCrit->add(new TFilter("nivel", "=", $nivel));
-							$dSituacaoCrit->add(new TFilter("modulo", "=", $modulo));
-							$dSituacaoCrit->add(new TFilter("usuaseq", "=", $usuario));
+							$dSituacaoCrit->add(new TFilter("funcionalidade", "=", $funcionalidade, 'numeric'));
+							$dSituacaoCrit->add(new TFilter("nivel", "=", $nivel, 'numeric'));
+							$dSituacaoCrit->add(new TFilter("modulo", "=", $modulo, 'numeric'));
+							$dSituacaoCrit->add(new TFilter("usuaseq", "=", $usuario, 'numeric'));
 
 							$TDbo_Situacao = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 							$retornoSituacao = $TDbo_Situacao->update($dSituacao, $dSituacaoCrit);
@@ -270,7 +272,7 @@ class TUsuario {
 				$rt = $this->getUser($usuario);
 				if ($rt) {
 					$crit = new TCriteria();
-					$crit->add(new TFilter("usuaseq", "=", $usuario));
+					$crit->add(new TFilter("usuaseq", "=", $usuario, 'numeric'));
 					$TDbo_privilegio = new TDbo(TConstantes :: DBUSUARIO_PRIVILEGIO);
 					$retPrivilegio = $TDbo_privilegio->select("*", $crit);
 
@@ -301,7 +303,7 @@ class TUsuario {
 		if ($new_pass === $confirm) {
 			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario, 'numeric'));
 			$ret = $dbo->select('senha', $crit);
 			$obSenha = $ret->fetchObject();
 
@@ -328,7 +330,7 @@ class TUsuario {
 
 		$dbo = new TDbo(TConstantes :: DBUSUARIO_SENHAS_RECUPERACAO);
 		$crit = new TCriteria();
-		$crit->add(new TFilter('chave', '=', $chave));
+		$crit->add(new TFilter('chave', '=', $chave, 'numeric'));
 		$ret = $dbo->select('usuaseq,senhaantiga', $crit);
 		$obChave = $ret->fetchObject();
 
@@ -339,7 +341,7 @@ class TUsuario {
 		if ($new_pass === $confirm) {
 			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obChave->usuaseq));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obChave->usuaseq, 'numeric'));
 			$ret = $dbo->select('senha', $crit);
 			$obSenha = $ret->fetchObject();
 
@@ -366,7 +368,7 @@ class TUsuario {
 		
 		$dbo = new TDbo(TConstantes :: DBUSUARIO);
 		$crit = new TCriteria();
-		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seqUsuario));
+		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seqUsuario, 'numeric'));
 		$ret = $dbo->select('senha', $crit);
 		$obSenha = $ret->fetchObject();
 		
@@ -402,7 +404,7 @@ class TUsuario {
 
 			$dbo = new TDbo(TConstantes :: DBUSUARIO);
 			$crit = new TCriteria();
-			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario));
+			$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $usuario, 'numeric'));
 			$update = $dbo->update(array (
 				'senha' => $pass
 			), $crit);
@@ -451,7 +453,7 @@ class TUsuario {
 	public function apendicePassword($seq, $formseq = null) {
 		$dbo = new TDbo(TConstantes :: DBUSUARIO);
 		$crit = new TCriteria();
-		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq));
+		$crit->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seq, 'numeric'));
 		$ret = $dbo->select('senha', $crit);
 		$obSenha = $ret->fetchObject();
 

@@ -218,7 +218,7 @@ class TForms{
          /**
          * executado o objeto formulário
          */
-        if($obForm->formainclude == 'one') {
+        if($obForm->formainclude == 'one') { // #Verifica a necessidade dessa condição
 
 
                     //botão padrão [IMPRIMIR]\\
@@ -254,6 +254,8 @@ class TForms{
                     //verifica se a exibi�ão atual foi disparada a partir de um botão editar
                     //if(!$this->obsession->getValue(TConstantes::STATUS_EDITIONFORM) and !$this->obsession->getValue(TConstantes::STATUS_VIEWFORM)) {
                     //botão cancelar padrão [Cancelar]
+                    if($obForm->botcancelar != 0){
+                    	
                             $action2 = new TAction('onCancel');
                             $action2->setParameter('tipoRetorno', 'form');
                             $action2->setParameter(TConstantes::FORM, $this->formseq);
@@ -266,19 +268,20 @@ class TForms{
                             }
 
                         $this->setButton('cancelar_botform'.$this->formseq, 'Cancelar', $action2);
+                    }else{
                     
-
-        }
-        else {// executado se o formulário não for associado uma lista
-
                 // Botão padrão [FECHAR] \\
-                $action1 = new TAction('onClose');
+		                $action1 = new TAction('onCancel');
                 $action1->setParameter('tipoRetorno', 'form');
                 $action1->setParameter(TConstantes::FORM, $this->formseq);
+		                $action1->setParameter('key', $this->seq);
                 $action1->setParameter('alvo', $this->paneRet);
-                $action1->setParameter('confirme', '');
+		                $action1->setParameter('confirme', 'Deseja realmente fechar?');
                 
                 $this->setButton('fechar_botform'.$this->formseq, 'Fechar', $action1);
+        }
+
+
         }
 
        return $obAbas;

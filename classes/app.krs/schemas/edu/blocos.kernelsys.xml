@@ -1666,51 +1666,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="1">
-      <seq>1</seq>
-      <blocoid>tipoCadastro</blocoid>
-      <nomebloco>Tipo de Cadastro</nomebloco>
-      <formato>frm</formato>
-      <tabseq>1</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>1</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="2">
-      <seq>2</seq>
-      <blocoid>pessoaFisica</blocoid>
-      <nomebloco>Pessoa Física</nomebloco>
-      <formato>frm</formato>
-      <tabseq>1</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>1</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="3">
-      <seq>3</seq>
-      <blocoid>pessoaJuridica</blocoid>
-      <nomebloco>Pessoa Jurídica</nomebloco>
-      <formato>frm</formato>
-      <tabseq>1</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>1</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="87">
       <seq>87</seq>
       <blocoid>blocoProfissao</blocoid>
@@ -1737,6 +1692,36 @@
       <formseq/>
       <obapendice/>
       <frmpseq>30</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="3">
+      <seq>3</seq>
+      <blocoid>pessoaJuridica</blocoid>
+      <nomebloco>Pessoa Jurídica</nomebloco>
+      <formato>frm</formato>
+      <tabseq>6</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>1</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="1">
+      <seq>1</seq>
+      <blocoid>tipoCadastro</blocoid>
+      <nomebloco>Tipo de Cadastro</nomebloco>
+      <formato>frm</formato>
+      <tabseq>1</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq/>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -3987,6 +3972,21 @@
       <formseq>354</formseq>
       <obapendice/>
       <frmpseq>4</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="2">
+      <seq>2</seq>
+      <blocoid>pessoaFisica</blocoid>
+      <nomebloco>Pessoa Física</nomebloco>
+      <formato>frm</formato>
+      <tabseq>5</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>1</frmpseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

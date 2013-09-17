@@ -10,7 +10,7 @@ class TPrivilegios {
 
         $TDbo_modulos = new TKrs('modulo');
         $crit = new TCriteria();
-        $crit->add(new TFilter('statseq','=','1'));
+        $crit->add(new TFilter('statseq','=','1', 'numeric'));
         $crit->getProperty("order by labelmodulo");
         if($seq) {
             $crit->add(new TFilter("seq","=",$seq));
@@ -109,7 +109,7 @@ class TPrivilegios {
         $crit = new TCriteria();
         //$crit->add(new TFilter("modulo","=",$modulo));
         $crit->add(new TFilter("labelmodulo","!=",""));
-        $crit->add(new TFilter("statseq","=","1"));
+        $crit->add(new TFilter("statseq","=",1, 'numeric'));
         if($modulo) {
             $crit->add(new TFilter("modseq","=",$modulo));
         }
@@ -206,7 +206,7 @@ class TPrivilegios {
 
         $TDbo_Lista = new TKrs('lista');
         $crit = new TCriteria();
-        $crit->add(new TFilter("seq","=",$lista_id));
+        	$crit->add(new TFilter("seq","=",$lista_id, 'numeric'));
         $retLista = $TDbo_Lista->select("*",$crit);
 
         $obLista = $retLista->fetchObject();
@@ -224,8 +224,7 @@ class TPrivilegios {
             
         $TDbo_menus = new TKrs('menu');
         $crit = new TCriteria();
-        $crit->add(new TFilter("seq","=",$funcionalidade));
-
+       	 $crit->add(new TFilter("seq","=",$funcionalidade, 'numeric'));
         $retMenus = $TDbo_menus->select("*",$crit);
         $obMenu = $retMenus->fetchObject();
             $obOpcoesLista = $this->getOpcoesLista($obMenu->argumento);
@@ -242,7 +241,7 @@ class TPrivilegios {
             $obLista->add($fieldSetLegenda);
             $checklistoptions = false;
 
-            if($obOpcoesLista->acincluir != "0") {
+            if($obOpcoesLista->acincluir != 0) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -698,7 +697,7 @@ class TPrivilegios {
             $obMenu->add($fieldSetLegenda);
             $checklistoptions = false;
 
-            if($obOpcoesLista->acincluir != "0") {
+            if($obOpcoesLista->acincluir != 0) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 

@@ -205,6 +205,12 @@ class TCaixa {
     public function baixaContaCaixa($codigoconta, $valorpago, $desconto, $acrescimo, $boleseq, $formapagamento, $contacaixa, $codigocaixa = null){
         
         try {
+        	
+        	$cxfuseq = $this->getSeqCaixaFuncionario($contacaixa);
+        	if(!cxfuseq){
+        		throw new ErrorException("Este funcionário não tem permissão de caixa para baixar a conta ".$codigoconta."<br/></br/>Verifique a existência do vinculo entre o funcionário e a conta financeira ".$contacaixa);
+        	}
+
 
             $this->obTDbo->setEntidade(TConstantes::DBPARCELA);
             $critBase = new TCriteria();

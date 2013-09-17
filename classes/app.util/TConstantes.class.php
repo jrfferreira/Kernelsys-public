@@ -187,7 +187,7 @@ class TConstantes {
 	const FIELD_LABEL = "label";
 	const FIELD_INCONTROL = "incontrol";
 	const FIELD_TIPOFORM = "tipoform";
-	const FIELD_NOTNULL = "obrigatorio";
+	const FIELD_NOTNULL = "required";
 	const FIELD_VALOR = "valor";
 	const FIELD_STATUS = "status";
 	const FIELD_SEQUENCIAL = "campseq";

@@ -150,27 +150,35 @@ class TConciliacaoCaixa{
                            if($obDup->stboseq == '1' || $obDup->stboseq == '9' ){
                                 //baixa conta
                                 $obCaixa = new TCaixa();
-                                $obCaixa->baixaContaCaixa($obDup->parcseq, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $obDup->seq, 2, $obDadosBoleto->cofiseq);
-                                
                                 $retBaixada = new TElement('div');
                                 $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
-	                            if($obCaixa){
-	                                //modifica status da duplicata baixada
-	                                $dboDupUp = new TDbo(TConstantes::DBBOLETO);
-	                                    $criteriaDupUp = new TCriteria();
-	                                    $criteriaDupUp->add(new TFilter('seq','=',$obDup->seq));
-	                                $dboDupUp->update(array('dataBaixa'=>date("Y-m-d"), 'stboseq'=>2), $criteriaDupUp);
+                                 
+                               
+                                $cxfuseq = $obCaixa->getSeqCaixaFuncionario($obDadosBoleto->cofiseq);
+                                
+                                if(!cxfuseq){
+                                	$retBaixada->add("<b>Erro de conciliação: </b>".TMensagem::MSG_ERRO_PERMISSAO_CONTA_FINANCEIRA);
+                                }else{
+	                                $obCaixa->baixaContaCaixa($obDup->parcseq, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $obDup->seq, 2, $obDadosBoleto->cofiseq);
 	                                
-	                                if($obDup->stboseq == '9'){
-	                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_BOLETO_INATIVO);
-	                                }else{
-	                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_CONTA);
-	                                }
-	                                $rowRet->add($retBaixada);
-	                            }else{
-	                                print_r($obCaixa);
-	                                $rowRet->add($retBaixada);                            	
-	                            }
+	                                if($obCaixa){
+		                                //modifica status da duplicata baixada
+		                                $dboDupUp = new TDbo(TConstantes::DBBOLETO);
+		                                    $criteriaDupUp = new TCriteria();
+		                                    $criteriaDupUp->add(new TFilter('seq','=',$obDup->seq));
+		                                $dboDupUp->update(array('dataBaixa'=>date("Y-m-d"), 'stboseq'=>2), $criteriaDupUp);
+		                                
+		                                if($obDup->stboseq == '9'){
+		                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_BOLETO_INATIVO);
+		                                }else{
+		                                	$retBaixada->add(TMensagem::MSG_SUCESSO_BAIXAR_CONTA);
+		                                }
+		                                $rowRet->add($retBaixada);
+		                            }else{
+		                                print_r($obCaixa);
+		                                $rowRet->add($retBaixada);                            	
+		                            }
+                                }
 
                            }
                            else{

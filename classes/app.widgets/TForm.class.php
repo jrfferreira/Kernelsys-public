@@ -80,7 +80,7 @@ class TForm{
         if(count($object) > 0){
         	
         	foreach ($object as $table => $campos){
-        		if($campos && is_array($campos)){
+        		
 	        		foreach($campos as $name=>$valorCampo){   
 		        			$coluna = $name;
 		        			if(is_object($this->fields[$coluna])){
@@ -88,7 +88,6 @@ class TForm{
 		        			}
 		        	}
         		}
-        	}
         	
 
 		/*  foreach ($this->fields as $name => $field){

@@ -140,7 +140,7 @@ class TCompForm {
 
                 //==============================================================
                 // monta lista de campos obrigatorios
-                if($cmp->riquired){               
+                if($cmp->required){               
                     if($cmp->label != ""){
                         $cmp->label ='*'.$cmp->label;
                     }

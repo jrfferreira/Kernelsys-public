@@ -43,8 +43,53 @@ class DocumentoBO{
 	}
 	
 	/**
+	 * Altera o situação do documento em questão para concluido quando 
+	 * todas as parcelas do documento forem baixadas
+	 * @param array $head = Cabeçalho do formuario em questão
+	 * @param array $dados = dados do furmulario em questão
+	 */
+	private function setSituacaoDocumento($parcela){
+		
+		if($parcela){
+			
+			$dbo = new TDbo();
+			
+			//retorna o numerodo do documento da parcela em questão
+			$dbo->setEntidade(TConstantes::DBDOCUMENTOPARCELA);
+				$critPar = new TCriteria();
+				$critPar->add(new TFilter(TConstantes::SEQUENCIAL, '=', $parcela,'numeric'));
+				$retPar = $dbo->select('dcprseq',$critPar);
+			$parcela = $retPar->fetchObject();
+			$documento = $parcela->dcprseq;
+			
+			$dbo->setEntidade(TConstantes::DBDOCUMENTOPARCELA);
+				$criteriaPar = new TCriteria();
+				$criteriaPar->add(new TFilter('dcprseq', '=', $documento,'numeric'));
+				$criteriaPar->add(new TFilter('stpcseq', '=', 1,'numeric'), 'or');	
+				$criteriaPar->add(new TFilter('stpcseq', '=', 3,'numeric'), 'or');
+			$retParcelas = $dbo->select('*',$criteriaPar);
+			$parcelas = $retParcelas->fetchObject();
+			
+			if(!$parcelas){
+				
+				$dadoDoc['dcstseq'] = 2;
+				
+				$dbo->setEntidade(TConstantes::DBDOCUMENTOPAGARRECEBER);
+					$criteriaDoc = new TCriteria();
+					$criteriaDoc->add(new TFilter(TConstantes::SEQUENCIAL, '=', $documento,'numeric'));
+					$retDocumento = $dbo->update($dadoDoc,$criteriaDoc);
+					
+			}
+			
+		//	$dbo->close();
+			
+		}
+		
+	}
+	
+	/**
 	 * Executa a baixa de uma parcela paga
-	 * @param seq = sequencial da parcela a ser baixada
+	 * @param $head = head do formulario em questão
 	 */
 	public function baixaParcela($head, $dados = null){
 		try {
@@ -65,7 +110,7 @@ class DocumentoBO{
 						return $seqErro;
 					}
 					
-					$listaParcelasBaixadas = $this->setParcela($this->headList[TConstantes::LIST_SELECAO], $dados, TConstantes::BAIXA_PARCELA);		
+					$windowResp = $this->setParcela($this->headList[TConstantes::LIST_SELECAO], $dados, TConstantes::BAIXA_PARCELA);		
 					
 				}else{
 					    
@@ -74,7 +119,7 @@ class DocumentoBO{
     				return $seqErro;
 				}
 				
-				return $listaParcelasBaixadas;
+				return $windowResp;
 				
 			}
 			
@@ -90,7 +135,7 @@ class DocumentoBO{
 	 * @param array $parcelas = vetor de sequenciais das parcelas
 	 * @param string $action = baixa/extorno/cancelar
 	 */
-	public function setParcela($parcelas, $dados, $action = TConstantes::BAIXA_PARCELA){
+	private function setParcela($parcelas, $dados, $action = TConstantes::BAIXA_PARCELA){
 		try{
 			
 			if($parcelas){
@@ -112,16 +157,20 @@ class DocumentoBO{
 						
 						if(!$retParcela){
 							exit('Parcelas não pode ser baixada.');
+						}else{
+							
+							//verifica situação das parcelas para atualizar situação do documento
+							$this->setSituacaoDocumento($parcela);
 						}
 					}
 					
 					//Movimento de caixa
 					$obMovimentoCaixa = new MovimentoCaixaBO();
-					$listaParcelasBaixadas = $obMovimentoCaixa->setMovimentoCaixa($parcelas, $dados);
+					$windowResp = $obMovimentoCaixa->setMovimentoCaixa($parcelas, $dados);
 					
 					$dbo->close();
 					
-					return $listaParcelasBaixadas;
+					return $windowResp;
 					
 				}
 			
@@ -130,6 +179,21 @@ class DocumentoBO{
 		}catch (Exception $e){
 			new setException($e);
 		}
+	}
+	
+	/**
+	 * Valida a edição de parcelas com situação diferente de ABERTA
+	 * @param array $head = Cabeçalho do formuario em questão
+	 * @param array $dados = dados do furmulario em questão
+	 */
+	public function validaEdicaoParcela($head, $dados){
+		
+		if($dados["stpcseq"] != 1){
+			$seqErro = TConstantes::ERRO_VALIDACAO;
+			echo $seqErro.'#A parcela não pode ser alterada. Só é possivel alterar uma parcela em aberto.';
+			return $seqErro;
+		}
+		
 	}
 	
 	/**
