@@ -1,0 +1,2 @@
+# Coluna cxfuseq da tabela dbcaixa passa a ser obrigatorio
+# Coluna notnull|obrigatorio da tabela campos se torna required
