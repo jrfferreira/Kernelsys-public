@@ -19551,31 +19551,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="443">
-      <seq>443</seq>
-      <colunadb>cep</colunadb>
-      <campo>cep</campo>
-      <label>Cep:</label>
-      <mascara>'99.999-999',1</mascara>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>49</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>1</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="448">
       <seq>448</seq>
       <colunadb>telefone</colunadb>
@@ -19644,6 +19619,31 @@
       <help/>
       <statseq>1</statseq>
       <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="443">
+      <seq>443</seq>
+      <colunadb>cep</colunadb>
+      <campo>cep</campo>
+      <label>Cep:</label>
+      <mascara>'99.999-999',1</mascara>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>49</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCep</outcontrol>
+      <incontrol>validaCep</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
