@@ -265,6 +265,17 @@ class TMain {
      * Executa ação de salvar do formulario armazenado em sessão
      * return <type>
      */
+    private function getColumnName($camposSession,$colunaDb){
+    	if($camposSession[$colunaDb]){
+    		return $colunaDb;
+    	}
+    	foreach($camposSession as $id => $campo){
+    		if($campo['colunadb'] == $colunaDb){
+    			return $id;
+    		}
+    	}
+    }
+    
     public function onSave(){
     	
      	 
@@ -289,8 +300,10 @@ class TMain {
    		}
    		
     	// percorre o retorno da tela e injeta o valor no bean
-    	foreach($dadosForm as $nomeCampo=>$valorCampo){
-    		if($camposSession){
+    	if($camposSession){
+    		foreach($dadosForm as $colunaDb=>$valorCampo){
+    			
+    			$nomeCampo = $this->getColumnName($camposSession,$colunaDb);
     				    			
     			if(!$valorCampo){
     				$valorCampo = null;
@@ -338,7 +351,7 @@ class TMain {
     			*/
     			if($camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL] != "0" and $camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL] != "") {
     				 
-    				$returVal = $obControl->main($camposSession[$nomeCampo][TConstantes::FORM], $camposSession[$nomeCampo][TConstantes::ENTIDADE], $camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL], $valorCampo, $nomeCampo);
+    				$returVal = $obControl->main($camposSession[$nomeCampo][TConstantes::FORM], $camposSession[$nomeCampo][TConstantes::ENTIDADE], $camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL], $valorCampo, $colunaDb);
     			
     				//se a validação não for verdadeira retorna uma msg
     				if($returVal['valor'] === false) {
@@ -358,7 +371,7 @@ class TMain {
     			$camposSession[$nomeCampo] = $campoAtual;
     			
     			//popula objeto de dados para persistencia agrupando por entidade
-    			$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][$nomeCampo] = $valorCampo;
+    			$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][$colunaDb] = $valorCampo;
     			 
     			//Seta o sequêncial do registro caso exista
     			if(!$dados[$camposSession[$nomeCampo][TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL] and $camposSession[$nomeCampo][TConstantes::SEQUENCIAL]){
@@ -429,31 +442,48 @@ class TMain {
 		    		
 		    	//executa manter para os dados
 		    	
-		    		$obKrs = new TKrs();
-		    	//percorre os campos agrupados por entidade e mantem os dados em banco 
-		   		foreach($dados as $entidade=>$dado){
-		   			
-		   			if($entidade != TConstantes::HEAD_HEADCHILDS){
-		   				if($entidade != $this->entidadeForm && !!$seqAtual){
-		   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqAtual;
-		   				}	   				
-		   				$seqAtual = $this->loadSave($entidade, $dado);	
-		   			}else{
-		   				
-		   				foreach($dado as $filho){
-		   					
-		   					foreach($filho as $entidadeFilho=>$dadoFilho){
-		    		
-		   						//atribui FK do pai ao filho
-		   						$dadoFilho[$this->header[TConstantes::HEAD_COLUNAFK]] =  $seqAtual;
-		   						$seqAtualFilho = $this->loadSave($entidadeFilho, $dadoFilho);
-		   					}
-		   					
-		   				}
-		   				
-		   			}
+		    	$obKrs = new TKrs('tabelas');
+		    	$critKrsTables = new TCriteria();
+		    	foreach($dados as $entidade=>$dado){
+		    		if($entidade != TConstantes::HEAD_HEADCHILDS)
+		    			$critKrsTables->add(new TFilter("tabela", '=', $entidade),'OR');
+		    	}
+		    	$retKrs = $obKrs->select("seq,tabela,tabseq,colunafilho",$critKrsTables);
 		    	
-		    }
+		    	$tables = array();
+		    	$seqs = array();
+		    	while($entidade = $retKrs->fetchObject()){
+		    		if(!$entidade->tabseq){
+		    			$tables = array_merge(array($entidade->seq=>$entidade),$tables); //coloca no inicio
+		    		}else{
+		    			$tables = array_merge($tables,array($entidade->seq=>$entidade)); //coloca no final
+		    		}
+		    	}
+		    	
+		    	//percorre os campos agrupados por entidade e mantem os dados em banco 
+		   		foreach($tables as $entKey=>$entData){
+		   			$entidade = $entData->tabela;
+		   			$dado = $dados[$entidade];
+	   				if($entData->tabseq && $seqs[$entData->tabseq]){
+	   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqs[$entData->tabseq];
+	   				}	   				
+	   				$seqs[$entKey] = $this->loadSave($entidade, $dado);	
+		    		if($entidade == $this->entidadeForm){
+		    			$seqAtual = $seqs[$entKey];
+		    		}
+		    	}
+		    	
+		    	foreach($dados as $entidade=>$dado){
+		    		if($entidade == TConstantes::HEAD_HEADCHILDS){
+			    		foreach($dado as $filho){
+			    			foreach($filho as $entidadeFilho=>$dadoFilho){
+			    				//atribui FK do pai ao filho
+			    				$dadoFilho[$this->header[TConstantes::HEAD_COLUNAFK]] =  $seqAtual;
+			    				$seqAtualFilho = $this->loadSave($entidadeFilho, $dadoFilho);
+			    			}
+			    		}
+		    		}
+		    	}
     		
 		   		//seta nivel de execução para limpar a head da lista
 		   		$this->nivelExec = 1;

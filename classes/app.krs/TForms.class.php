@@ -361,15 +361,6 @@ class TForms{
     *Retorna o formulario montado com suas respequitivas abas
     */
     public function getForm(){
-    	
-         $form = $this->setForm();
-   
-         if($this->bots){
-             foreach($this->bots as $idNome=>$act){
-                $form->addBotao($idNome, $this->botsLabel[$idNome], $act, $this->botsClass[$idNome]);
-             }
-         } 
-
          if($this->dados){
 
                     // percorre e preenche vetor de campos na sessão ====================================
@@ -383,7 +374,7 @@ class TForms{
                         	
                         	 $infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
                         	 
-                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$campo];
+                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$infoCampo['colunadb']];
                              $infoCampo[TConstantes::FIELD_STATUS] = 1;
                              $listaCamposSession[$campo] = $infoCampo;
                         }
@@ -392,8 +383,19 @@ class TForms{
                     }
                     //===================================================================================
 
+         }
+    	
+         $form = $this->setForm();
+         if($this->dados){
             $form->setData($this->dados);
          }
+   
+         if($this->bots){
+             foreach($this->bots as $idNome=>$act){
+                $form->addBotao($idNome, $this->botsLabel[$idNome], $act, $this->botsClass[$idNome]);
+             }
+         } 
+         
         $form->setAbas();
         
         

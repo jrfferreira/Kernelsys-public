@@ -1021,7 +1021,7 @@ class TSetlista {
             		            		
               		foreach($record as $campo){      		
               			$objResult->seq = $campo['seq'];	
-            			$objResult->$campo['colunadb'] = $campo['valor'];
+            			$objResult->$campo['campo'] = $campo['valor'];
             		}
 			            		
             		$objResult->statseq = 1;
