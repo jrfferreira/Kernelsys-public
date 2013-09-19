@@ -287,6 +287,15 @@ class TSetControl {
         }
 
     }
+    
+    /**
+     * Metodo Main para Ceps
+     */
+    public function validaCepMain($vetor){
+    	$vetor['valor'] =  $cnpj = sprintf('%08s', preg_replace('@[^0-9]@', '', $vetor['valor']));
+    	return $vetor;
+    }
+    
 
     /**
     * Metodo Main do setDataDB

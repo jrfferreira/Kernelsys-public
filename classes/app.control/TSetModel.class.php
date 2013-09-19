@@ -198,6 +198,12 @@ class TSetModel {
         $vetor['valor'] = $this->setMoney($vetor['valor']);
         return $vetor;
     }
+    
+    public function setCpfCnpjMain($vetor){
+        $vetor['valor'] = $this->setCpfCnpj($vetor['valor']);
+        return $vetor;
+    	
+    }
 
     public function setCpfCnpj($valor) {
 
@@ -291,6 +297,29 @@ class TSetModel {
      */
     public function setCNPJMain($vetor) {
         $vetor['valor'] = $this->setCNPJ($vetor['valor']);
+        return $vetor;
+    }
+    
+    /**
+     *
+     * param <type> $vetor
+     * return <type>
+     */
+    
+    public function setCep($valor) {
+    	$valor = sprintf('%08s', preg_replace('{\D}', '', $valor));
+    	$b1 = substr($valor, 0, 2);
+    	$b2 = substr($valor, 2, 3);
+    	$b3 = substr($valor, 5, 3);
+    	if ($b1 || $b2 || $b3) {
+    		return "$b1.$b2-$b3";
+    	} else {
+    		return $valor;
+    	}
+    }
+    
+    public function setCepMain($vetor) {
+        $vetor['valor'] = $this->setCep($vetor['valor']);
         return $vetor;
     }
 

@@ -383,7 +383,7 @@ class TForms{
                         	
                         	 $infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
                         	 
-                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
+                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$campo];
                              $infoCampo[TConstantes::FIELD_STATUS] = 1;
                              $listaCamposSession[$campo] = $infoCampo;
                         }

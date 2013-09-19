@@ -134,7 +134,7 @@ class TCompForm {
                     $infoCampos[TConstantes::FIELD_VALOR]       =$valorDefalt;
                     $infoCampos[TConstantes::FIELD_STATUS]      =0; //0 = não salvo / 1 = salvo
                     
-                    $camposFormulario[strtolower($cmp->colunadb)] 	= $infoCampos;
+                    $camposFormulario[strtolower($cmp->campo)] 	= $infoCampos;
                 }
 
 

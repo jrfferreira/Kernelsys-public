@@ -6776,31 +6776,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="424">
-      <seq>424</seq>
-      <colunadb>pessrgie</colunadb>
-      <campo>rg</campo>
-      <label>RG:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="372">
       <seq>372</seq>
       <colunadb>tel2</colunadb>
@@ -6879,8 +6854,33 @@
     <row seq="422">
       <seq>422</seq>
       <colunadb>pessnmrz</colunadb>
-      <campo>pessnmrz</campo>
+      <campo>nome</campo>
       <label>Nome:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="424">
+      <seq>424</seq>
+      <colunadb>pessrgie</colunadb>
+      <campo>rg</campo>
+      <label>RG:</label>
       <mascara/>
       <seletor/>
       <tpcaseq>1</tpcaseq>
@@ -9613,31 +9613,6 @@
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="648">
-      <seq>648</seq>
-      <colunadb>cliente</colunadb>
-      <campo>cliente</campo>
-      <label/>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>7</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>1</valorpadrao>
       <outcontrol>-</outcontrol>
       <incontrol>0</incontrol>
       <trigger>0</trigger>
@@ -14401,31 +14376,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="645">
-      <seq>645</seq>
-      <colunadb>cliente</colunadb>
-      <campo>cliente</campo>
-      <label>Cliente:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>2</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="2">
       <seq>2</seq>
       <colunadb>frequencia</colunadb>
@@ -14817,6 +14767,31 @@
       <incontrol>setFloat</incontrol>
       <trigger>0</trigger>
       <help>Define se o valor pode sofrer alteração durante a negociação.</help>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="645">
+      <seq>645</seq>
+      <colunadb>cliente</colunadb>
+      <campo>cliente</campo>
+      <label>Cliente:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>2</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>true</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
       <statseq>1</statseq>
       <required>0</required>
       <alteravel>1</alteravel>
@@ -19576,31 +19551,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="423">
-      <seq>423</seq>
-      <colunadb>pessnmrf</colunadb>
-      <campo>cpf</campo>
-      <label>*CPF:</label>
-      <mascara>'999.999.999-99',1</mascara>
-      <seletor/>
-      <tpcaseq>1</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol> </outcontrol>
-      <incontrol>validaCpfCnpj</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="433">
       <seq>433</seq>
       <colunadb>pessnmrf</colunadb>
@@ -19644,6 +19594,56 @@
       <help/>
       <statseq>1</statseq>
       <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="648">
+      <seq>648</seq>
+      <colunadb>cliente</colunadb>
+      <campo>cliente</campo>
+      <label/>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>7</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>true</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="423">
+      <seq>423</seq>
+      <colunadb>pessnmrf</colunadb>
+      <campo>cpf</campo>
+      <label>*CPF:</label>
+      <mascara>'999.999.999-99',1</mascara>
+      <seletor/>
+      <tpcaseq>1</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>setCpfCnpj</outcontrol>
+      <incontrol>validaCpfCnpj</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
       <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>

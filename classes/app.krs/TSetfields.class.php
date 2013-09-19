@@ -172,7 +172,7 @@ class TSetfields {
             if($obField->label != ""){
                 $cellLabel = $row->addCell(" ");
                 $cellLabel->class = "tlabel";
-                if(get_class($obField) != 'TButton' && get_class($obField) != 'THidden'){
+                if(get_class($obField) != 'TButton' &&  get_class($obField) != 'THidden'){
                     $cellLabel->add($obField->label);
                 }
             }
@@ -238,7 +238,7 @@ class TSetfields {
             }
 
             //adiciona espaço [label] do campo
-            if(get_class($obField) != 'TMultiSelect' and get_class($obField) != 'THidden') {
+            if(get_class($obField) != 'TMultiSelect' && get_class($obField) != 'THidden') {
 
                 $obLab2 = new TElement('span');
                 $obLab2->id = $obField->getId()."dsp";

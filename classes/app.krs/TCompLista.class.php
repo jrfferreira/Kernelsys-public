@@ -412,7 +412,8 @@ class TCompLista {
             $this->obLista->addAction($this->act['reply']->getAction());
         }
 
-        if ($this->listaInfo->acviews == 1) {
+        //TODO: Eliminar a coluna acviews no edu_krs
+        /* if ($this->listaInfo->acviews == 1) {
 
             $this->act['view'] = new TSetAction('prossExe');
             $this->act['view']->setMetodo('onView');
@@ -426,7 +427,7 @@ class TCompLista {
             $this->act['view']->img = 'new_ico_view.png';
 
             $this->obLista->addAction($this->act['view']->getAction());
-        }
+        } */
 
         if ($this->listaInfo->acenviar == 1) {
 
