@@ -156,8 +156,9 @@ class TConciliacaoCaixa{
                                
                                 $cxfuseq = $obCaixa->getSeqCaixaFuncionario($obDadosBoleto->cofiseq);
                                 
-                                if(!cxfuseq){
+                                if(!$cxfuseq || is_null($cxfuseq)){
                                 	$retBaixada->add("<b>Erro de conciliação: </b>".TMensagem::MSG_ERRO_PERMISSAO_CONTA_FINANCEIRA);
+		                            $rowRet->add($retBaixada); 
                                 }else{
 	                                $obCaixa->baixaContaCaixa($obDup->parcseq, $dadosRet['valor_pago'], $dadosRet['valor_desconto'], 0.00, $obDup->seq, 2, $obDadosBoleto->cofiseq);
 	                                
