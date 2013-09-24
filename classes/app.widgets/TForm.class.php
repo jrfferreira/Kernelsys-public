@@ -81,10 +81,12 @@ class TForm{
         	
         	foreach ($object as $table => $campos){
         		
-        		foreach($this->fields as $name=>$fild){   
-	        			if(is_object($fild)){
-	        				$fild->setValue($campos[$fild->getName()]);
-		        			}
+        		foreach(/* $this->fields */ $campos as $name=>$campo){
+        				foreach($this->fields as $field){
+        					if(is_object($field) && $field->getName() == $name){
+	        					$field->setValue($campo);
+        					}
+        				}   
 		        	}
         		}
         	
