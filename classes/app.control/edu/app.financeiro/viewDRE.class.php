@@ -63,7 +63,7 @@ function __autoload($classe){
 			$vetContas[$obContas->seq] = 0;
 			}	
             $sqlCaixa = new TDbo(TConstantes::DBCAIXA);
-            $caixaQuery = $sqlCaixa->select("seqconta,valorpago,tipomovimentacao,datacad,dataPag",$critCaixa);
+            $caixaQuery = $sqlCaixa->select("parcseq,valorpago,tipo,datacad,dataPag",$critCaixa);
 
 			//$sqlCaixa = "SELECT seqconta,valorpago,tipomovimentacao,datacad,dataPag FROM dbcaixa where ".$sqlData;
 			//$caixaQuery = $conn->Query($sqlCaixa);
@@ -72,10 +72,10 @@ function __autoload($classe){
 					
 						$vetContas[$obCaixa->seqconta] = $vetContas[$obCaixa->seqconta] + $obCaixa->valorpago;
 							
-						if ($obCaixa->tipomovimentacao == "C" and $obCaixa->datacad == $obCaixa->dataPag){							
+						if ($obCaixa->tipo == "C" and $obCaixa->datacad == $obCaixa->dataPag){							
 								$valorReceitaAVistaTotal = $valorReceitaAVistaTotal + $obCaixa->valorpago;								
 						}
-						elseif ($obCaixa->tipomovimentacao == "C" and $obCaixa->dataPag != $obCaixa->datacad){							
+						elseif ($obCaixa->tipo == "C" and $obCaixa->dataPag != $obCaixa->datacad){							
 								$valorReceitaAPrazoTotal = $valorReceitaAPrazoTotal + $obCaixa->valorpago;								
 						}
 													

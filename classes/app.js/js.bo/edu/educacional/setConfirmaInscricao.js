@@ -1,13 +1,13 @@
 function setConfirmaInscricao(obj){
 
-    var codigo = $(obj).attr('seq');
-
-    var tcliente = $('#pessseq');
+    var dados = $(obj).parents('.TWindow').find('[manter=true]').serialize(),
+    	tcliente = $('#pessseq');
+    
     if(tcliente.val() == "0"){
         alertPetrus('Selecione o cliente antes de definir uma turma');
     }
     else{
-       var valField = 'classe=TInscricao&metodo=setConfirmar&codigoinscricao='+codigo;
+       var valField = 'classe=TInscricao&metodo=setConfirmar&'+dados;
        exe('bloc_gerenciarTurmaInscricao', getPath()+'/app.util/TSec.php', valField, 'POST', 'Sucesso');
 
        setCancelar('8', '2');

@@ -8,7 +8,7 @@
 class TDisciplina{
 
     private $obTDbo = NULL;
-    private $obDisciplina = NULL;
+    public $obDisciplina = NULL;
 
    /**
     * Retorna o objeto correspondente a disciplina

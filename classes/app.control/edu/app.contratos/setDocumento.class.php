@@ -38,7 +38,7 @@ class setDocumento{
         $this->obProduto = $this->retProduto->fetchObject();
 
         if($this->obProduto->tabela == "dbturma"){
-        $this->consEspecializacao = new TDbo(TConstantes::VIEW_TURMAS);
+        $this->consEspecializacao = new TDbo(TConstantes::VIEW_TURMA);
         $this->critEspecializacao = new TCriteria();
         $this->critEspecializacao->add(new TFilter("seqproduto","=",$this->obProduto->seq));
         $this->retEspecializacao = $this->consEspecializacao->select("*",$this->critEspecializacao);

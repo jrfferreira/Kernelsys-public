@@ -25,7 +25,7 @@ $obMovimentoCaixa = $retCaixa->fetchObject();
 
 $nomepessoa = $obMovimentoCaixa->nomepessoa;
 $data = $obMovimentoCaixa->datacad;
-$valor = $TSetModel->setValorMonetario($obMovimentoCaixa->valorpago);
+$valor = $TSetModel->setValorMonetario($obMovimentoCaixa->valorfinal);
 $formapag = $obMovimentoCaixa->formapag;
 $movimentacao = $obMovimentoCaixa->seq;
 
@@ -45,24 +45,24 @@ $obTransacao = $retTransacao->fetchObject();
 
 $obTDbo = new TDbo(TConstantes::VIEW_ALUNO);
 $criteriaTransacaoAluno = new TCriteria();
-$criteriaTransacaoAluno->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
-$retTransacaoAluno = $obTDbo->select('codigo,nometurma,nomecurso', $criteriaTransacaoAluno);
+$criteriaTransacaoAluno->add(new TFilter('transeq', '=', $obConta->transeq));
+$retTransacaoAluno = $obTDbo->select('seq,nometurma,nomecurso', $criteriaTransacaoAluno);
 
 $obTransacaoAluno = $retTransacaoAluno->fetchObject();
-if($obTransacaoAluno && $obTransacaoAluno->codigo){
-    $textoAluno = "<br/>Matrícula do Aluno: ".$obTransacaoAluno->codigo."<br/>Turma: ".$obTransacaoAluno->nometurma." - ".$obTransacaoAluno->nomecurso;
+if($obTransacaoAluno && $obTransacaoAluno->seq){
+    $textoAluno = "<br/>Matrícula do Aluno: ".$obTransacaoAluno->seq."<br/>Turma: ".$obTransacaoAluno->nometurma." - ".$obTransacaoAluno->nomecurso;
 }else{
     $textoAluno = "";
 }
 
-$num = $obConta->numparcela;
+$num = $obConta->numero;
 $tot = $obTransacao->total;
-$codconta = $obConta->codigo;
-$codtransacao = $obConta->codigotransacao;
+$codconta = $obConta->seq;
+$codtransacao = $obConta->transeq;
 
-$obTDbo = new TDbo(TConstantes::VIEW_UNIDADES);
+$obTDbo = new TDbo(TConstantes::VIEW_UNIDADE);
 $criteriaUnidade = new TCriteria();
-$criteriaUnidade->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obMovimentoCaixa->unidade));
+$criteriaUnidade->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obMovimentoCaixa->unidseq));
 $retUnidade = $obTDbo->select('*', $criteriaUnidade);
 $obUnidade = $retUnidade->fetchObject();
 

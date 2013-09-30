@@ -1,9 +1,9 @@
 function setMatricula(obj, confirme){
 
-    var codigoInscricao = $(obj).attr('codigo');
-    var datacad   = document.getElementById('datacad').value;
+    var codigoInscricao = $('#seq').val();
+    var datacad   = $('#datacad').val();
 
-    if(confirm(confirme) && codigoInscricao){
+    if(codigoInscricao && confirm(confirme)){
 
         var dados = 'classe=TMatricula&metodo=setMatricula&codigoinscricao='+codigoInscricao+'&datacad='+datacad;
         var retorno = exe('', getPath()+'/app.util/TSec.php',dados,'POST','Sucesso');

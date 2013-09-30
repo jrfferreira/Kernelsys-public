@@ -34,113 +34,100 @@ $TSetModel = new TSetModel();
 
 $criteriaConta = new TCriteria();
 $criteriaConta->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seqconta));
-$criteriaConta->add(new TFilter('tipomovimentacao','=','C'));
+$criteriaConta->add(new TFilter('tipo','=','C'));
 $dboConta = new TDbo(TConstantes::DBPARCELA);
 $retConta = $dboConta->select("*", $criteriaConta);
 $obConta = $retConta->fetchObject();
 
 $dboTransacao = new TDbo(TConstantes::DBTRANSACAO);
 $criteriaTransacao = new TCriteria();
-$criteriaTransacao->add(new TFilter(TConstantes::SEQUENCIAL,'=',$obConta->seqtransacao));
-$retTransacao = $dboTransacao->select("numparcelas", $criteriaTransacao);
+$criteriaTransacao->add(new TFilter(TConstantes::SEQUENCIAL,'=',$obConta->transeq));
+$retTransacao = $dboTransacao->select("numparcelas,pessseq", $criteriaTransacao);
 $obTransacao = $retTransacao->fetchObject();
 
 $dboTransacaoContas = new TDbo(TConstantes::DBPARCELA);
 $criteriaTransacaoContas = new TCriteria();
-$criteriaTransacaoContas->add(new TFilter('seqtransacao','=',$obConta->seqtransacao));
-$criteriaTransacaoContas->add(new TFilter('statusconta','<','4'),'OR');
+$criteriaTransacaoContas->add(new TFilter('transeq','=',$obConta->transeq));
+$criteriaTransacaoContas->add(new TFilter('stpaseq','<','4'),'OR');
 $criteriaTransacaoContas->setProperty('order','vencimento desc');
 $retTransacaoContas = $dboTransacaoContas->select("*", $criteriaTransacaoContas);
 
 while($obContas = $retTransacaoContas->fetch()){
-        switch($obContas['statusconta']){
+        switch($obContas['stpaseq']){
             case '1': $situacao = 'Vencida';break;
             case '2': $situacao = 'Paga';break;
             case '3': $situacao = 'Parcialmente Paga';break;
         
         }
 
-        if(($obContas['statusconta'] == '3' ) || ($obContas['statusconta'] == '2' ) || ($obContas['statusconta'] == '1' && $obContas['vencimento'] < date('Y-m-d'))){
+        if(($obContas['stpaseq'] == '3' ) || ($obContas['stpaseq'] == '2' ) || ($obContas['stpaseq'] == '1' && $obContas['vencimento'] < date('Y-m-d'))){
 
             $arrayContas[$obContas[TConstantes::SEQUENCIAL]][TConstantes::SEQUENCIAL] = $obContas[TConstantes::SEQUENCIAL];
              $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['situacao'] = $situacao;
-              $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valornominal'] = $TSetModel->setValorMonetario($obContas['valornominal']);
-               $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['vencimento'] = $TSetModel->setDataPT($obContas['vencimento']);
-                $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valorpago'] = $TSetModel->setValorMonetario($obContas['valornominal'] - $obContas['valorreal']);
+              $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valornominal'] = $TSetModel->setValorMonetario($obContas['valorinicial']);
+               $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['vencimento'] = $TSetModel->setDataPT($obContas['valorinicial']);
+                $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valorpago'] = $TSetModel->setValorMonetario($obContas['valorinicial'] - $obContas['valoratual']);
 
         }
 
     }
 
-$pessoa =  new TDbo(TConstantes::DBPESSOA);
+$pessoa =  new TDbo(TConstantes::VIEW_PESSOA);
 $criteriapessoa = new TCriteria();
-$criteriapessoa->add(new TFilter(TConstantes::SEQUENCIAL,'=',$obConta->seqpessoa));
+$criteriapessoa->add(new TFilter(TConstantes::SEQUENCIAL,'=',$obTransacao->pessseq));
 $retPessoa = $pessoa->select("*", $criteriapessoa);
 $obCliente = $retPessoa->fetchObject();
 
 //valida se o boleto já foi emitido
 $criteriaCkBoleto = new TCriteria();
-$criteriaCkBoleto->add(new TFilter('seqconta','=',$obConta->seq));
-$criteriaCkBoleto->add(new TFilter('seqconta','=',$obConta->seq));
+$criteriaCkBoleto->add(new TFilter('parcseq','=',$obConta->seq));
 $dboCkBoleto = new TDbo(TConstantes::DBBOLETO);
-$retCkBoleto = $dboCkBoleto->select(array("seq"=>"seq", "bkp"=>"bkp"), $criteriaCkBoleto);
+$retCkBoleto = $dboCkBoleto->select(array("seq","bkp"), $criteriaCkBoleto);
 $obCkBoleto= $retCkBoleto->fetchObject();
 
-/**
-if($obCkBoleto->seq!= "") {
+
+if($obCkBoleto->seq != "" && $obCkBoleto->bkp != "") {
     echo "<div style='font-size: 9px; text-align: center; font-family: sans-serif; border-bottom: 1px dotted #666; COLOR: #666; width: 666px'>REIMPRESSÃO</div>";
     echo $obCkBoleto->bkp;
     exit();
 }
-*/
 
     $criteriaTransacAluno = new TCriteria();
-    $criteriaTransacAluno->add(new TFilter('seqpessoa','=',$obCliente->seq));
+    $criteriaTransacAluno->add(new TFilter('pessseq','=',$obCliente->seq));
     $dboTransacAluno = new TDbo(TConstantes::VIEW_ALUNO);
     $criteriaTransacAluno->setProperty('limit','1'); 
     $retTransacAluno = $dboTransacAluno->select("seq,nometurma", $criteriaTransacAluno);
     $obTransacAluno = $retTransacAluno->fetchObject();
+    
+    $dboEndereco = new TDbo(TConstantes::DBENDERECO);
+    $criteriaEndereco = new TCriteria();
+    $criteriaEndereco->add(new TFilter('pessseq','=',$obCliente->seq));
+    $obEndereco = $dboEndereco->select('*',$criteriaEndereco)->fetchObject();
 
-if($obCliente->opcobranca == '1') {
+if($obEndereco) {
 
     $dadosSacado[0] = $obCliente->pessnmrz . " (Turma: {$obTransacAluno->nometurma} / Matricula : {$obTransacAluno->seq}) CPF:";
-    $dadosSacado['seqpessoa'] = $obCliente->seq;
-    $dadosSacado['seqconta'] = $seqconta;
-    $dadosSacado[1] = $obCliente->logradouro.", ".$obCliente->bairro."; " .$obCliente->cidade."-".$obCliente->estado." Cep:".$obCliente->cep;
+    $dadosSacado['pessseq'] = $obCliente->seq;
+    $dadosSacado['parcseq'] = $seqconta;
+    $dadosSacado[1] = $obEndereco->logradouro.", ".$obEndereco->bairro."; " .$obEndereco->cidade."-".$obEndereco->estado." Cep:".$obEndereco->cep;
     $dadosSacado[2] = "";
     $dadosSacado[3] = $obCliente->pessnmrf;
-}
-else {
-    
-    // Retorna informações da opção de cobrança
-        $criteriaCob = new TCriteria();
-        $criteriaCob->add(new TFilter(TConstantes::SEQUENCIAL,'=',$obCliente->opcobranca));
-    $dboCob = new TDbo(TConstantes::DBPESSOA_ENDERECOSCOBRANCAS);
-    $retCob = $dboCob->select("*", $criteriaCob);
-    $obCob= $retCob->fetchObject();
-
-    $dadosSacado[0] = $obCob->nomecobranca . " (Turma: {$obTransacAluno->nometurma} / Matricula : {$obTransacAluno->seq})";
-    $dadosSacado['seqpessoa'] = $obCliente->seq;
-    $dadosSacado[1] = $obCob->logradourocobranca." ".$obCob->cidadecobranca."-".$obCob->estadocobranca ." Cep:".$obCliente->cep;
-    $dadosSacado[2] = "";
-    $dadosSacado[3] = $obCob->pessnmrfcobranca;
-
 }
 
 
 //objeto Boleto
-$obBl = new TSetBoleto();
+$obBl = new TSetBoleto($obConta->seq);
 $obBl->setSacado($dadosSacado);
-$obBl->setValor($obConta->valornominal);
+$obBl->setValor($obConta->valorinicial);
 
-$mora = "Após o Vencimento, multa de 2% + Mora dia de ". $TSetModel->setValorMonetario((($obConta->valornominal * (1/100)) / 30));
+$mora = "Após o Vencimento, multa de 2% + Mora dia de ". $TSetModel->setValorMonetario((($obConta->valorinicial * (1/100)) / 30));
 $obBl->setInstrucoes($mora,2);
 
 $TTransacao = new TTransacao();
 $obBl->setInstrucoes($TTransacao->getTextoConvenios($obConta->seq),1);
 if(count($arrayContas) > 1) $obBl->setDetalhamento($arrayContas);
 
-$parc .= "Parcela: {$obConta->numparcela}/{$obTransacao->numparcelas}";
+$parc .= "Parcela: {$obConta->numero}/{$obTransacao->numparcelas}";
 
 
 $obBl->setInformacaoFatura("Fatura resferente à transação nº {$obConta->seqtransacao}. <br/> Conta nº {$obConta->seq}");
@@ -151,15 +138,6 @@ $obBl->setVencimento($obConta->vencimento);
 //============================================================================================	
 
 if($dadosSacado) {
-/*
-include ('html2pdf.php');
-$pdf = new createPDF($obBl->showBoleto(),'Boleto');
-$pdf->http = '../';
-$pdf->directory= "../".TOccupant::getPath()."app.tmp/";
-$pdf->delete=10;
-$pdf->useiconv=false;
-$pdf->run();
-*/
     $obBl->showBoleto();
     $obBl->load('Inscricao');
 

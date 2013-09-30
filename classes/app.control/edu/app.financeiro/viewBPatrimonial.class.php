@@ -40,7 +40,7 @@ class viewBPatrimonial {
         //retorna Caixa
         $obTDboCaixa = new TDbo(TConstantes::DBCAIXA);
         $critCaixa = new TCriteria();
-        $critCaixa->add(new TFilter("tipomovimentacao","=","C"));
+        $critCaixa->add(new TFilter("tipo","=","C"));
         $obCaixa = $obTDboCaixa->select("*",$critCaixa);
 
         //retorna Contas a Pagar

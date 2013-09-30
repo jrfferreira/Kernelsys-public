@@ -835,7 +835,7 @@ class TTurmaDisciplinas {
 
             $listaAlunos = array();
 
-            $sqlAlunos = "select al.seq,pe.pessnmrz as aluno from dbpessoa pe inner join dbaluno al on al.pesseq = pe.seq and (pe.seq = '1' ";
+            $sqlAlunos = "select al.seq,pe.pessnmrz as aluno from dbpessoa pe inner join dbaluno al on al.pessseq = pe.seq and (pe.seq = '1' ";
             while($obAluno = $retAlunos->fetchObject()){
                 if(!$listaAlunos[$obAluno->tudiseq])
                     $listaAlunos[$obAluno->tudiseq] = array();

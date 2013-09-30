@@ -1,3 +1,5 @@
 # Coluna cxfuseq da tabela dbcaixa passa a ser obrigatorio
 # Coluna notnull|obrigatorio da tabela campos se torna required
 # Verificar se todas as tabelas tem o statseq como valor padrão 1
+# Adicionar na view_inscricao as colunas vencimentomatricula, vencimentotaxa
+# Adicionar a coluna formapag na view_caixa (dbforma_pagamento -> titulo)

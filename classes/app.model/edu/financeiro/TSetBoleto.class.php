@@ -12,13 +12,13 @@ class TSetBoleto {
     //dados gerados pelo boleto
     private $dadosBoleto = NULL;
 
-    public function __construct() {
+    public function __construct($parcseq) {
 
         // estarta o buffer de saida
         //ob_start();
 
         $criteriaInfo = new TCriteria();
-        $criteriaInfo->add(new TFilter('ativo','=','1'));
+        $criteriaInfo->add(new TFilter('statseq','=','1'));
         $dboInfo = new TDbo(TConstantes::DBBOLETO_ESTRUTURA);
         $qDados = $dboInfo->select("*", $criteriaInfo);
 
@@ -29,10 +29,10 @@ class TSetBoleto {
 
         // gera registro do boleto na base de dados dbduplicatas
         $dboInDuplic = new TDbo(TConstantes::DBBOLETO);
-        $this->Duplicata = $dboInDuplic->insert(array("ativo"=>"1"));
+        $this->Duplicata = $dboInDuplic->insert(array("statseq"=>"1",'parcseq'=>$parcseq));
 
         if($this->Duplicata) {
-            $this->idDup = $this->Duplicata['id'];
+            $this->seq = $this->Duplicata['id'];
         }
         else {
             exit('O historico do boleto não pode ser gerado');
@@ -114,11 +114,11 @@ class TSetBoleto {
 
         //Formata parte contadora do nosso Número=============
         //calcula zeros necessarios
-        $zeros = 15-strlen($this->idDup);
+        $zeros = 15-strlen($this->seq);
         for($zeros; $zeros>0; $zeros--) {
             $fragNossoNumero .= '0';
         }
-        $compNossoNumero = $fragNossoNumero.$this->idDup;
+        $compNossoNumero = $fragNossoNumero.$this->seq;
         //=====================================================
 
         //dados do cedente
@@ -189,20 +189,21 @@ class TSetBoleto {
             if($this->dadosSacado[3] and $this->dadosSacado[4]) {
 
                 $args["parcseq"] = $this->infoSacado['parcseq'];
-                $args["pessseq"] = $this->infoSacado['pessseq'];
                 $args["nDocumento"] = $this->dadosBoleto[0];
-                $args["dataProcesso"] = $this->mascara->setDataDb($this->dadosBoleto[1]);
+                //$args["dataProcesso"] = $this->mascara->setDataDb($this->dadosBoleto[1]);
                 $args["cpfSacado"] = $this->dadosSacado[3];
                 $args["valordoc"] = $this->dadosSacado[4];
                 $args["vencimento"] = $this->data_venc;
                 $args["tipoboleto"] = $this->dadosC['tipoboleto'];
                 $args["classificacao"] = $classific;
                 $args["bkp"] = $this->bkpHTML;
-
+                
                     $criteriaDup = new TCriteria();
                     $criteriaDup->add(new TFilter('seq','=',$this->seq));
+                    
                 $dboUp = new TDbo(TConstantes::DBBOLETO);
-              $rLaod = $dboUp->update($args, $criteriaDup);
+                $dboUp->update($args, $this->seq);
+                $dboUp->commit();
 
             }else {
                 // se não existir, lança um erro

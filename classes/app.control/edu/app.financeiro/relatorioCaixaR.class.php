@@ -151,8 +151,8 @@ class relatorioCaixaR{
 			// Retorna informações do caixa  ==========================
                 $sqlCaixa = new TDbo(Tconstantes::DBCAIXA);
                 $critCaixa = new TCriteria();
-                $critCaixa->add(new TFilter("tipomovimentacao","=",'C'));
-                $critCaixa->add(new TFilter("unidade","=",$this->obUser->unidade->seq));
+                $critCaixa->add(new TFilter("tipo","=",'C'));
+                $critCaixa->add(new TFilter("unidseq","=",$this->obUser->unidade->seq));
                 $retCaixa = $sqlCaixa->select("*",$critCaixa);
 
 				//$sqlCaixa = "select * from dbcaixa where ".$dataArg." and tipomovimentacao='C' and unidade='".$this->obUser->unidade->seq."'";

@@ -230,7 +230,7 @@ class TTransacao {
 	            	$criteriaTransacaoContas->add(new TFilter('seq', '=', $codigoconta));
 	            }
             
-            $criteriaTransacaoContas->setProperty('order', 'numparcela::integer');
+            $criteriaTransacaoContas->setProperty('order', 'numero::integer');
             $retTransacaoContas = $obTDbo->select("*", $criteriaTransacaoContas);
 
             if(!$codigoconta){  
@@ -443,7 +443,7 @@ class TTransacao {
         if (!$valor) {
             new setException('O Plano de conta da transação não foi definido.');
         }
-        $this->cols['codigoPlanoConta'] = $valor;
+        $this->cols['plcoseq'] = $valor;
     }
 
     /**
@@ -465,6 +465,10 @@ class TTransacao {
     public function setParcelas($valor, $intervalo = NULL) {
         if (!$valor) {
             new setException('<div >O número de parcelas é inválido - TTransacao.class.php - [93]</div>');
+        }
+        if(!$intervalo){
+        	$obUnidade = new TUnidade();
+        	$intervalo = $obUnidade->getParametro('financeiro_intervalo_parcela');
         }
         $this->cols['numparcelas'] = $valor;
         $this->cols['intervaloparcelas'] = $intervalo;
@@ -504,17 +508,6 @@ class TTransacao {
 
     public function setDataFixa($dataFixa) {
         $this->cols['dataFixaVencimento'] = $dataFixa;
-    }
-
-    /**
-     * Instancia o tipo de movimento da transação
-     * param $valor = Tipo do movimento relacionado a transação C = crédito D = débito
-     */
-    public function setTipoMovimento($valor) {
-        if ($valor != 'D' and $valor != 'C') {
-            new setException('<div >O tipo da movimentação é inválida - TTransacao.class.php</div>');
-        }
-        $this->cols['tipo'] = $valor;
     }
 
     /**
@@ -618,18 +611,12 @@ class TTransacao {
                 $this->setAtributos($codigotransacao);
             }
 
-            if ($codigotransacao and $this->cols['numparcelas'] and $this->cols['pesseq'] and $this->cols['tipo']) {
+            if ($codigotransacao and $this->cols['numparcelas'] and $this->cols['pessseq']) {
 
                 $obTDbo = new TDbo(TConstantes::DBPARCELA);
                 $crit_check = new TCriteria();
                 $crit_check->add(new TFilter('transeq', '=', $codigotransacao));
                 $ret_check = $obTDbo->select('seq', $crit_check);
-
-                //if ($codigo_check = $ret_check->fetchObject()) {
-                //    if ($codigo_check->codigo) {
-                //        throw new Exception(TMensagem::ERRO_TRANSACAO_CONTAS);
-                //    }
-                //} else {
                 $valorcorrigido = $this->setValorCorrigido($this->cols['valortotal'], $this->cols['desconto'], $this->cols['acrescimo']);
                 $valorNominalConta = $valorcorrigido / $this->cols['numparcelas'];
 
@@ -641,19 +628,18 @@ class TTransacao {
                     $this->setPrimeiraParcela = 1;
                 }
 
-                $dadosConta['pessseq'] = $this->cols['pessseq'];
-                $dadosConta['tipo'] = $this->cols['tipo'];
+                $dadosConta['tipo'] = $this->cols['tipo'] ? $this->cols['tipo'] : 'C';
                 $dadosConta['plcoseq'] = $this->cols['plcoseq'];
                 $dadosConta['vencimento'] = $this->cols['vencimento'];
                 $dadosConta['transeq'] = $codigotransacao;
-                $dadosConta['valornominal'] = $valorNominalConta;
-                $dadosConta['valorreal'] = $valorNominalConta;
+                $dadosConta['valorinicial'] = $valorNominalConta;
+                $dadosConta['valoratual'] = $valorNominalConta;
                 $dadosConta['instrucoespagamento'] = $this->instrucoesPagamento;
                 $dadosConta['statseq'] = '1';
 
                 for ($np = $this->setPrimeiraParcela; $np <= $this->numContas; $np++) {
 
-                    $dadosConta['numparcela'] = $np;
+                    $dadosConta['numero'] = $np;
                     $dadosConta['obs'] = $this->contaObs . ' - Parcela número:' . $np;
 
                     //aplica desconto sobre a parcela se definido
@@ -757,8 +743,6 @@ class TTransacao {
                 $this->setAcrescimo($obTransacao->acrescimo);
                 $this->setParcelas($obTransacao->numparcelas, $obTransacao->intervaloparcelas);
                 $this->setPlanoConta($obTransacao->plcoseq);
-
-                $this->setTipoMovimento($obTransacao->tipo);
                 $this->setValorNominal($obTransacao->valortotal);
 
                 $obMasc = new TSetMascaras();
@@ -1215,7 +1199,7 @@ class TTransacao {
                         $filtro3->tipoFiltro = 2;
                         $crit->add($filtro2, 'OR');
                         $crit->add($filtro3, 'OR');
-                        $filtro4 = new TFilter('numparcela', '!=', '(select min(numparcela) from dbtransacoes_contas t2 where t2.codigotransacao = \'' . $transacao->codigo . '\' and (statusconta = \'1\' or statusconta = \'5\') and vencimento > \'' . date('Y-m-d') . '\')');
+                        $filtro4 = new TFilter('numero', '!=', '(select min(numero) from dbtransacoes_contas t2 where t2.codigotransacao = \'' . $transacao->codigo . '\' and (statusconta = \'1\' or statusconta = \'5\') and vencimento > \'' . date('Y-m-d') . '\')');
                         $filtro4->tipoFiltro = 1;
                         $crit->add($filtro4, 'AND');
 
@@ -1255,7 +1239,7 @@ class TTransacao {
                         $filtro3->tipoFiltro = 2;
                         $crit->add($filtro2, 'OR');
                         $crit->add($filtro3, 'OR');
-                        $filtro4 = new TFilter('numparcela', '!=', '(select min(numparcela) from dbtransacoes_contas t2 where t2.codigotransacao = \'' . $transacao->codigo . '\' and (statusconta = \'1\' or statusconta = \'5\') and vencimento > \'' . date('Y-m-d') . '\')');
+                        $filtro4 = new TFilter('numero', '!=', '(select min(numero) from dbtransacoes_contas t2 where t2.codigotransacao = \'' . $transacao->codigo . '\' and (statusconta = \'1\' or statusconta = \'5\') and vencimento > \'' . date('Y-m-d') . '\')');
                         $filtro4->tipoFiltro = 1;
                         $crit->add($filtro4, 'AND');
 
@@ -1545,7 +1529,7 @@ class TTransacao {
     	
         $dboConta = new TDbo(TConstantes::DBPARCELA);
         $criteriaConta = new TCriteria();
-        $criteriaConta->add(new TFilter('codigo','=',$codigoConta));
+        $criteriaConta->add(new TFilter('seq','=',$codigoConta));
         $retConta = $dboConta->select("*", $criteriaConta);
         $obConta = $retConta->fetchObject();
 	
@@ -1555,16 +1539,16 @@ class TTransacao {
         $mesVencimento = $dt[1] . "/" . $dt[0];
         $diaVencimento = $dt[2];
 
-        $transacs = new TDbo('dbtransacoes_convenios');
+        $transacs = new TDbo(TConstantes::DBTRANSACAO_CONVENIO);
     	$crit = new TCriteria();
-        $crit->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
-        $retTransacs = $transacs->select('codigoconvenio', $crit);
+        $crit->add(new TFilter('transeq', '=', $obConta->transeq));
+        $retTransacs = $transacs->select('convseq', $crit);
 
         $TConvenios = new TConvenios();
         $descontos = null;
 
         while ($obTransacoes = $retTransacs->fetchObject()) {
-            $arrayConvenios[] = $obTransacoes->codigoconvenio;
+            $arrayConvenios[] = $obTransacoes->convseq;
         }
         $texto = $TConvenios->getTextoConvenios($arrayConvenios,$obConta);
         return $texto;
@@ -1576,7 +1560,7 @@ class TTransacao {
                 $data = time();
             $dboConta = new TDbo(TConstantes::DBPARCELA);
             $criteriaConta = new TCriteria();
-            $criteriaConta->add(new TFilter('codigo','=',$codigoConta));
+            $criteriaConta->add(new TFilter('seq','=',$codigoConta));
             $retConta = $dboConta->select("*", $criteriaConta);
             $obConta = $retConta->fetchObject();
         
@@ -1585,16 +1569,16 @@ class TTransacao {
             $dt = Date("-", $obConta->vencimento);
             $dataVencimento = mktime(23,59,59,$dt[1],$dt[2],$dt[0]);
 
-            $transacs = new TDbo('dbtransacoes_convenios');
+            $transacs = new TDbo(TConstantes::DBTRANSACAO_CONVENIO);
             $crit = new TCriteria();
-            $crit->add(new TFilter('codigotransacao', '=', $obConta->codigotransacao));
-            $retTransacs = $transacs->select('codigoconvenio', $crit);
+            $crit->add(new TFilter('transeq', '=', $obConta->transeq));
+            $retTransacs = $transacs->select('convseq', $crit);
 
             $TConvenios = new TConvenios();
 
             $listaConvenios = array();
             while ($obTransacoes = $retTransacs->fetchObject()) {
-                $listaConvenios[] = $obTransacoes->codigoconvenio;
+                $listaConvenios[] = $obTransacoes->convseq;
             }
 
             if($dataVencimento >= time()){
@@ -1612,8 +1596,8 @@ class TTransacao {
     	try {
     		$obTDbo = new TDbo(TConstantes::DBBOLETO);
     		$crit = new TCriteria();
-    		$crit->add(new TFilter('codigoconta', '=', $codigoConta));
-    		$dados = array('statusduplicata'=>'9');
+    		$crit->add(new TFilter('parcseq', '=', $codigoConta));
+    		$dados = array('boleseq'=>'9');
     		if($obTDbo->update($dados,$crit))
     			throw new ErrorException("Não foi possivel remover a duplicata informada.", 1);
     	} catch (Exception $e) {

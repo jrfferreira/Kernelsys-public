@@ -154,11 +154,11 @@ class relatorioCaixaD{
 			// Retorna informações do caixa  ==========================
                 $sqlCaixa = new TDbo(TConstantes::DBCAIXA);
                 $critCaixa = new TCriteria();
-                $critCaixa->add(new TFilter("tipomovimentacao","=",'D'));
+                $critCaixa->add(new TFilter("tipo","=",'D'));
                 $critCaixa->add(new TFilter("unidseq","=",$this->obUser->unidade->seq));
                 $retCaixa = $sqlCaixa->select("*",$critCaixa);
 
-				//$sqlCaixa = "select * from dbcaixa where ".$dataArg." and tipomovimentacao='D' and unidade='".$this->obUser->unidade->seq."' ";
+				//$sqlCaixa = "select * from dbcaixa where ".$dataArg." and tipo='D' and unidade='".$this->obUser->unidade->seq."' ";
 				//$retCaixa = $conn->Query($sqlCaixa);
 				
 				$colTotal['despesas'] = "Total de Despesas";

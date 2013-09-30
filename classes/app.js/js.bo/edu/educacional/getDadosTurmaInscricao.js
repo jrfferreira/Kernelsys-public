@@ -1,6 +1,6 @@
 function getDadosTurmaInscricao(obj, classe, metodo){
 
-        var valores = 'classe='+classe+'&metodo='+metodo+'&codigoturma='+obj.value;
+        var valores = 'classe='+classe+'&metodo='+metodo+'&turmseq='+obj.value;
         var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
 
         if(retorno){

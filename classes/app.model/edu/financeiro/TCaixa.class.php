@@ -396,7 +396,7 @@ class TCaixa {
                 } elseif ($resMCaixa->formapag == 'Cartão') {
                     $totalReceitasCartao[$resMCaixa->cofiseq] = $totalReceitasCartao[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
                 }
-            } elseif ($resMCaixa->tipomovimentacao == 'D') {
+            } elseif ($resMCaixa->tipo == 'D') {
                 $totalContasCaixa[$resMCaixa->cofiseq] = ($totalContasCaixa[$resMCaixa->cofiseq] - $resMCaixa->valorpago);
                 $totalDespesas[$resMCaixa->cofiseq] = $totalDespesas[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
 

@@ -401,7 +401,7 @@ class TBiblioteca {
    public function setReserva($codigopessoa,$codigolivro) {
 
         $dbo = new TDbo(TConstantes::DBLOCACAO_LIVRO);
-        $data['pesseq'] = $codigopessoa;
+        $data['pessseq'] = $codigopessoa;
         $data['livrseq'] = $codigolivro;
         $data['stlv'] = '2';
 

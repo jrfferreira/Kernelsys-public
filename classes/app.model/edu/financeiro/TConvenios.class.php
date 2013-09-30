@@ -214,7 +214,7 @@ class TConvenios{
             if(is_string($obConta)){
             	$valorConta = $obConta;
             }else{
-            	$valorConta = $obConta->valorreal;
+            	$valorConta = $obConta->valoratual;
                 $dt = explode("-", $obConta->vencimento);
                 $mesVencimento = "/". $dt[1] . "/" . $dt[0];
             }
@@ -223,7 +223,7 @@ class TConvenios{
             if(count($descontos)) {
                 foreach ($descontos as $ch => $vl) {
         
-                    $valorCheio = number_format(($obConta->valorreal - $descontoInicial), 2, ',', '.');
+                    $valorCheio = number_format(($obConta->valoratual - $descontoInicial), 2, ',', '.');
                     $valorAtual = $valorCheio - $vl;
                     if ($valorAtual <= 0) {
                         $valorAtual = 0;
@@ -294,7 +294,7 @@ class TConvenios{
                 if(is_string($obConta)){
                     $valorConta = $obConta;
                 }else{
-                    $valorConta = $obConta->valorreal;
+                    $valorConta = $obConta->valoratual;
                     $dt = explode("-", $obConta->vencimento);
                     $mesVencimento = "/". $dt[1] . "/" . $dt[0];
                 }
@@ -303,7 +303,7 @@ class TConvenios{
                 if(count($descontos)) {
                     foreach ($descontos as $ch => $vl) {
             
-                        $valorCheio = number_format(($obConta->valorreal - $descontoInicial), 2, ',', '.');
+                        $valorCheio = number_format(($obConta->valoratual - $descontoInicial), 2, ',', '.');
                         $valorAtual = $valorCheio - $vl;
                         if ($valorAtual <= 0) {
                             $valorAtual = 0;

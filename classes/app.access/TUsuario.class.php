@@ -169,10 +169,9 @@ class TUsuario {
 						$senha = $setControl->setPass($senha);
 
 						$dt['pessseq'] = $pessseq;
-						$dt['classeuser'] = 'a';
+						$dt['classeuser'] = 1;
 						$dt['usuario'] = $login;
 						$dt['senha'] = $senha;
-						$dt['tabseq'] = '1';
 						$dt['statseq'] = '1';
 						$dt['temaseq'] = $temaseq;
 

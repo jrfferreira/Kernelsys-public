@@ -246,6 +246,9 @@ class TDbo {
                 if(!$dados['datacad']){
                     $dados['datacad'] = date("Y-m-d");
                 }
+                if(!$dados['statseq']){
+                	$dados['statseq'] = 1;
+                }
 
                 // cria uma instrução de insert
                 $sql = new TSqlInsert;

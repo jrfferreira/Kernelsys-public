@@ -490,7 +490,7 @@ class TSetInscricao {
     private function setTransacao($codigopessoa, array $dadosProduto) {
 
         $DadosTransac['codigopessoa'] = $codigopessoa;
-        $DadosTransac['tipomovimentacao'] = 'C';
+        //$DadosTransac['tipomovimentacao'] = 'C';
         $DadosTransac['valortotal'] = $dadosProduto['valortotal'];
         $DadosTransac['valorcorrigido'] = $dadosProduto['valortotal'];
         $DadosTransac['codigoplanoconta'] = $dadosProduto['codigoplanoconta'];
@@ -506,7 +506,7 @@ class TSetInscricao {
         $transacConta['codigotransacao'] = $obTransac['codigo'];
         $transacConta['codigopessoa'] = $codigopessoa;
         $transacConta['codigoplanoconta'] = $dadosProduto['codigoplanoconta'];
-        $transacConta['tipomovimentacao'] = 'C';
+        //$transacConta['tipomovimentacao'] = 'C';
         $transacConta['valornominal'] = $dadosProduto['valormensal'];
         $transacConta['numparcela'] = '1';
         $transacConta['desconto'] = $dadosProduto['valordescontado'];
@@ -550,8 +550,8 @@ class TSetInscricao {
             $dadosTaxa['valortotal'] = $taxaProd['valor'];
             $dadosTaxa['valorcorrigido'] = $taxaProd['valor'];
             $dadosTaxa['valormensal']  = $taxaProd['valor'];
-            $dadosTaxa['tipomovimentacao'] = 'C';
-            $dadosTaxa['codigoplanoconta'] = $this->produto['codigoplanoconta'];
+            //$dadosTaxa['tipomovimentacao'] = 'C';
+            $dadosTaxa['plcoseq'] = $this->produto['codigoplanoconta'];
             $dadosTaxa['numparcelas'] = '1';
             $dadosTaxa['datainicio'] = $this->produto['datainicio'];
             $dadosTaxa['datavencimento'] = $this->produto['datainicio'];

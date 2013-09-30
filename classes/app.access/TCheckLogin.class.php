@@ -19,6 +19,7 @@ class TCheckLogin {
             $dadosUser = $this->obsession->getValue($this->seq);
             
             if($dadosUser){
+            	$dadosUser->unidade = $dadosUser->unidseq;
                 $this->user = $dadosUser;
                 if(!$this->user->seq or !$this->user->pessseq) {
                     // se não existir, lança um erro

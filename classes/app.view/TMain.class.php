@@ -701,7 +701,15 @@ class TMain {
         $this->getObLista();//Substituir por backbone.js
         $filtro = $_POST;
 
-        $this->obLista->setFiltro($filtro);
+        $valorFiltro = $this->obLista->setFiltro($filtro);
+        foreach($this->obLista->Campos as $campo){
+        	if(get_class($campo) == "TEntry"){
+        		$campo->setValue(array_shift($filtro));
+        	}
+        	if(get_class($campo) == "TCombo"){
+        		$campo->setValue(array_shift($filtro));
+        	}
+        }
         $this->obLista->clearSelecao();
         $this->showlist();
     }

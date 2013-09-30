@@ -31,7 +31,7 @@ class setComprovante{
       $data = new TSetData();
         $this->data = $data->dataPadraoPT($obConta->datacad);
 
-      if($obConta->tipomovimentacao == "C"){
+      if($obConta->tipo == "C"){
           $this->movimentacao = "Recebemos de";
       }else{
           $this->movimentacao = "Pagamos a";

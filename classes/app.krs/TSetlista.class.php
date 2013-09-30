@@ -247,9 +247,7 @@ class TSetlista {
                 //garda argumetos do filtro
                 $argFiltro = $this->obsession->getValue('boxFiltro_'.$this->listseq);
                 $argFiltro['Manterfilt'.$this->listseq] = $dados['Manterfilt'.$this->listseq];
-
                 if(!is_array($dados['expre'.$this->listseq])) {
-
                     if(!is_array($argFiltro['expre'.$this->listseq])) {
                         $vetArgs[0] = str_replace("*", "%", $argFiltro['expre'.$this->listseq]);
                     }else {
@@ -262,7 +260,6 @@ class TSetlista {
                 $argFiltro['expre'.$this->listseq] = $vetArgs;
 
                 if(!is_array($dados['cols'.$this->listseq])) {
-
                     if(!is_array($argFiltro['cols'.$this->listseq])) {
                         $vetcols[0] = $argFiltro['cols'.$this->listseq];
                     }else {
@@ -322,13 +319,15 @@ class TSetlista {
                 //----------------------------------------------------------------------
                 //monta criterio de pesquisa em todas as colunas da tabela em questão.
                 if($dados['cols'.$this->listseq] === "*") {
-
+                	$expression = $argFiltro['expre'.$this->listseq];
+                	if(preg_match('@^([^ %*]+)$@i', $expression)){
+                		$expression = '%'.$expression.'%';
+                	}
+                	
                     foreach($this->itens as $colId=>$colLabel) {
                         if($colId != '*'){// and $colId != "seq" and $colId != "unidseq" and $colId != "statseq") {
-
-                        	
                         	$dadosCol = explode('__', $colId);
-                            $this->addCriterio($dadosCol[0], $argFiltro['expre'.$this->listseq], 'ILIKE','OR',$dadosCol[1], "2");
+                            $this->addCriterio($dadosCol[0], $expression, 'ILIKE','OR',$dadosCol[1], "2");
                         }
                     }
 

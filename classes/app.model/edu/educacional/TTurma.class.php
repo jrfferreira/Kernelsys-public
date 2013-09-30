@@ -92,7 +92,7 @@ class TTurma {
                 throw new ErrorException("O codigo da turma é inválido. getRequisitos");
             }
 
-                $obDbo = new TDbo(TConstantes::DBTURMA_REQUISITO);
+                $obDbo = new TDbo(TConstantes::DBREQUISITO_TURMA);
                     $criteria = new TCriteria();
                     $criteria->add(new TFilter('turmseq','=',$codigoturma));
                 $retRequisitos = $obDbo->select('*', $criteria);
@@ -184,7 +184,7 @@ class TTurma {
 
         try {
             if($codigoturma) {
-                $obDbo = new TDbo(TConstantes::DBTURMA_DESCONTO);
+                $obDbo = new TDbo(TConstantes::VIEW_TURMA_CONVENIO_DESCONTO);
                     $criteria = new TCriteria();
                     $criteria->add(new TFilter('turmseq','=',$codigoturma));
                     $criteria->setProperty('order','dialimite');
@@ -515,7 +515,7 @@ class TTurma {
     public function setOptionSelect($codigocurso){
         try{
 
-                $obTDbo = new TDbo(TConstantes::VIEW_TURMAS);
+                $obTDbo = new TDbo(TConstantes::VIEW_TURMA);
                 $criteria = new TCriteria();
                 $criteria->add(new TFilter('cursseq','=',$codigocurso));
                 $retTurma = $obTDbo->select("*", $criteria);

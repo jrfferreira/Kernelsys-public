@@ -29,7 +29,7 @@ if($MCaixa){
 
         $movCaixa[$resMCaixa->seq] =  $resMCaixa->seq;
 
-        if($resMCaixa->tipomovimentacao == "C"){
+        if($resMCaixa->tipo == "C"){
             $totalReceita = $totalReceita + $resMCaixa->valorpago;
         }
         else{

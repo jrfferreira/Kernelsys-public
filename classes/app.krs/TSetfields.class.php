@@ -172,7 +172,7 @@ class TSetfields {
             if($obField->label != ""){
                 $cellLabel = $row->addCell(" ");
                 $cellLabel->class = "tlabel";
-                if(get_class($obField) != 'TButton' &&  get_class($obField) != 'THidden'){
+                if(get_class($obField) != 'TButton' &&  (get_class($obField) != 'THidden' ||  $obField->actPesquisa)){
                     $cellLabel->add($obField->label);
                 }
             }
@@ -191,7 +191,6 @@ class TSetfields {
 
             //atribui botao de pesquisa
             if($obField->actPesquisa) {
-            	
             	
             	//cria campo hidden para o sequencial
             	$campoLabel = new TSetCampo();

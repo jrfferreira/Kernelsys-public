@@ -209,7 +209,7 @@ class TSetModel {
 
         $val = preg_replace('{\D}', '', $valor);
         $model = new TSetModel();
-        if (strlen($val) == 11) {
+        if (strlen($val) <= 11) {
             return $model->setCPF($valor);
         } else {
             return $model->setCNPJ($valor);
@@ -417,7 +417,7 @@ class TSetModel {
 	 * @param unknown_type $cod
 	 */
     public function setCertificacaoDigitial($cod) {
-        return 'CD#' . strtoupper(md5($movimentacao . date('Y-m-d'))) . date('Ymd');
+        return 'CD#' . strtoupper(md5($cod . "secret-key-petrus-edu")) . date('Ymd');
     }
 
     /**

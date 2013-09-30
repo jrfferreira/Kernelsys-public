@@ -74,14 +74,14 @@ class TMatricula {
         	$TUnidade = new TUnidade();
             $matricula_independente = $TUnidade->getParametro('matricula_independente');
             //configura transação da matrícula
-	            if($matricula_independente == '1'){
+	            if($matricula_independente == '1' && $codigotransacao){
 		             $trasacao->setNumContas($turma->parcelas, 2);
 		             $trasacao->addContas($codigotransacao);
             	}else{
-            		$trasacao->setPessoa($obInscricao->pesseq);
+            		$trasacao->setPessoa($obInscricao->pessseq);
 		            $trasacao->setValorNominal($turma->valortotal);
-		            $trasacao->setTipoMovimento('C');
-		            $trasacao->setDesconto($turma->valordescontado, "2");
+		            //$trasacao->setTipoMovimento('C');
+		            //$trasacao->setDesconto($turma->valordescontado, "2");
 		            $trasacao->setAcrescimo('0.00');
 		            $trasacao->setParcelas($turma->parcelas);
 		            $trasacao->setPlanoConta($turma->plcoseq);
@@ -114,7 +114,7 @@ class TMatricula {
                 //Gera relacionamento aluno disciplinas
                 if(count($curso->disciplinas) > 0){
 	                foreach($curso->disciplinas as $codDisciplina=>$obDisciplina){
-	
+	                	$obDisciplina = $obDisciplina->obDisciplina;
 	                        //define se a disciplina está associada a atual turma
 	                        if($listaTurmaDisicplinas[$codDisciplina]){
 	                            $tudiseq = $listaTurmaDisicplinas[$codDisciplina]->seq;
@@ -139,11 +139,11 @@ class TMatricula {
                 }
                 //associa a transação da turma com os aluno
                 $dadosAlunoConvenio['transeq'] = $codigotransacao;
-                $dadosAlunoConvenio['ativo'] = '1';
+                $dadosAlunoConvenio['statseq'] = '1';
                 
                 if($convenios){
 	                foreach($convenios as $ch => $vl){
-	                	$dadosAlunoConvenio['convseq'] = $vl->codigoconvenio;
+	                	$dadosAlunoConvenio['convseq'] = $vl->convseq;
 	                	$obDbo->setEntidade(TConstantes::DBTRANSACAO_CONVENIO);
 	                	$obDbo->insert($dadosAlunoConvenio);
 	                }
@@ -170,15 +170,16 @@ class TMatricula {
                     $TUsuario = new TUsuario();
                     
                     $TUnidade = new TUnidade();
-                    $parametros = $TUnidade->getParametro('senhainicial');
+                    $senhainicial = $TUnidade->getParametro('senhainicial');
                     
+                    $nomeUsuario = sprintf('%06s', $inAluno["seq"]); 
                     
-                    if(strlen($parametros->senhainicial)){
-                    	$provSenha = $parametros->senhainicial;
+                    if(strlen($senhainicial)){
+                    	$provSenha = $senhainicial;
                     }else{
-                    	$provSenha = substr($obInscricao->pessseq, 0,-4);
+                    	$provSenha = sprintf('%08s', $obInscricao->pessseq);
                     }
-                    $retUsuario = $TUsuario->setUsuario($obInscricao->pessseq, $inAluno["seq"], $provSenha);
+                    $retUsuario = $TUsuario->setUsuario($obInscricao->pessseq, $nomeUsuario, $provSenha);
 
                     if($retUsuario){
                             $priv = array();
@@ -229,7 +230,9 @@ class TMatricula {
                                 $TUsuario->setPrivilegio($retUsuario["seq"], $vl[2], $vl[0],$vl[1],'1');
                             }
 
-                        $mensagemUsuario = '<h2><br/> Usuario '.$inAluno["seq"].' gerado com sucesso. Senha provisória: '.$provSenha . '</h2>';
+                        $mensagemUsuario = '<h2><br/> Usuario '.$nomeUsuario.' gerado com sucesso. Senha provisória: '.$provSenha . '</h2>';
+                    }else{
+                    	$mensagemUsuario = '<h2>Não foi possível criar um usuário de acesso para o Aluno.</h2>';
                     }
 
                 $divSucesso = new TElement('div');

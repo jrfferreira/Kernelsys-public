@@ -98,8 +98,6 @@ final class TTransaction{
             // aplica as operações realizadas
             // durante a transação
             self::$conn->commit();
-            
-             echo '<br>-------------<br>Commit executado <br>--------------'; 
         }
     }
     
@@ -147,7 +145,8 @@ final class TTransaction{
 	
         // verifica existe um logger
         if (is_object(self::$logger)){
-		
+			
+        	echo "<script>console.log('".$message."');</script>";
             self::$logger->write($message);
         }
     }

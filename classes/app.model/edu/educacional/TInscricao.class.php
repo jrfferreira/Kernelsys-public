@@ -75,15 +75,14 @@ class TInscricao{
 
             //configura a transação do curso e define a primeira parcela como matrícula
             $obCreditoM = new TTransacao();
+            $obUnidade = new TUnidade();
 
             $obCreditoM->setPessoa($obInscricao->pessseq);
             $obCreditoM->setValorNominal($obTurma->valortotal);
-            $obCreditoM->setTipoMovimento('C');
-            $obCreditoM->setDesconto($obTurma->valordescontado, "2");
             $obCreditoM->setAcrescimo('0.00');
-            $obCreditoM->setParcelas($obTurma->numparcelas);
+            $obCreditoM->setParcelas($obTurma->parcelas,$obUnidade->getParametro('financeiro_intervalo_parcela'));
             $obCreditoM->setPlanoConta($obTurma->plcoseq);
-            $obCreditoM->setVencimento($obInscricao->vencimentomatricula);
+            $obCreditoM->setVencimento($obInscricao->vencimentomatricula,$obUnidade->getParametro('financeiro_intervalo_parcela'));
             $obCreditoM->setInstrincoesPagamento($infoDesconto);
 
                 //retorna produto taxa de inscrição=========
@@ -144,7 +143,6 @@ class TInscricao{
 
                 $obCredito->setPessoa($obInscricao->pessseq);
                 $obCredito->setValorNominal($obTurma->valortaxa);
-                $obCredito->setTipoMovimento('C');
                 $obCredito->setDesconto('0.00');
                 $obCredito->setAcrescimo('0.00');
                 $obCredito->setParcelas('1');
@@ -175,33 +173,57 @@ class TInscricao{
             }
 
         }catch (Exception $e){
-            $obTDbo->rollback();
             new setException($e);
         }
     }
 
+    
+    public function setInscricao($pessseq,$turmseq,$vencimentoMatricula,$vencimentoTaxa){
+    	try {
+    		$obTDbo = new TDbo(TConstantes::DBINSCRICAO);
+    		
+    		$criteria = new TCriteria();
+    		$criteria->add(new TFilter('pessseq','=',$pessseq));
+    		$criteria->add(new TFilter('turmseq','=',$turmseq));
+    		$criteria->add(new TFilter('statseq','=',1));
+    		
+    		$obExistente = $obTDbo->select('seq',$criteria)->fetchObject()->seq;
+    		if($obExistente){
+    			return $obExistente->seq;
+    		}else{
+    			$TSetControl = new TSetControl();
+    			$insert = $obTDbo->insert(array('pessseq'=>$pessseq,
+    								  'turmseq'=>$turmseq,
+    								  'vencimentomatricula'=>$TSetControl->setDataDB($vencimentoMatricula),
+    								  'vencimentotaxa'=>$TSetControl->setDataDB($vencimentoTaxa)));
+    			return $insert['seq'];
+    		}
+    		
+    		
+    	}catch (Exception $e){
+            new setException($e);
+        }
+    }
+    
     /**
     * 
     */
-    public function setConfirmar($codigoinscricao){
+    public function setConfirmar($pessseq,$cursseq,$turmseq,$vencimentoMatricula,$vencimentoTaxa){
 
         try{
 
-            if(!$codigoinscricao){
-                throw new Exception(TMensagem::ERRO_CODIGO_INSCRICAO);
-            }
-
             $TUnidade = new TUnidade();
+            $inscseq = $this->setInscricao($pessseq, $turmseq, $vencimentoMatricula, $vencimentoTaxa);
             $matricula_independente = $TUnidade->getParametro('matricula_independente');
             //configura transação da matrícula
 	            if($matricula_independente == '1'){
-	            $dadosTransacaoMatricula = $this->setTransacaoMatricula($codigoinscricao);
+	            $dadosTransacaoMatricula = $this->setTransacaoMatricula($inscseq);
 	            if($dadosTransacaoMatricula){
 	                $botMatricula = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\"  onClick=\"showBoleto('".$dadosTransacaoMatricula['parcseq']."')\" >";
 	            }
             }
             //configura conta credito da taxa de inscrição
-            $dadosTransacaoTaxa = $this->setTransacaoTaxa($codigoinscricao);
+            $dadosTransacaoTaxa = $this->setTransacaoTaxa($inscseq);
             if($dadosTransacaoTaxa){
                 $botTaxa = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\" onClick=\"showBoleto('".$dadosTransacaoTaxa['parcseq']."')\" >";
 
@@ -254,11 +276,11 @@ class TInscricao{
      * para o formulário de inscrição do aluno
      * param <type> $codigoturma
      */
-    public function getDadosTurmaInscricao($codigoturma){
+    public function getDadosTurmaInscricao($turmseq){
         try{
 
             $turma = new TTurma();
-            $obTurma = $turma->getTurma($codigoturma, false);
+            $obTurma = $turma->getTurma($turmseq, false);
             
               $model = new TSetModel();
               $dataInicio = $model->setDataPT($obTurma->datainicio);
@@ -270,7 +292,7 @@ class TInscricao{
             //monta ação com os valores dos campos dependentes
             $valores = 'valortaxa=>'.$obTurma->valortaxa.'(sp)';
             $valores .= 'valormatricula=>'.$obTurma->valormensal.'(sp)';
-            $valores .= 'numparcelas=>'.$obTurma->numparcelas.'(sp)';
+            $valores .= 'numparcelas=>'.$obTurma->parcelas.'(sp)';
             $valores .= 'valorparcelas=>'.$obTurma->valormensal.'(sp)';
             $valores .= 'valordescontado=>'.$obTurma->valordescontado.'(sp)';
             $valores .= 'datainicio=>'.$dataInicio.'(sp)';
