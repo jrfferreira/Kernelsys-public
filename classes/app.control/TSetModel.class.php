@@ -147,11 +147,25 @@ class TSetModel {
 
                 foreach ($args as $crits) {
                     $dadosArg = explode(',', $crits);
-                    $obAlocaDados = new TAlocaDados();
-                    $valor = $obAlocaDados->getValue($dadosArg[2]);
-                    if (!$valor) {
-                        $valor = $dadosArg[2];
+                    
+                    $caller = explode('::',$dadosArg[2]);
+                    
+                    if($caller[0] && $caller[1]){
+                    	$instance = new $caller[0];
+                    	$function = $caller[1];
+                    	if( method_exists($instance,$caller[1]) ){
+                    		$valor = $instance->$function();
+                    	}
+                    }else{
+	                    $obAlocaDados = new TAlocaDados();
+	                    $valor = $obAlocaDados->getValue($dadosArg[2]);
                     }
+                    
+
+                    if (!$valor) {
+                    	$valor = $dadosArg[2];
+                    }
+                    
                     $criteria->add(new TFilter($dadosArg[0], $dadosArg[1], $valor));
                 }
 
