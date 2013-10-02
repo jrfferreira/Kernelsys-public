@@ -2529,38 +2529,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="143">
-      <seq>143</seq>
-      <tipo>pesq</tipo>
-      <formseq>1</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>pessseq=seq,pesseqLabel=pessnmrz</pesquisa>
-      <lista>listaPesqCliente</lista>
-      <label>Clientes</label>
-      <tabseq>1</tabseq>
-      <listseq>143</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>cliente/=/AND/true;statseq/=/AND/1</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="398">
       <seq>398</seq>
       <tipo>form</tipo>
@@ -5153,70 +5121,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="145">
-      <seq>145</seq>
-      <tipo>pesq</tipo>
-      <formseq>145</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,vencimento=vencimento</pesquisa>
-      <lista>listaContasCredito</lista>
-      <label>Contas a Receber</label>
-      <tabseq>65</tabseq>
-      <listseq>145</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>statseq/=/AND/1;tipo/=/AND/C;stpaseq/=/AND/1;stpaseq/=/OR/3;stpaseq/=/OR/5;</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="146">
-      <seq>146</seq>
-      <tipo>pesq</tipo>
-      <formseq>11</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valorreal,valorrealview=valorreal,valorpago=valorreal,vencimento=vencimento</pesquisa>
-      <lista>listaPesqCDebito</lista>
-      <label>Contas a Pagar</label>
-      <tabseq>65</tabseq>
-      <listseq>146</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>tipo/=/AND/D;stpaseq/=/AND/1;statseq/=/AND/1</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="456">
       <seq>456</seq>
       <tipo>pesq</tipo>
@@ -5558,6 +5462,102 @@
       <filtro>statseq/=/AND/1</filtro>
       <trigger/>
       <formainclude>oneone</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="143">
+      <seq>143</seq>
+      <tipo>pesq</tipo>
+      <formseq>1</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>pessseq=seq,pessseqLabel=pessnmrz</pesquisa>
+      <lista>listaPesqCliente</lista>
+      <label>Clientes</label>
+      <tabseq>1</tabseq>
+      <listseq>143</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>cliente/=/AND/true;statseq/=/AND/1</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="145">
+      <seq>145</seq>
+      <tipo>pesq</tipo>
+      <formseq>145</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valoratual,valorrealview=valoratual,vencimento=vencimento</pesquisa>
+      <lista>listaContasCredito</lista>
+      <label>Contas a Receber</label>
+      <tabseq>65</tabseq>
+      <listseq>145</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>statseq/=/AND/1;tipo/=/AND/C;stpaseq/=/AND/1;stpaseq/=/OR/3;stpaseq/=/OR/5;</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="146">
+      <seq>146</seq>
+      <tipo>pesq</tipo>
+      <formseq>11</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valoratual,valorrealview=valoratual,valorpago=valoratual,vencimento=vencimento</pesquisa>
+      <lista>listaPesqCDebito</lista>
+      <label>Contas a Pagar</label>
+      <tabseq>65</tabseq>
+      <listseq>146</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>tipo/=/AND/D;stpaseq/=/AND/1;statseq/=/AND/1</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
       <incontrol/>
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>

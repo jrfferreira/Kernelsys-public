@@ -1,0 +1,5 @@
+# Nos formulários com vinculo com mais de uma entidade, 
+# as entidades secundárias sempre utilizam o método de inserção (não atualizam), 
+# o que orça a duplicidade dos dados
+
+	exception 'PDOException' with message 'SQLSTATE[23505]: Unique violation: 7 ERROR: duplicate key value violates unique constraint "in_ende" DETAIL: Key (pessseq, cep)=(2338, 12121212) already exists.' in /var/www/Kernelsys/classes/app.dbo/TDbo.class.php:273 Stack trace: #0 /var/www/Kernelsys/classes/app.dbo/TDbo.class.php(273): PDO->query('INSERT INTO dbe...') #1 /var/www/Kernelsys/classes/app.view/TMain.class.php(530): TDbo->insert(Array) #2 /var/www/Kernelsys/classes/app.view/TMain.class.php(470): TMain->loadSave('dbendereco', Array) #3 [internal function]: TMain->onSave(Array) #4 /var/www/Kernelsys/classes/app.view/TMain.class.php(112): call_user_func(Array, Array) #5 /var/www/Kernelsys/classes/app.view/TMain.class.php(31): TMain->__construct('onSave', Array) #6 {main}

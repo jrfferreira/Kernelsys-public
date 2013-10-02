@@ -185,7 +185,7 @@ class TDbo {
                 if ($this->conn) {
                     // grava log de select (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
-        			echo "<script>console.log(\"".$sql->getInstruction()."\");</script>";
+        			//echo "<script>console.log(\"".$sql->getInstruction()."\");</script>";
                     
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());

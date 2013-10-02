@@ -146,7 +146,7 @@ final class TTransaction{
         // verifica existe um logger
         if (is_object(self::$logger)){
 			
-        	echo "<script>console.log('".$message."');</script>";
+        	//echo "<script>console.log('".$message."');</script>";
             self::$logger->write($message);
         }
     }

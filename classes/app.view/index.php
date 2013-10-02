@@ -99,7 +99,7 @@ a :visited {color: #444; text-decoration: none; font-weight: bolder;text-shadow:
     </tr>
     <tr>
       <td width="116" height="19" align="right" style="font-weight: bold; color: #f0f0f0;text-shadow: 1px 1px 0px #666;">Usuario:</td>
-      <td width="234" align="left"><input type="text" name="usuario" id="usuario" value="<?php echo $_POST['usuario'];?>" size="20" style="padding:5px; border: 1px solid #666; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #666; background-color: #f0f0f0;  "/></td>
+      <td width="234" align="left"><input type="text" name="usuario" id="usuario" size="20" style="padding:5px; border: 1px solid #666; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #666; background-color: #f0f0f0;  "/></td>
     </tr>
     <tr>
       <td height="19" align="right" style="font-weight: bold; color: #f0f0f0;text-shadow: 1px 1px 0px #666;">Senha:</td>

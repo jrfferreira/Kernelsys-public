@@ -641,38 +641,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="184">
-      <seq>184</seq>
-      <tipo>pesq</tipo>
-      <formseq>4</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>cursseq=seq,cursseqLabel=titulo</pesquisa>
-      <lista>pesqCursos</lista>
-      <label>Cursos</label>
-      <tabseq>85</tabseq>
-      <listseq>184</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>statseq/!=/AND/8;statseq/!=/AND/9</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="172">
       <seq>172</seq>
       <tipo>pesq</tipo>
@@ -5556,6 +5524,38 @@
       <acviews>0</acviews>
       <acenviar>1</acenviar>
       <filtro>tipo/=/AND/D;stpaseq/=/AND/1;statseq/=/AND/1</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="184">
+      <seq>184</seq>
+      <tipo>pesq</tipo>
+      <formseq>4</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>cursseq=seq,cursseqLabel=nome</pesquisa>
+      <lista>pesqCursos</lista>
+      <label>Cursos</label>
+      <tabseq>85</tabseq>
+      <listseq>184</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>statseq/!=/AND/8;statseq/!=/AND/9</filtro>
       <trigger/>
       <formainclude>one</formainclude>
       <incontrol/>

@@ -16255,48 +16255,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="3">
-      <seq>3</seq>
-      <listseq>130</listseq>
-      <coluna>tel1</coluna>
-      <label>Telefone</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>120</largura>
-      <colfunction>TSetModel,setTelefone</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="4">
-      <seq>4</seq>
-      <listseq>130</listseq>
-      <coluna>cel1</coluna>
-      <label>Celular</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>120</largura>
-      <colfunction>TSetModel,setTelefone</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>4</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="160">
       <seq>160</seq>
       <listseq>160</listseq>
@@ -16306,27 +16264,6 @@
       <alinhadados>center</alinhadados>
       <largura>120</largura>
       <colfunction>TSetModel,setTelefone</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="337">
-      <seq>337</seq>
-      <listseq>130</listseq>
-      <coluna>email1</coluna>
-      <label>email1</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>250</largura>
-      <colfunction>-</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
       <tabseq>0</tabseq>
@@ -16894,6 +16831,69 @@
       <alinhadados>right</alinhadados>
       <largura>100</largura>
       <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>string</tipodado>
+    </row>
+    <row seq="337">
+      <seq>337</seq>
+      <listseq>130</listseq>
+      <coluna>email</coluna>
+      <label>E-mail</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>250</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>string</tipodado>
+    </row>
+    <row seq="4">
+      <seq>4</seq>
+      <listseq>130</listseq>
+      <coluna>telefone2</coluna>
+      <label>Telefone Secundário</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>TSetModel,setTelefone</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>4</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>string</tipodado>
+    </row>
+    <row seq="3">
+      <seq>3</seq>
+      <listseq>130</listseq>
+      <coluna>telefone1</coluna>
+      <label>Telefone Principal</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
+      <colfunction>TSetModel,setTelefone</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
       <tabseq>0</tabseq>

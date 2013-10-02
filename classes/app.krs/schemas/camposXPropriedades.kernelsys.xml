@@ -8950,16 +8950,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="159">
-      <seq>159</seq>
-      <campseq>177</campseq>
-      <metodo>addItems</metodo>
-      <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,funcseq;stcfseq,=,1</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="1111">
       <seq>1111</seq>
       <campseq>956</campseq>
@@ -9450,16 +9440,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="193">
-      <seq>193</seq>
-      <campseq>206</campseq>
-      <metodo>addItems</metodo>
-      <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,funcseq;stcfseq,=,1</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="713">
       <seq>713</seq>
       <campseq>666</campseq>
@@ -9526,6 +9506,16 @@ Zootecnia=&gt;Zootecnia; </valor>
       <metodo>addItems</metodo>
       <valor>select seq,nome from dbsala where statseq=1 order by nome</valor>
       <statseq>9</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="159">
+      <seq>159</seq>
+      <campseq>177</campseq>
+      <metodo>addItems</metodo>
+      <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,TUsuario::getSeqFuncionario;stcfseq,=,1</valor>
+      <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -9865,6 +9855,16 @@ Zootecnia=&gt;Zootecnia; </valor>
       <campseq>482</campseq>
       <metodo>addItems</metodo>
       <valor>select seq,titulo from dbtitularidade order by peso</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="193">
+      <seq>193</seq>
+      <campseq>206</campseq>
+      <metodo>addItems</metodo>
+      <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,TUsuario::getSeqFuncionario;stcfseq,=,1</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
