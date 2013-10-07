@@ -501,16 +501,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="62">
-      <seq>62</seq>
-      <campseq>103</campseq>
-      <metodo>addItems</metodo>
-      <valor>1=&gt;statseq;0=&gt;Instatseq;2=&gt;Standby</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="64">
       <seq>64</seq>
       <campseq>118</campseq>
@@ -8110,16 +8100,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="1036">
-      <seq>1036</seq>
-      <campseq>885</campseq>
-      <metodo>addItems</metodo>
-      <valor>1=&gt;Movimento Aberto;3=&gt;Movimento Programado</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="1023">
       <seq>1023</seq>
       <campseq>166</campseq>
@@ -9865,6 +9845,36 @@ Zootecnia=&gt;Zootecnia; </valor>
       <campseq>206</campseq>
       <metodo>addItems</metodo>
       <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,TUsuario::getSeqFuncionario;stcfseq,=,1</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="1036">
+      <seq>1036</seq>
+      <campseq>885</campseq>
+      <metodo>addItems</metodo>
+      <valor>select seq,titulo from dbsituacao_movimento order by titulo</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="118">
+      <seq>118</seq>
+      <campseq>885</campseq>
+      <metodo>disabled</metodo>
+      <valor>disabled</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-03</datacad>
+    </row>
+    <row seq="62">
+      <seq>62</seq>
+      <campseq>103</campseq>
+      <metodo>addItems</metodo>
+      <valor>select seq, statdesc from dbstatus order by statdesc</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>

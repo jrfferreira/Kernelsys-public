@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <formXAbas>
-    <row seq="21">
-      <seq>21</seq>
-      <formseq>7</formseq>
-      <abaseq>23</abaseq>
-      <statseq>1</statseq>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="22">
       <seq>22</seq>
       <formseq>8</formseq>
@@ -811,16 +801,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="148">
-      <seq>148</seq>
-      <formseq>7</formseq>
-      <abaseq>246</abaseq>
-      <statseq>1</statseq>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="15">
       <seq>15</seq>
       <formseq>3</formseq>
@@ -875,6 +855,16 @@
       <seq>154</seq>
       <formseq>89</formseq>
       <abaseq>250</abaseq>
+      <statseq>1</statseq>
+      <ordem>1</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="21">
+      <seq>21</seq>
+      <formseq>7</formseq>
+      <abaseq>23</abaseq>
       <statseq>1</statseq>
       <ordem>1</ordem>
       <usuaseq>1</usuaseq>
@@ -2607,6 +2597,16 @@
       <abaseq>15</abaseq>
       <statseq>1</statseq>
       <ordem>4</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="148">
+      <seq>148</seq>
+      <formseq>7</formseq>
+      <abaseq>246</abaseq>
+      <statseq>1</statseq>
+      <ordem>2</ordem>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

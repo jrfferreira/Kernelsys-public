@@ -163,15 +163,11 @@ class TCaixa {
     * param $tipo = Tipo de movimento da conta - C/D
     * param $codigoconta = Coodigo da conta a ser faturada
     */
-    public function baixaCaixa($formseq) {
-
+    public function baixaCaixa($obHeader) {
+		$formseq = $obHeader['formseq'];
         try {
 
             if($formseq) {
-
-                //retorna dados do cabeçalho
-                $obHeader = new TSetHeader();
-                $obHeader = $obHeader->getHead($formseq);
                 $codigocaixa = $obHeader['seq'];
                 
                 $this->obTDbo->commit();
@@ -179,7 +175,7 @@ class TCaixa {
                 $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
 
                 //executa baixa no caixa
-                $this->baixaContaCaixa($obMovimentoCaixa->parcseq, $obMovimentoCaixa->valorpago, $obMovimentoCaixa->desconto, $obMovimentoCaixa->numdoc, $obMovimentoCaixa->multaacrecimo, $obMovimentoCaixa->formapag, $obMovimentoCaixa->cofiseq, $obMovimentoCaixa->seq);
+                $this->baixaContaCaixa($obMovimentoCaixa->parcseq, $obMovimentoCaixa->valorpago, $obMovimentoCaixa->desconto, $obMovimentoCaixa->numdoc, $obMovimentoCaixa->acrescimo, $obMovimentoCaixa->formapag, $obMovimentoCaixa->cofiseq, $obMovimentoCaixa->seq);
 				
                 $this->obTDbo->commit();
                 $this->obTDbo->close();
@@ -1405,7 +1401,7 @@ class TCaixa {
 	    	$listaContas = $obHeader->getHead(485,'listaSelecao');
 	    	$codigocontacaixa = $headerForm['camposSession']['cofiseq']['valor'];
 	    	$formapag = $headerForm['camposSession']['formapag']['valor'];
-	    	$acrescimo = $headerForm['camposSession']['multaacrecimo']['valor'];
+	    	$acrescimo = $headerForm['camposSession']['acrescimo']['valor'];
 	    	$desconto = $headerForm['camposSession']['desconto']['valor'];
 	    	$obs = $headerForm['camposSession']['obs']['valor'];
     		if(!$listaContas || count($listaContas) < 2)

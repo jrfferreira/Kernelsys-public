@@ -134,25 +134,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="350">
-      <seq>350</seq>
-      <formid>form_blocoFormProf</formid>
-      <nomeform>Formação</nomeform>
-      <tabseq>43</tabseq>
-      <statseq>1</statseq>
-      <formseq>7</formseq>
-      <listseq>230</listseq>
-      <formainclude>one</formainclude>
-      <dimensao/>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>2</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="14">
       <seq>14</seq>
       <formid>matricula</formid>
@@ -3873,6 +3854,25 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
       <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="350">
+      <seq>350</seq>
+      <formid>form_blocoFormProf</formid>
+      <nomeform>Formação</nomeform>
+      <tabseq>43</tabseq>
+      <statseq>1</statseq>
+      <formseq>7</formseq>
+      <listseq>230</listseq>
+      <formainclude>one</formainclude>
+      <dimensao/>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>2</nivel>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

@@ -293,11 +293,6 @@ class TMain {
    		$seqRetorno = TConstantes::ERRO_0;
    		
    		
-   		//executa a função de controle do formulário se existir
-   		if($this->header[TConstantes::HEAD_OUTCONTROL]){
-   			$formOutControl = explode('/', $this->header[TConstantes::HEAD_OUTCONTROL]);
-   			$retornoOutcontrol = $this->onMain($formOutControl);
-   		}
    		
     	// percorre o retorno da tela e injeta o valor no bean
     	if($camposSession){
@@ -400,8 +395,7 @@ class TMain {
 		    				    		
 		    		$seq = null;
     					
-		    }else{
-		    				    			    		
+		    }else{    			    		
 		    	
 		    		//navega nas listas de registros filhos
 		    		$childs = $this->header[TConstantes::HEAD_HEADCHILDS];
@@ -494,6 +488,13 @@ class TMain {
     		
 		    //Atribui SEQ atual do registro salvo ao cabeçalho em questão.
 		    $this->header[TConstantes::SEQUENCIAL] =  $seqAtual;
+		    
+
+		    //executa a função de controle do formulário se existir
+		    if($this->header[TConstantes::HEAD_OUTCONTROL]){
+		    	$formOutControl = explode('/', $this->header[TConstantes::HEAD_OUTCONTROL]);
+		    	$retornoOutcontrol = $this->onMain($formOutControl);
+		    }
     		
     	//Fecha o formulário
     	if($this->typeRun == 'one'){

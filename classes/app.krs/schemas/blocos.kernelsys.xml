@@ -541,21 +541,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="165">
-      <seq>165</seq>
-      <blocoid>blocoAreasProf</blocoid>
-      <nomebloco>Áreas Relacionadas</nomebloco>
-      <formato>lst</formato>
-      <tabseq>75</tabseq>
-      <blocoheight>150px</blocoheight>
-      <statseq>1</statseq>
-      <formseq>351</formseq>
-      <obapendice/>
-      <frmpseq>7</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="169">
       <seq>169</seq>
       <blocoid>scorecardSentenças</blocoid>
@@ -1951,21 +1936,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="164">
-      <seq>164</seq>
-      <blocoid>blocoFormProf</blocoid>
-      <nomebloco>Formação</nomebloco>
-      <formato>lst</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq>350</formseq>
-      <obapendice/>
-      <frmpseq>7</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="179">
       <seq>179</seq>
       <blocoid>discCursoDisp</blocoid>
@@ -3241,36 +3211,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="30">
-      <seq>30</seq>
-      <blocoid>informacao</blocoid>
-      <nomebloco>Informações</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>7</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="31">
-      <seq>31</seq>
-      <blocoid>curriculo</blocoid>
-      <nomebloco>Curriculo</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>7</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="32">
       <seq>32</seq>
       <blocoid>dados</blocoid>
@@ -3552,6 +3492,21 @@
       <formseq/>
       <obapendice/>
       <frmpseq>72</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="31">
+      <seq>31</seq>
+      <blocoid>curriculo</blocoid>
+      <nomebloco>Curriculo</nomebloco>
+      <formato>frm</formato>
+      <tabseq>15</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>7</frmpseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -3987,6 +3942,51 @@
       <formseq/>
       <obapendice/>
       <frmpseq>1</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="30">
+      <seq>30</seq>
+      <blocoid>informacao</blocoid>
+      <nomebloco>Informações</nomebloco>
+      <formato>frm</formato>
+      <tabseq>15</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>7</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="165">
+      <seq>165</seq>
+      <blocoid>blocoAreasProf</blocoid>
+      <nomebloco>Áreas Relacionadas</nomebloco>
+      <formato>lst</formato>
+      <tabseq>75</tabseq>
+      <blocoheight>150px</blocoheight>
+      <statseq>9</statseq>
+      <formseq>351</formseq>
+      <obapendice/>
+      <frmpseq>7</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="164">
+      <seq>164</seq>
+      <blocoid>blocoFormProf</blocoid>
+      <nomebloco>Formação</nomebloco>
+      <formato>lst</formato>
+      <tabseq>1</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq>350</formseq>
+      <obapendice/>
+      <frmpseq>7</frmpseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

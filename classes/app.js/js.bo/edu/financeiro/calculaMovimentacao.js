@@ -1,13 +1,13 @@
 function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado){
 
-    c_valorreal = (c_valorreal == null) ? '#valorreal' :'#'+ c_valorreal;
-    c_multa = (c_multa == null) ? '#multaacrecimo' : '#'+ c_multa;
+    c_valorreal = (c_valorreal == null) ? '#valor' :'#'+ c_valorreal;
+    c_multa = (c_multa == null) ? '#acrescimo' : '#'+ c_multa;
     c_desconto = (c_desconto == null) ? '#desconto' : '#'+ c_desconto;
     c_juros = (c_juros == null) ? '#juros' : '#'+ c_juros;
     c_convenios = (c_convenios == null) ? '#convenios' : '#'+ c_convenios;
     c_caixatroco = (c_caixatroco == null) ? '#caixatroco' : '#'+ c_caixatroco;
     c_valorentrada = (c_valorentrada == null) ? '#valorentrada' : '#'+ c_valorentrada;
-    c_valorpago = (c_valorpago == null) ? '#valorpago' : '#'+ c_valorpago;
+    c_valorpago = (c_valorpago == null) ? '#valorfinal' : '#'+ c_valorpago;
     c_valorcalculado = (c_valorcalculado == null) ? '#valorcalculado' : '#'+ c_valorcalculado;
 
     if($(c_valorreal).length == 0){
@@ -60,5 +60,16 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,
     $(c_convenios).val(setMoney(convenios)).blur();
     $(c_caixatroco).val(setMoney(caixaTroco)).blur();
     $(c_valorpago).val(setMoney(valorPago)).blur();
+    
+    button = $(c_valorpago).parents('.ui-dialog').find('.botaosalvar');
+    
+    if($(c_valorcalculado).val() > 0 
+		&& $(c_valorreal).val() > 0 
+		&& $(c_valorpago).val() > 0 ){
+    	button.removeAttr('disabled');
+	}else{
+		button.attr('disabled',true);
+	}
+    
 
 }

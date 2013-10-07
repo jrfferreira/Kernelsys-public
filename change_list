@@ -31,6 +31,61 @@
 	   LEFT JOIN dbemail t4 ON t4.pessseq = t1.seq AND t4.titulo = 'E-mail Principal' 
 	   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq;
 	
-	ALTER TABLE view_pessoa
-	  OWNER TO postgres;
+#VIEW PESSOAS_TITULARIDADAE
+	CREATE OR REPLACE VIEW view_pessoa_titularidade AS 
+	 SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.tituseq, t0.curso, t0.instituicao, t0.anoconclusao, t0.observacao, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t3.pessnmrz AS nomepessoa, t2.titulo AS titularidade, t2.nomeacao, t2.peso, t4.seq AS profseq, t5.seq AS funcseq
+	   FROM dbpessoa_titularidade t0
+	   LEFT JOIN dbtitularidade t2 ON t2.seq = t0.tituseq
+	   LEFT JOIN dbpessoa t3 ON t3.seq = t0.pessseq
+	   LEFT JOIN dbprofessor t4 ON t4.pessseq = t3.seq
+	   LEFT JOIN dbfuncionario t5 ON t5.pessseq = t3.seq
+	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+	  
+#VIEW FUNCIONARIOS
+
+	CREATE OR REPLACE VIEW view_funcionario AS 
+	 SELECT t0.seq, t2.seq AS funcseq, t0.unidseq, t0.pessnmrz AS nomefuncionario, t0.pessnmrf, t2.cargseq, t3.nomecargo, t2.deptseq, t4.label AS nomedepartamento, t5.nome AS sala, t5.nome AS nomesala, to_char(t2.dataadmissao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataadmissao, t2.statseq AS situacao, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, 
+	 t999.statdesc,
+	t6.telefone AS telefone1,
+	t7.telefone AS telefone2,
+	t8.email AS email
+	   FROM dbpessoa t0
+	   LEFT JOIN dbfuncionario t2 ON t2.pessseq = t0.seq
+	   LEFT JOIN dbcargo t3 ON t3.seq = t2.cargseq
+	   LEFT JOIN dbdepartamento t4 ON t4.seq = t2.deptseq
+	   LEFT JOIN dbsala t5 ON t5.seq = t4.salaseq
+	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq
+	   LEFT JOIN dbtelefone t6 ON t6.pessseq = t0.seq AND t6.tpteseq = 1
+	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t0.seq AND t7.tpteseq = 2 
+	   LEFT JOIN dbemail t8 ON t8.pessseq = t0.seq AND t8.titulo = 'E-mail Principal' 
+	  WHERE t0.seq = t2.pessseq;
+
+# VIEW PROFESSORES
+
+	CREATE OR REPLACE VIEW view_professor AS 
+	 SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.curriculo, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t3.pessnmrz AS nomeprofessor, ( SELECT t2.titulo
+	           FROM dbpessoa_titularidade t1
+	      LEFT JOIN dbtitularidade t2 ON t1.tituseq = t2.seq
+	     WHERE t1.pessseq = t3.seq
+	     ORDER BY t2.peso DESC
+	    LIMIT 1) AS titulo, ( SELECT t2.nomeacao
+	           FROM dbpessoa_titularidade t1
+	      LEFT JOIN dbtitularidade t2 ON t1.tituseq = t2.seq
+	     WHERE t1.pessseq = t3.seq
+	     ORDER BY t2.peso DESC
+	    LIMIT 1) AS nomeacao,
+	t6.telefone AS telefone1,
+	t7.telefone AS telefone2,
+	t8.email AS email
+	   FROM dbprofessor t0
+	   LEFT JOIN dbpessoa t3 ON t3.seq = t0.pessseq
+	   LEFT JOIN dbtelefone t6 ON t6.pessseq = t3.seq AND t6.tpteseq = 1
+	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t3.seq AND t7.tpteseq = 2 
+	   LEFT JOIN dbemail t8 ON t8.pessseq = t3.seq AND t8.titulo = 'E-mail Principal' 
+	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+	
+	
+
+
+
 

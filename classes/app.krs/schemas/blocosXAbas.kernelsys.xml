@@ -1411,16 +1411,6 @@
       <datacad>1900-01-01</datacad>
       <statseq>1</statseq>
     </row>
-    <row seq="204">
-      <seq>204</seq>
-      <abaseq>31</abaseq>
-      <blocseq>207</blocseq>
-      <ordem>1</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <statseq>1</statseq>
-    </row>
     <row seq="34">
       <seq>34</seq>
       <abaseq>274</abaseq>
@@ -1806,6 +1796,16 @@
       <abaseq>1</abaseq>
       <blocseq>1</blocseq>
       <ordem>1</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
+    </row>
+    <row seq="204">
+      <seq>204</seq>
+      <abaseq>31</abaseq>
+      <blocseq>207</blocseq>
+      <ordem>2</ordem>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
