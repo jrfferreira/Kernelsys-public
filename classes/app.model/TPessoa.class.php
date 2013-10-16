@@ -133,5 +133,30 @@ class TPessoa{
        }
        return $retorno;
     }
+    
+    public function validaCpfCnpj($pessnmrf,$tipo = null){
+
+    	$TSetControl = new TSetControl();
+    	
+    	$dbo = new TDbo(TConstantes::DBPESSOA);
+    	$crit = new TCriteria();
+    	$crit->add(new TFilter('pessnmrf','=',preg_replace('@[^0-9]@', '', $pessnmrf),'numeric'));
+    	$ret = $dbo->select('seq',$crit);
+    	
+    	$duplic = false;
+    	while($n = $ret->fetchObject()){
+    		return "O CPF/CNPJ informado já existe na base de dados.";
+    	}
+    	
+    	if(!$tipo && (!$TSetControl->setTrueCnpj($pessnmrf) || !$TSetControl->setTrueCpf($pessnmrf))){
+	    		return "O CPF/CNPJ informado não é válido.";
+    	}else if($tipo == 'F' && !$TSetControl->setTrueCpf($pessnmrf) ){
+    			return "O CPF informado não é válido.";
+    	}else if($tipo == 'J' && !$TSetControl->setTrueCnpj($pessnmrf) ){
+    			return "O CNPJ informado não é válido.";
+    	}
+    	
+    	return true;
+    }
 
 }

@@ -109,7 +109,7 @@ if($obEndereco) {
     $dadosSacado[0] = $obCliente->pessnmrz . " (Turma: {$obTransacAluno->nometurma} / Matricula : {$obTransacAluno->seq}) CPF:";
     $dadosSacado['pessseq'] = $obCliente->seq;
     $dadosSacado['parcseq'] = $seqconta;
-    $dadosSacado[1] = $obEndereco->logradouro.", ".$obEndereco->bairro."; " .$obEndereco->cidade."-".$obEndereco->estado." Cep:".$obEndereco->cep;
+    $dadosSacado[1] = $obEndereco->endereco." ".$obEndereco->complemento.", ".$obEndereco->bairro."; " .$obEndereco->cidade."-".$obEndereco->estado." Cep:".$obEndereco->cep;
     $dadosSacado[2] = "";
     $dadosSacado[3] = $obCliente->pessnmrf;
 }

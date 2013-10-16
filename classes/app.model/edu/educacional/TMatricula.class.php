@@ -11,7 +11,7 @@ class TMatricula {
     * Executa primeira matrícula do aluno
     * param <type> $codigoinscricao
     */
-    public function setMatricula($codigoinscricao, $datacad){
+    public function setMatricula($codigoinscricao, $datainiciovencimentos, $padraovencimento){
         try{
 
             if(!$codigoinscricao){
@@ -26,6 +26,18 @@ class TMatricula {
 
             $obTurma = new TTurma();
             $turma  = $obTurma->getTurma($obInscricao->turmseq,true,false);
+            
+            $TSetControl = new TSetControl();
+            
+            if(is_null($padraovencimento) && $padraovencimento !== 0){
+            	$padraovencimento = $turma->padraovencimento;
+            }
+            if(!$datainiciovencimentos){
+            	$datainiciovencimentos = $turma->datainiciovencimentos;
+            }else{
+            	$datainiciovencimentos = $TSetControl->setDataDB($datainiciovencimentos);
+            }
+            
             $descontos = $obTurma->getTurmaDescontos($obInscricao->turmseq);
             $convenios = $obTurma->getTurmaConvenios($obInscricao->turmseq);
 
@@ -54,10 +66,10 @@ class TMatricula {
              //=========================================================
              // Gera contas na transação da turma
 
-			if(!$obInscricao->vencimentomatricula){
+			if(!$datainiciovencimentos){
                 throw new Exception('A inscrição está incompleta, a data de vencimento da matricula não existe.');				
 			}
-            $vetorData = explode('-', $obInscricao->vencimentomatricula);
+            $vetorData = explode('-', $datainiciovencimentos);
 
             $dataFixa = $vetorData[2];
 
@@ -65,11 +77,14 @@ class TMatricula {
                   
              $trasacao = new TTransacao();
              //$trasacao->setDataFixa($dataFixa);
-             $trasacao->setVencimento($obInscricao->vencimentomatricula);
+             $trasacao->setVencimento($datainiciovencimentos);
              $trasacao->setInstrincoesPagamento($infoDescontos);
-
-             if($turma->padraovencimento == '1'){
+             $dias = null;
+             if($padraovencimento == 0){
                  $trasacao->setPadraoVencimento();
+                 $trasacao->setDataFixa($dataFixa);
+             }else{
+             	$dias = $padraovencimento;
              }
         	$TUnidade = new TUnidade();
             $matricula_independente = $TUnidade->getParametro('matricula_independente');
@@ -83,7 +98,7 @@ class TMatricula {
 		            //$trasacao->setTipoMovimento('C');
 		            //$trasacao->setDesconto($turma->valordescontado, "2");
 		            $trasacao->setAcrescimo('0.00');
-		            $trasacao->setParcelas($turma->parcelas);
+		            $trasacao->setParcelas($turma->parcelas, $dias);
 		            $trasacao->setPlanoConta($turma->plcoseq);
 		            $codigotransacao = $trasacao->run($turma->parcelas);         		
             	}

@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <camposXPropriedades>
-    <row seq="6">
-      <seq>6</seq>
-      <campseq>16</campseq>
-      <metodo>addItems</metodo>
-      <valor>=&gt;;afro-brasileiro (negro)=&gt;afro-brasileiro (negro);asiático=&gt;asiático;caucasiano (branco)=&gt;caucasiano (branco);Índias Orientais=&gt;Índias Orientais;hispânico/latino=&gt;hispânico/latino;Oriente Médio=&gt;Oriente Médio;indígena americano=&gt;indígena americano</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="8">
       <seq>8</seq>
       <campseq>3</campseq>
@@ -2506,16 +2496,6 @@
       <metodo>setProperty</metodo>
       <valor>disabled;disabled
 </valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="291">
-      <seq>291</seq>
-      <campseq>13</campseq>
-      <metodo>setSize</metodo>
-      <valor>100</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -8030,16 +8010,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="1021">
-      <seq>1021</seq>
-      <campseq>880</campseq>
-      <metodo>addItems</metodo>
-      <valor>0=&gt;Não;1=&gt;Sim</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="1017">
       <seq>1017</seq>
       <campseq>165</campseq>
@@ -8865,36 +8835,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <campseq>15</campseq>
       <metodo>setSize</metodo>
       <valor>200</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="3">
-      <seq>3</seq>
-      <campseq>12</campseq>
-      <metodo>addItems</metodo>
-      <valor>M=&gt;Marculino;F=&gt;Feminino</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="4">
-      <seq>4</seq>
-      <campseq>12</campseq>
-      <metodo>setLayout</metodo>
-      <valor>horizontal</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="5">
-      <seq>5</seq>
-      <campseq>13</campseq>
-      <metodo>setProperty</metodo>
-      <valor>=&gt;;Solteiro=&gt;Solteiro;Casado=&gt;Casado;Divorciado=&gt;Divorciado;Outros=&gt;Outros</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -9879,6 +9819,266 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="119">
+      <seq>119</seq>
+      <campseq>12</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="126">
+      <seq>126</seq>
+      <campseq>24</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="128">
+      <seq>128</seq>
+      <campseq>194</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="130">
+      <seq>130</seq>
+      <campseq>251</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="134">
+      <seq>134</seq>
+      <campseq>318</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="135">
+      <seq>135</seq>
+      <campseq>354</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="136">
+      <seq>136</seq>
+      <campseq>439</campseq>
+      <metodo>maxlength</metodo>
+      <valor>200</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="140">
+      <seq>140</seq>
+      <campseq>439</campseq>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-09</datacad>
+    </row>
+    <row seq="1021">
+      <seq>1021</seq>
+      <campseq>880</campseq>
+      <metodo>addItems</metodo>
+      <valor>0=&gt; Dia Fixo;
+1=&gt; 1 dia;
+2=&gt; 2 dias;
+3=&gt; 3 dias;
+4=&gt; 4 dias;
+5=&gt; 5 dias;
+6=&gt; 6 dias;
+7=&gt; 7 dias;
+8=&gt; 8 dias;
+9=&gt; 9 dias;
+10=&gt; 10 dias;
+11=&gt; 11 dias;
+12=&gt; 12 dias;
+13=&gt; 13 dias;
+14=&gt; 14 dias;
+15=&gt; 15 dias;
+16=&gt; 16 dias;
+17=&gt; 17 dias;
+18=&gt; 18 dias;
+19=&gt; 19 dias;
+20=&gt; 20 dias;
+21=&gt; 21 dias;
+22=&gt; 22 dias;
+23=&gt; 23 dias;
+24=&gt; 24 dias;
+25=&gt; 25 dias;
+26=&gt; 26 dias;
+27=&gt; 27 dias;
+28=&gt; 28 dias;
+29=&gt; 29 dias;
+30=&gt; 30 dias;
+31=&gt; 31 dias;
+32=&gt; 32 dias;
+33=&gt; 33 dias;
+34=&gt; 34 dias;
+35=&gt; 35 dias;
+36=&gt; 36 dias;
+37=&gt; 37 dias;
+38=&gt; 38 dias;
+39=&gt; 39 dias;
+40=&gt; 40 dias;
+41=&gt; 41 dias;
+42=&gt; 42 dias;
+43=&gt; 43 dias;
+44=&gt; 44 dias;
+45=&gt; 45 dias;
+46=&gt; 46 dias;
+47=&gt; 47 dias;
+48=&gt; 48 dias;
+49=&gt; 49 dias;
+50=&gt; 50 dias;
+51=&gt; 51 dias;
+52=&gt; 52 dias;
+53=&gt; 53 dias;
+54=&gt; 54 dias;
+55=&gt; 55 dias;
+56=&gt; 56 dias;
+57=&gt; 57 dias;
+58=&gt; 58 dias;
+59=&gt; 59 dias;
+60=&gt; 60 dias</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="6">
+      <seq>6</seq>
+      <campseq>16</campseq>
+      <metodo>addItems</metodo>
+      <valor>0=&gt; Dia Fixo;
+1=&gt; 1 dia;
+2=&gt; 2 dias;
+3=&gt; 3 dias;
+4=&gt; 4 dias;
+5=&gt; 5 dias;
+6=&gt; 6 dias;
+7=&gt; 7 dias;
+8=&gt; 8 dias;
+9=&gt; 9 dias;
+10=&gt; 10 dias;
+11=&gt; 11 dias;
+12=&gt; 12 dias;
+13=&gt; 13 dias;
+14=&gt; 14 dias;
+15=&gt; 15 dias;
+16=&gt; 16 dias;
+17=&gt; 17 dias;
+18=&gt; 18 dias;
+19=&gt; 19 dias;
+20=&gt; 20 dias;
+21=&gt; 21 dias;
+22=&gt; 22 dias;
+23=&gt; 23 dias;
+24=&gt; 24 dias;
+25=&gt; 25 dias;
+26=&gt; 26 dias;
+27=&gt; 27 dias;
+28=&gt; 28 dias;
+29=&gt; 29 dias;
+30=&gt; 30 dias;
+31=&gt; 31 dias;
+32=&gt; 32 dias;
+33=&gt; 33 dias;
+34=&gt; 34 dias;
+35=&gt; 35 dias;
+36=&gt; 36 dias;
+37=&gt; 37 dias;
+38=&gt; 38 dias;
+39=&gt; 39 dias;
+40=&gt; 40 dias;
+41=&gt; 41 dias;
+42=&gt; 42 dias;
+43=&gt; 43 dias;
+44=&gt; 44 dias;
+45=&gt; 45 dias;
+46=&gt; 46 dias;
+47=&gt; 47 dias;
+48=&gt; 48 dias;
+49=&gt; 49 dias;
+50=&gt; 50 dias;
+51=&gt; 51 dias;
+52=&gt; 52 dias;
+53=&gt; 53 dias;
+54=&gt; 54 dias;
+55=&gt; 55 dias;
+56=&gt; 56 dias;
+57=&gt; 57 dias;
+58=&gt; 58 dias;
+59=&gt; 59 dias;
+60=&gt; 60 dias</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="142">
+      <seq>142</seq>
+      <campseq>31</campseq>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-11</datacad>
+    </row>
+    <row seq="148">
+      <seq>148</seq>
+      <campseq>33</campseq>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-11</datacad>
+    </row>
+    <row seq="150">
+      <seq>150</seq>
+      <campseq>423</campseq>
+      <metodo>onchange</metodo>
+      <valor>validaCpfCnpj(this,$('input[name=tipo]').val())</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-11</datacad>
+    </row>
+    <row seq="154">
+      <seq>154</seq>
+      <campseq>433</campseq>
+      <metodo>onchange</metodo>
+      <valor>validaCpfCnpj(this,$('input[name=tipo]').val())</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-10-11</datacad>
     </row>
   </camposXPropriedades>
 </kernelsys>

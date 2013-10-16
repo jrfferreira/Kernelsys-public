@@ -114,16 +114,11 @@ class TSetBoleto {
 
         //Formata parte contadora do nosso Número=============
         //calcula zeros necessarios
-        $zeros = 15-strlen($this->seq);
-        for($zeros; $zeros>0; $zeros--) {
-            $fragNossoNumero .= '0';
-        }
-        $compNossoNumero = $fragNossoNumero.$this->seq;
+        $compNossoNumero = sprintf('%015s', $this->seq);
         //=====================================================
-
         //dados do cedente
         $dadosbl = $this->dadosC;
-        $dadosbl['NumDocumento'] = $this->Duplicata['codigo'];
+        $dadosbl['NumDocumento'] = $this->Duplicata['seq'];
 
 
         //dados do sacado

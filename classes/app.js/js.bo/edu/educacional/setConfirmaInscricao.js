@@ -10,8 +10,7 @@ function setConfirmaInscricao(obj){
        var valField = 'classe=TInscricao&metodo=setConfirmar&'+dados;
        exe('bloc_gerenciarTurmaInscricao', getPath()+'/app.util/TSec.php', valField, 'POST', 'Sucesso');
 
-       setCancelar('8', '2');
-       setConcluir('8', '1');
+       setCancelar('8', '1', 'Concluir');
 
     }
 

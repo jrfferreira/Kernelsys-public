@@ -286,19 +286,18 @@ class TSetModel {
      * @param $valor
      */
     public function setTelefone($valor) {
-        $valor = preg_replace('@[^0-9]@', '', $valor);
-        if (strlen($valor) < 8) {
-            $count = strlen($valor);
-            for ($index = 0; $index < (8 - $count); $index++) {
-                $valor = '0' . $valor;
-            }
-        }
-        $valor = substr($valor, (strlen($valor) - 8), 8);
+        $valor = sprintf('%010s', preg_replace('@[^0-9]@', '', $valor));
+        $valor = substr($valor, (strlen($valor) - 10), 10);
 
-        $b2 = substr($valor, 0, 4);
-        $b3 = substr($valor, 4, 4);
-        if ($b2 || $b3) {
-            return "$b2-$b3";
+        $b1 = substr($valor, 0, 2);
+        $b2 = substr($valor, 2, 4);
+        $b3 = substr($valor, 6, 4);
+        $str = "";
+        if ($b2 && $b3) {
+        	if($b1 != "00"){
+        		$str = "($b1) ";
+        	}
+            return $str."$b2-$b3";
         } else {
             return $valor;
         }

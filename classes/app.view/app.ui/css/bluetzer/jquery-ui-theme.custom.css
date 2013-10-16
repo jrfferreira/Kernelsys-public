@@ -58,6 +58,7 @@ body {
 .ui-widget-content a { color: #333333; }
 .ui-widget-header { border: 1px solid #a1bfe3; background: #0080cc url(images/ui-bg_highlight-soft_15_0080cc_1x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
+.ui-widget input[readonly] {border: 1px dotted #d0d0d0; color: #666;}
 
 /* Interaction states
 ----------------------------------*/

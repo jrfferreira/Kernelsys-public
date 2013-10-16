@@ -631,15 +631,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="64">
-      <seq>64</seq>
-      <formseq>6</formseq>
-      <tabseq>57</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="1">
       <seq>1</seq>
       <formseq>5</formseq>
@@ -869,15 +860,6 @@
       <seq>12</seq>
       <formseq>5</formseq>
       <tabseq>12</tabseq>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="15">
-      <seq>15</seq>
-      <formseq>6</formseq>
-      <tabseq>81</tabseq>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -1279,24 +1261,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="199">
-      <seq>199</seq>
-      <formseq>1</formseq>
-      <tabseq>43</tabseq>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="200">
-      <seq>200</seq>
-      <formseq>1</formseq>
-      <tabseq>89</tabseq>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="201">
       <seq>201</seq>
       <formseq>463</formseq>
@@ -1630,15 +1594,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="14">
-      <seq>14</seq>
-      <formseq>5</formseq>
-      <tabseq>999</tabseq>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="163">
       <seq>163</seq>
       <formseq>362</formseq>
@@ -1683,6 +1638,15 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-08-21</datacad>
+    </row>
+    <row seq="15">
+      <seq>15</seq>
+      <formseq>6</formseq>
+      <tabseq>1</tabseq>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </formXTabelas>
 </kernelsys>

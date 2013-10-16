@@ -10,6 +10,7 @@ class TTransacao {
     private $obUser = NULL;
     private $produtos = NULL;
     private $padraovencimento = false;
+    private $dataFixaVencimento = false;
 
     /*
      *
@@ -507,7 +508,8 @@ class TTransacao {
      */
 
     public function setDataFixa($dataFixa) {
-        $this->cols['dataFixaVencimento'] = $dataFixa;
+        $this->dataFixaVencimento = $dataFixa;
+        $this->cols['datafixavencimento'] = true;
     }
 
     /**
@@ -651,16 +653,10 @@ class TTransacao {
 
                         $obSetData = new TSetData();
                         //verifica se o intervalo das parcelas é vazio e atribui uma data fixa para o vencimento
-                        if ($this->cols['intervaloparcelas']) {
+                        if ($this->dataFixaVencimento) {
+                            $dadosConta['vencimento'] = $obSetData->calcData($dadosConta['vencimento'], 1, '-', $this->dataFixaVencimento);
+                        } elseif ($this->cols['intervaloparcelas']) {
                             $dadosConta['vencimento'] = $obSetData->calcData($dadosConta['vencimento'], $this->cols['intervaloparcelas'], '-');
-                        } elseif ($this->cols['dataFixaVencimento']) {
-                            $dadosConta['vencimento'] = $obSetData->calcData($dadosConta['vencimento'], 1, '-', $this->cols['dataFixaVencimento']);
-                        } elseif ($this->padraovencimento) {
-                            $dt = explode('-', $dadosConta['vencimento']);
-                            $mes = date('m', mktime(0, 0, 0, $dt[1] + 1, 1, $dt[0]));
-                            $ano = date('Y', mktime(0, 0, 0, $dt[1] + 1, 1, $dt[0]));
-                            $dia = cal_days_in_month(CAL_GREGORIAN, $mes, $ano);
-                            $dadosConta['vencimento'] = date("Y-m-d", mktime(0, 0, 0, $mes, $dia, $ano));
                         } else {
                             $vencimentoDatafixa = substr($dadosConta['vencimento'], -2);
                             $dadosConta['vencimento'] = $obSetData->calcData($dadosConta['vencimento'], 1, '-', $vencimentoDatafixa);
@@ -748,7 +744,8 @@ class TTransacao {
                 $obMasc = new TSetMascaras();
                 $this->setVencimento($obMasc->setDataDb($obTransacao->vencimento));
                 if ($obTransacao->datafixavencimento) {
-                    $this->setDataFixa($obTransacao->datafixavencimento);
+                	$dt = explode('-',$obTransacao->vencimento);
+                    $this->setDataFixa($dt[2]);
                 }
             } else {
                 throw new Exception(TMensagem::ERRO_CODIGO_TRANSACAO_FINAN);

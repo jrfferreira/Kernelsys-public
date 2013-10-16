@@ -3,7 +3,7 @@
 **manipula o botão comcluir dos formul�rios padrões
 *action =  1 = ativo / 2 = inativo
 */
-function setCancelar(idForm, action){
+function setCancelar(idForm, action, newText){
 
     var bot = document.getElementById("cancelar_botform"+idForm);
 
@@ -12,5 +12,9 @@ function setCancelar(idForm, action){
     }
     else if(action == '2'){
         bot.disabled = true;
+    }
+    
+    if(newText){
+    	bot.value = newText;
     }
 }

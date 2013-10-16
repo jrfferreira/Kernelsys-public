@@ -1255,25 +1255,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="361">
-      <seq>361</seq>
-      <formid>form_listTreinamento</formid>
-      <nomeform>-</nomeform>
-      <tabseq>34</tabseq>
-      <statseq>1</statseq>
-      <formseq>6</formseq>
-      <listseq>191</listseq>
-      <formainclude>one</formainclude>
-      <dimensao/>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>2</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="363">
       <seq>363</seq>
       <formid>form_blJustFalta</formid>
@@ -3478,25 +3459,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="8">
-      <seq>8</seq>
-      <formid>fichaInscricao</formid>
-      <nomeform>Ficha de inscrição</nomeform>
-      <tabseq>16</tabseq>
-      <statseq>1</statseq>
-      <formseq/>
-      <listseq>138</listseq>
-      <formainclude>one</formainclude>
-      <dimensao/>
-      <botconcluir>0</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>1</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="478">
       <seq>478</seq>
       <formid>form_estorno</formid>
@@ -3873,6 +3835,44 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
       <nivel>2</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="361">
+      <seq>361</seq>
+      <formid>form_listTreinamento</formid>
+      <nomeform>-</nomeform>
+      <tabseq>34</tabseq>
+      <statseq>1</statseq>
+      <formseq/>
+      <listseq>191</listseq>
+      <formainclude>one</formainclude>
+      <dimensao/>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>2</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="8">
+      <seq>8</seq>
+      <formid>fichaInscricao</formid>
+      <nomeform>Ficha de inscrição</nomeform>
+      <tabseq>16</tabseq>
+      <statseq>1</statseq>
+      <formseq/>
+      <listseq>138</listseq>
+      <formainclude>one</formainclude>
+      <dimensao/>
+      <botconcluir>0</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>1</nivel>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

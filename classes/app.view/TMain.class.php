@@ -435,13 +435,18 @@ class TMain {
 		    		}
 		    		
 		    	//executa manter para os dados
-		    	
-		    	$obKrs = new TKrs('tabelas');
+
 		    	$critKrsTables = new TCriteria();
-		    	foreach($dados as $entidade=>$dado){
-		    		if($entidade != TConstantes::HEAD_HEADCHILDS)
-		    			$critKrsTables->add(new TFilter("tabela", '=', $entidade),'OR');
+		    	
+		    	$obKrsFormTables = new TKrs('form_x_tabelas');
+		    	$critKrsFormTables = new TCriteria();
+		    	$critKrsFormTables->add(new TFilter(TConstantes::FORM,'=',$this->header[TConstantes::FORM]));
+		    	$retKrsFormTables = $obKrsFormTables->select("tabseq",$critKrsFormTables);
+		    	while($tabKey = $retKrsFormTables->fetchObject()){
+		    		$critKrsTables->add(new TFilter("seq", '=', $tabKey->tabseq),'OR');
 		    	}
+		    		
+		    	$obKrs = new TKrs('tabelas');
 		    	$retKrs = $obKrs->select("seq,tabela,tabseq,colunafilho",$critKrsTables);
 		    	
 		    	$tables = array();
@@ -455,16 +460,18 @@ class TMain {
 		    	}
 		    	
 		    	//percorre os campos agrupados por entidade e mantem os dados em banco 
-		   		foreach($tables as $entKey=>$entData){
+		   		foreach($tables as $entData){
 		   			$entidade = $entData->tabela;
 		   			$dado = $dados[$entidade];
-	   				if($entData->tabseq && $seqs[$entData->tabseq]){
-	   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqs[$entData->tabseq];
-	   				}	   				
-	   				$seqs[$entKey] = $this->loadSave($entidade, $dado);	
-		    		if($entidade == $this->entidadeForm){
-		    			$seqAtual = $seqs[$entKey];
-		    		}
+		   			if(count($dado) > 0){
+		   				if($entData->tabseq && $seqs[$entData->tabseq]){
+		   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqs[$entData->tabseq];
+		   				}	   				
+		   				$seqs[$entData->seq] = $this->loadSave($entidade, $dado);	
+			    		if($entidade == $this->entidadeForm){
+			    			$seqAtual = $seqs[$entData->seq];
+			    		}
+		   			}
 		    	}
 		    	
 		    	foreach($dados as $entidade=>$dado){

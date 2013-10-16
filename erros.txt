@@ -1,3 +1,9 @@
+### ERROS ###
+
+	Financeiro
+	Atualizar data e boletos (gerando backup)
+	Gerar parcelas com intervalos corretos
+
 # Nos formulários com vinculo com mais de uma entidade, 
 # as entidades secundárias sempre utilizam o método de inserção (não atualizam), 
 # o que orça a duplicidade dos dados

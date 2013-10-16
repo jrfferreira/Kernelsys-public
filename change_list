@@ -5,31 +5,23 @@
 # Adicionar a coluna formapag na view_caixa (dbforma_pagamento -> titulo)
 
 # VIEW DE PESSOAS
-	CREATE OR REPLACE VIEW view_pessoa AS 
-	 SELECT 
-	t1.seq, 
-	t1.unidseq, 
-	t1.usuaseq, 
-	t1.tipo, 
-	t1.pessnmrz, 
-	t1.pessnmrf, 
-	t1.pessrgie, 
-	t1.pessteim, 
-	t1.cliente, 
-	t1.fornecedor, 
-	t1.funcionario, 
-	to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
-	t999.seq AS statseq, 
-	t999.statdesc,
-	t2.telefone AS telefone1,
-	t3.telefone AS telefone2,
-	t4.email AS email
+	-- View: view_pessoa
+
+-- DROP VIEW view_pessoa;
+
+	DROP VIEW view_pessoa;
 	
+	CREATE OR REPLACE VIEW view_pessoa AS 
+	 SELECT t1.seq, t1.unidseq, t1.usuaseq, t1.tipo, t1.pessnmrz, t1.pessnmrf, t1.pessrgie, t1.pessteim, t1.cliente, t1.fornecedor, t1.funcionario, to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.telefone AS telefone1, t3.telefone AS telefone2, t1.email_principal,t1.email_secundario
 	   FROM dbpessoa t1
 	   LEFT JOIN dbtelefone t2 ON t2.pessseq = t1.seq AND t2.tpteseq = 1
-	   LEFT JOIN dbtelefone t3 ON t3.pessseq = t1.seq AND t3.tpteseq = 2 
-	   LEFT JOIN dbemail t4 ON t4.pessseq = t1.seq AND t4.titulo = 'E-mail Principal' 
+	   LEFT JOIN dbtelefone t3 ON t3.pessseq = t1.seq AND t3.tpteseq = 2
 	   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq;
+	
+	ALTER TABLE view_pessoa
+	  OWNER TO postgres;
+
+
 	
 #VIEW PESSOAS_TITULARIDADAE
 	CREATE OR REPLACE VIEW view_pessoa_titularidade AS 
@@ -48,7 +40,8 @@
 	 t999.statdesc,
 	t6.telefone AS telefone1,
 	t7.telefone AS telefone2,
-	t8.email AS email
+	t0.email_principal AS email_principal,
+	t0.email_secundario AS email_secundario
 	   FROM dbpessoa t0
 	   LEFT JOIN dbfuncionario t2 ON t2.pessseq = t0.seq
 	   LEFT JOIN dbcargo t3 ON t3.seq = t2.cargseq
@@ -57,7 +50,6 @@
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq
 	   LEFT JOIN dbtelefone t6 ON t6.pessseq = t0.seq AND t6.tpteseq = 1
 	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t0.seq AND t7.tpteseq = 2 
-	   LEFT JOIN dbemail t8 ON t8.pessseq = t0.seq AND t8.titulo = 'E-mail Principal' 
 	  WHERE t0.seq = t2.pessseq;
 
 # VIEW PROFESSORES
@@ -76,16 +68,62 @@
 	    LIMIT 1) AS nomeacao,
 	t6.telefone AS telefone1,
 	t7.telefone AS telefone2,
-	t8.email AS email
+	t3.email_principal AS email_principal,
+	t3.email_secundario AS email_secundario
 	   FROM dbprofessor t0
 	   LEFT JOIN dbpessoa t3 ON t3.seq = t0.pessseq
 	   LEFT JOIN dbtelefone t6 ON t6.pessseq = t3.seq AND t6.tpteseq = 1
 	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t3.seq AND t7.tpteseq = 2 
-	   LEFT JOIN dbemail t8 ON t8.pessseq = t3.seq AND t8.titulo = 'E-mail Principal' 
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 	
-	
+# VIEW INSCRICAO
+	CREATE OR REPLACE VIEW view_inscricao AS 
+	 SELECT 
+	 t0.seq, 
+	 t0.unidseq, 
+	 t0.usuaseq, 
+	 t0.pessseq, 
+	 t0.transeq, 
+	 t0.turmseq, 
+	 t4.seq AS cursseq, 
+	 to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
+	 t999.seq AS statseq, 
+	 t999.statdesc, 
+	 t2.pessnmrz AS nomepessoa, 
+	 t2.pessnmrf, 
+	 t3.titulo AS nometurma, 
+	 t3.datainicio, 
+	 t3.valortaxa, 
+	 t3.parcelas, 
+	 t3.valormatricula, 
+	 t3.valormensal AS valorparcelas, 
+	 t5.nome AS nomecurso, 
+	 t0.vencimentomatricula, 
+	 t0.vencimentotaxa,
+	 t3.datainiciovencimentos,
+	 t3.padraovencimento
+	   FROM dbinscricao t0
+	   LEFT JOIN dbpessoa t2 ON t2.seq = t0.pessseq
+	   LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
+	   LEFT JOIN dbcurso t4 ON t4.seq = t3.cursseq
+	   LEFT JOIN dbprojeto_curso t5 ON t5.seq = t4.pjcuseq
+	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 
+
+
+
+# TABELA ENDEREÇO
+
+	coluna logradouro para endereco varchar(200)
+
+# TABELA TURMA
+	coluna diafixovencimento para padraovencimento numeric
+	
+# TABELA PESSOA
+	email_principal character varying(180)
+	email_secundario character varying(180)
+	
+# REMOVER TABELA EMAIL
 
 
 

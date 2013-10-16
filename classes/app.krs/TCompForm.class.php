@@ -120,7 +120,7 @@ class TCompForm {
 
                 //==============================================================
                 // monta estrutura de campos na sessão
-                if($cmp->colunadb && $cmp->colunadb != TConstantes::SEQUENCIAL){
+                if($cmp->colunadb /* && $cmp->colunadb != TConstantes::SEQUENCIAL */){
                 	
                 	$infoCampos[TConstantes::FIELD_SEQUENCIAL]  =$this->seq;
                     $infoCampos[TConstantes::FORM]      		=$this->formseq;
@@ -340,9 +340,10 @@ class TCompForm {
                  	
                  	
 		                if($dadosCampo->tipo === 'TRadio' or $dadosCampo->tipo === 'TRadioGroup'){
-		                 	$setCampo->setPropriedade('onClick', 'return false');
+		                 	$setCampo->setPropriedade('onClick', 'this.blur(); return false;');
 		                }else{
 		                 	$setCampo->setPropriedade('readonly', '');
+		                 	$setCampo->setPropriedade('onfocus', 'this.blur(); return false;');
 		                }  
                  	}
                  }

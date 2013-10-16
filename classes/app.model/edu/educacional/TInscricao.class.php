@@ -47,10 +47,15 @@ class TInscricao{
     * param <type> $codigoinscricao
     * param <type> $vencimento
     */
-    private function setTransacaoMatricula($codigoinscricao){
+    private function setTransacaoMatricula($codigoinscricao,$vencimentomatricula){
 
         try{
-            
+        	$TSetControl = new TSetControl();
+        	if($vencimentomatricula){
+        		$vencimentomatricula = $TSetControl->setDataDB($vencimentomatricula);
+        	}else{
+        		$vencimentomatricula = $obInscricao->vencimentomatricula;
+        	}
 
             $obInscricao = $this->getInsncricao($codigoinscricao);
             $obTurma     = $obInscricao->turma;
@@ -69,51 +74,50 @@ class TInscricao{
 //                }
                 //==============================================================
 
-            if(!$obTurma->valormensal > 0) {
-                new setException('Valor da matricula não esta definido.');
-            }
-
-            //configura a transação do curso e define a primeira parcela como matrícula
-            $obCreditoM = new TTransacao();
-            $obUnidade = new TUnidade();
-
-            $obCreditoM->setPessoa($obInscricao->pessseq);
-            $obCreditoM->setValorNominal($obTurma->valortotal);
-            $obCreditoM->setAcrescimo('0.00');
-            $obCreditoM->setParcelas($obTurma->parcelas,$obUnidade->getParametro('financeiro_intervalo_parcela'));
-            $obCreditoM->setPlanoConta($obTurma->plcoseq);
-            $obCreditoM->setVencimento($obInscricao->vencimentomatricula,$obUnidade->getParametro('financeiro_intervalo_parcela'));
-            $obCreditoM->setInstrincoesPagamento($infoDesconto);
-
-                //retorna produto taxa de inscrição=========
-                $prodMatricula = new TProduto();
-                $obProdMatricula = $prodMatricula->getProduto('seq', $obTurma->prodseq);
-                //==========================================
-
-            $obCreditoM->addProduto($obProdMatricula);
-            $obCreditoM->setObs("Primeira parcela (Matrícula) do curso :".$obTurma->nomecurso." turma: ".$obTurma->titulo);
-            $obCreditoM->setNumContas(1);
-
-            $codigotransacao = $obCreditoM->run();
-            if($codigotransacao) {
-                $codigoContaM = $obCreditoM->getCodigoContas();
-                $codigoContaM = $codigoContaM[0];
-                //echo 'Conta Credito Matricula gerados com sucesso<bR>';
-
-                $obTDbo = new TDbo(TConstantes::DBINSCRICAO);
-                    $criteriaUpInscricao = new TCriteria();
-                    $criteriaUpInscricao->add(new TFilter('seq','=',$codigoinscricao));
-                $obTDbo->update(array('transeq'=>$codigotransacao), $criteriaUpInscricao);
-
-                $dados['transeq'] = $codigotransacao;
-                $dados['parcseq']    = $codigoContaM;
-
-                return $dados;
-            }
-            else {
-                $obTDbo->rollback();
-                new setException('O código da transação não foi retornado.');
-            }
+            if($obTurma->valormatricula > 0) {
+		
+	            //configura a transação do curso e define a primeira parcela como matrícula
+	            $obCreditoM = new TTransacao();
+	            $obUnidade = new TUnidade();
+	
+	            $obCreditoM->setPessoa($obInscricao->pessseq);
+	            $obCreditoM->setValorNominal($obTurma->valormatricula);
+	            $obCreditoM->setAcrescimo('0.00');
+	            $obCreditoM->setParcelas($obTurma->parcelas,$obUnidade->getParametro('financeiro_intervalo_parcela'));
+	            $obCreditoM->setPlanoConta($obTurma->plcoseq);
+	            $obCreditoM->setVencimento($vencimentomatricula,$obUnidade->getParametro('financeiro_intervalo_parcela'));
+	            //$obCreditoM->setInstrincoesPagamento($infoDesconto);
+	
+	                //retorna produto taxa de inscrição=========
+	                $prodMatricula = new TProduto();
+	                $obProdMatricula = $prodMatricula->getProduto('seq', $obTurma->prodseq);
+	                //==========================================
+	
+	            $obCreditoM->addProduto($obProdMatricula);
+	            $obCreditoM->setObs("Primeira parcela (Matrícula) do curso :".$obTurma->nomecurso." turma: ".$obTurma->titulo);
+	            $obCreditoM->setNumContas(1);
+	
+	            $codigotransacao = $obCreditoM->run();
+	            if($codigotransacao) {
+	                $codigoContaM = $obCreditoM->getCodigoContas();
+	                $codigoContaM = $codigoContaM[0];
+	                //echo 'Conta Credito Matricula gerados com sucesso<bR>';
+	
+	                $obTDbo = new TDbo(TConstantes::DBINSCRICAO);
+	                    $criteriaUpInscricao = new TCriteria();
+	                    $criteriaUpInscricao->add(new TFilter('seq','=',$codigoinscricao));
+	                $obTDbo->update(array('transeq'=>$codigotransacao), $criteriaUpInscricao);
+	
+	                $dados['transeq'] = $codigotransacao;
+	                $dados['parcseq']    = $codigoContaM;
+	
+	                return $dados;
+	            }
+	            else {
+	                $obTDbo->rollback();
+	                new setException('O código da transação não foi retornado.');
+	            }
+	        }
 
         }catch (Exception $e){
             $obTDbo->rollback();
@@ -128,9 +132,15 @@ class TInscricao{
      * param <type> $vencimento = data do vencimento da taxa de inscrição
      * return <type>
      */
-    private function setTransacaoTaxa($codigoinscricao){
+    private function setTransacaoTaxa($codigoinscricao,$vencimentoTaxa = null){
 
         try{
+        	$TSetControl = new TSetControl();
+        	if($vencimentoTaxa){
+        		$vencimentoTaxa = $TSetControl->setDataDB($vencimentoTaxa);
+        	}else{
+        		$vencimentoTaxa = $obInscricao->vencimentotaxa;
+        	}
 
             $obInscricao = $this->getInsncricao($codigoinscricao);
             $obTurma     = $obInscricao->turma;
@@ -147,7 +157,7 @@ class TInscricao{
                 $obCredito->setAcrescimo('0.00');
                 $obCredito->setParcelas('1');
                 $obCredito->setPlanoConta($obTurma->plcoseq);
-                $obCredito->setVencimento($obInscricao->vencimentotaxa, "3");
+                $obCredito->setVencimento($vencimentoTaxa);
 
                 //retorna produto taxa de inscrição=========
                 $prodTaxa = new TProduto();
@@ -214,16 +224,12 @@ class TInscricao{
 
             $TUnidade = new TUnidade();
             $inscseq = $this->setInscricao($pessseq, $turmseq, $vencimentoMatricula, $vencimentoTaxa);
-            $matricula_independente = $TUnidade->getParametro('matricula_independente');
-            //configura transação da matrícula
-	            if($matricula_independente == '1'){
-	            $dadosTransacaoMatricula = $this->setTransacaoMatricula($inscseq);
-	            if($dadosTransacaoMatricula){
-	                $botMatricula = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\"  onClick=\"showBoleto('".$dadosTransacaoMatricula['parcseq']."')\" >";
-	            }
+            $dadosTransacaoMatricula = $this->setTransacaoMatricula($inscseq,$vencimentoMatricula);
+            if($dadosTransacaoMatricula){
+                $botMatricula = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\"  onClick=\"showBoleto('".$dadosTransacaoMatricula['parcseq']."')\" >";
             }
             //configura conta credito da taxa de inscrição
-            $dadosTransacaoTaxa = $this->setTransacaoTaxa($inscseq);
+            $dadosTransacaoTaxa = $this->setTransacaoTaxa($inscseq,$vencimentoTaxa);
             if($dadosTransacaoTaxa){
                 $botTaxa = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\" onClick=\"showBoleto('".$dadosTransacaoTaxa['parcseq']."')\" >";
 
@@ -284,15 +290,15 @@ class TInscricao{
             
               $model = new TSetModel();
               $dataInicio = $model->setDataPT($obTurma->datainicio);
-              $dataMatricula = $model->setDataPT($obTurma->datavencimento);
 
               $obSetData = new TSetData();
+              $dataMatricula = $model->setDataPT($obSetData->calcData(date("Y-m-d"), 30, '-'));
               $dataIncricao = $model->setDataPT($obSetData->calcData(date("Y-m-d"), 5, '-'));
 
             //monta ação com os valores dos campos dependentes
             $valores = 'valortaxa=>'.$obTurma->valortaxa.'(sp)';
-            $valores .= 'valormatricula=>'.$obTurma->valormensal.'(sp)';
-            $valores .= 'numparcelas=>'.$obTurma->parcelas.'(sp)';
+            $valores .= 'valormatricula=>'.$obTurma->valormatricula.'(sp)';
+            $valores .= 'parcelas=>'.$obTurma->parcelas.'(sp)';
             $valores .= 'valorparcelas=>'.$obTurma->valormensal.'(sp)';
             $valores .= 'valordescontado=>'.$obTurma->valordescontado.'(sp)';
             $valores .= 'datainicio=>'.$dataInicio.'(sp)';
