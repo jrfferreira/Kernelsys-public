@@ -361,30 +361,6 @@ class TForms{
     *Retorna o formulario montado com suas respequitivas abas
     */
     public function getForm(){
-         if($this->dados){
-
-                    // percorre e preenche vetor de campos na sessão ====================================
-                    $obHeader = new TSetHeader();
-                    $headerForm = $obHeader->getHead($this->formseq);
-                    $listaCamposSession = $headerForm[TConstantes::CAMPOS_FORMULARIO];
-                    
-                    if($listaCamposSession and is_array($listaCamposSession)){
-                    	
-                        foreach($listaCamposSession as $campo=>$infoCampo){
-                        	
-                        	 $infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
-                        	 
-                             $infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$infoCampo['colunadb']];
-                             $infoCampo[TConstantes::FIELD_STATUS] = 1;
-                             $listaCamposSession[$campo] = $infoCampo;
-                        }
-                        
-                        $obHeader->addHeader($this->formseq, TConstantes::CAMPOS_FORMULARIO, $listaCamposSession);
-                    }
-                    //===================================================================================
-
-         }
-    	
          $form = $this->setForm();
          if($this->dados){
             $form->setData($this->dados);
@@ -398,16 +374,29 @@ class TForms{
          
         $form->setAbas();
         
+        if($this->dados){
+        	// percorre e preenche vetor de campos na sessão ====================================
+        	$obHeader = new TSetHeader();
+        	$headerForm = $obHeader->getHead($this->formseq);
+        	$listaCamposSession = $headerForm[TConstantes::CAMPOS_FORMULARIO];
         
-       // janela objeto formulário
-      //$window = new TWindow($this->labelForm, $this->formseq.'-window');
-     //  $window->setAutoOpen();
-      //  if($this->dimensao){
-       //     $dimensao = explode(';', $this->dimensao);
-       //     $window->setSize($dimensao[0],$dimensao[1]);
-       // }
-      //  $window->add($form);
-
+        	if($listaCamposSession and is_array($listaCamposSession)){
+        		 
+        		foreach($listaCamposSession as $campo=>$infoCampo){
+        			 
+        			$infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
+        
+        			$infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$infoCampo['colunadb']];
+        			$infoCampo[TConstantes::FIELD_STATUS] = 1;
+        			$listaCamposSession[$campo] = $infoCampo;
+        		}
+        
+        		$obHeader->addHeader($this->formseq, TConstantes::CAMPOS_FORMULARIO, $listaCamposSession);
+        	}
+        	//===================================================================================
+        
+        }
+        
         $this->dboKs->close();
         return $form;
     }

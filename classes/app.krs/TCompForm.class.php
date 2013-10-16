@@ -120,7 +120,7 @@ class TCompForm {
 
                 //==============================================================
                 // monta estrutura de campos na sessão
-                if($cmp->colunadb /* && $cmp->colunadb != TConstantes::SEQUENCIAL */){
+                if($cmp->colunadb && $cmp->colunadb != TConstantes::SEQUENCIAL){
                 	
                 	$infoCampos[TConstantes::FIELD_SEQUENCIAL]  =$this->seq;
                     $infoCampos[TConstantes::FORM]      		=$this->formseq;
