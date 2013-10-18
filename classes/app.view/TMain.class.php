@@ -345,7 +345,7 @@ class TMain {
     			 * Aplica regra de negócios do campo se ouver
     			*/
     			if($camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL] != "0" and $camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL] != "") {
-    				 
+    				$obControl = new TSetControl();
     				$returVal = $obControl->main($camposSession[$nomeCampo][TConstantes::FORM], $camposSession[$nomeCampo][TConstantes::ENTIDADE], $camposSession[$nomeCampo][TConstantes::FIELD_INCONTROL], $valorCampo, $colunaDb);
     			
     				//se a validação não for verdadeira retorna uma msg

@@ -3241,21 +3241,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="43">
-      <seq>43</seq>
-      <blocoid>dadosPagC</blocoid>
-      <nomebloco>Dados do Pagamento</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>13</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="44">
       <seq>44</seq>
       <blocoid>dadosContaD</blocoid>
@@ -3466,6 +3451,21 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="43">
+      <seq>43</seq>
+      <blocoid>dadosPagC</blocoid>
+      <nomebloco>Dados do Pagamento</nomebloco>
+      <formato>frm</formato>
+      <tabseq>21</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>13</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="71">
       <seq>71</seq>
       <blocoid>blocoFiliais</blocoid>
@@ -3657,21 +3657,6 @@
       <formseq/>
       <obapendice/>
       <frmpseq>57</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="42">
-      <seq>42</seq>
-      <blocoid>dadosContaC</blocoid>
-      <nomebloco>Informações da Receita</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>1</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>13</frmpseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -4005,6 +3990,21 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-10-11</datacad>
+    </row>
+    <row seq="42">
+      <seq>42</seq>
+      <blocoid>dadosContaC</blocoid>
+      <nomebloco>Informações da Receita</nomebloco>
+      <formato>frm</formato>
+      <tabseq>21</tabseq>
+      <blocoheight>200px</blocoheight>
+      <statseq>1</statseq>
+      <formseq/>
+      <obapendice/>
+      <frmpseq>13</frmpseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </blocos>
 </kernelsys>

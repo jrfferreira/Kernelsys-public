@@ -475,13 +475,22 @@ function onMarcador(ob){
 * Executa e injeta valores em campos predefinidos Ex: Autopreecher no select
 */
 function onLoadSelect(obj, alvo, classe, metodo){
-
     if(obj){
         var valores = 'classe='+classe+'&metodo='+metodo+'&seq='+obj.value;
         var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
 
         alvo = document.getElementById(alvo);
         alvo.innerHTML = retorno;
+    }
+}
+
+function onLoadValue(obj, alvo, classe, metodo){
+    if(obj){
+        var valores = 'classe='+classe+'&metodo='+metodo+'&seq='+obj.value;
+        var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
+
+        alvo = document.getElementById(alvo);
+        alvo.value = retorno;
     }
 }
 

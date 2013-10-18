@@ -109,5 +109,23 @@
       <statseq>1</statseq>
       <datacad>2013-09-19</datacad>
     </row>
+    <row seq="13">
+      <seq>13</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <tpcadesc>THidden</tpcadesc>
+      <tipodado>numeric</tipodado>
+      <statseq>1</statseq>
+      <datacad>2013-10-17</datacad>
+    </row>
+    <row seq="14">
+      <seq>14</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <tpcadesc>THidden</tpcadesc>
+      <tipodado>string</tipodado>
+      <statseq>1</statseq>
+      <datacad>2013-10-17</datacad>
+    </row>
   </tipoCampo>
 </kernelsys>

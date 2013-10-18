@@ -75,9 +75,9 @@ class TCaixa {
     			
     			while($mov = $movimentos->fetchObject()){
     				if($mov->tipo == 'C'){
-    					$valorTotal = $valorTotal - $mov->valorpago;
+    					$valorTotal = $valorTotal - $mov->valorfinal;
     				}else{
-    					$valorTotal = $valorTotal + $mov->valorpago;
+    					$valorTotal = $valorTotal + $mov->valorfinal;
     				}
     				
     				$obs .= " \r\n\t - {$mov->seq};";
@@ -95,7 +95,7 @@ class TCaixa {
     			$novoMovimento['funcseq'] = $this->obUser->funcseq;
     			$novoMovimento['tipo'] = ($valorTotal < 0) ? 'D' : 'C';
     			$novoMovimento['valorreal'] = $conta->valorreal - $valorTotal;
-    			$novoMovimento['valorpago'] = abs($valorTotal);
+    			$novoMovimento['valorfinal'] = abs($valorTotal);
     			$novoMovimento['valorentrada'] = abs($valorTotal);
     			$novoMovimento['datapag'] = date('Y-m-d');
     			$novoMovimento['stmoseq'] = 1;
@@ -175,7 +175,7 @@ class TCaixa {
                 $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
 
                 //executa baixa no caixa
-                $this->baixaContaCaixa($obMovimentoCaixa->parcseq, $obMovimentoCaixa->valorpago, $obMovimentoCaixa->desconto, $obMovimentoCaixa->numdoc, $obMovimentoCaixa->acrescimo, $obMovimentoCaixa->formapag, $obMovimentoCaixa->cofiseq, $obMovimentoCaixa->seq);
+                $this->baixaContaCaixa($obMovimentoCaixa->parcseq, $obMovimentoCaixa->valorfinal, $obMovimentoCaixa->desconto, $obMovimentoCaixa->boleseq, $obMovimentoCaixa->acrescimo, $obMovimentoCaixa->fmpgseq, $obMovimentoCaixa->cofiseq, $obMovimentoCaixa->seq);
 				
                 $this->obTDbo->commit();
                 $this->obTDbo->close();
@@ -190,7 +190,7 @@ class TCaixa {
     /**
      *
      * param <type> $codigoconta = codigo da conta a ser baixada
-     * param <type> $valorpago   = valor do credito/debito
+     * param <type> $valorfinal   = valor do credito/debito
      * param <type> $desconto    = valor do desconto ( 0.00 se não houver)
      * param <type> $acrescimo   = valor do acrescimo ( 0.00 se não houver)
      * param <type> $numDocumento = Número do documento
@@ -198,7 +198,7 @@ class TCaixa {
      * param <type> $origemdestino = Código da conta caixa de origem/destino do valor
      * param <type> $codigocaixa = Código do movimento de caixa se já existir
      */
-    public function baixaContaCaixa($codigoconta, $valorpago, $desconto, $acrescimo, $boleseq, $formapagamento, $contacaixa, $codigocaixa = null){
+    public function baixaContaCaixa($codigoconta, $valorfinal, $desconto, $acrescimo, $boleseq, $formapagamento, $contacaixa, $codigocaixa = null){
         
         try {
         	
@@ -233,7 +233,7 @@ class TCaixa {
                 if($dados->tipo == 'C'){
                      $validavalor = true;
                 }else{
-                    $valorNecessario = $valorpago;
+                    $valorNecessario = $valorfinal;
                     switch($formapagamento){
                         case 'Dinheiro': $valorDisponivel = $saldoCaixa['saldoReceitaDinheiro'] - $saldoCaixa['saldoDespesaDinheiro']; break;
                         case 'Cheque': $valorDisponivel = $saldoCaixa['saldoReceitaCheque'] - $saldoCaixa['saldoDespesaCheque']; break;
@@ -250,8 +250,8 @@ class TCaixa {
                 if($validavalor){
                 	
 	                	//identifica o status da conta =============================
-	                	$valorBase = ($valorpago + $desconto) - $acrescimo;
-	                	$novoValorReal = $dados->valorreal - $valorpago;
+	                	$valorBase = ($valorfinal + $desconto) - $acrescimo;
+	                	$novoValorReal = $dados->valorreal - $valorfinal;
 	                	
 	                	if ($obMovimentoCaixa->stmoseq == "3") {
 	                		$statusConta = "5";
@@ -273,8 +273,8 @@ class TCaixa {
                         $args["tipo"]      = $dados->tipo;
                         $args["boleseq"]    = $boleseq;
                         $args["valor"]     = $dados->valoratual;
-                        $args["valorfinal"]   = $valorpago;
-                        $args["valorentrada"] = $valorpago;
+                        $args["valorfinal"]   = $valorfinal;
+                        $args["valorentrada"] = $valorfinal;
                         $args["vencimento"]   = $dados->vencimento;
                         $args["fmpgseq"]  	  = $formapagamento;
                         $args["statseq"]   = $dados->statseq;
@@ -382,26 +382,26 @@ class TCaixa {
         while ($resMCaixa = $MCaixa->fetchObject()) {
 
             if ($resMCaixa->tipo == 'C') {
-                $totalContasCaixa[$resMCaixa->cofiseq] = ($totalContasCaixa[$resMCaixa->cofiseq] + $resMCaixa->valorpago);
-                $totalReceitas[$resMCaixa->cofiseq] = $totalReceitas[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                $totalContasCaixa[$resMCaixa->cofiseq] = ($totalContasCaixa[$resMCaixa->cofiseq] + $resMCaixa->valorfinal);
+                $totalReceitas[$resMCaixa->cofiseq] = $totalReceitas[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
 
                 if ($resMCaixa->formapag == 'Cheque') {
-                    $totalReceitasCheque[$resMCaixa->cofiseq] = $totalReceitasCheque[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalReceitasCheque[$resMCaixa->cofiseq] = $totalReceitasCheque[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 } elseif ($resMCaixa->formapag == 'Dinheiro') {
-                    $totalReceitasDinheiro[$resMCaixa->cofiseq] = $totalReceitasDinheiro[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalReceitasDinheiro[$resMCaixa->cofiseq] = $totalReceitasDinheiro[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 } elseif ($resMCaixa->formapag == 'Cartão') {
-                    $totalReceitasCartao[$resMCaixa->cofiseq] = $totalReceitasCartao[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalReceitasCartao[$resMCaixa->cofiseq] = $totalReceitasCartao[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 }
             } elseif ($resMCaixa->tipo == 'D') {
-                $totalContasCaixa[$resMCaixa->cofiseq] = ($totalContasCaixa[$resMCaixa->cofiseq] - $resMCaixa->valorpago);
-                $totalDespesas[$resMCaixa->cofiseq] = $totalDespesas[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                $totalContasCaixa[$resMCaixa->cofiseq] = ($totalContasCaixa[$resMCaixa->cofiseq] - $resMCaixa->valorfinal);
+                $totalDespesas[$resMCaixa->cofiseq] = $totalDespesas[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
 
                 if ($resMCaixa->formapag == 'Cheque') {
-                    $totalDespesasCheque[$resMCaixa->cofiseq] = $totalDespesasCheque[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalDespesasCheque[$resMCaixa->cofiseq] = $totalDespesasCheque[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 } elseif ($resMCaixa->formapag == 'Dinheiro') {
-                    $totalDespesasDinheiro[$resMCaixa->cofiseq] = $totalDespesasDinheiro[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalDespesasDinheiro[$resMCaixa->cofiseq] = $totalDespesasDinheiro[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 } elseif ($resMCaixa->formapag == 'Cartão') {
-                    $totalDespesasCartao[$resMCaixa->cofiseq] = $totalDespesasCartao[$resMCaixa->cofiseq] + $resMCaixa->valorpago;
+                    $totalDespesasCartao[$resMCaixa->cofiseq] = $totalDespesasCartao[$resMCaixa->cofiseq] + $resMCaixa->valorfinal;
                 }
             }
         }
@@ -580,7 +580,8 @@ class TCaixa {
     public function viewCalcCaixa($checkFunc = true) {
 
         $alocaDados = new TAlocaDados();
-        $alocaDados->setValue('funcseq', $this->obUser->funcseq);
+        $TUsuario = new TUsuario();
+        $alocaDados->setValue('funcseq', $TUsuario->getSeqFuncionario());
 
 
         if ($checkFunc) {
@@ -779,7 +780,7 @@ class TCaixa {
 
                         if ($mov->tipo == "C") {
 
-                            $cell3 = $row[$mov->codigo]->addCell('R$ ' . number_format($mov->valorpago, 2, ',', '.'));
+                            $cell3 = $row[$mov->codigo]->addCell('R$ ' . number_format($mov->valorfinal, 2, ',', '.'));
                             $cell3->align = "right";
                             $cell3->class = "rows";
 
@@ -787,20 +788,20 @@ class TCaixa {
                             $cell4->align = "center";
                             $cell4->class = "rows";
 
-                            $totReceita = $totReceita + $mov->valorpago;
-                            $subtotalReceita[$mov->parcseq] = $subtotalReceita[$mov->parcseq] + $mov->valorpago;
+                            $totReceita = $totReceita + $mov->valorfinal;
+                            $subtotalReceita[$mov->parcseq] = $subtotalReceita[$mov->parcseq] + $mov->valorfinal;
                         } else {
 
                             $cell3 = $row[$mov->seq]->addCell(' - ');
                             $cell3->align = "center";
                             $cell3->class = "rows";
 
-                            $cell4 = $row[$mov->seq]->addCell('R$ ' . number_format($mov->valorpago, 2, ',', '.'));
+                            $cell4 = $row[$mov->seq]->addCell('R$ ' . number_format($mov->valorfinal, 2, ',', '.'));
                             $cell4->align = "right";
                             $cell4->class = "rows";
 
-                            $totDespesa = $totDespesa + $mov->valorpago;
-                            $subtotalReceita[$mov->parcseq] = $subtotalReceita[$mov->parcseq] - $mov->valorpago;
+                            $totDespesa = $totDespesa + $mov->valorfinal;
+                            $subtotalReceita[$mov->parcseq] = $subtotalReceita[$mov->parcseq] - $mov->valorfinal;
                         }
 
                         $dt = new TSetData();
@@ -1221,7 +1222,7 @@ class TCaixa {
                 $transacDeb['ativo'] = 1;
                 $transacDeb['cofiseq'] = $contaorigem;
                 $transacDeb['valorreal'] = $valor;
-                $transacDeb['valorpago'] = $valor;
+                $transacDeb['valorfinal'] = $valor;
                 $transacDeb['valorentrada'] = $valor;
                 $transacDeb['formapag'] = $formapag;
                 $transacDeb['tipo'] = 'D';
@@ -1232,7 +1233,7 @@ class TCaixa {
                 $transacCre['statseq'] = 1;
                 $transacCre['cofiseq'] = $contadestino;
                 $transacCre['valorreal'] = $valor;
-                $transacCre['valorpago'] = $valor;
+                $transacCre['valorfinal'] = $valor;
                 $transacCre['valorentrada'] = $valor;
                 $transacCre['formapag'] = $formapag;
                 $transacCre['tipo'] = 'C';
@@ -1314,8 +1315,8 @@ class TCaixa {
             $divContent->style = "padding: 10px; padding-top: 30px; text-align: center; min-height: 200px; vertical-align: middle;";
             if($obHistorico->movimentacoes){
                 foreach($obHistorico->movimentacoes as $mov){
-                        $data1[$mov->datacad][$mov->tipo][$mov->formapag] += $mov->valorpago;
-                        $data2[$mov->formapag] = ($mov->tipo == 'D') ? $data2[$mov->formapag] - $mov->valorpago : $data2[$mov->formapag] + $mov->valorpago;
+                        $data1[$mov->datacad][$mov->tipo][$mov->formapag] += $mov->valorfinal;
+                        $data2[$mov->formapag] = ($mov->tipo == 'D') ? $data2[$mov->formapag] - $mov->valorfinal : $data2[$mov->formapag] + $mov->valorfinal;
                         $data3[$mov->formapag]++;
                 }
                 ksort($data1);
@@ -1426,7 +1427,7 @@ class TCaixa {
     			$novoMovimento['funcseq'] = $this->obUser->funcseq;
     			$novoMovimento['tipo'] = 'C';
     			$novoMovimento['valorreal'] = $conta->valorreal;
-    			$novoMovimento['valorpago'] = $conta->valorreal-$desconto+$acrescimo;
+    			$novoMovimento['valorfinal'] = $conta->valorreal-$desconto+$acrescimo;
     			$novoMovimento['valorentrada'] = $conta->valorreal-$desconto+$acrescimo;
     			$novoMovimento['datapag'] = date('Y-m-d');
     			$novoMovimento['stmoseq'] = 1;
@@ -1440,7 +1441,7 @@ class TCaixa {
     			$this->obTDbo->commit();
 
     			if($retTransacao){
-    				if($this->baixaContaCaixa($novoMovimento['parcseq'], $novoMovimento['valorpago'], $desconto, $acrescimo, null, $formapag, $codigocontacaixa, $retTransacao['seq']))
+    				if($this->baixaContaCaixa($novoMovimento['parcseq'], $novoMovimento['valorfinal'], $desconto, $acrescimo, null, $formapag, $codigocontacaixa, $retTransacao['seq']))
 						$this->obTDbo->commit();
     			
     			}else{

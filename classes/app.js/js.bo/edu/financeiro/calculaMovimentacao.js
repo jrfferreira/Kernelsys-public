@@ -1,6 +1,6 @@
 function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado){
 
-    c_valorreal = (c_valorreal == null) ? '#valor' :'#'+ c_valorreal;
+    c_valorreal = (c_valorreal == null) ? '#valorreal' :'#'+ c_valorreal;
     c_multa = (c_multa == null) ? '#acrescimo' : '#'+ c_multa;
     c_desconto = (c_desconto == null) ? '#desconto' : '#'+ c_desconto;
     c_juros = (c_juros == null) ? '#juros' : '#'+ c_juros;

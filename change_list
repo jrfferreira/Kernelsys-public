@@ -125,5 +125,5 @@
 	
 # REMOVER TABELA EMAIL
 
-
+# REMOVER O "NOT NULL" das colunas desconto, acrescimo da tabela dbcaixa
 
