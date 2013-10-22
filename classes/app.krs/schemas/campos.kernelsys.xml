@@ -9451,31 +9451,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="552">
-      <seq>552</seq>
-      <colunadb>status</colunadb>
-      <campo>status</campo>
-      <label>Situação da Turma:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>2</tpcaseq>
-      <tabseq>11</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>1</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="636">
       <seq>636</seq>
       <colunadb>tabelaProduto</colunadb>
@@ -10160,6 +10135,31 @@
       <seletor/>
       <tpcaseq>2</tpcaseq>
       <tabseq>21</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="552">
+      <seq>552</seq>
+      <colunadb>sttuseq</colunadb>
+      <campo>sttuseq</campo>
+      <label>Situação da Turma:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>2</tpcaseq>
+      <tabseq>11</tabseq>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>-</valorpadrao>
@@ -13428,8 +13428,8 @@
     </row>
     <row seq="880">
       <seq>880</seq>
-      <colunadb>diafixovencimento</colunadb>
-      <campo>diafixovencimento</campo>
+      <colunadb>padraovencimento</colunadb>
+      <campo>padraovencimento</campo>
       <label>Intervalo de Vencimentos:</label>
       <mascara/>
       <seletor/>
@@ -13484,7 +13484,7 @@
       <mascara/>
       <seletor/>
       <tpcaseq>2</tpcaseq>
-      <tabseq>11</tabseq>
+      <tabseq>15</tabseq>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <valorpadrao>1</valorpadrao>

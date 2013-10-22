@@ -127,5 +127,14 @@
       <statseq>1</statseq>
       <datacad>2013-10-17</datacad>
     </row>
+    <row seq="15">
+      <seq>15</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <tpcadesc>TCombo</tpcadesc>
+      <tipodado>boolean</tipodado>
+      <statseq>1</statseq>
+      <datacad>2013-10-21</datacad>
+    </row>
   </tipoCampo>
 </kernelsys>
