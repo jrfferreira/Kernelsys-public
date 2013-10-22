@@ -59,12 +59,12 @@ class TAluno {
             } else {
                 throw new ErrorException("Não existem alunos vinculados");
             }
+            
+            return $alunos;
         } catch (Exception $e) {
             $this->obTDbo->rollback();
             new setException($e);
         }
-
-        return $alunos;
     }
     
     /**
@@ -225,7 +225,7 @@ class TAluno {
 
         try {
             $TUsuario = new TUsuario();
-            $codigoaluno = $TUsuario->getCodigoAluno();
+            $codigoaluno = $TUsuario->getSeqAluno();
             if ($codigoaluno) {
                 $getFinanceiro = $this->getFinanceiro($codigoaluno);
 
@@ -276,7 +276,7 @@ class TAluno {
                 $datagrid->addColumn(new TDataGridColumn('doc', 'Conta', 'left', '55%'));
                 $datagrid->addColumn(new TDataGridColumn('vencimento', 'Vencimento', 'center', '15%'));
                 $datagrid->addColumn(new TDataGridColumn('valor', 'Valor Nominal', 'center', '10%'));
-                $datagrid->addColumn(new TDataGridColumn('valorpago', 'Valor Pago', 'center', '10%'));
+                $datagrid->addColumn(new TDataGridColumn('valorfinal', 'Valor Pago', 'center', '10%'));
                 $datagrid->createModel('100%');
 
                 $TSetModel = new TSetModel();
@@ -298,8 +298,8 @@ class TAluno {
                             $tempDisc['parcela'] = $obContas->numparcela;
                             $tempDisc['doc'] = $obContas->seq;
                             $tempDisc['vencimento'] = $TSetModel->setDataPT($obContas->vencimento);
-                            $tempDisc['valor'] = 'R$ ' . $TSetModel->setMoney($obContas->valornominal);
-                            $tempDisc['valorpago'] = 'R$ ' . $TSetModel->setMoney($obContas->valorpago);
+                            $tempDisc['valor'] = 'R$ ' . $TSetModel->setMoney($obContas->valor);
+                            $tempDisc['valorfinal'] = 'R$ ' . $TSetModel->setMoney($obContas->valorfinal);
 
                             $datagrid->addItem($tempDisc);
                         }
@@ -378,7 +378,7 @@ class TAluno {
     public function viewInfoAluno($codigoaluno) {
         try {
             //$TUsuario = new TUsuario();
-            //$codigoaluno = $TUsuario->getCodigoAluno();
+            //$codigoaluno = $TUsuario->getSeqAluno();
             if ($codigoaluno) {
                 $getAcademico = $this->getAcademico($codigoaluno);
                                 
@@ -424,7 +424,7 @@ class TAluno {
 
         try {
             $TUsuario = new TUsuario();
-            $codigoaluno = $TUsuario->getCodigoAluno();
+            $codigoaluno = $TUsuario->getSeqAluno();
             if ($codigoaluno) {
                 $getAcademico = $this->getAcademico($codigoaluno);
                 $tabHead = new TElement("fieldset");

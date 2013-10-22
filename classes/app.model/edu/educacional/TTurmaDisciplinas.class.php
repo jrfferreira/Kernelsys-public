@@ -336,7 +336,8 @@ class TTurmaDisciplinas {
                     $toDo[] = "( {$node} )";
 
                 }
-                $toDo = implode(" AND ", $toDo);
+                if(is_array($toDo))
+                	$toDo = implode(" AND ", $toDo);
                 
             } else {
                 $checagem = true;
@@ -382,7 +383,7 @@ class TTurmaDisciplinas {
                 $criterio->add(new TFilter("tudiseq", "=", $codigoTurmaDisciplina));
                 
 	                if ($situacao != "all" and $situacao) {
-	                    $criterio->add(new TFilter("situacao", "=", $situacao));
+	                    $criterio->add(new TFilter("stadseq", "=", $situacao));
 	                }
 	                
                 $this->obTDbo->setEntidade(TConstantes::DBALUNO_DISCIPLINA);
@@ -402,6 +403,8 @@ class TTurmaDisciplinas {
                 
                 $TAluno = new TAluno();
                 $alunos = $TAluno->getAlunos($critAlunos);
+
+                return $alunos;
                 
             } else {
                 throw new ErrorException("O codigo do relacionamento Turma x Disciplina é invalido.");
@@ -410,7 +413,6 @@ class TTurmaDisciplinas {
             $this->obTDbo->rollback();
             new setException($e);
         }
-        return $alunos;
     }
 
     /**
@@ -649,7 +651,7 @@ class TTurmaDisciplinas {
     public function viewSetNotasAlunos($codigoAvaliacao) {
 
     	$THeader = new TSetHeader();
-        $codigoTurmaDisciplina = $THeader->getHead('58','seq');
+        $subHeader = $THeader->getHead('58');
     	
         /*
           $this->obTDbo->setEntidade ( TConstantes::DBTURMA_DISCIPLINA_AVALIACAO );

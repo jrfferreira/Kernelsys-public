@@ -165,19 +165,22 @@ class TCompLista {
                 if (method_exists($vetorFiltro[3], $vetorFiltro[4])) {
                     $objetoDinamicofiltro = new $vetorFiltro[3];
                     //verifica se vai ser passando argumento
-                    if($vetorFiltro[5]){
+                    if($vetorFiltro[6]){
                         $dadosFiltro = call_user_func(array($objetoDinamicofiltro, $vetorFiltro[4]), $this->listseq);
+                    	$tipodado = $vetorFiltro[6] ? $vetorFiltro[6] : 'numeric';
                     }else{
                         $dadosFiltro = call_user_func(array($objetoDinamicofiltro, $vetorFiltro[4]));
+                    	$tipodado = $vetorFiltro[5] ? $vetorFiltro[5] : 'numeric';
                     }
                 } else {
                     $dadosFiltro = $vetorFiltro[3];
+                    $tipodado = $vetorFiltro[4] ? $vetorFiltro[4] : 'numeric';
                 }
                 // matem filtro em sessão
                 // $filtro = array("expre" =>  $dadosFiltro, "cols" => $vetorFiltro[0], "Manterfilt" => true );
                 // $this->obsession->setValue("dadosFiltroListaAtual",$filtro);
 
-                $this->obLista->addCriterio($vetorFiltro[0], $dadosFiltro, $vetorFiltro[1], $vetorFiltro[2], $vetorFiltro[3], 'filtroLista');
+                $this->obLista->addCriterio($vetorFiltro[0], $dadosFiltro, $vetorFiltro[1], $vetorFiltro[2], $tipodado, 'filtroLista');
             }
             $vetorFiltro = NULL;
         }

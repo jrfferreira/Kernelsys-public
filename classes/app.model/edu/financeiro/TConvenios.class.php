@@ -122,24 +122,24 @@ class TConvenios{
     /*
      * 
      */
-    public function atualizaTransacao($formseq) {
+    public function atualizaTransacao($obHeader) {
 
         try {
 
-            if ($formseq) {
-                //retorna dados do cabeÃ§alho
-                $obHeader = new TSetHeader();
-                $obHeader = $obHeader->getHead($formseq);
-                $codigoTransacConvenio = $obHeader['codigo'];
+            if ($obHeader) {
+                $codigoTransacConvenio = $obHeader['seq'];
 
-                $dbo = new TDbo(TConstantes::DBTRANSACAO_CONVENIO);
-                $crit = new TCriteria();
-                $crit->add(new TFilter('seq', '=', $codigoTransacConvenio));
-                $ret = $dbo->select('convseq', $crit);
-                $ob = $ret->fetchObject();
-                $codigoConvenio = $ob->convseq;
+                if($codigoTransacConvenio){
+	                $dbo = new TDbo(TConstantes::DBTRANSACAO_CONVENIO);
+	                $crit = new TCriteria();
+	                $crit->add(new TFilter('seq', '=', $codigoTransacConvenio));
+	                $ret = $dbo->select('convseq', $crit);
+	                $ob = $ret->fetchObject();
+	                $codigoConvenio = $ob->convseq;
+                
+	                $this->atualizaDuplicatasConvenio($codigoConvenio);
+                }
 
-                $this->atualizaDuplicatasConvenio($codigoConvenio);
             }
         } catch (Exception $e) {
             new setException($e);

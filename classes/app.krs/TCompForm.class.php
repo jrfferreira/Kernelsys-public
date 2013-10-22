@@ -224,44 +224,49 @@ class TCompForm {
         // retorna consulta no banco de propriedades
         while($props = $Result->fetchObject()) {
 
-            // verifica se a propriedade é uma addItems
-            if($props->metodo == "addItems") {
-
-                if(strpos($props->valor,"getItens/") !== false) {
-                    $obSetModel = new TSetModel();
-                    $Itens = $obSetModel->getItensSel($props->valor);
-                }
-                elseif(strpos($props->valor,"select") !== false or strpos($props->valor,"SELECT") !== false or strpos($props->valor,"show ") !== false or strpos($props->valor,"SHOW ") !== false) {
-
-                        //=====================================================
-                        //apresentação do menu dropdown via chave estrageira
-                        $dboItens = new TDbo();
-                        $QueryItens = $dboItens->sqlExec($props->valor);
-                        if($QueryItens){
-                            while($ObItens = $QueryItens->fetch()) {
-
-                                if($ObItens[0] != "") {
-                                    $Itens[$ObItens[0]] = $ObItens[1];
-                                }
-                            }
-                        }
-
-                }else {
-                    
-                    $vls = explode(';',$props->valor);
-
-                    foreach($vls as $v) {
-                        $pts = explode('=>',$v);
-                        $Itens[$pts[0]] = $pts[1];
-                    }
-                }
-
-                //atribui items ao campo seletor
-                $props->valor = $Itens;
-                $Itens = NULL;
-            }
-
-            $this->props[$props->metodo] = $props;
+        	foreach(explode(';', $props->metodo) as $metodo){
+        		$property = clone $props;
+        		// verifica se a propriedade é uma addItems
+        		$property->metodo = $metodo;
+        		if($metodo == "addItems") {
+        		
+        			if(strpos($property->valor,"getItens/") !== false) {
+        				$obSetModel = new TSetModel();
+        				$Itens = $obSetModel->getItensSel($property->valor);
+        			}
+        			elseif(strpos($property->valor,"select") !== false or strpos($property->valor,"SELECT") !== false or strpos($property->valor,"show ") !== false or strpos($property->valor,"SHOW ") !== false) {
+        		
+        				//=====================================================
+        				//apresentação do menu dropdown via chave estrageira
+        				$dboItens = new TDbo();
+        				$QueryItens = $dboItens->sqlExec($property->valor);
+        				if($QueryItens){
+        					while($ObItens = $QueryItens->fetch()) {
+        		
+        						if($ObItens[0] != "") {
+        							$Itens[$ObItens[0]] = $ObItens[1];
+        						}
+        					}
+        				}
+        		
+        			}else {
+        		
+        				$vls = explode(';',$property->valor);
+        		
+        				foreach($vls as $v) {
+        					$pts = explode('=>',$v);
+        					$Itens[$pts[0]] = $pts[1];
+        				}
+        			}
+        		
+        			//atribui items ao campo seletor
+        			$property->valor = $Itens;
+        			$Itens = NULL;
+        		}
+        		
+        		$this->props[$metodo] = $property;
+        	}
+            
         }
         return $this->props;
     }

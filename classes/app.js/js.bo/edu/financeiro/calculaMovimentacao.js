@@ -1,4 +1,4 @@
-function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado){
+function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,c_caixatroco,c_valorentrada,c_valorpago,c_valorcalculado,c_vencimento){
 
     c_valorreal = (c_valorreal == null) ? '#valorreal' :'#'+ c_valorreal;
     c_multa = (c_multa == null) ? '#acrescimo' : '#'+ c_multa;
@@ -9,6 +9,8 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,
     c_valorentrada = (c_valorentrada == null) ? '#valorentrada' : '#'+ c_valorentrada;
     c_valorpago = (c_valorpago == null) ? '#valorfinal' : '#'+ c_valorpago;
     c_valorcalculado = (c_valorcalculado == null) ? '#valorcalculado' : '#'+ c_valorcalculado;
+
+    c_vencimento = (c_vencimento == null) ? '#vencimento' :'#'+ c_vencimento;
 
     if($(c_valorreal).length == 0){
     	c_valorreal = c_valorpago;
@@ -43,6 +45,20 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,
     caixaTroco = parseFloat(caixaTroco.replace(',','.'));
     valorRecebido = parseFloat(valorRecebido.replace(',','.'));
     valorPago = parseFloat(valorPago.replace(',','.'));
+    juros = parseFloat(juros.replace(',','.'));
+    
+    if(valorReal && $(c_vencimento).val()){
+        vetDt = $(c_vencimento).val().split('/');
+        f = new Date();
+        i = new Date(vetDt[2],vetDt[1]-1,vetDt[0],23,59,59);
+        if(f-i > 0){
+            juros = (valorReal*parseInt((f-i)/86400000)*0.33/100) + (valorReal*2/100);
+        }else{
+            juros = 0.00;  
+        }
+    } else {
+        juros = 0.00;        
+    }
 
     var valorTotal = parseFloat(valorReal) + parseFloat(multaAcrecimo) - parseFloat(desconto) + parseFloat(juros) - parseFloat(convenios);
     valorRecebido = (valorRecebido == 0) ? valorTotal : valorRecebido;
@@ -53,23 +69,26 @@ function calculaMovimentacao(c_valorreal,c_multa,c_desconto,c_juros,c_convenios,
     valorPago = parseFloat(valorRecebido) - parseFloat(caixaTroco);
 
     $(c_valorcalculado).val(setMoney(valorTotal));
-    $(c_valorreal).val(setMoney(valorReal)).blur();
-    $(c_multa).val(setMoney(multaAcrecimo)).blur();
-    $(c_desconto).val(setMoney(desconto)).blur();
-    $(c_juros).val(setMoney(juros)).blur();
-    $(c_convenios).val(setMoney(convenios)).blur();
-    $(c_caixatroco).val(setMoney(caixaTroco)).blur();
-    $(c_valorpago).val(setMoney(valorPago)).blur();
+    $(c_valorreal).val(setMoney(valorReal));
+    $(c_multa).val(setMoney(multaAcrecimo));
+    $(c_desconto).val(setMoney(desconto));
+    $(c_juros).val(setMoney(juros));
+    $(c_convenios).val(setMoney(convenios));
+    $(c_caixatroco).val(setMoney(caixaTroco));
+    $(c_valorpago).val(setMoney(valorPago));
+    
+    calculaMultas();
+	
     
     button = $(c_valorpago).parents('.ui-dialog').find('.botaosalvar');
     
-    if($(c_valorcalculado).val() > 0 
-		&& $(c_valorreal).val() > 0 
-		&& $(c_valorpago).val() > 0 ){
+    if(valorTotal > 0 
+		&& valorReal > 0 
+		&& valorPago > 0 ){
     	button.removeAttr('disabled');
 	}else{
 		button.attr('disabled',true);
 	}
     
-
+    
 }

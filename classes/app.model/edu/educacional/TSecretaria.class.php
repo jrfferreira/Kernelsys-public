@@ -404,7 +404,7 @@ class TSecretaria {
                 $obFieds = new TSetfields();
                 $obFieds->geraCampo("Nº de Matricula:", 'matricula', "TEntry", '');
                 $obFieds->setProperty('matricula', 'disabled', 'disabled');
-                $obFieds->setValue("matricula", $getFinanceiro->aluno->codigo);
+                $obFieds->setValue("matricula", $getFinanceiro->aluno->seq);
 
                 $obFieds->geraCampo("Aluno:", 'aluno', "TEntry", '');
                 $obFieds->setProperty('aluno', 'disabled', 'disabled');
@@ -463,7 +463,7 @@ class TSecretaria {
                         $tempDisc['parcela'] = $obContas->numero;
                         $tempDisc['doc'] = $obContas->seq;
                         $tempDisc['vencimento'] = $TSetModel->setDataPT($obContas->vencimento);
-                        $tempDisc['valor'] = 'R$ '.$TSetModel->setMoney($obContas->valornominal);
+                        $tempDisc['valor'] = 'R$ '.$TSetModel->setMoney($obContas->valorinicial);
                         $tempDisc['valorpago'] = 'R$ '.$TSetModel->setMoney($obContas->valorpago);
 
                         $datagrid->addItem($tempDisc);

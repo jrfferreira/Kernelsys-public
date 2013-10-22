@@ -100,14 +100,14 @@ class TAvaliacao {
                 $critDiscs->add(new TFilter("tudiseq", "=", $codigoTurmaDisciplina));
             }
 
-            $sqlNotas = new TDbo(TConstantes::DBNOTA);
-            $notasQuery = $sqlNotas->select("avalseq, tudiseq, nota, ordemavaliacao", $critDiscs);
+            $sqlNotas = new TDbo(TConstantes::VIEW_NOTA);
+            $notasQuery = $sqlNotas->select("avalseq, tudiseq, nota, ordem", $critDiscs);
 
             while ($obNota = $notasQuery->fetchObject()) {
-                $notas[$obNota->tudiseq][$obNota->ordemavaliacao] = $obNota->nota;
+                $notas[$obNota->tudiseq][$obNota->ordem] = $obNota->nota;
             }            
             $sqlDiscs = new TDbo(TConstantes::VIEW_ALUNO_DISCIPLINA);
-            $discsQuery = $sqlDiscs->select("tudiseq, nomedisciplina, nomecurso, cursseq, nometurma, situacao,gdavseq", $critDiscs);
+            $discsQuery = $sqlDiscs->select("tudiseq, nomedisciplina, nomecurso, cursseq, nometurma, statseq, 	gdavseq", $critDiscs);
 
             while ($obDisc = $discsQuery->fetchObject()) {
                 $medias[$obDisc->tudiseq]->nomedisciplina = $obDisc->nomedisciplina;
@@ -115,7 +115,7 @@ class TAvaliacao {
                 $medias[$obDisc->tudiseq]->tudiseq = $obDisc->tudiseq;
                 $medias[$obDisc->tudiseq]->cursseq = $obDisc->cursseq;
                 $medias[$obDisc->tudiseq]->nometurma = $obDisc->nometurma;
-                $medias[$obDisc->tudiseq]->situacao = $obDisc->situacao;
+                $medias[$obDisc->tudiseq]->statseq = $obDisc->statseq;
                 $medias[$obDisc->tudiseq]->gdavseq = $obDisc->gdavseq;
                 $medias[$obDisc->tudiseq]->media = "-";
             }

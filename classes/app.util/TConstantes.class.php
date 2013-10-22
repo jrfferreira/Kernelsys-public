@@ -48,6 +48,7 @@ class TConstantes {
 	const DBLIVRO = "dblivro";
 	const DBLOCACAO_LIVRO = "dblocacao_livro";
 	const DBNOTA = "dbnota";
+	const DBPARAMETRO_PRODUTO = "dbparametro_produto";
 	const DBPARCELA = "dbparcela";
 	const DBPARCELA_ESTORNO = "dbparcela_estorno";
 	const DBPATRIMONIO = "dbpatrimonio";
@@ -100,6 +101,7 @@ class TConstantes {
 	
 	// Visualizações
 	const VIEW_ALUNO = "view_aluno";
+	const VIEW_ALUNO_DISCIPLINA = "view_aluno_disciplina";
 	const VIEW_ALUNO_SOLICITACAO = "view_aluno_solicitacao";
 	const VIEW_AREA_CURSO = "view_area_curso";
 	const VIEW_BOLETO = "view_boleto";
@@ -127,6 +129,7 @@ class TConstantes {
 	const VIEW_FUNCIONARIO_TREINAMENTO = "view_funcionario_treinamento";
 	const VIEW_INSCRICAO = "view_inscricao";
 	const VIEW_LIVRO = "view_livro";
+	const VIEW_NOTA = "view_nota";
 	const VIEW_PARCELA = "view_parcela";
 	const VIEW_PATRIMONIO = "view_patrimonio";
 	const VIEW_PESSOA = "view_pessoa";

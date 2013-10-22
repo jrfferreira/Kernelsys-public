@@ -21,5 +21,5 @@ function calculaMultas(c_vencimento,c_valorreal,c_juros){
         juros = 0.00;        
     }
 
-    $(c_juros).val(setMoney(juros)).blur();
+    $(c_juros).val(setMoney(juros));
 }

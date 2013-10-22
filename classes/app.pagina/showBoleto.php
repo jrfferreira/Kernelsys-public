@@ -48,7 +48,6 @@ $obTransacao = $retTransacao->fetchObject();
 $dboTransacaoContas = new TDbo(TConstantes::DBPARCELA);
 $criteriaTransacaoContas = new TCriteria();
 $criteriaTransacaoContas->add(new TFilter('transeq','=',$obConta->transeq));
-$criteriaTransacaoContas->add(new TFilter('stpaseq','<','4'),'OR');
 $criteriaTransacaoContas->setProperty('order','vencimento desc');
 $retTransacaoContas = $dboTransacaoContas->select("*", $criteriaTransacaoContas);
 
@@ -65,7 +64,7 @@ while($obContas = $retTransacaoContas->fetch()){
             $arrayContas[$obContas[TConstantes::SEQUENCIAL]][TConstantes::SEQUENCIAL] = $obContas[TConstantes::SEQUENCIAL];
              $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['situacao'] = $situacao;
               $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valornominal'] = $TSetModel->setValorMonetario($obContas['valorinicial']);
-               $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['vencimento'] = $TSetModel->setDataPT($obContas['valorinicial']);
+               $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['vencimento'] = $TSetModel->setDataPT($obContas['vencimento']);
                 $arrayContas[$obContas[TConstantes::SEQUENCIAL]]['valorpago'] = $TSetModel->setValorMonetario($obContas['valorinicial'] - $obContas['valoratual']);
 
         }
@@ -81,6 +80,7 @@ $obCliente = $retPessoa->fetchObject();
 //valida se o boleto já foi emitido
 $criteriaCkBoleto = new TCriteria();
 $criteriaCkBoleto->add(new TFilter('parcseq','=',$obConta->seq));
+$criteriaCkBoleto->add(new TFilter('stboseq','!=',9));
 $dboCkBoleto = new TDbo(TConstantes::DBBOLETO);
 $retCkBoleto = $dboCkBoleto->select(array("seq","bkp"), $criteriaCkBoleto);
 $obCkBoleto= $retCkBoleto->fetchObject();

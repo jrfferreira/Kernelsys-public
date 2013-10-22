@@ -76,42 +76,18 @@ class TForm{
      * param  $object = objeto com dados
      */
     public function setData($object){
-
         if(count($object) > 0){
-        	
         	foreach ($object as $table => $campos){
-        		
-        		foreach(/* $this->fields */ $campos as $name=>$campo){
+        		if(count($campos) > 0){
+        			foreach(/* $this->fields */ $campos as $name=>$campo){
         				foreach($this->fields as $field){
         					if(is_object($field) && $field->getName() == $name){
-	        					$field->setValue($campo);
+        						$field->setValue($campo);
         					}
-        				}   
-		        	}
+        				}
+        			}
         		}
-        	
-
-		/*  foreach ($this->fields as $name => $field){
-
-                    $coluna = $field->getName();
-                if ($coluna){ // labels não possuem nome
-
-
-                    if(is_object($object)){
-                        if($object->$coluna != ""){
-                            $valorCampo = $object->$coluna;
-                        }
-                    }
-                    else if(is_array($object)){
-                        if($object[$coluna] != ""){
-                            $valorCampo = $object[$coluna];
-                        }
-                    }                    
-
-                     $field->setValue($valorCampo);
-                     $valorCampo = NULL;
-                }
-            }*/
+        	}
         }
     }
     

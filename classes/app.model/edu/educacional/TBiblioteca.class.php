@@ -37,7 +37,7 @@ class TBiblioteca {
                 $insert["label"] = "Multa Biblioteca";
                 $insert["descricao"] = "Multa por atraso na devolução de livros.";
                 $insert["tabela"] = TConstantes::DBLIVRO;
-                $insert["valoralteravel"] = 1;
+                $insert["valoralteravel"] = true;
                 $obTDbo = new TDbo(TConstantes::DBPRODUTO);
                 $ret = $obTDbo->insert($insert);
                 $obTDbo->commit();

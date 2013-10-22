@@ -110,6 +110,128 @@
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 
 
+# VIEW_PARCELA
+
+CREATE OR REPLACE VIEW view_parcela AS 
+ SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.transeq, t1.pessseq, t0.plcoseq, t0.tipo, t0.valorinicial, t0.valoratual, t0.numero, t0.desconto, to_char(t0.vencimento::timestamp with time zone, 'DD/MM/YYYY'::text) AS vencimento, t0.obs, t0.stpaseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t2.pessnmrz AS nomepessoa, t3.nomeconta AS nomeplanoconta, t0.instrucoespagamento, t999.seq AS statseq, t999.statdesc AS statdescr, t5.valorfinal AS valorfinal_credito, t6.valorfinal AS valorfinal_debito, t8.titulo as stpadesc
+ FROM dbparcela t0
+   LEFT JOIN dbtransacao t1 ON t1.seq = t0.transeq
+   LEFT JOIN dbpessoa t2 ON t2.seq = t1.pessseq
+   LEFT JOIN dbplano_conta t3 ON t3.seq = t0.plcoseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq
+   LEFT JOIN dbsituacao_parcela t8 ON t8.seq = t0.stpaseq
+   LEFT JOIN ( SELECT sum(dbcaixa.valorfinal) AS valorfinal, dbcaixa.parcseq
+   FROM dbcaixa
+  WHERE dbcaixa.tipo = 'C'::bpchar
+  GROUP BY dbcaixa.parcseq) t5 ON t0.seq = t5.parcseq
+   LEFT JOIN ( SELECT sum(dbcaixa.valorfinal) AS valorfinal, dbcaixa.parcseq
+   FROM dbcaixa
+  WHERE dbcaixa.tipo = 'D'::bpchar
+  GROUP BY dbcaixa.parcseq) t6 ON t0.seq = t6.parcseq;
+
+
+# TABELA VIEW_NOTA
+CREATE OR REPLACE VIEW view_nota AS 
+ SELECT 
+	t1.seq, 
+	t1.unidseq, 
+	t1.usuaseq, 
+	t1.alunseq, 
+	t1.tudiseq, 
+	t1.avalseq,
+	t1.nota,
+	to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
+	t999.seq AS statseq, 
+	t999.statdesc, 
+	t5.titulo AS nometurma,
+	t6.titulo AS nomedisciplina,
+	t2.pessseq,
+	t3.pessnmrz AS nomepessoa,
+	t7.avaliacao,
+	t7.ordem
+	
+	
+   FROM dbnota t1
+   LEFT JOIN dbaluno t2 ON t2.seq = t1.alunseq
+   LEFT JOIN dbpessoa t3 ON t3.seq = t2.pessseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq
+   LEFT JOIN dbturma_disciplina t4 ON t4.seq = t1.tudiseq
+   LEFT JOIN dbturma t5 ON t5.seq = t4.turmseq
+   LEFT JOIN dbdisciplina t6 ON t6.seq = t4.discseq
+   LEFT JOIN dbavaliacao t7 ON t7.seq = t1.avalseq;
+
+# VIEW_ALUNO_DISCIPLINA
+	CREATE OR REPLACE VIEW view_aluno_disciplina AS 
+ SELECT t1.seq, 
+	t1.unidseq, 
+	t1.usuaseq, 
+	t1.alunseq,
+	t1.discseq,
+	t1.tudiseq,
+	t1.stadseq,
+	t1.obs,
+	to_char(t1.dataalteracao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataalteracao,
+	to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
+	t999.seq AS statseq, 
+	t999.statdesc, 
+	t5.titulo AS nometurma, 
+	t6.titulo AS nomedisciplina, 
+	t2.pessseq, 
+	t3.pessnmrz AS nomepessoa,
+	t9.nome AS nomecurso,
+	t8.seq AS cursseq,
+	t5.seq AS turmseq,
+	t9.gdavseq
+   FROM dbaluno_disciplina t1
+   LEFT JOIN dbaluno t2 ON t2.seq = t1.alunseq
+   LEFT JOIN dbpessoa t3 ON t3.seq = t2.pessseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq
+   LEFT JOIN dbturma_disciplina t4 ON t4.seq = t1.tudiseq
+   LEFT JOIN dbturma t5 ON t5.seq = t4.turmseq
+   LEFT JOIN dbdisciplina t6 ON t6.seq = t1.discseq
+   LEFT JOIN dbcurso t8 ON t8.seq = t5.cursseq
+   LEFT JOIN dbprojeto_curso t9 ON t9.seq = t8.pjcuseq;
+
+# VIEW TURMA_DISCIPLINA
+
+
+CREATE OR REPLACE VIEW view_turma_disciplina AS 
+ SELECT t0.seq, 
+	t0.unidseq, 
+	t0.turmseq, 
+	t3.cursseq, 
+	t0.discseq, 
+	t0.profseq, to_char(t0.datarealizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS datarealizacao, 
+	to_char(t0.dataatualizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataatualizacao, 
+	t0.frequencia, 
+	t0.datas, 
+	t0.custohoraaula, 
+	t0.regimetrabalho, 
+	t0.custohospedagem, 
+	t0.custodeslocamento, 
+	to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
+	t6.nome AS sala, 
+	t999.seq AS statseq, 
+	t999.statdesc, 
+	t2.titulo AS nomecurso, 
+	t3.titulo AS nometurma, 
+	t4.titulo AS nomedisciplina, 
+	t4.cargahoraria, 
+	t5.pessnmrz AS nomeprofessor, 
+	( SELECT count(dbaluno_disciplina.seq) AS count
+           FROM dbaluno_disciplina
+          WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos, 
+          t0.salaseq, t7.gdavseq, t3.sttuseq, t0.custoalimentacao, t0.custoextra
+   FROM dbturma_disciplina t0
+   LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
+   LEFT JOIN dbcurso t2 ON t2.seq = t3.cursseq
+   LEFT JOIN dbprojeto_curso t7 ON t7.seq = t2.pjcuseq
+   LEFT JOIN dbdisciplina t4 ON t4.seq = t0.discseq
+   LEFT JOIN dbpessoa t5 ON t5.seq = (( SELECT t9.pessseq
+   FROM dbprofessor t9
+  WHERE t9.seq = t0.profseq))
+   LEFT JOIN dbsala t6 ON t6.seq = t0.salaseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 
 
 # TABELA ENDEREÇO
@@ -118,6 +240,9 @@
 
 # TABELA TURMA
 	coluna diafixovencimento para padraovencimento numeric
+	coluna frequencia para frequenciaaula
+	coluna localaulas character varying(200)
+	remover coluna unalseq
 	
 # TABELA PESSOA
 	email_principal character varying(180)
@@ -127,3 +252,34 @@
 
 # REMOVER O "NOT NULL" das colunas desconto, acrescimo da tabela dbcaixa
 
+# CRIAR TABELA DBPARAMETRO_PRODUTO
+
+CREATE TABLE dbparametro_produto (
+	seq serial,    
+	unidseq bigint NOT NULL,
+    usuaseq bigint NOT NULL,
+    tabela character varying(60),
+    collabel character varying(60),
+    colvalor character varying(200),
+    coldesc character varying(80),
+    datacad date DEFAULT ('now'::text)::date NOT NULL,
+    tpprseq bigint NOT NULL,
+    statseq bigint DEFAULT 1 NOT NULL
+);
+
+# TABELA DBPRODUTO
+-- Sequence: dbaluno_requisito_seq_seq
+
+-- DROP SEQUENCE dbaluno_requisito_seq_seq;
+
+	CREATE SEQUENCE dbproduto_seq_seq
+	  INCREMENT 1
+	  MINVALUE 1
+	  MAXVALUE 9223372036854775807
+	  START 1
+	  CACHE 1;
+	ALTER TABLE dbproduto_seq_seq
+	  OWNER TO postgres;
+	
+	
+	ALTER TABLE dbproduto ALTER COLUMN seq SET DEFAULT nextval('dbproduto_seq_seq'::regclass);

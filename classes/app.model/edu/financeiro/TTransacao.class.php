@@ -237,7 +237,7 @@ class TTransacao {
             if(!$codigoconta){  
 	            while ($obTransacaoContas = $retTransacaoContas->fetchObject()) {
 	                $contas[$obTransacaoContas->seq] = $obTransacaoContas;
-                    $contas[$obTransacaoContas->seq]->valorpago = $obTransacaoContas->valorpago_credito - $obTransacaoContas->valorpago_debito;
+                    $contas[$obTransacaoContas->seq]->valorpago = $obTransacaoContas->valorfinal_credito - $obTransacaoContas->valorfinal_debito;
 	            }
             }else{
             	$contas = $retTransacaoContas->fetchObject();
@@ -874,10 +874,10 @@ class TTransacao {
         if ($obConta) {
             $lista = new TDataGrid();
 
-            $lista->addColumn(new TDataGridColumn('codigomovimentacao', 'Movimentação', 'center', '35%'));
+            $lista->addColumn(new TDataGridColumn('caixseq', 'Movimentação', 'center', '35%'));
             $lista->addColumn(new TDataGridColumn('formapag', 'Forma de Pagamento', 'center', '35%'));
-            $lista->addColumn(new TDataGridColumn('tipomovimentacao', 'Tipo', 'center', '10%'));
-            $lista->addColumn(new TDataGridColumn('valorentrada', 'Valor', 'center', '10%'));
+            $lista->addColumn(new TDataGridColumn('tipo', 'Tipo', 'center', '10%'));
+            $lista->addColumn(new TDataGridColumn('valorfinal', 'Valor', 'center', '10%'));
             $lista->addColumn(new TDataGridColumn('datapag', 'Data', 'center', '10%'));
             $lista->createModel('100%');
 
@@ -887,8 +887,8 @@ class TTransacao {
                 foreach ($obConta->movimentacoes as $ch => $vl) {
                     $tempDisc['caixseq'] = $vl->seq;
                     $tempDisc['formapag'] = $vl->formapag;
-                    $tempDisc['tpmoseq'] = $vl->tpmoseq;
-                    $tempDisc['valorentrada'] = $TSetModel->setValorMonetario($vl->valorentrada);
+                    $tempDisc['tipo'] = $vl->tipo;
+                    $tempDisc['valorfinal'] = $TSetModel->setValorMonetario($vl->valorfinal);
                     $tempDisc['datapag'] = $vl->datacad;
 
 
@@ -1594,21 +1594,18 @@ class TTransacao {
     		$obTDbo = new TDbo(TConstantes::DBBOLETO);
     		$crit = new TCriteria();
     		$crit->add(new TFilter('parcseq', '=', $codigoConta));
-    		$dados = array('boleseq'=>'9');
-    		if($obTDbo->update($dados,$crit))
+    		$dados = array('stboseq'=>'9');
+    		if(!$obTDbo->update($dados,$crit))
     			throw new ErrorException("Não foi possivel remover a duplicata informada.", 1);
     	} catch (Exception $e) {
     		new setException($e);
     	}
     }
     
-    public function limpaInformacoesBoleto($formseq){
+    public function limpaInformacoesBoleto($headerForm){
     	try {
-	    	$obHeader = new TSetHeader();
-	    	$headerForm = $obHeader->getHead($formseq);
-	    	
-	    	if($headerForm['codigo']){
-	    		$this->removeContaDuplicata($headerForm['codigo']);
+	    	if($headerForm['seq']){
+	    		$this->removeContaDuplicata($headerForm['seq']);
 	    	}
 	    	
     	} catch (Exception $e) {

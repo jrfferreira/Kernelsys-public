@@ -1578,25 +1578,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="393">
-      <seq>393</seq>
-      <formid>listaDisciplinasCurso</formid>
-      <nomeform>Disciplinas</nomeform>
-      <tabseq>8</tabseq>
-      <statseq>1</statseq>
-      <formseq>354</formseq>
-      <listseq>394</listseq>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>2</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="435">
       <seq>435</seq>
       <formid>processo-atestadoMatricula</formid>
@@ -1844,25 +1825,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="450">
-      <seq>450</seq>
-      <formid>transacoesConvenios</formid>
-      <nomeform>Convênios</nomeform>
-      <tabseq>103</tabseq>
-      <statseq>1</statseq>
-      <formseq>67</formseq>
-      <listseq>451</listseq>
-      <formainclude>one</formainclude>
-      <dimensao>550;200</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>TConvenios/atualizaTransacao</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>2</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="462">
       <seq>462</seq>
       <formid>alunosDisciplinas</formid>
@@ -1877,6 +1839,25 @@
       <botcancelar>0</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>1</autosave>
+      <nivel>2</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="393">
+      <seq>393</seq>
+      <formid>listaDisciplinasCurso</formid>
+      <nomeform>Disciplinas</nomeform>
+      <tabseq>8</tabseq>
+      <statseq>1</statseq>
+      <formseq>354</formseq>
+      <listseq>394</listseq>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
       <nivel>2</nivel>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -3212,25 +3193,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="395">
-      <seq>395</seq>
-      <formid>listaDisciplinasTurma</formid>
-      <nomeform>Disciplinas</nomeform>
-      <tabseq>10</tabseq>
-      <statseq>1</statseq>
-      <formseq>335</formseq>
-      <listseq>396</listseq>
-      <formainclude>multiple</formainclude>
-      <dimensao>900;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>1</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="397">
       <seq>397</seq>
       <formid>listaDisciplinasPlanoAulaProfessor</formid>
@@ -3395,25 +3357,6 @@
       <dimensao/>
       <botconcluir>1</botconcluir>
       <botcancelar>0</botcancelar>
-      <formoutcontrol>0</formoutcontrol>
-      <autosave>0</autosave>
-      <nivel>1</nivel>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="58">
-      <seq>58</seq>
-      <formid>diarioCoordenacao</formid>
-      <nomeform>Diario Coordenacao</nomeform>
-      <tabseq>12</tabseq>
-      <statseq>1</statseq>
-      <formseq/>
-      <listseq>199</listseq>
-      <formainclude>one</formainclude>
-      <dimensao>700;600</dimensao>
-      <botconcluir>1</botconcluir>
-      <botcancelar>1</botcancelar>
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
       <nivel>1</nivel>
@@ -3782,6 +3725,44 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="58">
+      <seq>58</seq>
+      <formid>diarioCoordenacao</formid>
+      <nomeform>Diario Coordenacao</nomeform>
+      <tabseq>12</tabseq>
+      <statseq>1</statseq>
+      <formseq/>
+      <listseq>199</listseq>
+      <formainclude>one</formainclude>
+      <dimensao>700;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="395">
+      <seq>395</seq>
+      <formid>listaDisciplinasTurma</formid>
+      <nomeform>Disciplinas</nomeform>
+      <tabseq>10</tabseq>
+      <statseq>1</statseq>
+      <formseq>335</formseq>
+      <listseq>396</listseq>
+      <formainclude>multiple</formainclude>
+      <dimensao>900;500</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="2">
       <seq>2</seq>
       <formid>form_telefones</formid>
@@ -3873,6 +3854,25 @@
       <formoutcontrol>0</formoutcontrol>
       <autosave>0</autosave>
       <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="450">
+      <seq>450</seq>
+      <formid>transacoesConvenios</formid>
+      <nomeform>Convênios</nomeform>
+      <tabseq>103</tabseq>
+      <statseq>1</statseq>
+      <formseq>67</formseq>
+      <listseq>451</listseq>
+      <formainclude>one</formainclude>
+      <dimensao>550;200</dimensao>
+      <botconcluir>1</botconcluir>
+      <botcancelar>1</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>2</nivel>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

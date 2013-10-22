@@ -62,23 +62,21 @@ class TProduto{
     /**
     * Gera um produto baseado no banco de paramentros de especialização
     */
-    public function setProdutoParametro($formseq){
+    public function setProdutoParametro($headerForm){
 
         try{
 
-            if(!$formseq){
+            if(!$headerForm[TConstantes::FORM]){
                 throw new ErrorException("Ouve um problema na geração o produto. Entre em contato com o suporte.", 1);
             }
 
-           $obHeader = new TSetHeader();
-           $headerForm = $obHeader->getHead($formseq);
            $seq   = $headerForm[TConstantes::SEQUENCIAL];
            $parametro = $headerForm[TConstantes::ENTIDADE];
 
              //Monta vetor de informações do produto=============================================
-            $sqlParametros  = new TDbo(TConstantes::DBPRODUTO_PARAMETRO);
-                $critParametros = new TCriteria();
-                $critParametros->add(new TFilter("tabela", "=", $parametro));
+            $sqlParametros  = new TDbo(TConstantes::DBPARAMETRO_PRODUTO);
+            $critParametros = new TCriteria();
+            $critParametros->add(new TFilter("tabela", "=", $parametro));
             $retParametros = $sqlParametros->select("*", $critParametros);
             $obParametros = $retParametros->fetchObject();
 
@@ -150,14 +148,14 @@ class TProduto{
                 }
             }
 
-            $this->setValue('valorAlteravel', 0);
+            $this->setValue('valorAlteravel', false);
             $this->setValue('tabela', $parametro);
-            $this->setValue('seqtipoproduto', $obParametros->seqtipoproduto);
+            $this->setValue('tpprseq', $obParametros->tpprseq);
             $this->setValue('statseq', 1);
 
 
-            if($obEspecializacao->seqproduto){
-                $seqproduto = $this->setProduto($obEspecializacao->seqproduto);
+            if($obEspecializacao->prodseq){
+                $seqproduto = $this->setProduto($obEspecializacao->prodseq);
             }else{
                 $seqproduto = $this->addProduto();
             }
@@ -165,7 +163,7 @@ class TProduto{
                 $sqlUpdate = new TDbo($parametro);
                 $critUpdate = new TCriteria();
                 $critUpdate->add(new TFilter("seq","=",$seq));
-                $retUpdate = $sqlUpdate->update(array('seqproduto' => $seqproduto), $critUpdate);
+                $retUpdate = $sqlUpdate->update(array('prodseq' => $seqproduto), $critUpdate);
 
 
             return $seqproduto;
@@ -184,7 +182,7 @@ class TProduto{
     public function createProduto($seq,$entidade){
         try{
              //Monta vetor de informações do produto=============================================
-            $sqlParametros  = new TDbo(TConstantes::DBPRODUTO_PARAMETRO);
+            $sqlParametros  = new TDbo(TConstantes::DBPARAMETRO_PRODUTO);
                 $critParametros = new TCriteria();
                 $critParametros->add(new TFilter("tabela", "=", $entidade));
             $retParametros = $sqlParametros->select("*", $critParametros);
@@ -258,7 +256,7 @@ class TProduto{
                 }
             }
 
-             $produto['valorAlteravel'] = 0;
+             $produto['valorAlteravel'] = false;
              $produto['tabela'] = $entidade;
              $produto['seqtipoproduto'] = $obParametros->seqtipoproduto;
              $produto['statseq'] = 1;

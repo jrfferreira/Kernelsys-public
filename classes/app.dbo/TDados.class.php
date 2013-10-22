@@ -89,7 +89,7 @@ class TDados {
             if($sDados) {// verifica se há registro no vetor
                 foreach($sDados as $ec=>$ev) {
 
-                    if(!array_key_exists($ec, $this->dados)){
+                    if(!is_array($this->dados) || !array_key_exists($ec, $this->dados)){
                          $this->dados[$entity][$ec] = $ev;
                     }
                 }

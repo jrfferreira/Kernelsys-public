@@ -66,11 +66,11 @@ $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <table>';
 
 if ($dadosbl['detalhamento']) {
-    $htmlBoleto .= '<br/><table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top><DIV ALIGN="CENTER" class=caixa>Historico de Faturas</DIV></TD></TR><TR><TD valign=top class=cp align=center>';
+    $htmlBoleto .= '<br/><table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top><DIV ALIGN="CENTER" class=caixa>Histórico de Faturas</DIV></TD></TR><TR><TD valign=top class=cp align=center>';
     $htmlBoleto .= '<table width=650 cellspacing=0 cellpadding=0 border=0><tr height=20><td class=cp>Doc.</td><td class=cp>Valor</td><td class=cp>Vencimento</td><td class=cp>Situação</td><td class=cp align=right>Valor Pago</td><tr>';
 
     foreach($dadosbl['detalhamento'] as $ch => $vl){
-        $htmlBoleto .= '<tr><td class=cp>'.$vl['codigo'].'</td><td class=cn>'.$vl['valornominal'].'</td><td class=cn>'.$vl['vencimento'].'</td><td class=cn>'.$vl['situacao'].'</td><td class=cn align=right>'.$vl['valorpago'].'</td><tr>';
+        $htmlBoleto .= '<tr><td class=cp>'.$vl['seq'].'</td><td class=cn>'.$vl['valornominal'].'</td><td class=cn>'.$vl['vencimento'].'</td><td class=cn>'.$vl['situacao'].'</td><td class=cn align=right>'.$vl['valorpago'].'</td><tr>';
         }
 
     $htmlBoleto .= '</table><br/>';

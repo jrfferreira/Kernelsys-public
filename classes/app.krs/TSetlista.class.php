@@ -176,7 +176,7 @@ class TSetlista {
         	if($tipodado == 'string' and is_string($dado)){
         		   
         		$incluir = true; 		
-        	}else if($tipodado == 'numeric' and is_numeric($dado)){ 
+        	}else if($tipodado == 'numeric' and (is_numeric($dado) || strtolower($comp) == 'in')){ 
         				
         		$incluir = true;
         	}else if($tipodado == 'date' and $control->is_date($dado)){

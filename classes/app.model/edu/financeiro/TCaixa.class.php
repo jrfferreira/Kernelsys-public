@@ -170,14 +170,14 @@ class TCaixa {
             if($formseq) {
                 $codigocaixa = $obHeader['seq'];
                 
-                $this->obTDbo->commit();
+                //$this->obTDbo->commit();
 
                 $obMovimentoCaixa = $this->getMovimentoCaixa($codigocaixa);
 
                 //executa baixa no caixa
                 $this->baixaContaCaixa($obMovimentoCaixa->parcseq, $obMovimentoCaixa->valorfinal, $obMovimentoCaixa->desconto, $obMovimentoCaixa->boleseq, $obMovimentoCaixa->acrescimo, $obMovimentoCaixa->fmpgseq, $obMovimentoCaixa->cofiseq, $obMovimentoCaixa->seq);
 				
-                $this->obTDbo->commit();
+                //$this->obTDbo->commit();
                 $this->obTDbo->close();
             }
 
@@ -251,59 +251,59 @@ class TCaixa {
                 	
 	                	//identifica o status da conta =============================
 	                	$valorBase = ($valorfinal + $desconto) - $acrescimo;
-	                	$novoValorReal = $dados->valorreal - $valorfinal;
+	                	$novoValorReal = $dados->valoratual - $valorfinal;
 	                	
-	                	if ($obMovimentoCaixa->stmoseq == "3") {
+	                	if ($dados->stpaseq == "3") {
 	                		$statusConta = "5";
 	                	} else {
-	                		if ($valorBase < $obMovimentoCaixa->valorreal) {
+	                		if ($valorBase < $dados->valoratual) {
 	                			$statusConta = "3"; // status conta parcialmente paga
 	                		} else {
 	                			$statusConta = "2"; // status conta paga
 	                		}
 	                		//==========================================================
 	                	}
+	                	
+	                	if(!$codigocaixa){
 
-                        //configura argumentos do movimento de caixa
-                        $args["parcseq"]   = $codigoconta;
-                        $args["plcoseq"]   = $obTransac->plcoseq;
-                        $args["cofiseq"]   = $contacaixa;
-                        $args["stpaseq"]   = $statusConta;
-                        $args['transeq']   = $obTransac->seq;
-                        $args["tipo"]      = $dados->tipo;
-                        $args["boleseq"]    = $boleseq;
-                        $args["valor"]     = $dados->valoratual;
-                        $args["valorfinal"]   = $valorfinal;
-                        $args["valorentrada"] = $valorfinal;
-                        $args["vencimento"]   = $dados->vencimento;
-                        $args["fmpgseq"]  	  = $formapagamento;
-                        $args["statseq"]   = $dados->statseq;
-                        $args["cxfuseq"]   = $this->getSeqCaixaFuncionario($contacaixa);
-                    
-                        $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
-                        $codigocaixa = $this->obTDbo->insert($args);
+		                        //configura argumentos do movimento de caixa
+		                        $args["parcseq"]   = $codigoconta;
+		                        $args["plcoseq"]   = $obTransac->plcoseq;
+		                        $args["cofiseq"]   = $contacaixa;
+		                        $args["stpaseq"]   = $statusConta;
+		                        $args['transeq']   = $obTransac->seq;
+		                        $args["tipo"]      = $dados->tipo;
+		                        $args["boleseq"]    = $boleseq;
+		                        $args["valor"]     = $dados->valoratual;
+		                        $args["valorfinal"]   = $valorfinal;
+		                        $args["valorentrada"] = $valorfinal;
+		                        $args["vencimento"]   = $dados->vencimento;
+		                        $args["fmpgseq"]  	  = $formapagamento;
+		                        $args["statseq"]   = $dados->statseq;
+		                        $args["cxfuseq"]   = $this->getSeqCaixaFuncionario($contacaixa);
+		                    
+		                        $this->obTDbo->setEntidade(TConstantes::DBCAIXA);
+		                        $codigocaixa = $this->obTDbo->insert($args);
+		                        
+		                } else {
 
-                    if($codigocaixa) {
-
-                        //Altera status da conta
-                         
-                        $dadosUpdateConta["stpaseq"] = $statusConta;
-                        $dadosUpdateConta["valoratual"] = $novoValorReal < 0 ? 0 : $novoValorReal;
-                        $this->obTDbo->setEntidade(TConstantes::DBPARCELA);
-                        $criteriaUpContas = new TCriteria();
-                        $criteriaUpContas->add(new TFilter('seq', '=', $codigoconta));
-                        $exeUpConta = $this->obTDbo->update($dadosUpdateConta, $criteriaUpContas);
- 						
-                        if (!$exeUpConta) {
-                            throw new ErrorException("O estado da conta não pode ser alterado.");
-                        }
-                        else{
-                            return true;
-                        }
-
-                    } else {
-                        throw new ErrorException("não foi possivel atualizar os dados do movimento de caixa.");
-                    }
+	                        //Altera status da conta
+	                         
+	                        $dadosUpdateConta["stpaseq"] = $statusConta;
+	                        $dadosUpdateConta["valoratual"] = $novoValorReal < 0 ? 0 : $novoValorReal;
+	                        $this->obTDbo->setEntidade(TConstantes::DBPARCELA);
+	                        $criteriaUpContas = new TCriteria();
+	                        $criteriaUpContas->add(new TFilter('seq', '=', $codigoconta));
+	                        $exeUpConta = $this->obTDbo->update($dadosUpdateConta, $criteriaUpContas);
+	 						
+	                        if (!$exeUpConta) {
+	                            throw new ErrorException("O estado da conta não pode ser alterado.");
+	                        }
+	                        else{
+	                            return true;
+	                        }
+	
+	                    }
 
                 }else{
                     throw new ErrorException("Não há saldo disponível em caixa para a movimentação. <br/><br/> Valor Necessário: <b>R$ $valorNecessario</b><br/> Valor Disponível: R$ <b>$valorDisponivel</b>");

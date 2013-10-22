@@ -427,18 +427,16 @@ class TTurma {
      *
      * param <type> $formseq
      */
-    public function setProduto($formseq){
+    public function setProduto($headerForm){
         try{
 
-            if(!$formseq){
+            if(!$headerForm[TConstantes::FORM]){
                 throw new ErrorException("Ouve um problema na geração o produto da turma. Entre em contato com o suporte.", 1);
             }
 
-           $obHeader = new TSetHeader();
-           $headerForm = $obHeader->getHead($formseq);
 
              $produtoTurma = new TProduto();
-             $codigoproduto = $produtoTurma->setProdutoParametro($formseq);
+             $codigoproduto = $produtoTurma->setProdutoParametro($headerForm);
 
              //Insere o codigo do produto na especialização======================================
             $dadosUpdate['prodseq'] = $codigoproduto;
@@ -497,9 +495,11 @@ class TTurma {
                         $prodTaxa->setValue('label', 'Taxa de inscrição');
                         $prodTaxa->setValue('valor', $obTurma->valortaxa);
                         $prodTaxa->setValue('descricao', 'Taxa de inscrição relacionada a turma: '.$obTurma->titulo);
-                        $prodTaxa->setValue('valoralteravel', '0');
-                        $prodTaxa->setValue('tabela', $obTurma->codigo);
-                        $prodTaxa->setValue('ativo', '1');
+                        $prodTaxa->setValue('valoralteravel', false);
+                        $prodTaxa->setValue('tabela', TConstantes::DBTURMA);
+                        $prodTaxa->setValue('obs', $obTurma->seq);
+                        $prodTaxa->setValue('tpprseq', 6);
+                        $prodTaxa->setValue('statseq', '1');
                      $prodTaxa->addProduto();
                 }
 
