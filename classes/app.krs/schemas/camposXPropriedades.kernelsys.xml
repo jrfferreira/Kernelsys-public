@@ -751,6 +751,16 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="707">
+      <seq>707</seq>
+      <campseq>632</campseq>
+      <metodo>addItems</metodo>
+      <valor>select seq,pessnmrz from dbpessoa where statseq=1 order by pessnmrz</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="92">
       <seq>92</seq>
       <campseq>196</campseq>
@@ -7120,16 +7130,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="706">
-      <seq>706</seq>
-      <campseq>648</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="708">
       <seq>708</seq>
       <campseq>650</campseq>
@@ -7295,16 +7295,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <campseq>640</campseq>
       <metodo>addItems</metodo>
       <valor>select seq,pessnmrz from dbpessoa where fornecedor=true and statseq=1</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="707">
-      <seq>707</seq>
-      <campseq>632</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where cliente=true and statseq=1 order by pessnmrz</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>

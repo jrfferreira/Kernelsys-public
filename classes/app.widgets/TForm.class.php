@@ -79,11 +79,13 @@ class TForm{
         if(count($object) > 0){
         	foreach ($object as $table => $campos){
         		if(count($campos) > 0){
-        			foreach(/* $this->fields */ $campos as $name=>$campo){
-        				foreach($this->fields as $field){
-        					if(is_object($field) && $field->getName() == $name){
-        						$field->setValue($campo);
-        					}
+        			foreach($campos as $name=>$campo){
+        				if(count($this->fields) > 0){
+	        				foreach($this->fields as $field){
+	        					if(is_object($field) && $field->getName() == $name){
+	        						$field->setValue($campo);
+	        					}
+	        				}
         				}
         			}
         		}
