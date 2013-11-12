@@ -235,6 +235,37 @@ class DocumentoBO{
 	}
 		
 
+	/**
+	 * Replica parcelas em sequência de acordo com referencia lançada
+	 * @param array $head = Cabeçalho do formuario em questão
+	 * @param array $dados = dados do furmulario em questão
+	 */
+	public function replicaParcela($head, $dados){
+		
+		$obData = new TSetData();
+		$param['method'] = 'onSave';
+		$param['tipoRetorno'] = 'form';
+		$param['formseq'] = 163;
+		$param['typeRun'] = 'multiple';
+		
+		$obHeader = new TSetHeader();
+		$obHeader->addHeader(163,TConstantes::HEAD_OUTCONTROL,0);
+		
+		for($i = 1;$dados['dcpcrpqt']>$i;$i++){
+			
+			$dadoAtual = $dados;
+			
+			$dadoAtual['dcpcnmpc'] += 1;
+			$dadoAtual['dcpcdtvc'] = $obData->calcData($obData->dataPadrao($dadoAtual['dcpcdtvc']), 30, '-');
+			
+			$_POST = $dadoAtual;
+			
+			$obMain = new TMain('onSave', $param);	
+			
+		}	
+	}
+		
+
 }
 
 ?>

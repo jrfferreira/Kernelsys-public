@@ -12,7 +12,7 @@ class TDados {
      * Monta a extrutura básica para o funcionamento da classe
      * param $seq= seqdo registro na base de dados
      * param $tipo = tipo de formulário (form/bloco)
-     * param $entidade = entidade(tabela) alvo da aÃ§Ã£o
+     * param $entidade = entidade(tabela) alvo da ação
      */
     public function __construct($formseq, $seq, $tipo, $entidade) {
 
@@ -121,7 +121,7 @@ class TDados {
 
         // cria critério de seleção baseado no SEQ
         $criteria = new TCriteria;
-        $criteria->add(new TFilter($coluna, '=', $seq));
+        $criteria->add(new TFilter($coluna, '=', $seq, 'numeric'));
 
         $loadDbo = new TDbo($entidade);
         $result = $loadDbo->select('*', $criteria);
@@ -137,6 +137,17 @@ class TDados {
                 $obj = $obj[key($obj)];
             }
         }
+        
+        //retorna descrição dos campos com pesquisa ativadas.
+        $dadosColPesq = $this->getColunaPesquisa($entidade, $obj);
+        if($dadosColPesq){
+        	$obj = array_merge($obj, $dadosColPesq);
+        }
+        
+        
+        //armazena dados do form no cabeçalho
+        $this->obHeaderForm->addHeader($this->formseq, TConstantes::HEAD_DADOSFORM, $obj);
+                
         return $obj;
     }
 
@@ -154,6 +165,65 @@ class TDados {
        }
 
        return $coluna;
+    }
+
+    /**
+     * Verifica a existencia de um campo de pesquisa no formulario
+     * para preencher a descrição do mesmo na edição
+     * @param unknown $tabela
+     */
+    private function getColunaPesquisa($tabela, $dados){
+    	
+    	//inicia uma transação com a camada de dados do form
+    	$obKDbo = new TKrs();
+    	
+    	$obKDbo->setEntidade('tabelas');
+	    	$criteriaTab = new TCriteria();
+	    	$criteriaTab->add(new TFilter('tabela','=',$tabela, 'string'));	
+    	$retTabela = $obKDbo->select("*", $criteriaTab);
+    	$obtabela = $retTabela->fetchObject();
+    	
+    	$obKDbo->setEntidade('campos');
+    		$criteriCamp = new TCriteria();
+    		$criteriCamp->add(new TFilter('tabseq','=',$obtabela->seq, 'numeric'), 'AND');
+    		$criteriCamp->add(new TFilter('ativapesquisa','!=',0, 'numeric'));
+    	$retCampo = $obKDbo->select("*", $criteriCamp);
+    	
+    	while($obCampo = $retCampo->fetchObject()){
+	    	$obKDbo->setEntidade('lista');
+		    	$criteriLista = new TCriteria();
+		    	$criteriLista->add(new TFilter('seq','=',$obCampo->ativapesquisa, 'numeric'), 'AND');
+		    	$criteriLista->add(new TFilter('tipo','=','pesq', 'string'));
+		    $retLista = $obKDbo->select("*", $criteriLista);
+	    	$obLista = $retLista->fetchObject();
+	    	
+	    	$colPesq = explode(',',$obLista->pesquisa);
+	    	$colunaFK = explode('=',$colPesq[1]);
+	    	$colunaDesc = explode('=',$colPesq[0]);
+	    		    	
+	    		//Retorna a entidade da pesquisa
+		    	$obKDbo->setEntidade('tabelas');
+		    		$criteriaTabPesq = new TCriteria();
+		    		$criteriaTabPesq->add(new TFilter('seq','=',$obLista->tabseq, 'numeric'));
+		    	$retTabelaPesq = $obKDbo->select("*", $criteriaTabPesq);
+		    	$obTabelaPesq = $retTabelaPesq->fetchObject();
+		    	
+		    	if($obTabelaPesq->tabela != $obTabelaPesq->tabela_view){
+		    		$entidadePesq = $obTabelaPesq->tabela_view;
+		    	}else{
+		    		$entidadePesq = $obTabelaPesq->tabela;
+		    	}
+		    	
+		    	$dbo = new TDbo($entidadePesq);
+		    		$criteriaDoc = new TCriteria();
+		    		$criteriaDoc->add(new TFilter('seq', '=', $dados[$colunaFK[0]],'numeric'));
+		    	$retDocumento = $dbo->select($colunaDesc[1],$criteriaDoc);
+		    	$colunaDescPesq = $retDocumento->fetchObject();
+	    	
+		    	$dadosColPesq[$colunaDesc[0]] = $colunaDescPesq->$colunaDesc[1];
+    	}
+    	
+    	return $dadosColPesq;
     }
 
     /*

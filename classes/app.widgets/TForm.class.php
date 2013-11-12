@@ -84,6 +84,9 @@ class TForm{
 	        				foreach($this->fields as $field){
 	        					if(is_object($field) && $field->getName() == $name){
 	        						$field->setValue($campo);
+	        						if($field->actPesquisa){
+	        							$field->descLabel = $campos[$field->getName().'Label'];
+	        						}
 	        					}
 	        				}
         				}

@@ -247,6 +247,7 @@ class TSetHeader{
             $this->add(TConstantes::FIELD_INCONTROL, $listaForm->incontrol);
             $this->add(TConstantes::HEAD_HEADCHILDS, ''); //armazena um vetor com as chaves dos filhos do mesmo
             $this->add(TConstantes::HEAD_NIVEL, $Form->nivel);
+            $this->add(TConstantes::HEAD_DADOSFORM, ''); // armazena os dados do formulario em questão
 
 
             $this->setHeader($formseq);

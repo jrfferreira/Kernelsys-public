@@ -14,7 +14,7 @@ class TSetCampo {
         if($this->nome == "") {
             $this->nome = $campoNome;
         }
-        $this->nome = strtolower($this->nome);
+        //$this->nome = strtolower($this->nome);
 
         if($tipoCampo == "TElement") {
             $this->fields = new TElement('span');
@@ -48,6 +48,11 @@ class TSetCampo {
         //seta atributo outControl no campo
         if($this->control) {
             $this->fields->setOutControl($this->control);
+        }
+        
+        //seta descrição do campo de pesquisa, caso haja
+        if($this->descPesq) {
+        	$this->fields->setDescPesq($this->descPesq);
         }
     }
     

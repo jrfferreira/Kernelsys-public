@@ -103,7 +103,6 @@ function populaCampo(campoRet,campoFk,colunaFk,tabela,coluna){
     }
 }
 
-//window.history.forward(1);
 //ELIMINA CARACTERES EM BRANCO
 function trim(str){
   return str.replace(/^\s+|\s+$/g,"");
@@ -116,3 +115,8 @@ function replaceAll(string, search, newstring) {
   }
   return string;
 }
+//desabilita bontão voltar do browser
+window.history.forward(1);
+
+
+

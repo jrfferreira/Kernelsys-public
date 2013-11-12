@@ -75,5 +75,20 @@ function baixaParcela(tipoRetorno, formseq, obRetorno, confirme, listaParcela){
 	  }
 }
 
+//Desbloqueia campo de quantidade de parcelas a serem geradas em sequencia
+function setCampoQuantidadeParcela(obj){
+	
+	//var campo = document.getElementById('dcpcrpqt');
+	
+	 var campo = $( "#dcpcrpqt" );
+	
+	if(obj.value == 1){
+		campo.removeAttr("readonly");
+	}else{
+		campo.attr("readonly:true");
+	}
+	
+}
+
 
 

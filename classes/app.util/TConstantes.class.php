@@ -221,6 +221,7 @@ class TConstantes {
 	const HEAD_HEADCHILDS = 'headChilds'; // armazena um vetor com as chaves dos filhos do mesmo
 	const HEAD_CONTEINERRETORNO = 'conteinerRetorno';
 	const HEAD_NIVEL = 'nivel';
+    const HEAD_DADOSFORM			= 'DadosForm';
 	
 	// Conteiner de tela
 	const VIEW_DISPLAYSYS = 'displaySys';

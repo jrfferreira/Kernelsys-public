@@ -7,7 +7,9 @@
 class ProdutoBO {
 	
 	
-	
+	/**
+	 * Implanta as regras para calculo do preço de vendo do produto
+	 */
 	public function calculaPrecoProduto(){
 		
 		

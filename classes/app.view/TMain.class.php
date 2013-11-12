@@ -144,7 +144,7 @@ class TMain {
         	        	
             $this->obLista = $this->obsession->getValue($this->idObjectBoxAtual, $this->listaBox);   	    	
 
-            //$this->obLista->setLoad(true);    com erro...  
+            $this->obLista->setLoad(true);    //com erro...  
         }
     }
 
@@ -236,7 +236,7 @@ class TMain {
             		}     		
             		$objResult['statseq'] = 1;
 	  			
-				$dados = $objResult;
+				$dados[$this->entidadeForm] = $objResult;
 			    	
 			}
         
@@ -382,6 +382,17 @@ class TMain {
     		//recupera seq da unidade
     		//$unidseq = $this->obUser->unidseq->seq;
     		    		
+    	
+    	//executa a função de controle do formulário se existir
+    	if($this->header[TConstantes::HEAD_OUTCONTROL]){
+    		$vetorformOutControl = explode(';', $this->header[TConstantes::HEAD_OUTCONTROL]);
+    	
+    		foreach ($vetorformOutControl as $fOC){
+    			$formOutControl = explode('/', $fOC);
+    			$retornoOutcontrol = $this->onMain($formOutControl);
+    		}
+    	}
+    		    		
     		//Identifica o nivel do formulário
 		    if($this->nivelExec > 1 and strpos($seq_tmp, 'TMP') !== false){
 		    			    			    			    			    	
@@ -434,7 +445,6 @@ class TMain {
 
 		    		}
 		    		
-		    	//executa manter para os dados
 
 		    	$critKrsTables = new TCriteria();
 		    	
@@ -659,15 +669,15 @@ class TMain {
     	if($this->param['key'] and $this->entidadeForm) {
             
 	          //Identifica o nivel do formulário
-			  if($this->nivelExec > 1 and strpos($this->param['key'], 'TMP')){
+			  if($this->nivelExec > 1 and strpos($this->param['key'], 'TMP') !== false){
 			  	
 			  	   		//Agrega objeto na lista de objetos em memoria
-	   					$headList = $this->obHeader->formHeader($this->header[TConstantes::LISTA]); 
+	   					$headList = $this->obHeader->getHead($this->header[TConstantes::LISTA]); 
 			  	
-			  			$results_session = $this->obHeader->getHead(TConstantes::LIST_OBJECT, $headList[TConstantes::LISTA]);
+			  			$results_session = $this->obHeader->getHead($headList[TConstantes::LISTA], TConstantes::LIST_OBJECT);
 			  			
 						unset($results_session[$this->param['key']]);
-			    		$this->obHeader->addHeader(TConstantes::LIST_OBJECT, $headList[TConstantes::LISTA], $results_session);
+			    		$this->obHeader->addHeader($headList[TConstantes::LISTA], TConstantes::LIST_OBJECT, $results_session);
 			    	
 			  }else{
 			    	
@@ -683,7 +693,8 @@ class TMain {
 					
 			 }
 			 
-			 $this->getList();//Substituir por backbone.js 
+			 //$this->getList();//Substituir por backbone.js 
+			 $this->getObLista();
 			 $this->showlist();
     	
     	}else{
@@ -709,15 +720,7 @@ class TMain {
         $this->getObLista();//Substituir por backbone.js
         $filtro = $_POST;
 
-        $valorFiltro = $this->obLista->setFiltro($filtro);
-        foreach($this->obLista->Campos as $campo){
-        	if(get_class($campo) == "TEntry"){
-        		$campo->setValue(array_shift($filtro));
-        	}
-        	if(get_class($campo) == "TCombo"){
-        		$campo->setValue(array_shift($filtro));
-        	}
-        }
+        $this->obLista->setFiltro($filtro);
         $this->obLista->clearSelecao();
         $this->showlist();
     }
@@ -974,7 +977,9 @@ class TMain {
     	
     	$dados = $_POST;
     	
+    	if($this->header[TConstantes::LISTA]){
     	$this->getObLista();
+    	}
     	
     	$ObExec = new $classe();
     	if(method_exists($ObExec, $method)){
@@ -991,7 +996,7 @@ class TMain {
     		}
     		
     		if($this->typeRun == 'one'){
-    		$this->obHeader->clearHeader($this->header[TConstantes::FORM]);
+    			//$this->obHeader->clearHeader($this->header[TConstantes::FORM]);
     	}
     	}
     	else{

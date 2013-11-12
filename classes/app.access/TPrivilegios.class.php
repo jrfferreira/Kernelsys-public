@@ -241,7 +241,7 @@ class TPrivilegios {
             $obLista->add($fieldSetLegenda);
             $checklistoptions = false;
 
-            if($obOpcoesLista->acincluir != 0) {
+            if($obOpcoesLista->acincluir != false) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -260,7 +260,7 @@ class TPrivilegios {
                 $obLista->add($fieldSetOpcoesLista);
 
             }
-            if($obOpcoesLista->aceditar != 0) {
+            if($obOpcoesLista->aceditar != false) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -279,7 +279,7 @@ class TPrivilegios {
                 $obLista->add($fieldSetOpcoesLista);
 
             }
-            if($obOpcoesLista->acdeletar != 0) {
+            if($obOpcoesLista->acdeletar != false) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -299,7 +299,7 @@ class TPrivilegios {
 
             }
 
-            if($obOpcoesLista->acreplicar != 0) {
+            if($obOpcoesLista->acreplicar != false) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -319,7 +319,7 @@ class TPrivilegios {
 
             }
 
-            if($obOpcoesLista->acselecao != 0) {
+            if($obOpcoesLista->acselecao != false) {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -697,7 +697,7 @@ class TPrivilegios {
             $obMenu->add($fieldSetLegenda);
             $checklistoptions = false;
 
-            if($obOpcoesLista->acincluir != 0) {
+            if($obOpcoesLista->acincluir != '0') {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -716,7 +716,7 @@ class TPrivilegios {
                 $obMenu->add($fieldSetOpcoesLista);
 
             }
-            if($obOpcoesLista->aceditar != 0) {
+            if($obOpcoesLista->aceditar != '0') {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -735,7 +735,7 @@ class TPrivilegios {
                 $obMenu->add($fieldSetOpcoesLista);
 
             }
-            if($obOpcoesLista->acdeletar != 0) {
+            if($obOpcoesLista->acdeletar != '0') {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -755,7 +755,7 @@ class TPrivilegios {
 
             }
 
-            if($obOpcoesLista->acreplicar != 0) {
+            if($obOpcoesLista->acreplicar != '0') {
 
                 $fieldSetOpcoesLista = new TElement("div");
 
@@ -775,7 +775,7 @@ class TPrivilegios {
 
             }
 
-            if($obOpcoesLista->acselecao != 0) {
+            if($obOpcoesLista->acselecao != '0') {
 
                 $fieldSetOpcoesLista = new TElement("div");
 

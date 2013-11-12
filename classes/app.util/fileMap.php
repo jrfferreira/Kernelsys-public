@@ -159,7 +159,11 @@ class fileMap {
 			'DocumentoBo' => '../../classes/app.bo/scp/financeiro/DocumentoBO.class.php',
 			'MovimentoCaixaBo' => '../../classes/app.bo/scp/financeiro/MovimentoCaixaBO.class.php',
 			'BaixaDocumentoBO' => '../../classes/app.bo/scp/financeiro/BaixaDocumentoBO.class.php',
-			'BalancoBO' => '../../classes/app.bo/scp/compras/BalancoBO.class.php'
+			'ProdutoBO' => '../../classes/app.bo/scp/principal/ProdutoBO.class.php',
+			'PedidoBO' => '../../classes/app.bo/scp/vendas/PedidoBO.class.php',
+			'BalancoBO' => '../../classes/app.bo/scp/compras/BalancoBO.class.php',
+			'ProdutoEnderecoBO' => '../../classes/app.bo/scp/compras/ProdutoEnderecoBO.class.php'
+				
 		);
 
 		/* Classes do package EDU */

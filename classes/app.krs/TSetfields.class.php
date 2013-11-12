@@ -198,15 +198,10 @@ class TSetfields {
             	$campoLabel->setCampo($obField->getId().'Label','TEntry', '');
             	$campoLabel = $campoLabel->getCampo();
             	$campoLabel->setSize('300');
-            	$campoLabel->disabled = 'disabled';
+            	$campoLabel->readonly = 'true';
+            	//$campoLabel->manter = 'true';
+            	$campoLabel->setValue($obField->descPesq);
             	
-            	          	
-	            	//redefine o nome do campo label
-	            	//$obField->setName($obField->getName().'Label');
-	            	//$obField->setId($obField->getId().'Label');
-	            	//$obField->manter = false;
-	            	//$obField->getElement()->properties['view'] = 'false';
-	            	
             	$cellCont->add($campoLabel);
 	            	
             	

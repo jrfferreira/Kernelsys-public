@@ -182,6 +182,14 @@ class TCompForm {
                 $campos[$cmp->campo]  = $cmp;
                 $campos[$cmp->campo]->entidade = $obTabela->tabela;
                 $campos[$cmp->campo]->props    = $this->getPropriedade($cmp->seq);
+                
+                if($cmp->ativapesquisa){
+                	$cmpLabel->colunadb = $cmpLabel->colunadb.'Label';
+                	$cmpLabel->campo = $cmpLabel->campo.'Label';
+                	$cmpLabel->ativafunction = 0;
+                	//$campos[$cmpLabel->campo] =  $cmpLabel;
+                	$cmpLabel = null;
+            }
             }
             else {
                 $blocos[$cmp->campo] =  $cmp;
@@ -322,6 +330,12 @@ class TCompForm {
                 
                 $tipoCampo = $setCampo->getTipoCampo($dadosCampo->tpcaseq);
                 $setCampo->setTipoDado($tipoCampo->tipodado);
+                
+                
+	                //Seta descrição do campo FK com pesquisa
+	                if($dadosCampo->ativapesquisa != 0){
+	                	$setCampo->descPesq =  $this->headerForm[TConstantes::HEAD_DADOSFORM][$dadosCampo->campo.'Label'];
+	                }
                 
                 $setCampo->setCampo($seq, $tipoCampo->tpcadesc, $dadosCampo->seletorJQ);
                 $setCampo->setPropriedade('alteravel', $dadosCampo->alteravel);

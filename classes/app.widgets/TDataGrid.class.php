@@ -291,6 +291,7 @@ class TDataGrid extends TTable {
                 $celula = $row->addCell($data);
                 $celula->style = "padding-{$align}:4px; border-left:1px solid #B8C7DC; border-bottom:1px solid #B8C7DC; text-align: {$align};";
                 $celula->reference = $name;
+                $celula->id = $name.$seq;
                 $celula->align = $align;
                 if($title){ $celula->title = $title; }
                 $celula->width = $width;
