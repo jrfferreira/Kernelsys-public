@@ -54,11 +54,11 @@ class TCurso{
         $obHeader = new TSetHeader();
         $headerForm = $obHeader->getHead($formseq);
 
-        $data['codigocurso'] = $obHeader->getHead($headerForm['frmpseq'],'codigoPai');
-        $data['ativo'] = '1';
+        $data['pjcuseq'] = $obHeader->getHead($headerForm['frmpseq'],TConstantes::HEAD_SEQUENCIALPAI);
+        $data['statseq'] = '1';
 
-        $headerLista = $obHeader->getHead($headerForm['idLista'],'listaSelecao');
-        $listaDisciplinas = $this->getListaDisciplinas($data['cursseq']);
+        $headerLista = $obHeader->getHead($headerForm[TConstantes::LISTA],TConstantes::LIST_SELECAO);
+        $listaDisciplinas = $this->getListaDisciplinas($data['pjcuseq']);
 
         //foreach($headerLista as $ch=>$vl){
         //    echo "<i>$ch</i> = <b>$vl</b><br/>";
@@ -68,7 +68,7 @@ class TCurso{
         foreach($headerLista as $ch=>$vl){
             if(!$listaDisciplinas[$ch]){
                 $data['discseq'] = str_replace(array('[',']','"',"'"), '', $vl);
-                $dboDisciplina = new TDbo(TConstantes::DBCURSO_DISCIPLINA);
+                $dboDisciplina = new TDbo(TConstantes::DBPROJETO_CURSO_DISCIPLINA);
                 $dboDisciplina->insert($data);
                 $cont++;
             }

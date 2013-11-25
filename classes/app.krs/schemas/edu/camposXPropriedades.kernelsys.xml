@@ -751,16 +751,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="707">
-      <seq>707</seq>
-      <campseq>632</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where statseq=1 order by pessnmrz</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="92">
       <seq>92</seq>
       <campseq>196</campseq>
@@ -3870,6 +3860,16 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="525">
+      <seq>525</seq>
+      <campseq>502</campseq>
+      <metodo>setSize</metodo>
+      <valor>80</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="431">
       <seq>431</seq>
       <campseq>428</campseq>
@@ -4622,16 +4622,6 @@
     <row seq="524">
       <seq>524</seq>
       <campseq>501</campseq>
-      <metodo>setSize</metodo>
-      <valor>80</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="525">
-      <seq>525</seq>
-      <campseq>502</campseq>
       <metodo>setSize</metodo>
       <valor>80</valor>
       <statseq>1</statseq>
@@ -6025,6 +6015,86 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="845">
+      <seq>845</seq>
+      <campseq>781</campseq>
+      <metodo>setSize</metodo>
+      <valor>300</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="847">
+      <seq>847</seq>
+      <campseq>815</campseq>
+      <metodo>setAction</metodo>
+      <valor>onFormOpen(260,this)</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="886">
+      <seq>886</seq>
+      <campseq>854</campseq>
+      <metodo>setSize</metodo>
+      <valor>120</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="887">
+      <seq>887</seq>
+      <campseq>855</campseq>
+      <metodo>setSize</metodo>
+      <valor>40</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="182">
+      <seq>182</seq>
+      <campseq>195</campseq>
+      <metodo>addItems</metodo>
+      <valor>01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30</valor>
+      <statseq>0</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="895">
+      <seq>895</seq>
+      <campseq>796</campseq>
+      <metodo>setSize</metodo>
+      <valor>450</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="896">
+      <seq>896</seq>
+      <campseq>796</campseq>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="848">
+      <seq>848</seq>
+      <campseq>795</campseq>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="646">
       <seq>646</seq>
       <campseq>581</campseq>
@@ -7130,6 +7200,16 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="706">
+      <seq>706</seq>
+      <campseq>648</campseq>
+      <metodo>setProperty</metodo>
+      <valor>disabled;disabled</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
     <row seq="708">
       <seq>708</seq>
       <campseq>650</campseq>
@@ -7395,86 +7475,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <campseq>622</campseq>
       <metodo>setSize</metodo>
       <valor>350</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="845">
-      <seq>845</seq>
-      <campseq>781</campseq>
-      <metodo>setSize</metodo>
-      <valor>300</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="847">
-      <seq>847</seq>
-      <campseq>815</campseq>
-      <metodo>setAction</metodo>
-      <valor>onFormOpen(260,this)</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="886">
-      <seq>886</seq>
-      <campseq>854</campseq>
-      <metodo>setSize</metodo>
-      <valor>120</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="887">
-      <seq>887</seq>
-      <campseq>855</campseq>
-      <metodo>setSize</metodo>
-      <valor>40</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="182">
-      <seq>182</seq>
-      <campseq>195</campseq>
-      <metodo>addItems</metodo>
-      <valor>01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30</valor>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="895">
-      <seq>895</seq>
-      <campseq>796</campseq>
-      <metodo>setSize</metodo>
-      <valor>450</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="896">
-      <seq>896</seq>
-      <campseq>796</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="848">
-      <seq>848</seq>
-      <campseq>795</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -10109,6 +10109,26 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-10-18</datacad>
+    </row>
+    <row seq="452">
+      <seq>452</seq>
+      <campseq>44</campseq>
+      <metodo>addItems</metodo>
+      <valor>select seq,titulo from dbgrade_avaliacao order by titulo</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-25</datacad>
+    </row>
+    <row seq="707">
+      <seq>707</seq>
+      <campseq>632</campseq>
+      <metodo>addItems</metodo>
+      <valor>select seq,pessnmrz from dbpessoa where statseq!=9 order by pessnmrz</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </camposXPropriedades>
 </kernelsys>

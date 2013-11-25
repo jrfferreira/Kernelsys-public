@@ -176,7 +176,7 @@ class TMain {
             $OBform->setDados($dados);
         }
            
-        $forms = $OBform->getForm();
+        $forms = $OBform->getForm(is_numeric($this->param['key']));
         $forms->show();
 
         //define o formulário em aberto

@@ -93,7 +93,7 @@ class TForms{
     /**
      *
      */
-    public function setForm(){
+    public function setForm($validRegister){
     	
     	// Dados Formulário
         $obsession = new TSession();
@@ -131,37 +131,43 @@ class TForms{
                 $this->dboKs->setEntidade('abas');
                     $criteriaAbas = new TCriteria();
                     $criteriaAbas->add(new TFilter('seq', '=', $abasId->abaseq));
+                    if(!$validRegister){
+                    	$criteriaAbas->add(new TFilter('require_register', '=', false));
+                    }
                 $RetNomeAba = $this->dboKs->select('*', $criteriaAbas);
                 $NAbas = $RetNomeAba->fetchObject();
                 //Instacia objeto [apendice] das abas caso aja.
 
-                if($NAbas->obapendice != "-"){
-
-                    $obApendice = new TApendices();
-                    $obElement = $obApendice->main($NAbas->obapendice, $this->formseq);
-
-                    $this->Abas[$NAbas->abaid] = $obElement;
-                }
-                else{
-
-                    # instancia objetos blocos das abas
-                    $this->dboKs->setEntidade('blocos_x_abas');
-                        $criteriaAbas = new TCriteria();
-                        $criteriaAbas->add(new TFilter('abaseq', '=', $abasId->abaseq));
-                        $criteriaAbas->setProperty('order', 'ordem');
-                    $RetIdBlocos = $this->dboKs->select('*', $criteriaAbas);
-                    
-                    while($obBloco = $RetIdBlocos->fetchObject()){
-                        $formBloco = new TBloco($this->formseq, $obBloco->blocseq, $this->seq, true);
-                        $blocos[$formBloco->getBlocoSeq()] = $formBloco;
-                        $formBloco = NULL;
-                    }
-                    $this->Abas[$NAbas->abaid] = $blocos;
-                    $blocos = NULL;
+                if($NAbas->seq){
+                	if($NAbas->obapendice != "-"){
+                	
+                		$obApendice = new TApendices();
+                		$obElement = $obApendice->main($NAbas->obapendice, $this->formseq);
+                	
+                		$this->Abas[$NAbas->abaid] = $obElement;
+                	}
+                	else{
+                	
+                		# instancia objetos blocos das abas
+                		$this->dboKs->setEntidade('blocos_x_abas');
+                		$criteriaAbas = new TCriteria();
+                		$criteriaAbas->add(new TFilter('abaseq', '=', $abasId->abaseq));
+                		$criteriaAbas->setProperty('order', 'ordem');
+                		$RetIdBlocos = $this->dboKs->select('*', $criteriaAbas);
+                	
+                		while($obBloco = $RetIdBlocos->fetchObject()){
+                			$formBloco = new TBloco($this->formseq, $obBloco->blocseq, $this->seq, true);
+                			$blocos[$formBloco->getBlocoSeq()] = $formBloco;
+                			$formBloco = NULL;
+                		}
+                		$this->Abas[$NAbas->abaid] = $blocos;
+                		$blocos = NULL;
+                	}
+                	
+                	$this->AbasNome[$NAbas->abaid] = ($developer? $NAbas->seq.' - ' : '' ) . $NAbas->nomeaba;
+                	$this->AbasImpressao[$NAbas->abaid] = $NAbas->impressao;
                 }
                 
-                $this->AbasNome[$NAbas->abaid] = ($developer? $NAbas->seq.' - ' : '' ) . $NAbas->nomeaba;
-                $this->AbasImpressao[$NAbas->abaid] = $NAbas->impressao;
 
             }//temina loop das abas
              
@@ -360,8 +366,8 @@ class TForms{
     /*método getForm
     *Retorna o formulario montado com suas respequitivas abas
     */
-    public function getForm(){
-         $form = $this->setForm();
+    public function getForm($validRegister){
+         $form = $this->setForm($validRegister);
          if($this->dados){
             $form->setData($this->dados);
          }

@@ -141,7 +141,11 @@ class TDados {
         //retorna descrição dos campos com pesquisa ativadas.
         $dadosColPesq = $this->getColunaPesquisa($entidade, $obj);
         if($dadosColPesq){
-        	$obj = array_merge($obj, $dadosColPesq);
+        	foreach($dadosColPesq as $col => $value){
+        		if($value){
+        			$obj[$col] = $value;
+        		}
+        	}
         }
         
         

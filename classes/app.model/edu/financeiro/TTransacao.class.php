@@ -1046,7 +1046,7 @@ class TTransacao {
 
             $obHeader = new TSetHeader();
             $headerForm = $obHeader->getHead('210');
-            $listaSelecao = $headerForm['listaSelecao'];
+            $listaSelecao = $headerForm[TConstantes::LIST_SELECAO];
             
             if (count($listaSelecao)) {
             	
@@ -1056,17 +1056,16 @@ class TTransacao {
                 }
 
                 $crit = new TCriteria();
-                $crit->add(new TFilter('seq', '=', $headerForm['codigoPai']));
+                $crit->add(new TFilter('seq', '=', $headerForm[TConstantes::HEAD_SEQPAI]));
 
                 $dbotransacao = new TDbo(TConstantes::DBTRANSACAO);
-                $retTransacao = $dbotransacao->select('seq,pessseq,plcoseq,tipo', $crit);
+                $retTransacao = $dbotransacao->select('seq,pessseq,plcoseq', $crit);
 
                 $obTransacao = $retTransacao->fetchObject();
                 
                 $transacao = array();
                 $transacao['pessseq'] = $obTransacao->pessseq;
                 $transacao['plcoseq'] = $obTransacao->plcoseq;
-                $transacao['tipo'] = $obTransacao->tipo;
                 $transacao['valortotal'] = $valorTotal;
                 $transacao['statseq'] = '1';
 
@@ -1097,14 +1096,14 @@ class TTransacao {
 
                     $critUpdate = new TCriteria();
                     foreach ($listaSelecao as $chP => $prod) {
-                        $toInsert['codigotransacao'] = $retTransacao['codigo'];
-                        $toInsert['codigoproduto'] = $prod['codigo'];
+                        $toInsert['transeq'] = $retTransacao['seq'];
+                        $toInsert['prodseq'] = $prod['seq'];
                         $toInsert['tabelaproduto'] = $prod['tabela'];
                         $toInsert['valornominal'] = $prod['valor'];
-                        $toInsert['ativo'] = '1';
+                        $toInsert['statseq'] = '1';
 
                         $retInsert = $transaction->insert($toInsert);
-                        $filtro = new Tfilter('codigo', '=', $chP);
+                        $filtro = new Tfilter('seq', '=', $chP);
                         $filtro->tipoFiltro = 2;
                         $critUpdate->add($filtro, 'OR');
                         if (!$retInsert) {
@@ -1113,10 +1112,10 @@ class TTransacao {
                     }
                     
                     $transaction->setEntidade(TConstantes::DBPARCELA);
-                    $up = $transaction->update(array('statusconta' => '6'), $critUpdate);
+                    $up = $transaction->update(array('stpaseq' => '6'), $critUpdate);
                     if ($up) {
                         $transaction->commit();
-                        return $retTransacao['codigo'];
+                        return $retTransacao['seq'];
                     } else {
                         throw new ErrorException("Impossivel concluir.", 1);
                     }

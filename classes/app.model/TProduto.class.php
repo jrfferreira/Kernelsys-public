@@ -228,7 +228,7 @@ class TProduto{
             }else{
                 if($colValor){
                    $colunaValor = $colValor[0];
-                   $produto['valor'] = $obEspecializacao->$colunaValor;
+                   $produto['valor'] = 0 + $obEspecializacao->$colunaValor;
                 }else{
                    $produto['valor'] = "0";
                 }
@@ -258,10 +258,10 @@ class TProduto{
 
              $produto['valorAlteravel'] = false;
              $produto['tabela'] = $entidade;
-             $produto['seqtipoproduto'] = $obParametros->seqtipoproduto;
+             $produto['tpprseq'] = $obParametros->tpprseq;
              $produto['statseq'] = 1;
 
-             $dbo = new TDbo('dbprodutos');
+             $dbo = new TDbo(TConstantes::DBPRODUTO);
              $retprod = $dbo->insert($produto);
 
             $produto[TConstantes::SEQUENCIAL] = $retprod[TConstantes::SEQUENCIAL];

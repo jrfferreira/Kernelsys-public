@@ -10711,27 +10711,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>numeric</tipodado>
     </row>
-    <row seq="189">
-      <seq>189</seq>
-      <listseq>172</listseq>
-      <coluna>telefone2</coluna>
-      <label>Telefone Secundário</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>120</largura>
-      <colfunction>TSetModel,setTelefone</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="264">
       <seq>264</seq>
       <listseq>183</listseq>
@@ -12181,27 +12160,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
-    <row seq="169">
-      <seq>169</seq>
-      <listseq>163</listseq>
-      <coluna>valortotal</coluna>
-      <label>Valor Total</label>
-      <alinhalabel>right</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>100</largura>
-      <colfunction>TSetModel,setValorMonetario</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>5</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
     <row seq="374">
       <seq>374</seq>
       <listseq>206</listseq>
@@ -13503,27 +13461,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>date</tipodado>
-    </row>
-    <row seq="380">
-      <seq>380</seq>
-      <listseq>207</listseq>
-      <coluna>valorinicial</coluna>
-      <label>Valor</label>
-      <alinhalabel>right</alinhalabel>
-      <alinhadados>right</alinhadados>
-      <largura>100</largura>
-      <colfunction>TSetModel,setValorMonetario</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>numeric</tipodado>
     </row>
     <row seq="323">
       <seq>323</seq>
@@ -17031,6 +16968,69 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
+    </row>
+    <row seq="169">
+      <seq>169</seq>
+      <listseq>163</listseq>
+      <coluna>valortotal</coluna>
+      <label>Valor Total</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>100</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="380">
+      <seq>380</seq>
+      <listseq>207</listseq>
+      <coluna>valortotal</coluna>
+      <label>Valor</label>
+      <alinhalabel>right</alinhalabel>
+      <alinhadados>right</alinhadados>
+      <largura>100</largura>
+      <colfunction>TSetModel,setValorMonetario</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="189">
+      <seq>189</seq>
+      <listseq>172</listseq>
+      <coluna>telefone2</coluna>
+      <label>Telefone Secundário</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>left</alinhadados>
+      <largura>120</largura>
+      <colfunction>TSetModel,setTelefone</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>3</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
     </row>
   </coluna>
 </kernelsys>

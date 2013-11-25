@@ -283,3 +283,11 @@ CREATE TABLE dbparametro_produto (
 	
 	
 	ALTER TABLE dbproduto ALTER COLUMN seq SET DEFAULT nextval('dbproduto_seq_seq'::regclass);
+	
+# TABELA ABAS
+   
+   Criar coluna require_register padrão false not null
+   
+   ALTER TABLE abas
+   ADD COLUMN require_register boolean NOT NULL DEFAULT false;
+   

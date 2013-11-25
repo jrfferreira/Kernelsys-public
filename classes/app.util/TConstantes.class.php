@@ -12,6 +12,7 @@ class TConstantes {
 	const DBALUNO_DISCIPLINA = "dbaluno_disciplina";
 	const DBALUNO_REQUISITO = "dbaluno_requisito";
 	const DBALUNO_SOLICITACAO = "dbaluno_solicitacao";
+	const DBALUNO_TRANSACAO = "dbaluno_transacao";
 	const DBAPROVEITAMENTO_DISCIPLINA = "dbaproveitamento_disciplina";
 	const DBAREA_CURSO = "dbarea_curso";
 	const DBAVALIACAO = "dbavaliacao";
