@@ -331,21 +331,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="16">
-      <seq>16</seq>
-      <modulo>gerDisciplina</modulo>
-      <labelmodulo>Diário Eletronico</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>199</argumento>
-      <formseq>58</formseq>
-      <nivel>2</nivel>
-      <modseq>7</modseq>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="17">
       <seq>17</seq>
       <modulo>montarGrade</modulo>
@@ -1465,6 +1450,36 @@
       <formseq>8</formseq>
       <nivel>0</nivel>
       <modseq>1</modseq>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="3">
+      <seq>3</seq>
+      <modulo>transformaPessoaFuncionario</modulo>
+      <labelmodulo>Pessoa -&gt; Funcionário</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>7</argumento>
+      <formseq>6</formseq>
+      <nivel>2</nivel>
+      <modseq>5</modseq>
+      <ordem>5</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-26</datacad>
+    </row>
+    <row seq="16">
+      <seq>16</seq>
+      <modulo>gerDisciplina</modulo>
+      <labelmodulo>Diário Eletrônico</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>199</argumento>
+      <formseq>58</formseq>
+      <nivel>2</nivel>
+      <modseq>7</modseq>
       <ordem>0</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>

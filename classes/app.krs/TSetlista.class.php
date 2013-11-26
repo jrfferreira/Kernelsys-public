@@ -173,14 +173,16 @@ class TSetlista {
         	
         	$control = new TSetControl();
 
-        	if($tipodado == 'string' and is_string($dado)){
-        		   
+        	if($tipodado == 'boolean'){
+        		if(!is_bool($dado)){
+        			$dado = ($dado == "false" || $dado == "0" || $dado == 0) ? false : true;
+        		}
+        		$incluir = true; 		
+        	}elseif($tipodado == 'string' and is_string($dado)){
         		$incluir = true; 		
         	}else if($tipodado == 'numeric' and (is_numeric($dado) || strtolower($comp) == 'in')){ 
-        				
         		$incluir = true;
         	}else if($tipodado == 'date' and $control->is_date($dado)){
-        		
         		$incluir = true;
         	}else if(count($dado) == 2 and $comp = 'BETWEEN'){
         		

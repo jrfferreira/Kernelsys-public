@@ -307,5 +307,59 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="8">
+      <seq>8</seq>
+      <listseq>7</listseq>
+      <tipocampo/>
+      <nameaction>onTransformaPessoaFuncionario</nameaction>
+      <label>Tranformar esta pessoa em funcionário</label>
+      <actionjs>setPessoaFuncionario</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
+      <tiporetorno>form</tiporetorno>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-26</datacad>
+    </row>
+    <row seq="12">
+      <seq>12</seq>
+      <listseq>199</listseq>
+      <tipocampo/>
+      <nameaction>showLancamentoNotas</nameaction>
+      <label>Lançar notas para esta disciplina</label>
+      <actionjs>showLancamentoNotas</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
+      <tiporetorno>form</tiporetorno>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-26</datacad>
+    </row>
+    <row seq="11">
+      <seq>11</seq>
+      <listseq>193</listseq>
+      <tipocampo/>
+      <nameaction>showLancamentoNotas</nameaction>
+      <label>Lançar notas para esta disciplina</label>
+      <actionjs>showLancamentoNotas</actionjs>
+      <metodoexe>onEdit</metodoexe>
+      <confirm/>
+      <campoparam>seq</campoparam>
+      <img>new_ico_set.png</img>
+      <ordem>2</ordem>
+      <statseq>1</statseq>
+      <tiporetorno>form</tiporetorno>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-26</datacad>
+    </row>
   </listaActions>
 </kernelsys>

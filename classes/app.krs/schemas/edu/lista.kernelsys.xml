@@ -5569,5 +5569,37 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="7">
+      <seq>7</seq>
+      <tipo>form</tipo>
+      <formseq>6</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTransformaPessoaFuncionario</lista>
+      <label>Pessoa -&gt; Funcionario</label>
+      <tabseq>1</tabseq>
+      <listseq>7</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Funcionário</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>funcionario/=/AND/false/boolean;statseq/=/AND/1</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>2013-11-26</datacad>
+    </row>
   </lista>
 </kernelsys>

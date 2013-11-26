@@ -383,15 +383,15 @@ class TMain {
     		//$unidseq = $this->obUser->unidseq->seq;
     		    		
     	
-    	//executa a função de controle do formulário se existir
-    	if($this->header[TConstantes::HEAD_OUTCONTROL]){
+    	/* //executa a função de controle do formulário se existir
+    	if($this->header[TConstantes::HEAD_OUTCONTROL]){	
     		$vetorformOutControl = explode(';', $this->header[TConstantes::HEAD_OUTCONTROL]);
     	
     		foreach ($vetorformOutControl as $fOC){
     			$formOutControl = explode('/', $fOC);
     			$retornoOutcontrol = $this->onMain($formOutControl);
     		}
-    	}
+    	} */
     		    		
     		//Identifica o nivel do formulário
 		    if($this->nivelExec > 1 and strpos($seq_tmp, 'TMP') !== false){
@@ -484,16 +484,18 @@ class TMain {
 		   			}
 		    	}
 		    	
-		    	foreach($dados as $entidade=>$dado){
-		    		if($entidade == TConstantes::HEAD_HEADCHILDS){
-			    		foreach($dado as $filho){
-			    			foreach($filho as $entidadeFilho=>$dadoFilho){
-			    				//atribui FK do pai ao filho
-			    				$dadoFilho[$this->header[TConstantes::HEAD_COLUNAFK]] =  $seqAtual;
-			    				$seqAtualFilho = $this->loadSave($entidadeFilho, $dadoFilho);
-			    			}
+		    	if(count($dados)){
+			    	foreach($dados as $entidade=>$dado){
+			    		if($entidade == TConstantes::HEAD_HEADCHILDS){
+				    		foreach($dado as $filho){
+				    			foreach($filho as $entidadeFilho=>$dadoFilho){
+				    				//atribui FK do pai ao filho
+				    				$dadoFilho[$this->header[TConstantes::HEAD_COLUNAFK]] =  $seqAtual;
+				    				$seqAtualFilho = $this->loadSave($entidadeFilho, $dadoFilho);
+				    			}
+				    		}
 			    		}
-		    		}
+			    	}
 		    	}
     		
 		   		//seta nivel de execução para limpar a head da lista

@@ -2619,34 +2619,6 @@
       <statseq>1</statseq>
       <requireRegister/>
     </row>
-    <row seq="255">
-      <seq>255</seq>
-      <abaid>lancamentoNotas</abaid>
-      <nomeaba>Lançamento de Notas</nomeaba>
-      <obapendice>-</obapendice>
-      <action>-</action>
-      <impressao>0</impressao>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <statseq>1</statseq>
-      <requireRegister/>
-    </row>
-    <row seq="263">
-      <seq>263</seq>
-      <abaid>lancamentoAulas</abaid>
-      <nomeaba>Lançamento de Aulas</nomeaba>
-      <obapendice>-</obapendice>
-      <action>-</action>
-      <impressao>0</impressao>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <statseq>1</statseq>
-      <requireRegister/>
-    </row>
     <row seq="264">
       <seq>264</seq>
       <abaid>obsAlunos</abaid>
@@ -2729,6 +2701,20 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
       <statseq>1</statseq>
+      <requireRegister/>
+    </row>
+    <row seq="255">
+      <seq>255</seq>
+      <abaid>lancamentoNotas</abaid>
+      <nomeaba>Lançamento de Notas</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>0</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>7</statseq>
       <requireRegister/>
     </row>
     <row seq="331">
@@ -3724,6 +3710,20 @@
       <datacad>1900-01-01</datacad>
       <statseq>1</statseq>
       <requireRegister>1</requireRegister>
+    </row>
+    <row seq="263">
+      <seq>263</seq>
+      <abaid>lancamentoAulas</abaid>
+      <nomeaba>Lançamento de Aulas</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>0</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>7</statseq>
+      <requireRegister/>
     </row>
   </abas>
 </kernelsys>

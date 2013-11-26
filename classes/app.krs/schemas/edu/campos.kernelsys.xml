@@ -9676,31 +9676,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="687">
-      <seq>687</seq>
-      <colunadb>deptseq</colunadb>
-      <campo>deptseq</campo>
-      <label>Departamento:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>2</tpcaseq>
-      <tabseq>14</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="547">
       <seq>547</seq>
       <colunadb>cursseq</colunadb>
@@ -19820,6 +19795,31 @@
       <statseq>1</statseq>
       <required>1</required>
       <alteravel>2</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="687">
+      <seq>687</seq>
+      <colunadb>deptseq</colunadb>
+      <campo>deptseq</campo>
+      <label>Departamento:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>2</tpcaseq>
+      <tabseq>14</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>-</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>1</required>
+      <alteravel>1</alteravel>
       <autosave>0</autosave>
       <manter/>
       <usuaseq>1</usuaseq>

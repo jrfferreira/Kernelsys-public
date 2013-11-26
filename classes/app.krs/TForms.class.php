@@ -224,7 +224,7 @@ class TForms{
          /**
          * executado o objeto formulário
          */
-        if($obForm->formainclude == 'one') { // TODO: Verifica a necessidade dessa condição
+        //if($obForm->formainclude == 'one') { // TODO: Verifica a necessidade dessa condição
 
 
                     //botão padrão [IMPRIMIR]\\
@@ -285,7 +285,7 @@ class TForms{
 		                $action1->setParameter('confirme', 'Deseja realmente fechar?');
                 
                 $this->setButton('fechar_botform'.$this->formseq, 'Fechar', $action1);
-        }
+        //}
 
 
         }

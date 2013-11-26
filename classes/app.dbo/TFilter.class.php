@@ -117,7 +117,7 @@ class TFilter extends TExpression{
             $result = "null";
         }
         // caso seja booleano
-        else if (is_bool($value)) {
+        else if ($tipodado == "boolean" && is_bool($value)) {
             // armazena NULL
             $result = $value ? 'TRUE' : 'FALSE';
         }

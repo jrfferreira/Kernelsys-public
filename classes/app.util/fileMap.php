@@ -209,7 +209,8 @@ class fileMap {
 			'TSecretaria' => '../../classes/app.model/edu/educacional/TSecretaria.class.php',
 			'TSolicitacao' => '../../classes/app.model/edu/educacional/TSolicitacao.class.php',
 			'TTurma' => '../../classes/app.model/edu/educacional/TTurma.class.php',
-			'TTurmaDisciplinas' => '../../classes/app.model/edu/educacional/TTurmaDisciplinas.class.php'
+			'TTurmaDisciplinas' => '../../classes/app.model/edu/educacional/TTurmaDisciplinas.class.php',
+			'TFuncionario' => '../../classes/app.model/edu/recursoshumanos/TFuncionario.class.php'
 		);
 		
 		
