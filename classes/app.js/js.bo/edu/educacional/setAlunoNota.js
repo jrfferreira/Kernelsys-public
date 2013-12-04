@@ -1,4 +1,4 @@
-function setAlunoNota(ob,tudiseq,aluno,codigoavaliacao){
+function setAlunoNota(ob,tudiseq,alunseq,avalseq){
     var nota = $('#'+ob).val();
     nota = parseFloat(nota.replace(',','.'));
     
@@ -8,7 +8,7 @@ function setAlunoNota(ob,tudiseq,aluno,codigoavaliacao){
     
     $('#'+ob).val(nota);
     
-    Valores = '&tudiseq='+tudiseq+'&codigoavaliacao='+codigoavaliacao+'&codigoaluno='+aluno+'&nota='+nota;
+    Valores = '&tudiseq='+tudiseq+'&avalseq='+avalseq+'&alunseq='+alunseq+'&nota='+nota;
     var dados = 'classe=TTurmaDisciplinas&metodo=setNota'+Valores;
     exe(ob,getPath()+'/app.util/TSec.php?'+dados,'','GET','Sucesso');
 }

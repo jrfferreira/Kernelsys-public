@@ -3877,5 +3877,43 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="23">
+      <seq>23</seq>
+      <formid>form_lancamentoNotas</formid>
+      <nomeform>Lançamento de Notas</nomeform>
+      <tabseq>12</tabseq>
+      <statseq>1</statseq>
+      <formseq/>
+      <listseq>24</listseq>
+      <formainclude>one</formainclude>
+      <dimensao>800;450</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+    </row>
+    <row seq="35">
+      <seq>35</seq>
+      <formid>form_lancamentoNotas</formid>
+      <nomeform>Lançamento de Notas</nomeform>
+      <tabseq>12</tabseq>
+      <statseq>1</statseq>
+      <formseq/>
+      <listseq>25</listseq>
+      <formainclude>one</formainclude>
+      <dimensao>800;450</dimensao>
+      <botconcluir>0</botconcluir>
+      <botcancelar>0</botcancelar>
+      <formoutcontrol>0</formoutcontrol>
+      <autosave>0</autosave>
+      <nivel>1</nivel>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+    </row>
   </forms>
 </kernelsys>

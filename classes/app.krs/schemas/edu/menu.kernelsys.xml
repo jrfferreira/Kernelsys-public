@@ -1486,5 +1486,35 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="9">
+      <seq>9</seq>
+      <modulo>lancamentoNotas</modulo>
+      <labelmodulo>Lançamento de Notas</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>24</argumento>
+      <formseq>23</formseq>
+      <nivel>2</nivel>
+      <modseq>7</modseq>
+      <ordem>0</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+    </row>
+    <row seq="11">
+      <seq>11</seq>
+      <modulo>lancamentoNotas</modulo>
+      <labelmodulo>Lançamento de Notas</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>25</argumento>
+      <formseq>35</formseq>
+      <nivel>2</nivel>
+      <modseq>9</modseq>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+    </row>
   </menu>
 </kernelsys>

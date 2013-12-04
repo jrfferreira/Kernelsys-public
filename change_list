@@ -291,3 +291,112 @@ CREATE TABLE dbparametro_produto (
    ALTER TABLE abas
    ADD COLUMN require_register boolean NOT NULL DEFAULT false;
    
+# TABELA PROJETO_CURSO
+
+   ALTER TABLE dbprojeto_curso
+   ADD COLUMN stpcseq bigint NOT NULL DEFAULT 4;
+   
+   ALTER TABLE dbprojeto_curso
+   ADD COLUMN identificador varchar(20) NOT NULL DEFAULT '--';
+   
+# View de projeto_curso
+
+CREATE OR REPLACE VIEW view_projeto_curso AS 
+ SELECT t1.seq, t1.unidseq, t1.usuaseq, t1.nome, t1.tpcuseq, t1.arcuseq, t1.objetivo, t1.publicoalvo, to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.titulo AS areacurso, ( SELECT sum(t4.cargahoraria) AS sum
+           FROM dbdisciplina t4
+          WHERE (t4.seq IN ( SELECT t5.discseq
+                   FROM dbprojeto_curso_disciplina t5
+                  WHERE t5.pjcuseq = t1.seq))) AS cargahoraria, t3.titulo AS tipocurso, ( SELECT count(t5.cursseq) AS count
+           FROM dbturma t5
+          WHERE t5.cursseq = t1.seq) AS turmas, t1.gdavseq, t1.identificador, t1.stpcseq
+   FROM dbprojeto_curso t1
+   LEFT JOIN dbarea_curso t2 ON t2.seq = t1.arcuseq
+   LEFT JOIN dbtipo_curso t3 ON t3.seq = t1.tpcuseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq;
+
+ALTER TABLE view_projeto_curso
+  OWNER TO postgres;
+
+# VIEW de curso_disciplina
+
+-- View: view_curso_disciplina
+
+-- DROP VIEW view_curso_disciplina;
+
+CREATE OR REPLACE VIEW view_curso_disciplina AS 
+ SELECT t2.seq, t0.unidseq, t0.usuaseq, t0.pjcuseq, t3.seq AS discseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t1.nome AS nomecurso, t3.titulo AS nomedisciplina, t3.cargahoraria, t0.seq AS cursseq
+   FROM dbcurso t0
+   JOIN dbprojeto_curso t1 ON t1.seq = t0.pjcuseq
+   JOIN dbprojeto_curso_disciplina t2 ON t2.pjcuseq = t0.pjcuseq
+   LEFT JOIN dbdisciplina t3 ON t3.seq = t2.discseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+
+ALTER TABLE view_curso_disciplina
+  OWNER TO postgres;
+
+ALTER TABLE dbturma_disciplina
+   ALTER COLUMN gdavseq DROP NOT NULL;
+
+ALTER TABLE dbturma
+   ALTER COLUMN valortaxa SET DEFAULT 0;
+ALTER TABLE dbturma
+   ALTER COLUMN valortaxa DROP NOT NULL;
+ALTER TABLE dbturma
+   ALTER COLUMN prodseq DROP NOT NULL;
+ALTER TABLE dbturma
+   ALTER COLUMN horainicio DROP NOT NULL;
+ALTER TABLE dbturma
+   ALTER COLUMN horafim DROP NOT NULL;
+   
+ -- VIEW TURMA
+
+CREATE OR REPLACE VIEW view_turma AS 
+ SELECT t2.nome AS nomeprojetocurso, t0.seq, t0.unidseq, t0.titulo, t0.aceitainscricao, ( SELECT sum(t4.cargahoraria) AS sum
+           FROM dbdisciplina t4
+          WHERE (t4.seq IN ( SELECT t5.discseq
+                   FROM dbturma_disciplina t5
+                  WHERE t5.turmseq = t0.seq))) AS cargahoraria, 
+                  t0.valortaxa, 
+                  t0.valormatricula, 
+                  t0.valormensal, 
+                  t0.vagas, 
+                  t0.parcelas, 
+                  t0.sttuseq, 
+                  t999.seq AS statseq, 
+                  t999.statdesc, 
+                  t0.datainicio, 
+                  t0.prodseq, 
+                  t3.nomeunidade, 
+                  t0.cursseq, 
+                  t2.nome AS nomecurso, 
+                  ( SELECT count(t5.turmseq) AS count
+           FROM dbinscricao t5
+          WHERE t5.turmseq = t0.seq) AS inscritos, ( SELECT count(t6.turmseq) AS count
+           FROM dbaluno t6
+          WHERE t6.turmseq = t0.seq) AS matriculados, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t2.gdavseq, t4.titulo AS referencia
+   FROM dbturma t0
+   LEFT JOIN dbcurso t4 ON t4.seq = t0.cursseq
+   LEFT JOIN dbprojeto_curso t2 ON t2.seq = t4.pjcuseq
+   LEFT JOIN dbunidade t3 ON t3.seq = t0.unidseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+ 
+CREATE INDEX dbturma_disciplina_turmseq_discseq_idx
+  ON dbturma_disciplina
+  USING btree
+  (turmseq, discseq);
+  
+  
+CREATE INDEX dbturma_cursseq_idx
+  ON dbturma
+  USING btree
+  (cursseq);
+  
+
+CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
+  ON dbprojeto_curso_disciplina
+  USING btree
+  (pjcuseq);
+  
+  ALTER TABLE dbtransacao
+   ALTER COLUMN intervaloparcelas DROP NOT NULL;
+  

@@ -432,7 +432,7 @@ class TCompLista {
             $this->obLista->addAction($this->act['view']->getAction());
         } */
 
-        if ($this->listaInfo->acenviar == 1) {
+        if ($this->listaInfo->acenviar != 0) {
 
             $this->act['enviar'] = new TAction('setDadosPesquisa');
             $this->act['enviar']->setParameter(TConstantes::LISTA, $this->listseq);

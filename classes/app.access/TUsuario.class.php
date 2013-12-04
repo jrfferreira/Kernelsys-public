@@ -312,6 +312,7 @@ class TUsuario {
 				), $crit);
 
 				if ($update) {
+					$dbo->commit();
 					return true;
 				} else {
 					return false;
@@ -407,6 +408,8 @@ class TUsuario {
 			$update = $dbo->update(array (
 				'senha' => $pass
 			), $crit);
+			
+			$dbo->commit();
 
 			return true;
 		} else {
@@ -465,19 +468,16 @@ class TUsuario {
 			$obFieds->setProperty('old_Password', 'size', '20');
 			$obFieds->setProperty('old_Password', 'id', 'old_Password');
 			$obFieds->setValue("old_Password", "");
-			$obFieds->setProperty('old_Password', "id", "old_Password");
 
 			$obFieds->geraCampo("Nova Senha:", 'new_Password', "TPassword", '');
 			$obFieds->setProperty('new_Password', 'size', '20');
 			$obFieds->setProperty('new_Password', 'id', 'new_Password');
 			$obFieds->setValue("new_Password", "");
-			$obFieds->setProperty('new_Password', "id", "new_Password");
 
 			$obFieds->geraCampo("Confirmação:", 'confirm_Password', "TPassword", '');
 			$obFieds->setProperty('confirm_Password', 'size', '20');
 			$obFieds->setProperty('confirm_Password', 'id', 'confirm_Password');
 			$obFieds->setValue("confirm_Password", "");
-			$obFieds->setProperty('confirm_Password', "id", "confirm_Password");
 
 			$obButton = new TButton('change_Password');
 			$obButton->id = "change_Password";

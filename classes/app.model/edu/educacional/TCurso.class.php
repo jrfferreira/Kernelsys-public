@@ -57,7 +57,7 @@ class TCurso{
         $data['pjcuseq'] = $obHeader->getHead($headerForm['frmpseq'],TConstantes::HEAD_SEQUENCIALPAI);
         $data['statseq'] = '1';
 
-        $headerLista = $obHeader->getHead($headerForm[TConstantes::LISTA],TConstantes::LIST_SELECAO);
+        $headerLista = $obHeader->getHead($headerForm[TConstantes::LISTA]);
         $listaDisciplinas = $this->getListaDisciplinas($data['pjcuseq']);
 
         //foreach($headerLista as $ch=>$vl){
@@ -65,7 +65,7 @@ class TCurso{
         //}
 
         $cont = 0;
-        foreach($headerLista as $ch=>$vl){
+        foreach($headerLista[TConstantes::LIST_SELECAO] as $ch=>$vl){
             if(!$listaDisciplinas[$ch]){
                 $data['discseq'] = str_replace(array('[',']','"',"'"), '', $vl);
                 $dboDisciplina = new TDbo(TConstantes::DBPROJETO_CURSO_DISCIPLINA);
@@ -83,6 +83,9 @@ class TCurso{
         if($cont == 0){
         	$cont = "Nenhuma";
         }
+        
+        $obHeader->addHeader($headerForm[TConstantes::LISTA],TConstantes::LIST_SELECAO,array());
+        
         return $cont." disciplina{$plural} adicionada{$plural} com sucesso.";
     }
 
@@ -90,7 +93,7 @@ class TCurso{
         try{
             $dboDisciplina = new TDbo(TConstantes::VIEW_CURSO_DISCIPLINA);
                 $criteriaDisicplina = new TCriteria();
-                $criteriaDisicplina->add(new TFilter("seq","=",$codigoCurso));
+                $criteriaDisicplina->add(new TFilter("cursseq","=",$codigoCurso));
             $retDisciplinas = $dboDisciplina->select("*",$criteriaDisicplina);
 
             $disciplinas = array();
@@ -105,6 +108,27 @@ class TCurso{
         }catch (Exception $e){
             new setException($e);
         }
+    }
+    
+    public function getListaDisciplinasProjetoCurso($pjcuseq){
+    	try{
+    		$dboDisciplina = new TDbo(TConstantes::VIEW_PROJETO_CURSO_DISCIPLINA);
+    		$criteriaDisicplina = new TCriteria();
+    		$criteriaDisicplina->add(new TFilter("pjcuseq","=",$pjcuseq));
+    		$retDisciplinas = $dboDisciplina->select("*",$criteriaDisicplina);
+    
+    		$disciplinas = array();
+    		while($disciplina = $retDisciplinas->fetchObject()){
+    			$disciplinas[] = $disciplina->discseq;
+    		}
+    
+    		$TDisciplinas = new TDisciplina();
+    		$disciplinas = $TDisciplinas->getListaDisciplina($disciplinas);
+    		return $disciplinas;
+    
+    	}catch (Exception $e){
+    		new setException($e);
+    	}
     }
 
     /**
@@ -141,6 +165,37 @@ class TCurso{
          }catch (Exception $e){
              new setException($e);
          }
+    }
+    
+    public function getCargaHorariaProjetoCurso($codigoCurso){
+    	try{
+    
+    		$disciplinas = $this->getListaDisciplinasProjetoCurso($codigoCurso);
+    
+    		$soma = 0;
+    		if($disciplinas){
+    			foreach($disciplinas as $disc){
+    				$soma = $soma + $disc->obDisciplina->cargahoraria;
+    			}
+    		}
+    
+    		$vetInsert['cargahoraria'] = $soma;
+    		$sqlInsertCHT = new TDbo(TConstantes::DBPROJETO_CURSO);
+    		$critInsert = new TCriteria();
+    		$critInsert->add(new TFilter("seq","=",$codigoCurso));
+    		$sqlInsertCHT = $sqlInsertCHT->update($vetInsert, $critInsert);
+    
+    		$string = "Carga Horaria Total: ".$soma;
+    		$this->ob = new TElement('div');
+    		$this->ob->align = "right";
+    		$this->ob->class = "ui-box ui-widget-content ui-state-default";
+    		$this->ob->add ($string);
+    
+    		return $this->ob;
+    
+    	}catch (Exception $e){
+    		new setException($e);
+    	}
     }
 
     /**

@@ -341,19 +341,23 @@ class TTurma {
         $obHeader = new TSetHeader();
         $headerForm = $obHeader->getHead($formseq);
 
-        $data['turmseq'] = $obHeader->getHead($headerForm['frmpseq'],'codigoPai');
+        $data['turmseq'] = $obHeader->getHead($headerForm['frmpseq'],TConstantes::HEAD_SEQUENCIALPAI);
         $data['statseq'] = '1';
 
-        $headerLista = $obHeader->getHead($headerForm['idLista'],'listaSelecao');
-        $TurmaDiciplinas = $this->getDiciplinas($data['turmseq']);
+        $headerLista = $obHeader->getHead($headerForm[TConstantes::LISTA],TConstantes::LIST_SELECAO);
+        if($data['turmseq']){
+        	$TurmaDiciplinas = $this->getDiciplinas($data['turmseq']);
+        }else{
+        	$TurmaDiciplinas = array();
+        }
 
-        $dbo = new TDbo(TConstantes::DBCURSO_DISCIPLINA);
+        $dbo = new TDbo(TConstantes::VIEW_CURSO_DISCIPLINA);
         $crit = new TCriteria();
         foreach($headerLista as $ch=>$vl){
             $var = new TFilter('seq','=',$vl);
             $crit->add($var,'OR');
         }
-        $retDiscs = $dbo->select('seq,cursseq,discseq',$crit);
+        $retDiscs = $dbo->select('cursseq,pjcuseq, discseq',$crit);
 
        while($vl = $retDiscs->fetchObject()){
            $codigoCurso = $vl->cursseq;
@@ -364,6 +368,7 @@ class TTurma {
            }
            if(!$TurmaDiciplinas[$vl->discseq]){
                $data['discseq'] = str_replace(array('[',']','"',"'"), '', $vl->discseq);
+               $data['frequencia'] = 1;
                $dboDisciplina = new TDbo(TConstantes::DBTURMA_DISCIPLINA);
                $ret = $dboDisciplina->insert($data);
 
@@ -394,11 +399,14 @@ class TTurma {
             if($codigoturma) {
 
                 $soma = 0;
-                $disciplinas = $this->getTurmaDiciplinas($codigoturma);
-                if($disciplinas) {
-                    foreach($disciplinas as $codigo=>$obDc) {
-                        $soma = $soma+$obDc->cargahoraria;
-                    }
+                
+                $obTDbo = new TDbo(TConstantes::VIEW_TURMA_DISCIPLINA);
+                $filtro = new TCriteria();
+                $filtro->add(new TFilter('turmseq','=',$codigoturma));
+                $resCargaHoraria = $obTDbo->select('sum(cargahoraria) as soma',$filtro);
+                
+                if($obCargaHoraria = $resCargaHoraria->fetchObject()){
+                	$soma = $obCargaHoraria->soma;
                 }
 
                 $obDto = new TDbo(TConstantes::DBTURMA);

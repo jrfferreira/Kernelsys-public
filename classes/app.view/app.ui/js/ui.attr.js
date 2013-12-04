@@ -80,7 +80,8 @@ function atribuicao() {
             'margin-left':'4px',
             'font-size' : '11',
             '-moz-border-radius': '3px',
-            '-webkit-border-radius': '3px'
+            '-webkit-border-radius': '3px',
+            'padding' : '4px'
         });
         if($(this).attr("[view]") == true){
             if($(this).attr("type") != 'hidden'){

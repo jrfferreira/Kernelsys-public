@@ -19,8 +19,8 @@ class TTurmaDisciplinas {
     public function getTurmasDisciplinasAtivas(){
         $this->obTDbo->setEntidade(TConstantes::VIEW_TURMA_DISCIPLINA);
         $criteria = new TCriteria();
-        $criteria->add(new TFilter('status','=','1'),"OR");
-        $criteria->add(new TFilter('status','=','5'),"OR");
+        $criteria->add(new TFilter('sttuseq','=','1'),"OR");
+        $criteria->add(new TFilter('sttuseq','=','5'),"OR");
         $retTurmaDisciplina = $this->obTDbo->select('seq,
                                                      cursseq,
                                                      nomecurso,
@@ -56,14 +56,17 @@ class TTurmaDisciplinas {
                 $retTurmaDisciplina = $this->obTDbo->select("*", $criteria);
                 $obTurmaDisciplinas = $retTurmaDisciplina->fetchObject();
 
-                $this->obTDbo->setEntidade(TConstantes::VIEW_PROFESSOR);
-                $criteriaProf = new TCriteria ( );
-                $criteriaProf->add(new TFilter('seq', '=', $obTurmaDisciplinas->profseq));
-                $retProfessor = $this->obTDbo->select("nomeprofessor,nomeacao", $criteriaProf);
-                $obProfessor = $retProfessor->fetchObject();
+                if($obTurmaDisciplinas->profseq){
+                	$this->obTDbo->setEntidade(TConstantes::VIEW_PROFESSOR);
+                	$criteriaProf = new TCriteria ( );
+                	$criteriaProf->add(new TFilter('seq', '=', $obTurmaDisciplinas->profseq));
+                	$retProfessor = $this->obTDbo->select("nomeprofessor,nomeacao", $criteriaProf);
+                	$obProfessor = $retProfessor->fetchObject();
+                	
+                	$obProfessor->nomeacao = (($obProfessor->nomeacao != 'Alfabetizado') || ($obProfessor->nomeacao != 'Graduado')) ? "({$obProfessor->nomeacao})" : "";
 
-                $obProfessor->nomeacao = (($obProfessor->nomeacao != 'Alfabetizado') || ($obProfessor->nomeacao != 'Graduado')) ? "({$obProfessor->nomeacao})" : "";
-                $obTurmaDisciplinas->nomeprofessor = $obProfessor->nomeprofessor . " {$obProfessor->nomeacao}";
+                	$obTurmaDisciplinas->nomeprofessor = $obProfessor->nomeprofessor . " {$obProfessor->nomeacao}";
+                }
 
                 if($fullObject) $obTurmaDisciplinas->aulas = $this->getAula($codigoTurmaDisciplina);
                 if($fullObject) $avaliacoes = $this->getAvaliacao($codigoTurmaDisciplina);
@@ -169,7 +172,6 @@ class TTurmaDisciplinas {
                     $avaliacao = $TAvaliacao->getAvaliacao($codigoavaliacao);
                 if ($codigoavaliacao && $avaliacao) {
                     $argumentossetnota ['avalseq'] = $codigoavaliacao;
-                    $argumentossetnota ['ordem'] = $avaliacao->ordem;
                     if ($codigoaluno) {
                         $argumentossetnota ['alunseq'] = $codigoaluno;
                         if ($nota >= 0 && $nota <= 10) {
@@ -196,6 +198,7 @@ class TTurmaDisciplinas {
                                 $falta = $retNotas->insert($argumentossetnota);
                             } else {
                                 $falta = $retNotas->update($argumentossetnota, $criteriochecagem);
+                                $this->obTDbo->commit();
                             }
                         } else {
                             throw new ErrorException("A nota é invalida.");
@@ -397,7 +400,7 @@ class TTurmaDisciplinas {
 	                }
 	            
 	            if(!$filtroAlunos){
-	            	throw new ErrorException("O codigo do relacionamento Turma x Disciplina não possui nenhum aluno ativo.");
+	            	return array();//throw new ErrorException("O codigo do relacionamento Turma x Disciplina não possui nenhum aluno ativo.");
 	            }
                 $critAlunos->setProperty('order', 'nomepessoa');
                 
@@ -812,15 +815,18 @@ class TTurmaDisciplinas {
 
     public function consolidaNotasFrequencias($listaTurmasDisciplinas = array()){
         try {
+        	$TUnidade = new TUnidade();
+        	$avalseq = $TUnidade->getParametro("avaliacao_padrao");
 
             $criteria = new TCriteria();
-            $criteria->add(new TFilter('situacao','=','2'),'AND');  
+            $criteria->add(new TFilter('stadseq','=','2'),'AND');  
             $criteriaNotas = new TCriteria();
+            $criteriaNotas->add(new TFilter("avalseq", "=", $avalseq));
             $criteriaFaltas = new TCriteria();            
-            $criteriaFaltas->add(new TFilter('deferido', '=', true),'AND');
+            $criteriaFaltas->add(new TFilter('deferido', '=', true, 'boolean'),'AND');
             $criteriaTurmasDisciplinas = new TCriteria();
 
-            $sqlDelete = "delete from ".TConstantes::RELATORIO_ALUNO_NOTA_FREQUENCIA." where tudiseq = '1'";
+            $sqlDelete = "delete from ".TConstantes::ALUNO_NOTA_FREQUENCIA." where tudiseq = '1'";
 
             foreach($listaTurmasDisciplinas as $turmadisciplina){
                 $criteria->add(new TFilter('tudiseq','=',$turmadisciplina,'numeric', '99'),'OR');
@@ -842,16 +848,17 @@ class TTurmaDisciplinas {
                 if(!$listaAlunos[$obAluno->tudiseq])
                     $listaAlunos[$obAluno->tudiseq] = array();
                 $sqlAlunos .= " or al.seq = '{$obAluno->alunseq}'";
-                $listaAlunos[$obAluno->tudiseq][$obAluno->alunseq] = array("notas"=>array(),"faltas"=>0);
+                $listaAlunos[$obAluno->tudiseq][$obAluno->alunseq] = array("nota"=>0,"faltas"=>0);
             }  
 
             $sqlAlunos .= ')';          
 
+            if(count($listaAlunos) > 0){
             $this->obTDbo->setEntidade("DBNOTA");
-            $notasQuery = $this->obTDbo->select("alunseq,avalseq, tudiseq, nota, ordem", $criteriaNotas);
+            $notasQuery = $this->obTDbo->select("alunseq,avalseq, tudiseq, nota", $criteriaNotas);
 
             while ($obNota = $notasQuery->fetchObject()) {
-               $listaAlunos[$obNota->tudiseq][$obNota->alunseq]["notas"][$obNota->ordem] = $obNota->nota;
+               $listaAlunos[$obNota->tudiseq][$obNota->alunseq]['nota'] = $obNota->nota;
             }
 
             $alunosNomes = array();
@@ -860,6 +867,7 @@ class TTurmaDisciplinas {
                 $alunosNomes[$obAlunoNome->seq] = $obAlunoNome->aluno;
             }
 
+            /*
             $gradeAvaliacoes = array();
 
             $this->obTDbo->setEntidade(TConstantes::DBAVALIACAO);
@@ -868,14 +876,14 @@ class TTurmaDisciplinas {
             $critGrade->setProperty('order', 'ordem');
             $gradeQuery = $this->obTDbo->select("*", $critGrade);            
             
-            while ($obAvaliacao = $gradeQuery->fetchObject()) {
+             while ($obAvaliacao = $gradeQuery->fetchObject()) {
                 if(!$gradeAvaliacoes[$obAvaliacao->gdavseq])
                     $gradeAvaliacoes[$obAvaliacao->gdavseq] = array();
                 $gradeAvaliacoes[$obAvaliacao->gdavseq][$obAvaliacao->ordem] = $obAvaliacao;
-            }
+            } */
             
             $this->obTDbo->setEntidade(TConstantes::DBFALTA);
-            $retFaltas = $this->obTDbo->select("*", $criteria);
+            $retFaltas = $this->obTDbo->select("*", $criteriaFaltas);
 
             while ($obFaltas = $retFaltas->fetchObject()) {
                 $listaAlunos[$obFaltas->tudiseq][$obFaltas->alunseq]["faltas"]++;
@@ -894,7 +902,7 @@ class TTurmaDisciplinas {
             $TAvaliacao = new TAvaliacao();
 
             $cols = "aluno,
-                     matricula,
+                     alunseq,
                      tudiseq,
                      disciplina,
                      curso,
@@ -906,27 +914,29 @@ class TTurmaDisciplinas {
                      aprovacaomedia,
                      aprovacaogeral";      
 
-            $sql = "insert into ".TConstantes::RELATORIO_ALUNO_NOTA_FREQUENCIA." ({$cols}) values ";
+            $sql = "insert into ".TConstantes::ALUNO_NOTA_FREQUENCIA." ({$cols}) values ";
 
             foreach($listaAlunos as $turmadisciplina=>$alunos){
                 foreach($alunos as $aluno=>$listaNotasFrequencias){
                     $media = 'NULL';
                     
-                    $avaliacoes = $gradeAvaliacoes[$listaTurmasDisciplinas[$turmadisciplina]->gdavseq];
+                    /* $avaliacoes = $gradeAvaliacoes[$listaTurmasDisciplinas[$turmadisciplina]->gdavseq];
                     if(sizeof($avaliacoes) > 0){
 
                         foreach($avaliacoes as $ordem => $av)
                             $avaliacoes[$ordem]->nota = "0.00";
 
-                        if(sizeof($listaNotasFrequencias["notas"])  > 0)
-                            foreach($listaNotasFrequencias["notas"] as $ordem => $nota)
+                        if(is_array($listaNotasFrequencias["notas"]) && count($listaNotasFrequencias["notas"])  > 0){
+                        	foreach($listaNotasFrequencias["notas"] as $ordem => $nota){
                                 $avaliacoes[$ordem]->nota = $nota;
+                        	}
+                        }
 
                         $media = $TAvaliacao->processaMedia($avaliacoes);
 
-                    }
+                    } */
                     
-
+                    $media = $listaNotasFrequencias["nota"];
                     $faltas = $listaNotasFrequencias["faltas"];
                     $frequencia = $listaTurmasDisciplinas[$turmadisciplina]->frequencia;
 
@@ -970,7 +980,8 @@ class TTurmaDisciplinas {
             $this->obTDbo->sqlExec($sql);
 
             $this->obTDbo->commit();
-
+            }
+            
             $ob = new TElement('div');
             $ob->align = "center";
             $ob->style = "background-color:#FFFF99; margin: 10px; padding: 10px;";
@@ -984,4 +995,110 @@ class TTurmaDisciplinas {
         }
     }
 
+    public function viewLancamentoNota($tudiseq) {
+    	$TUnidade = new TUnidade();
+    	try {
+    		if($tudiseq) {
+    			$turmaDisciplina = $this->getTurmaDisciplina($tudiseq,false); 
+    			$alunos = $this->getAlunos($tudiseq);
+    			$avalseq = $TUnidade->getParametro("avaliacao_padrao");
+    			$listaNotas = array();
+    			
+    			$obTDbo = new TDbo(TConstantes::DBNOTA);
+    			$criterio = new TCriteria();
+    			$criterio->add(new TFilter("tudiseq", "=", $tudiseq));
+    			$criterio->add(new TFilter("avalseq", "=", $avalseq));
+    			$obSelectNotas = $obTDbo->select("alunseq,nota",$criterio);
+    			
+    			while($obNota = $obSelectNotas->fetchObject()){
+    				$listaNotas[$obNota->alunseq] = $obNota->nota;
+    			}
+    			
+    			$tabHead = new TElement("fieldset");
+    			$tabHead->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
+    			$tabHeadLegenda = new TElement("legend");
+    			$tabHeadLegenda->class = "ui_bloco_legendas ui-widget-content ui-corner-all";
+    			$tabHeadLegenda->add("Informações da Disciplina");
+    			$tabHead->add($tabHeadLegenda);
+    
+    			$obFieds = new TSetfields();
+    			$obFieds->geraCampo("Curso:", 'curso', "TEntry", '');
+    			$obFieds->setProperty('curso', 'disabled', 'disabled');
+    			$obFieds->setValue("curso", $turmaDisciplina->nomecurso);
+    
+    			$obFieds->geraCampo("Turma:", 'turma', "TEntry", '');
+    			$obFieds->setProperty('turma', 'disabled', 'disabled');
+    			$obFieds->setProperty('turma', 'size', '60');
+    			$obFieds->setValue("turma", $turmaDisciplina->nometurma);
+    
+    			$obFieds->geraCampo("Disciplina:", 'disciplina', "TEntry", '');
+    			$obFieds->setProperty('disciplina', 'disabled', 'disabled');
+    			$obFieds->setProperty('disciplina', 'size', '60');
+    			$obFieds->setValue("disciplina", $turmaDisciplina->nomedisciplina);
+    
+    			$obFieds->geraCampo("Professor:", 'professor', "TEntry", '');
+    			$obFieds->setProperty('professor', 'disabled', 'disabled');
+    			$obFieds->setProperty('professor', 'size', '60');
+    			$obFieds->setValue("professor", $turmaDisciplina->nomeprofessor);
+    
+    			$content = new TElement('div');
+    			$content->class = "ui_bloco_conteudo";
+    			$content->add($obFieds->getConteiner());
+    			$tabHead->add($content);
+    
+    			$listaAlunos = new TElement("fieldset");
+    			$listaAlunos->class = " ui_bloco_fieldset ui-corner-all ui-widget-content";
+    			$alunosLegenda = new TElement("legend");
+    			$alunosLegenda->class = "ui_bloco_legendas ui-widget-content ui-corner-all";
+    			$alunosLegenda->add("Alunos");
+    			$listaAlunos->add($alunosLegenda);
+    
+    			$datagrid = new TDataGrid();
+    
+    			$datagrid->addColumn(new TDataGridColumn('matricula', 'Matrícula', 'center', '80px'));
+    			$datagrid->addColumn(new TDataGridColumn('nomealuno', 'Nome do Aluno', 'left', '300px'));
+    			$datagrid->addColumn(new TDataGridColumn('nota', 'Nota', 'center', '100px'));
+    			$datagrid->createModel('100%');
+    
+    			foreach($alunos as $key => $obAluno) {
+    				$tempDisc = array();
+    				$tempDisc['matricula'] = $obAluno->seq;
+    				$tempDisc['nomealuno'] = $obAluno->nomepessoa;
+    				
+    				$campoNota = new TEntry('nota'.$obAluno->seq);
+    				$campoNota->setProperty('onkeypress', 'validaValorNota(this)');
+    				$campoNota->setProperty('onchange', 'validaValorNota(this);setAlunoNota(\'nota'.$obAluno->seq.'\','.$tudiseq.','.$obAluno->seq.','.$avalseq.')');
+    				$campoNota->setProperty('placeholder', 'Nota');
+    				$campoNota->setProperty('style', 'text-align:center;');
+    				
+    				if(key_exists($key, $listaNotas)){
+    					$campoNota->setValue($listaNotas[$obAluno->seq]);
+    				}
+    				
+    				$campoNota->setSize(60);
+    				
+    				$tempDisc['nota'] = $campoNota;
+    				
+    				$datagrid->addItem($tempDisc);
+    			}
+    			$content = new TElement('div');
+    			$content->class = "ui_bloco_conteudo";
+    			$content->add($datagrid);
+    			$listaAlunos->add($content);
+    
+    
+    			$obAluno = new TElement('div');
+    			$obAluno->add($tabHead);
+    			$obAluno->add($listaAlunos);
+    
+    		}else {
+    			throw new ErrorException("O codigo ".$tudiseq." não é referente a uma disciplina válida.");
+    		}
+    	}catch (Exception $e) {
+    		$this->obTDbo->rollback();
+    		new setException($e);
+    	}
+    
+    	return $obAluno;
+    }
 }

@@ -153,6 +153,7 @@ class TAvaliacao {
     public function processaMedia($vetorAvaliacoes) {
 		$cond = true;
         $notaAtual = null;
+        $pesos = 1;
 
         $k = end($vetorAvaliacoes)->seq;
 
@@ -197,7 +198,7 @@ class TAvaliacao {
 
             
             if ($checagem) {
-                $incontrol = current($vetorAvaliacoes)->incontrol;
+                $incontrol = current($vetorAvaliacoes)->incontrol;     	
                 
                 switch (current($vetorAvaliacoes)->codigoregra) {
                     case 1:

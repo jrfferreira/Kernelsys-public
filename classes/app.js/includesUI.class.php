@@ -10,7 +10,7 @@ class includesUI{
             $getPath = new TElement('script');
             $getPath->type="text/javascript";
             $getPath->charset="utf-8";
-            $getPath->src= '../'.$dir.'app.config/getPath.js';
+            $getPath->src= '../'.$dir.TOccupant::getPath().'app.config/getPath.js';
             $getPath->add('');
 
 

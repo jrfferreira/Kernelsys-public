@@ -178,7 +178,7 @@ class TForms{
             //monta botões extras na aba
             $this->dboKs->setEntidade('form_button');
                 $criteriaFormBot = new TCriteria();
-                $criteriaFormBot->add(new TFilter('form', '=', $this->formseq));
+                $criteriaFormBot->add(new TFilter('formseq', '=', $this->formseq));
                 $criteriaFormBot->add(new TFilter('statseq', '=', '1'));
                 $criteriaFormBot->setProperty('order', 'ordem');
             $runBots = $this->dboKs->select('*', $criteriaFormBot);

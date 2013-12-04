@@ -1057,38 +1057,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="310">
-      <seq>310</seq>
-      <tipo>pesq</tipo>
-      <formseq>310</formseq>
-      <filtropai>pjcuseq</filtropai>
-      <pesquisa>pjcuseq=seq,pjcuseqLabel=nome</pesquisa>
-      <lista>pesqCursosConcluidos</lista>
-      <label>Cursos Disponíveis</label>
-      <tabseq>9</tabseq>
-      <listseq>310</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>statseq/!=/AND/8;statseq/!=/AND/9</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="168">
       <seq>168</seq>
       <tipo>form</tipo>
@@ -1793,38 +1761,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="135">
-      <seq>135</seq>
-      <tipo>form</tipo>
-      <formseq>335</formseq>
-      <filtropai>turmseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>turmaDisciplinas</lista>
-      <label>Disciplinas da turma</label>
-      <tabseq>12</tabseq>
-      <listseq>133</listseq>
-      <obapendice>TTurma/getCargaHoraria</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>Associar disciplina</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro/>
-      <trigger/>
-      <formainclude>multiple</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="279">
       <seq>279</seq>
       <tipo>form</tipo>
@@ -1974,38 +1910,6 @@
       <filtro>tpprseq/!=/AND/10004330-830</filtro>
       <trigger/>
       <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="134">
-      <seq>134</seq>
-      <tipo>form</tipo>
-      <formseq>354</formseq>
-      <filtropai>pjcuseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listDisciplinas</lista>
-      <label>Disciplinas</label>
-      <tabseq>10</tabseq>
-      <listseq>132</listseq>
-      <obapendice>TCurso/getCargaHoraria</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>Adicionar Disicplinas</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro/>
-      <trigger/>
-      <formainclude>multiple</formainclude>
       <incontrol/>
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>
@@ -2262,6 +2166,38 @@
       <filtro/>
       <trigger/>
       <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="135">
+      <seq>135</seq>
+      <tipo>form</tipo>
+      <formseq>335</formseq>
+      <filtropai>turmseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>turmaDisciplinas</lista>
+      <label>Disciplinas da turma</label>
+      <tabseq>12</tabseq>
+      <listseq>133</listseq>
+      <obapendice>TTurma/getCargaHoraria</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Associar disciplina</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro/>
+      <trigger/>
+      <formainclude>multiple</formainclude>
       <incontrol/>
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>
@@ -3841,38 +3777,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="242">
-      <seq>242</seq>
-      <tipo>form</tipo>
-      <formseq>475</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaCursosDisponiveis</lista>
-      <label>Projeto de Curso Concluído</label>
-      <tabseq>9</tabseq>
-      <listseq>242</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>1</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>turmas/&gt;/AND/0</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="381">
       <seq>381</seq>
       <tipo>form</tipo>
@@ -5313,38 +5217,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="396">
-      <seq>396</seq>
-      <tipo>form</tipo>
-      <formseq>395</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaDisciplinasTurma</lista>
-      <label>Disciplinas</label>
-      <tabseq>10</tabseq>
-      <listseq>395</listseq>
-      <obapendice>TTurma/buttonAddTurmaDisciplina</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>pjcuseq/=/AND/TTurma/getCursoSeq/1/numeric</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>1</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="269">
       <seq>269</seq>
       <tipo>form</tipo>
@@ -5409,38 +5281,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="184">
-      <seq>184</seq>
-      <tipo>pesq</tipo>
-      <formseq>4</formseq>
-      <filtropai>0</filtropai>
-      <pesquisa>cursseq=seq,cursseqLabel=nome</pesquisa>
-      <lista>pesqCursos</lista>
-      <label>Cursos</label>
-      <tabseq>85</tabseq>
-      <listseq>184</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>1</acenviar>
-      <filtro>statseq/!=/AND/8;statseq/!=/AND/9</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="488">
       <seq>488</seq>
       <tipo>form</tipo>
@@ -5466,70 +5306,6 @@
       <acreplicar>0</acreplicar>
       <acselecao>0</acselecao>
       <ordem>datacad/desc;seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="477">
-      <seq>477</seq>
-      <tipo>form</tipo>
-      <formseq>476</formseq>
-      <filtropai>pjcuseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listDisciplinas</lista>
-      <label>Disciplinas</label>
-      <tabseq>10</tabseq>
-      <listseq>242</listseq>
-      <obapendice>TCurso/getCargaHoraria</obapendice>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>statseq/!=/AND/9/numeric</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="314">
-      <seq>314</seq>
-      <tipo>form</tipo>
-      <formseq>311</formseq>
-      <filtropai>seq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaCursosDisponiveis</lista>
-      <label>Cursos Disponíveis</label>
-      <tabseq>9</tabseq>
-      <listseq>314</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>statseq/=/AND/1/numeric</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
       <aclimite>1</aclimite>
       <required/>
       <usuaseq>1</usuaseq>
@@ -5569,6 +5345,166 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="477">
+      <seq>477</seq>
+      <tipo>form</tipo>
+      <formseq>476</formseq>
+      <filtropai>pjcuseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listDisciplinas</lista>
+      <label>Disciplinas</label>
+      <tabseq>10</tabseq>
+      <listseq>242</listseq>
+      <obapendice>TCurso/getCargaHorariaProjetoCurso</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statseq/!=/AND/9/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="396">
+      <seq>396</seq>
+      <tipo>form</tipo>
+      <formseq>395</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaDisciplinasTurma</lista>
+      <label>Disciplinas</label>
+      <tabseq>7</tabseq>
+      <listseq>395</listseq>
+      <obapendice>TTurma/buttonAddTurmaDisciplina</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>pjcuseq/=/AND/TTurma/getCursoSeq/1/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>1</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="184">
+      <seq>184</seq>
+      <tipo>pesq</tipo>
+      <formseq>4</formseq>
+      <filtropai>0</filtropai>
+      <pesquisa>cursseq=seq,cursseqLabel=titulo</pesquisa>
+      <lista>pesqCursos</lista>
+      <label>Cursos</label>
+      <tabseq>85</tabseq>
+      <listseq>184</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>statseq/!=/AND/8;statseq/!=/AND/9</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="24">
+      <seq>24</seq>
+      <tipo>form</tipo>
+      <formseq>23</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaLancamentoNotasCoordernador</lista>
+      <label>Lista de Disciplinas</label>
+      <tabseq>12</tabseq>
+      <listseq>24</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statseq/!=/AND/9/numeric;alunos/&gt;=/AND/1/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>2013-11-29</datacad>
+    </row>
+    <row seq="25">
+      <seq>25</seq>
+      <tipo>form</tipo>
+      <formseq>35</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaLancamentoNotasCoordernador</lista>
+      <label>Lista de Disciplinas</label>
+      <tabseq>12</tabseq>
+      <listseq>24</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statseq/!=/AND/9/numeric;alunos/&gt;=/AND/1/numeric;profseq/=/AND/TUsuario/getSeqProfessor</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>2013-11-29</datacad>
+    </row>
     <row seq="7">
       <seq>7</seq>
       <tipo>form</tipo>
@@ -5600,6 +5536,134 @@
       <unidseq>1</unidseq>
       <statseq>1</statseq>
       <datacad>2013-11-26</datacad>
+    </row>
+    <row seq="242">
+      <seq>242</seq>
+      <tipo>form</tipo>
+      <formseq>475</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosDisponiveis</lista>
+      <label>Projeto de Curso Concluído</label>
+      <tabseq>9</tabseq>
+      <listseq>242</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>1</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>turmas/&gt;/AND/0/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="134">
+      <seq>134</seq>
+      <tipo>form</tipo>
+      <formseq>354</formseq>
+      <filtropai>pjcuseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listDisciplinas</lista>
+      <label>Disciplinas</label>
+      <tabseq>10</tabseq>
+      <listseq>132</listseq>
+      <obapendice>TCurso/getCargaHorariaProjetoCurso</obapendice>
+      <acfiltro>0</acfiltro>
+      <acincluir>Adicionar Disicplinas</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro/>
+      <trigger/>
+      <formainclude>multiple</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="314">
+      <seq>314</seq>
+      <tipo>form</tipo>
+      <formseq>311</formseq>
+      <filtropai>seq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaCursosDisponiveis</lista>
+      <label>Cursos Disponíveis</label>
+      <tabseq>9</tabseq>
+      <listseq>314</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>stpcseq/=/OR/1/numeric;turmas/&gt;=/OR/1/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="310">
+      <seq>310</seq>
+      <tipo>pesq</tipo>
+      <formseq>310</formseq>
+      <filtropai>pjcuseq</filtropai>
+      <pesquisa>pjcuseq=seq,pjcuseqLabel=nome</pesquisa>
+      <lista>pesqCursosConcluidos</lista>
+      <label>Cursos Disponíveis</label>
+      <tabseq>9</tabseq>
+      <listseq>310</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acviews>0</acviews>
+      <acenviar>1</acenviar>
+      <filtro>stpcseq/=/OR/1/numeric;turmas/&gt;=/OR/1/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>seq/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </lista>
 </kernelsys>

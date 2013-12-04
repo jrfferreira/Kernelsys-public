@@ -382,16 +382,6 @@ class TMain {
     		//recupera seq da unidade
     		//$unidseq = $this->obUser->unidseq->seq;
     		    		
-    	
-    	/* //executa a função de controle do formulário se existir
-    	if($this->header[TConstantes::HEAD_OUTCONTROL]){	
-    		$vetorformOutControl = explode(';', $this->header[TConstantes::HEAD_OUTCONTROL]);
-    	
-    		foreach ($vetorformOutControl as $fOC){
-    			$formOutControl = explode('/', $fOC);
-    			$retornoOutcontrol = $this->onMain($formOutControl);
-    		}
-    	} */
     		    		
     		//Identifica o nivel do formulário
 		    if($this->nivelExec > 1 and strpos($seq_tmp, 'TMP') !== false){

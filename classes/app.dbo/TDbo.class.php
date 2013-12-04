@@ -137,7 +137,7 @@ class TDbo {
      * author Wagner Borba
      * param colunas = Colunas da entidade a serem retornadas (*) retorna todas
      */
-    public function select($cols, $criteria = NULL) {
+    public function select($cols, $criteria = NULL, $whitoutRules = false) {
         try { 	
         	
             if($cols) {
@@ -171,7 +171,7 @@ class TDbo {
                 	}
                     //adiciona criterio de seleção por unidseq automaticamente
                     if($this->obUser) {
-                        if($this->obUser->unidseq->seq!= 'x' && $this->realUser){
+                        if($this->obUser->unidseq->seq!= 'x' && $this->realUser && !$whitoutRules){
                             $criteria->add(new TFilter('unidseq','=',$this->obUser->unidseq->seq,'numeric','unidseq'));
                            // $criteria->add(new TFilter('unidseq','=','x','unidseq'),'OR');
                         }

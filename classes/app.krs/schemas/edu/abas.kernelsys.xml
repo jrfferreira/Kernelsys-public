@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <abas>
-    <row seq="21">
-      <seq>21</seq>
-      <abaid>disciplinas</abaid>
-      <nomeaba>Disciplinas</nomeaba>
-      <obapendice>-</obapendice>
-      <action>-</action>
-      <impressao>1</impressao>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <statseq>1</statseq>
-      <requireRegister/>
-    </row>
     <row seq="22">
       <seq>22</seq>
       <abaid>dadosPessoais</abaid>
@@ -1140,20 +1126,6 @@
       <abaid>relatorioCaixaR</abaid>
       <nomeaba>Relatório de Receita</nomeaba>
       <obapendice>relatorioCaixaR/get</obapendice>
-      <action>-</action>
-      <impressao>1</impressao>
-      <ordem>0</ordem>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <statseq>1</statseq>
-      <requireRegister/>
-    </row>
-    <row seq="67">
-      <seq>67</seq>
-      <abaid>usuarioPrivilegios</abaid>
-      <nomeaba>Privilégios</nomeaba>
-      <obapendice>TPrivilegios/viewGetModulos</obapendice>
       <action>-</action>
       <impressao>1</impressao>
       <ordem>0</ordem>
@@ -3724,6 +3696,62 @@
       <datacad>1900-01-01</datacad>
       <statseq>7</statseq>
       <requireRegister/>
+    </row>
+    <row seq="67">
+      <seq>67</seq>
+      <abaid>usuarioPrivilegios</abaid>
+      <nomeaba>Privilégios</nomeaba>
+      <obapendice>TPrivilegios/viewGetModulos</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
+      <ordem>0</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
+      <requireRegister>1</requireRegister>
+    </row>
+    <row seq="8">
+      <seq>8</seq>
+      <abaid>aba_lancamentoNotas</abaid>
+      <nomeaba>Lançamento de Notas</nomeaba>
+      <obapendice>TTurmaDisciplinas/viewLancamentoNota</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>1</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+      <statseq>1</statseq>
+      <requireRegister/>
+    </row>
+    <row seq="9">
+      <seq>9</seq>
+      <abaid>aba_lancamentoNotas</abaid>
+      <nomeaba>Lançamento de Notas</nomeaba>
+      <obapendice>TTurmaDisciplinas/viewLancamentoNota</obapendice>
+      <action>-</action>
+      <impressao>0</impressao>
+      <ordem>1</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-29</datacad>
+      <statseq>1</statseq>
+      <requireRegister/>
+    </row>
+    <row seq="21">
+      <seq>21</seq>
+      <abaid>disciplinas</abaid>
+      <nomeaba>Disciplinas</nomeaba>
+      <obapendice>-</obapendice>
+      <action>-</action>
+      <impressao>1</impressao>
+      <ordem>0</ordem>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <statseq>1</statseq>
+      <requireRegister>1</requireRegister>
     </row>
   </abas>
 </kernelsys>

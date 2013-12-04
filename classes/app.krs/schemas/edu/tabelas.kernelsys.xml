@@ -1035,5 +1035,16 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
+    <row seq="7">
+      <seq>7</seq>
+      <tabela>dbprojeto_curso_disciplina</tabela>
+      <tabelaView>view_curso_disciplina</tabelaView>
+      <tabseq>8</tabseq>
+      <statseq>1</statseq>
+      <colunafilho>pjcdseq</colunafilho>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-28</datacad>
+    </row>
   </tabelas>
 </kernelsys>

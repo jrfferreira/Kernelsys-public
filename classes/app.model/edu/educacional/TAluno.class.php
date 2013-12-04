@@ -347,7 +347,7 @@ class TAluno {
                 $medias = $TAvaliacao->getMedia($codigoaluno);
                */
 
-             $this->obTDbo->setEntidade(TConstantes::RELATORIO_ALUNOS_NOTAS_FREQUENCIAS);
+             $this->obTDbo->setEntidade(TConstantes::ALUNO_NOTA_FREQUENCIA);
              $criteria = new TCriteria();
              $criteria->add(new TFilter('alunseq','=',$codigoaluno));
                 

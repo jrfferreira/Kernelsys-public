@@ -5351,16 +5351,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="779">
-      <seq>779</seq>
-      <campseq>73</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="614">
       <seq>614</seq>
       <campseq>567</campseq>
@@ -6627,16 +6617,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="771">
-      <seq>771</seq>
-      <campseq>84</campseq>
-      <metodo>onkeyup</metodo>
-      <valor>setValorParcelaTurma('valorTotal','numParcelas','valorMensal')</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="772">
       <seq>772</seq>
       <campseq>82</campseq>
@@ -6727,26 +6707,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="813">
-      <seq>813</seq>
-      <campseq>776</campseq>
-      <metodo>disabled</metodo>
-      <valor>disabled</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="770">
-      <seq>770</seq>
-      <campseq>83</campseq>
-      <metodo>onblur</metodo>
-      <valor>setValorParcelaTurma('valorTotal','numParcelas','valorMensal')</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="839">
       <seq>839</seq>
       <campseq>633</campseq>
@@ -6757,21 +6717,21 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="769">
-      <seq>769</seq>
-      <campseq>752</campseq>
-      <metodo>disabled</metodo>
-      <valor>true</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="810">
       <seq>810</seq>
       <campseq>786</campseq>
       <metodo>disabled</metodo>
       <valor>disabled</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="771">
+      <seq>771</seq>
+      <campseq>84</campseq>
+      <metodo>onkeyup</metodo>
+      <valor>setValorParcelaTurma('valortotal','parcelas','valormensal',event)</valor>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -9500,16 +9460,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="789">
-      <seq>789</seq>
-      <campseq>776</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from view_cursos</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="876">
       <seq>876</seq>
       <campseq>835</campseq>
@@ -10129,6 +10079,46 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="453">
+      <seq>453</seq>
+      <campseq>45</campseq>
+      <metodo>setSize</metodo>
+      <valor>100</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-27</datacad>
+    </row>
+    <row seq="454">
+      <seq>454</seq>
+      <campseq>45</campseq>
+      <metodo>maxlength</metodo>
+      <valor>20</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-11-27</datacad>
+    </row>
+    <row seq="770">
+      <seq>770</seq>
+      <campseq>83</campseq>
+      <metodo>onkeyup</metodo>
+      <valor>setValorParcelaTurma('valortotal','parcelas','valormensal',event)</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="490">
+      <seq>490</seq>
+      <campseq>752</campseq>
+      <metodo>onkeyup</metodo>
+      <valor>setValorParcelaTurma('valortotal','parcelas','valormensal',event)</valor>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-12-02</datacad>
     </row>
   </camposXPropriedades>
 </kernelsys>
