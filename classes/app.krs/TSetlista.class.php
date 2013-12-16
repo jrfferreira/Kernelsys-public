@@ -175,7 +175,7 @@ class TSetlista {
 
         	if($tipodado == 'boolean'){
         		if(!is_bool($dado)){
-        			$dado = ($dado == "false" || $dado == "0" || $dado == 0) ? false : true;
+        			$dado = ($dado == "false" || $dado === "0" || $dado === 0) ? false : true;
         		}
         		$incluir = true; 		
         	}elseif($tipodado == 'string' and is_string($dado)){

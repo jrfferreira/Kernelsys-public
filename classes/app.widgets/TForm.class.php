@@ -78,7 +78,7 @@ class TForm{
     public function setData($object){
         if(count($object) > 0){
         	foreach ($object as $table => $campos){
-        		if(count($campos) > 0){
+        		if(is_array($campos) && count($campos) > 0){
         			foreach($campos as $name=>$campo){
         				if(count($this->fields) > 0){
 	        				foreach($this->fields as $field){

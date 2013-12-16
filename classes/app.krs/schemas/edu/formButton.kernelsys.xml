@@ -15,20 +15,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="2">
-      <seq>2</seq>
-      <formseq>13</formseq>
-      <botao>concluir_botform</botao>
-      <labelbotao>Baixar conta</labelbotao>
-      <confirmacao>Você deseja realmente executar o pagamento desta conta?</confirmacao>
-      <actionjs>onClose</actionjs>
-      <metodo>onClose</metodo>
-      <ordem>2 </ordem>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="4">
       <seq>4</seq>
       <formseq>8</formseq>

@@ -16,21 +16,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="82">
-      <seq>82</seq>
-      <modulo>parametros</modulo>
-      <labelmodulo>Parametros</labelmodulo>
-      <metodo>getform</metodo>
-      <argumento>46</argumento>
-      <formseq>46</formseq>
-      <nivel>2</nivel>
-      <modseq>4</modseq>
-      <ordem>12</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="26">
       <seq>26</seq>
       <modulo>financeiroAluno</modulo>
@@ -136,21 +121,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="107">
-      <seq>107</seq>
-      <modulo>responderQuestionario</modulo>
-      <labelmodulo>Responder Questionário</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>0</argumento>
-      <formseq>2</formseq>
-      <nivel>2</nivel>
-      <modseq>8</modseq>
-      <ordem>2</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="45">
       <seq>45</seq>
       <modulo>botProfessor</modulo>
@@ -206,21 +176,6 @@
       <nivel>1</nivel>
       <modseq>5</modseq>
       <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="50">
-      <seq>50</seq>
-      <modulo>patrimonios</modulo>
-      <labelmodulo>Patrimonios</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>155</argumento>
-      <formseq>21</formseq>
-      <nivel>1</nivel>
-      <modseq>4</modseq>
-      <ordem>4</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -301,21 +256,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="63">
-      <seq>63</seq>
-      <modulo>solicitacoes</modulo>
-      <labelmodulo>Solicitações</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>178</argumento>
-      <formseq>38</formseq>
-      <nivel>2</nivel>
-      <modseq>2</modseq>
-      <ordem>9</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="58">
       <seq>58</seq>
       <modulo>demanda</modulo>
@@ -340,21 +280,6 @@
       <formseq>59</formseq>
       <nivel>2</nivel>
       <modseq>7</modseq>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="84">
-      <seq>84</seq>
-      <modulo>gerenciadorProjetos</modulo>
-      <labelmodulo>Gerenciar Projetos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>203</argumento>
-      <formseq>57</formseq>
-      <nivel>2</nivel>
-      <modseq>11</modseq>
       <ordem>0</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
@@ -406,21 +331,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="27">
-      <seq>27</seq>
-      <modulo>solicitacao</modulo>
-      <labelmodulo>Solicitações</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>222</argumento>
-      <formseq>76</formseq>
-      <nivel>2</nivel>
-      <modseq>10</modseq>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="94">
       <seq>94</seq>
       <modulo>departamentos</modulo>
@@ -431,21 +341,6 @@
       <nivel>2</nivel>
       <modseq>4</modseq>
       <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="95">
-      <seq>95</seq>
-      <modulo>solicitacoesEncaminhadas</modulo>
-      <labelmodulo>Solicitações Encaminhadas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>227</argumento>
-      <formseq>78</formseq>
-      <nivel>2</nivel>
-      <modseq>2</modseq>
-      <ordem>10</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -466,66 +361,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="106">
-      <seq>106</seq>
-      <modulo>gerenciarQuestionario</modulo>
-      <labelmodulo>Gerenciar Questionário</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>244</argumento>
-      <formseq>89</formseq>
-      <nivel>2</nivel>
-      <modseq>8</modseq>
-      <ordem>1</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="111">
-      <seq>111</seq>
-      <modulo>reservaLivro</modulo>
-      <labelmodulo>Reservas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>268</argumento>
-      <formseq>266</formseq>
-      <nivel>2</nivel>
-      <modseq>12</modseq>
-      <ordem>3</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="110">
-      <seq>110</seq>
-      <modulo>locacaoLivro</modulo>
-      <labelmodulo>Locação</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>265</argumento>
-      <formseq>264</formseq>
-      <nivel>2</nivel>
-      <modseq>12</modseq>
-      <ordem>2</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="112">
-      <seq>112</seq>
-      <modulo>devoucaoLivro</modulo>
-      <labelmodulo>Devoluções</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>269</argumento>
-      <formseq>267</formseq>
-      <nivel>2</nivel>
-      <modseq>12</modseq>
-      <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="113">
       <seq>113</seq>
       <modulo>&lt;separador&gt;</modulo>
@@ -536,51 +371,6 @@
       <nivel>2</nivel>
       <modseq>12</modseq>
       <ordem>5</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="114">
-      <seq>114</seq>
-      <modulo>classificacaoCDU</modulo>
-      <labelmodulo>Classificação CDU</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>271</argumento>
-      <formseq>270</formseq>
-      <nivel>2</nivel>
-      <modseq>12</modseq>
-      <ordem>6</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="86">
-      <seq>86</seq>
-      <modulo>viewArquivos</modulo>
-      <labelmodulo>Orientações e Arquivos</labelmodulo>
-      <metodo>getform</metodo>
-      <argumento>63</argumento>
-      <formseq>63</formseq>
-      <nivel>2</nivel>
-      <modseq>10</modseq>
-      <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="101">
-      <seq>101</seq>
-      <modulo>biblioteca</modulo>
-      <labelmodulo>Controle de Livros</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>237</argumento>
-      <formseq>83</formseq>
-      <nivel>2</nivel>
-      <modseq>12</modseq>
-      <ordem>7</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -691,21 +481,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="77">
-      <seq>77</seq>
-      <modulo>relatorioCaixa</modulo>
-      <labelmodulo>Relatório de Caixa</labelmodulo>
-      <metodo>getform</metodo>
-      <argumento>41</argumento>
-      <formseq>41</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>23</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="88">
       <seq>88</seq>
       <modulo>transacaoC</modulo>
@@ -716,126 +491,6 @@
       <nivel>2</nivel>
       <modseq>3</modseq>
       <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="92">
-      <seq>92</seq>
-      <modulo>alunoListaLivros</modulo>
-      <labelmodulo>Consulta de Livros</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>331</argumento>
-      <formseq>328</formseq>
-      <nivel>2</nivel>
-      <modseq>10</modseq>
-      <ordem>5</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="60">
-      <seq>60</seq>
-      <modulo>compras</modulo>
-      <labelmodulo>Compras</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>179</argumento>
-      <formseq>40</formseq>
-      <nivel>2</nivel>
-      <modseq>4</modseq>
-      <ordem>6</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="47">
-      <seq>47</seq>
-      <modulo>botDuplicatas</modulo>
-      <labelmodulo>Duplicatas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>139</argumento>
-      <formseq>9</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>22</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="87">
-      <seq>87</seq>
-      <modulo>extorno</modulo>
-      <labelmodulo>Extorno de Caixa</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>203</argumento>
-      <formseq>64</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>7</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="90">
-      <seq>90</seq>
-      <modulo>cadPessoa</modulo>
-      <labelmodulo>Cadastro Pessoa</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>212</argumento>
-      <formseq>71</formseq>
-      <nivel>2</nivel>
-      <modseq>5</modseq>
-      <ordem>30</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="55">
-      <seq>55</seq>
-      <modulo>contratos</modulo>
-      <labelmodulo>Contratos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>166</argumento>
-      <formseq>30</formseq>
-      <nivel>2</nivel>
-      <modseq>4</modseq>
-      <ordem>9</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="115">
-      <seq>115</seq>
-      <modulo>consultaLivrosAluno</modulo>
-      <labelmodulo>Consultar Livros</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>274</argumento>
-      <formseq>273</formseq>
-      <nivel>2</nivel>
-      <modseq>10</modseq>
-      <ordem>1</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="118">
-      <seq>118</seq>
-      <modulo>moviemntosProgramados</modulo>
-      <labelmodulo>Movimentos Programados</labelmodulo>
-      <metodo>getForm</metodo>
-      <argumento>383</argumento>
-      <formseq>383</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>2</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -931,21 +586,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="117">
-      <seq>117</seq>
-      <modulo>listaCheques</modulo>
-      <labelmodulo>Cheques</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>381</argumento>
-      <formseq>380</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>16</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="116">
       <seq>116</seq>
       <modulo>funcCaixa</modulo>
@@ -1016,21 +656,6 @@
       <nivel>2</nivel>
       <modseq>9</modseq>
       <ordem>2</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="85">
-      <seq>85</seq>
-      <modulo>gerenciadorArquivos</modulo>
-      <labelmodulo>Orientações e Arquivos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>402</argumento>
-      <formseq>399</formseq>
-      <nivel>2</nivel>
-      <modseq>9</modseq>
-      <ordem>3</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -1201,36 +826,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="126">
-      <seq>126</seq>
-      <modulo>alunosProcAcademicos</modulo>
-      <labelmodulo>Processos Acadêmicos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>458</argumento>
-      <formseq>460</formseq>
-      <nivel>2</nivel>
-      <modseq>2</modseq>
-      <ordem>1</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="127">
-      <seq>127</seq>
-      <modulo>gradeAvaliacoes</modulo>
-      <labelmodulo>Grades de Avaliações</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>466</argumento>
-      <formseq>463</formseq>
-      <nivel>2</nivel>
-      <modseq>7</modseq>
-      <ordem>10</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="128">
       <seq>128</seq>
       <modulo>notasAlunos</modulo>
@@ -1276,21 +871,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="131">
-      <seq>131</seq>
-      <modulo>baixaMultipla</modulo>
-      <labelmodulo>Baixa Múltipla de Contas</labelmodulo>
-      <metodo>getForm</metodo>
-      <argumento>484</argumento>
-      <formseq>484</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>0</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="132">
       <seq>132</seq>
       <modulo>alteraVencimentoConta</modulo>
@@ -1317,126 +897,6 @@
       <modseq>2</modseq>
       <ordem>2</ordem>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="57">
-      <seq>57</seq>
-      <modulo>ferias</modulo>
-      <labelmodulo>Férias</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>171</argumento>
-      <formseq>33</formseq>
-      <nivel>2</nivel>
-      <modseq>5</modseq>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="49">
-      <seq>49</seq>
-      <modulo>curriculos</modulo>
-      <labelmodulo>Currículos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>154</argumento>
-      <formseq>20</formseq>
-      <nivel>1</nivel>
-      <modseq>5</modseq>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="43">
-      <seq>43</seq>
-      <modulo>scorecard</modulo>
-      <labelmodulo>Scorecard</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>238</argumento>
-      <formseq>84</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>21</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="40">
-      <seq>40</seq>
-      <modulo>inadimplencia</modulo>
-      <labelmodulo>Inadimplência</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>151</argumento>
-      <formseq>25</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>17</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="83">
-      <seq>83</seq>
-      <modulo>folhaPag</modulo>
-      <labelmodulo>Folha de Pagamento</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>190</argumento>
-      <formseq>51</formseq>
-      <nivel>2</nivel>
-      <modseq>5</modseq>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="96">
-      <seq>96</seq>
-      <modulo>produtosTurma</modulo>
-      <labelmodulo>Turmas</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>228</argumento>
-      <formseq>79</formseq>
-      <nivel>2</nivel>
-      <modseq>1</modseq>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="99">
-      <seq>99</seq>
-      <modulo>funcDemitidos</modulo>
-      <labelmodulo>Funcionários Demitidos</labelmodulo>
-      <metodo>getList</metodo>
-      <argumento>231</argumento>
-      <formseq>80</formseq>
-      <nivel>2</nivel>
-      <modseq>5</modseq>
-      <ordem>0</ordem>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="39">
-      <seq>39</seq>
-      <modulo>contabilidade</modulo>
-      <labelmodulo>Contabilidade</labelmodulo>
-      <metodo>getform</metodo>
-      <argumento>44</argumento>
-      <formseq>44</formseq>
-      <nivel>2</nivel>
-      <modseq>3</modseq>
-      <ordem>20</ordem>
-      <statseq>9</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -1515,6 +975,21 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-11-29</datacad>
+    </row>
+    <row seq="117">
+      <seq>117</seq>
+      <modulo>listaCheques</modulo>
+      <labelmodulo>Cheques</labelmodulo>
+      <metodo>getList</metodo>
+      <argumento>381</argumento>
+      <formseq>380</formseq>
+      <nivel>2</nivel>
+      <modseq>3</modseq>
+      <ordem>16</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
     </row>
   </menu>
 </kernelsys>

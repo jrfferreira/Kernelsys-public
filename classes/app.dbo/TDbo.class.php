@@ -506,7 +506,6 @@ class TDbo {
     */
     public function sqlExec($sql){
         if($sql){
-
             $result = $this->conn->Query($sql);
             return $result;
         }

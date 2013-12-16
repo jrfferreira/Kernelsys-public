@@ -1606,21 +1606,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="87">
-      <seq>87</seq>
-      <blocoid>blocoProfissao</blocoid>
-      <nomebloco>Dados Profissionais</nomebloco>
-      <formato>frm</formato>
-      <tabseq>1</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>0</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>71</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="81">
       <seq>81</seq>
       <blocoid>contratos</blocoid>
@@ -2551,21 +2536,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="70">
-      <seq>70</seq>
-      <blocoid>blocoFormacao</blocoid>
-      <nomebloco>Formação</nomebloco>
-      <formato>lst</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>0</statseq>
-      <formseq>349</formseq>
-      <obapendice/>
-      <frmpseq>6</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="274">
       <seq>274</seq>
       <blocoid>textoJustificativa</blocoid>
@@ -3072,21 +3042,6 @@
       <formseq/>
       <obapendice/>
       <frmpseq>3</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="24">
-      <seq>24</seq>
-      <blocoid>cargaHorTotal</blocoid>
-      <nomebloco>Carga Horaria</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>0</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq/>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -3912,21 +3867,6 @@
       <formseq>351</formseq>
       <obapendice/>
       <frmpseq>7</frmpseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="99">
-      <seq>99</seq>
-      <blocoid>infoFolhaPag</blocoid>
-      <nomebloco>Informações para Folha de Pagamento</nomebloco>
-      <formato>frm</formato>
-      <tabseq>999</tabseq>
-      <blocoheight>200px</blocoheight>
-      <statseq>0</statseq>
-      <formseq/>
-      <obapendice/>
-      <frmpseq>6</frmpseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

@@ -45,34 +45,12 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="6">
-      <seq>6</seq>
-      <modulo>paramentros</modulo>
-      <labelmodulo>Parametros</labelmodulo>
-      <nivel>1</nivel>
-      <ordem>12</ordem>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="7">
       <seq>7</seq>
       <modulo>coordenador</modulo>
       <labelmodulo>Coordenador</labelmodulo>
       <nivel>1</nivel>
       <ordem>7</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="12">
-      <seq>12</seq>
-      <modulo>biblioteca</modulo>
-      <labelmodulo>Biblioteca</labelmodulo>
-      <nivel>1</nivel>
-      <ordem>10</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -85,28 +63,6 @@
       <nivel>1</nivel>
       <ordem>6</ordem>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="8">
-      <seq>8</seq>
-      <modulo>questionarios</modulo>
-      <labelmodulo>Questionarios</labelmodulo>
-      <nivel>1</nivel>
-      <ordem>13</ordem>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="11">
-      <seq>11</seq>
-      <modulo>projetos</modulo>
-      <labelmodulo>Projetos</labelmodulo>
-      <nivel>1</nivel>
-      <ordem>11</ordem>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>

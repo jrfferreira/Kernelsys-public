@@ -640,42 +640,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="32">
-      <seq>32</seq>
-      <formseq>3</formseq>
-      <tabseq>27</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="63">
-      <seq>63</seq>
-      <formseq>3</formseq>
-      <tabseq>56</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="95">
-      <seq>95</seq>
-      <formseq>77</formseq>
-      <tabseq>14</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="3">
-      <seq>3</seq>
-      <formseq>5</formseq>
-      <tabseq>53</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="111">
       <seq>111</seq>
       <formseq>90</formseq>
@@ -1665,15 +1629,6 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-11-30</datacad>
-    </row>
-    <row seq="13">
-      <seq>13</seq>
-      <formseq>5</formseq>
-      <tabseq>85</tabseq>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>2013-12-02</datacad>
     </row>
   </formXTabelas>
 </kernelsys>

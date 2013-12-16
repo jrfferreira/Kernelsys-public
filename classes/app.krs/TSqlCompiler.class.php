@@ -74,7 +74,9 @@ class TSqlCompiler extends TKrs {
 			$this->tableEstructures[$table] = $estructure;
 			
 			$this->dbo->setEntidade($table);
-			$rowList = $this->dbo->select('*');
+			$crit = new TCriteria();
+			$crit->add(new TFilter('statseq','=',1));
+			$rowList = $this->dbo->select('*',$crit);
 			$rows = $rowList->fetchAll();
 			
 			$n = 0;

@@ -971,16 +971,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="7">
-      <seq>7</seq>
-      <campseq>1</campseq>
-      <metodo>setAction</metodo>
-      <valor>onSave</valor>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="109">
       <seq>109</seq>
       <campseq>156</campseq>
@@ -1181,26 +1171,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="156">
-      <seq>156</seq>
-      <campseq>176</campseq>
-      <metodo>onkeyup</metodo>
-      <valor>--</valor>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="158">
-      <seq>158</seq>
-      <campseq>177</campseq>
-      <metodo>onkeyup</metodo>
-      <valor>--</valor>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="163">
       <seq>163</seq>
       <campseq>729</campseq>
@@ -1337,16 +1307,6 @@
       <metodo>setSize</metodo>
       <valor>450;60</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="186">
-      <seq>186</seq>
-      <campseq>200</campseq>
-      <metodo>setSize</metodo>
-      <valor>80</valor>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -1927,16 +1887,6 @@
       <metodo>setSize</metodo>
       <valor>160</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="162">
-      <seq>162</seq>
-      <campseq>176</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -3140,16 +3090,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="355">
-      <seq>355</seq>
-      <campseq>256</campseq>
-      <metodo>setSize</metodo>
-      <valor/>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="356">
       <seq>356</seq>
       <campseq>356</campseq>
@@ -3546,16 +3486,6 @@
       <metodo>addItems</metodo>
       <valor>1=&gt;Ativo;0=&gt;Inativo;2=&gt;Standby</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="399">
-      <seq>399</seq>
-      <campseq>124</campseq>
-      <metodo>addItems</metodo>
-      <valor/>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -4370,16 +4300,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="487">
-      <seq>487</seq>
-      <campseq>628</campseq>
-      <metodo>addItems</metodo>
-      <valor>select parcseq,parcseq from dbcaixa where tipo='D' and statseq=1</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="497">
       <seq>497</seq>
       <campseq>493</campseq>
@@ -5089,16 +5009,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="498">
-      <seq>498</seq>
-      <campseq>307</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from dbsala where statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="579">
       <seq>579</seq>
       <campseq>548</campseq>
@@ -5695,16 +5605,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="584">
-      <seq>584</seq>
-      <campseq>547</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq, nome from dbcurso where statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="640">
       <seq>640</seq>
       <campseq>172</campseq>
@@ -6041,16 +5941,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <metodo>setSize</metodo>
       <valor>40</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="182">
-      <seq>182</seq>
-      <campseq>195</campseq>
-      <metodo>addItems</metodo>
-      <valor>01=&gt;01;02=&gt;02;03=&gt;03;04=&gt;04;05=&gt;05;06=&gt;06;07=&gt;07;08=&gt;08;09=&gt;09;10=&gt;10;11=&gt;11;12=&gt;12;13=&gt;13;14=&gt;14;15=&gt;15;16=&gt;16;17=&gt;17;18=&gt;18;19=&gt;19;20=&gt;20;21=&gt;21;22=&gt;22;23=&gt;23;24=&gt;24;25=&gt;25;26=&gt;26;27=&gt;27;28=&gt;28;29=&gt;29;30=&gt;30</valor>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -6587,16 +6477,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="714">
-      <seq>714</seq>
-      <campseq>678</campseq>
-      <metodo>addItems</metodo>
-      <valor>select funcseq,nomefuncionario from view_funcionario order by nomefuncionario</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="767">
       <seq>767</seq>
       <campseq>756</campseq>
@@ -6657,32 +6537,12 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="786">
-      <seq>786</seq>
-      <campseq>71</campseq>
-      <metodo>size</metodo>
-      <valor>10</valor>
-      <statseq>0</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="705">
       <seq>705</seq>
       <campseq>647</campseq>
       <metodo>addItems</metodo>
       <valor>1=&gt;Sim;2=&gt;Não;</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="195">
-      <seq>195</seq>
-      <campseq>705</campseq>
-      <metodo>setProperty</metodo>
-      <valor>disabled;disabled</valor>
-      <statseq>0</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -7566,16 +7426,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <metodo>setSize</metodo>
       <valor>30</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="783">
-      <seq>783</seq>
-      <campseq>775</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomeprofessor from view_professor</valor>
-      <statseq>9</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
@@ -8740,16 +8590,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="721">
-      <seq>721</seq>
-      <campseq>694</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomedisciplina from view_turma_disciplina where statseq=1 order by nomedisciplina</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="1111">
       <seq>1111</seq>
       <campseq>956</campseq>
@@ -9240,16 +9080,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="713">
-      <seq>713</seq>
-      <campseq>666</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,label from dbproduto where statseq=1</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="699">
       <seq>699</seq>
       <campseq>639</campseq>
@@ -9260,352 +9090,12 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="89">
-      <seq>89</seq>
-      <campseq>705</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,avaliacao  from dbturma_disciplina_avaliacao where statseq=1 order by avaliacao</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="60">
-      <seq>60</seq>
-      <campseq>101</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomefuncionario from view_funcionario order by nomefuncionario</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="250">
-      <seq>250</seq>
-      <campseq>629</campseq>
-      <metodo>addItems</metodo>
-      <valor>select parcseq,parcseq from dbcaixa where tipo='C' and statseq='1'</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="489">
-      <seq>489</seq>
-      <campseq>308</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where funcionario=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="499">
-      <seq>499</seq>
-      <campseq>287</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from dbsala where statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="159">
       <seq>159</seq>
       <campseq>177</campseq>
       <metodo>addItems</metodo>
       <valor>getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,TUsuario::getSeqFuncionario;stcfseq,=,1</valor>
       <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="554">
-      <seq>554</seq>
-      <campseq>533</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from dbinsumo where statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="563">
-      <seq>563</seq>
-      <campseq>523</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from dbinsumo where statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="553">
-      <seq>553</seq>
-      <campseq>521</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nome from dbsala where salaaula=true and statseq=1 order by nome</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="549">
-      <seq>549</seq>
-      <campseq>516</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomepessoa from view_aluno</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="613">
-      <seq>613</seq>
-      <campseq>566</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where fornecedor=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="692">
-      <seq>692</seq>
-      <campseq>663</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="811">
-      <seq>811</seq>
-      <campseq>786</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from dbcurso where statseq=1 order by titulo</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="812">
-      <seq>812</seq>
-      <campseq>784</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,cdu from dbcdu order by cdu</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="817">
-      <seq>817</seq>
-      <campseq>797</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from view_livro where pessseq is not null order by titulo</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="893">
-      <seq>893</seq>
-      <campseq>792</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from view_livro order by titulo</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="820">
-      <seq>820</seq>
-      <campseq>796</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where cliente=true or funcionario=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="822">
-      <seq>822</seq>
-      <campseq>798</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where cliente=true or funcionario=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="859">
-      <seq>859</seq>
-      <campseq>816</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="862">
-      <seq>862</seq>
-      <campseq>824</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from view_convenio order by titulo</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="876">
-      <seq>876</seq>
-      <campseq>835</campseq>
-      <metodo>addItems</metodo>
-      <valor>select funcseq,nomefuncionario from view_funcionario</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="815">
-      <seq>815</seq>
-      <campseq>795</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from view_livro where pessseq is null order by titulo</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="496">
-      <seq>496</seq>
-      <campseq>492</campseq>
-      <metodo>addItems</metodo>
-      <valor>select funcseq,nomefuncionario from view_funcionario order by nomefuncionario</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="1064">
-      <seq>1064</seq>
-      <campseq>912</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,titulo from dbdisciplina</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="1068">
-      <seq>1068</seq>
-      <campseq>913</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where statseq = 1</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="694">
-      <seq>694</seq>
-      <campseq>634</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,label from dbproduto where statseq=1</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="1099">
-      <seq>1099</seq>
-      <campseq>947</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomedisciplina from view_alunos_disciplinas where situacao = '2'</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="1100">
-      <seq>1100</seq>
-      <campseq>948</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,nomedisciplina from view_alunos_disciplinas where situacao in ('1','5','6') and seq &lt; 100</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="414">
-      <seq>414</seq>
-      <campseq>281</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where funcionario=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="413">
-      <seq>413</seq>
-      <campseq>408</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where funcionario=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="389">
-      <seq>389</seq>
-      <campseq>393</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where fornecedor=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="564">
-      <seq>564</seq>
-      <campseq>524</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where fornecedor=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="592">
-      <seq>592</seq>
-      <campseq>134</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where fornecedor=true and statseq=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="653">
-      <seq>653</seq>
-      <campseq>715</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoa where funcionario=true and statseq=1</valor>
-      <statseq>9</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
-    <row seq="818">
-      <seq>818</seq>
-      <campseq>794</campseq>
-      <metodo>addItems</metodo>
-      <valor>select seq,pessnmrz from dbpessoas where cliente=true or funcionario=1 order by pessnmrz</valor>
-      <statseq>9</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
