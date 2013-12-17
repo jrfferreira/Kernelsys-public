@@ -15,28 +15,6 @@ function atribuicao() {
 	
 	   $('body').find('#addAll:checkbox').attr('checked',attrStatus);
 	
-	    /*
-	$('body').find('.botaosalvarAutomatico').each(function() {
-	    $(this).click(function(){
-	           var mark = $(this).attr('ligado') == 'true' ? 'false' : 'true';
-	           $(this).attr('ligado',mark);
-	           $(this).toggleClass('ui-icon-circle-check ui-icon-close');
-	          //$(this).toggleClass('ui-icon-bullet ui-icon-radio-on');
-	        $(this).parent().parent().find('*[saveaction]').each(function(){
-	           if(mark == 'true'){
-	              var y = window.setTimeout('execSaveAction()','30000');
-	              // $(this).unbind('blur').bind('blur',function(){eval($(this).attr('saveaction'))});
-	
-	           }else{
-	              clearTimeout(y);
-	              $('.botaosalvarAutomatico_label').html('Salvar Automaticamente');
-	              // $(this).unbind('blur');
-	           }
-	        });
-	    });
-	});
-	*/
-
     $('body').find('.tdatagrid_col').each(function() {
         $(this).hover(function() {
             $(this).addClass('tdatagrid_col_over');
@@ -45,7 +23,7 @@ function atribuicao() {
         });
     });
     // *********************************************************************
-    // INICIO - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o CSS
+    // INICIO - jQuery - Atribuição de Padronização CSS
     // *********************************************************************
    /* $('body').find('.remarkable').each(function() {
         $(this).click(function(e){
@@ -83,7 +61,7 @@ function atribuicao() {
 
         
 
-    //FunÃ§Ã£o para enter avanÃ§ar campo
+    //Função para enter avançar campo
 
    // $('body').find('.ui-tabs-panel').each(function(){
 
@@ -102,9 +80,10 @@ function atribuicao() {
             'margin-left':'4px',
             'font-size' : '11',
             '-moz-border-radius': '3px',
-            '-webkit-border-radius': '3px'
+            '-webkit-border-radius': '3px',
+            'padding' : '4px'
         });
-        if($(this).attr("readonly") == true){
+        if($(this).attr("[view]") == true){
             if($(this).attr("type") != 'hidden'){
                 var valor = '<span style="padding-left: 5px;padding-top:5px; font-size: 13px; font-weight: bold;">'+$(this).val()+'</span>';
 
@@ -177,7 +156,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     });
 
 
-    // FIM - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o CSS
+    // FIM - jQuery - Atribuição de Padronização CSS
     // *********************************************************************
 
 
@@ -193,11 +172,11 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     // Campo desabilitado
     $('body').find('.ui_campo_disabled').disabled = true;
 
-    // FIM - jQuery - AtribuiÃ§Ã£o de campo desabilitado
+    // FIM - jQuery - Atribuição de campo desabilitado
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - AtribuiÃ§Ã£o de plugin "Abas"
+    // INICIO - jQuery - Atribuição de plugin "Abas"
     // *********************************************************************
 
 
@@ -218,13 +197,13 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     }); 
 
 
-    // FIM - jQuery - AtribuiÃ§Ã£o de plugin "Abas"
+    // FIM - jQuery - Atribuição de plugin "Abas"
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - AtribuiÃ§Ã£o de plugin "Mascara"
+    // INICIO - jQuery - Atribuição de plugin "Mascara"
     // *********************************************************************
-    $('body').find('.ui_mascara_telefone[masked!=masked]').attr('masked','masked').mask("(99)9999-9999");
+    $('body').find('.ui_mascara_telefone[masked!=masked]').attr('masked','masked').mask("9999-9999");
     $('body').find('.ui_mascara_data[masked!=masked]').attr('masked','masked').mask("99/99/9999");
     $('body').find('.ui_mascara_cep[masked!=masked]').attr('masked','masked').mask("77.777-777");
     $('body').find('.ui_mascara_cpf[masked!=masked]').attr('masked','masked').mask("777.777.777-77");
@@ -248,11 +227,11 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
 
 
-    // FIM - jQuery - AtribuiÃ§Ã£o de plugin "janela Dialog"
+    // FIM - jQuery - Atribuição de plugin "janela Dialog"
     // *********************************************************************
 
     // *********************************************************************
-    // INICIO - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o do Menu
+    // INICIO - jQuery - Atribuição de Padronização do Menu
     // *********************************************************************
 
 
@@ -277,12 +256,12 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
         $(".botActionOff").removeClass("botActionClick ui-state-active");
         $(this).addClass("botActionClick ui-state-active");
     });
-    // FIM - jQuery - AtribuiÃ§Ã£o de PadronizaÃ§Ã£o do Menu
+    // FIM - jQuery - Atribuição de Padronização do Menu
     // *********************************************************************
 
 
     // *********************************************************************
-    // INICIO - jQuery - AtribuiÃ§Ã£o de help Span
+    // INICIO - jQuery - Atribuição de help Span
     // *********************************************************************
 
     $('body').find('.ui-icon-help').each(
@@ -305,7 +284,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
         );
 
-    // FIM - jQuery - AtribuiÃ§Ã£o de help Span
+    // FIM - jQuery - Atribuição de help Span
     // *********************************************************************
     $('body').find('.TWindow').each(function(){
         if( $("#ui-dialog-title-" + $(this).attr('id')).length == 0 ){
@@ -380,7 +359,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
 function delay_atribuicao(){
 
-    //funÃ§Ã£o para execuÃ§Ã£o de funÃ§Ãµes gatilho.
+    //função para execução de funÃ§Ãµes gatilho.
     $('body').find('*[trigger]').each(function(){
         eval($(this).attr('trigger'));
         $(this).removeAttr('trigger').attr('triggered','triggered');
@@ -406,5 +385,9 @@ function delay_atribuicao(){
         });
     });
 
+    $('form.ajaxForm').live('submit',function(){
+    	this.onsubmit = null;
+        return false;
+    });
 }
 

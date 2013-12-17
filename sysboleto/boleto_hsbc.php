@@ -76,7 +76,7 @@ $dadosboleto["carteira"] = "CNR";  // código da Carteira
 
 // SEUS DADOS
 $dadosboleto["identificacao"] = "BoletoPhp - código Aberto de Sistema de Boletos";
-$dadosboleto["cpf_cnpj"] = "";
+$dadosboleto["pessnmrf"] = "";
 $dadosboleto["endereco"] = "Rua Central, 123";
 $dadosboleto["cidade_uf"] = "Curitiba - PR";
 $dadosboleto["cedente"] = "Alcantara & Schmidt Ltda.";

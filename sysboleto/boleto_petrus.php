@@ -19,7 +19,7 @@ $dadosboleto["carteira"] = $dadosbl['carteira']; // código da Carteira: pode se
 
 // SEUS DADOS
 $dadosboleto["identificacao"] = $dadosbl['identificacao'];
-$dadosboleto["cpf_cnpj"] = $dadosbl['cpf_cnpj'];
+$dadosboleto["pessnmrf"] = $dadosbl['pessnmrf'];
 $dadosboleto["endereco"] = $dadosbl['endereco'];
 $dadosboleto["cidade_uf"] = $dadosbl['cidade_ur'];
 $dadosboleto["cedente"] = $dadosbl['cedente'];
@@ -59,7 +59,7 @@ $dadosboleto["instrucoes4"] = $dadosbl['instrucao4'];
 $dadosboleto["sacado"] = $dadosblDn[0];
 $dadosboleto["endereco1"] = $dadosblDn[1];
 $dadosboleto["endereco2"] = $dadosblDn[2];
-$dadosboleto["cpf_cnpj_sacado"] = $dadosblDn[3];
+$dadosboleto["pessnmrf_sacado"] = $dadosblDn[3];
 
 // INFORMACOES PARA O CLIENTE
 $dadosboleto["demonstrativo1"] = $taxa_boleto;

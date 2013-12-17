@@ -2,7 +2,7 @@
      /**
       * Retorna soma dos campos selecionadas da tabela.
       * Data: 25/05/2009
-      * author Jo�o Felix
+      * author João Felix
       * method setSomaTotal = "Retorna a soma dos valores da consulta";
       * method setContagemTotal = "Retorna a quantidade de ocorrencias da consulta";
       * global $entidade = "Tabela consultada";

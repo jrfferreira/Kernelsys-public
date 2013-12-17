@@ -10,17 +10,29 @@ class includesUI{
             $getPath = new TElement('script');
             $getPath->type="text/javascript";
             $getPath->charset="utf-8";
-            $getPath->src= '../'.$dir.'app.config/getPath.js';
+            $getPath->src= '../'.$dir.TOccupant::getPath().'app.config/getPath.js';
             $getPath->add('');
 
 
             $loadJs = new loadJs();
+            
+            $json = new TElement('script');
+            $json->type="text/javascript";
+            $json->charset="utf-8";
+            $json->src= '../'.$dir.'app.js/js.pross/json.js';
+            $json->add('');
             
             $pross = new TElement('script');
             $pross->type="text/javascript";
             $pross->charset="utf-8";
             $pross->src= '../'.$dir.'app.js/js.pross/pross.js';
             $pross->add('');
+            
+            $bo = new TElement('script');
+            $bo->type="text/javascript";
+            $bo->charset="utf-8";
+            $bo->src= '../'.$dir.'app.js/genericoBO.js';
+            $bo->add('');
 
             $jquery = new TElement('script');
             $jquery->type="text/javascript";
@@ -38,7 +50,7 @@ class includesUI{
 
             $plugins = $loadJs->read('../'.$dir.'app.js/js.plugins/');
 
-            $control = $loadJs->read('../'.$dir.'app.js/js.control/');
+            $control = $loadJs->read('../'.$dir.'app.js/js.bo/');
 
             $ui_attr = new TElement('script');
             $ui_attr->type="text/javascript";
@@ -48,6 +60,7 @@ class includesUI{
 
             $this->includes[] = $getPath;
             $this->includes[] = $jquery;
+            $this->includes[] = $json;
             sort($ui_lib);
             foreach ($ui_lib as $vl){
                 $this->includes[] = $vl;
@@ -61,6 +74,10 @@ class includesUI{
                 $this->includes[] = $vl;
             }
             $this->includes[] = $ui_attr;
+            
+            $this->includes[] = $bo;
+
+            $this->includes[] = $bdbo;
 
             $this->obsession = new TSession();
             $versao = $this->obsession->getValue('versionSystem');
@@ -69,7 +86,7 @@ class includesUI{
             $obUser = new TCheckLogin();
         	$obUser = $obUser->getUser();
 
-        	$codigotema = $obUser->codigotema;
+        	$temaseq = $obUser->temaseq;
 
 	        	//lista de temas
 	        	$t[1] = "custom_petrus";      	
@@ -96,7 +113,7 @@ class includesUI{
 	        	$t[22] = "petrus";
 
 	        	$t[0] = $t[array_rand($t)];
-	        	$theme = $t[$codigotema];
+	        	$theme = $t[$temaseq];
 
             //CSS            
             $css2 = new TElement('link');
@@ -124,16 +141,6 @@ class includesUI{
             $css6->href = $dir."app.ui/css/ui.multiselect.css";
             $css6->rel = "Stylesheet";
 
-            $css7 = new TElement('link');
-            $css7->href= $dir."styles/fullcalendar.css";
-            $css7->type="text/css";
-            $css7->rel="stylesheet";
-
-            $css8 = new TElement('link');
-            $css8->href= $dir."styles/fullcalendar.print.css";
-            $css8->type="text/css";
-            $css8->rel="stylesheet";
-
 
             $icon = new TElement('link');
             $icon->rel="shortcut icon";
@@ -141,7 +148,7 @@ class includesUI{
             
             
             $titulo = new TElement('title');
-            $titulo->add("Sistema Petrus - ".$empresa." - v.: ".$versao." (Tema: ".ucwords($theme).")");
+            $titulo->add("Sistema Comercial - ".$empresa." - v.: ".$versao." (Tema: ".ucwords($theme).")");
             
             $scriptJGrowl = new TElement("script");            
             $scriptJGrowl->type="text/javascript";

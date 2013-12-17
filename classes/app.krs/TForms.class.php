@@ -3,7 +3,7 @@
 Classe que representa o objeto(tabela) form do banco de daddos
 Versão: v001
 Data: 02/04/2008
-Data de altualização: --/--/----
+Data de altualização: 14/06/2012
 Programador: Wagner Borba
 */
 
@@ -11,47 +11,50 @@ class TForms{
 
 	private $form;      //objeto formulário
 	public  $Nform;     //nome do objeto
-	private $ativo;     //propriedade de controle de ativação
-        private $labelForm;
-        private $codigo;
-        private $dados;
-        private $dboKs;
+	private $statseq;     //propriedade de controle de ativação
+    private $labelForm;
+    private $seq;
+    private $dados;
+    private $dboKs;
 
 	/*método construtor
 	*instancia o objeto forms
 	*param		id = identificador do objeto na base de dados
 	*/
-	public function __construct($id, $codigo = NULL){
+	public function __construct($seq = NULL){
             try{
-                 $this->codigo = $codigo;
-                 $this->idForm = $id;
+                 $this->seq = $this->formseq = $seq;
 
                 //Objeto DBO
-                $this->dboKs = new TKrs();
+                $this->dboKs = new TKrs();                
 
 	            /**
 	            * instancia o cabeçalho do formulário
 	            * em execução e armazena em sessão
 	            */
-                $this->obHeader = new TSetHeader();
-                if(!$this->obHeader->testHeader($this->idForm)){
-                    $this->obHeader->onHeader($this->idForm);
-                }
-
-                //add codigo ao cabeçalho
-                if($this->codigo){
-                    //echo $this->idForm . " - " . $this->codigo;
-                    $this->obHeader->addHeader($this->idForm, "codigo", $this->codigo);
+                $this->obHeader = new TSetHeader();          
+                if(!$this->obHeader->testHeader($this->formseq)){
+                	$this->obHeader->formHeader($this->formseq);
+                }          
+                
+                //add seqao cabeçalho
+                if($this->seq){
+                    //echo $this->formseq . " - " . $this->seq;
+                    $this->obHeader->addHeader($this->formseq, TConstantes::FORM, $this->seq);
                 }
 
                 //retorna o cabeçalho do formulário
-                $this->headerForm = $this->obHeader->getHead($this->idForm);
+                $this->headerForm = $this->obHeader->getHead($this->formseq);
 
         
             /***********************************************************/
 
                 //configura conteiner de retorno das ações
-                $this->paneRet = 'contLista'.$this->headerForm['idLista'];
+                if($this->headerForm[TConstantes::LISTA]){
+                	$this->paneRet = TConstantes::CONTEINER_LISTA.$this->headerForm[TConstantes::LISTA];
+                }else{
+                	$this->paneRet = TConstantes::VIEW_DISPLAYSYS;
+                }
 
             }catch (Exception $e){
                 new setException($e);
@@ -59,28 +62,28 @@ class TForms{
     }
 
     /**
-    * instancia o cabeçalho da lista
-    * em execução e armazena em sessão
-    * param <type> $idForm
+    * instancia o cabe�alho da lista
+    * em execu�ão e armazena em sessão
+    * param <type> $formseq
     */
-    private function setHeaderForm($idForm){
+    private function setHeaderForm($formseq){
 
         $obHeader = new TSetHeader();
-        $obHeader->onHeader($idForm);
+        $obHeader->onHeader($formseq);
 
     }
 
     /**
      * Retorna os dados do furmulários
-     * param <type> $idForm
+     * param <type> $formseq
      * return <type>
      */
-    private function getDadosForm($idForm){
+    private function getDadosForm($formseq){
 
         // Dados Formulário
         $this->dboKs->setEntidade('forms');
             $criteriaForm = new TCriteria();
-            $criteriaForm->add(new TFilter('id','=',$this->idForm));
+            $criteriaForm->add(new TFilter('seq','=',$this->formseq));
         $retForm = $this->dboKs->select("*", $criteriaForm);
         $obForm = $retForm->fetchObject();
 
@@ -90,33 +93,36 @@ class TForms{
     /**
      *
      */
-    public function setForm(){
+    public function setForm($validRegister){
     	
     	// Dados Formulário
-        $obForm = $this->getDadosForm($this->idForm);
+        $obsession = new TSession();
+        $developer = $obsession->getValue('developer');
+        $obForm = $this->getDadosForm($this->formseq);
 
         // configura as propriedade de acesso ao objeto form
         $this->form         = $obForm->form;
         $this->labelForm    = $obForm->nomeform;
-        $this->ativo        = $obForm->ativo;
-        $this->autoSave     = $obForm->autosave;
+        $this->statseq        = $obForm->statseq;
+        $this->dimensao     = $obForm->dimensao;
+        //$this->autoSave     = $obForm->autosave;
                  
 
-        //Limpa codigo do formulario para acesso posteriores
-        //$this->obsession->setValue('codigoatual'.$id, NULL);
+        //Limpa seqdo formulario para acesso posteriores
+        //$this->obsession->setValue('seqatual'.$seq, NULL);
 
-        if($this->idForm!=""){
+        if($this->formseq!=""){
 
             //isntancia um sistema de abas do formulario
-            $obAbas = new TSetAbas($this->idForm, $this->headerForm['titulo'], $obForm->dimensao, $this->autoSave);     
+            $obAbas = new TSetAbas($this->formseq, $this->headerForm['titulo'], $this->dimensao);     
 
             /// Verifica abas do formulario
             $this->dboKs->setEntidade('form_x_abas');
                 $criteriaFormAbas = new TCriteria();
-                $criteriaFormAbas->add(new TFilter('formid', '=', $this->idForm));
-                $criteriaFormAbas->add(new TFilter('ativo', '=', '1'));
+                $criteriaFormAbas->add(new TFilter('formseq', '=', $this->formseq));
+                $criteriaFormAbas->add(new TFilter('statseq', '=', '1'));
                 $criteriaFormAbas->setProperty('order', 'ordem');
-            $RetIdAbas =  $this->dboKs->select('*', $criteriaFormAbas);         
+           	$RetIdAbas =  $this->dboKs->select('*', $criteriaFormAbas);         
  
             //executa loop das abas
             while($abasId = $RetIdAbas->fetchObject()){
@@ -124,36 +130,44 @@ class TForms{
                 //paga nome das abas
                 $this->dboKs->setEntidade('abas');
                     $criteriaAbas = new TCriteria();
-                    $criteriaAbas->add(new TFilter('id', '=', $abasId->abaid));
+                    $criteriaAbas->add(new TFilter('seq', '=', $abasId->abaseq));
+                    if(!$validRegister){
+                    	$criteriaAbas->add(new TFilter('require_register', '=', false));
+                    }
                 $RetNomeAba = $this->dboKs->select('*', $criteriaAbas);
                 $NAbas = $RetNomeAba->fetchObject();
                 //Instacia objeto [apendice] das abas caso aja.
 
-                if($NAbas->obapendice != "-"){
-
-                    $obApendice = new TApendices();
-                    $obElement = $obApendice->main($NAbas->obapendice, $this->idForm);
-
-                    $this->Abas[$NAbas->idaba] = $obElement;
+                if($NAbas->seq){
+                	if($NAbas->obapendice != "-"){
+                	
+                		$obApendice = new TApendices();
+                		$obElement = $obApendice->main($NAbas->obapendice, $this->formseq);
+                	
+                		$this->Abas[$NAbas->abaid] = $obElement;
+                	}
+                	else{
+                	
+                		# instancia objetos blocos das abas
+                		$this->dboKs->setEntidade('blocos_x_abas');
+                		$criteriaAbas = new TCriteria();
+                		$criteriaAbas->add(new TFilter('abaseq', '=', $abasId->abaseq));
+                		$criteriaAbas->setProperty('order', 'ordem');
+                		$RetIdBlocos = $this->dboKs->select('*', $criteriaAbas);
+                	
+                		while($obBloco = $RetIdBlocos->fetchObject()){
+                			$formBloco = new TBloco($this->formseq, $obBloco->blocseq, $this->seq, true);
+                			$blocos[$formBloco->getBlocoSeq()] = $formBloco;
+                			$formBloco = NULL;
+                		}
+                		$this->Abas[$NAbas->abaid] = $blocos;
+                		$blocos = NULL;
+                	}
+                	
+                	$this->AbasNome[$NAbas->abaid] = ($developer? $NAbas->seq.' - ' : '' ) . $NAbas->nomeaba;
+                	$this->AbasImpressao[$NAbas->abaid] = $NAbas->impressao;
                 }
-                else{
-
-                    # instancia objetos blocos das abas
-                    $this->dboKs->setEntidade('blocos_x_abas');
-                        $criteriaAbas = new TCriteria();
-                        $criteriaAbas->add(new TFilter('abaid', '=', $abasId->abaid));
-                        $criteriaAbas->setProperty('order', 'ordem');
-                    $RetIdBlocos = $this->dboKs->select('*', $criteriaAbas);
-                    while($obIdBlocos = $RetIdBlocos->fetchObject()){
-                        $formBloco = new TBloco($this->idForm, $obIdBlocos->blocoid, $this->codigo, true);
-                        $blocos[$formBloco->getIdbloco()] = $formBloco;
-                        $formBloco = NULL;
-                    }
-                    $this->Abas[$NAbas->idaba] = $blocos;
-                    $blocos = NULL;
-                }
-                $this->AbasNome[$NAbas->idaba] = $NAbas->nomeaba;
-                $this->AbasImpressao[$NAbas->idaba] = $NAbas->impressao;
+                
 
             }//temina loop das abas
              
@@ -164,19 +178,25 @@ class TForms{
             //monta botões extras na aba
             $this->dboKs->setEntidade('form_button');
                 $criteriaFormBot = new TCriteria();
-                $criteriaFormBot->add(new TFilter('form', '=', $this->idForm));
-                $criteriaFormBot->add(new TFilter('ativo', '=', '1'));
+                $criteriaFormBot->add(new TFilter('formseq', '=', $this->formseq));
+                $criteriaFormBot->add(new TFilter('statseq', '=', '1'));
                 $criteriaFormBot->setProperty('order', 'ordem');
             $runBots = $this->dboKs->select('*', $criteriaFormBot);
             while($retBots = $runBots->fetchObject()){
 
-                $action = new TAction($retBots->actionjs);
+            	//verifica algum argumento estatico no bontão
+            	$dataAction = explode(';', $retBots->actionjs);
+
+                $action = new TAction($dataAction[0]);
                 $action->setParameter('tipoRetorno', 'lista');
-                $action->setParameter('idForm', $this->idForm);
+                $action->setParameter(TConstantes::FORM, $this->formseq);
                 $action->setParameter('alvo', $this->paneRet);
                 $action->setParameter('confirme', $retBots->confirmacao);
+                if($dataAction[1]){
+                	$action->setParameter('argEstatico', $dataAction[1]);
+                }
 
-                $this->setButton($retBots->botao, $retBots->labelbotao, $action);//.$this->idForm
+                $this->setButton($retBots->botao, $retBots->labelbotao, $action);//.$this->formseq
             }
             //=======================================================================================================
 
@@ -204,24 +224,24 @@ class TForms{
          /**
          * executado o objeto formulário
          */
-        if($obForm->formainclude == 'one') {
+        //if($obForm->formainclude == 'one') { // TODO: Verifica a necessidade dessa condição
 
 
                     //botão padrão [IMPRIMIR]\\
                     $actionPrint = new TAction('printScreen');
                     $actionPrint->setParameter('impressao','impressao');
                     $actionPrint->setParameter('titulo','impLabel');
-                    // Cancelada a Ação de Imprimir $this->setButton('imprimir_botform'.$this->idForm, 'Imprimir', $actionPrint);//.$this->idForm
+                    // Cancelada a A�ão de Imprimir 
+                    //$this->setButton('imprimir_botform'.$this->formseq, 'Imprimir', $actionPrint);
 
 
                     if($obForm->botconcluir != '0'){
-                        // Botão padrão [concluir] \\
-                        $action1 = new TAction('onClose');
+                        // Botão padrão [Salvar] \\
+                        $action1 = new TAction('onSave');
+                        $action1->setParameter(TConstantes::FORM, $this->formseq);
+                        $action1->setParameter('nomeform', $this->formseq.'-window');
                         $action1->setParameter('tipoRetorno', 'form');
-                        $action1->setParameter('idForm', $this->idForm);
-                        //$action1->setParameter('key', $key);
                         $action1->setParameter('alvo', $this->paneRet);
-                        $action1->setParameter('confirme', '');
 
                         if($obForm->botconcluir == '2' or strpos($obForm->botconcluir, '/2') !== false){
                             $action1->disabled = 1;
@@ -229,61 +249,45 @@ class TForms{
                         }
 
                         if($obForm->botconcluir == '1' or $obForm->botconcluir == '2'){
-                            $labelBotConcluir = 'Concluir';
+                            $labelBotSalvar = 'Salvar';
                         }else{
-                            $labelBotConcluir = $obForm->botconcluir;
+                            $labelBotSalvar = $obForm->botconcluir;
                         }
 
-                        $this->setButton('concluir_botform'.$this->idForm, $labelBotConcluir, $action1, 'botaosalvar');//.$this->idForm
+                        $this->setButton('salvar_botform'.$this->formseq, $labelBotSalvar, $action1, 'botaosalvar');//.$this->formseq
                     }
 
-                    //verifica se a exibição atual foi disparada a partir de um botão editar
-                    //if(!$this->obsession->getValue('statusFormEdition') and !$this->obsession->getValue('statusViewForm')) {
-                    if($this->headerForm['status'] == "new" and $obForm->botcancelar != '0'){
-
-                        //botão cancelar padrão [Cancelar]
+                    //verifica se a exibi�ão atual foi disparada a partir de um botão editar
+                    //if(!$this->obsession->getValue(TConstantes::STATUS_EDITIONFORM) and !$this->obsession->getValue(TConstantes::STATUS_VIEWFORM)) {
+                    //botão cancelar padrão [Cancelar]
+                    if($obForm->botcancelar != 0){
+                    	
                             $action2 = new TAction('onCancel');
                             $action2->setParameter('tipoRetorno', 'form');
-                            $action2->setParameter('idForm', $this->idForm);
-                            $action2->setParameter('key', $this->codigo);
+                            $action2->setParameter(TConstantes::FORM, $this->formseq);
+                            $action2->setParameter('key', $this->seq);
                             $action2->setParameter('alvo', $this->paneRet);
-                            $action2->setParameter('confirme', 'Você deseja realmente descatar este registro?');
+                            $action2->setParameter('confirme', 'Você deseja cancelar?');
 
                             if($obForm->botcancelar == '2'){
                                 $action2->disabled = 1;
                             }
 
-                        $this->setButton('cancelar_botform'.$this->idForm, 'Cancelar', $action2);
+                        $this->setButton('cancelar_botform'.$this->formseq, 'Cancelar', $action2);
                     }else{
-
-                        // Botão padrão [Fechar] \\
-                        $action2 = new TAction('onClose');
-                        $action2->setParameter('tipoRetorno', 'form');
-                        $action2->setParameter('idForm', $this->idForm);
-                        //$action2->setParameter('key', $key);
-                        $action2->setParameter('alvo', $this->paneRet);
-                        if($this->autoSave) {
-                            $action2->setParameter('confirme', 'Caso a opção de [Salvar automaticamente] não esteja habilitada as alterações não serão aplicadas. deseja realmente fechar?');
-                        }else{
-                            $action2->setParameter('confirme', '');
-                        }
-
-
-
-                        $this->setButton('fechar_botform'.$this->idForm, 'Fechar', $action2);
-                    }
-
-        }
-        else {// executado se o formulário não for associado uma lista
-
+                    
                 // Botão padrão [FECHAR] \\
-                $action1 = new TAction('onClose');
+		                $action1 = new TAction('onCancel');
                 $action1->setParameter('tipoRetorno', 'form');
-                $action1->setParameter('idForm', $this->idForm);
+                $action1->setParameter(TConstantes::FORM, $this->formseq);
+		                $action1->setParameter('key', $this->seq);
                 $action1->setParameter('alvo', $this->paneRet);
-                $action1->setParameter('confirme', '');
+		                $action1->setParameter('confirme', 'Deseja realmente fechar?');
                 
-                $this->setButton('fechar_botform'.$this->idForm, 'Fechar', $action1);
+                $this->setButton('fechar_botform'.$this->formseq, 'Fechar', $action1);
+        //}
+
+
         }
 
        return $obAbas;
@@ -293,32 +297,32 @@ class TForms{
     *
     * return <TSetAbas> = retorna um objeto aba
     */
-    public function setBloco($idBloco){
+    public function setBloco($blocseq){
 
         // Dados Formulário
         $dboFormBloco = new TKrs('blocos');
             $criteriaFormBloco = new TCriteria();
-            $criteriaFormBloco->add(new TFilter('id','=',$idBloco));
+            $criteriaFormBloco->add(new TFilter('seq','=',$blocseq));
         $retFormBloco = $dboFormBloco->select("*", $criteriaFormBloco);
         $obFormBloco = $retFormBloco->fetchObject();
 
         //instancia o objeto Aba
-        $obAbas = new TSetAbas($idBloco, $this->headerForm['titulo']);
+        $obAbas = new TSetAbas($blocseq, $this->headerForm['titulo'], $this->dimensao);
 
            if($obFormBloco->obapendice and $obFormBloco->obapendice != "-" ){
 
                 $obApendice = new TApendices();
-                $obElement = $obApendice->main($obFormBloco->obapendice, $this->idForm);
+                $obElement = $obApendice->main($obFormBloco->obapendice, $this->formseq);
 
                 $form = $obElement;
            }else{
 
                 // configura as propriedade de acesso ao objeto form
                 $this->labelForm    = $obFormBloco->nomebloco;
-                $this->idNameBloco  = $obFormBloco->blocoid;
-                $this->ativo        = $obFormBloco->ativo;
+                $this->idNameBloco  = $obFormBloco->blocseq;
+                $this->statseq        = $obFormBloco->statseq;
 
-                $this->formBloco = new TCompForm($idBloco, $idBloco, $this->headerForm['tipo'], $this->codigo);
+                $this->formBloco = new TCompForm($blocseq, $blocseq, $this->headerForm['tipo'], $this->seq);
                 $this->formBloco->addValor($this->dados);
                 $form = $this->formBloco->setFields();
 
@@ -341,7 +345,7 @@ class TForms{
 	
 	
     /*setBotton()
-    * argumentos de configuração dos botões do formulário
+    * argumentos de configura�ão dos botões do formulário
     */
     public function setButton($idNome, $label, TAction $action, $classecss = null){
         try{
@@ -362,41 +366,43 @@ class TForms{
     /*método getForm
     *Retorna o formulario montado com suas respequitivas abas
     */
-    public function getForm(){
-    	
-         $form = $this->setForm($this->idForm);
+    public function getForm($validRegister){
+         $form = $this->setForm($validRegister);
+         if($this->dados){
+            $form->setData($this->dados);
+         }
    
          if($this->bots){
              foreach($this->bots as $idNome=>$act){
                 $form->addBotao($idNome, $this->botsLabel[$idNome], $act, $this->botsClass[$idNome]);
              }
          } 
-
-         if($this->dados){
-
-                    // percorre e preenche vetor de campos na sessão ====================================
-                    $obHeader = new TSetHeader();
-                    $headerForm = $obHeader->getHead($this->idForm);
-                    $listaCamposSession = $headerForm['camposSession'];
-                    if($listaCamposSession and is_array($listaCamposSession)){
-                        foreach($listaCamposSession as $campo=>$infoCampo){
-                        //Sincroniza dados do banco com os da sessão 
- 	 if($infoCampo['status'] != 1){
- 	 $infoCampo['valor']  = $this->dados[$campo];
- 	 $infoCampo['status'] = 1;
- 	 }else{
- 	 $this->dados[$campo] = $infoCampo['valor'];
- 	  }
-                             $listaCamposSession[$campo] = $infoCampo;
-                        }
-                        $obHeader->addHeader($this->idForm, 'camposSession', $listaCamposSession);
-                    }
-                    //===================================================================================
-
-            $form->setData($this->dados);
-         }
+         
         $form->setAbas();
-
+        
+        if($this->dados){
+        	// percorre e preenche vetor de campos na sessão ====================================
+        	$obHeader = new TSetHeader();
+        	$headerForm = $obHeader->getHead($this->formseq);
+        	$listaCamposSession = $headerForm[TConstantes::CAMPOS_FORMULARIO];
+        
+        	if($listaCamposSession and is_array($listaCamposSession)){
+        		 
+        		foreach($listaCamposSession as $campo=>$infoCampo){
+        			 
+        			$infoCampo[TConstantes::SEQUENCIAL]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][TConstantes::SEQUENCIAL];
+        
+        			$infoCampo[TConstantes::FIELD_VALOR]  = $this->dados[$infoCampo[TConstantes::ENTIDADE]][$infoCampo['colunadb']];
+        			$infoCampo[TConstantes::FIELD_STATUS] = 1;
+        			$listaCamposSession[$campo] = $infoCampo;
+        		}
+        
+        		$obHeader->addHeader($this->formseq, TConstantes::CAMPOS_FORMULARIO, $listaCamposSession);
+        	}
+        	//===================================================================================
+        
+        }
+        
         $this->dboKs->close();
         return $form;
     }

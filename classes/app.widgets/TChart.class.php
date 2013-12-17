@@ -150,7 +150,7 @@ class TChart {
             $yT = ($this->height * 75/100) > 13 ? $this->height * 7/100 : 12;
             $this->core->drawTitle($xT, $yT, $this->chartName, 100, 100, 100);
 
-        $archive = "{$this->dir}{$this->chartId}_{$this->obUser->codigo}.png";
+        $archive = "{$this->dir}{$this->chartId}_{$this->obUser->seq}.png";
         $this->core->Render($archive);
 
         $img = new TElement('img');

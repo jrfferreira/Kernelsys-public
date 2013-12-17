@@ -82,17 +82,17 @@ if(isset($_POST['executar'])) {
     $Arq_tamanho=$_FILES['ArqRet']['size'];
     $Arq_erro=$_FILES['ArqRet']['error'];
 
-    $local = '../app.tmp/retornoCaixa/'.$Arq_nome;
+    $local = 'retornoCaixa/'.$Arq_nome;
 
     if(is_uploaded_file($Arq_local)) {//upload de arquivo
-/*         if(!move_uploaded_file($Arq_local,$local)) {//move arquivo
+        if(!move_uploaded_file($Arq_local,$local)) {//move arquivo
 
             new setException(TMensagem::ERRO_MOVER_ARQUIVO);
         }
-        else { */
+        else {
             $obConcilia = new TConciliacaoCaixa();
-            $obConcilia->runConciliacao($Arq_local);
-      /*  }  */
+            $obConcilia->runConciliacao($local);
+        }
     }else {
         new setException(TMensagem::ERRO_ARQUIVO_NULL);
     }

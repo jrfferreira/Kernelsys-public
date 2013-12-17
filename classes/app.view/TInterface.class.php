@@ -11,7 +11,9 @@ function __autoload($classe) {
     $autoload = new autoload('../',$classe);
 }
 
+$obSession = new TSession();
 $obCheckLogin = new TCheckLogin();
+
 
 // Retorna privilegios do usuario
 $inPriv = new TGetPrivilegio("0", "0");
@@ -27,13 +29,13 @@ $obUser = $inPriv->getUser();
 
 
     //===== monta criterios de acesso do uruario ======\\
-    if(is_array($obPriv)) {
+    if(is_array($obPriv) and count($obPriv)>0) {
     	
     $criterio = new TCriteria();
-    	$criterio->add(new TFilter('ativo','=','1'),'AND');
+    	$criterio->add(new TFilter('statseq','=','1'),'AND');
     
         foreach($obPriv as $mp) {
-        	$filter = new TFilter('id','=',$mp);
+        	$filter = new TFilter('seq','=',$mp);
         	$filter->setTipoFiltro('idSelecao');        	
     		$criterio->add($filter,"OR");
         }
@@ -42,7 +44,7 @@ $obUser = $inPriv->getUser();
         new setException(TMensagem::ERRO_PRIVILEGIOS);
     }
     //=================================================\\
-    $tKrs = new TKrs('modulos_principais');
+    $tKrs = new TKrs('modulo');
     $execSql = $tKrs->select('*',$criterio);
 
     $obLogo = new TElement('div');
@@ -74,7 +76,7 @@ $obUser = $inPriv->getUser();
         $mbotCont->alt    = $retMods->labelmodulo;
         $mbotCont->add($botPrincipal);
 
-        $mbotCont->onclick = "prossInter(this,'".$retMods->id."');";
+        $mbotCont->onclick = "prossInter(this,'".$retMods->seq."');";
 
        // $BarraMenu->add($mbotCont);
         $BarraPrincipal->add($mbotCont);
@@ -97,35 +99,33 @@ $obUser = $inPriv->getUser();
 
     //$BarraPrincipal->add($BarraMenu);
 
-  /*  $timePrincipal = new TElement('span');
+/*     $timePrincipal = new TElement('span');
     $timePrincipal->id = 'obTempo';
     $timePrincipal->add(date("H:i:s"));
     $timePrincipal->class = "inmodulobot"; */
 
-    $pesq = new TElement('input');
+/*     $pesq = new TElement('input');
     $pesq->type = 'text';
     $pesq->maxlength = '17';
     $pesq->style = 'width: 120px; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 4px; font-size: 11px; border-top-left-radius: 3px 3px; border-top-right-radius: 3px 3px; border-bottom-right-radius: 3px 3px; border-bottom-left-radius: 3px 3px; ';
-    $pesq->class = "ui-state-default ui-state-hover pesqModulo";
+    $pesq->class = "ui-state-default ui-state-hover pesqModulo"; */
     $obTopR = new TElement('div');
     $obTopR->id = "topRight";
     $obTopR->class = "moduloTopRight";
-    //$obTopR->add($timePrincipal);
-    $obTopR->add($pesq);
-    $obTopR->add('<img src="app.images/petrus/new_ico_search.png" alt="Buscar"  titulo="Buscar" id="pesqModuloImg" onclick="pesqModulo()"/>');
+    $obTopR->add($timePrincipal);
+    //$obTopR->add('<img src="app.images/help.png" alt="Ajuda"  titulo="Ajuda" id="ajudaModuloImg" onclick="ajudasModulo()"/>');
     $BarraPrincipal->add($obTopR);
 
     //cria botão de ajuda
     $help = new TElement('img');
     $help->src = "app.images/help.png";
-    $help->onclick = "setPopUp('windowHelp', '../app.manual/manual/index.html', '20', '200', '800', '600')";
+    $help->onclick = "setPopUp('windowHelp', '../app.manual/manual/MN-1-Manual do Sistema SCP.hmxz', '20', '200', '800', '600')";
     $help->style = "cursor:pointer;";
     $help->alt="Ajuda";
     $help->border="0";
     $help->align = "right";
-
-
-    //$BarraPrincipal->add($help);
+    
+    $BarraPrincipal->add($help);
 
     //bot�o de customização
     //$obBotCuston = new TSetCuston();
@@ -180,6 +180,14 @@ $content->style = "width: 100%; height:100%;background-image:url(app.images/bg.p
 $content->add($BarraPrincipal);
 $content->add($DCorpo);
 $content->add($DRodaPe->show());
+
+if($obSession->getValue('developer')){
+	$aviso = new TElement('div');
+	$aviso->id = 'testAlert';
+	$aviso->add('<h1>Atenção!!<h1>');
+	$aviso->add('<h2>Esta versão é para testes!<h2>');
+	$content->add($aviso);
+}
 
 $pageSys->add($content);
 //$pageSys->add($BarraPrincipal);

@@ -21,7 +21,7 @@ final class TNFeModel {
     //Debug SOAP
     public $soapDebug = null;
 
-    public function geraChaveAcesso($uf, $data, $cnpj, $modelo, $serie, $numNfe, $formaEmissao, $codigo, $digitoverificador = null) {
+    public function geraChaveAcesso($uf, $data, $cnpj, $modelo, $serie, $numNfe, $formaEmissao, $seq, $digitoverificador = null) {
 
         $cnpj = sprintf('%014s', preg_replace('{\D}', '', $cnpj));
 
@@ -42,15 +42,15 @@ final class TNFeModel {
             }
         }
         $formaEmissao = substr($formaEmissao, 0, 1);
-        $codigo = substr($codigo, 0, 8);
-        if (strlen($codigo) < 8) {
-            $count = strlen($codigo);
+        $seq= substr($seq, 0, 8);
+        if (strlen($seq) < 8) {
+            $count = strlen($seq);
             for ($index = 0; $index < (8 - $count); $index++) {
-                $codigo = '0' . $codigo;
+                $seq= '0' . $seq;
             }
         }
 
-        $chavedeacesso = $uf . $data . $cnpj . $modelo . $serie . $numNfe . $formaEmissao . $codigo;
+        $chavedeacesso = $uf . $data . $cnpj . $modelo . $serie . $numNfe . $formaEmissao . $seq;
 
         if (!$digitoverificador) {
             return $chavedeacesso . $this->geraDigitoVerificador($chavedeacesso);
@@ -169,11 +169,11 @@ final class TNFeModel {
         $newNode = $xmldoc->createElement('SignatureValue', $signatureValue);
         $Signature->appendChild($newNode);
         //KeyInfo
-        $KeyInfo = $xmldoc->createElement('KeyInfo');
-        $Signature->appendChild($KeyInfo);
+        $seqInfo = $xmldoc->createElement('KeyInfo');
+        $Signature->appendChild($seqInfo);
         //X509Data
         $X509Data = $xmldoc->createElement('X509Data');
-        $KeyInfo->appendChild($X509Data);
+        $seqInfo->appendChild($X509Data);
         //carrega o certificado sem as tags de inicio e fim
         $cert = $this->__cleanCerts($this->privatecert);
         //X509Certificate
@@ -272,46 +272,46 @@ final class TNFeModel {
             $flagOK = TRUE;
             $errorMsg = '';
         }
-        return array('status' => $flagOK, 'error' => $errorMsg);
+        return array(TConstantes::FIELD_STATUS => $flagOK, 'error' => $errorMsg);
     }
 
 
-    //Retorna o Codigo do Estado segundo tabela de dominio
-    public function getCodigoUF($uf,$ob = null){
+    //Retorna o seqdo Estado segundo tabela de dominio
+    public function getseqUF($uf,$ob = null){
             $TDbo = new TDbo('dominio.dbestados','bitup');
             $crit = new TCriteria();
             $crit->add(new TFilter('estado', '=', $uf),'OR');
             $crit->add(new TFilter('uf', '=', $uf),'OR');
-            $ret = $TDbo->select('codigouf', $crit);
+            $ret = $TDbo->select('sequf', $crit);
 
             $ob = $ret->fetchObject();
 
-            if($ob->codigouf){
-               return $ob->codigouf;
+            if($ob->sequf){
+               return $ob->sequf;
             }else{
                return $uf;
             }
 
     }
 
-    //Retorna o codigo do municipio segundo tabela de dominio
-    public function getCodigoMunicipio($cidade,$ob = null){
+    //Retorna o seqdo municipio segundo tabela de dominio
+    public function getseqMunicipio($cidade,$ob = null){
             $TDbo = new TDbo('dominio.dbcidades','bitup');
             $crit = new TCriteria();
             $crit->add(new TFilter('cidade', '=', $cidade));
-            $ret = $TDbo->select('codigoibge', $crit);
+            $ret = $TDbo->select('seqibge', $crit);
 
             $ob = $ret->fetchObject();
 
-            if($ob->codigoibge){
-               return $ob->codigoibge;
+            if($ob->seqibge){
+               return $ob->seqibge;
             }else{
                return $cidade;
             }
 
     }
-    //Retorna Codigo numérico aleatorio para a nota fiscal
-    public function geraCodigoNumerico($param,$ob = null){
+    //Retorna seqnumérico aleatorio para a nota fiscal
+    public function geraseqNumerico($param,$ob = null){
         $return = "";
         while(strlen($return) >= 8){
             $return = (string) $return . rand(0,9);

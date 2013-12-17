@@ -40,7 +40,7 @@ class TButton extends TField{
      * seta classe css do botão
      * param <type> $class
      */
-    public function setClass($class, $agreg = null){
+    public function setClass($class){
         $this->class = " ".$class;// redefine a classe do botão
     }
 	

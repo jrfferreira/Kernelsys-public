@@ -139,7 +139,7 @@ class TSetModel {
 
                 $principal = explode('/', $argumento);
                 $entity = $principal[1];
-                $campoCodigo = $principal[2];
+                $camposeq= $principal[2];
                 $label = $principal[3];
 
                 $args = explode(';', $principal[4]);
@@ -147,18 +147,32 @@ class TSetModel {
 
                 foreach ($args as $crits) {
                     $dadosArg = explode(',', $crits);
-                    $obAlocaDados = new TAlocaDados();
-                    $valor = $obAlocaDados->getValue($dadosArg[2]);
-                    if (!$valor) {
-                        $valor = $dadosArg[2];
+                    
+                    $caller = explode('::',$dadosArg[2]);
+                    
+                    if($caller[0] && $caller[1]){
+                    	$instance = new $caller[0];
+                    	$function = $caller[1];
+                    	if( method_exists($instance,$caller[1]) ){
+                    		$valor = $instance->$function();
+                    	}
+                    }else{
+	                    $obAlocaDados = new TAlocaDados();
+	                    $valor = $obAlocaDados->getValue($dadosArg[2]);
                     }
+                    
+
+                    if (!$valor) {
+                    	$valor = $dadosArg[2];
+                    }
+                    
                     $criteria->add(new TFilter($dadosArg[0], $dadosArg[1], $valor));
                 }
 
                 $dboItens = new TDbo($entity);
-                $retItens = $dboItens->select($campoCodigo . ',' . $label, $criteria);
+                $retItens = $dboItens->select($camposeq. ',' . $label, $criteria);
                 while ($obItens = $retItens->fetchObject()) {
-                    $itens[$obItens->$campoCodigo] = $obItens->$label;
+                    $itens[$obItens->$camposeq] = $obItens->$label;
                 }
 
                 return $itens;
@@ -198,12 +212,18 @@ class TSetModel {
         $vetor['valor'] = $this->setMoney($vetor['valor']);
         return $vetor;
     }
+    
+    public function setCpfCnpjMain($vetor){
+        $vetor['valor'] = $this->setCpfCnpj($vetor['valor']);
+        return $vetor;
+    	
+    }
 
-    public function setCpfcnpj($valor) {
+    public function setCpfCnpj($valor) {
 
         $val = preg_replace('{\D}', '', $valor);
         $model = new TSetModel();
-        if (strlen($val) == 11) {
+        if (strlen($val) <= 11) {
             return $model->setCPF($valor);
         } else {
             return $model->setCNPJ($valor);
@@ -266,20 +286,18 @@ class TSetModel {
      * @param $valor
      */
     public function setTelefone($valor) {
-        $valor = preg_replace('{\D}', '', $valor);
-        if (strlen($valor) < 10) {
-            $count = strlen($valor);
-            for ($index = 0; $index < (10 - $count); $index++) {
-                $valor = '0' . $valor;
-            }
-        }
+        $valor = sprintf('%010s', preg_replace('@[^0-9]@', '', $valor));
         $valor = substr($valor, (strlen($valor) - 10), 10);
 
         $b1 = substr($valor, 0, 2);
         $b2 = substr($valor, 2, 4);
         $b3 = substr($valor, 6, 4);
-        if ($b1 || $b2 || $b3) {
-            return "($b1)$b2-$b3";
+        $str = "";
+        if ($b2 && $b3) {
+        	if($b1 != "00"){
+        		$str = "($b1) ";
+        	}
+            return $str."$b2-$b3";
         } else {
             return $valor;
         }
@@ -294,6 +312,29 @@ class TSetModel {
         $vetor['valor'] = $this->setCNPJ($vetor['valor']);
         return $vetor;
     }
+    
+    /**
+     *
+     * param <type> $vetor
+     * return <type>
+     */
+    
+    public function setCep($valor) {
+    	$valor = sprintf('%08s', preg_replace('{\D}', '', $valor));
+    	$b1 = substr($valor, 0, 2);
+    	$b2 = substr($valor, 2, 3);
+    	$b3 = substr($valor, 5, 3);
+    	if ($b1 || $b2 || $b3) {
+    		return "$b1.$b2-$b3";
+    	} else {
+    		return $valor;
+    	}
+    }
+    
+    public function setCepMain($vetor) {
+        $vetor['valor'] = $this->setCep($vetor['valor']);
+        return $vetor;
+    }
 
     /**
      * formata valor em um formato monetario com R$
@@ -302,7 +343,7 @@ class TSetModel {
      */
     public function setValorMonetario($valor) {
         try {
-            $valor = 'R$ ' . number_format($valor, 4, ',', '.');
+            $valor = 'R$ ' . number_format($valor, 2, ',', '.');
             return $valor;
         } catch (Exception $e) {
             new setException($e);
@@ -355,18 +396,11 @@ class TSetModel {
      * return <type>
      */
     public function setStatusMovimento($tp) {
-        if ($tp == "1") {
-            $tp = "Em aberto";
-        } elseif ($tp == "2") {
-            $tp = "Conferido";
-        } elseif ($tp == "3") {
-            $tp = "Programado";
-        } elseif ($tp == "4") {
-            $tp = "Extornado";
-        } elseif ($tp == "5") {
-            $tp = "Consolidado";
-        }
-        return $tp;
+    	$dbo = new TDbo(TConstantes::DBSITUACAO_MOVIMENTO);
+    	$ret = $dbo->select('titulo',$tp);
+        $tp = $ret->fetchObject();
+        
+        return $tp->titulo;
     }
 
     /**
@@ -396,7 +430,34 @@ class TSetModel {
 	 * @param unknown_type $cod
 	 */
     public function setCertificacaoDigitial($cod) {
-        return 'CD#' . strtoupper(md5($movimentacao . date('Y-m-d'))) . date('Ymd');
+        return 'CD#' . strtoupper(md5($cod . "secret-key-petrus-edu")) . date('Ymd');
+    }
+
+    /**
+     * Verifica o situação do campo e define se poderá ser editado ou não
+     * @param unknown $valor = vetor de argumentos - campo, valor do campo, argumentos estaticos
+     */
+    public function checkSituacaoCampo($valor){
+    	
+    	if($valor['valor'] == $valor['argumento']){
+    		$retorno = 'disabled';
+    	}else{
+    		$retorno = '';
+    	}
+    	
+    	return $retorno;
+    }
+    
+    /**
+     *  Intermedia a execução do metodo checkSituacaoCampo
+     * @param unknown $valor = vetor de argumentos - campo, valor do campo, argumentos estaticos
+     */
+    public function checkSituacaoCampoMain($valor){
+    	 
+    	$retorno = $this->checkSituacaoCampo($valor);
+    	
+    	return $retorno;
+    	 
     }
 
 

@@ -6,7 +6,7 @@
 //==========================================================
 session_start();
 
-$codigoTransacao = $_GET['cod'];
+$seqTransacao = $_GET['cod'];
 if ($_GET['juros'] != 0 && $_GET['juros'] != null) {
     $juros = $_GET['juros'];
 } else {
@@ -22,22 +22,22 @@ $TSetModel = new TSetModel();
 
 //$dboTransacao = new TDbo('view_transacoes');
 //$critTransacao = new TCriteria();
-//$critTransacao->add(new TFilter('codigo', '=', $codigoTransacao));
+//$critTransacao->add(new TFilter(TConstantes::SEQUENCIAL, '=', $seqTransacao));
 //$retTransacao = $dboTransacao->select('*', $critTransacao);
 
 $TTransacao = new TTransacao();
 
-$obTransacao = $TTransacao->getTransacaoDG($codigoTransacao);
+$obTransacao = $TTransacao->getTransacaoDG($seqTransacao);
 
 $dboCliente = new TDbo('view_pessoas');
 $critCliente = new TCriteria();
-$critCliente->add(new TFilter('codigo', '=', $obTransacao->codigocliente));
+$critCliente->add(new TFilter(TConstantes::SEQUENCIAL, '=', $obTransacao->seqcliente));
 $retCliente = $dboCliente->select('*', $critCliente);
 $obCliente = $retCliente->fetchObject();
 
 $dboItens = new TDbo('view_transacoes_itens');
 $critItens = new TCriteria();
-$critItens->add(new TFilter('codigotransacao', '=', $obTransacao->codigo));
+$critItens->add(new TFilter('seqtransacao', '=', $obTransacao->seq));
 $retItens = $dboItens->select('*', $critItens);
 
 $obItens = $obTransacao->itens;
@@ -50,13 +50,13 @@ $tabela->width = "100%";
 $tabela->height = "100%";
 
 $cabecalho = $tabela->addRow();
-$col1 = $cabecalho->addCell("PEDIDO: {$codigoTransacao}");
+$col1 = $cabecalho->addCell("PEDIDO: {$seqTransacao}");
 $col1->colspan = 2;
 $col1->height = '40px';
 $col1->style = "font-size: 22px; font-weight: bolder; text-align: center;";
 
 $infoCabecalho = $tabela->addRow();
-$col1 = $infoCabecalho->addCell("Cliente: {$obCliente->nome_razaosocial}");
+$col1 = $infoCabecalho->addCell("Cliente: {$obCliente->pessnmrz}");
 $col1->height = '20px';
 $col2 = $infoCabecalho->addCell(date("d/m/Y h:i:s"));
 $col2->height = '20px';
@@ -70,7 +70,7 @@ $col2->height = '20px';
 $col2->style = "text-align: right;";
 
 $infoCabecalho = $tabela->addRow();
-$col1 = $infoCabecalho->addCell("CPF/CNPJ: {$TSetModel->setCpfcnpj($obCliente->cpf_cnpj)} - IE/RG: {$obCliente->rg_inscest}");
+$col1 = $infoCabecalho->addCell("CPF/CNPJ: {$TSetModel->setCpfcnpj($obCliente->pessnmrf)} - IE/RG: {$obCliente->pessrgie}");
 $col1->height = '20px';
 
 $fone = ($TSetModel->setTelefone($obCliente->tel1) != null) ?
@@ -100,7 +100,7 @@ $itensPedido->width = "100%";
 $itensPedido->style = 'font-size: 12px;';
 $itensCabec = $itensPedido->addRow();
 
-$col = $itensCabec->addCell('CODIGO');
+$col = $itensCabec->addCell(TConstantes::SEQUENCIAL);
 $col->style = "border-bottom: 1px solid #000; font-weight: bolder; font-size: 13px; text-align: center;";
 
 $col = $itensCabec->addCell('MERCADORIA');
@@ -132,7 +132,7 @@ foreach ($obItens as $item) {
     $valortotal = $item['valortotal'];
 
 
-    $col = $itensCabec->addCell($item['codigoproduto']);
+    $col = $itensCabec->addCell($item['seqproduto']);
     $col->style = "text-align: center";
     $col = $itensCabec->addCell($item['produto']);
     $col->style = "text-align: left";
@@ -176,7 +176,7 @@ $col1->height = '20px';
 $col1->colspan = "2";
 
 $infoItens = $tabela->addRow();
-$col1 = $infoItens->addCell("Condição: {$obTransacao->codigoformapagamento} - {$obTransacao->condicaopagamento}: {$obTransacao->textocondicaopagamento} ");
+$col1 = $infoItens->addCell("Condição: {$obTransacao->seqformapagamento} - {$obTransacao->condicaopagamento}: {$obTransacao->textocondicaopagamento} ");
 $col1->style = "border-bottom: 1px solid #000;";
 $col1->height = '20px';
 $col1->colspan = "2";

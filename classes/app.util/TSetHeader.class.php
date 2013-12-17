@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ *Controle de cabeçalho
  */
 
 class TSetHeader{
@@ -10,19 +10,19 @@ class TSetHeader{
     private $box = "headerView";
     private $complemento = "head_";
 
-    public function __construct($keyHead = NULL){
+    public function __construct($seqHead = NULL){    	
         $this->obsession = new TSession();
     }
 
     /**
      *
-     * param <type> $keyHead = Chave de acesso ao cabeçalho
+     * param <type> $seqHead = Chave de acesso ao cabeçalho
      */
-    public function setHeader($keyHead){
+    public function setHeader($seqHead){
         try{
-            if($keyHead){
+            if($seqHead){
                 if(is_array($this->header)){
-                    $this->obsession->setValue($this->complemento.$keyHead, $this->header, $this->box);
+                    $this->obsession->setValue($this->complemento.$seqHead, $this->header, $this->box);
                 }
                 else{
                     throw new ErrorException("Os dados do cabeçalho não foram definidos.");
@@ -39,13 +39,13 @@ class TSetHeader{
 
      /**
      *
-     * param <type> $key
+     * param <type> $seq
      * param <type> $valor
      */
-    public function add($key, $valor){
+    public function add($seq, $valor){
         try{
-            if($key){
-                $this->header[$key] = $valor;
+            if($seq){
+                $this->header[$seq] = $valor;
             }
             else{
                 throw new ErrorException("A chave fornecida é inválida");
@@ -59,15 +59,15 @@ class TSetHeader{
     *
     * param <type> $chave 
     */
-    public function getHead($head, $key = NULL ){
+    public function getHead($head, $seq = NULL ){
         try{
             if($head){
 
                 $headDados = $this->obsession->getValue($this->complemento.$head, $this->box);
 
                 if(is_array($headDados)){
-                    if($key){
-                        $retHead = $headDados[$key];
+                    if($seq){
+                        $retHead = $headDados[$seq];
                     }
                     else{
                         $retHead =  $headDados;
@@ -87,17 +87,18 @@ class TSetHeader{
     }
 
     /**
-     *
-     * param <type> $key 
+     * Adiciona um valor no cabeçalho já existente
+     * param <type> $seq 
      */
-    public function addHeader($head, $key, $valor){
+    public function addHeader($head, $seq, $valor){
         try{
             
-            if($key){
+            if($seq){
                 $headDados = $this->obsession->getValue($this->complemento.$head, $this->box);
 
                 $this->clearHeader($this->complemento.$head);
-                    $headDados[$key] = $valor;
+                
+                $headDados[$seq] = $valor;
                 $this->obsession->setValue($this->complemento.$head, $headDados, $this->box);
 
             }
@@ -111,11 +112,11 @@ class TSetHeader{
 
     /**
      *
-     * param <idForm> $head = id do formulário
+     * param <formseq> $head = seq do formulário
      * return <boleano>
      */
     public function testHeader($head){
-         try{
+         try{       	
             if($head){
                 $headDados = $this->obsession->getValue($this->complemento.$head, $this->box);
 
@@ -139,10 +140,14 @@ class TSetHeader{
      */
     public function clearHeader($head = NULL){
         if($head){
-            $headfilhos = $this->getHead($head, 'headfilhos');
+        	
+        	$obHead = $this->getHead($head);        	
+        	
+            $headfilhos = $this->getHead($head, TConstantes::HEAD_HEADCHILDS);
+                                                
             if(is_array($headfilhos)){
                 foreach($headfilhos as $headfilho){
-                    $this->obsession->delValue($this->complemento.$headfilho, $this->box);
+                    $this->obsession->delValue($this->complemento.$headfilho[TConstantes::LISTA], $this->box);
                 }
             }
             $this->obsession->delValue($this->complemento.$head, $this->box);
@@ -155,14 +160,14 @@ class TSetHeader{
 
     /**
     *
-    * param <type> $idForm
+    * param <type> $formseq
     */
-    public function onHeader($idForm, $nivel = null){
+    public function formHeader($formseq, $nivel = null){
 
         try{
 
-            if(!$idForm){
-                throw new Exception("O id do formulário não foi definido para o TSetHeader");
+            if(!$formseq){
+                throw new Exception("O seq do formulário não foi definido para o TSetHeader");
             }
 
             //Objeto DBO
@@ -170,76 +175,85 @@ class TSetHeader{
 
                 $this->dboKs->setEntidade('forms');
                     $criteriaForm = new TCriteria();
-                    $criteriaForm->add(new TFilter('id', '=', $idForm));
+                    $criteriaForm->add(new TFilter('seq', '=', $formseq));
                 $retForm = $this->dboKs->select('*', $criteriaForm);
                 $Form = $retForm->fetchObject();
 
                 //verifica a tabela relacionada
-                $idEntidade = $Form->entidade;
+                $idEntidade = $Form->tabseq;
 
                 //define o titulo da janela para o header
                 $titulo = $Form->nomeform;
 
                 //Informações da listagem
-                $this->dboKs->setEntidade('lista_form');
+                $this->dboKs->setEntidade('lista');
                     $criteriaListaForm = new TCriteria();
-                    $criteriaListaForm->add(new TFilter('id', '=', $Form->idlista));
+                    $criteriaListaForm->add(new TFilter('seq', '=', $Form->listseq));
                 $retListaForm = $this->dboKs->select('tipo, entidade, label, formainclude', $criteriaListaForm);
                 $listaForm = $retListaForm->fetchObject();
+                
+                if($listaForm->tipo){
                 $tipoForm = $listaForm->tipo;
+                }else{
+                	$tipoForm = 'form';
+                }
+                
 
 
                 //==============================================================
                 //Verifica a existencia de um cabeçalho pai
-                if($Form->formpai){
-                    $idFormPai = $Form->formpai;
+                if($Form->formseq){
+                    $frmpseq = $Form->formseq;
                 }
 
-                    if($idFormPai){
+                    if($frmpseq){
                         //Retorna cabeçalho do formulario pai da lista (caso ela tenha um pai)
-                        $headerFormPai = $this->getHead($idFormPai);
+                        $headerFormPai = $this->getHead($frmpseq);
                         // recupera chave atual do objeto pai
-                        $codigoPai = $headerFormPai['codigo'];
-                        $destinoCodigo = $headerFormPai['colunafilho'];
+                        $seqPai = $headerFormPai[TConstantes::SEQUENCIAL]; // sequencial do registro pai
+                        $colunapai = $headerFormPai['colunafilho'];
                     }
                //===============================================================
 
             //Verifica tabela de destino do bloco
             $this->dboKs->setEntidade('tabelas');
                 $criteriaTabela = new TCriteria();
-                $criteriaTabela->add(new TFilter('id','=',$idEntidade));
+                $criteriaTabela->add(new TFilter('seq','=',$idEntidade));
             $retTabela = $this->dboKs->select('*',$criteriaTabela);
             $obTabela = $retTabela->fetchObject();
 
             /**
-            * instancia o cabeçalho da lista
+            * instancia o cabeçalho do form
             * em execução e armazena em sessão
             */
-            $this->add('idForm', $idForm);// idForm da lista
+            $this->add(TConstantes::FORM, $formseq);// formseq da lista
             $this->add('titulo', $titulo);//titulo do formulário
-            $this->add('status', '');// cria atributo no cabeçalho para o status do formulário status = new - edit - view;
-            $this->add('idFormPai', $idFormPai);//id do formulário pai se ouver
-            $this->add('idLista', $Form->idlista);//usado com complemento da chave de sessão do objeto lista (content+idLista)
-            $this->add('formainclude', $Form->formainclude);//define a forma de de incluisão da lista
-            $this->add('idListaLabel', $listaForm->lista);
+            $this->add(TConstantes::FIELD_STATUS, '');// cria atributo no cabeçalho para o status do formulário status = new - edit - view;
+            $this->add('frmpseq', $frmpseq);//seq do formulário pai se ouver)
+            $this->add(TConstantes::LISTA, $Form->listseq);//usado com complemento da chave de sessão do objeto lista (content+listseq)
+            $this->add('formainclude', $Form->formainclude);//define a forma de de inclusão da lista
+            $this->add('listseqLabel', $listaForm->lista);
             $this->add('tituloLista', $listaForm->label);
-            $this->add('entidade', $obTabela->tabela);
-            $this->add('colunafilho',$obTabela->colunafilho);
+            $this->add(TConstantes::ENTIDADE, $obTabela->tabela);
             $this->add('tipo', $tipoForm);
             $this->add('listapai', $listaForm->listapai);
-            $this->add('destinocodigo', $destinoCodigo);
-            $this->add('codigoPai', $codigoPai);
-            $this->add('camposSession', '');
+            $this->add('colunapai', $colunapai); //Coluna que represeta o relacionamento com o pai
+            $this->add(TConstantes::SEQUENCIAL, 0); // sequencial que representao registro atual, caso já tenha sido salvo.
+            $this->add('seqPai', $seqPai); // FK do relacionamento
+            $this->add('colunafilho',$obTabela->colunafilho);// Coluna que será FK casa tenha filhos   
+            $this->add(TConstantes::CAMPOS_FORMULARIO, '');
             $this->add('camposObrigatorios', '');
-            $this->add('formOutControl', $Form->formoutcontrol);
-            $this->add('incontrol', $listaForm->incontrol);
-            $this->add('headfilhos', ''); //armazena um vetor com as chaves dos filhos do mesmo
+            $this->add(TConstantes::HEAD_OUTCONTROL, $Form->formoutcontrol);
+            $this->add(TConstantes::FIELD_INCONTROL, $listaForm->incontrol);
+            $this->add(TConstantes::HEAD_HEADCHILDS, ''); //armazena um vetor com as chaves dos filhos do mesmo
+            $this->add(TConstantes::HEAD_NIVEL, $Form->nivel);
+            $this->add(TConstantes::HEAD_DADOSFORM, ''); // armazena os dados do formulario em questão
 
 
-            $this->setHeader($idForm);
+            $this->setHeader($formseq);
             /***********************************************************/
             
-            return $this->getHead($idForm);
+            return $this->getHead($formseq);
 
         }catch(Exception $e){
             new setException($e, 2);
@@ -248,55 +262,58 @@ class TSetHeader{
 
     /**
     *
-    * param <type> $idLista
+    * param <type> $listseq
     * param <type> $nivel
     * return <type>
     */
-    public function onHeaderLista($idLista, $nivel = null){
+    public function listHeader($listseq, $nivel = null){
         try{
 
-            if(!$idLista){
-                throw new Exception("O id da lista não foi definido para o TSetHeader");
+            if(!$listseq){
+                throw new Exception("O seq da lista não foi definido para o cabeçalho");
             }
 
             //Objeto DBO
             $this->dboKs = new TKrs();
 
             //Informações da listagem
-            $this->dboKs->setEntidade('lista_form');
+            $this->dboKs->setEntidade('lista');
                 $criteriaListaForm = new TCriteria();
-                $criteriaListaForm->add(new TFilter('id', '=', $idLista));
+                $criteriaListaForm->add(new TFilter('seq', '=', $listseq));
             $retListaForm = $this->dboKs->select('*', $criteriaListaForm);
             $listaForm = $retListaForm->fetchObject();
 
                 //Verifica tabela de destino do bloco
                 $this->dboKs->setEntidade('tabelas');
                     $criteriaTabela = new TCriteria();
-                    $criteriaTabela->add(new TFilter('id','=',$listaForm->entidade));
+                    $criteriaTabela->add(new TFilter('seq','=',$listaForm->tabseq));
                 $retTabela = $this->dboKs->select('*',$criteriaTabela);
                 $obTabela = $retTabela->fetchObject();
 
                     if($listaForm->filtropai != '0'){
+                    	
                         //Retorna cabeçalho do formulario pai da lista (caso ela tenha um pai)
 
                         $this->dboKs->setEntidade('forms');
-                            $criteriaForms = new TCriteria();
-                            $criteriaForms->add(new TFilter('id','=',$listaForm->forms_id));
-                        $retFormPai = $this->dboKs->select('formpai',$criteriaForms);
-                        $obFormPai = $retFormPai->fetchObject();
+                        $criteriaForms = new TCriteria();
+						$criteriaForms->add(new TFilter('seq','=',$listaForm->formseq));
+                        $retformseq = $this->dboKs->select('formseq',$criteriaForms);
+                        $obformseq = $retformseq->fetchObject();
 
-                        if($obFormPai->formpai and $obFormPai->formpai != '00'){
-                            //Retorna cabeçalho do formulario pai da lista (caso ela tenha um pai)
-                            $headerFormPai = $this->getHead($obFormPai->formpai);
+                        if($obformseq->formseq and $obformseq->formseq != '00'){
+                            //Retorna cabe�alho do formulario pai da lista (caso ela tenha um pai)
+                            $headerFormPai = $this->getHead($obformseq->formseq);
 
-                                //armazena filhos no cabeçalho do forme pai responsavel
-                                $headFilhos = $headerFormPai['headfilhos'];
-                                    $headFilhos[$idLista] = $idLista;
-                                    $this->addHeader($obFormPai->formpai, 'headfilhos', $headFilhos);
+                                //armazena filhos no cabe�alho do form pai responsavel
+                                $headFilhos = $headerFormPai[TConstantes::HEAD_HEADCHILDS];
+                                    $headFilhos[$listseq][TConstantes::LISTA] = $listseq;
+                                    $headFilhos[$listseq][TConstantes::LIST_REQUIRED] = $listaForm->required; 
+
+                                    $this->addHeader($obformseq->formseq, TConstantes::HEAD_HEADCHILDS, $headFilhos);
 
                             // recupera chave atual do objeto pai
-                            $codigoPai = $headerFormPai['codigo'];
-                            $idFormPai = $obFormPai->formpai;
+                            $seqPai = $headerFormPai[TConstantes::SEQUENCIAL];
+                            $frmpseq = $obformseq->formseq;
                         }
 
                     }
@@ -305,26 +322,38 @@ class TSetHeader{
             * instancia o cabeçalho da lista
             * em execução e armazena em sessão
             */
-            $this->add('idLista', $listaForm->id);//usado com complemento da chave de sessão do objeto lista (idLista)
-            $this->add('idForm', $listaForm->forms_id);// idForm da lista
-            $this->add('idFormPai', $idFormPai);//id do formulário pai se ouver
-            $this->add('tipoHead', 'lista');//define a do cabeçalho
-            $this->add('idListaLabel', $listaForm->lista);
+            $this->add(TConstantes::LISTA, $listaForm->seq);//usado como complemento da chave de sessão do objeto lista (listseq)
+            $this->add(TConstantes::FORM, $listaForm->formseq);// formseq da lista
+            $this->add('frmpseq', $frmpseq);//seq do formulário pai se ouver
+            $this->add('tipoHead', 'lista');//define o tipo do cabeçalho
+            $this->add('listseqLabel', $listaForm->lista);
             $this->add('tituloLista', $listaForm->label);
-            $this->add('entidade', $obTabela->tabela);
+            $this->add(TConstantes::ENTIDADE, $obTabela->tabela);
             $this->add('colunafilho',$obTabela->colunafilho);
             $this->add('tipo', $tipoForm);
             $this->add('listapai', $listaForm->listapai);
-            $this->add('codigoPai', $codigoPai);
-            $this->add('listaSelecao', array());
+            $this->add('seqPai', $seqPai);
+            $this->add('listaSelecao', array());            
             $this->add('allSelecao', '0');
-            $this->add('destinocodigo', $listaForm->destinocodigo);
-            $this->add('incontrol', $listaForm->incontrol);
+            $this->add('destinoseq', $listaForm->destinoseq);
+            $this->add(TConstantes::FIELD_INCONTROL, $listaForm->incontrol);
+            
+            if($listaForm->tipo == 'form'){
+        		$this->add(TConstantes::HEAD_CONTEINERRETORNO, TConstantes::CONTEINER_LISTA.$listaForm->seq); //configura conteiner de retorno das a��es
+            }else if($listaForm->tipo == 'pesq'){
+            	$this->add(TConstantes::HEAD_CONTEINERRETORNO, TConstantes::CONTEINER_PESQUISA.$listaForm->seq); //configura conteiner de retorno das a��es
+            }
+        	
+        	$this->add(TConstantes::LIST_OBJECT, array());
+        	$this->add(TConstantes::LIST_REQUIRED, $listaForm->required);
+        	$this->add(TConstantes::LIST_COUNT, 0);
+        	$this->add(TConstantes::HEAD_NIVEL, $listaForm->nivel);
 
-            $this->setHeader($idLista);
+
+            $this->setHeader($listseq);
             /***********************************************************/
 
-            return $this->getHead($idLista);
+            return $this->getHead($listseq);
 
         }catch(Exception $e){
             new setException($e, 2);

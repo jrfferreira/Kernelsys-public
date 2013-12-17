@@ -19,13 +19,13 @@ function imprimi($string,$end = "<br/>"){
 }
 
 Class execClonage {
-function carregaModulo($id){
+function carregaModulo($seq){
     imprimi('-- Inicio');
 
 
-	if($id){
+	if($seq){
         //-------------
-		$idForm = $id;
+		$formseq = $seq;
 
 
            // imprimi('INSERT INTO session_var (var,val) VALUES(\''.$var.'\',\''..'\');');
@@ -35,24 +35,24 @@ function carregaModulo($id){
         imprimi('-- Formulário');
 		$dboForm = new TKrs('forms');
 		$dCritForm = new TCriteria();
-		$dCritForm->add(new TFilter('id','=',$idForm));
+		$dCritForm->add(new TFilter('id','=',$formseq));
 		$retForm = $dboForm->select('*',$dCritForm);
 
 		$obForm = $retForm->fetchObject();
 
 /*
-		if($obForm->formpai && $obForm->formpai != $obForm->id && $obForm->formpai != '0'){
-            $fPai = $obForm->formpai;
+		if($obForm->frmpseq && $obForm->frmpseq != $obForm->seq && $obForm->frmpseq != '0'){
+            $fPai = $obForm->frmpseq;
 			$$fPai = new execClonage();
-            $$fPai->carregaModulo($obForm->formpai);
-			$chavepai = "idForm{$obForm->formpai}";
+            $$fPai->carregaModulo($obForm->frmpseq);
+			$chavepai = "formseq{$obForm->frmpseq}";
 		}
 */
 		imprimi('-- Form x Tabela');
 		$dboform_x_tabelas = new TKrs('form_x_tabelas');
 		$dCritform_x_tabelas = new TCriteria();
-		$dCritform_x_tabelas->add(new TFilter('formid','=',$obForm->id));
-		$dCritform_x_tabelas->add(new TFilter('ativo','=','1'));
+		$dCritform_x_tabelas->add(new TFilter('formseq','=',$obForm->seq));
+		$dCritform_x_tabelas->add(new TFilter('statseq','=','1'));
 		$retform_x_tabelas = $dboform_x_tabelas->select('*',$dCritform_x_tabelas);
 
 
@@ -61,7 +61,7 @@ function carregaModulo($id){
             
 			$dboTabelas = new TKrs('tabelas');
 			$dCritTabelas = new TCriteria();
-			$dCritTabelas->add(new TFilter('id','=',$obform_x_tabelas->tabelaid));
+			$dCritTabelas->add(new TFilter('seq','=',$obform_x_tabelas->tabseq));
 			$retTabelas = $dboTabelas->select('*',$dCritTabelas);
 
 			$obTabela = $retTabelas->fetchObject();
@@ -83,19 +83,19 @@ function carregaModulo($id){
 			imprimi($inserttabelas);
 
         imprimi('');
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'tabelas'.$obTabela->id.'\', currval(\'tabelas_id_seq\'::regclass));');
-        //imprimi("set tabelas{$obTabela->id} = currval(\"tabelas_id_seq\");");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'tabelas'.$obTabela->seq.'\', currval(\'tabelas_id_seq\'::regclass));');
+        //imprimi("set tabelas{$obTabela->seq} = currval(\"tabelas_id_seq\");");
          
-         $form_x_tabelas[$obTabela->id] = $obTabela;
+         $form_x_tabelas[$obTabela->seq] = $obTabela;
         imprimi('');
 				
 
 		}
         
-        if(!$form_x_tabelas[$obForm->entidade]){
+        if(!$form_x_tabelas[$obForm->tabseq]){
             			$dboTabelas = new TKrs('tabelas');
 			$dCritTabelas = new TCriteria();
-			$dCritTabelas->add(new TFilter('id','=',$obForm->entidade));
+			$dCritTabelas->add(new TFilter('seq','=',$obForm->tabseq));
 			$retTabelas = $dboTabelas->select('*',$dCritTabelas);
 
 			$obTabela = $retTabelas->fetchObject();
@@ -118,11 +118,11 @@ function carregaModulo($id){
 			imprimi($inserttabelas);
 
             imprimi('');
-			//imprimi("declare tabelas{$obTabela->id} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'tabelas'.$obTabela->id.'\', currval(\'tabelas_id_seq\'::regclass));');
-		//imprimi("tabelas{$obTabela->id} = currval(\"tabelas_id_seq\");");
+			//imprimi("declare tabelas{$obTabela->seq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'tabelas'.$obTabela->seq.'\', currval(\'tabelas_id_seq\'::regclass));');
+		//imprimi("tabelas{$obTabela->seq} = currval(\"tabelas_id_seq\");");
          
-            $form_x_tabelas[$obTabela->id] = $obTabela;
+            $form_x_tabelas[$obTabela->seq] = $obTabela;
         
         }
 		
@@ -131,11 +131,11 @@ function carregaModulo($id){
         $valuesforms = null;
 
 		foreach($obForm as $ch=>$vl){
-			if($ch != 'id' && $ch != 'idlista'){
+			if($ch != 'id' && $ch != TConstantes::LISTA){
 				$insertforms .= $ch.", ";
-				if($ch == 'formpai' && $vl && $vl != '0' && $vl != ($obForm->id)){
-					$valuesforms .= "(select val from session_var where var = 'idForm{$vl}' limit 1), ";
-				}else if($ch == 'entidade'){
+				if($ch == 'frmpseq' && $vl && $vl != '0' && $vl != ($obForm->seq)){
+					$valuesforms .= "(select val from session_var where var = 'formseq{$vl}' limit 1), ";
+				}else if($ch == TConstantes::ENTIDADE){
 					$valuesforms .= "(select val from session_var where var = 'tabelas{$vl}' limit 1), ";
 				}else{
 					$valuesforms .= "'".$vl."', ";
@@ -151,96 +151,96 @@ function carregaModulo($id){
 		imprimi($insertforms);
 
         imprimi('');
-		//imprimi("declare idForm{$idForm} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'idForm'.$idForm.'\', currval(\'forms_id_seq\'::regclass));');
-		//imprimi("set idForm{$idForm} = currval(\"forms_id_seq\");");
+		//imprimi("declare formseq{$formseq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\TConstantes::FORM'.$formseq.'\', currval(\'formseq_seq\'::regclass));');
+		//imprimi("set formseq{$formseq} = currval(\"formseq_seq\");");
         imprimi('');
         
         foreach($form_x_tabelas as $x){               
-            imprimi("INSERT INTO form_x_tabelas (formid,tabelaid,ativo) VALUES ((select val from session_var where var = 'idForm{$idForm}' limit 1), (select val from session_var where var = 'tabelas{$x->id}' limit 1),'{$x->ativo}');");
+            imprimi("INSERT INTO form_x_tabelas (formseq,tabseq,statseq) VALUES ((select val from session_var where var = 'formseq{$formseq}' limit 1), (select val from session_var where var = 'tabelas{$x->seq}' limit 1),'{$x->statseq}');");
       
         }    
         
 		imprimi('-- Lista Form');
         //Lista Form	
-		$dboListas = new TKrs('lista_form');
+		$dboListas = new TKrs('lista');
 		$dCritLista = new TCriteria();
-		$dCritLista->add(new TFilter('id','=',"({$obForm->idlista})"));
+		$dCritLista->add(new TFilter('id','=',"({$obForm->listseq})"));
 
 		$retListas = $dboListas->select('*',$dCritLista);
 
 		$obListas = $retListas->fetchObject();
 
-		$insertlista_form = "INSERT INTO lista_form (";
-        $valueslista_form = null;
+		$insertlista = "INSERT INTO lista (";
+        $valueslista = null;
 
 		foreach($obListas as $ch=>$vl){
 			if($ch != 'id'){
-				$insertlista_form .= $ch.", ";
+				$insertlista .= $ch.", ";
                                
-				if($ch == 'forms_id'){
-					$valueslista_form .= "(select val from session_var where var = 'idForm{$obForm->id}' limit 1), ";
-				}else if($ch == 'entidade'){
-					$valueslista_form .= "(select val from session_var where var = 'tabelas{$vl}' limit 1), ";
+				if($ch == 'formseq'){
+					$valueslista .= "(select val from session_var where var = 'formseq{$obForm->seq}' limit 1), ";
+				}else if($ch == TConstantes::ENTIDADE){
+					$valueslista .= "(select val from session_var where var = 'tabelas{$vl}' limit 1), ";
 				}else if($ch == 'listapai'){
-					if($vl != $obListas->id){
-                        $valueslista_form .= "(select val from session_var where var = 'idListaForm{$vl}' limit 1), ";
+					if($vl != $obListas->seq){
+                        $valueslista .= "(select val from session_var where var = 'listseqForm{$vl}' limit 1), ";
                     }else{
-                        $valueslista_form .= "currval('forms_id_seq'::regclass), ";                        
+                        $valueslista .= "currval('formseq_seq'::regclass), ";                        
                      }   
 				}else{
-					$valueslista_form .= "'".$vl."', ";
+					$valueslista .= "'".$vl."', ";
 				}
 			}
 		}
 
-		$insertlista_form = preg_replace('@\,.$@i','',$insertlista_form);
-		$valueslista_form = preg_replace('@\,.$@i','',$valueslista_form);
+		$insertlista = preg_replace('@\,.$@i','',$insertlista);
+		$valueslista = preg_replace('@\,.$@i','',$valueslista);
 
-		$insertlista_form .= ") VALUES (".$valueslista_form.");";
+		$insertlista .= ") VALUES (".$valueslista.");";
 
-		imprimi($insertlista_form);
+		imprimi($insertlista);
 
         imprimi('');
-		//imprimi("declare idListaForm{$obListas->id} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'idListaForm'.$obListas->id.'\', currval(\'forms_id_seq\'::regclass));');
-		//imprimi("set idListaForm{$obListas->id} = currval(\"forms_id_seq\");");
+		//imprimi("declare listseqForm{$obListas->seq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'listseqForm'.$obListas->seq.'\', currval(\'formseq_seq\'::regclass));');
+		//imprimi("set listseqForm{$obListas->seq} = currval(\"formseq_seq\");");
         imprimi('');
 		
 		//Lista-colunas
 		
 		imprimi('-- Lista Colunas');
-		$dboListaCol = new TKrs('lista_colunas');
+		$dboListaCol = new TKrs('coluna');
 		$dCritListaCol = new TCriteria();
-		$dCritListaCol->add(new TFilter('lista_form_id','=',$obForm->idlista));
-		$dCritListaCol->add(new TFilter('ativo','=','1'));
+		$dCritListaCol->add(new TFilter('listseq','=',$obForm->listseq));
+		$dCritListaCol->add(new TFilter('statseq','=','1'));
 
 		$retListasCol = $dboListaCol->select('*',$dCritListaCol);
 
 		while($dboListasCol = $retListasCol->fetchObject()){
 
 
-		$insertlista_colunas  = "INSERT INTO lista_colunas (";
-        $valueslista_colunas = null;
+		$insertcoluna  = "INSERT INTO coluna (";
+        $valuescoluna = null;
         
 		foreach($dboListasCol as $ch=>$vl){
 				
 			if($ch != 'id'){
-				$insertlista_colunas .= $ch.", ";
-				if($ch == 'lista_form_id'){
-					$valueslista_colunas .= "(select val from session_var where var = 'idListaForm{$obListas->id}' limit 1), ";
+				$insertcoluna .= $ch.", ";
+				if($ch == 'listseq'){
+					$valuescoluna .= "(select val from session_var where var = 'listseqForm{$obListas->seq}' limit 1), ";
 				}else{
-					$valueslista_colunas .= "'".$vl."', ";
+					$valuescoluna .= "'".$vl."', ";
 				}
 			}
 		}
 
-		$insertlista_colunas = preg_replace('@\,.$@i','',$insertlista_colunas);
-		$valueslista_colunas = preg_replace('@\,.$@i','',$valueslista_colunas);
+		$insertcoluna = preg_replace('@\,.$@i','',$insertcoluna);
+		$valuescoluna = preg_replace('@\,.$@i','',$valuescoluna);
 
-		$insertlista_colunas .= ") VALUES (".$valueslista_colunas.");";
+		$insertcoluna .= ") VALUES (".$valuescoluna.");";
         
-		imprimi($insertlista_colunas);
+		imprimi($insertcoluna);
 		
 		}
         
@@ -249,8 +249,8 @@ function carregaModulo($id){
 
         $dboFormAbas = new TKrs('form_x_abas');
 		$dCritFormAbas = new TCriteria();
-		$dCritFormAbas->add(new TFilter('formid','=',$idForm));
-        $dCritFormAbas->add(new TFilter('ativo','=','1'));
+		$dCritFormAbas->add(new TFilter('formseq','=',$formseq));
+        $dCritFormAbas->add(new TFilter('statseq','=','1'));
 
 		$retFormAbas = $dboFormAbas->select('*',$dCritFormAbas);
           $obFormAbas_ = null;
@@ -263,7 +263,7 @@ function carregaModulo($id){
             
         $dboAbas = new TKrs('abas');
 		$dCritAbas = new TCriteria();
-		$dCritAbas->add(new TFilter('id','=',"({$obFormAbas->abaid})"));
+		$dCritAbas->add(new TFilter('seq','=',"({$obFormAbas->abaseq})"));
         
         $retAbas = $dboAbas->select('*',$dCritAbas);
 
@@ -289,18 +289,18 @@ function carregaModulo($id){
 		imprimi($insert);
 
         imprimi('');
-		//imprimi("declare idAba{$obAba->id} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'idAba'.$obAba->id.'\', currval(\'abas_id_seq\'::regclass));');
-		//imprimi("set idAba{$obAba->id} = currval(\"abas_id_seq\");");        
+		//imprimi("declare abaseq{$obAba->seq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'abaseq'.$obAba->seq.'\', currval(\'abas_id_seq\'::regclass));');
+		//imprimi("set abaseq{$obAba->seq} = currval(\"abas_id_seq\");");        
         imprimi('');
         		imprimi('-- Form x Abas');
-        imprimi("INSERT INTO form_x_abas (formid,abaid,ordem,ativo) VALUES ((select val from session_var where var = 'idForm{$idForm}' limit 1), (select val from session_var where var = 'idAba{$obAba->id}' limit 1),'{$obFormAbas->ordem}','{$obFormAbas->ativo}');");
+        imprimi("INSERT INTO form_x_abas (formseq,abaseq,ordem,statseq) VALUES ((select val from session_var where var = 'formseq{$formseq}' limit 1), (select val from session_var where var = 'abaseq{$obAba->seq}' limit 1),'{$obFormAbas->ordem}','{$obFormAbas->statseq}');");
         
         //bloco_x_abas
         
         $dboBlocoAbas = new TKrs('blocos_x_abas');
 		$dCritBlocoAbas = new TCriteria();
-		$dCritBlocoAbas->add(new TFilter('abaid','=',$obAba->id));
+		$dCritBlocoAbas->add(new TFilter('abaseq','=',$obAba->seq));
         $retBlocoAbas = $dboBlocoAbas->select('*',$dCritBlocoAbas);
       
       $obBlocoAba_ = null;
@@ -314,7 +314,7 @@ function carregaModulo($id){
           
             $dboBloco = new TKrs('blocos');
             $dCritBloco = new TCriteria();
-            $dCritBloco->add(new TFilter('id','=',$obBlocoAba->blocoid));
+            $dCritBloco->add(new TFilter('seq','=',$obBlocoAba->blocseq));
             
        $retBloco= $dboBloco->select('*',$dCritBloco);
 
@@ -328,21 +328,21 @@ function carregaModulo($id){
 				
 			if($ch != 'id'){
 				$insert .= $ch.", ";
-                if($ch == 'formpai'){
-					$values .= "(select val from session_var where var = 'idForm{$idForm}' limit 1), ";
-				}else if($ch == 'entidade' && $vl != '0'){
+                if($ch == 'frmpseq'){
+					$values .= "(select val from session_var where var = 'formseq{$formseq}' limit 1), ";
+				}else if($ch == TConstantes::ENTIDADE && $vl != '0'){
 					$values .= "(select val from session_var where var = 'tabelas{$vl}' limit 1), ";
-				}else if($ch == 'idform'){
-                    if($vl != 0 && $vl != $obBloco->id) {
+				}else if($ch == TConstantes::FORM){
+                    if($vl != 0 && $vl != $obBloco->seq) {
                         
                         imprimi('');
-                        imprimi('-- Este bloco possui um formulário independente ('.$obBloco->blocoid.")");
-                        $bPForm = $obBloco->blocoid;
+                        imprimi('-- Este bloco possui um formulário independente ('.$obBloco->blocseq.")");
+                        $bPForm = $obBloco->blocseq;
                         $$bPForm = new execClonage();
                         $$bPForm->carregaModulo($vl);
-                        imprimi('------------------------------------------------'.$obBloco->blocoid.'---------------------------------------------------');
+                        imprimi('------------------------------------------------'.$obBloco->blocseq.'---------------------------------------------------');
                         imprimi('');
-                        $values .=  "(select val from session_var where var = 'idForm{$vl}' limit 1), ";
+                        $values .=  "(select val from session_var where var = 'formseq{$vl}' limit 1), ";
                     }else{
                         $values .= "'".$vl."', ";
                     }    
@@ -360,20 +360,20 @@ function carregaModulo($id){
 		imprimi($insert);
 
         imprimi('');
-		//imprimi("declare idBloco{$obBloco->id} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'idBloco'.$obBloco->id.'\', currval(\'blocos_id_seq\'::regclass));');
-		//imprimi("set idBloco{$obBloco->id} = currval(\"blocos_id_seq\");");        
+		//imprimi("declare blocseq{$obBloco->seq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'blocseq'.$obBloco->seq.'\', currval(\'blocos_id_seq\'::regclass));');
+		//imprimi("set blocseq{$obBloco->seq} = currval(\"blocos_id_seq\");");        
         imprimi('');
         
         imprimi('-- Blocos x Abas');
-        imprimi("INSERT INTO blocos_x_abas (blocoid,abaid,ordem) VALUES ((select val from session_var where var = 'idBloco{$obBloco->id}' limit 1), (select val from session_var where var = 'idAba{$obAba->id}' limit 1),'{$obFormAbas->ordem}');");
+        imprimi("INSERT INTO blocos_x_abas (blocseq,abaseq,ordem) VALUES ((select val from session_var where var = 'blocseq{$obBloco->seq}' limit 1), (select val from session_var where var = 'abaseq{$obAba->seq}' limit 1),'{$obFormAbas->ordem}');");
         
         
         //campos_x_blocos
         
         $dboCampoBloco = new TKrs('campos_x_blocos');
 		$dCritCampoBloco = new TCriteria();
-		$dCritCampoBloco->add(new TFilter('blocoid','=',$obBloco->id));
+		$dCritCampoBloco->add(new TFilter('blocseq','=',$obBloco->seq));
         $dCritCampoBloco->add(new TFilter('mostrarcampo','=','S'));
         $retCampoBloco = $dboCampoBloco->select('*',$dCritCampoBloco);
       
@@ -386,7 +386,7 @@ function carregaModulo($id){
       foreach($obCampoBloco_ as $obCampoBloco){
             $dboCampo = new TKrs('campos');
             $dCritCampo = new TCriteria();
-            $dCritCampo->add(new TFilter('id','=',$obCampoBloco->campoid));
+            $dCritCampo->add(new TFilter('seq','=',$obCampoBloco->campseq));
             
        $retCampo= $dboCampo->select('*',$dCritCampo);
 
@@ -403,7 +403,7 @@ function carregaModulo($id){
 				$insert .= $ch.", ";
                 if($ch == 'ativapesquisa'){
 					$values .= "0, ";
-				}else if($ch == 'entidade'){
+				}else if($ch == TConstantes::ENTIDADE){
 					$values .= "(select val from session_var where var = 'tabelas{$vl}' limit 1), ";
 				}else{
                     if(preg_match('/\'/i',$vl)){
@@ -423,25 +423,25 @@ function carregaModulo($id){
 		imprimi($insert);
 
         imprimi('');
-		//imprimi("declare idCampo{$obCampo->id} int;");
-        imprimi('INSERT INTO session_var (var,val) VALUES (\'idCampo'.$obCampo->id.'\', currval(\'campos_id_seq\'::regclass));');
-		//imprimi("set idCampo{$obCampo->id} = currval(\"campos_id_seq\");");        
+		//imprimi("declare idCampo{$obCampo->seq} int;");
+        imprimi('INSERT INTO session_var (var,val) VALUES (\'idCampo'.$obCampo->seq.'\', currval(\'campos_id_seq\'::regclass));');
+		//imprimi("set idCampo{$obCampo->seq} = currval(\"campos_id_seq\");");        
         imprimi('');
         
 		imprimi('-- Campos x Blocos');
-        imprimi("INSERT INTO campos_x_blocos (campoid,blocoid,mostrarcampo,formato,ordem) VALUES ((select val from session_var where var = 'idCampo{$obCampo->id}' limit 1), (select val from session_var where var = 'idBloco{$obBloco->id}' limit 1),'{$obCampoBloco->mostrarcampo}','{$obCampoBloco->formato}','{$obCampoBloco->ordem}');");
+        imprimi("INSERT INTO campos_x_blocos (campseq,blocseq,mostrarcampo,formato,ordem) VALUES ((select val from session_var where var = 'idCampo{$obCampo->seq}' limit 1), (select val from session_var where var = 'blocseq{$obBloco->seq}' limit 1),'{$obCampoBloco->mostrarcampo}','{$obCampoBloco->formato}','{$obCampoBloco->ordem}');");
         
         
         $dboCamposPropriedades = new TKrs('campos_x_propriedades');
         $dCritCamposPropriedades = new TCriteria();
-        $dCritCamposPropriedades->add(new TFilter('campoid','=',$obCampo->id));
-        $dCritCamposPropriedades->add(new TFilter('ativo','=','1'));
+        $dCritCamposPropriedades->add(new TFilter('campseq','=',$obCampo->seq));
+        $dCritCamposPropriedades->add(new TFilter('statseq','=','1'));
         
         $retCamposPropriedades = $dboCamposPropriedades->select('*',$dCritCamposPropriedades);
         
         while($obCProp = $retCamposPropriedades->fetchObject()){
             imprimi('-- Campos x Propriedades');
-            imprimi("INSERT INTO campos_x_propriedades (campoid,metodo,valor,ativo) VALUES ((select val from session_var where var = 'idCampo{$obCampo->id}' limit 1), '{$obCProp->metodo}','".str_replace("'","''",$obCProp->valor)."','{$obCProp->ativo}');");
+            imprimi("INSERT INTO campos_x_propriedades (campseq,metodo,valor,statseq) VALUES ((select val from session_var where var = 'idCampo{$obCampo->seq}' limit 1), '{$obCProp->metodo}','".str_replace("'","''",$obCProp->valor)."','{$obCProp->statseq}');");
         
         }
         
@@ -464,7 +464,7 @@ function carregaModulo($id){
 }
 	//Inicio
 
-	$dbo = new TKrs('menu_modulos');
+	$dbo = new TKrs('menu');
 	$dCrit = new TCriteria();
 	$dCrit->add(new TFilter('id','=',$_GET['id']));
 	$ret = $dbo->select('*',$dCrit);

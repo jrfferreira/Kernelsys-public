@@ -7,15 +7,14 @@
 class TSetAbas extends TForm {
 
     public $ObAba;		// objeto aba
-    private $bots = array();		//armazena objetos buttons do formulario
+    private $bots = array();//armazena objetos buttons do formulario
 
-    public function __construct($idForm, $tituloJanela = 'Titulo da janela', $dimensao = NULL, $autoSave = 1) {
+    public function __construct($formseq, $tituloJanela = 'Titulo da janela', $dimensao = NULL) {
 
-        parent::__construct($idForm);
-        $this->ObAba = new TAbas($idForm, $tituloJanela, $dimensao);
-        if($autoSave){
-            $this->ObAba->setAutoSave($idForm);
-        }
+        parent::__construct($formseq);
+        $this->ObAba = new TAbas($formseq, $tituloJanela, $dimensao);
+        
+        $this->setName(TConstantes::NOMEFORM.$formseq);
     }
 
 

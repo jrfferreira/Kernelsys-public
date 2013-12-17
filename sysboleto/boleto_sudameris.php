@@ -105,7 +105,7 @@ $dadosboleto["carteira"]      = "57";		// Deve possuir conv�nio - Carteira 57 
 
 // SEUS DADOS
 $dadosboleto["identificacao"] = "BoletoPhp - código Aberto de Sistema de Boletos";
-$dadosboleto["cpf_cnpj"] = "";
+$dadosboleto["pessnmrf"] = "";
 $dadosboleto["endereco"] = "Rua Central, 123";
 $dadosboleto["cidade_uf"] = "Curitiba - PR";
 $dadosboleto["cedente"] = "Alcantara & Schmidt Ltda.";

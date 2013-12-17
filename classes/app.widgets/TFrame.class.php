@@ -2,7 +2,7 @@
 
 class TFrame {
 
-public function show($idCampo,$idForm,$codigo,$edit,$file = null){
+public function show($idCampo,$formseq,$seq,$edit,$file = null){
         $HTML = new TElement('html');
         //$HTML->xmlns="http://www.w3.org/1999/xhtml";
         //$HTML->__set('xml:lang',"en");
@@ -16,7 +16,7 @@ public function show($idCampo,$idForm,$codigo,$edit,$file = null){
         $form = new TElement('form');
         $form->action = "../app.util/TUpload.class.php";
         $form->method = 'POST';
-        $form->id = 'form'.$idCampo.$idForm.'cod'.$codigo;
+        $form->id = 'form'.$idCampo.$formseq.'cod'.$seq;
         $form->enctype = "multipart/form-data";
 
         if($file){
@@ -57,12 +57,12 @@ public function show($idCampo,$idForm,$codigo,$edit,$file = null){
         $campo_form = new TElement('input');
         $campo_form->type = 'hidden';
         $campo_form->name = 'upload_form';
-        $campo_form->value = $idForm;
+        $campo_form->value = $formseq;
 
-        $campo_codigo = new TElement('input');
-        $campo_codigo->type = 'hidden';
-        $campo_codigo->name = 'upload_codigo';
-        $campo_codigo->value = $codigo;
+        $campo_seq= new TElement('input');
+        $campo_seq->type = 'hidden';
+        $campo_seq->name = 'upload_seq';
+        $campo_seq->value = $seq;
 
         $campo_id = new TElement('input');
         $campo_id->type = 'hidden';
@@ -78,7 +78,7 @@ public function show($idCampo,$idForm,$codigo,$edit,$file = null){
         $button->value = "Enviar";
 
         $form->add($campo_form);
-        $form->add($campo_codigo);
+        $form->add($campo_seq);
         $form->add($campo_id);
         if($edit == '1'){
             $form->add($campo_file);

@@ -18,26 +18,26 @@ class TSetUnidade{
 		
 		//if($this->conn = TTransaction::get()){
 
-            $sql = new TDbo(TConstantes::DBUNIDADES);
+            $sql = new TDbo(TConstantes::DBUNIDADE);
             $criteria = new TCriteria();
-            $criteria->add(new TFilter("ativo","=","1"));
+            $criteria->add(new TFilter("statseq","=","1"));
             $qrUd = $sql->select("*", $criteria);
 		
-			//$sql = "select * from dbunidade where ativo='1'";
+			//$sql = "select * from dbunidade where statseq='1'";
 			//$qrUd = $this->conn->Query($sql);
 				$retUnid = $qrUd->fetchAll();
 			
 			foreach($retUnid as $unid){
-				$this->unidade[$unid['id']] = $unid['unidade'];
+				$this->unidade[$unid['seq']] = $unid['unidade'];
 			}	
 		//}
 	}
 	
 	public function setMenu(){
 	
-		foreach($this->unidade as $key=>$label){
+		foreach($this->unidade as $seq=>$label){
 			$obOp = new TElement('option');
-			$obOp->value = $key;
+			$obOp->value = $seq;
 			$obOp->add($label);
 			
 			$obOp->show();		

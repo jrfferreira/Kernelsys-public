@@ -11,11 +11,11 @@ abstract class TField {
     protected $value;
     protected $editable;
     protected $tag;
-    protected $disab;
     protected $classField;
     public    $outControl;
     public    $label;
     public    $actPesquisa; //propridade da pesquisa
+    public 	  $descPesq;
 
     /**
      * método construtor
@@ -39,10 +39,6 @@ abstract class TField {
     public function __set($prop, $valor) {
 
         $this->tag->$prop = $valor;
-
-        if($prop == 'readonly' or $prop == 'disabled') {
-            $this->disab = $prop;
-        }
     }
 
     /**
@@ -76,6 +72,15 @@ abstract class TField {
      */
     public function setName($name) {
         $this->name = $name;
+    }
+
+    /**
+     * método setDescPesq()
+     * Define a descrição do campo de pesquisa
+     * param  $name    = nome do widget
+     */
+    public function setDescPesq($descPesq) {
+    	$this->descPesq = $descPesq;
     }
 
     /**

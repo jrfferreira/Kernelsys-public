@@ -18,7 +18,7 @@ function __autoload($classe) {
 
 
 
- $obTDbo = new TDbo(TConstantes::DBPESSOAS_INSCRICOES);
+ $obTDbo = new TDbo(TConstantes::DBINSCRICAO);
  $criteria = new TCriteria();
     $criteria->add(new TFilter('unidade','=','10103366-866'));
     $criteria->setProperty('limit',1);

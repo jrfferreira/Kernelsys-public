@@ -24,14 +24,14 @@ class TSetPrivilegios {
      * Retorna um vetor com todos os modulos
     */
     private function getModulos() {
-            $tKrs = new TKrs('modulos_principais');
+            $tKrs = new TKrs('modulo');
             $crit = new TCriteria();
-            $crit->add(new TFilter('ativo','=','1'));
+            $crit->add(new TFilter('statseq','=','1'));
             $runMod = $tKrs->select('*',$crit);
             
             //monta vetor com modulos
             while($mod = $runMod->fetchObject()) {
-                $modulos[$mod->id] = $mod->labelmodulo;
+                $modulos[$mod->seq] = $mod->labelmodulo;
             }
 
             return $modulos;
@@ -42,14 +42,14 @@ class TSetPrivilegios {
     */
     public function getMenus($modulo) {         
             
-            $tKrs = new TKrs('menu_modulos');
+            $tKrs = new TKrs('menu');
             $crit = new TCriteria();
             $crit->add(new TFilter('moduloprincipal','=',$modulo));
             $crit->setProperty('order', 'ordem');
             $runMenu = $tKrs->select('*',$crit);
 
             while($menu = $runMenu->fetchObject()) {
-                $menus[$mod->id] = $menu->labelmodulo;
+                $menus[$mod->seq] = $menu->labelmodulo;
             }
         return $menus;
     }
@@ -63,18 +63,18 @@ class TSetPrivilegios {
             
             $tKrs = new TKrs('forms');
             $crit = new TCriteria();
-            $crit->add(new TFilter('id','=',$form));
+            $crit->add(new TFilter('seq','=',$form));
             $runForm = $tKrs->select('*',$crit);
             
             $form = $runForm->fetchObject();
 
-            $vetForm[$form->id]['label'] = $form->nomeForm;
+            $vetForm[$form->seq][TConstantes::FIELD_LABEL] = $form->nomeForm;
 
             //retorna o relacionamento form_x_abas
             
             $tKrs->setEntidade('form_x_abas');
             $crit = new TCriteria();
-            $crit->add(new TFilter('formid','=',$form->id));
+            $crit->add(new TFilter('formseq','=',$form->seq));
             $crit->setProperty('order', 'ordem');
             $runFormAbas = $tKrs->select('*',$crit);
             
@@ -82,53 +82,53 @@ class TSetPrivilegios {
             while($formAbas = $runFormAbas->fetchObject()) {               
                 $tKrs->setEntidade('abas');
                 $crit = new TCriteria();
-                $crit->add(new TFilter('id','=',$formAbas->abaid));
+                $crit->add(new TFilter('seq','=',$formAbas->abaseq));
                 $crit->setProperty('order', 'ordem');
                 $runAbas = $tKrs->select('*',$crit);
                 $aba = $runAbas->fetchObject();
 
-                $vetAbas[$aba->id]['label'] = $aba->nomeaba;
+                $vetAbas[$aba->seq][TConstantes::FIELD_LABEL] = $aba->nomeaba;
 
                 //retorna relacionamento de abas_x_blocos
                 $tKrs->setEntidade('blocos_x_abas');
                 $crit = new TCriteria();
-                $crit->add(new TFilter('abaid','=',$aba->id));
+                $crit->add(new TFilter('abaseq','=',$aba->seq));
                 $crit->setProperty('order', 'ordem');
                 $runBlocosAbas = $tKrs->select('*',$crit);
 
                 while($blocosAbas = $runBlocosAbas->fetchObject()) {                    
                     $tKrs->setEntidade('blocos');
                     $crit = new TCriteria();
-                    $crit->add(new TFilter('id','=',$blocosAbas->blocoid));
+                    $crit->add(new TFilter('seq','=',$blocosAbas->blocseq));
                     $runBloco = $tKrs->select('*',$crit);
                                         
                     $bloco = $runBloco->fetchObject();
 
-                    $vetBlocos[$bloco->id]['label'] = $bloco->nomebloco;
+                    $vetBlocos[$bloco->seq][TConstantes::FIELD_LABEL] = $bloco->nomebloco;
 
                     //Retorna relacionamento do campos_x_blocos
                     
                     $tKrs->setEntidade('campos_x_blocos');
                     $crit = new TCriteria();
-                    $crit->add(new TFilter('blocoid','=',$bloco->id));
+                    $crit->add(new TFilter('blocseq','=',$bloco->seq));
                     $runCamposBlocos = $tKrs->select('*',$crit);
                     
 
                     while($camposBlocos = $runCamposBlocos->fetchObjct()) {                    
                     	$tKrs->setEntidade('campos');
                     	$crit = new TCriteria();
-                    	$crit->add(new TFilter('id','=',$camposBlocos->campoids));
+                    	$crit->add(new TFilter('seq','=',$camposBlocos->campseqs));
                     	$runCampo = $tKrs->select('*',$crit);
                     
                         $campo = $runCampo->fetchObject();
 
-                        $vetCampos[$campo->id] = $campo->campo;
+                        $vetCampos[$campo->seq] = $campo->campo;
                     }
-                    $vetBlocos[$bloco->id]['campos'] =  $vetCampos;
+                    $vetBlocos[$bloco->seq]['campos'] =  $vetCampos;
                 }
-                $vetAbas[$aba->id]['blocos'] = $vetBlocos;
+                $vetAbas[$aba->seq]['blocos'] = $vetBlocos;
             }
-            $vetForm[$form->id]['abas'] = $vetAbas;
+            $vetForm[$form->seq]['abas'] = $vetAbas;
         return $vetForm;
     }
 
@@ -144,7 +144,7 @@ class TSetPrivilegios {
 
             $obCheck = new TCheckButton('moduloOp'.$modId);
             $obCheck->setValue($modId);
-            if($retCkPriv->ativo == "1") {
+            if($retCkPriv->statseq == "1") {
                 $obCheck->checked = '1';
             }
             $obCheck->onclick = "showPrivilegios(this, '".$this->param."', '0')";
@@ -189,7 +189,7 @@ class TSetPrivilegios {
 
             $obCheck = new TCheckButton('menuOp'.$menuId);
             $obCheck->setValue($menuId);
-            if($retCkPriv->ativo == "1") {
+            if($retCkPriv->statseq == "1") {
                 $obCheck->checked = '1';
             }
             $obCheck->onclick = "setPvlShow(this, '".$this->param."')";

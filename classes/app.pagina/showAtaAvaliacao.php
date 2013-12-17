@@ -5,7 +5,7 @@
 //==========================================================
 session_start();
 
-$codigo = $_GET['rcod'];
+$seq= $_GET['rcod'];
 
 function __autoload($classe){
 
@@ -15,7 +15,7 @@ function __autoload($classe){
 
 $TTurmaDisciplina = new TTurmaDisciplinas();
 
-$obDisciplina = $TTurmaDisciplina->getTurmaDisciplina($codigo);
+$obDisciplina = $TTurmaDisciplina->getTurmaDisciplina($seq);
 
 $turma = $obDisciplina->nometurma;
 $curso = $obDisciplina->nomecurso;
@@ -73,7 +73,7 @@ $td->__set("rowspan","3");
 $td->__set("scope","col");
 
 $img = new TElement("img");
-$img->__set("src","../".TOccupant::getPath()."app.config/logo.jpg");
+$img->__set("src","../".TOccupant::getPath()."app.config/logo.png");
 $img->__set("width","100px");
 $img->__set("style","max-width: 100px; max-height: auto");
 
@@ -166,7 +166,7 @@ $tr->add($tdData);
 
 $tabelaNomes->add($tr);
 
-$retAlunosDisc = $TTurmaDisciplina->getAlunos($codigo);
+$retAlunosDisc = $TTurmaDisciplina->getAlunos($seq);
 
 foreach ($retAlunosDisc as $obAlunos){
 	$tr = new TElement("tr");
@@ -174,7 +174,7 @@ foreach ($retAlunosDisc as $obAlunos){
 
 	$td = new TElement("td");
 	$td->style = "font-size: 11px;";
-	$td->add($obAlunos->codigo);
+	$td->add($obAlunos->seq);
 
 	$th = new TElement("th");
 	$th->scope = "row";

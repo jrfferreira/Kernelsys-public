@@ -31,26 +31,33 @@ final class TTransaction{
         	$db = explode('/',$database);
         	$db = array_pop($db);
         	$pathchave = 'conn@'.$db;
-        	/*$conex_sessao = $obsession->getValue($pathchave);*/
         	
+        	$conex_sessao = $_REQUEST[$pathchave];
+        	
+  //	self::$conn = $obsession->getValue(TConstantes::TRANSACTION);
         	
            // abre uma conexão e armazena
            // na propriedade estática $conn
-        	//if (!is_a(self::$conn,'PDO')){
-           if($conex_sessao){
-           		self::$conn = $conex_sessao;
-           }else{
-           		$conexao = TConnection::open($database);
-           		self::$conn = $conexao;
-           }
-           
+	           if(is_a($conex_sessao,'PDO') && $conex_sessao->inTransaction()){
+	           		self::$conn = $conex_sessao;
+	           }else{
+	           		$conexao = TConnection::open($database);
+	           		self::$conn = $conexao;
+	           		$_REQUEST[$pathchave] = $conexao;
+	           }
+	           
                 // inicia a transação
-                //if(self::$conn && !self::$conn->InTransaction()){
+                if(self::$conn && !self::$conn->InTransaction()){
                 	self::$conn->beginTransaction();
-                //}
+                }
+               
+   //$obsession->setValue(TConstantes::TRANSACTION, self::$conn);
+                
                 // desliga o log de SQL
                 self::$logger = NULL;
            
+           //if (empty(self::$conn) or !self::$conn){
+           //}
         }
         catch (Exception $e){
             self::close();
@@ -99,12 +106,26 @@ final class TTransaction{
      *  Aplica todas operações realizadas e fecha a transação
      */
     public static function close(){
+    	
         if (is_a(self::$conn,'PDO')){
             // aplica as operações realizadas
-            // durante a transação
+            // durante a transação     	
             self::$conn->commit();
-            self::$conn = NULL;
+            self::$conn = NULL;  
         }
+    }
+    
+    /*
+     * Metodo TestTransaction
+     * Testa se ah uma transação ativa com o banco de dados
+     */
+    public static function testTransaction(){
+    	if(self::$conn){    		
+    		$test = self::$conn->InTransaction();
+    	}else{
+    		$test = false;
+    	}
+    	return $test;
     }
     
     /*
@@ -122,10 +143,10 @@ final class TTransaction{
      */
     public static function log($message){
 	
-        //echo "<script>(function(message){console.log(new Date(),message);})(\"{$message}\")</script>";
         // verifica existe um logger
         if (is_object(self::$logger)){
-		
+			
+        	//echo "<script>console.log('".$message."');</script>";
             self::$logger->write($message);
         }
     }

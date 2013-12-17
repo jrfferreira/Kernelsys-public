@@ -13,7 +13,7 @@ class TDbo {
     private $realUser = true;
 
     public function __construct($entity = NULL, $val = NULL) {
-    	
+    	    	
     	try {
 
 	        if($entity and $entity != "") {
@@ -21,7 +21,7 @@ class TDbo {
 	        }else {
 	            $this->autoClose = false;
 	        }
-	
+			
 	        //inicia objeto sesseion
 	        $this->obsession = new TSession();
 	
@@ -33,6 +33,7 @@ class TDbo {
 	            $this->realUser = false;
 	        }
 	        //=========================================================
+	       	        
 	        
 	        $pathDB = false;
 	        //valida o nivel em que o dbo esta sendo chamado e direciona o path
@@ -45,10 +46,10 @@ class TDbo {
 	        elseif(file_exists('../../'.$this->obsession->getValue('pathDB').'.ini')) {
 	            $pathDB = '../../'.$this->obsession->getValue('pathDB');
 	        }
-	
+		        
 	        	//abre conexão com o banco.
 	            TTransaction::open($pathDB);
-	            $this->conn = TTransaction::get();
+	        	$this->conn = TTransaction::get();
 
         }catch(Exception $e) {
             $this->close();
@@ -136,7 +137,7 @@ class TDbo {
      * author Wagner Borba
      * param colunas = Colunas da entidade a serem retornadas (*) retorna todas
      */
-    public function select($cols, TCriteria $criteria = NULL, $ignoreDefaultCols = false) {
+    public function select($cols, $criteria = NULL, $whitoutRules = false) {
         try { 	
         	
             if($cols) {
@@ -163,24 +164,28 @@ class TDbo {
 
                 // verifica se o creterio de seleção foi definido
                 if($criteria) {
-                    //adiciona criterio de seleção por unidade automaticamente
-                    if($this->obUser && !$ignoreDefaultCols) {
-                        if($this->obUser->unidade->codigo != 'x' && $this->realUser){
-                            $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->codigo,'unidade'),'OR');
-                            $criteria->add(new TFilter('unidade','=','x','unidade'),'OR');
+                	if(!($criteria instanceof TCriteria)){
+                		$seq = $criteria;
+                		$criteria = new TCriteria();
+                		$criteria->add(new TFilter('seq', '=', $seq, 'numeric'));
+                	}
+                    //adiciona criterio de seleção por unidseq automaticamente
+                    if($this->obUser) {
+                        if($this->obUser->unidseq->seq!= 'x' && $this->realUser && !$whitoutRules){
+                            $criteria->add(new TFilter('unidseq','=',$this->obUser->unidseq->seq,'numeric','unidseq'));
+                           // $criteria->add(new TFilter('unidseq','=','x','unidseq'),'OR');
                         }
                     }
 
                     // define o critério de seleção de dados
                     $sql->setCriteria($criteria);
-                    //$criteria->add(new TFilter('id', '=', $id));
+                    //$criteria->add(new TFilter('seq', '=', $seq));
                 }
                 // inicia transação
                 if ($this->conn) {
                     // grava log de select (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
-                    
-                    
+        			//echo "<script>console.log(\"".$sql->getInstruction()."\");</script>";
                     
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());
@@ -193,7 +198,7 @@ class TDbo {
                     }
                     //fecha tansação automaticamente se necessario
                     if($this->autoClose) {
-                        TTransaction::close();
+                        //TTransaction::close();
                     }
     
                     return $result;
@@ -227,19 +232,22 @@ class TDbo {
 
         try {
                 // incrementa o ID
-                //$this->id = $this->getLast() +1;
+                //$this->seq = $this->getLast() +1;
 
                 //acrecenta dados padrões no insert
-                if(!$dados['unidade'] && $this->realUser) {
-                    $dados['unidade'] = $this->obUser->unidade->codigo;
+                if(!$dados['unidseq'] && $this->realUser) {
+                    $dados['unidseq'] = $this->obUser->unidseq->seq;
                 }
 
-                if(!$dados['codigoautor'] && $this->realUser) {
-                    $dados['codigoautor'] = $this->obUser->codigo;
+                if(!$dados['usuaseq'] && $this->realUser) {
+                    $dados['usuaseq'] = $this->obUser->seq;
                 }
                 //adiciona data do cadastro no registro
                 if(!$dados['datacad']){
                     $dados['datacad'] = date("Y-m-d");
+                }
+                if(!$dados['statseq']){
+                	$dados['statseq'] = 1;
                 }
 
                 // cria uma instrução de insert
@@ -247,9 +255,9 @@ class TDbo {
                 $sql->setEntity($this->entity);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
+                foreach ($dados as $seq => $value) {
                     // passa os dados do objeto para o SQL
-                    $sql->setRowData($key, $value);
+                    $sql->setRowData($seq, $value);
                 }
 
                 // inicia transação
@@ -257,29 +265,21 @@ class TDbo {
 
                     // grava log de insert (data - hora | autor | ação)
                     TTransaction::log($sql->getInstruction());
+
+ //echo $sql->getInstruction().'<br><br>';      
+               
                     
                     //executa sql
-                    $result = $this->conn->Query($sql->getInstruction());
+                    $result = $this->conn->Query($sql->getInstruction(). " RETURNING ".TConstantes::SEQUENCIAL);
+                    
                     if($result) {
-                        if(!$dados['codigo']) {
-                            
-                            //retorna id da operação
-                            $idRegAtual = $this->conn->lastInsertId($this->entity."_id_seq");
-
-                                $criteriaCodigo = new TCriteria();
-                                $criteriaCodigo->add(new TFilter('id', '=', $idRegAtual));
-                                $retCodigo = $this->select('codigo', $criteriaCodigo);
-                                $obCodigo =  $retCodigo->fetchObject();
-
-                            $codRegistro = $obCodigo->codigo;
-
-                        }
-                        else {
-                            $codRegistro = $dados['codigo'];
-                        }
+                    	
+                    	$idRegAtual = $result->fetchObject()->seq;
+                    	
+                    	//$idRegAtual = $this->conn->lastInsertId($this->entity."_".TConstantes::SEQUENCIAL."_seq");
 
                         $retorno['id']     = $idRegAtual;
-                        $retorno['codigo'] = $codRegistro;
+                        $retorno[TConstantes::SEQUENCIAL] = $idRegAtual;
 
                         //fecha tansação
                         TTransaction::close();
@@ -311,15 +311,20 @@ class TDbo {
      * author Wagner Borba
      * param dados = vetor com todos os dados a serem atualizados
      */
-    public function update(array $dados, TCriteria $criteria) {
+    public function update(array $dados, $criteria) {
 
         try {
             // verifica se o creterio de seleção foi definido
             if($criteria) {
+            	if(!($criteria instanceof TCriteria)){
+            		$seq = $criteria;
+            		$criteria = new TCriteria();
+            		$criteria->add(new TFilter('seq', '=', $seq, 'numeric'));
+            	}
 
-                //adiciona criterio de seleção por unidade automaticamente
+                //adiciona criterio de seleção por unidseq automaticamente
                 if($this->obUser) {
-                    $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->codigo));
+                    $criteria->add(new TFilter('unidseq','=',$this->obUser->unidseq->seq));
                 }
 
                 // instancia instrução de update
@@ -328,14 +333,14 @@ class TDbo {
 
                 // define o critério de seleção de dados
                 $sql->setCriteria($criteria);
-                //$criteria->add(new TFilter('id', '=', $id));
+                //$criteria->add(new TFilter('seq', '=', $seq));
                 //$sql->setCriteria($criteria);
 
                 // percorre os dados do objeto
-                foreach ($dados as $key => $value) {
-                    if ($key !== 'id'  and $value !== "") { // o ID não precisa ir no UPDATE
+                foreach ($dados as $seq => $value) {
+                    if ($seq !== 'seq'  and $value !== "") { // o seq não precisa ir no UPDATE
                         // passa os dados do objeto para o SQL
-                        $sql->setRowData($key, $value);
+                        $sql->setRowData($seq, $value);
                     }
                 }
 
@@ -347,6 +352,7 @@ class TDbo {
                     
                     //executa sql
                     $result = $this->conn->Query($sql->getInstruction());
+                    
 
                     // se retornou algum dado
                     if (!$result) {
@@ -355,7 +361,7 @@ class TDbo {
                     }
 
                     //fecha tansação automaticamente se necessario
-                    TTransaction::close();
+                    //TTransaction::close();
 
                     return $result;
 
@@ -380,14 +386,14 @@ class TDbo {
      * Monta e executa uma sql delete e retona o resultado da execução
      * Data: 28/04/2009
      * author Wagner Borba
-     * param Parametro = Codigo do registro que sera deletado da entidade(table)
+     * param Parametro = seqdo registro que sera deletado da entidade(table)
      *  param # coluna = Coluna na qual o criterio sera aplicado para a exclusão
-     *                    caso não haja o padrão é [codigo]
+     *                    caso não haja o padrão é [seq]
      */
     public function delete($param, $col = NULL) {
 
         // o ID � o parâmetro ou a propriedade ID
-        //$id = $id ? $id : $this->id;
+        //$seq = $seq ? $seq : $this->seq;
         try {
             if($param != NULL and $param != "") {
 
@@ -397,19 +403,15 @@ class TDbo {
 
                 // define coluna padr�o para o objeto criteria
                 if(!$col) {
-                    $col = 'codigo';
+                    $col = TConstantes::SEQUENCIAL;
                 }
 
-                if(is_string($param)){
-                    // cria critério de seleção de dados
-                    $criteria = new TCriteria;
-                    $criteria->add(new TFilter($col, '=', $param));
+                // cria critério de seleção de dados
+                $criteria = new TCriteria;
+                $criteria->add(new TFilter($col, '=', $param,  'numeric'));
 
-                    // define o critério de seleção baseado no ID
-                    $sql->setCriteria($criteria);                    
-                }else{                    
-                    $sql->setCriteria($param); 
-                }
+                // define o critério de seleção baseado no ID
+                $sql->setCriteria($criteria);
 
                 // inicia transação
                 if ($this->conn) {
@@ -422,12 +424,13 @@ class TDbo {
 
                     // se retornou algum dado
                     if (!$result) {
+
                         // Lança exeção de erro na execução da sql
                         throw new ErrorException($this->setErro(), 2);
                     }
 
                     //fecha tansação
-                    TTransaction::close();
+                    //TTransaction::close();
                     
                     return $result;
 
@@ -460,25 +463,32 @@ class TDbo {
 
         // instancia instrução de SELECT
         $sql = new TSqlSelect;
-        $sql->addColumn('count(*)');
-        $sql->setEntity($this->entidade);
+        $sql->addColumn('count(seq)');
+        $sql->setEntity($this->entity);
+                
         // atribui o critério passado como parâmetro
-        if($criteria) {
-                //adiciona criterio de seleção por unidade automaticamente
-                if($this->obUser) {
-                    $criteria->add(new TFilter('unidade','=',$this->obUser->unidade->codigo));
-                }
-            $sql->setCriteria($criteria);
+        if($criteria == NULL) {
+        	$criteria = new TCriteria();            
         }
-
+        
+        	//adiciona criterio de seleção por unidseq automaticamente
+        	if($this->obUser) {
+        		$criteria->add(new TFilter('unidseq','=',$this->obUser->unidseq->seq));
+        	}
+        	
+        	$criteria->setProperty('group', null);
+        	$criteria->setProperty('order', null);
+                   	
+        	$sql->setCriteria($criteria);
+        	
         // inicia transação
-        if ($conn = TTransaction::get()) {
-
-            // registra mensagem de log
-            TTransaction::log($sql->getInstruction());
+        $conn = TTransaction::get();
+        if ($conn) {
+        	
             // executa instrução de SELECT
             $result= $conn->Query($sql->getInstruction());
- 
+            
+
             if ($result) {
                 $row = $result->fetch();
             }
@@ -496,10 +506,7 @@ class TDbo {
     */
     public function sqlExec($sql){
         if($sql){
-
             $result = $this->conn->Query($sql);
-
-            TTransaction::close();
             return $result;
         }
     }

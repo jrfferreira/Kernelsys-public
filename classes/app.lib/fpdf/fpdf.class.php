@@ -62,7 +62,7 @@ var $LayoutMode;         //layout display mode
 var $title;              //title
 var $subject;            //subject
 var $author;             //author
-var $keywords;           //keywords
+var $seqwords;           //keywords
 var $creator;            //creator
 var $AliasNbPages;       //alias for total number of pages
 var $PDFVersion;         //PDF version number
@@ -243,12 +243,12 @@ function SetAuthor($author, $isUTF8=false)
 	$this->author=$author;
 }
 
-function SetKeywords($keywords, $isUTF8=false)
+function SetKeywords($seqwords, $isUTF8=false)
 {
 	//Keywords of document
 	if($isUTF8)
-		$keywords=$this->_UTF8toUTF16($keywords);
-	$this->keywords=$keywords;
+		$seqwords=$this->_UTF8toUTF16($seqwords);
+	$this->keywords=$seqwords;
 }
 
 function SetCreator($creator, $isUTF8=false)

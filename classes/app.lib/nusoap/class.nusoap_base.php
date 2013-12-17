@@ -380,9 +380,9 @@ class nusoap_base {
 	* @access	private
 	*/
 	function isArraySimpleOrStruct($val) {
-        $keyList = array_keys($val);
-		foreach ($keyList as $keyListValue) {
-			if (!is_int($keyListValue)) {
+        $seqList = array_keys($val);
+		foreach ($seqList as $seqListValue) {
+			if (!is_int($seqListValue)) {
 				return 'arrayStruct';
 			}
 		}

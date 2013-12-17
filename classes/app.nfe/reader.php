@@ -16,18 +16,17 @@ include_once('../app.lib/nusoap/nusoap.php');
 
                 $obSession = new TSession();
                 $obUnidade = new stdClass();
-                $obUnidade->codigo = 'x';
+                $obUnidade->seq= 'x';
 
                 $obUser =  new stdClass();
-                $obUser->codigouser  = "010101-11";
-                $obUser->codigo  = "010101-11";
-                $obUser->codigopessoa  = "010101-11";
+                $obUser->seq = "010101-11";
+                $obUser->seqpessoa  = "010101-11";
                 $obUser->nomepessoa = "usuario externo";
                 $obUser->cpf = "000.000.000-11";
                 $obUser->unidade = $obUnidade;
                 $obUser->datalog = date("d/m/Y");
                 $obUser->horalog = date("H:i:s");
-                $obUser->codigoTema = "";
+                $obUser->temaseq = "";
 
                 $obSession->setValue($idSessao, $obUser);
                 $obSession->setValue('pathDB', '../'.TOccupant::getPath().'app.config/my_dbpetrus');

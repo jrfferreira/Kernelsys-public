@@ -17,12 +17,18 @@ class TCriteria extends TExpression{
      * param  $operator   = operador lógico de comparação
      */
     public function add(TExpression $expression, $operator = self::AND_OPERATOR){
+    	
         //// agrega o resultado da expressão à lista de expressões
-        if(!is_array($this->expressions[$expression->tipoFiltro])) $this->expressions[$expression->tipoFiltro] = array();
+        if(!is_array($this->expressions[$expression->tipoFiltro])){
+        	$this->expressions[$expression->tipoFiltro] = array();
+        } 
+                
         if(in_array($expression, $this->expressions[$expression->tipoFiltro]) === false){
             $expression->opLogico = $operator;
             $this->expressions[$expression->tipoFiltro][] = $expression;
         }
+        //print_r($this->expressions);
+        
     }
 	
 	/*método clear
@@ -81,8 +87,12 @@ class TCriteria extends TExpression{
      * param  $property = propriedade
      * param  $value    = valor
      */
-    public function setProperty($property, $value){
-        $this->properties[$property] = $value;
+    public function setProperty($property, $value = null){
+    	if($value){
+        	$this->properties[$property] = $value;
+    	}else{
+    		unset($this->properties[$property]);
+    	}
     }
     
     /*
@@ -90,7 +100,11 @@ class TCriteria extends TExpression{
      *  retorna o valor de uma propriedade
      * param  $property = propriedade
      */
-    public function getProperty($property){
-        return $this->properties[$property];
+    public function getProperty($property = null){
+    	if($property){
+        	return $this->properties[$property];
+    	}else{
+    		return $this->properties;
+    	}
     }
 }

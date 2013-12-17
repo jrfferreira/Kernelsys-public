@@ -13,14 +13,15 @@ class TCheckLogin {
         try {
 
             $setId = new TSetControl();
-            $this->id = $setId->getSessionPass('portaCopo');
+            $this->seq = $setId->getSessionPass('portaCopo');
                         
             $this->obsession = new TSession();            
-            $dadosUser = $this->obsession->getValue($this->id);
+            $dadosUser = $this->obsession->getValue($this->seq);
             
             if($dadosUser){
+            	$dadosUser->unidade = $dadosUser->unidseq;
                 $this->user = $dadosUser;
-                if(!$this->user->codigouser or !$this->user->codigopessoa) {
+                if(!$this->user->seq or !$this->user->pessseq) {
                     // se não existir, lança um erro
                     throw new ErrorException("Ouve uma falha ao tentar carregar o perfil do usuario.");
                 }

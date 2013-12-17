@@ -196,7 +196,7 @@ class nusoap_parser extends nusoap_base {
 			$this->debug("found root struct $this->root_struct_name, pos $this->root_struct");
 		}
 		// set my status
-		$this->message[$pos]['status'] = $this->status;
+		$this->message[$pos][TConstantes::FIELD_STATUS] = $this->status;
 		// set name
 		$this->message[$pos]['name'] = htmlspecialchars($name);
 		// set attrs
@@ -204,23 +204,23 @@ class nusoap_parser extends nusoap_base {
 
 		// loop through atts, logging ns and type declarations
         $attstr = '';
-		foreach($attrs as $key => $value){
-        	$key_prefix = $this->getPrefix($key);
-			$key_localpart = $this->getLocalPart($key);
+		foreach($attrs as $seq => $value){
+        	$seq_prefix = $this->getPrefix($seq);
+			$seq_localpart = $this->getLocalPart($seq);
 			// if ns declarations, add to class level array of valid namespaces
-            if($key_prefix == 'xmlns'){
+            if($seq_prefix == 'xmlns'){
 				if(preg_match('/^http:\/\/www.w3.org\/[0-9]{4}\/XMLSchema$/',$value)){
 					$this->XMLSchemaVersion = $value;
 					$this->namespaces['xsd'] = $this->XMLSchemaVersion;
 					$this->namespaces['xsi'] = $this->XMLSchemaVersion.'-instance';
 				}
-                $this->namespaces[$key_localpart] = $value;
+                $this->namespaces[$seq_localpart] = $value;
 				// set method namespace
 				if($name == $this->root_struct_name){
 					$this->methodNamespace = $value;
 				}
 			// if it's a type declaration, set type
-        } elseif($key_localpart == 'type'){
+        } elseif($seq_localpart == 'type'){
         		if (isset($this->message[$pos]['type']) && $this->message[$pos]['type'] == 'array') {
         			// do nothing: already processed arrayType
         		} else {
@@ -235,7 +235,7 @@ class nusoap_parser extends nusoap_base {
 	                }
 					// should do something here with the namespace of specified type?
 				}
-			} elseif($key_localpart == 'arrayType'){
+			} elseif($seq_localpart == 'arrayType'){
 				$this->message[$pos]['type'] = 'array';
 				/* do arrayType ereg here
 				[1]    arrayTypeValue    ::=    atype asize
@@ -259,29 +259,29 @@ class nusoap_parser extends nusoap_base {
 					$this->message[$pos]['arrayCols'] = $regs[4];
 				}
 			// specifies nil value (or not)
-			} elseif ($key_localpart == 'nil'){
+			} elseif ($seq_localpart == 'nil'){
 				$this->message[$pos]['nil'] = ($value == 'true' || $value == '1');
 			// some other attribute
-			} elseif ($key != 'href' && $key != 'xmlns' && $key_localpart != 'encodingStyle' && $key_localpart != 'root') {
-				$this->message[$pos]['xattrs']['!' . $key] = $value;
+			} elseif ($seq != 'href' && $seq != 'xmlns' && $seq_localpart != 'encodingStyle' && $seq_localpart != 'root') {
+				$this->message[$pos]['xattrs']['!' . $seq] = $value;
 			}
 
-			if ($key == 'xmlns') {
+			if ($seq == 'xmlns') {
 				$this->default_namespace = $value;
 			}
 			// log id
-			if($key == 'id'){
+			if($seq == 'id'){
 				$this->ids[$value] = $pos;
 			}
 			// root
-			if($key_localpart == 'root' && $value == 1){
+			if($seq_localpart == 'root' && $value == 1){
 				$this->status = 'method';
 				$this->root_struct_name = $name;
 				$this->root_struct = $pos;
 				$this->debug("found root struct $this->root_struct_name, pos $pos");
 			}
             // for doclit
-            $attstr .= " $key=\"$value\"";
+            $attstr .= " $seq=\"$value\"";
 		}
         // get namespace - must be done after namespace atts are processed
 		if(isset($prefix)){

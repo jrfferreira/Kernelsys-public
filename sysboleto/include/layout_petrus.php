@@ -1,7 +1,7 @@
 
 <?php
 
-$cpf_cpnj_Layout = isset($dadosboleto["cpf_cnpj"]) ? "<br>" . $dadosboleto["cpf_cnpj"] : '';
+$cpf_cpnj_Layout = isset($dadosboleto["pessnmrf"]) ? "<br>" . $dadosboleto["pessnmrf"] : '';
 
 $htmlBoleto = '
 
@@ -28,7 +28,7 @@ $htmlBoleto = '
 
 $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <tr>
-<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC=../'.TOccupant::getPath().'app.config/logo.jpg style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
+<td rowspan=3 style="text-align: center; vertical-align: middle;"><IMG SRC="../'.TOccupant::getPath().'app.config/logo.png" style="height: 60px; max-width: 120px; margin: 10px; vertical-align: middle;"></td>
 <td colspan=2 align="center" height=40><span class=ld>
 <span class="campotitulo">
 ' . $dadosboleto["linha_digitavel"] . '
@@ -37,14 +37,14 @@ $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <tr>
 <td align="right" ><span class=cpl>
 <span class="campotitulo">
-Cedente: ' . $dadosboleto["cedente"] . ' - CNPJ: ' . $dadosboleto["cpf_cnpj"] . '
+Cedente: ' . $dadosboleto["cedente"] . ' - CNPJ: ' . $dadosboleto["pessnmrf"] . '
 </span></span></td>
 <td></td>
 </tr>
 <tr>
 <td align="right" ><span class=cpl>
 <span class="campotitulo">
-Sacado: ' . $dadosboleto["sacado"] . ' - CPF: ' . $dadosboleto["cpf_cnpj_sacado"] . '
+Sacado: ' . $dadosboleto["sacado"] . ' - CPF: ' . $dadosboleto["pessnmrf_sacado"] . '
 </span></span></td>
 <td></td>
 </tr>
@@ -66,11 +66,11 @@ $htmlBoleto .= '<table cellspacing=0 cellpadding=0 width=666 border=0>
 <table>';
 
 if ($dadosbl['detalhamento']) {
-    $htmlBoleto .= '<br/><table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top><DIV ALIGN="CENTER" class=caixa>Historico de Faturas</DIV></TD></TR><TR><TD valign=top class=cp align=center>';
+    $htmlBoleto .= '<br/><table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top><DIV ALIGN="CENTER" class=caixa>Histórico de Faturas</DIV></TD></TR><TR><TD valign=top class=cp align=center>';
     $htmlBoleto .= '<table width=650 cellspacing=0 cellpadding=0 border=0><tr height=20><td class=cp>Doc.</td><td class=cp>Valor</td><td class=cp>Vencimento</td><td class=cp>Situação</td><td class=cp align=right>Valor Pago</td><tr>';
 
     foreach($dadosbl['detalhamento'] as $ch => $vl){
-        $htmlBoleto .= '<tr><td class=cp>'.$vl['codigo'].'</td><td class=cn>'.$vl['valornominal'].'</td><td class=cn>'.$vl['vencimento'].'</td><td class=cn>'.$vl['situacao'].'</td><td class=cn align=right>'.$vl['valorpago'].'</td><tr>';
+        $htmlBoleto .= '<tr><td class=cp>'.$vl['seq'].'</td><td class=cn>'.$vl['valornominal'].'</td><td class=cn>'.$vl['vencimento'].'</td><td class=cn>'.$vl['situacao'].'</td><td class=cn align=right>'.$vl['valorpago'].'</td><tr>';
         }
 
     $htmlBoleto .= '</table><br/>';
@@ -211,7 +211,7 @@ Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height
 </table></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td valign=top width=666 height=1><img height=1 src=imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
 '.$dadosboleto["sacado"].'
 </span> 
-'.$dadosboleto["cpf_cnpj_sacado"] .'
+'.$dadosboleto["pessnmrf_sacado"] .'
 </td>
 </tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=cp valign=top width=7 height=12><img height=12 src=imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
 '.$dadosboleto["endereco1"].'

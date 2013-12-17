@@ -1,0 +1,6 @@
+### ERROS ###
+
+	Financeiro
+	Atualizar data e boletos (gerando backup)
+
+	A consulta pelos labels da lista de pesquisa não estão certas, pois procuram todas os campos que tem pesquisa daquela tabela, e não só do formulário.

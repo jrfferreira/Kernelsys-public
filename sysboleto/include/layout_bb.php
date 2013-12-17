@@ -490,7 +490,7 @@ div.barcode {
 <div id="container">
 
 	<div id="instr_header">
-		<h1><?php echo $dadosboleto["identificacao"]; ?> <?php echo isset($dadosboleto["cpf_cnpj"]) ? $dadosboleto["cpf_cnpj"] : '' ?></h1>
+		<h1><?php echo $dadosboleto["identificacao"]; ?> <?php echo isset($dadosboleto["pessnmrf"]) ? $dadosboleto["pessnmrf"] : '' ?></h1>
 		<address><?php echo $dadosboleto["endereco"]; ?><br></address>
 		<address><?php echo $dadosboleto["cidade_uf"]; ?></address>
 	</div>	<!-- id="instr_header" -->
@@ -577,7 +577,7 @@ div.barcode {
 		<tr class="campos">
 			<td class="num_doc"><?php echo $dadosboleto["numero_documento"]?></td>
 			<td class="contrato"><?php echo $dadosboleto["contrato"]?></td>
-			<td class="cpf_cei_cnpj"><?php echo $dadosboleto["cpf_cnpj"]?></td>
+			<td class="cpf_cei_cnpj"><?php echo $dadosboleto["pessnmrf"]?></td>
 			<td class="vencimento"><?php echo $dadosboleto["data_vencimento"]?></td>
 			<td class="valor_doc"><?php echo $dadosboleto["valor_boleto"]?></td>
 		</tr>

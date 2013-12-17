@@ -76,30 +76,23 @@ class TForm{
      * param  $object = objeto com dados
      */
     public function setData($object){
-
-        if(count($this->fields) > 0){
-
-            foreach ($this->fields as $name => $field){
-
-                    $coluna = $field->getName();
-                if ($coluna){ // labels não possuem nome
-
-
-                    if(is_object($object)){
-                        if($object->$coluna != ""){
-                            $valorCampo = $object->$coluna;
-                        }
-                    }
-                    else if(is_array($object)){
-                        if($object[$coluna] != ""){
-                            $valorCampo = $object[$coluna];
-                        }
-                    }                    
-
-                     $field->setValue($valorCampo);
-                     $valorCampo = NULL;
-                }
-            }
+        if(count($object) > 0){
+        	foreach ($object as $table => $campos){
+        		if(is_array($campos) && count($campos) > 0){
+        			foreach($campos as $name=>$campo){
+        				if(count($this->fields) > 0){
+	        				foreach($this->fields as $field){
+	        					if(is_object($field) && $field->getName() == $name){
+	        						$field->setValue($campo);
+	        						if($field->actPesquisa){
+	        							$field->descLabel = $campos[$field->getName().'Label'];
+	        						}
+	        					}
+	        				}
+        				}
+        			}
+        		}
+        	}
         }
     }
     
@@ -110,21 +103,21 @@ class TForm{
     public function getData($class = 'StdClass'){
 
         $object = new $class;
-        foreach ($_POST as $key=>$val){
-            if (get_class($this->fields[$key]) == 'TCombo'){
+        foreach ($_POST as $seq=>$val){
+            if (get_class($this->fields[$seq]) == 'TCombo'){
 
                 if ($val !== '0'){
-                    $object->$key = $val;
+                    $object->$seq = $val;
                 }
             }
             else{
-                $object->$key = $val;
+                $object->$seq = $val;
             }
         }
         
         // percorre os arquivos de upload
-        foreach ($_FILES as $key => $content){
-            $object->$key = $content['tmp_name'];
+        foreach ($_FILES as $seq => $content){
+            $object->$seq = $content['tmp_name'];
         }
         
         return $object;
@@ -158,6 +151,7 @@ class TForm{
 		$tag->id     = $this->name;
         $tag->onsubmit = "return $this->submit";// function(){return false;};
         $tag->method = 'post';      // método de transferência
+        $tag->class = 'ajaxForm';
 		$tag->style = "margin:0px;";
         $tag->enctype = "application/x-www-form-urlencoded";//"Content-Type: text/html; charset=UTF-8";
         // adiciona o objeto filho ao formulário

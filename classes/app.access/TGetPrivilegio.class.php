@@ -18,14 +18,14 @@ class TGetPrivilegio{
 		
             $sql = new TDbo(TConstantes::DBUSUARIO_PRIVILEGIO);
                 $criteria = new TCriteria();
-                $criteria->add(new TFilter("codigousuario","=",$this->obUser->codigouser));
+                $criteria->add(new TFilter("usuaseq","=",$this->obUser->seq));
                 $criteria->add(new TFilter("funcionalidade","=",$funcionalidade));
                 $criteria->add(new TFilter("nivel","=",$nivel));
-                $criteria->add(new TFilter("ativo","=",'1'));
-            $rQuery = $sql->select("codigo,modulo", $criteria);
+                $criteria->add(new TFilter("statseq","=",'1'));
+            $rQuery = $sql->select("seq,modulo", $criteria);
 
                 while($prv = $rQuery->fetch(PDO::FETCH_ASSOC)){
-                    $this->privilegios[$prv['codigo']] = $prv['modulo'];
+                    $this->privilegios[$prv[TConstantes::SEQUENCIAL]] = $prv['modulo'];
                 }
 
 	}

@@ -185,7 +185,7 @@ class TGetCurso {
         $tempCell->class = "titulo_info";
 
         $infoCurso = $table->addRow();
-        $tempCell = $infoCurso->addCell($obCurso['objetivocurso']);
+        $tempCell = $infoCurso->addCell($obCurso['objetivo']);
         $tempCell->align = "left";
 
 

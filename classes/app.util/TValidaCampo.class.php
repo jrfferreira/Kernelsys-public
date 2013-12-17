@@ -36,13 +36,13 @@ class TValidaCampo{
 			$conds = $cols."='".$args."'";
 		}
 		
-		$sqlDup = "select id,codigo from ".$table." where ".$conds;
+		$sqlDup = "select seq from ".$table." where ".$conds;
 		$run = $this->conn->Query($sqlDup);
 		$obVal = $run->fetchObject();
 		
-		if($obVal->id != "" and $obVal->id){
+		if($obVal->seq != "" and $obVal->seq){
 			$retorno[0] = 1; // caso haja o registro
-			$retorno[1] = $obVal->codigo;
+			$retorno[1] = $obVal->seq;
 		}
 		else{
 			$retorno[0] = 0;
@@ -63,9 +63,9 @@ class TValidaCampo{
             $teste = $obValida->valDuplic($dados['entity'], $campo, $valor);
 
             if($teste[0] == "1") {
-                echo '<img src="../app.view/app.images/iscaImg.png" onload="retValidacao(\''.$dados['codigo'].'\', \''.$teste[1].'\', \''.$iidForm.'\', \''.$dados['entity'].'\')" />';
+                echo '<img src="../app.view/app.images/iscaImg.png" onload="retValidacao(\''.$dados[TConstantes::SEQUENCIAL].'\', \''.$teste[1].'\', \''.$iformseq.'\', \''.$dados['entity'].'\')" />';
             }
-            $obsession->setValue('statusFormEdition', $campo);
+            $obsession->setValue(TConstantes::STATUS_EDITIONFORM, $campo);
         }
 
         // Valida campo vazio
@@ -74,7 +74,7 @@ class TValidaCampo{
             $teste2 = $obValida->valDuplic($dados['entity'], $campo, $valor);
 
             if($teste2[0] == "1") {
-                echo '<img src="../app.view/app.images/iscaImg.png" onload="retValidacao(\''.$dados['codigo'].'\', \''.$teste2[1].'\', \''.$iidForm.'\', \''.$dados['entity'].'\')" />';
+                echo '<img src="../app.view/app.images/iscaImg.png" onload="retValidacao(\''.$dados[TConstantes::SEQUENCIAL].'\', \''.$teste2[1].'\', \''.$iformseq.'\', \''.$dados['entity'].'\')" />';
             }
         }
     }

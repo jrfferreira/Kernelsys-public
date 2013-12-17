@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kernelsys>
+  <dbstatus>
+    <row seq="1">
+      <seq>1</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <statdesc>Ativo</statdesc>
+      <datacad>2013-07-16</datacad>
+      <statseq>1</statseq>
+    </row>
+    <row seq="8">
+      <seq>8</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <statdesc>Inativo</statdesc>
+      <datacad>2013-07-16</datacad>
+      <statseq>1</statseq>
+    </row>
+    <row seq="9">
+      <seq>9</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <statdesc>Inconsistente</statdesc>
+      <datacad>2013-07-16</datacad>
+      <statseq>1</statseq>
+    </row>
+    <row seq="7">
+      <seq>7</seq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <statdesc>Em implementação</statdesc>
+      <datacad>2013-08-13</datacad>
+      <statseq>1</statseq>
+    </row>
+  </dbstatus>
+</kernelsys>

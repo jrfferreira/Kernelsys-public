@@ -15,33 +15,33 @@ function getLista($unidade, $tipo = null, $area = null, $notEmpty = null) {
 	$criterio = new TCriteria ();
 	
 	if ($area) {
-		$filtro = new TFilter ( 'codigoareacurso', '=', $area );
+		$filtro = new TFilter ( 'seqareacurso', '=', $area );
 		$filtro->tipoFiltro = 4;
 		$criterio->add ( $filtro, 'AND' );
 	}
 	
 	if ($tipo) {
 		if ($tipo == 'p') {
-			$filtro1 = new TFilter ( 'codigotipocurso', '=', '110057-00' );
+			$filtro1 = new TFilter ( 'seqtipocurso', '=', '110057-00' );
 			$filtro1->tipoFiltro = 3;
 			$criterio->add ( $filtro1, 'OR' );
-			$filtro2 = new TFilter ( 'codigotipocurso', '=', '120057-00' );
+			$filtro2 = new TFilter ( 'seqtipocurso', '=', '120057-00' );
 			$filtro2->tipoFiltro = 3;
 			$criterio->add ( $filtro2, 'OR' );
-			$filtro3 = new TFilter ( 'codigotipocurso', '=', '130057-00' );
+			$filtro3 = new TFilter ( 'seqtipocurso', '=', '130057-00' );
 			$filtro3->tipoFiltro = 3;
 			$criterio->add ( $filtro3, 'OR' );
 		} elseif ($tipo == 't') {
-			$filtro1 = new TFilter ( 'codigotipocurso', '!=', '110057-00' );
+			$filtro1 = new TFilter ( 'seqtipocurso', '!=', '110057-00' );
 			$filtro1->tipoFiltro = 3;
 			$criterio->add ( $filtro1, 'AND' );
-			$filtro2 = new TFilter ( 'codigotipocurso', '!=', '120057-00' );
+			$filtro2 = new TFilter ( 'seqtipocurso', '!=', '120057-00' );
 			$filtro2->tipoFiltro = 3;
 			$criterio->add ( $filtro2, 'AND' );
-			$filtro3 = new TFilter ( 'codigotipocurso', '!=', '130057-00' );
+			$filtro3 = new TFilter ( 'seqtipocurso', '!=', '130057-00' );
 			$filtro3->tipoFiltro = 3;
 			$criterio->add ( $filtro3, 'AND' );
-			$filtro4 = new TFilter ( 'codigotipocurso', '!=', '10054860-960' );
+			$filtro4 = new TFilter ( 'seqtipocurso', '!=', '10054860-960' );
 			$filtro4->tipoFiltro = 3;
 			$criterio->add ( $filtro4, 'AND' );
 			
@@ -49,7 +49,7 @@ function getLista($unidade, $tipo = null, $area = null, $notEmpty = null) {
 	}
 	
 	if($notEmpty == true){
-			$filtro5 = new TFilter ("(SELECT count(t5.codigocurso) AS count FROM dbturmas t5 WHERE t5.codigocurso = t0.codigo and t5.acinscricao <> '2')", '>', 0 );
+			$filtro5 = new TFilter ("(SELECT count(t5.seqcurso) AS count FROM dbturmas t5 WHERE t5.seqcurso = t0.seqand t5.acinscricao <> '2')", '>', 0 );
 			$filtro5->tipoFiltro = 5;
 			$criterio->add ( $filtro5, 'AND' );
 	}
@@ -66,20 +66,20 @@ function getLista($unidade, $tipo = null, $area = null, $notEmpty = null) {
 	}
 }
 
-function getCurso($unidade, $codigo) {
+function getCurso($unidade, $seq) {
 	try {
 		$dbo = new TDbo_out ( $unidade );
-		if ($codigo) {
-			$dbo->setEntidade ( "dbcursos" );
+		if ($seq) {
+			$dbo->setEntidade ( TConstantes::DBCURSO );
 			$criterioCurso = new TCriteria ();
-			$criterioCurso->add ( new TFilter ( 'codigo', '=', $codigo ) );
+			$criterioCurso->add ( new TFilter ( TConstantes::SEQUENCIAL, '=', $seq) );
 			$retCurso = $dbo->select ( '*', $criterioCurso );
 			
 			$obCurso = $retCurso->fetch ();
 			
-			if ($obCurso ['codigoareacurso']) {
+			if ($obCurso ['seqareacurso']) {
 				$critareaCurso = new TCriteria ();
-				$critareaCurso->add ( new TFilter ( 'codigo', '=', $obCurso ['codigoareacurso'] ) );
+				$critareaCurso->add ( new TFilter ( TConstantes::SEQUENCIAL, '=', $obCurso ['seqareacurso'] ) );
 				
 				$dbo->setEntidade ( "dbcursos_areas" );
 				$retareaCurso = $dbo->select ( 'titulo', $critareaCurso );
@@ -87,9 +87,9 @@ function getCurso($unidade, $codigo) {
 				
 				$obCurso ['areacurso'] = $obareaCurso->titulo;
 			}
-			if ($obCurso ['codigotipocurso']) {
+			if ($obCurso ['seqtipocurso']) {
 				$crittipoCurso = new TCriteria ();
-				$crittipoCurso->add ( new TFilter ( 'codigo', '=', $obCurso ['codigotipocurso'] ) );
+				$crittipoCurso->add ( new TFilter ( TConstantes::SEQUENCIAL, '=', $obCurso ['seqtipocurso'] ) );
 				
 				$dbo->setEntidade ( "dbcursos_tipos" );
 				$rettipoCurso = $dbo->select ( 'titulo', $crittipoCurso );
@@ -98,10 +98,10 @@ function getCurso($unidade, $codigo) {
 				$obCurso ['tipocurso'] = $obtipoCurso->titulo;
 			}
 			
-			$dbo->setEntidade ( "dbturmas" );
+			$dbo->setEntidade ( TConstantes::DBTURMA );
 			$criterioTurmas = new TCriteria ();
 			$criterioTurmas->add ( new TFilter ( 'acinscricao', '<>', '2' ), 'AND' );
-			$criterioTurmas->add ( new TFilter ( 'codigocurso', '=', $codigo ), 'AND' );
+			$criterioTurmas->add ( new TFilter ( 'seqcurso', '=', $seq), 'AND' );
 			$retTurmas = $dbo->select ( "*", $criterioTurmas );
 			
 			if ($retTurmas) {
@@ -112,14 +112,14 @@ function getCurso($unidade, $codigo) {
 			
 			$dbo->setEntidade ( "view_cursos_disciplinas" );
 			$criterioCursoDisciplinas = new TCriteria ();
-			$criterioCursoDisciplinas->add ( new TFilter ( 'codigocurso', '=', $codigo ) );
-			$retCursoDisciplinas = $dbo->select ( 'codigodisciplina', $criterioCursoDisciplinas );
+			$criterioCursoDisciplinas->add ( new TFilter ( 'seqcurso', '=', $seq) );
+			$retCursoDisciplinas = $dbo->select ( 'seqdisciplina', $criterioCursoDisciplinas );
 			
 			if ($retCursoDisciplinas) {
 				while ( $obCursoDisciplinas = $retCursoDisciplinas->fetchObject () ) {
 					$dbo->setEntidade ( "dbdisciplinas" );
 					$criterioDisciplina = new TCriteria ();
-					$criterioDisciplina->add ( new TFilter ( 'codigo', '=', $obCursoDisciplinas->codigodisciplina ) );
+					$criterioDisciplina->add ( new TFilter ( TConstantes::SEQUENCIAL, '=', $obCursoDisciplinas->seqdisciplina ) );
 					$retDisciplina = $dbo->select ( '*', $criterioDisciplina );
 					
 					if ($retDisciplina) {

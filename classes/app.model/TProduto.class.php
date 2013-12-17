@@ -21,11 +21,11 @@ class TProduto{
      */
     public function addProduto() {
         try{
-            $sqlInsert = new TDbo(TConstantes::DBPRODUTOS);
+            $sqlInsert = new TDbo(TConstantes::DBPRODUTO);
             $retInsert = $sqlInsert->insert($this->dados);
-            $codigoproduto = $retInsert['codigo'];
+            $seqproduto = $retInsert[TConstantes::SEQUENCIAL];
 
-            return $codigoproduto;
+            return $seqproduto;
 
         }catch (Exception $e){
             new setException($e);
@@ -35,14 +35,14 @@ class TProduto{
     /*
      * Atualiza informações do produto
      */
-    public function setProduto($codigoproduto){
+    public function setProduto($seqproduto){
 
-        $sqlUpdateProduto = new TDbo(TConstantes::DBPRODUTOS);
+        $sqlUpdateProduto = new TDbo(TConstantes::DBPRODUTO);
             $critUpdateProduto = new TCriteria();
-            $critUpdateProduto->add(new TFilter("codigo","=",$codigoproduto));
+            $critUpdateProduto->add(new TFilter("seq","=",$seqproduto));
         $retUpdateProduto = $sqlUpdateProduto->update($this->dados, $critUpdateProduto);
 
-        return $codigoproduto;
+        return $seqproduto;
     }
 
     /*
@@ -50,7 +50,7 @@ class TProduto{
      */
     public function getProduto($col, $value){
 
-        $prod = new TDbo(TConstantes::DBPRODUTOS);
+        $prod = new TDbo(TConstantes::DBPRODUTO);
             $criteriaProd = new TCriteria();
             $criteriaProd->add(new TFilter($col,'=',$value));
         $retProd = $prod->select('*', $criteriaProd);
@@ -62,30 +62,28 @@ class TProduto{
     /**
     * Gera um produto baseado no banco de paramentros de especialização
     */
-    public function setProdutoParametro($idForm){
+    public function setProdutoParametro($headerForm){
 
         try{
 
-            if(!$idForm){
+            if(!$headerForm[TConstantes::FORM]){
                 throw new ErrorException("Ouve um problema na geração o produto. Entre em contato com o suporte.", 1);
             }
 
-           $obHeader = new TSetHeader();
-           $headerForm = $obHeader->getHead($idForm);
-           $codigo    = $headerForm['codigo'];
-           $parametro = $headerForm['entidade'];
+           $seq   = $headerForm[TConstantes::SEQUENCIAL];
+           $parametro = $headerForm[TConstantes::ENTIDADE];
 
              //Monta vetor de informações do produto=============================================
-            $sqlParametros  = new TDbo(TConstantes::DBPRODUTOS_PARAMETROS);
-                $critParametros = new TCriteria();
-                $critParametros->add(new TFilter("tabela", "=", $parametro));
+            $sqlParametros  = new TDbo(TConstantes::DBPARAMETRO_PRODUTO);
+            $critParametros = new TCriteria();
+            $critParametros->add(new TFilter("tabela", "=", $parametro));
             $retParametros = $sqlParametros->select("*", $critParametros);
             $obParametros = $retParametros->fetchObject();
 
             //retorna informações da especialização
             $sqlSelect = new TDbo($parametro);
                $critSelect = new TCriteria();
-               $critSelect->add(new TFilter("codigo","=",$codigo));
+               $critSelect->add(new TFilter("seq","=",$seq));
             $retSelect = $sqlSelect->select("*", $critSelect);
             $obEspecializacao = $retSelect->fetchObject();
 
@@ -100,11 +98,11 @@ class TProduto{
 
                 $classeOut = new $classe();
                 $get = $classeOut->$metodo($obEspecializacao->$coluna);
-                $this->setValue('label', $get);
+                $this->setValue(TConstantes::FIELD_LABEL, $get);
 
             }else{
                 $colunaLabel = $colLabel[0];
-                $this->setValue('label', $obEspecializacao->$colunaLabel);
+                $this->setValue(TConstantes::FIELD_LABEL, $obEspecializacao->$colunaLabel);
             }
 
             //seta Valor via função ou valor real
@@ -150,25 +148,25 @@ class TProduto{
                 }
             }
 
-            $this->setValue('valorAlteravel', 0);
+            $this->setValue('valorAlteravel', false);
             $this->setValue('tabela', $parametro);
-            $this->setValue('codigotipoproduto', $obParametros->codigotipoproduto);
-            $this->setValue('ativo', 1);
+            $this->setValue('tpprseq', $obParametros->tpprseq);
+            $this->setValue('statseq', 1);
 
 
-            if($obEspecializacao->codigoproduto){
-                $codigoproduto = $this->setProduto($obEspecializacao->codigoproduto);
+            if($obEspecializacao->prodseq){
+                $seqproduto = $this->setProduto($obEspecializacao->prodseq);
             }else{
-                $codigoproduto = $this->addProduto();
+                $seqproduto = $this->addProduto();
             }
 
                 $sqlUpdate = new TDbo($parametro);
                 $critUpdate = new TCriteria();
-                $critUpdate->add(new TFilter("codigo","=",$codigo));
-                $retUpdate = $sqlUpdate->update(array('codigoproduto' => $codigoproduto), $critUpdate);
+                $critUpdate->add(new TFilter("seq","=",$seq));
+                $retUpdate = $sqlUpdate->update(array('prodseq' => $seqproduto), $critUpdate);
 
 
-            return $codigoproduto;
+            return $seqproduto;
 
         }catch (Exception $e){
             new setException($e);
@@ -177,14 +175,14 @@ class TProduto{
 
     /**
     * Comentarrrrrr
-    * @param <type> $codigo
+    * @param <type> $seq
     * @param <type> $entidade
     * @return <type>
     */
-    public function createProduto($codigo,$entidade){
+    public function createProduto($seq,$entidade){
         try{
              //Monta vetor de informações do produto=============================================
-            $sqlParametros  = new TDbo(TConstantes::DBPRODUTOS_PARAMETROS);
+            $sqlParametros  = new TDbo(TConstantes::DBPARAMETRO_PRODUTO);
                 $critParametros = new TCriteria();
                 $critParametros->add(new TFilter("tabela", "=", $entidade));
             $retParametros = $sqlParametros->select("*", $critParametros);
@@ -193,7 +191,7 @@ class TProduto{
             //retorna informações da especialização
             $sqlSelect = new TDbo($entidade);
                $critSelect = new TCriteria();
-               $critSelect->add(new TFilter("codigo","=",$codigo));
+               $critSelect->add(new TFilter("seq","=",$seq));
             $retSelect = $sqlSelect->select("*", $critSelect);
             $obEspecializacao = $retSelect->fetchObject();
 
@@ -208,11 +206,11 @@ class TProduto{
 
                 $classeOut = new $classe();
                 $get = $classeOut->$metodo($obEspecializacao->$coluna);
-                $produto['label'] =  $get;
+                $produto[TConstantes::FIELD_LABEL] =  $get;
 
             }else{
                 $colunaLabel = $colLabel[0];
-                $produto['label'] = $obEspecializacao->$colunaLabel;
+                $produto[TConstantes::FIELD_LABEL] = $obEspecializacao->$colunaLabel;
             }
 
             //seta Valor via função ou valor real
@@ -230,7 +228,7 @@ class TProduto{
             }else{
                 if($colValor){
                    $colunaValor = $colValor[0];
-                   $produto['valor'] = $obEspecializacao->$colunaValor;
+                   $produto['valor'] = 0 + $obEspecializacao->$colunaValor;
                 }else{
                    $produto['valor'] = "0";
                 }
@@ -258,15 +256,15 @@ class TProduto{
                 }
             }
 
-             $produto['valorAlteravel'] = 0;
+             $produto['valorAlteravel'] = false;
              $produto['tabela'] = $entidade;
-             $produto['codigotipoproduto'] = $obParametros->codigotipoproduto;
-             $produto['ativo'] = 1;
+             $produto['tpprseq'] = $obParametros->tpprseq;
+             $produto['statseq'] = 1;
 
-             $dbo = new TDbo('dbprodutos');
+             $dbo = new TDbo(TConstantes::DBPRODUTO);
              $retprod = $dbo->insert($produto);
 
-            $produto['codigo'] = $retprod['codigo'];
+            $produto[TConstantes::SEQUENCIAL] = $retprod[TConstantes::SEQUENCIAL];
             return $produto;
 
         }catch (Exception $e){
@@ -290,24 +288,24 @@ class TProduto{
 
     /**
      *
-     * @param <type> $codigoproduto
-     * @param <type> $idForm
+     * @param <type> $seqproduto
+     * @param <type> $formseq
      * @return <type>
      */
-    public function apendiceSetValor($codigoproduto, $idForm){
+    public function apendiceSetValor($seqproduto, $formseq){
 
     	$div = new TElement('div');
     	$div->class = "ui-widget-content";
 
 
     	$obHeader = new TSetHeader();
-        $headerForm = $obHeader->getHead($idForm);
+        $headerForm = $obHeader->getHead($formseq);
 
-        $codigoproduto = $headerForm['codigoPai'];
+        $seqproduto = $headerForm['seqPai'];
 
     	$dbo = new TDbo('view_produtos');
     	$crit = new TCriteria();
-    	$crit->add(new TFilter('codigo','=',$codigoproduto));
+    	$crit->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seqproduto));
     	$ret = $dbo->select('valormedio',$crit);
 
     	$produto = $ret->fetchObject();
@@ -353,15 +351,15 @@ class TProduto{
             return $div;
     }
 
-    public function showValorProduto($codigoProduto){
+    public function showValorProduto($seqProduto){
 
         try{
             $TSetModel = new TSetModel();
 
             $dboProduto = new TDbo('tab_produto');
             $critProduto = new TCriteria();
-            $critProduto->add(new TFilter('codigo','=',$codigoProduto));
-            $retProduto = $dboProduto->select('codigo,descricao,preco',$critProduto);
+            $critProduto->add(new TFilter(TConstantes::SEQUENCIAL,'=',$seqProduto));
+            $retProduto = $dboProduto->select('seq,descricao,preco',$critProduto);
 
             $obProduto = $retProduto->fetchObject();
 
@@ -395,7 +393,7 @@ class TProduto{
             $tabela->cellpadding = 0;
 
             $row = $tabela->addRow();
-            $col = $row->addCell($obProduto->descricao . " (Cod.:" . $obProduto->codigo . ")" );
+            $col = $row->addCell($obProduto->descricao . " (Cod.:" . $obProduto->seq. ")" );
             $col->style = "font-weight: bolder; font-size: 14px; padding: 2px;";
 
             $row = $tabela->addRow();
@@ -447,9 +445,9 @@ class TProduto{
             $sqlEstoque  = new TDbo('view_tab_produto');
             
                 $critEstoque = new TCriteria();
-                $critEstoque->add(new TFilter("ativo", "=", '1'));
+                $critEstoque->add(new TFilter("statseq", "=", '1'));
                 $critEstoque->setProperty('order', 'endereco,descricao,marca');
-                $colunas = "codigo,codigosit,descricao as produto,marca,endereco,quantidadedisponivel,quantidadereservada, (quantidadedisponivel::numeric + quantidadereservada::numeric) as quantidadetotal";
+                $colunas = "seq,seqsit,descricao as produto,marca,endereco,quantidadedisponivel,quantidadereservada, (quantidadedisponivel::numeric + quantidadereservada::numeric) as quantidadetotal";
             $retEstoque = $sqlEstoque->select($colunas, $critEstoque);
 
             //Percorre lista de produtos
@@ -457,9 +455,9 @@ class TProduto{
 
                 $row1 = $table->addRow();
 
-                $cell11 = $row1->addCell($obEstoques->codigo);
+                $cell11 = $row1->addCell($obEstoques->seq);
                 $cell11->class = "ui-corner-all ui-state-default";
-                $cell12 = $row1->addCell($obEstoques->codigosit);
+                $cell12 = $row1->addCell($obEstoques->seqsit);
                 $cell12->class = "ui-corner-all ui-state-default";
                 $cell13 = $row1->addCell($obEstoques->produto);
                 $cell13->style = "text-align:left;";

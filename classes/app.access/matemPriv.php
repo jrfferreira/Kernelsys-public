@@ -14,9 +14,9 @@ function __autoload($classe){
 	//Instancia manipulador de sessão
 	$obsession = new TSession();
 		
-	$tKrs = new TKrs('menu_modulos');
+	$tKrs = new TKrs('menu');
 	$criterio = new TCriteria();
-	$criterio->add(new TFilter('ativo','=',1));
+	$criterio->add(new TFilter('statseq','=',1));
 	$criterio->add(new TFilter('moduloprincial','=',$param['rid']));
 	$runSubMenu = $tKrs->select('*',$criterio);
 	
@@ -24,8 +24,8 @@ function __autoload($classe){
 			
 	while($retSubMenu = $runSubMenu->fetchObject()){
 		
-		$obCheck = new TCheckButton('submenuOp'.$retSubMenu->id);
-		$obCheck->setValue($retSubMenu->id);
+		$obCheck = new TCheckButton('submenuOp'.$retSubMenu->seq);
+		$obCheck->setValue($retSubMenu->seq);
 		$obCheck->onclick = "setPvlShow(this)";
 	
 			$obLabel = new TElement('div');

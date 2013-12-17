@@ -1,8 +1,14 @@
 <?php
 
+require_once('../app.widgets/TSession.class.php');
+
 class fileMap {
 	public $classes = array ();
+	public $package = array ();
+	protected $obsession; 
 	public function __construct() {
+		$this->obsession = new TSession();
+		
 		$this->classes ['TGetCurso'] = '../../classes/inscricao/TGetCurso.class.php';
 		$this->classes ['TSetInscricao'] = '../../classes/inscricao/TSetInscricao.class.php';
 		$this->classes ['TAbas'] = '../../classes/app.widgets/TAbas.class.php';
@@ -21,6 +27,7 @@ class fileMap {
 		$this->classes ['TDataGridColumn'] = '../../classes/app.widgets/TDataGridColumn.class.php';
 		$this->classes ['TElement'] = '../../classes/app.widgets/TElement.class.php';
 		$this->classes ['TEntry'] = '../../classes/app.widgets/TEntry.class.php';
+		$this->classes ['TBetweenDate'] = '../../classes/app.widgets/TBetweenDate.class.php';
 		$this->classes ['TField'] = '../../classes/app.widgets/TField.class.php';
 		$this->classes ['TFile'] = '../../classes/app.widgets/TFile.class.php';
 		$this->classes ['TForm'] = '../../classes/app.widgets/TForm.class.php';
@@ -54,7 +61,7 @@ class fileMap {
 		$this->classes ['TWindowPesq'] = '../../classes/app.widgets/TWindowPesq.class.php';
 		$this->classes ['TClassJQuery'] = '../../classes/app.view/app.ui/TClassJQuery.class.php';
 		$this->classes ['TSetCuston'] = '../../classes/app.view/app.custon/TSetCuston.class.php';
-		$this->classes ['TExecs'] = '../../classes/app.view/TExecs.class.php';
+		$this->classes ['TMain'] = '../../classes/app.view/TMain.class.php';
 		$this->classes ['TInterface'] = '../../classes/app.view/TInterface.class.php';
 		$this->classes ['TMenu'] = '../../classes/app.view/TMenu.class.php';
 		$this->classes ['TRodape'] = '../../classes/app.view/TRodape.class.php';
@@ -83,26 +90,6 @@ class fileMap {
 		$this->classes ['TNFeModel'] = '../../classes/app.nfe/TNFeModel.class.php';
 		$this->classes ['TNFeWsdl'] = '../../classes/app.nfe/TNFeWsdl.class.php';
 		$this->classes ['danfe'] = '../../classes/app.nfe/danfe.class.php';
-		$this->classes ['TCaixa'] = '../../classes/app.model/financeiro/TCaixa.class.php';
-		$this->classes ['TConciliacaoCaixa'] = '../../classes/app.model/financeiro/TConciliacaoCaixa.class.php';
-		$this->classes ['TConvenios'] = '../../classes/app.model/financeiro/TConvenios.class.php';
-		$this->classes ['TFechaCaixa'] = '../../classes/app.model/financeiro/TFechaCaixa.class.php';
-		$this->classes ['TSetBoleto'] = '../../classes/app.model/financeiro/TSetBoleto.class.php';
-		$this->classes ['TTransacao'] = '../../classes/app.model/financeiro/TTransacao.class.php';
-		$this->classes ['TAluno'] = '../../classes/app.model/educacional/TAluno.class.php';
-		$this->classes ['TAvaliacao'] = '../../classes/app.model/educacional/TAvaliacao.class.php';
-		$this->classes ['TBiblioteca'] = '../../classes/app.model/educacional/TBiblioteca.class.php';
-		$this->classes ['TCurso'] = '../../classes/app.model/educacional/TCurso.class.php';
-		$this->classes ['TDisciplina'] = '../../classes/app.model/educacional/TDisciplina.class.php';
-		$this->classes ['TInscricao'] = '../../classes/app.model/educacional/TInscricao.class.php';
-		$this->classes ['TLivro'] = '../../classes/app.model/educacional/TLivro.class.php';
-		$this->classes ['TMatricula'] = '../../classes/app.model/educacional/TMatricula.class.php';
-		$this->classes ['TProcessoAcademico'] = '../../classes/app.model/educacional/TProcessoAcademico.class.php';
-		$this->classes ['TProfessor'] = '../../classes/app.model/educacional/TProfessor.class.php';
-		$this->classes ['TSecretaria'] = '../../classes/app.model/educacional/TSecretaria.class.php';
-		$this->classes ['TSolicitacao'] = '../../classes/app.model/educacional/TSolicitacao.class.php';
-		$this->classes ['TTurma'] = '../../classes/app.model/educacional/TTurma.class.php';
-		$this->classes ['TTurmaDisciplinas'] = '../../classes/app.model/educacional/TTurmaDisciplinas.class.php';
 		$this->classes ['TEtiquetas'] = '../../classes/app.model/TEtiquetas.class.php';
 		$this->classes ['TPessoa'] = '../../classes/app.model/TPessoa.class.php';
 		$this->classes ['TProduto'] = '../../classes/app.model/TProduto.class.php';
@@ -130,7 +117,7 @@ class fileMap {
 		$this->classes ['includesUI'] = '../../classes/app.js/includesUI.class.php';
 		$this->classes ['loadJs'] = '../../classes/app.js/loadJs.class.php';
 		$this->classes ['TConnection'] = '../../classes/app.dbo/TConnection.class.php';
-		$this->classes ['TConstantes'] = '../../classes/app.dbo/TConstantes.class.php';
+		$this->classes ['TConstantes'] = '../../classes/app.util/TConstantes.class.php';
 		$this->classes ['TCriteria'] = '../../classes/app.dbo/TCriteria.class.php';
 		$this->classes ['TDados'] = '../../classes/app.dbo/TDados.class.php';
 		$this->classes ['TDbo'] = '../../classes/app.dbo/TDbo.class.php';
@@ -152,9 +139,7 @@ class fileMap {
 		$this->classes ['TSqlSelect'] = '../../classes/app.dbo/TSqlSelect.class.php';
 		$this->classes ['TSqlUpdate'] = '../../classes/app.dbo/TSqlUpdate.class.php';
 		$this->classes ['TTransaction'] = '../../classes/app.dbo/TTransaction.class.php';
-		$this->classes ['geraCodigo'] = '../../classes/app.dbo/geraCodigo.class.php';
-		$this->classes ['setAluno'] = '../../classes/app.control/app.util/setAluno.class.php';
-		$this->classes ['setDepartamento'] = '../../classes/app.control/app.util/setDepartamento.class.php';
+		$this->classes ['geraseq'] = '../../classes/app.dbo/geraseq.class.php';
 		$this->classes ['TSetControl'] = '../../classes/app.control/TSetControl.class.php';
 		$this->classes ['TSetModel'] = '../../classes/app.control/TSetModel.class.php';
 		$this->classes ['TActionIn'] = '../../classes/app.access/TActionIn.class.php';
@@ -168,19 +153,80 @@ class fileMap {
 		$this->classes ['TSetlogin'] = '../../classes/app.access/TSetlogin.class.php';
 		$this->classes ['TShowPrivilegios'] = '../../classes/app.access/TShowPrivilegios.class.php';
 		$this->classes ['TUsuario'] = '../../classes/app.access/TUsuario.class.php';
+
+		/* Classes do package SCP */
+		$this->package ['scp'] = array(
+			'DocumentoBo' => '../../classes/app.bo/scp/financeiro/DocumentoBO.class.php',
+			'MovimentoCaixaBo' => '../../classes/app.bo/scp/financeiro/MovimentoCaixaBO.class.php',
+			'BaixaDocumentoBO' => '../../classes/app.bo/scp/financeiro/BaixaDocumentoBO.class.php',
+			'ProdutoBO' => '../../classes/app.bo/scp/principal/ProdutoBO.class.php',
+			'PedidoBO' => '../../classes/app.bo/scp/vendas/PedidoBO.class.php',
+			'BalancoBO' => '../../classes/app.bo/scp/compras/BalancoBO.class.php',
+			'ProdutoEnderecoBO' => '../../classes/app.bo/scp/compras/ProdutoEnderecoBO.class.php'
+				
+		);
+
+		/* Classes do package EDU */
+		$this->package ['edu'] = array(
+			'setAluno' => '../../classes/app.control/edu/app.util/setAluno.class.php',
+			'setDepartamento' => '../../classes/app.control/edu/app.util/setDepartamento.class.php',
+			'setDisc' => '../../classes/app.control/edu/app.util/setDisc.class.php',
+			'setProfessor' => '../../classes/app.control/edu/app.util/setProfessor.class.php',
+			'setTipoMov' => '../../classes/app.control/edu/app.util/setTipoMov.class.php',
+			'setTurmaDisciplina' => '../../classes/app.control/edu/app.util/setTurmaDisciplina.class.php',
+			'viewCurso' => '../../classes/app.control/edu/app.util/viewCurso.class.php',
+			'TScoreCard' => '../../classes/app.control/edu/app.scorecard/TScoreCard.class.php',
+			'relatorioCaixaD' => '../../classes/app.control/edu/app.financeiro/relatorioCaixaD.class.php',
+			'relatorioCaixaR' => '../../classes/app.control/edu/app.financeiro/relatorioCaixaR.class.php',
+			'setComprovante' => '../../classes/app.control/edu/app.financeiro/setComprovante.class.php',
+			'setCriterioFolhaPag' => '../../classes/app.control/edu/app.financeiro/setCriterioFolhaPag.class.php',
+			'setDataBP' => '../../classes/app.control/edu/app.financeiro/setDataBP.class.php',
+			'setPeriodoDRE' => '../../classes/app.control/edu/app.financeiro/setPeriodoDRE.class.php',
+			'viewBPatrimonial' => '../../classes/app.control/edu/app.financeiro/viewBPatrimonial.class.php',
+			'viewDRE' => '../../classes/app.control/edu/app.financeiro/viewDRE.class.php',
+			'setDocumento' => '../../classes/app.control/edu/app.contratos/setDocumento.class.php',
+			'TUserAluno' => '../../classes/app.control/edu/app.alunos/TUserAluno.class.php',
+			'viewArquivos' => '../../classes/app.control/edu/app.alunos/viewArquivos.class.php',
+			'viewDuplicatas' => '../../classes/app.control/edu/app.alunos/viewDuplicatas.class.php',
+			'viewHistAcadem' => '../../classes/app.control/edu/app.alunos/viewHistAcadem.class.php',
+			'viewOrientacoes' => '../../classes/app.control/edu/app.alunos/viewOrientacoes.class.php',
+			'TCaixa' => '../../classes/app.model/edu/financeiro/TCaixa.class.php',
+			'TConciliacaoCaixa' => '../../classes/app.model/edu/financeiro/TConciliacaoCaixa.class.php',
+			'TConvenios' => '../../classes/app.model/edu/financeiro/TConvenios.class.php',
+			'TFechaCaixa' => '../../classes/app.model/edu/financeiro/TFechaCaixa.class.php',
+			'TSetBoleto' => '../../classes/app.model/edu/financeiro/TSetBoleto.class.php',
+			'TTransacao' => '../../classes/app.model/edu/financeiro/TTransacao.class.php',
+			'TAluno' => '../../classes/app.model/edu/educacional/TAluno.class.php',
+			'TAvaliacao' => '../../classes/app.model/edu/educacional/TAvaliacao.class.php',
+			'TBiblioteca' => '../../classes/app.model/edu/educacional/TBiblioteca.class.php',
+			'TCurso' => '../../classes/app.model/edu/educacional/TCurso.class.php',
+			'TDisciplina' => '../../classes/app.model/edu/educacional/TDisciplina.class.php',
+			'TInscricao' => '../../classes/app.model/edu/educacional/TInscricao.class.php',
+			'TLivro' => '../../classes/app.model/edu/educacional/TLivro.class.php',
+			'TMatricula' => '../../classes/app.model/edu/educacional/TMatricula.class.php',
+			'TProcessoAcademico' => '../../classes/app.model/edu/educacional/TProcessoAcademico.class.php',
+			'TProfessor' => '../../classes/app.model/edu/educacional/TProfessor.class.php',
+			'TSecretaria' => '../../classes/app.model/edu/educacional/TSecretaria.class.php',
+			'TSolicitacao' => '../../classes/app.model/edu/educacional/TSolicitacao.class.php',
+			'TTurma' => '../../classes/app.model/edu/educacional/TTurma.class.php',
+			'TTurmaDisciplinas' => '../../classes/app.model/edu/educacional/TTurmaDisciplinas.class.php',
+			'TFuncionario' => '../../classes/app.model/edu/recursoshumanos/TFuncionario.class.php'
+		);
+		
+		
 	}
 	public function getClasses($class = null) {
 		if (! empty ( $class )) {
 			$returnClass = $this->classes [$class];
+			if(!$returnClass) 
+				$returnClass = $this->package [ $this->obsession->getValue('package') ] [$class];
 			if (empty ( $returnClass )) {
 				return false;
 			} else {
 				return $returnClass;
 			}
-		} else if($class === null){
-			return $this->classes;
-		}else{
-			return array();
+		} else {
+			return array_merge( $this->classes, $this->package [ $this->obsession->getValue('package') ] );
 		}
 	}
 }

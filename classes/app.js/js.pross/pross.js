@@ -1,52 +1,33 @@
-﻿//window.history.forward(1);
-//ELIMINA CARACTERES EM BRANCO
-function trim(str){
-    return str.replace(/^\s+|\s+$/g,"");
-}
-
-function replaceAll(string, search, newstring) {
-    if(!newstring) newstring = '';
-    while (string.indexOf(search) != -1) {
-        string = string.replace(search, newstring);
-    }
-    return string;
-}
-
-function pesqModulo(){
-    alertPetrus('Em breve');
-}
-
-function alertPetrus(mensagem,titulo){
+﻿function setExcecao(formseq,view,metodo,retorno){
 	
-	alert(titulo+'\n\n'+mensagem);
-	
-/*    if((!titulo) || (titulo == '')) titulo = 'Alerta';
-    id = 'alert-' + $('.alerta').length;
-    jQuery('<div id=\''+id+'\' title=\'' +titulo + '\' style="padding:15px" class=alerta></div>').html(mensagem).appendTo('body');
+	//alert(retorno);
+				
+	 var erro = getErro(retorno);
+     if(erro == 'erro'){
+         setRertonoControl(formseq, retorno);
+     }else{
+    	 
+         if(jQuery('#'+view).length > 0){
+             jQuery('#'+view).html(retorno);
+         }
+         if(metodo == 'close' ){
+        	 jQuery('#'+formseq+'-window').dialog('close');
+         }
 
-    jQuery( '#'+ id).dialog({
-        resizable: false,
-        modal: true,
-        close : function() {
-            $(this).remove()
-        },
-        buttons: {
-            "Fechar": function() {
-                $(this).remove();
-            }
-        }
-    });*/
+         atribuicao();
+     }
+	
 }
 
 // executa interface Principal \\
-function prossInter(ob, codigo){
+function prossInter(ob, seq){
 
     var labelMd = document.getElementById('obLabelModulo');
     labelMd.innerHTML = ob.innerHTML;
 
     $(".modulobot").removeClass("modulobotClick");
     $(ob).addClass('modulobotClick');
-    exe('bodyDisplay', getPath()+'/app.view/TMenu.class.php?id='+codigo, '', 'GET', 'Sucesso');
+    exe('bodyDisplay', getPath()+'/app.view/TMenu.class.php?seq='+seq, '', 'GET', 'Sucesso');
 }
 
 // executa interface Secundária \\
@@ -54,9 +35,11 @@ function prossInterSec(mod, url){
 
     var labelMdSec = document.getElementById('obLabelSec');
     labelMdSec.innerHTML = mod;
+    
     exe('displaySys', getPath()+'/app.view/'+url, '', 'GET', 'Sucesso');
 }
 
+// Executa o logout do sistema
 function onLogout(occupant){
     if($('.TWindow').length > 0){
         alertPetrus('Existem janelas abertas no sistema.\nFeche-as antes de prosseguir.');
@@ -70,58 +53,151 @@ function onLogout(occupant){
     }
 }
 
-// camada de execução da gravação dos campos no db
-function pross(obj,idForm,codigo){
 
-    if(obj.type=="select-one" && obj.value==0){
-        valor="";
-    }else if(obj.type=="checkbox" && obj.checked==false){
-        valor="0";
-    }
-    else{
-        valor = obj.value;
-    }
-
-    var nameCampo = $(obj).attr('name');
-
-    if(valor && valor != ""){
-        var valField = 'idForm='+idForm+'&campo='+nameCampo+'&valor='+valor+'&codigo='+codigo;
-
-        exeCampo(getPath()+'/app.dbo/compilerData.php?loc=x', valField, 'POST', true);
-
-    }else{
-        var valField = null;
-    }
+//mantendo funções Originais
+//Recupera os campos da tela e armazena envia ao servidor
+function onSave(formseq, nomeform, tipoRetorno, obRetorno){
+	
+	var metodo    = 'onSave';
+	var value     = '';
+	var fieldSend = '';	
+	
+	
+	var fieldSend = $("#"+nomeform).find('[manter=true]').serialize();
+			
+		//====================================
+		var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq, fieldSend, 'POST', 'Sucesso');
+		
+		setExcecao(formseq,obRetorno,'close',retorno);		 
 }
 
 
-//Retorna um vetor com todas as opções do multiselect
-//@param obj = objeto multiselect
-function multiSelect_pross(obj, idForm, entity, codigo, incontrol, tipoForm){
-    if(obj){
+//interface do metodo onClose
+function onClose(tipoRetorno, formseq, obRetorno, confirme){
 
-        obj = document.getElementById(obj);
-        if(obj.selected){
-        }else{
-            pross(obj, idForm, entity, codigo, incontrol, tipoForm);
-        }
+  var metodo = 'onClose';
+  var condiction = true;
 
-    }else{
-        alertPetrus("O objeto multselect não foi passado corretamente");
-    }
+  if(confirme!=""){
+
+      jQuery('<div id=\'confirmation' + formseq + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
+
+      jQuery( '#confirmation' + formseq ).dialog({
+          resizable: false,
+          modal: true,
+          close : function() {
+              $(this).remove()
+          },
+          buttons: {
+              "Cancelar": function() {
+                  $(this).remove();
+              },
+              "Confirmar": function() {
+                  $(this).remove();
+                  if(typeof(obRetorno) == "string"){
+                      var view = obRetorno;
+                  }
+
+                  //compAction(metodo, key);
+                  var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq, '', 'GET', 'Sucesso');
+
+                  setExcecao(formseq, view, 'close', retorno);
+              }
+          }
+      });
+  }else{
+	  
+      if(typeof(obRetorno) == "string"){
+          var view = obRetorno;
+      }
+
+      //compAction(metodo, key);
+      var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq, '', 'GET', 'Sucesso');
+
+      setExcecao(formseq, view, 'close', retorno);
+  }
+  
+  return true;
+}
+
+//interface do metodo onCancel
+function onCancel(tipoRetorno, formseq, key, obRetorno, confirme){
+
+  var metodo = 'onCancel';
+  var condiction = true;
+
+  if(confirme!=""){
+
+      jQuery('<div id=\'confirmation' + formseq + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
+
+      jQuery( '#confirmation' + formseq ).dialog({
+          resizable: false,
+          modal: true,
+          close : function() {
+              $(this).remove()
+          },
+          buttons: {
+              "Cancelar": function() {
+                  $(this).remove();
+              },
+              "Confirmar": function() {
+                  $(this).remove();
+                  if(typeof(obRetorno) == "string"){
+                      var view = obRetorno;
+                  }
+
+                  //compAction(metodo, key);
+                  var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq+'&key='+key, '', 'GET', 'Sucesso');
+
+                  
+                  setExcecao(formseq, view, 'close', retorno);
+              }
+          }
+      });
+  }else{
+      if(typeof(obRetorno) == "string"){
+          var view = obRetorno;
+      }
+
+      //compAction(metodo, key);
+      var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq+'&key='+key, '', 'GET', 'Sucesso');
+
+      setExcecao(formseq, view, 'close', retorno);
+  }
+}
+
+
+//mantendo funções Originais
+//Recupera os campos da tela e armazena envia ao servidor
+function onFilter(metodo, tipoRetorno, formseq, key, obRetorno, confirme){
+	
+	var metodo    = 'onFilter';
+	var value     = '';
+	var fieldSend = '';	
+	
+	
+	var fieldSend = $("#filtro"+formseq).find('[view]').serialize();
+	
+	 //var valField = setFiltro(formseq);
+			
+		//====================================
+		var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&formseq='+formseq, fieldSend, 'POST', 'Sucesso');
+		
+		setExcecao(formseq,obRetorno,'open',retorno);		 
 }
 
 // executa funções das funcionalidades [formulários / listas]
 
-function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
-
+function prossExe(metodo, tipoObjeto, formseq, key, obRetorno, confirme){
+	
     //var condiction = true;
     //configura os dados do filtro
-    var valField = setFiltro(idForm);
-    if(confirme!=""){
-        jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
+    var valField = setFiltro(formseq);
+    
+	if(confirme!=""){
+        jQuery('<div id=\'confirmation' + formseq + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
 
-        jQuery( '#confirmation' + idForm ).dialog({
+        jQuery( '#confirmation' + formseq ).dialog({
             resizable: false,
             modal: true,
             close : function() {
@@ -133,51 +209,27 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
                 },
                 "Confirmar": function() {
                     $(this).remove();
-                    if(obRetorno!= ""){
+                    if(typeof(obRetorno) == "string"){
                         var view = obRetorno;
                     }
+                    //compAction(metodo, key);                    
+                    var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&formseq='+formseq+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
                     
-                    callback = function(retorno){
-                    	var erro = getErro(retorno);
-                        if(erro == 'erro'){
-                            setRertonoControl(idForm, retorno);
-                        }else{
-                            if(tipoObjeto == 'lista'){
-                                jQuery('#'+view).html(retorno);
-                            }else{
-                                jQuery('#'+view).append(retorno);
-                            }
-                            atribuicao();
-                        }
-                    };
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso', callback);
+                    setExcecao(formseq, view, 'open', retorno);
 
-                    
                 }
             }
         });
 
-
     }else{
-        if(obRetorno!= ""){
+    	    	
+        if(typeof(obRetorno) == "string"){
             var view = obRetorno;
         }
-
-        callback = function(retorno){
-        	var erro = getErro(retorno);
-            if(erro == 'erro'){
-                setRertonoControl(idForm, retorno);
-            }else{
-                if(tipoObjeto == 'lista'){
-                    jQuery('#'+view).html(retorno);
-                }else{
-                    jQuery('#'+view).append(retorno);
-                }
-                atribuicao();
-            }
-        };
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&idForm='+idForm+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso',callback);
-
+        //compAction(metodo, key);
+        var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno='+tipoObjeto+'&formseq='+formseq+'&key='+key+'&ret='+obRetorno, valField, 'POST', 'Sucesso');
+        
+        setExcecao(formseq, view, 'open', retorno);
         
     }
 }
@@ -185,7 +237,7 @@ function prossExe(metodo, tipoObjeto, idForm, key, obRetorno, confirme){
 /*
  * Controle visual da seleção de campos na lista.
  */
-function onSelecao(ob, idLista, codigoRegistro){
+function onSelecao(ob, listseq, seqRegistro){
 	
     if(ob.checked){
         var acSelecao = '1';
@@ -195,23 +247,24 @@ function onSelecao(ob, idLista, codigoRegistro){
     
     var registro = ob.parentNode.parentNode;
     var campos = registro.getElementsByTagName('input');
-    var dados = "";
+    var dados = new Array();
     
     var x = 0;
     while(campos.length > x){
-    	dados += '&dados[]='+campos[x].value;
+    	dados[x] = campos[x].value;
     	x=x+1;
     }
+    dados = JSON.stringify(dados);
     
     var metodo = 'onSelecao';
-    var resp = codigoRegistro == 'all' ? 'contLista'+idLista : 'winRet';
-    var retorno = exe(resp, getPath()+'/app.view/TExecs.class.php?method='+metodo+'&acselecao='+acSelecao+dados+'&idForm='+idLista, '', 'GET', 'Sucesso');
+    var resp = seqRegistro == 'all' ? 'contLista'+listseq : 'winRet';
+    var retorno = exe(resp, getPath()+'/app.view/TMain.class.php?method='+metodo+'&acselecao='+acSelecao+'&dados='+dados+'&formseq='+listseq, '', 'GET', 'Sucesso');
 }
 
 /*
  * Abre formulário independente
  */
-function onFormOpen(idForm, obj){
+function onFormOpen(formseq, obj){
 
     if(obj){
         var obRetorno = obj.parentNode;
@@ -219,269 +272,22 @@ function onFormOpen(idForm, obj){
     }
 
 
-    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method=onFormOpen&idForm='+idForm, '', 'GET', 'Sucesso');
+    var retorno = exe('', getPath()+'/app.view/TMain.class.php?method=onFormOpen&formseq='+formseq, '', 'GET', 'Sucesso');
 
     var erro = getErro(retorno);
     if(erro == 'erro'){
-        setRertonoControl(idForm, retorno);
+        setRertonoControl(formseq, retorno);
     }else{
         jQuery('#'+view).append(retorno);
         atribuicao();
     }
 }
 
-/* mantendo funções Originais
-//interface do metodo onClose
-function onClose(tipoRetorno, idForm, alvo, confirme){
-
-    var metodo = 'onClose';
-    var condiction = true;
-
-    if(confirme!=""){
-        if(!confirm(confirme)){
-            condiction = false;
-        }
-    }
-
-    if(condiction==true){
-        if(alvo!= ""){
-            var view = alvo;
-        }
-        // executa ação de salvar campo a campo
-        execSaveAction();
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(jQuery('#'+view).length > 0){
-                jQuery('#'+view).html(retorno);
-            }
-            jQuery('#'+idForm+'-window').dialog('close');
-            
-            atribuicao();
-        }
-    }
-}
-
-//interface do metodo onCancel
-function onCancel(tipoRetorno, idForm, key, alvo, confirme){
-
-    var metodo = 'onCancel';
-    var condiction = true;
-
-    if(confirme!=""){
-        if(!confirm(confirme)){
-            condiction = false;
-        }
-    }
-
-    if(condiction==true){
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            jQuery('#'+view).html(retorno);
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-}
-*/
-
-//interface do metodo onClose
-function onClose(tipoRetorno, idForm, alvo, confirme){
-
-    var metodo = 'onClose';
-    var condiction = true;
-
-    if(confirme!=""){
-
-        jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
-
-        jQuery( '#confirmation' + idForm ).dialog({
-            resizable: false,
-            modal: true,
-            close : function() {
-                $(this).remove()
-            },
-            buttons: {
-                "Cancelar": function() {
-                    $(this).remove();
-                },
-                "Confirmar": function() {
-                    $(this).remove();
-                    if(alvo!= ""){
-                        var view = alvo;
-                    }
-                    // executa ação de salvar campo a campo
-                    execSaveAction(idForm,'false');
-                    //compAction(metodo, key);
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-                    var erro = getErro(retorno);
-                    if(erro == 'erro'){
-                        setRertonoControl(idForm, retorno);
-                    }else{
-                        if(jQuery('#'+view).length > 0){
-                            jQuery('#'+view).html(retorno);
-                        }
-                        jQuery('#'+idForm+'-window').dialog('close');
-
-                        atribuicao();
-                    }
-                }
-            }
-        });
-    }else{
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        // executa ação de salvar campo a campo
-        execSaveAction(idForm,'false');
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            if(jQuery('#'+view).length > 0){
-                jQuery('#'+view).html(retorno);
-            }
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-    
-    return true;
-}
-
-//interface do metodo onCancel
-function onCancel(tipoRetorno, idForm, key, alvo, confirme){
-
-    var metodo = 'onCancel';
-    var condiction = true;
-
-    if(confirme!=""){
-
-        jQuery('<div id=\'confirmation' + idForm + '\' title=\'Confirmação\' style="padding:15px"></div>').html(confirme).appendTo('body');
-
-        jQuery( '#confirmation' + idForm ).dialog({
-            resizable: false,
-            modal: true,
-            close : function() {
-                $(this).remove()
-            },
-            buttons: {
-                "Cancelar": function() {
-                    $(this).remove();
-                },
-                "Confirmar": function() {
-                    $(this).remove();
-                    if(alvo!= ""){
-                        var view = alvo;
-                    }
-
-                    //compAction(metodo, key);
-                    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-                    var erro = getErro(retorno);
-                    if(erro == 'erro'){
-                        setRertonoControl(idForm, retorno);
-                    }else{
-                        jQuery('#'+view).html(retorno);
-                        jQuery('#'+idForm+'-window').dialog('close');
-
-                        atribuicao();
-                    }
-                }
-            }
-        });
-    }else{
-        if(alvo!= ""){
-            var view = alvo;
-        }
-
-        //compAction(metodo, key);
-        var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno='+tipoRetorno+'&idForm='+idForm+'&key='+key, '', 'GET', 'Sucesso');
-
-        var erro = getErro(retorno);
-        if(erro == 'erro'){
-            setRertonoControl(idForm, retorno);
-        }else{
-            jQuery('#'+view).html(retorno);
-            jQuery('#'+idForm+'-window').dialog('close');
-
-            atribuicao();
-        }
-    }
-}
-
-
-/*
- *Representa o metodo onSeve da classe de execução TExecs.class
- */
-function onSave(idForm, asyn){
-    var valores = 'method=onSave&idForm='+idForm+'&tipoRetorno=form';
-    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?'+valores, '', 'GET','Sucesso', asyn);
-    return retorno;
-}
-
-/*
- *
- */
-function autoSaveForm(ob,idForm){
-    var mark = $(ob).attr('ligado') == 'true' ? 'false' : 'true';
-    $(ob).attr('ligado',mark);
-    $(ob).toggleClass('ui-icon-circle-check ui-icon-close');
-    if(mark == 'true'){
-        execSaveAction(idForm,'30000');
-    }else{
-        $(ob).parent().children('.botaosalvarAutomatico_label').html('Salvar Automaticamente');
-    }
-}
-
-/*
- * Função para executar o salvar automatico dos campos no banco de dados
- */
-function execSaveAction(idForm,times){
-
-    onSave(idForm, true);
-
-    if(times != 'false' && times){
-        if($('#botaosalvarAutomatico_label'+idForm).parent().children('.botaosalvarAutomatico').attr('ligado') == 'true'){
-            var save_now = new Date();
-            var save_hours = save_now.getHours();
-            var save_minutes = save_now.getMinutes();
-            var save_seconds = save_now.getSeconds();
-            var save_timeValue = "" + ((save_hours < 10) ? "0" + save_hours: save_hours);
-            save_timeValue  += ((save_minutes < 10) ? ":0" : ":") + save_minutes;
-            save_timeValue  += ((save_seconds < 10) ? ":0" : ":") + save_seconds;
-            
-            $('#botaosalvarAutomatico_label'+idForm).html('Informações salvas às '+save_timeValue);
-            setTimeout('execSaveAction(\''+idForm+'\',\''+times+'\');',times);
-        }
-    }
-}
 
 //INICIO - funções referentes a Impressão de listas
-function printDataGrid(idForm, pane){
+function printDataGrid(formseq, pane){
     var metodo = 'onPrint';
-    var retorno = exe('', getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno=list&idForm='+idForm, '', 'GET', 'Sucesso');
+    var retorno = exe('', getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno=list&formseq='+formseq, '', 'GET', 'Sucesso');
 
     var innerHtml = '<div id="truePrint" style="width: 100%; height: 100%; background-color: #fff; text-align: center;">'+retorno+'</div>';
     $('<div id="modalPrint">'+innerHtml+'</div>').appendTo('body');
@@ -507,12 +313,12 @@ function printDataGrid(idForm, pane){
 
 
 //gerencia os dados do filtro na tela
-function setFiltro(idLista){
+function setFiltro(listseq){
 
-    var vfiltro = document.getElementById('expre'+idLista);
+    var vfiltro = document.getElementById('expre'+listseq);
     if(vfiltro!=null && vfiltro.value!=""){
-        var col = document.getElementById('cols'+idLista);
-        var mfilt = document.getElementById('Manterfilt'+idLista);
+        var col = document.getElementById('cols'+listseq);
+        var mfilt = document.getElementById('Manterfilt'+listseq);
         vfiltro.value = vfiltro.value;
         var valField = vfiltro.name+'='+vfiltro.value+'&'+col.name+'='+col.value+'&'+mfilt.name+'='+mfilt.checked;
     }else{
@@ -522,11 +328,6 @@ function setFiltro(idLista){
     return valField;
 }
 
-// executa a função de armazenamento [pross] de um campo tercerizado
-function triggerPross(id){
-    var ob = document.getElementById(id);
-    ob.onblur();
-}
 
 /*
 *
@@ -564,12 +365,18 @@ function compAction(act, key){
 /**
  * Atualiza objetos DOM
  * @param lista = nome da lista que vai ser atualizada
- * @param idForm = Id fo formulário representado pela lista
+ * @param formseq = Id fo formulário representado pela lista
  */
-function listaRefresh(idLista){
-    var obRetorno = 'contLista'+idLista;
+function listaRefresh(listseq){
+	
+	if(listseq != 'contLista'+listseq){
+		var obRetorno = 'contLista'+listseq;
+	}else{
+		var obRetorno = listseq;
+	}
+    
     var metodo = 'onRefresh';
-    exe(obRetorno,getPath()+'/app.view/TExecs.class.php?method='+metodo+'&tipoRetorno=lista&idForm='+idLista+'&ret='+obRetorno, '', 'POST','Sucesso');
+    exe(obRetorno,getPath()+'/app.view/TMain.class.php?method='+metodo+'&tipoRetorno=lista&formseq='+listseq+'&ret='+obRetorno, '', 'POST','Sucesso');
 }
 
 
@@ -594,7 +401,7 @@ function alocaDado(obj){
 //////////////////////////////////////////////////////////////
 // Executa sistema de envio de dados via pesquisa
 //////////////////////////////////////////////////////////////
-function setDadosPesquisa(idLista, tipoRetorno, dados, codigo){
+function setDadosPesquisa(listseq, tipoRetorno, dados, seq){
 
     if(dados != ""){
 
@@ -639,7 +446,7 @@ function setDadosPesquisa(idLista, tipoRetorno, dados, codigo){
             }
         }
 
-        jQuery('#'+idLista+'-window').dialog('close');
+        jQuery('#'+listseq+'-window').dialog('close');
     }else{
         alertPetrus("Nenhum dado foi transferido - ERROR");
     }
@@ -659,7 +466,7 @@ function onMarcador(ob){
     }else{
         //obAvo.createEvent("MouseEvents");
         obAvo.event(function anonymous(){
-            this.className = 'tdatagrid_row_over';
+            this.className = 'tdatagrid_row_over'
         });
     }
 }
@@ -668,13 +475,22 @@ function onMarcador(ob){
 * Executa e injeta valores em campos predefinidos Ex: Autopreecher no select
 */
 function onLoadSelect(obj, alvo, classe, metodo){
-
     if(obj){
-        var valores = 'classe='+classe+'&metodo='+metodo+'&codigo='+obj.value;
+        var valores = 'classe='+classe+'&metodo='+metodo+'&seq='+obj.value;
         var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
 
         alvo = document.getElementById(alvo);
         alvo.innerHTML = retorno;
+    }
+}
+
+function onLoadValue(obj, alvo, classe, metodo){
+    if(obj){
+        var valores = 'classe='+classe+'&metodo='+metodo+'&seq='+obj.value;
+        var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
+
+        alvo = document.getElementById(alvo);
+        alvo.value = retorno;
     }
 }
 
@@ -716,22 +532,13 @@ function setAlert(mensagem){
     });
 }
 
-//Esconde ou exibe bloco (altera a situação atual)
-function toggleBlock(id){
-    $('#'+id).toggle('blind');
-}
 
 
-function calcula(campo,string){
-    var conta = string;
-    str.match('$');
-
-
-}
-
-
-function cloneForm(form,codigo,lista,qtde){
-    var valores = 'classe=TCloneForm&metodo=run&form='+form+'&cod='+codigo+'&quantidade='+qtde;
+/*
+ * Clona um formulario
+ */
+function cloneForm(form,seq,lista,qtde){
+    var valores = 'classe=TCloneForm&metodo=run&form='+form+'&cod='+seq+'&quantidade='+qtde;
     var retorno = exe('', getPath()+'/app.util/TSec.php',  valores, 'POST','Sucesso');
     $('#bodyDisplay').append(retorno);
     $('#confirmReplicacao').remove();
@@ -742,6 +549,7 @@ function cloneForm(form,codigo,lista,qtde){
 
 //Função para mudar de campo com a tecla enter
 function checkForEnter (event) {
+	
     if (event.keyCode == 13) {
         currentBoxNumber = textboxes.index(this);
 
@@ -755,41 +563,6 @@ function checkForEnter (event) {
 }
 
 
-function addAllReg(ob){
-    var attrOb = $(ob).attr('checked') == true ? true : false;
-    $(ob).parent().parent().parent().find('input:checkbox[checked!='+attrOb+'][id!='+$(ob).attr('id')+']').attr('checked',attrOb).click().attr('checked',attrOb);
-}
-
-function urlDecode(string, overwrite){
-    if(!string || !string.length){
-        return {};
-    }
-    var obj = {};
-    var pairs = string.split('&');
-    var pair, name, value;
-    var lsRegExp = /\+/g;
-    for(var i = 0, len = pairs.length; i < len; i++){
-        pair = pairs[i].split('=');
-        name = unescape(pair[0]);
-        value = unescape(pair[1]).replace(lsRegExp, " ");
-        //value = decodeURIComponent(pair[1]).replace(lsRegExp, " ");
-        if(overwrite !== true){
-            if(typeof obj[name] == "undefined"){
-                obj[name] = value;
-            }else if(typeof obj[name] == "string"){
-                obj[name] = [obj[name]];
-                obj[name].push(value);
-            }else{
-                obj[name].push(value);
-            }
-        }else{
-            obj[name] = value;
-        }
-    }
-    return obj;
-}
-
-
 function _GET(param){
 	
 	var wl = window.location.href;
@@ -798,31 +571,30 @@ function _GET(param){
 	
 }
 
-
-function populaCampo(campoRet,campoFk,colunaFk,tabela,coluna){
-
-    var valores = '&campoFk='+ $('#'+campoFk).val() +'&colunaFk='+colunaFk+'&tabela='+tabela+'&coluna='+coluna;
-    var dados = 'classe=TPopulaCampo&metodo=commit'+valores;
-
-    var resposta = exe('', getPath()+'/app.util/TSec.php',dados,'POST','Sucesso');
-
-    if(resposta){
-        $('#'+campoRet).val(resposta);
-    }
+function pesqModulo(){
+  alertPetrus('Em breve');
 }
 
- 
-function selecionaDataCalendario(calendario, title, start, end, allDay, callback) {
-    calendar.fullCalendar('renderEvent',
-        {
-            title: title,
-            start: start,
-            end: end,
-            allDay: allDay
-        },
-        false // make the event "stick"
-    );
-    calendar.fullCalendar('unselect');
 
-    callback();
+function alertPetrus(mensagem){
+	
+	//alert(titulo+'\n\n'+mensagem);
+	alert(mensagem);
+	
+/*    if((!titulo) || (titulo == '')) titulo = 'Alerta';
+    id = 'alert-' + $('.alerta').length;
+    jQuery('<div id=\''+id+'\' title=\'' +titulo + '\' style="padding:15px" class=alerta></div>').html(mensagem).appendTo('body');
+
+    jQuery( '#'+ id).dialog({
+        resizable: false,
+        modal: true,
+        close : function() {
+            $(this).remove()
+        },
+        buttons: {
+            "Fechar": function() {
+                $(this).remove();
+            }
+        }
+    });*/
 }

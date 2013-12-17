@@ -70,7 +70,7 @@ final class TConnection{
 
        }catch(Exception $e){
            //echo $e.'<br><br>Ouve uma falha na conexão';
-           new setException(TMensagem::ERRO_GERAL_CONEXAO.' - <br>'.$e);
+           new setException(TMensagem::ERRO_GERAL_CONEXAO);//.' - <br>'.$e);
        }
         
         // retorna o objeto instanciado.

@@ -13,17 +13,17 @@ function __autoload($classe) {
      $obUser = $obUser->getUser();
 //=========================================================	
      
-$dbo = new TDbo(TConstantes::VIEW_PESSOAS_ALUNOS);
+$dbo = new TDbo(TConstantes::VIEW_ALUNO);
 $crit = new TCriteria();
-$crit->add(new TFilter('codigopessoa','not in','(select codigopessoa from dbusuario)'));
-$ret = $dbo->select('nomepessoa,codigo,codigopessoa',$crit);
+$crit->add(new TFilter('seqpessoa','not in','(select seqpessoa from dbusuario)'));
+$ret = $dbo->select('nomepessoa,seq,seqpessoa',$crit);
 
 while($aluno = $ret->fetchObject()){
 
                     //Gera usuario e privilegios do aluno.
                     $TUsuario = new TUsuario();
-                    $provSenha = substr($aluno->codigopessoa, 0,-4);
-                    $retUsuario = $TUsuario->setUsuario($aluno->codigopessoa, $aluno->codigo, $provSenha);
+                    $provSenha = substr($aluno->seqpessoa, 0,-4);
+                    $retUsuario = $TUsuario->setUsuario($aluno->seqpessoa, $aluno->seq, $provSenha);
 
                     if($retUsuario){
                             $priv = array();
@@ -55,10 +55,10 @@ while($aluno = $ret->fetchObject()){
                             $priv[] = array("331 ","717 ","3");
 
                             foreach($priv as $vl){
-                                $TUsuario->setPrivilegio($retUsuario["codigo"], $vl[2], $vl[0],$vl[1],'1');
+                                $TUsuario->setPrivilegio($retUsuario["seq"], $vl[2], $vl[0],$vl[1],'1');
                             }
 
-                        echo '<p><b>Aluno: '.$aluno->nomepessoa.'</b><br/> Usuario '.$aluno->codigo.' gerado com sucesso.<br/> Senha provisória: '.$provSenha.'</p>';
+                        echo '<p><b>Aluno: '.$aluno->nomepessoa.'</b><br/> Usuario '.$aluno->seq.' gerado com sucesso.<br/> Senha provisória: '.$provSenha.'</p>';
                     }
 }
 

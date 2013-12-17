@@ -10,13 +10,13 @@ class TEmail {
      * $destinatario = E-mail a receber a mensagem.
      * $titulo = Assunto da mensagem
      * $mensagem = Mensagem a ser enviada (Aceita HTML)
-     * $remetente = codigo do Usuario remetente, valor nulo corrensponde ao email da Unidade.
+     * $remetente = seqdo Usuario remetente, valor nulo corrensponde ao email da Unidade.
      */
     function enviar($destinatario,$titulo,$mensagem,$save= true,$remetente = NULL) {
 
         //INICIO - Retorna informações de envio, Nome da Unidade e Informações Principais
 
-        $sql = new TDbo(TConstantes::DBUNIDADES_PARAMETROS);
+        $sql = new TDbo(TConstantes::DBUNIDADE_PARAMETRO);
         $crit = new TCriteria();
         $crit->add(new TFilter("parametro","=",'enviarEmail'));
         $ret = $sql->select("valor enviaEmail",$crit);
@@ -25,12 +25,12 @@ class TEmail {
        if($ob->enviaEmail == '1'){
         $obUser = new TCheckLogin();
         $obUser = $obUser->getUser();
-        $unidade = $obUser->unidade->codigo;
-        $codigoUser = $obUser->codigo;
+        $unidade = $obUser->unidade->seq;
+        $seq = $obUser->seq;
 
-        $sqlParametro = new TDbo(TConstantes::DBUNIDADES);
+        $sqlParametro = new TDbo(TConstantes::DBUNIDADE);
         $crit = new TCriteria();
-        $crit->add(new TFilter("codigo","=",$unidade));
+        $crit->add(new TFilter("seq","=",$unidade));
         $retParametro = $sqlParametro->select("*",$crit);
         $obParametro = $retParametro->fetchObject();
 
@@ -55,14 +55,14 @@ class TEmail {
 
         //INICIO - Validada Remetente
         if($remetente) {
-            $sqlRemetente = new TDbo(TConstantes::DBPESSOAS);
+            $sqlRemetente = new TDbo(TConstantes::DBPESSOA);
             $critRemetente = new TCriteria();
-            $critRemetente->add(new TFilter("codigo","=",$remetente));
+            $critRemetente->add(new TFilter("seq","=",$remetente));
             $retRemetente = $sqlRemetente->select("*",$crit);
             
             $obRemetente = $retRemetente->fetchObject();
             
-            $headers .= "From: ".$obRemetente->nome_razaosocial."<".$obRemetente->email1."> \r\n";
+            $headers .= "From: ".$obRemetente->pessnmrz."<".$obRemetente->email1."> \r\n";
             //$headers .= "Reply-To: ".$obParametro->nome." <".$remetente_padrao."> \r\n";
         }else {
             $headers .= "From: ".$obParametro->razaoSocial."<".$remetente_padrao."> \r\n";
@@ -78,7 +78,7 @@ class TEmail {
         //FIM
 
         //INICIO - Envia e-mail            
-            $dadosEmail['codigoRemetente'] = $codigoUser;
+            $dadosEmail['seqRemetente'] = $seq;
             $dadosEmail['destinatario'] = $destinatario;
             $dadosEmail['mensagem'] = str_replace('<BR />', "\r\n", $headers."\r\n".$mensagem."\r\n\r\n".$fotter);
             $dadosEmail['horaCad'] = date("H:i:s");
@@ -88,7 +88,7 @@ class TEmail {
             $insert = $sqlInsert->insert($dadosEmail);
             }
         if(mail($destinatario,$titulo,$corpo,$headers)) {
-            $dadosEmail['codigoRemetente'] = $codigoUser;
+            $dadosEmail['seqRemetente'] = $seq;
             $dadosEmail['destinatario'] = $destinatario;
             $dadosEmail['mensagem'] = str_replace('<BR />', "\r\n", $headers."\r\n".$mensagem."\r\n\r\n".$fotter);
             $dadosEmail['horaCad'] = date("H:i:s");

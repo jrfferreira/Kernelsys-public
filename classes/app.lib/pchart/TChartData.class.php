@@ -81,14 +81,14 @@
              if ( $DataColumns == -1 )
               {
                $ID = 1;
-               foreach($Values as $key => $Value)
+               foreach($Values as $seq => $Value)
                 { $this->SetSerieName($Value,"Serie".$ID); $ID++; }
               }
              else
               {
                $SerieName = "";
 
-               foreach($DataColumns as $key => $Value)
+               foreach($DataColumns as $seq => $Value)
                 $this->SetSerieName($Values[$Value],"Serie".$Value);
               }
              $HeaderParsed = TRUE;
@@ -98,7 +98,7 @@
              if ( $DataColumns == -1 )
               {
                $ID = 1;
-               foreach($Values as $key => $Value)
+               foreach($Values as $seq => $Value)
                 { $this->AddPoint(intval($Value),"Serie".$ID); $ID++; }
               }
              else
@@ -107,7 +107,7 @@
                if ( $DataName != -1 )
                 $SerieName = $Values[$DataName];
 
-               foreach($DataColumns as $key => $Value)
+               foreach($DataColumns as $seq => $Value)
                 $this->AddPoint($Values[$Value],"Serie".$Value,$SerieName);
               }
             }
@@ -136,7 +136,7 @@
       }
      else
       {
-       foreach($Value as $key => $Val)
+       foreach($Value as $seq => $Val)
         {
          $this->Data[$ID][$Serie] = $Val;
          if (!isset($this->Data[$ID]["Name"]))
@@ -155,7 +155,7 @@
      else
       {
        $Found = FALSE;
-       foreach($this->DataDescription["Values"] as $key => $Value )
+       foreach($this->DataDescription["Values"] as $seq => $Value )
         if ( $Value == $SerieName ) { $Found = TRUE; }
 
        if ( !$Found )
@@ -169,10 +169,10 @@
 
      if ( isset($this->Data[0]) )
       {
-       foreach($this->Data[0] as $Key => $Value)
+       foreach($this->Data[0] as $seq => $Value)
         {
-         if ( $Key != "Name" )
-          $this->DataDescription["Values"][] = $Key;
+         if ( $seq != "Name" )
+          $this->DataDescription["Values"][] = $seq;
         }
       }
     }
@@ -183,10 +183,10 @@
       return(0);
 
      $Found = FALSE;
-     foreach($this->DataDescription["Values"] as $key => $Value )
+     foreach($this->DataDescription["Values"] as $seq => $Value )
       {
        if ( $Value == $SerieName )
-        unset($this->DataDescription["Values"][$key]);
+        unset($this->DataDescription["Values"][$seq]);
       }
     }
 
@@ -243,8 +243,8 @@
 
    function removeAllSeries()
     {
-     foreach($this->DataDescription["Values"] as $Key => $Value)
-      unset($this->DataDescription["Values"][$Key]);
+     foreach($this->DataDescription["Values"] as $seq => $Value)
+      unset($this->DataDescription["Values"][$seq]);
     }
 
    function GetData()

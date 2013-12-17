@@ -10,34 +10,34 @@ class TUnidade {
     private $obUnidadeParametro = NULL;
 
 
-    public function __construct($codigounidade = null){
+    public function __construct($unidseq = null){
         $obUser = new TCheckLogin();
         $obUser = $obUser->getUser();
-        if($codigounidade){
-            $this->unidade = $codigounidade;
+        if($unidseq){
+            $this->unidseq = $unidseq;
         }else{
-            $this->unidade = $obUser->unidade->codigo;
+            $this->unidseq = $obUser->unidade->seq;
         }
 
     }
 
 	/**
      * Retorna um objeto Unidade complento
-     * param <codigo> $codigounidade = codigo da unidade
+     * param <seq> $sequnidade = seqda unidade
      */
     public function getUnidade(){
         try{
-            if($this->unidade) {
+            if($this->unidseq) {
                     $this->obTDbo = new TDbo();
-                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADES);
+                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADE);
                     $criteria = new TCriteria();
-                    $criteria->add(new TFilter('codigo','=',$this->unidade));
+                    $criteria->add(new TFilter(TConstantes::SEQUENCIAL,'=',$this->unidseq));
                     $retUnidade = $this->obTDbo->select("*", $criteria);
                     $this->obUnidade = $retUnidade->fetchObject();
 
                     return $this->obUnidade;
              }else{
-                 throw new ErrorException("A unidade ".$codigounidade." não foi encontrada.");
+                 throw new ErrorException("A unidade não foi encontrada.");
              }
          }catch (Exception $e) {
             new setException($e);
@@ -47,15 +47,15 @@ class TUnidade {
     }
     /**
      * Retorna um objeto Unidade complento
-     * param <codigo> $codigounidade = codigo da unidade
+     * param <seq> $sequnidade = seqda unidade
      */
     public function getParametro($parametro = null){
         try{
-            if($this->unidade) {
+            if($this->unidseq) {
                     $this->obTDbo = new TDbo();
-                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADES_PARAMETROS);
+                    $this->obTDbo->setEntidade(TConstantes::DBUNIDADE_PARAMETRO);
                     $criteria = new TCriteria();
-                    $criteria->add(new TFilter('unidade','=',$this->unidade));
+                    $criteria->add(new TFilter('unidseq','=',$this->unidseq));
                     if($parametro){
                         $criteria->add(new TFilter('parametro','=',strtolower($parametro)));
                     }
@@ -65,9 +65,14 @@ class TUnidade {
                             $param = $t->parametro;
                             $this->obUnidadeParametro->$param = $t->valor;
                      }
-                    return $this->obUnidadeParametro;
+                     
+                    if($parametro){
+                    	return $this->obUnidadeParametro->$parametro;
+                    }else{
+                    	return $this->obUnidadeParametro;
+                    }
              }else{
-                 throw new ErrorException("A unidade ".$this->unidade." não foi encontrada.");
+                 throw new ErrorException("A unidade não foi encontrada.");
              }
          }catch (Exception $e) {
             new setException($e);

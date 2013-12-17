@@ -12,6 +12,7 @@ class TPassword extends TField{
     {
         // atribui as propriedades da TAG
         $this->tag->name  =  $this->name;   // nome da TAG
+        $this->tag->id =  $this->id;  // id da TAG
         $this->tag->value =  $this->value;  // valor da TAG
         $this->tag->type  =  'password';    // tipo do input
         $this->tag->style =  "width:{$this->size}"; // tamanho em pixels

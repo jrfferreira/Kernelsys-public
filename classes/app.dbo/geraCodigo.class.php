@@ -2,9 +2,9 @@
 //--------------------------------------------------------------
 // Gera códigos
 
-class geraCodigo{
+class geraseq{
 
-	private $codigo = NULL;
+	private $seq= NULL;
 	private $fator  = NULL;
 	
 	public function __construct($fator){

@@ -18,9 +18,9 @@ class TShowPrivilegios {
 	public function get() {
 		
 		try {
-			$tKrs = new TKrs ( 'modulos_principais' );
+			$tKrs = new TKrs ( 'modulo' );
 			$criterio = new TCriteria ();
-			$criterio->add ( new TFilter ( 'ativo', '=', '1' ) );
+			$criterio->add ( new TFilter ( 'statseq', '=', '1' ) );
 			
 			$runMenu = $tKrs->select ( '*', $criterio );
 			
@@ -37,17 +37,17 @@ class TShowPrivilegios {
 				while ( $retMenu = $runMenu->fetchObject () ) {
 					
 					// checa privilegio liberado
-					$sqlUser = "select * from dbusuario where codigo='" . $this->param . "'";
+					$sqlUser = "select * from dbusuario where seq='" . $this->param . "'";
 					$runUser = $conn->Query ( $sqlUser );
 					$retUser = $runUser->fetchObject ();
 					
-					$sqlCkPriv = "select id,ativo from dbusuario_privilegio where codigo='" . $retUser->codigopessoa . "' and nivel='0' and modulo='" . $retMenu->id . "'";
+					$sqlCkPriv = "select seq,statseq from dbusuario_privilegio where seq='" . $retUser->seqpessoa . "' and nivel='0' and modulo='" . $retMenu->seq . "'";
 					$runCkPriv = $conn->Query ( $sqlCkPriv );
 					$retCkPriv = $runCkPriv->fetchObject ();
 					
-					$obCheck = new TCheckButton ( 'menuOp' . $retMenu->id );
-					$obCheck->setValue ( $retMenu->id );
-					if ($retCkPriv->ativo == "1") {
+					$obCheck = new TCheckButton ( 'menuOp' . $retMenu->seq );
+					$obCheck->setValue ( $retMenu->seq );
+					if ($retCkPriv->statseq == "1") {
 						$obCheck->checked = '1';
 					}
 					$obCheck->onclick = "setPvlShow(this, '" . $this->param . "')";

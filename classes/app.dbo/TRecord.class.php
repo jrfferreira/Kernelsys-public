@@ -10,20 +10,20 @@ abstract class TRecord{
     
     /* método __construct()
      *  instancia um Active Record
-     *  se passado o $id, já carrega o objeto
-     *  param [$id] = ID do objeto
+     *  se passado o $seq, já carrega o objeto
+     *  param [$seq] = ID do objeto
      */
-    public function __construct($id = NULL){
+    public function __construct($seq = NULL){
 
          //Retorna Usuario logado===================================
 		$this->obUser = new TCheckLogin();
 		$this->obUser = $this->obUser->getUser();
 		//=========================================================
 
-        if ($id){ // se o ID for informado
+        if ($seq){ // se o ID for informado
 
             // carrega o objeto correspondente
-            $this->objeto = $this->load($id);
+            $this->objeto = $this->load($seq);
             if ($this->objeto){
 
                 $this->fromArray($this->objeto->toArray());
@@ -38,7 +38,7 @@ abstract class TRecord{
      */
     public function __clone(){
 
-        unset($this->id);
+        unset($this->seq);
     }
     
     /*
@@ -113,19 +113,19 @@ abstract class TRecord{
 		// verifica se tem ID ou se existe na base de dados
 		// se não ouver um ID adiciona um novo registro
 		// se ouver um ID execura a atualização do registro na base dade dados
-        if (empty($this->data['id']) or (!$this->load($this->id)))
+        if (empty($this->data['seq']) or (!$this->load($this->seq)))
         {
             // incrementa o ID
-            $this->id = $this->getLast() +1;
+            $this->seq = $this->getLast() +1;
             // cria uma instrução de insert
             $sql = new TSqlInsert;
             $sql->setEntity($this->getEntity());
 
             // percorre os dados do objeto
-            foreach ($this->data as $key => $value)
+            foreach ($this->data as $seq => $value)
             {
                 // passa os dados do objeto para o SQL
-                $sql->setRowData($key, $this->$key);
+                $sql->setRowData($seq, $this->$seq);
             }
         }
         else{
@@ -136,18 +136,18 @@ abstract class TRecord{
 			
 			// cria um critério de seleção baseado no ID
             $criteria = new TCriteria;
-            $criteria->add(new TFilter('id', '=', $this->id));
+            $criteria->add(new TFilter('seq', '=', $this->seq));
 
             $sql->setCriteria($criteria);
 			
 			
 	        // percorre os dados do objeto
-            foreach ($this->data as $key => $value)
+            foreach ($this->data as $seq => $value)
             {
-                if ($key !== 'id') // o ID não precisa ir no UPDATE
+                if ($seq !== 'seq') // o seq não precisa ir no UPDATE
                 {
                     // passa os dados do objeto para o SQL
-                    $sql->setRowData($key, $this->$key);
+                    $sql->setRowData($seq, $this->$seq);
                 }
             }
 
@@ -172,9 +172,9 @@ abstract class TRecord{
      * método load()
      *  Recupera (retorna) um objeto da base de dados
      *  atrav�s de seu ID e instancia ele na mem�ria
-     *  param $id = ID do objeto
+     *  param $seq = ID do objeto
      */
-    public function load($id){
+    public function load($seq){
 	
 	    // instancia instrução de SELECT
         $sql = new TSqlSelect;
@@ -183,7 +183,7 @@ abstract class TRecord{
         
         // cria critério de seleção baseado no ID
         $criteria = new TCriteria;
-        $criteria->add(new TFilter('id', '=', $id));
+        $criteria->add(new TFilter('seq', '=', $seq));
 
         // define o critério de seleção de dados
         $sql->setCriteria($criteria);
@@ -216,19 +216,19 @@ abstract class TRecord{
     /*
      * método delete()
      *  Exclui um objeto da base de dados atrav�s de seu ID.
-     *  param $id = ID do objeto
+     *  param $seq = ID do objeto
      */
-    public function delete($id = NULL){
+    public function delete($seq = NULL){
         
         // o ID � o parâmetro ou a propriedade ID
-        $id = $id ? $id : $this->id;
+        $seq = $seq ? $seq : $this->seq;
         // instancia uma instrução de DELETE
         $sql = new TSqlDelete;
         $sql->setEntity($this->getEntity());
         
         // cria critério de seleção de dados
         $criteria = new TCriteria;
-        $criteria->add(new TFilter('id', '=', $id));
+        $criteria->add(new TFilter('seq', '=', $seq));
         // define o critério de seleção baseado no ID
         $sql->setCriteria($criteria);
         
@@ -256,7 +256,7 @@ abstract class TRecord{
         if ($conn = TTransaction::get()) {
             // instancia instrução de SELECT
             $sql = new TSqlSelect;
-            $sql->addColumn('max(id) as id');
+            $sql->addColumn('max(seq) as seq');
             $sql->setEntity($this->getEntity());
             // cria log e executa instrução SQL
             TTransaction::log($sql->getInstruction());

@@ -58,11 +58,11 @@ class TDataGrid extends TTable {
      * Elimina todas linhas de dados da DataGrid
      */
     function clear() {
-        // faz uma cópia do cabe�alho
+        // faz uma cópia do cabeçalho
         $copy = $this->children[0];
         // inicializa o vetor de linhas
         $this->children = array();
-        // acrescenta novamente o cabe�alho
+        // acrescenta novamente o cabeçalho
         $this->children[] = $copy;
         // zera a contagem de linhas
         $this->rowcount = 0;
@@ -181,7 +181,7 @@ class TDataGrid extends TTable {
         if ($this->actions and $this->colsAction == true) {
 
             // percorre as ações
-            foreach ($this->actions as $keyAct=>$action) {
+            foreach ($this->actions as $seqAct=>$action) {
 
                 // obtém as propriedades da ação
                 $nomeCampo  = $action->nome;
@@ -191,8 +191,8 @@ class TDataGrid extends TTable {
 
                 if($action->field) {
                     $field  = $action->field;
-                    $key    = $object->$field;
-                    $action->setParameter('key',$key);
+                    $seq    = $object->$field;
+                    $action->setParameter('key',$seq);
                 }
                 $acao   = $action->serialize();
 
@@ -203,7 +203,7 @@ class TDataGrid extends TTable {
 
                     $btAcao = new $tipoCampo($nomeCampo);
                     $btAcao->setId($nomeCampo.'_'.$this->rowcount);
-                    $btAcao->setValue($key);
+                    $btAcao->setValue($seq);
                     $btAcao->alt = $action->title;
                     $btAcao->title = $action->title;
                     if($action->value){$btAcao->value = $action->value;}
@@ -291,6 +291,7 @@ class TDataGrid extends TTable {
                 $celula = $row->addCell($data);
                 $celula->style = "padding-{$align}:4px; border-left:1px solid #B8C7DC; border-bottom:1px solid #B8C7DC; text-align: {$align};";
                 $celula->reference = $name;
+                $celula->id = $name.$seq;
                 $celula->align = $align;
                 if($title){ $celula->title = $title; }
                 $celula->width = $width;

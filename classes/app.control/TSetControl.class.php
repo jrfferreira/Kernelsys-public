@@ -2,7 +2,7 @@
 /**
  * Apresenta metodos para validação e manipulação da camada de
  * controle do sistema.
- * (Camada que gerencia o fluxo de informaçães e as converte em dados
+ * (Camada que gerencia o fluxo de informações e as converte em dados
  * para serem armazenadas em banco de dados.)
  * @author Wagne Borba
  * @date 27/01/2010
@@ -11,19 +11,29 @@ class TSetControl {
 
     private $status = true;
     private $argumento =  array();
-
-    public function main($idForm, $entidade, $regras, $valor, $idCampo) {
+	
+    /**
+     * Método que gerencia a execução das regras de negocio
+     * @param int $formseq = identificação do furmulario que chamou a regra
+     * @param String $entidade = entidade que o formulario representa
+     * @param String $regras = Regras a serem executadas agrupadas por [;] Ex: [meotod1;metodo2]. Pode ser passado 
+     * 						   um argumento statico no metodo com a notação [metodo=>argumento]
+     * @param String $valor = valor do argumento atual
+     * @param int $idCampo = identificador do campo que chamou a regra
+     */
+    public function main($formseq, $entidade, $regras, $valor, $idCampo) {
         try {
-            if($idForm and $entidade and $regras) {
+            if($formseq and $entidade and $regras) {
 
                 $this->display_campo = $idCampo.'dsp';
 
                 $vetRegras = explode(';',$regras);
-                $this->argumento['idForm'] = $idForm;
-                $this->argumento['entidade'] = $entidade;
+                
+                $this->argumento[TConstantes::FORM] = $formseq;
+                $this->argumento[TConstantes::ENTIDADE] = $entidade;
                 $this->argumento['campo'] = $idCampo;
                 $this->argumento['valor'] = $valor;
-
+                
                 foreach($vetRegras as $metodo) {
 
                     $metodoArgs = explode("=>",$metodo);
@@ -34,7 +44,7 @@ class TSetControl {
                     $metodoMain = $metodoArgs[0]."Main";
 
                     if($this->argumento['valor'] !== null and $this->status === true) {
-                         $this->argumento = call_user_func(array($this, $metodoMain),$this->argumento);
+                        $this->argumento = call_user_func(array($this, $metodoMain),$this->argumento);
                     }
                     else {
                         $this->argumento = false;
@@ -56,7 +66,7 @@ class TSetControl {
 
     /**
     *
-    * param <type> $idForm
+    * param <type> $formseq
     * return <array>
     */
     public function setNulos($labelCampo, $valor){
@@ -67,7 +77,7 @@ class TSetControl {
              }
 
             if($validation === false){
-                $retorno = "O campo: ".$labelCampo.' � obrigatório e deve ser preenchido com informaç�o válida.';
+                $retorno = "O campo: ".$labelCampo.' é obrigatório e deve ser preenchido com informação válida.';
             }else{
                 $retorno = false;
             }
@@ -81,7 +91,7 @@ class TSetControl {
     }
 
     /**
-     * Aloca dados no nivel de ses�o AlocaDados
+     * Aloca dados no nivel de sesão AlocaDados
      * param $vetor = vetor com valores
      */
     private function setAlocaDadosMain($vetor) {
@@ -90,7 +100,7 @@ class TSetControl {
                 $obAlocaDados = new TAlocaDados();
                 $obAlocaDados->setValue($vetor['campo'], $vetor['valor']);
             }else {
-                throw new ErrorException("O argumento passado não � um vetor v�lido.");
+                throw new ErrorException("O argumento passado não é um vetor válido.");
             }
         }catch(Exception $e) {
             new setException($e);
@@ -109,7 +119,7 @@ class TSetControl {
                 $obAlocaDados = new TAlocaDados();
                 $vetor['valor'] = $obAlocaDados->getValue($vetor['argumento']);
             }else {
-                throw new ErrorException("O argumento passado não � um vetor v�lido.");
+                throw new ErrorException("O argumento passado não é um vetor válido.");
             }
         }catch(Exception $e) {
             new setException($e);
@@ -149,7 +159,7 @@ class TSetControl {
 //    }
 
     /*
-     * Aplica configuraç�o de encriptaç�o em senhas ou qualquer dado
+     * Aplica configuraçs�o de encriptaçs�o em senhas ou qualquer dado
      * que precise ser encriptado. (Fora de escopo do metodo main)
     */
     public function setPass($valor) {
@@ -160,7 +170,7 @@ class TSetControl {
     }
     
     /**
-     * Adiquire chave daq sesão
+     * Adiquire chave daq ses�o
      */
     public function getSessionPass($valor) {
         if($valor) {
@@ -170,7 +180,7 @@ class TSetControl {
     }
     
     /**
-     * aplica encriptaç�o dentro do escopo do metodo main.
+     * aplica encriptaçs�o dentro do escopo do metodo main.
      */
     private function setPassMain($vetor) {
         $vetor['valor'] = $this->setPass($vetor['valor']);
@@ -178,41 +188,42 @@ class TSetControl {
     }
 
     /**
-     * Valida Duplicaç�o baseada no campo
+     * Valida Duplicação baseada no campo
      * param <array> $vetor = vetor contendo o nome do campo e o valor
      */
     private function setDuplicacaoMain($vetor) {
         try{
                 //retorna o cabeçalho do formulário
                 $obHeaderForm = new TSetHeader();
-                $headerForm = $obHeaderForm->getHead($vetor['idForm']);
+                $headerForm = $obHeaderForm->getHead($vetor[TConstantes::FORM]);
 
                 if($headerForm['colunafilho']){
                     $colunafilho = $headerForm['colunafilho'];
                 }else{
-                    $colunafilho = 'codigo';
+                    $colunafilho = TConstantes::SEQUENCIAL;
                 }
 
                 $criteriaDup = new TCriteria();
-                    if($headerForm['codigoPai'] and $headerForm['idLista'] != $headerForm['listapai']){
-                        $criteriaDup->add(new TFilter($headerForm['destinocodigo'], '=', $headerForm['codigoPai']));
-                        $criteriaDup->add(new TFilter($colunafilho, '!=', $headerForm['codigo']));
+                
+                    if($headerForm['seqPai'] and $headerForm[TConstantes::LISTA] != $headerForm['listapai']){
+                        $criteriaDup->add(new TFilter($headerForm['destinoseq'], '=', $headerForm['seqPai']));
+                        $criteriaDup->add(new TFilter($colunafilho, '!=', $headerForm[TConstantes::SEQUENCIAL]));
                     }
-                    if($headerForm['codigo']){
-                        $criteriaDup->add(new TFilter($colunafilho, '!=', $headerForm['codigo']));
+                    if($headerForm[TConstantes::SEQUENCIAL]){
+                        $criteriaDup->add(new TFilter(TConstantes::SEQUENCIAL, '!=', $headerForm[TConstantes::SEQUENCIAL]));
                     }
                 $criteriaDup->add(new TFilter($vetor['campo'], '=', $vetor['valor']));
 
              $obDbo = new TDbo();
-             $obDbo->setEntidade($vetor['entidade']);
-             $retDados = $obDbo->select('codigo', $criteriaDup);
+             $obDbo->setEntidade($vetor[TConstantes::ENTIDADE]);
+             $retDados = $obDbo->select(TConstantes::SEQUENCIAL, $criteriaDup);
              $obDados = $retDados->fetchObject();
 
-             if($obDados->codigo){
+             if($obDados->seq){
                  
                 $duplic = false;
-                $vetor['codigoRetorno'] = 'erro#4';
-                $vetor['msg'] = "Já existe um registro com a informaç�o fornecida ( ".$vetor['valor'].").<br>";
+                $vetor['seqRetorno'] = 'erro#4';
+                $vetor['msg'] = "Já existe um registro com a informação fornecida ( ".$vetor['valor'].").";
              }else{
                 $duplic = $vetor['valor'];
              }
@@ -276,6 +287,15 @@ class TSetControl {
         }
 
     }
+    
+    /**
+     * Metodo Main para Ceps
+     */
+    public function validaCepMain($vetor){
+    	$vetor['valor'] =  $cnpj = sprintf('%08s', preg_replace('@[^0-9]@', '', $vetor['valor']));
+    	return $vetor;
+    }
+    
 
     /**
     * Metodo Main do setDataDB
@@ -297,18 +317,18 @@ class TSetControl {
 	 * 
 	 * @param unknown_type $vetor
 	 */
-    public function validaCpfCnpjMain($vetor){
+    public function validaCnpjMain($vetor){
     	
         $obHeaderForm = new TSetHeader();
-        $headerForm = $obHeaderForm->getHead($vetor['idForm']);
-        if(strtolower($headerForm['camposSession']['tipo']['valor']) == 'j'){
+        $headerForm = $obHeaderForm->getHead($vetor[TConstantes::FORM]);
+        if(strtolower($headerForm[TConstantes::CAMPOS_FORMULARIO]['tipo']['valor']) == 'j'){
 	        $cnpj = $this->setTrueCnpj($vetor['valor']);
 	        if($cnpj){
-	            $dbo = new TDbo($vetor['entidade']);
+	            $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
 	            $crit = new TCriteria();
-	            $crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
+	            //$crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
 	            $crit->add(new TFilter($vetor['campo'],'=',$cnpj),'OR');
-	            $filter = new TFilter('codigo','!=',$headerForm['codigo']);
+	            $filter = new TFilter(TConstantes::SEQUENCIAL,'=',$headerForm[TConstantes::SEQUENCIAL]);
 	            $filter->tipoFiltro = 6;
 	            $crit->add($filter,'AND');
 	
@@ -318,7 +338,7 @@ class TSetControl {
 	                $duplic = true;
 	            }
 	            if($duplic){
-	                $vetor['codigoRetorno'] = 'erro#4';
+	                $vetor['seqRetorno'] = TConstantes::ERRO_VALIDACAO;
 	                $vetor['msg'] = "O CNPJ passado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
 	                $vetor['valor'] = false;
 	                return $vetor;
@@ -327,44 +347,13 @@ class TSetControl {
 	                return $vetor;
 	            }
 	        }else{
-	            $vetor['codigoRetorno'] = 'erro#4';
+	            $vetor['seqRetorno'] = TConstantes::ERRO_VALIDACAO;
 	            $vetor['msg'] = "O CNPJ passado não é válido ( ".$vetor['valor'].").<br>";
 	            $vetor['valor'] = false;
 	            return $vetor;
 	        }
 	        
 	        return $vetor;
-        }else{
-        	$cpf = $this->setTrueCpf($vetor['valor']);
-        	if($cpf){
-        		$dbo = new TDbo($vetor['entidade']);
-        		$crit = new TCriteria();
-        		$crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
-        		$crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
-        		$filter = new TFilter('codigo','!=',$headerForm['codigo']);
-        		$filter->tipoFiltro = 6;
-        		$crit->add($filter,'AND');
-        	
-        		$ret = $dbo->select($vetor['campo'],$crit);
-        		$duplic = false;
-        		while($n = $ret->fetchObject()){
-        			$duplic = true;
-        		}
-        		if($duplic){
-        			$vetor['codigoRetorno'] = 'erro#4';
-        			$vetor['msg'] = "O CPF informado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
-        			$vetor['valor'] = false;
-        			return $vetor;
-        		}else{
-        			$vetor['valor'] = $cpf;
-        			return $vetor;
-        		}
-        	}else{
-        		$vetor['codigoRetorno'] = 'erro#4';
-        		$vetor['msg'] = "O CPF informado não é válido ( ".$vetor['valor'].").<br>";
-        		$vetor['valor'] = false;
-        		return $vetor;
-        	}
         }
     }
     
@@ -374,8 +363,8 @@ class TSetControl {
      */
     public function setTrueCnpj($valor){
         // Valida entrada
-        $cnpj = sprintf('%014s', preg_replace('{\D}', '', $valor));
-        if ((strlen($cnpj) != 14) || (intval(substr($cnpj, -4)) == 0)) {
+        $cnpj = sprintf('%014s', preg_replace('@[^0-9]@', '', $valor));
+        if ((strlen($cnpj) != 14)) {
             return false;
         }else{
         // Valida checagem
@@ -394,59 +383,53 @@ class TSetControl {
         }
     }
     
-
 	/**
 	 * 
 	 * @param unknown_type $vetor
-	 * @return string|unknown|string
 	 */
-	public function validaQuantidadeItensMain($vetor){
+    public function validaCpfMain($vetor){
         $obHeaderForm = new TSetHeader();
-        $headerForm = $obHeaderForm->getHead($vetor['idForm']);
-        if($vetor['valor']){
-        	$dbo = new TDbo('dbtransacoes_itens');
+        $headerForm = $obHeaderForm->getHead($vetor[TConstantes::FORM]);
+        $cpf = $this->setTrueCpf($vetor['valor']);
+        if($cpf){
+            $dbo = new TDbo($vetor[TConstantes::ENTIDADE]);
             $crit = new TCriteria();
-            $filter = new TFilter('codigo','=',$headerForm['codigo']);
-            $filter->tipoFiltro = 6;
-            $crit->add($filter,'AND');
-            
-            $Produto = $dbo->select('codigoproduto',$crit);
-            $retProduto = $Produto->fetchObject();
-            
-        	
-            $dbo = new TDbo('view_produtos');
-            $crit = new TCriteria();
-            $filter = new TFilter('codigo','=',$retProduto->codigoproduto);
+            //$crit->add(new TFilter($vetor['campo'],'=',$vetor['valor']),'OR');
+            $crit->add(new TFilter($vetor['campo'],'=',$cpf),'OR');
+            $filter = new TFilter(TConstantes::SEQUENCIAL,'!=',$headerForm[TConstantes::SEQUENCIAL]);
             $filter->tipoFiltro = 6;
             $crit->add($filter,'AND');
 
-            $ret = $dbo->select('quantidadedisponivel',$crit);
-            $n = $ret->fetchObject();
-            $qtde = $n->quantidadedisponivel ? $n->quantidadedisponivel : 0;
-            if($vetor['valor'] > $qtde){
-                $vetor['codigoRetorno'] = 'erro#4';
-                $vetor['msg'] = "não � possível prosseguir com o formulário de pedidos.<br><p>A quantidade informada ({$vetor['valor']}) � superior à quantidade disponível em estoque ({$qtde})</p>";
+            $ret = $dbo->select($vetor['campo'],$crit);
+            $duplic = false;
+            while($n = $ret->fetchObject()){
+                $duplic = true;
+            }
+            if($duplic){
+                $vetor['seqRetorno'] = TConstantes::ERRO_VALIDACAO;
+                $vetor['msg'] = "O CPF informado já existe nos registros do sistema ( ".$vetor['valor'].").<br>";
                 $vetor['valor'] = false;
                 return $vetor;
             }else{
-                $vetor['valor'] = $vetor['valor'];
+                $vetor['valor'] = $cpf;
                 return $vetor;
             }
         }else{
-            $vetor['codigoRetorno'] = 'erro#4';
-            $vetor['msg'] = "É necessario informar umq quantidade de itens.<br>";
+            $vetor['seqRetorno'] = TConstantes::ERRO_VALIDACAO;
+            $vetor['msg'] = "O CPF informado não é válido ( ".$vetor['valor'].").<br>";
             $vetor['valor'] = false;
             return $vetor;
         }
     }
+
 
     /**
      * Formata telefone para ser armazenado no DB
      * @param unknown_type $valor
      */
     public function setTelefoneDB($valor){
-        $valor = preg_replace('{\D}', '', $valor);
-        $telefone = substr($valor,(strlen($valor)-10),10);
+        $valor = preg_replace('@[^0-9]@', '', $valor);
+        $telefone = substr($valor,(strlen($valor)-8),8);
         return $telefone;
     }
     
@@ -465,7 +448,7 @@ class TSetControl {
      */
     public function setTrueCpf($valor){
         // Valida entrada
-        $cpf = sprintf('%011s', preg_replace('{\D}', '', $valor));
+        $cpf = sprintf('%011s', preg_replace('@[^0-9]@', '', $valor));
         // Valida caracteres
         if ((strlen($cpf) != 11) || ($cpf == '00000000000') || ($cpf == '99999999999')) {
             return false;
@@ -486,7 +469,7 @@ class TSetControl {
     }
 
     /*
-    * Funç�o para arredondamento de notas 0,5 a 0,5 pontos
+    * Fun�s�o para arredondamento de notas 0,5 a 0,5 pontos
     */
     public function setArredondamentoNota($n){
         try{
@@ -514,22 +497,22 @@ class TSetControl {
     }
 
     /**
-     * Valida a inclus�o de produtos na transação
+     * Valida a inclusão de produtos na transação
      * apos a geração das contas
      * param <type> $vetor
      */
     public function transacaoProdutosMain($vetor){
         try{
 
-            $obDbo = new TDbo(TConstantes::DBTRANSACOES_CONTAS);
+            $obDbo = new TDbo(TConstantes::DBPARCELA);
             $criteriaContas = new TCriteria();
-            $criteriaContas->add(new TFilter('codigotransacao', '=', $vetor['valor']));
-            $retContas = $obDbo->select('codigo', $criteriaContas);
+            $criteriaContas->add(new TFilter('seqtransacao', '=', $vetor['valor']));
+            $retContas = $obDbo->select(TConstantes::SEQUENCIAL, $criteriaContas);
             $obContas = $retContas->fetchObject();
 
-            if($obContas->codigo){
-                $retorno  = 'erro#5';
-                $retorno .= "#Já existem contas associadas � esta transação, não � possivel alterar o valor da mesma.";
+            if($obContas->seq){
+                $retorno  = TConstantes::ERRO_BANCODADOS;
+                $retorno .= "#Já existem contas associadas é esta transação, não é possivel alterar o valor da mesma.";
             }else{
                 $retorno = false;
             }
@@ -549,7 +532,7 @@ class TSetControl {
     private function showMsg($msg){
         try{
             if(!$msg){
-               throw new Exception('A mensagem não � uma String v�lida');
+               throw new Exception('A mensagem não é válida');
             }
 
             $windowMsg = new TWindow('Alerta', 'msg_rng');
@@ -614,5 +597,93 @@ class TSetControl {
             $vl = "Não";
         }
         return $vl;
+    }
+    
+    
+    /**
+     * Checks date if matches given format and validity of the date.
+     * Examples:
+     * <code>
+     * is_date('22.22.2222', 'mm.dd.yyyy'); // returns false
+     * is_date('11/30/2008', 'mm/dd/yyyy'); // returns true
+     * is_date('30-01-2008', 'dd-mm-yyyy'); // returns true
+     * is_date('2008 01 30', 'yyyy mm dd'); // returns true
+     * </code>
+     * @param string $value the variable being evaluated.
+     * @param string $format Format of the date. Any combination of <i>mm<i>, <i>dd<i>, <i>yyyy<i>
+     * with single character separator between.
+     */
+    public function is_date($value, $format = 'yyyy-mm-dd'){
+    	   	
+    	
+    	if(strlen($value) >= 6 && strlen($format) == 10){
+    		 
+    		// find separator. Remove all other characters from $format
+    		$separator_only = str_replace(array('m','d','y'),'', $format);
+    		$separator = $separator_only[0]; // separator is first character
+    		 
+    		if($separator && strlen($separator_only) == 2){
+    
+    				// check date
+    				$arr=explode($separator,$value);
+    				
+    				if($format == 'yyyy-mm-dd'){
+    					$day=$arr[2];
+    					$month=$arr[1];
+    					$year=$arr[0];
+    				}else if($format == 'dd/mm/yyyy'){
+    					$day=$arr[0];
+    					$month=$arr[1];
+    					$year=$arr[2];
+    				}    				
+    				
+    				if(@checkdate($month, $day, $year)){
+    					return true;
+    				}
+
+    		}
+    	}
+    	return false;
+    }
+    
+    
+    
+    //Todos daqui para baixo serão no novo Padr�o, depois os demais devem ser ajustados
+
+    
+    /**
+     * Executas regras de negocio de mudança de status em cascata
+     * @param unknown_type $vetor
+     */
+    private function statusCascadingMain($vetor){
+    	
+        try{
+        	
+        	    //retorna o cabeçalho do formulário
+                $obHeaderForm = new TSetHeader();
+                $headerForm = $obHeaderForm->getHead($vetor[TConstantes::FORM]);
+                
+                
+			//$objetoBo = new GenericoBO();
+        	
+        }catch (Exception $e){
+            new setException($e);
+        }
+    	
+    	
+    }
+    
+
+    public function validaCpfCnpjMain($vetor){
+    	try{
+    		$valor = $vetor['valor'];
+    		if($this->setTrueCpf($valor)){
+    			return $this->validaCpfMain($vetor);
+    		}else{
+    			return $this->validaCnpjMain($vetor);
+    		}
+    	}catch (Exception $e){
+    		new setException($e);
+    	}
     }
 }

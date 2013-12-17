@@ -21,30 +21,30 @@ $obUser = new TCheckLogin();
 $obUser = $obUser->getUser();
 //=========================================================
 
-$codigoLista = $_GET['cod'];
+$seqLista = $_GET['cod'];
 
-if($codigoLista) {
+if($seqLista) {
 
     $THeader = new TSetHeader();
-    $idLista = $THeader->getHead($codigoLista,'idLista');
+    $listseq = $THeader->getHead($seqLista,TConstantes::LISTA);
     $obsession = new TSession();
     
-    //print_r($obsession);
+    print_r($obsession);
     
-    $cabecalho = $obsession->getValue("boxFiltro_$idLista");
+    $cabecalho = $obsession->getValue("boxFiltro_$listseq");
 
     if($cabecalho) {
 
-        if(is_array($cabecalho["cols{$idLista}"])) {
+        if(is_array($cabecalho["cols{$listseq}"])) {
             $criterio = new TCriteria();
-            foreach($cabecalho["cols{$idLista}"] as $ch=>$vl) {
+            foreach($cabecalho["cols{$listseq}"] as $ch=>$vl) {
                 if($vl != "*") {
-                    $criterio->setProperty("{$vl} ilike","%{$cabecalho["expre{$idLista}"][$ch]}%");
+                    $criterio->setProperty("{$vl} ilike","%{$cabecalho["expre{$listseq}"][$ch]}%");
                 }
             }
         }else {
             $criterio = new TCriteria();
-            $criterio->setProperty("{$cabecalho["cols{$idLista}"]} ilike","%{$cabecalho["expre{$idLista}"]}%");
+            $criterio->setProperty("{$cabecalho["cols{$listseq}"]} ilike","%{$cabecalho["expre{$listseq}"]}%");
         }
     }
 
@@ -56,12 +56,12 @@ if($codigoLista) {
             $dbo = new TDbo('view_patrimonios_livros');
 
             if(!$criterio) {
-                $ret = $dbo->select('cdu,codigopha,edicao,exemplar,volume,codigolivro');
+                $ret = $dbo->select('cdu,seqpha,edicao,exemplar,volume,seqlivro');
             }else {
-                $ret = $dbo->select('cdu,codigopha,edicao,exemplar,volume,codigolivro',$criterio);
+                $ret = $dbo->select('cdu,seqpha,edicao,exemplar,volume,seqlivro',$criterio);
             }
             while($ob = $ret->fetchObject()) {
-                $lista[] = array($ob->cdu,$ob->codigopha,$ob->edicao,'ex: '.$ob->exemplar,'v: '.$ob->volume,'BarCode/'.$ob->codigolivro);
+                $lista[] = array($ob->cdu,$ob->seqpha,$ob->edicao,'ex: '.$ob->exemplar,'v: '.$ob->volume,'BarCode/'.$ob->seqlivro);
             }
 
 

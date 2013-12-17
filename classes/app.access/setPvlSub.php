@@ -17,15 +17,15 @@ $param = $_POST;
 		
 if($conn = TTransaction::get()){
 		
-	$sqlSubMenu = "select * from menu_modulos where ativo='1' and moduloPrincipal='".$param['rid']."'";
+	$sqlSubMenu = "select * from menu where statseq='1' and moduloPrincipal='".$param['rid']."'";
 	$runSubMenu = $conn->Query($sqlSubMenu);
 	
 	$divM = new TElement('div');
 			
 	while($retSubMenu = $runSubMenu->fetchObject()){
 		
-		$obCheck = new TCheckButton('submenuOp'.$retSubMenu->id);
-		$obCheck->setValue($retSubMenu->id);
+		$obCheck = new TCheckButton('submenuOp'.$retSubMenu->seq);
+		$obCheck->setValue($retSubMenu->seq);
 		$obCheck->onclick = "setPvlShow(this, nivel, '".$param['cd']."')";
 	
 			$obLabel = new TElement('div');
@@ -47,18 +47,18 @@ if($conn = TTransaction::get()){
 		
 	if($conn = TTransaction::get()){
 	
-		$sqlCkPriv = "select id from dbusuario_privilegio where ativo='1' and codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
+		$sqlCkPriv = "select seq from dbusuario_privilegio where statseq='1' and seq='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
 		$runCkPriv = $conn->Query($sqlCkPriv);
 		$retCkPriv = $runCkPriv->fetchObject();
 		
-		if($retCkPriv->id){
+		if($retCkPriv->seq){
 			
-			$upPriv = "UPDATE dbusuario_privilegio set ativo='".$param['sit']."' where codigo='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
+			$upPriv = "UPDATE dbusuario_privilegio set statseq='".$param['sit']."' where seq='".$param['cd']."' and nivel='0' and modulo='".$param['rid']."'";
 			$runUp  = $conn->Query($upPriv);
 		}
 		else{
 		
-			$inPriv = "insert into dbusuario_privilegio set codigo='".$param['cd']."', unidade='".$obUser->unidade->codigo."', nivel='0', modulo='".$param['rid']."',datacad='".date("Y-m-d")."', ativo='1'";
+			$inPriv = "insert into dbusuario_privilegio set seq='".$param['cd']."', unidade='".$obUser->unidade->seq."', nivel='0', modulo='".$param['rid']."',datacad='".date("Y-m-d")."', statseq='1'";
 			$runIn  = $conn->Query($inPriv);
 			
 			if(!$runIn){

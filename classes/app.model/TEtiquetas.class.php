@@ -82,11 +82,11 @@ class TEtiquetas {
         ob_clean();
         $pdf->Output(md5(date('Y-m-d H:i:s')).'.pdf','I');
     }
- public function apendiceEtiquetasLivros($idForm) {
+ public function apendiceEtiquetasLivros($formseq) {
         $div = new TElement('div');
         $button1 = new TElement('input');
         $button1->type = "button";
-        $button1->onclick = "showEtiquetas(" . $idForm . ")";
+        $button1->onclick = "showEtiquetas(" . $formseq . ")";
         $button1->name = "showEtiquetas-6181";
         $button1->id = "showEtiquetas-6181";
         $button1->class = "ui-corner-all ui-widget ui-state-default";

@@ -22,7 +22,7 @@ class TExeSql{
                     
                     //implementa criteio de unidade fabril(Filiais)=====================================
                     $this->criteria = new TCriteria();
-                    $this->criteria->add(new TFilter('unidade', '=', $this->obUser->unidade->codigo),'');
+                    $this->criteria->add(new TFilter('unidade', '=', $this->obUser->unidade->seq),'');
                     $this->criteria->add(new TFilter('unidade', '=', 'x'),'or ');
                     //===================================================================================
 
