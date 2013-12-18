@@ -399,4 +399,9 @@ CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
   
   ALTER TABLE dbtransacao
    ALTER COLUMN intervaloparcelas DROP NOT NULL;
+   
+   
+ -- Alterações apartir de 18/12/2013
+ 
+ 
   
