@@ -1,10 +1,10 @@
---
+﻿--
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.1.11
--- Dumped by pg_dump version 9.1.11
--- Started on 2013-12-26 17:50:47 BRST
+-- Dumped from database version 9.1.9
+-- Dumped by pg_dump version 9.1.9
+-- Started on 2013-10-22 12:25:11 BRST
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -13,7 +13,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- TOC entry 212 (class 3079 OID 11723)
+-- TOC entry 212 (class 3079 OID 11679)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -21,7 +21,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2424 (class 0 OID 0)
+-- TOC entry 2379 (class 0 OID 0)
 -- Dependencies: 212
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
 --
@@ -34,8 +34,8 @@ SET search_path = public, pg_catalog;
 SET default_with_oids = false;
 
 --
--- TOC entry 161 (class 1259 OID 32770)
--- Dependencies: 1987 1988 1989 1990 1991 1993 5
+-- TOC entry 161 (class 1259 OID 16385)
+-- Dependencies: 2044 2045 2046 2047 2048 5
 -- Name: abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -50,14 +50,13 @@ CREATE TABLE abas (
     usuaseq bigint NOT NULL,
     unidseq bigint NOT NULL,
     datacad date DEFAULT ('now'::text)::date NOT NULL,
-    statseq bigint NOT NULL,
-    require_register boolean DEFAULT false NOT NULL
+    statseq bigint NOT NULL
 );
 
 
 --
--- TOC entry 162 (class 1259 OID 32778)
--- Dependencies: 161 5
+-- TOC entry 162 (class 1259 OID 16393)
+-- Dependencies: 5 161
 -- Name: abas_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -70,7 +69,7 @@ CREATE SEQUENCE abas_seq_seq
 
 
 --
--- TOC entry 2425 (class 0 OID 0)
+-- TOC entry 2380 (class 0 OID 0)
 -- Dependencies: 162
 -- Name: abas_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -79,8 +78,8 @@ ALTER SEQUENCE abas_seq_seq OWNED BY abas.seq;
 
 
 --
--- TOC entry 163 (class 1259 OID 32780)
--- Dependencies: 1994 1995 1996 5
+-- TOC entry 163 (class 1259 OID 16395)
+-- Dependencies: 2050 2051 2052 5
 -- Name: blocos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -102,7 +101,7 @@ CREATE TABLE blocos (
 
 
 --
--- TOC entry 164 (class 1259 OID 32786)
+-- TOC entry 164 (class 1259 OID 16401)
 -- Dependencies: 5 163
 -- Name: blocos_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -116,7 +115,7 @@ CREATE SEQUENCE blocos_seq_seq
 
 
 --
--- TOC entry 2426 (class 0 OID 0)
+-- TOC entry 2381 (class 0 OID 0)
 -- Dependencies: 164
 -- Name: blocos_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -125,8 +124,8 @@ ALTER SEQUENCE blocos_seq_seq OWNED BY blocos.seq;
 
 
 --
--- TOC entry 165 (class 1259 OID 32788)
--- Dependencies: 1998 1999 5
+-- TOC entry 165 (class 1259 OID 16403)
+-- Dependencies: 2054 2055 5
 -- Name: blocos_x_abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -143,8 +142,8 @@ CREATE TABLE blocos_x_abas (
 
 
 --
--- TOC entry 166 (class 1259 OID 32793)
--- Dependencies: 165 5
+-- TOC entry 166 (class 1259 OID 16408)
+-- Dependencies: 5 165
 -- Name: blocos_x_abas_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -157,7 +156,7 @@ CREATE SEQUENCE blocos_x_abas_seq_seq
 
 
 --
--- TOC entry 2427 (class 0 OID 0)
+-- TOC entry 2382 (class 0 OID 0)
 -- Dependencies: 166
 -- Name: blocos_x_abas_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -166,8 +165,8 @@ ALTER SEQUENCE blocos_x_abas_seq_seq OWNED BY blocos_x_abas.seq;
 
 
 --
--- TOC entry 167 (class 1259 OID 32795)
--- Dependencies: 2001 2002 2003 2004 2005 2006 2007 2008 2009 5
+-- TOC entry 167 (class 1259 OID 16410)
+-- Dependencies: 2057 2058 2059 2060 2061 2062 2063 2064 2065 5
 -- Name: campos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -199,8 +198,8 @@ CREATE TABLE campos (
 
 
 --
--- TOC entry 168 (class 1259 OID 32810)
--- Dependencies: 167 5
+-- TOC entry 168 (class 1259 OID 16425)
+-- Dependencies: 5 167
 -- Name: campos_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -213,7 +212,7 @@ CREATE SEQUENCE campos_seq_seq
 
 
 --
--- TOC entry 2428 (class 0 OID 0)
+-- TOC entry 2383 (class 0 OID 0)
 -- Dependencies: 168
 -- Name: campos_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -222,8 +221,8 @@ ALTER SEQUENCE campos_seq_seq OWNED BY campos.seq;
 
 
 --
--- TOC entry 169 (class 1259 OID 32812)
--- Dependencies: 2011 2012 5
+-- TOC entry 169 (class 1259 OID 16427)
+-- Dependencies: 2067 2068 5
 -- Name: campos_x_blocos; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -242,7 +241,7 @@ CREATE TABLE campos_x_blocos (
 
 
 --
--- TOC entry 170 (class 1259 OID 32817)
+-- TOC entry 170 (class 1259 OID 16432)
 -- Dependencies: 5 169
 -- Name: campos_x_blocos_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -256,7 +255,7 @@ CREATE SEQUENCE campos_x_blocos_seq_seq
 
 
 --
--- TOC entry 2429 (class 0 OID 0)
+-- TOC entry 2384 (class 0 OID 0)
 -- Dependencies: 170
 -- Name: campos_x_blocos_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -265,8 +264,8 @@ ALTER SEQUENCE campos_x_blocos_seq_seq OWNED BY campos_x_blocos.seq;
 
 
 --
--- TOC entry 171 (class 1259 OID 32819)
--- Dependencies: 2014 2015 5
+-- TOC entry 171 (class 1259 OID 16434)
+-- Dependencies: 2070 2071 5
 -- Name: campos_x_propriedades; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -283,8 +282,8 @@ CREATE TABLE campos_x_propriedades (
 
 
 --
--- TOC entry 172 (class 1259 OID 32827)
--- Dependencies: 171 5
+-- TOC entry 172 (class 1259 OID 16442)
+-- Dependencies: 5 171
 -- Name: campos_x_propriedades_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -297,7 +296,7 @@ CREATE SEQUENCE campos_x_propriedades_seq_seq
 
 
 --
--- TOC entry 2430 (class 0 OID 0)
+-- TOC entry 2385 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: campos_x_propriedades_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -306,8 +305,8 @@ ALTER SEQUENCE campos_x_propriedades_seq_seq OWNED BY campos_x_propriedades.seq;
 
 
 --
--- TOC entry 173 (class 1259 OID 32829)
--- Dependencies: 2017 2018 2019 2020 2021 2022 2023 2024 5
+-- TOC entry 173 (class 1259 OID 16444)
+-- Dependencies: 2073 2074 2075 2076 2077 2078 2079 2080 5
 -- Name: coluna; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -335,8 +334,8 @@ CREATE TABLE coluna (
 
 
 --
--- TOC entry 174 (class 1259 OID 32843)
--- Dependencies: 173 5
+-- TOC entry 174 (class 1259 OID 16458)
+-- Dependencies: 5 173
 -- Name: coluna_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -349,7 +348,7 @@ CREATE SEQUENCE coluna_seq_seq
 
 
 --
--- TOC entry 2431 (class 0 OID 0)
+-- TOC entry 2386 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: coluna_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -358,8 +357,8 @@ ALTER SEQUENCE coluna_seq_seq OWNED BY coluna.seq;
 
 
 --
--- TOC entry 175 (class 1259 OID 32845)
--- Dependencies: 2026 2027 2028 2029 2030 2031 2032 5
+-- TOC entry 175 (class 1259 OID 16460)
+-- Dependencies: 2082 2083 2084 2085 2086 2087 2088 5
 -- Name: dbpessoa; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -382,8 +381,8 @@ CREATE TABLE dbpessoa (
 
 
 --
--- TOC entry 176 (class 1259 OID 32858)
--- Dependencies: 175 5
+-- TOC entry 176 (class 1259 OID 16473)
+-- Dependencies: 5 175
 -- Name: dbpessoa_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -396,7 +395,7 @@ CREATE SEQUENCE dbpessoa_seq_seq
 
 
 --
--- TOC entry 2432 (class 0 OID 0)
+-- TOC entry 2387 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: dbpessoa_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -405,8 +404,8 @@ ALTER SEQUENCE dbpessoa_seq_seq OWNED BY dbpessoa.seq;
 
 
 --
--- TOC entry 177 (class 1259 OID 32860)
--- Dependencies: 2034 2035 5
+-- TOC entry 177 (class 1259 OID 16475)
+-- Dependencies: 2090 2091 5
 -- Name: dbstatus; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -421,8 +420,8 @@ CREATE TABLE dbstatus (
 
 
 --
--- TOC entry 178 (class 1259 OID 32865)
--- Dependencies: 5 177
+-- TOC entry 178 (class 1259 OID 16480)
+-- Dependencies: 177 5
 -- Name: dbstatus_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -435,7 +434,7 @@ CREATE SEQUENCE dbstatus_seq_seq
 
 
 --
--- TOC entry 2433 (class 0 OID 0)
+-- TOC entry 2388 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: dbstatus_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -444,8 +443,8 @@ ALTER SEQUENCE dbstatus_seq_seq OWNED BY dbstatus.seq;
 
 
 --
--- TOC entry 179 (class 1259 OID 32867)
--- Dependencies: 2037 2038 5
+-- TOC entry 179 (class 1259 OID 16482)
+-- Dependencies: 2093 2094 5
 -- Name: dbunidade; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -474,8 +473,8 @@ CREATE TABLE dbunidade (
 
 
 --
--- TOC entry 180 (class 1259 OID 32875)
--- Dependencies: 2040 2041 2042 5
+-- TOC entry 180 (class 1259 OID 16490)
+-- Dependencies: 2096 2097 2098 5
 -- Name: dbunidade_parametro; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -492,7 +491,7 @@ CREATE TABLE dbunidade_parametro (
 
 
 --
--- TOC entry 181 (class 1259 OID 32884)
+-- TOC entry 181 (class 1259 OID 16499)
 -- Dependencies: 5 180
 -- Name: dbunidade_parametro_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -506,7 +505,7 @@ CREATE SEQUENCE dbunidade_parametro_seq_seq
 
 
 --
--- TOC entry 2434 (class 0 OID 0)
+-- TOC entry 2389 (class 0 OID 0)
 -- Dependencies: 181
 -- Name: dbunidade_parametro_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -515,8 +514,8 @@ ALTER SEQUENCE dbunidade_parametro_seq_seq OWNED BY dbunidade_parametro.seq;
 
 
 --
--- TOC entry 182 (class 1259 OID 32886)
--- Dependencies: 179 5
+-- TOC entry 182 (class 1259 OID 16501)
+-- Dependencies: 5 179
 -- Name: dbunidade_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -529,7 +528,7 @@ CREATE SEQUENCE dbunidade_seq_seq
 
 
 --
--- TOC entry 2435 (class 0 OID 0)
+-- TOC entry 2390 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: dbunidade_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -538,8 +537,8 @@ ALTER SEQUENCE dbunidade_seq_seq OWNED BY dbunidade.seq;
 
 
 --
--- TOC entry 183 (class 1259 OID 32888)
--- Dependencies: 2044 2045 2046 2047 5
+-- TOC entry 183 (class 1259 OID 16503)
+-- Dependencies: 2100 2101 2102 2103 5
 -- Name: dbusuario; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -562,8 +561,8 @@ CREATE TABLE dbusuario (
 
 
 --
--- TOC entry 184 (class 1259 OID 32895)
--- Dependencies: 2049 2050 2051 2052 2053 5
+-- TOC entry 184 (class 1259 OID 16510)
+-- Dependencies: 2105 2106 2107 2108 2109 5
 -- Name: dbusuario_privilegio; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -580,8 +579,8 @@ CREATE TABLE dbusuario_privilegio (
 
 
 --
--- TOC entry 185 (class 1259 OID 32903)
--- Dependencies: 184 5
+-- TOC entry 185 (class 1259 OID 16518)
+-- Dependencies: 5 184
 -- Name: dbusuario_privilegio_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -594,7 +593,7 @@ CREATE SEQUENCE dbusuario_privilegio_seq_seq
 
 
 --
--- TOC entry 2436 (class 0 OID 0)
+-- TOC entry 2391 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: dbusuario_privilegio_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -603,8 +602,8 @@ ALTER SEQUENCE dbusuario_privilegio_seq_seq OWNED BY dbusuario_privilegio.seq;
 
 
 --
--- TOC entry 186 (class 1259 OID 32905)
--- Dependencies: 5 183
+-- TOC entry 186 (class 1259 OID 16520)
+-- Dependencies: 183 5
 -- Name: dbusuario_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -617,7 +616,7 @@ CREATE SEQUENCE dbusuario_seq_seq
 
 
 --
--- TOC entry 2437 (class 0 OID 0)
+-- TOC entry 2392 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: dbusuario_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -626,8 +625,8 @@ ALTER SEQUENCE dbusuario_seq_seq OWNED BY dbusuario.seq;
 
 
 --
--- TOC entry 187 (class 1259 OID 32907)
--- Dependencies: 2055 2056 5
+-- TOC entry 187 (class 1259 OID 16522)
+-- Dependencies: 2111 2112 5
 -- Name: form_button; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -648,8 +647,8 @@ CREATE TABLE form_button (
 
 
 --
--- TOC entry 188 (class 1259 OID 32915)
--- Dependencies: 5 187
+-- TOC entry 188 (class 1259 OID 16530)
+-- Dependencies: 187 5
 -- Name: form_button_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -662,7 +661,7 @@ CREATE SEQUENCE form_button_seq_seq
 
 
 --
--- TOC entry 2438 (class 0 OID 0)
+-- TOC entry 2393 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: form_button_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -671,7 +670,7 @@ ALTER SEQUENCE form_button_seq_seq OWNED BY form_button.seq;
 
 
 --
--- TOC entry 189 (class 1259 OID 32917)
+-- TOC entry 189 (class 1259 OID 16532)
 -- Dependencies: 5
 -- Name: form_list_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -685,8 +684,8 @@ CREATE SEQUENCE form_list_seq_seq
 
 
 --
--- TOC entry 190 (class 1259 OID 32919)
--- Dependencies: 2058 5
+-- TOC entry 190 (class 1259 OID 16534)
+-- Dependencies: 2114 5
 -- Name: form_validacao; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -701,7 +700,7 @@ CREATE TABLE form_validacao (
 
 
 --
--- TOC entry 191 (class 1259 OID 32923)
+-- TOC entry 191 (class 1259 OID 16538)
 -- Dependencies: 5 190
 -- Name: form_validacao_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -715,7 +714,7 @@ CREATE SEQUENCE form_validacao_seq_seq
 
 
 --
--- TOC entry 2439 (class 0 OID 0)
+-- TOC entry 2394 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: form_validacao_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -724,8 +723,8 @@ ALTER SEQUENCE form_validacao_seq_seq OWNED BY form_validacao.seq;
 
 
 --
--- TOC entry 192 (class 1259 OID 32925)
--- Dependencies: 2060 2061 2062 5
+-- TOC entry 192 (class 1259 OID 16540)
+-- Dependencies: 2116 2117 2118 5
 -- Name: form_x_abas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -742,7 +741,7 @@ CREATE TABLE form_x_abas (
 
 
 --
--- TOC entry 193 (class 1259 OID 32931)
+-- TOC entry 193 (class 1259 OID 16546)
 -- Dependencies: 5 192
 -- Name: form_x_abas_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -756,7 +755,7 @@ CREATE SEQUENCE form_x_abas_seq_seq
 
 
 --
--- TOC entry 2440 (class 0 OID 0)
+-- TOC entry 2395 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: form_x_abas_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -765,8 +764,8 @@ ALTER SEQUENCE form_x_abas_seq_seq OWNED BY form_x_abas.seq;
 
 
 --
--- TOC entry 194 (class 1259 OID 32933)
--- Dependencies: 2064 2065 5
+-- TOC entry 194 (class 1259 OID 16548)
+-- Dependencies: 2120 2121 5
 -- Name: form_x_tabelas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -782,7 +781,7 @@ CREATE TABLE form_x_tabelas (
 
 
 --
--- TOC entry 195 (class 1259 OID 32938)
+-- TOC entry 195 (class 1259 OID 16553)
 -- Dependencies: 5 194
 -- Name: form_x_tabelas_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -796,7 +795,7 @@ CREATE SEQUENCE form_x_tabelas_seq_seq
 
 
 --
--- TOC entry 2441 (class 0 OID 0)
+-- TOC entry 2396 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: form_x_tabelas_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -805,8 +804,8 @@ ALTER SEQUENCE form_x_tabelas_seq_seq OWNED BY form_x_tabelas.seq;
 
 
 --
--- TOC entry 196 (class 1259 OID 32940)
--- Dependencies: 2067 2068 2069 2070 2071 2072 2073 2074 5
+-- TOC entry 196 (class 1259 OID 16555)
+-- Dependencies: 2123 2124 2125 2126 2127 2128 2129 2130 5
 -- Name: forms; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -832,8 +831,8 @@ CREATE TABLE forms (
 
 
 --
--- TOC entry 197 (class 1259 OID 32951)
--- Dependencies: 2075 2076 2077 2078 2079 2080 2081 2082 2083 2084 2085 2086 2087 2088 5
+-- TOC entry 197 (class 1259 OID 16566)
+-- Dependencies: 2131 2132 2133 2134 2135 2136 2137 2138 2139 2140 2141 2142 2143 2144 5
 -- Name: lista; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -872,8 +871,8 @@ CREATE TABLE lista (
 
 
 --
--- TOC entry 198 (class 1259 OID 32971)
--- Dependencies: 2089 2090 2091 2092 2093 2094 2095 2096 2097 5
+-- TOC entry 198 (class 1259 OID 16586)
+-- Dependencies: 2145 2146 2147 2148 2149 2150 2151 2152 2153 5
 -- Name: lista_actions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -898,8 +897,8 @@ CREATE TABLE lista_actions (
 
 
 --
--- TOC entry 199 (class 1259 OID 32986)
--- Dependencies: 5 198
+-- TOC entry 199 (class 1259 OID 16601)
+-- Dependencies: 198 5
 -- Name: lista_actions_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -912,7 +911,7 @@ CREATE SEQUENCE lista_actions_seq_seq
 
 
 --
--- TOC entry 2442 (class 0 OID 0)
+-- TOC entry 2397 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: lista_actions_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -921,8 +920,8 @@ ALTER SEQUENCE lista_actions_seq_seq OWNED BY lista_actions.seq;
 
 
 --
--- TOC entry 200 (class 1259 OID 32988)
--- Dependencies: 2099 2100 5
+-- TOC entry 200 (class 1259 OID 16603)
+-- Dependencies: 2155 2156 5
 -- Name: lista_bnav; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -943,7 +942,7 @@ CREATE TABLE lista_bnav (
 
 
 --
--- TOC entry 201 (class 1259 OID 32996)
+-- TOC entry 201 (class 1259 OID 16611)
 -- Dependencies: 200 5
 -- Name: lista_bnav_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -957,7 +956,7 @@ CREATE SEQUENCE lista_bnav_seq_seq
 
 
 --
--- TOC entry 2443 (class 0 OID 0)
+-- TOC entry 2398 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: lista_bnav_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -966,8 +965,8 @@ ALTER SEQUENCE lista_bnav_seq_seq OWNED BY lista_bnav.seq;
 
 
 --
--- TOC entry 202 (class 1259 OID 32998)
--- Dependencies: 2102 2103 2104 2105 5
+-- TOC entry 202 (class 1259 OID 16613)
+-- Dependencies: 2158 2159 2160 2161 5
 -- Name: lista_fields; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -986,8 +985,8 @@ CREATE TABLE lista_fields (
 
 
 --
--- TOC entry 203 (class 1259 OID 33005)
--- Dependencies: 5 202
+-- TOC entry 203 (class 1259 OID 16620)
+-- Dependencies: 202 5
 -- Name: lista_fields_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1000,7 +999,7 @@ CREATE SEQUENCE lista_fields_seq_seq
 
 
 --
--- TOC entry 2444 (class 0 OID 0)
+-- TOC entry 2399 (class 0 OID 0)
 -- Dependencies: 203
 -- Name: lista_fields_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1009,8 +1008,8 @@ ALTER SEQUENCE lista_fields_seq_seq OWNED BY lista_fields.seq;
 
 
 --
--- TOC entry 204 (class 1259 OID 33007)
--- Dependencies: 2107 2108 2109 2110 2111 5
+-- TOC entry 204 (class 1259 OID 16622)
+-- Dependencies: 2163 2164 2165 2166 2167 5
 -- Name: menu; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1032,8 +1031,8 @@ CREATE TABLE menu (
 
 
 --
--- TOC entry 205 (class 1259 OID 33015)
--- Dependencies: 204 5
+-- TOC entry 205 (class 1259 OID 16630)
+-- Dependencies: 5 204
 -- Name: menu_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1046,7 +1045,7 @@ CREATE SEQUENCE menu_seq_seq
 
 
 --
--- TOC entry 2445 (class 0 OID 0)
+-- TOC entry 2400 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: menu_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1055,8 +1054,8 @@ ALTER SEQUENCE menu_seq_seq OWNED BY menu.seq;
 
 
 --
--- TOC entry 206 (class 1259 OID 33017)
--- Dependencies: 2113 2114 2115 5
+-- TOC entry 206 (class 1259 OID 16632)
+-- Dependencies: 2169 2170 2171 5
 -- Name: modulo; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1074,7 +1073,7 @@ CREATE TABLE modulo (
 
 
 --
--- TOC entry 207 (class 1259 OID 33023)
+-- TOC entry 207 (class 1259 OID 16638)
 -- Dependencies: 5 206
 -- Name: modulo_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1088,7 +1087,7 @@ CREATE SEQUENCE modulo_seq_seq
 
 
 --
--- TOC entry 2446 (class 0 OID 0)
+-- TOC entry 2401 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: modulo_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1097,8 +1096,8 @@ ALTER SEQUENCE modulo_seq_seq OWNED BY modulo.seq;
 
 
 --
--- TOC entry 208 (class 1259 OID 33025)
--- Dependencies: 2117 2118 2119 5
+-- TOC entry 208 (class 1259 OID 16640)
+-- Dependencies: 2173 2174 2175 5
 -- Name: tabelas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1116,7 +1115,7 @@ CREATE TABLE tabelas (
 
 
 --
--- TOC entry 209 (class 1259 OID 33031)
+-- TOC entry 209 (class 1259 OID 16646)
 -- Dependencies: 208 5
 -- Name: tabelas_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
@@ -1130,7 +1129,7 @@ CREATE SEQUENCE tabelas_seq_seq
 
 
 --
--- TOC entry 2447 (class 0 OID 0)
+-- TOC entry 2402 (class 0 OID 0)
 -- Dependencies: 209
 -- Name: tabelas_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1139,8 +1138,8 @@ ALTER SEQUENCE tabelas_seq_seq OWNED BY tabelas.seq;
 
 
 --
--- TOC entry 210 (class 1259 OID 33033)
--- Dependencies: 2121 5
+-- TOC entry 210 (class 1259 OID 16648)
+-- Dependencies: 2177 5
 -- Name: tipo_campo; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1156,8 +1155,8 @@ CREATE TABLE tipo_campo (
 
 
 --
--- TOC entry 211 (class 1259 OID 33037)
--- Dependencies: 210 5
+-- TOC entry 211 (class 1259 OID 16652)
+-- Dependencies: 5 210
 -- Name: tipo_campo_seq_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1170,7 +1169,7 @@ CREATE SEQUENCE tipo_campo_seq_seq
 
 
 --
--- TOC entry 2448 (class 0 OID 0)
+-- TOC entry 2403 (class 0 OID 0)
 -- Dependencies: 211
 -- Name: tipo_campo_seq_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
@@ -1179,7 +1178,7 @@ ALTER SEQUENCE tipo_campo_seq_seq OWNED BY tipo_campo.seq;
 
 
 --
--- TOC entry 1992 (class 2604 OID 33039)
+-- TOC entry 2049 (class 2604 OID 16654)
 -- Dependencies: 162 161
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1188,7 +1187,7 @@ ALTER TABLE ONLY abas ALTER COLUMN seq SET DEFAULT nextval('abas_seq_seq'::regcl
 
 
 --
--- TOC entry 1997 (class 2604 OID 33040)
+-- TOC entry 2053 (class 2604 OID 16655)
 -- Dependencies: 164 163
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1197,7 +1196,7 @@ ALTER TABLE ONLY blocos ALTER COLUMN seq SET DEFAULT nextval('blocos_seq_seq'::r
 
 
 --
--- TOC entry 2000 (class 2604 OID 33041)
+-- TOC entry 2056 (class 2604 OID 16656)
 -- Dependencies: 166 165
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1206,7 +1205,7 @@ ALTER TABLE ONLY blocos_x_abas ALTER COLUMN seq SET DEFAULT nextval('blocos_x_ab
 
 
 --
--- TOC entry 2010 (class 2604 OID 33042)
+-- TOC entry 2066 (class 2604 OID 16657)
 -- Dependencies: 168 167
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1215,7 +1214,7 @@ ALTER TABLE ONLY campos ALTER COLUMN seq SET DEFAULT nextval('campos_seq_seq'::r
 
 
 --
--- TOC entry 2013 (class 2604 OID 33043)
+-- TOC entry 2069 (class 2604 OID 16658)
 -- Dependencies: 170 169
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1224,7 +1223,7 @@ ALTER TABLE ONLY campos_x_blocos ALTER COLUMN seq SET DEFAULT nextval('campos_x_
 
 
 --
--- TOC entry 2016 (class 2604 OID 33044)
+-- TOC entry 2072 (class 2604 OID 16659)
 -- Dependencies: 172 171
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1233,7 +1232,7 @@ ALTER TABLE ONLY campos_x_propriedades ALTER COLUMN seq SET DEFAULT nextval('cam
 
 
 --
--- TOC entry 2025 (class 2604 OID 33045)
+-- TOC entry 2081 (class 2604 OID 16660)
 -- Dependencies: 174 173
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1242,7 +1241,7 @@ ALTER TABLE ONLY coluna ALTER COLUMN seq SET DEFAULT nextval('coluna_seq_seq'::r
 
 
 --
--- TOC entry 2033 (class 2604 OID 33046)
+-- TOC entry 2089 (class 2604 OID 16661)
 -- Dependencies: 176 175
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1251,7 +1250,7 @@ ALTER TABLE ONLY dbpessoa ALTER COLUMN seq SET DEFAULT nextval('dbpessoa_seq_seq
 
 
 --
--- TOC entry 2036 (class 2604 OID 33047)
+-- TOC entry 2092 (class 2604 OID 16662)
 -- Dependencies: 178 177
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1260,7 +1259,7 @@ ALTER TABLE ONLY dbstatus ALTER COLUMN seq SET DEFAULT nextval('dbstatus_seq_seq
 
 
 --
--- TOC entry 2039 (class 2604 OID 33048)
+-- TOC entry 2095 (class 2604 OID 16663)
 -- Dependencies: 182 179
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1269,7 +1268,7 @@ ALTER TABLE ONLY dbunidade ALTER COLUMN seq SET DEFAULT nextval('dbunidade_seq_s
 
 
 --
--- TOC entry 2043 (class 2604 OID 33049)
+-- TOC entry 2099 (class 2604 OID 16664)
 -- Dependencies: 181 180
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1278,7 +1277,7 @@ ALTER TABLE ONLY dbunidade_parametro ALTER COLUMN seq SET DEFAULT nextval('dbuni
 
 
 --
--- TOC entry 2048 (class 2604 OID 33050)
+-- TOC entry 2104 (class 2604 OID 16665)
 -- Dependencies: 186 183
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1287,7 +1286,7 @@ ALTER TABLE ONLY dbusuario ALTER COLUMN seq SET DEFAULT nextval('dbusuario_seq_s
 
 
 --
--- TOC entry 2054 (class 2604 OID 33051)
+-- TOC entry 2110 (class 2604 OID 16666)
 -- Dependencies: 185 184
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1296,7 +1295,7 @@ ALTER TABLE ONLY dbusuario_privilegio ALTER COLUMN seq SET DEFAULT nextval('dbus
 
 
 --
--- TOC entry 2057 (class 2604 OID 33052)
+-- TOC entry 2113 (class 2604 OID 16667)
 -- Dependencies: 188 187
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1305,7 +1304,7 @@ ALTER TABLE ONLY form_button ALTER COLUMN seq SET DEFAULT nextval('form_button_s
 
 
 --
--- TOC entry 2059 (class 2604 OID 33053)
+-- TOC entry 2115 (class 2604 OID 16668)
 -- Dependencies: 191 190
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1314,7 +1313,7 @@ ALTER TABLE ONLY form_validacao ALTER COLUMN seq SET DEFAULT nextval('form_valid
 
 
 --
--- TOC entry 2063 (class 2604 OID 33054)
+-- TOC entry 2119 (class 2604 OID 16669)
 -- Dependencies: 193 192
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1323,7 +1322,7 @@ ALTER TABLE ONLY form_x_abas ALTER COLUMN seq SET DEFAULT nextval('form_x_abas_s
 
 
 --
--- TOC entry 2066 (class 2604 OID 33055)
+-- TOC entry 2122 (class 2604 OID 16670)
 -- Dependencies: 195 194
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1332,7 +1331,7 @@ ALTER TABLE ONLY form_x_tabelas ALTER COLUMN seq SET DEFAULT nextval('form_x_tab
 
 
 --
--- TOC entry 2098 (class 2604 OID 33056)
+-- TOC entry 2154 (class 2604 OID 16671)
 -- Dependencies: 199 198
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1341,7 +1340,7 @@ ALTER TABLE ONLY lista_actions ALTER COLUMN seq SET DEFAULT nextval('lista_actio
 
 
 --
--- TOC entry 2101 (class 2604 OID 33057)
+-- TOC entry 2157 (class 2604 OID 16672)
 -- Dependencies: 201 200
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1350,7 +1349,7 @@ ALTER TABLE ONLY lista_bnav ALTER COLUMN seq SET DEFAULT nextval('lista_bnav_seq
 
 
 --
--- TOC entry 2106 (class 2604 OID 33058)
+-- TOC entry 2162 (class 2604 OID 16673)
 -- Dependencies: 203 202
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1359,7 +1358,7 @@ ALTER TABLE ONLY lista_fields ALTER COLUMN seq SET DEFAULT nextval('lista_fields
 
 
 --
--- TOC entry 2112 (class 2604 OID 33059)
+-- TOC entry 2168 (class 2604 OID 16674)
 -- Dependencies: 205 204
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1368,7 +1367,7 @@ ALTER TABLE ONLY menu ALTER COLUMN seq SET DEFAULT nextval('menu_seq_seq'::regcl
 
 
 --
--- TOC entry 2116 (class 2604 OID 33060)
+-- TOC entry 2172 (class 2604 OID 16675)
 -- Dependencies: 207 206
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1377,7 +1376,7 @@ ALTER TABLE ONLY modulo ALTER COLUMN seq SET DEFAULT nextval('modulo_seq_seq'::r
 
 
 --
--- TOC entry 2120 (class 2604 OID 33061)
+-- TOC entry 2176 (class 2604 OID 16676)
 -- Dependencies: 209 208
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1386,7 +1385,7 @@ ALTER TABLE ONLY tabelas ALTER COLUMN seq SET DEFAULT nextval('tabelas_seq_seq':
 
 
 --
--- TOC entry 2122 (class 2604 OID 33062)
+-- TOC entry 2178 (class 2604 OID 16677)
 -- Dependencies: 211 210
 -- Name: seq; Type: DEFAULT; Schema: public; Owner: -
 --
@@ -1395,293 +1394,291 @@ ALTER TABLE ONLY tipo_campo ALTER COLUMN seq SET DEFAULT nextval('tipo_campo_seq
 
 
 --
--- TOC entry 2367 (class 0 OID 32770)
--- Dependencies: 161 2418
+-- TOC entry 2322 (class 0 OID 16385)
+-- Dependencies: 161 2373
 -- Data for Name: abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (22, 'dadosPessoais', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (23, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (24, 'dados', 'Dados', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (26, 'gerenciamentoDuplicata', 'Gerenciar Duplicatas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (27, 'obs', 'Observações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (28, 'infoConta', 'Conta caixa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (29, 'dadosConta', 'Dados da Conta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (30, 'dadosCredito', 'Dados do Crédito', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (35, 'abaContasCaixa', 'Contas Caixa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (37, 'infoUsuarios', 'Informações de acesso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (39, 'discAvaliacao', 'Avaliações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (42, 'cargo', 'Informações do Cargo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (43, 'dado', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (44, 'formacao', 'Formação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (45, 'dadosPessoais', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (46, 'dadosComplementares', 'Dados Complementares', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (47, 'patrimonios', 'Patrimonios', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (48, 'conhecimentos', 'Competências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (49, 'hierarquia', 'Hierarquia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (50, 'treinamento', 'Treinamento', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (52, 'atributos', 'Atributos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (53, 'dadosAdministrstatseqs', 'Dados Administrstatseqs', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (54, 'dadosCurriculares', 'Dados Curriculares', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (55, 'financeiro', 'Financeiro', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (57, 'filiais', 'Cadastrar Filial', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (58, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (59, 'contato', 'Contato', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (60, 'insumos', 'Insumos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (61, 'historico', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (63, 'cotacao', 'Cotação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (64, 'gerNegociacao', 'Gerenciar Negociação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (65, 'dadosContrato', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (66, 'dadosUsuario', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (68, 'dadosFerias', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (69, 'dadosSala', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (70, 'patrimoniosHistorico', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (71, 'dadosAreaCurso', 'Area de Curso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (73, 'solicitacao', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (74, 'dadosCompra', 'Dados da Compra', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (77, 'interesses', 'Cursos Interessados', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (80, 'parametrosComercial', 'Comercial', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (81, 'parametrosSecretaria', 'Secretaria', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (82, 'parametrosFinanceiro', 'Financeiro', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (83, 'parametrosAdministrstatseq', 'Administrstatseq', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (84, 'parametrosRH', 'Recursos Humanos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (85, 'parametrosCoordenador', 'Coordenador', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (86, 'parametrosProfessores', 'Professores', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (88, 'matdidaticos', 'Materiais Didáticos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (90, 'historioFechaCaixa', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (99, 'histOcorrencia', 'Ocorrências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (200, 'experienciaCurriculo', 'Experiência', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (201, 'obsCurriculo', 'Observações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (202, 'resumo', 'Resumo do Curriculo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (203, 'projetoEscopo', 'Escopo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (204, 'projetoRecursos', 'Recursos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (205, 'projetoRiscos', 'Riscos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (206, 'projetoProduto', 'Produto Final', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (207, 'projetoRH', 'R.H.', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (208, 'projetoReceita', 'Receita', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (209, 'projetoCusto', 'Custos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (211, 'gerTurmaDisc', 'Disciplina', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (212, 'planoaulaDisciplina', 'Disciplina', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (213, 'planoaulaConteudo', 'Conteudo', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (214, 'planoaulaRecursos', 'Recursos', '-', '-', '1', 3, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (215, 'planoaulaMetodologia', 'Metodologia', '-', '-', '1', 4, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (217, 'abaGeraArquivos', 'Arquivos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (34, 'turmasDisicplinasRequisitos', 'Pré-requisitos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (36, 'lanFaltas', 'Lançar Faltas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (210, 'historicoFinanceiro', 'Histórico Financeiro', 'TSecretaria/viewGetFinanceiro', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (62, 'produtoCaracteristicas', 'Características', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (216, 'abaGeraDisciplina', 'Adicionar Disciplinas', 'confirmaGeraDisciplina/get', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (87, 'conciliaBoletos', 'Conciliação Bancária', 'TConciliacaoCaixa/setForm', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (93, 'notasAluno', 'Notas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (56, 'historicoCliente', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (92, 'dadosFolhaPag', 'Folha de Pagamento', 'setCriterioFolhaPag/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (91, 'mostraDuplicatasAluno', 'Boletos', 'TAluno/viewGetFinanceiro', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (33, 'matricula', 'Gerenciador Matrícula', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (79, 'dre', 'DRE', 'setPeriodoDRE/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (78, 'balancoPatrimonial', 'Balanço Patrimonial', 'setDataBP/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (76, 'relatorioCaixaD', 'Relatório de Despesa', 'relatorioCaixaD/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (75, 'relatorioCaixaR', 'Relatório de Receita', 'relatorioCaixaR/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (219, 'estatistica', 'Estatistica', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (94, 'faltasAluno', 'Faltas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (38, 'lanNotas', 'Lançar Notas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (31, 'contaReceber', 'Informações da Conta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (32, 'contasPagar', 'Informações da Conta', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (220, 'lancaExtorno', 'Lançamento', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (221, 'transac_InfoC', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (222, 'transac_infoD', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (223, 'transac_condC', 'Condições de Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (225, 'permissaoPessoa', 'Permissões', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (226, 'transac_condD', 'Condições de Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (227, 'justFaltas', 'Justificar Falta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (228, 'dadosProdutos', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (229, 'conteudoMinistradoProd', 'Conteudo Ministrado', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (230, 'solicitacaoAluno', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (231, 'departamentoInfo', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (232, 'departamentoPessoas', 'Funcionários', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (233, 'setDisciplinasAlunos', 'Lista de Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (234, 'solicitacaoEncaminhdada', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (239, 'livrosInfoPrincipais', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (241, 'scoreCardParametrizacao', 'Parametrização', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (244, 'insumoDet', 'Detalhes', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (245, 'abaTiposCurso', 'Tipos de curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (246, 'miniCurriculo', 'Curriculo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (249, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (250, 'questionarioDados', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (251, 'questionarioPerguntas', 'Questões', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (252, 'questionarioPessoas', 'Usuários Autorizados', '-', '-', '1', 3, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (253, 'cursostatseq', 'Vincular Curso', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (248, 'alunoRequisitos', 'Pré-Requisitos', 'TAluno/viewSetRequisitos', '-', '1', 4, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (247, 'disciplinasTurma', 'Disciplinas', 'viewDisciplinasTurma/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (243, 'scoreteste', 'Teste', 'TScoreCard/get', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (89, 'abaFechamentoCaixa', 'Fechamento de caixa', 'TFechaCaixa/get', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (273, 'contasDebito', 'Informações do Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (274, 'listaContasCredito', 'Informações do Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (254, 'setFaltaAlunos', 'Lançamento de Faltas', 'TTurmaDisciplinas/viewSetFaltasAlunos', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (256, 'setNotaAlunos', 'Lançamento de Notas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (240, 'livrosInfoComplementares', 'Informações Complementares', '-', '-', '1', 4, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (257, 'livrosInformacoesSinopse', 'Sinópse', '-', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (258, 'livrosInformacoesSumario', 'Sumário', '-', '-', '1', 3, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (259, 'informacoesPrincipaisCDU', 'Informações', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (5, 'bibliotecaLocacao', 'Locação de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (260, 'bibliotecaLocacao', 'Locação de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (261, 'bibliotecaReserv', 'Reserva de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (262, 'bibliotecaDevolucao', 'Devolução de Livros', 'TBiblioteca/viewSetDevolucao', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (6, 'prerequisitos', 'Pré-requisitos', 'TMatricula/viewSetRequisitos', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (95, 'histAcademicoAluno', 'Histórico Acadêmico', 'TAluno/viewGetAcademico', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (266, 'dadosConvenio', 'Dados do convênio', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (267, 'pessoaConvenios', 'Convênios', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (72, 'historicoAcademico', 'Histórico Acadêmico', 'TSecretaria/viewGetAcademico', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (268, 'orientacoesArquivos', 'Orientações e Arquivos', '-', '-', '1', 4, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (270, 'prodCaracteristicas', 'Características', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (271, 'prodInfoComplementares', 'Informações Complementares', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (272, 'dadosFuncionarioCaixa', 'Funcionário Autorizado', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (275, 'aba_cobranca', 'Dados para Cobrança', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (276, 'aba_inforDisciplinasTurma', 'Detalhes', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (277, 'aba_datasDisciplinas', 'Datas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (20, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (278, 'aba_blocoProfAreas', 'Professores Relacionados', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (279, 'aba_blocoParticipantes', 'Participantes', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (280, 'aba_fornecedoresProdutos', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (281, 'aba_produtoCotacao', 'Cotação do Produto', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (282, 'aba_blocoClienteFormacao', 'Formação Acadêmica', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (283, 'aba_blocoListaInteresses', 'Interesses', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (284, 'aba_matdidaticos', 'Lista de Materiais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (285, 'aba_blocoOcorrencia', 'Ocorrencia', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (286, 'aba_blprojetoRecursos', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (287, 'aba_blprojetoRH', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (288, 'aba_privilegios', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (289, 'aba_blocolistObs', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (290, 'aba_blocoFormacao', 'Formação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (291, 'aba_blocoFormProf', 'Formação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (292, 'aba_blocoAreasProf', 'Áreas Relacionadas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (293, 'aba_listaContasNegociacao', 'Contas a receber', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (294, 'aba_discCursoDisp', 'Disciplinas do Curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (295, 'aba_discCurso', 'Disciplinas do curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (296, 'aba_requisitosCurso', 'Pré-requisitos da turma', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (297, 'aba_blprojetoCusto', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (298, 'aba_blocQuestinarioQuestoes', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (299, 'aba_scorecardSentenças', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (300, 'aba_blocoDepartamentoPessoas', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (301, 'aba_blocoListaDiscAluno', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (302, 'aba_listTreinamento', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (303, 'aba_blocoContMinistProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (304, 'aba_blJustFalta', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (305, 'aba_blocoContMinistCoord', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (306, 'aba_listContasTransacaoD', 'Contas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (309, 'aba_blocolistObsProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (311, 'aba_blocoContMinistProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (312, 'aba_listContasTransacaoC', 'Contas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (313, 'aba_lstProdutosTransacaoC', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (314, 'aba_blocPessoaConvenios', 'Lista de convênios', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (315, 'aba_blocDescProgressivos', 'Descontos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (316, 'aba_blocOrientacoesArquivos', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (317, 'aba_lstProdutosTransacaoD', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (318, 'aba_blocContasDebito', 'Contas a Pagar', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (319, 'aba_cheques', 'Informações do Cheque', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (320, 'aba_detalhamentoCaixa', 'Informações', 'TCaixa/viewDetalhamentoCaixa', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (321, 'transacaoContasDebito', 'Contas a pagar', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (323, 'movimentosProgramadosD', 'Movimentos de débito', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (322, 'movimentosProgramadosC', 'Movimentos de crédito', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (324, 'planosdeAulaProfessor', 'Plano de Aula', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (325, 'infoLivroAluno', 'Informações do Livro', 'TBiblioteca/viewReserva', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (310, 'aba_blocLancamentoNotas', 'Avaliações', 'TTurmaDisciplinas/viewSetNotasAlunos', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (264, 'obsAlunos', 'Observações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (265, 'lancamentoNotas', 'Lançamento de Notas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (326, 'informacoesCaixa', 'Movimentações', 'TCaixa/viewsCaixa', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (327, 'movimentacaoInterna', 'Transferência', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (328, 'historicoAcademicoCompleto', 'Histórico Completo', 'TSecretaria/viewGetAcademicoCompleto', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (307, 'aba_blocLancamentoNotas', 'Avaliações', 'TTurmaDisciplinas/viewSetNotasAlunos', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (255, 'lancamentoNotas', 'Lançamento de Notas', '-', '-', '0', 0, 1, 1, '1900-01-01', 7, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (331, 'prof-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (330, 'coord-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (329, 'sec-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (332, 'sec-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (333, 'coord-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (334, 'prof-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (335, 'sec-ProcessosAcademicos', 'Processos Acadêmicos', 'TSecretaria/viewProcessosAcademicos', '-', '0', 6, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (336, 'disciplinasSemelhantes', 'Disciplinas Semelhantes', '-', '-', '0', 7, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (337, 'discSemelhante', 'Disciplinas', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (338, 'histCaixa-Contas', 'Movimentações', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (339, 'histCaixa-Grafico', 'Gráfico', 'TCaixa/viewGraficoHistorico', '-', '0', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (1, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (2, 'contato', 'Contato', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (3, 'formacao_Profissao', 'Formação / Profissão', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (4, 'cobranca', 'Cobrança', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (11, 'disciplina', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (13, 'programa', 'Programa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (14, 'competencias', 'Competências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (15, 'bibliografia', 'Bibliografia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (16, 'metodologia', 'Metodologia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (17, 'formacaoProfissional', 'Formação profissional', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (18, 'curso', 'Curso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (340, 'solicitacao-Atendimento', 'Atendimento', 'TSecretaria/viewAtendimentoSolicitacao', '-', '0', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (363, 'transacoesConvenios', 'Convênios', '-', '-', '0', 3, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (364, 'transacConvenioAba', 'Convênio', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (366, 'turmaConvenioAba', 'Convênio', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (365, 'turmaConvenio', 'Convênios', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (367, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (308, 'aba_dAvaliacao', 'Avaliações X', '-', '-', '1', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (368, 'gradeAvaliacoes', 'Informações Principais', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (369, 'infoAvaliacao', 'Informações da Avaliação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (370, 'descAvaliacao', 'Descriminação de Avaliações', '-', '-', '0', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (40, 'lancamentoAulas', 'Lançamento de Aulas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (41, 'obsAlunos', 'Observações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (371, 'descAvaliacao', 'Descriminação de Avaliações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (372, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (373, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (374, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (375, 'configUsuario-AlteracaoSenha', 'Alteração de Senha', 'TUsuario/apendicePassword', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (376, 'discProjetoDeCursoConcluido', 'Disciplinas', '-', '-', ' ', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (377, 'estornoMovimentos', 'Lista de Movimentos', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (378, 'estornoDados', 'Informações do Estorno', '-', '-', '0', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (379, 'aba_consolidNotasFrequencias', 'Consolidação', 'TSecretaria/viewConsolidacaoNotasFrequencias', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (380, 'aba_baixaMultiplaCredito', 'Contas de Crédito', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (381, 'aba_vencimentoConta', 'Alteração da Data de Vencimento', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (341, 'historicoMovimentacoes', 'Hist. Movimentações', '-', '-', '0', 6, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (342, 'recado', 'Recado', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (343, 'listaAproveitamento', 'Detalhes', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (344, 'listAprovDisc', 'Detalhes', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (345, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (346, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (357, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (356, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (355, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (354, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (352, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (351, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (350, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (349, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (347, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (353, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (348, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (358, 'justificativaFalta', 'Justificativa', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (218, 'viewArquivos', 'Arquivos', 'TAluno/viewArquivos', '-', '1', 0, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (269, 'viewOrientacoes', 'Orientações', 'TAluno/viewOrientacoes', '-', '1', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (359, 'avaliacaoCurso', 'Avaliações', '-', '-', '0', 4, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (360, 'avaliacao', 'Avaliação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (361, 'descontos', 'Descontos', '-', '-', '0', 2, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (362, 'detalheDesconto', 'Informações do Desconto', '-', '-', '0', 1, 1, 1, '1900-01-01', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (7, 'aba_pess_fone', 'Telefone', '-', '-', '0', 1, 1, 1, '2013-08-21', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (19, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, true);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (263, 'lancamentoAulas', 'Lançamento de Aulas', '-', '-', '0', 0, 1, 1, '1900-01-01', 7, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (67, 'usuarioPrivilegios', 'Privilégios', 'TPrivilegios/viewGetModulos', '-', '1', 0, 1, 1, '1900-01-01', 1, true);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (8, 'aba_lancamentoNotas', 'Lançamento de Notas', 'TTurmaDisciplinas/viewLancamentoNota', '-', '0', 1, 1, 1, '2013-11-29', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (9, 'aba_lancamentoNotas', 'Lançamento de Notas', 'TTurmaDisciplinas/viewLancamentoNota', '-', '0', 1, 1, 1, '2013-11-29', 1, false);
-INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq, require_register) VALUES (21, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1, true);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (21, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (22, 'dadosPessoais', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (23, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (24, 'dados', 'Dados', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (26, 'gerenciamentoDuplicata', 'Gerenciar Duplicatas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (27, 'obs', 'Observações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (28, 'infoConta', 'Conta caixa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (29, 'dadosConta', 'Dados da Conta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (30, 'dadosCredito', 'Dados do Crédito', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (35, 'abaContasCaixa', 'Contas Caixa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (37, 'infoUsuarios', 'Informações de acesso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (39, 'discAvaliacao', 'Avaliações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (42, 'cargo', 'Informações do Cargo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (43, 'dado', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (44, 'formacao', 'Formação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (45, 'dadosPessoais', 'Dados Pessoais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (46, 'dadosComplementares', 'Dados Complementares', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (47, 'patrimonios', 'Patrimonios', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (48, 'conhecimentos', 'Competências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (49, 'hierarquia', 'Hierarquia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (50, 'treinamento', 'Treinamento', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (52, 'atributos', 'Atributos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (53, 'dadosAdministrstatseqs', 'Dados Administrstatseqs', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (54, 'dadosCurriculares', 'Dados Curriculares', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (55, 'financeiro', 'Financeiro', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (57, 'filiais', 'Cadastrar Filial', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (58, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (59, 'contato', 'Contato', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (60, 'insumos', 'Insumos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (61, 'historico', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (63, 'cotacao', 'Cotação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (64, 'gerNegociacao', 'Gerenciar Negociação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (65, 'dadosContrato', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (66, 'dadosUsuario', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (68, 'dadosFerias', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (69, 'dadosSala', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (70, 'patrimoniosHistorico', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (71, 'dadosAreaCurso', 'Area de Curso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (73, 'solicitacao', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (74, 'dadosCompra', 'Dados da Compra', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (77, 'interesses', 'Cursos Interessados', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (80, 'parametrosComercial', 'Comercial', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (81, 'parametrosSecretaria', 'Secretaria', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (82, 'parametrosFinanceiro', 'Financeiro', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (83, 'parametrosAdministrstatseq', 'Administrstatseq', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (84, 'parametrosRH', 'Recursos Humanos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (85, 'parametrosCoordenador', 'Coordenador', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (86, 'parametrosProfessores', 'Professores', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (88, 'matdidaticos', 'Materiais Didáticos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (90, 'historioFechaCaixa', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (99, 'histOcorrencia', 'Ocorrências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (200, 'experienciaCurriculo', 'Experiência', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (201, 'obsCurriculo', 'Observações', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (202, 'resumo', 'Resumo do Curriculo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (203, 'projetoEscopo', 'Escopo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (204, 'projetoRecursos', 'Recursos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (205, 'projetoRiscos', 'Riscos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (206, 'projetoProduto', 'Produto Final', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (207, 'projetoRH', 'R.H.', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (208, 'projetoReceita', 'Receita', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (209, 'projetoCusto', 'Custos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (211, 'gerTurmaDisc', 'Disciplina', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (212, 'planoaulaDisciplina', 'Disciplina', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (213, 'planoaulaConteudo', 'Conteudo', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (214, 'planoaulaRecursos', 'Recursos', '-', '-', '1', 3, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (215, 'planoaulaMetodologia', 'Metodologia', '-', '-', '1', 4, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (217, 'abaGeraArquivos', 'Arquivos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (34, 'turmasDisicplinasRequisitos', 'Pré-requisitos', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (36, 'lanFaltas', 'Lançar Faltas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (210, 'historicoFinanceiro', 'Histórico Financeiro', 'TSecretaria/viewGetFinanceiro', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (62, 'produtoCaracteristicas', 'Características', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (216, 'abaGeraDisciplina', 'Adicionar Disciplinas', 'confirmaGeraDisciplina/get', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (87, 'conciliaBoletos', 'Conciliação Bancária', 'TConciliacaoCaixa/setForm', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (93, 'notasAluno', 'Notas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (56, 'historicoCliente', 'Histórico', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (92, 'dadosFolhaPag', 'Folha de Pagamento', 'setCriterioFolhaPag/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (91, 'mostraDuplicatasAluno', 'Boletos', 'TAluno/viewGetFinanceiro', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (33, 'matricula', 'Gerenciador Matrícula', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (79, 'dre', 'DRE', 'setPeriodoDRE/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (78, 'balancoPatrimonial', 'Balanço Patrimonial', 'setDataBP/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (76, 'relatorioCaixaD', 'Relatório de Despesa', 'relatorioCaixaD/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (75, 'relatorioCaixaR', 'Relatório de Receita', 'relatorioCaixaR/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (67, 'usuarioPrivilegios', 'Privilégios', 'TPrivilegios/viewGetModulos', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (219, 'estatistica', 'Estatistica', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (94, 'faltasAluno', 'Faltas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (38, 'lanNotas', 'Lançar Notas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (31, 'contaReceber', 'Informações da Conta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (32, 'contasPagar', 'Informações da Conta', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (220, 'lancaExtorno', 'Lançamento', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (221, 'transac_InfoC', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (222, 'transac_infoD', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (223, 'transac_condC', 'Condições de Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (225, 'permissaoPessoa', 'Permissões', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (226, 'transac_condD', 'Condições de Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (227, 'justFaltas', 'Justificar Falta', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (228, 'dadosProdutos', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (229, 'conteudoMinistradoProd', 'Conteudo Ministrado', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (230, 'solicitacaoAluno', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (231, 'departamentoInfo', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (232, 'departamentoPessoas', 'Funcionários', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (233, 'setDisciplinasAlunos', 'Lista de Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (234, 'solicitacaoEncaminhdada', 'Solicitação', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (239, 'livrosInfoPrincipais', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (241, 'scoreCardParametrizacao', 'Parametrização', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (244, 'insumoDet', 'Detalhes', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (245, 'abaTiposCurso', 'Tipos de curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (246, 'miniCurriculo', 'Curriculo', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (249, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (250, 'questionarioDados', 'Informações Principais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (251, 'questionarioPerguntas', 'Questões', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (252, 'questionarioPessoas', 'Usuários Autorizados', '-', '-', '1', 3, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (253, 'cursostatseq', 'Vincular Curso', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (248, 'alunoRequisitos', 'Pré-Requisitos', 'TAluno/viewSetRequisitos', '-', '1', 4, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (247, 'disciplinasTurma', 'Disciplinas', 'viewDisciplinasTurma/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (243, 'scoreteste', 'Teste', 'TScoreCard/get', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (89, 'abaFechamentoCaixa', 'Fechamento de caixa', 'TFechaCaixa/get', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (273, 'contasDebito', 'Informações do Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (274, 'listaContasCredito', 'Informações do Pagamento', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (254, 'setFaltaAlunos', 'Lançamento de Faltas', 'TTurmaDisciplinas/viewSetFaltasAlunos', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (256, 'setNotaAlunos', 'Lançamento de Notas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (240, 'livrosInfoComplementares', 'Informações Complementares', '-', '-', '1', 4, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (257, 'livrosInformacoesSinopse', 'Sinópse', '-', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (258, 'livrosInformacoesSumario', 'Sumário', '-', '-', '1', 3, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (259, 'informacoesPrincipaisCDU', 'Informações', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (5, 'bibliotecaLocacao', 'Locação de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (260, 'bibliotecaLocacao', 'Locação de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (261, 'bibliotecaReserv', 'Reserva de Livros', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (262, 'bibliotecaDevolucao', 'Devolução de Livros', 'TBiblioteca/viewSetDevolucao', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (6, 'prerequisitos', 'Pré-requisitos', 'TMatricula/viewSetRequisitos', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (95, 'histAcademicoAluno', 'Histórico Acadêmico', 'TAluno/viewGetAcademico', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (266, 'dadosConvenio', 'Dados do convênio', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (267, 'pessoaConvenios', 'Convênios', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (72, 'historicoAcademico', 'Histórico Acadêmico', 'TSecretaria/viewGetAcademico', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (268, 'orientacoesArquivos', 'Orientações e Arquivos', '-', '-', '1', 4, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (270, 'prodCaracteristicas', 'Características', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (271, 'prodInfoComplementares', 'Informações Complementares', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (272, 'dadosFuncionarioCaixa', 'Funcionário Autorizado', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (275, 'aba_cobranca', 'Dados para Cobrança', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (276, 'aba_inforDisciplinasTurma', 'Detalhes', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (277, 'aba_datasDisciplinas', 'Datas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (20, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (278, 'aba_blocoProfAreas', 'Professores Relacionados', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (279, 'aba_blocoParticipantes', 'Participantes', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (280, 'aba_fornecedoresProdutos', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (281, 'aba_produtoCotacao', 'Cotação do Produto', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (282, 'aba_blocoClienteFormacao', 'Formação Acadêmica', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (283, 'aba_blocoListaInteresses', 'Interesses', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (284, 'aba_matdidaticos', 'Lista de Materiais', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (285, 'aba_blocoOcorrencia', 'Ocorrencia', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (286, 'aba_blprojetoRecursos', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (287, 'aba_blprojetoRH', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (288, 'aba_privilegios', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (289, 'aba_blocolistObs', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (290, 'aba_blocoFormacao', 'Formação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (291, 'aba_blocoFormProf', 'Formação', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (292, 'aba_blocoAreasProf', 'Áreas Relacionadas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (293, 'aba_listaContasNegociacao', 'Contas a receber', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (294, 'aba_discCursoDisp', 'Disciplinas do Curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (295, 'aba_discCurso', 'Disciplinas do curso', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (296, 'aba_requisitosCurso', 'Pré-requisitos da turma', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (297, 'aba_blprojetoCusto', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (298, 'aba_blocQuestinarioQuestoes', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (299, 'aba_scorecardSentenças', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (300, 'aba_blocoDepartamentoPessoas', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (301, 'aba_blocoListaDiscAluno', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (302, 'aba_listTreinamento', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (303, 'aba_blocoContMinistProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (304, 'aba_blJustFalta', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (305, 'aba_blocoContMinistCoord', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (306, 'aba_listContasTransacaoD', 'Contas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (309, 'aba_blocolistObsProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (311, 'aba_blocoContMinistProf', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (312, 'aba_listContasTransacaoC', 'Contas', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (313, 'aba_lstProdutosTransacaoC', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (314, 'aba_blocPessoaConvenios', 'Lista de convênios', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (315, 'aba_blocDescProgressivos', 'Descontos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (316, 'aba_blocOrientacoesArquivos', '-', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (317, 'aba_lstProdutosTransacaoD', 'Produtos', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (318, 'aba_blocContasDebito', 'Contas a Pagar', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (319, 'aba_cheques', 'Informações do Cheque', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (320, 'aba_detalhamentoCaixa', 'Informações', 'TCaixa/viewDetalhamentoCaixa', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (321, 'transacaoContasDebito', 'Contas a pagar', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (323, 'movimentosProgramadosD', 'Movimentos de débito', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (322, 'movimentosProgramadosC', 'Movimentos de crédito', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (324, 'planosdeAulaProfessor', 'Plano de Aula', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (325, 'infoLivroAluno', 'Informações do Livro', 'TBiblioteca/viewReserva', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (310, 'aba_blocLancamentoNotas', 'Avaliações', 'TTurmaDisciplinas/viewSetNotasAlunos', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (255, 'lancamentoNotas', 'Lançamento de Notas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (263, 'lancamentoAulas', 'Lançamento de Aulas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (264, 'obsAlunos', 'Observações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (265, 'lancamentoNotas', 'Lançamento de Notas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (326, 'informacoesCaixa', 'Movimentações', 'TCaixa/viewsCaixa', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (327, 'movimentacaoInterna', 'Transferência', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (328, 'historicoAcademicoCompleto', 'Histórico Completo', 'TSecretaria/viewGetAcademicoCompleto', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (307, 'aba_blocLancamentoNotas', 'Avaliações', 'TTurmaDisciplinas/viewSetNotasAlunos', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (331, 'prof-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (330, 'coord-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (329, 'sec-histAlunos', 'Histórico Alunos', 'TSecretaria/viewGetAcademicoDisciplina', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (332, 'sec-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (333, 'coord-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (334, 'prof-taxaOcupacao', 'Taxa de Ocupação', 'TSecretaria/viewTaxaOcupacao', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (335, 'sec-ProcessosAcademicos', 'Processos Acadêmicos', 'TSecretaria/viewProcessosAcademicos', '-', '0', 6, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (336, 'disciplinasSemelhantes', 'Disciplinas Semelhantes', '-', '-', '0', 7, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (337, 'discSemelhante', 'Disciplinas', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (338, 'histCaixa-Contas', 'Movimentações', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (339, 'histCaixa-Grafico', 'Gráfico', 'TCaixa/viewGraficoHistorico', '-', '0', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (1, 'dadosPrincipais', 'Dados Principais', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (2, 'contato', 'Contato', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (3, 'formacao_Profissao', 'Formação / Profissão', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (4, 'cobranca', 'Cobrança', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (11, 'disciplina', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (13, 'programa', 'Programa', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (14, 'competencias', 'Competências', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (15, 'bibliografia', 'Bibliografia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (16, 'metodologia', 'Metodologia', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (17, 'formacaoProfissional', 'Formação profissional', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (18, 'curso', 'Curso', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (19, 'disciplinas', 'Disciplinas', '-', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (340, 'solicitacao-Atendimento', 'Atendimento', 'TSecretaria/viewAtendimentoSolicitacao', '-', '0', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (363, 'transacoesConvenios', 'Convênios', '-', '-', '0', 3, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (364, 'transacConvenioAba', 'Convênio', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (366, 'turmaConvenioAba', 'Convênio', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (365, 'turmaConvenio', 'Convênios', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (367, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (308, 'aba_dAvaliacao', 'Avaliações X', '-', '-', '1', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (368, 'gradeAvaliacoes', 'Informações Principais', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (369, 'infoAvaliacao', 'Informações da Avaliação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (370, 'descAvaliacao', 'Descriminação de Avaliações', '-', '-', '0', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (40, 'lancamentoAulas', 'Lançamento de Aulas', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (41, 'obsAlunos', 'Observações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (371, 'descAvaliacao', 'Descriminação de Avaliações', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (372, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (373, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (374, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (375, 'configUsuario-AlteracaoSenha', 'Alteração de Senha', 'TUsuario/apendicePassword', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (376, 'discProjetoDeCursoConcluido', 'Disciplinas', '-', '-', ' ', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (377, 'estornoMovimentos', 'Lista de Movimentos', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (378, 'estornoDados', 'Informações do Estorno', '-', '-', '0', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (379, 'aba_consolidNotasFrequencias', 'Consolidação', 'TSecretaria/viewConsolidacaoNotasFrequencias', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (380, 'aba_baixaMultiplaCredito', 'Contas de Crédito', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (381, 'aba_vencimentoConta', 'Alteração da Data de Vencimento', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (341, 'historicoMovimentacoes', 'Hist. Movimentações', '-', '-', '0', 6, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (342, 'recado', 'Recado', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (343, 'listaAproveitamento', 'Detalhes', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (344, 'listAprovDisc', 'Detalhes', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (345, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (346, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (357, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (356, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (355, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (354, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (352, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (351, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (350, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (349, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (347, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (353, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (348, 'processoEfetivacao', 'Efetivação', '-', '-', '0', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (358, 'justificativaFalta', 'Justificativa', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (218, 'viewArquivos', 'Arquivos', 'TAluno/viewArquivos', '-', '1', 0, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (269, 'viewOrientacoes', 'Orientações', 'TAluno/viewOrientacoes', '-', '1', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (359, 'avaliacaoCurso', 'Avaliações', '-', '-', '0', 4, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (360, 'avaliacao', 'Avaliação', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (361, 'descontos', 'Descontos', '-', '-', '0', 2, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (362, 'detalheDesconto', 'Informações do Desconto', '-', '-', '0', 1, 1, 1, '1900-01-01', 1);
+INSERT INTO abas (seq, abaid, nomeaba, obapendice, action, impressao, ordem, usuaseq, unidseq, datacad, statseq) VALUES (7, 'aba_pess_fone', 'Telefone', '-', '-', '0', 1, 1, 1, '2013-08-21', 1);
 
 
 --
--- TOC entry 2449 (class 0 OID 0)
+-- TOC entry 2404 (class 0 OID 0)
 -- Dependencies: 162
 -- Name: abas_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('abas_seq_seq', 9, true);
+SELECT pg_catalog.setval('abas_seq_seq', 7, true);
 
 
 --
--- TOC entry 2369 (class 0 OID 32780)
--- Dependencies: 163 2418
+-- TOC entry 2324 (class 0 OID 16395)
+-- Dependencies: 163 2373
 -- Data for Name: blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -1955,7 +1952,7 @@ INSERT INTO blocos (seq, blocoid, nomebloco, formato, tabseq, blocoheight, stats
 
 
 --
--- TOC entry 2450 (class 0 OID 0)
+-- TOC entry 2405 (class 0 OID 0)
 -- Dependencies: 164
 -- Name: blocos_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -1964,8 +1961,8 @@ SELECT pg_catalog.setval('blocos_seq_seq', 7, true);
 
 
 --
--- TOC entry 2371 (class 0 OID 32788)
--- Dependencies: 165 2418
+-- TOC entry 2326 (class 0 OID 16403)
+-- Dependencies: 165 2373
 -- Data for Name: blocos_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -2241,7 +2238,7 @@ INSERT INTO blocos_x_abas (seq, abaseq, blocseq, ordem, usuaseq, unidseq, dataca
 
 
 --
--- TOC entry 2451 (class 0 OID 0)
+-- TOC entry 2406 (class 0 OID 0)
 -- Dependencies: 166
 -- Name: blocos_x_abas_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -2250,8 +2247,8 @@ SELECT pg_catalog.setval('blocos_x_abas_seq_seq', 19, true);
 
 
 --
--- TOC entry 2373 (class 0 OID 32795)
--- Dependencies: 167 2418
+-- TOC entry 2328 (class 0 OID 16410)
+-- Dependencies: 167 2373
 -- Data for Name: campos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -2277,6 +2274,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (684, 'data', 'data', 'Data:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 46, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (801, 'previsaoentrada', 'previsaoentrada', 'Data de Devolução:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 87, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (679, 'dataaula', 'dataaula', 'Data da aula:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 28, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (75, 'dataFim', 'dataFim', 'Data do término:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 11, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (338, 'dataCad', 'dataCad', 'Data do Cadastro:', '''99/99/9999'',1', NULL, 1, 1, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (131, 'obs', 'obs', 'Observações:', NULL, NULL, 9, 18, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (804, 'statseq', 'validaLocacao', 'Confirmar', NULL, NULL, 5, 87, 1, 0, '-', NULL, '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2358,7 +2356,11 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (30, 'cep', 'cep', 'CEP: ', '''99.999-999'',1', NULL, 1, 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (42, 'site', 'site', 'Site / Pagina Pessoal:', NULL, NULL, 1, 1, 1, 0, '', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (49, 'tipoend', 'tipoend', 'Tipo: ', NULL, NULL, 2, 5, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (70, 'publicoAlvo', 'publicoAlvo', 'Publico Alvo:', NULL, NULL, 9, 9, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (72, 'cargaHorTotal', 'cargaHorTotal', 'Carga horária total:', NULL, NULL, 1, 9, 1, 0, '-', '-', '0', '0', NULL, 0, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (78, 'frequenciaAula', 'frequenciaAula', 'Frequência das aulas:', NULL, NULL, 2, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (80, 'localAulas', 'localAulas', 'Local das Aulas:', NULL, NULL, 1, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (89, 'statseq', 'statseq', 'Situação:', NULL, NULL, 2, 9, 1, 0, '4', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (102, 'curriculo', 'curriculo', '', NULL, NULL, 9, 15, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (106, 'opCobranca', 'opCobranca', 'Usar Endereço de cobrança:', NULL, NULL, 2, 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (115, 'seq', 'seq', 'Cod.:', NULL, NULL, 1, 17, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2388,12 +2390,10 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (68, 'arcuseq', 'arcuseq', 'Área do Curso:', NULL, NULL, 2, 9, 1, 0, '-', NULL, '0', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (54, 'programa', 'programa', '', NULL, NULL, 9, 8, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (57, 'biografia', 'biografia', '', NULL, NULL, 9, 8, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (89, 'stpcseq', 'stpcseq', 'Situação:', NULL, NULL, 2, 9, 1, 0, '4', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (80, 'localaulas', 'localaulas', 'Local das Aulas:', NULL, NULL, 1, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (78, 'frequenciaaula', 'frequenciaaula', 'Frequência das aulas:', NULL, NULL, 2, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (293, 'beneficios', 'beneficios', 'Beneficios:', NULL, NULL, 9, 14, 1, 0, '0', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (52, 'titulo', 'titulo', 'Disciplina:', NULL, NULL, 1, 8, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (124, 'mora', 'mora', 'Mora dia:', NULL, NULL, 1, 17, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (69, 'objetivoCurso', 'objetivoCurso', 'Objetivo do Curso:', NULL, NULL, 9, 9, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (389, 'peso', 'peso', 'Peso:', NULL, NULL, 1, 37, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (76, 'frequencia', 'frequencia', 'Nº. Total de Frequência:', NULL, NULL, 1, 12, 1, 0, '-', NULL, '0', '0', NULL, 1, 1, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (77, 'datas', 'datas', 'Datas:', NULL, NULL, 1, 12, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
@@ -2427,6 +2427,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (378, 'email2', 'email2', 'E-mail Secundario:', NULL, NULL, 1, 1, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (383, 'limitacoes', 'limitacoes', 'Limitações:', NULL, NULL, 9, 37, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (222, 'conteudo', 'conteudo', 'Conteudo:', NULL, NULL, 9, 28, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (83, 'valorMensal', 'valorMensal', 'Valor das parcelas:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (174, 'fmpgseq', 'formaPag', 'Forma de Pagamento', NULL, NULL, 2, 21, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (183, 'diasaula', 'diasaula', 'Dias da semana:', NULL, NULL, 1, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (162, 'mora', 'mora', 'Mora dia:', NULL, NULL, 2, 21, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2436,7 +2437,6 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (231, 'cidade', 'cidade', 'Cidade:', NULL, NULL, 1, 30, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (232, 'estado', 'estado', 'Estado:', NULL, NULL, 2, 30, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (233, 'bairro', 'bairro', 'Bairro:', NULL, NULL, 1, 30, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (83, 'valormensal', 'valormensal', 'Valor das parcelas:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (236, 'email', 'email', 'E-mail:', NULL, NULL, 1, 30, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (712, 'dataaquisicao', 'dataAquisicao', 'Data de Aquisição:', '''99/99/9999'',1', NULL, 1, 76, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (711, 'datafabricacao', 'dataFabricacao', 'Data de Fabricação:', '''99/99/9999'',1', NULL, 1, 76, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2640,6 +2640,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (680, 'conteudo', 'conteudo', 'Conteudo:', NULL, NULL, 9, 28, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (686, 'statseq', 'statseq', '', NULL, NULL, 7, 46, 1, 0, '2', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (637, 'seq', 'seq', 'Cod.:', NULL, NULL, 1, 11, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (687, 'deptseq', 'deptseq', 'Departamento:', NULL, NULL, 2, 14, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (547, 'cursseq', 'cursseq', 'Curso:', NULL, NULL, 11, 48, 1, 184, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (566, 'empTerc', 'pessseq', 'Empresa Vinculada:', NULL, NULL, 11, 14, 1, 165, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (691, 'obs', 'obs', 'Observações:', NULL, NULL, 9, 74, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2731,6 +2732,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (786, 'cursseq', 'cursseq', 'Referência do curso:', NULL, NULL, 11, 11, 1, 184, '-', NULL, NULL, '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (633, 'cursseq', 'cursseq', 'Curso:', NULL, NULL, 11, 16, 1, 184, '-', '-', '0', '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (868, 'transeq', 'transeq', 'Transação:', NULL, NULL, 1, 65, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (632, 'pessseq', 'pessseq', 'Cliente:', NULL, NULL, 2, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (4, 'frequencia', 'frequencia', 'Nº. de frequências:', NULL, NULL, 1, 28, 1, 0, '1', '-', '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (3, 'frequencia', 'frequencia', 'Nº. de frequências:', NULL, NULL, 1, 28, 1, 0, '1', '-', '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (869, 'seq', 'seq', 'Conta:', NULL, NULL, 1, 65, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
@@ -2755,15 +2757,19 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (631, 'turmseq', 'turmseq', 'Turmas Disponiveis:', NULL, NULL, 2, 16, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (615, 'profseq', 'profseq', NULL, NULL, NULL, 7, 62, 1, 0, 'function/TUsuario/getCodigoProfessor', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (886, 'volume', 'volume', 'Volume:', NULL, NULL, 1, 96, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (152, 'intervaloParcelas', 'intervaloParcelas', 'Intervalo:', NULL, NULL, 1, 66, 0, 0, '-', '-', '0', '0', 'Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.', 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (900, 'cofiseq', 'cofiseq', 'Conta Caixa:', NULL, NULL, 2, 94, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (743, 'intervaloParcelas', 'intervaloParcelas', 'Intervalo:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', 'Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.', 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (750, 'buttonTransacaoD', 'buttonTransacaoD', 'Gerar Contas', NULL, NULL, 5, 66, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (896, 'intervaloparcelas', 'intervaloparcelas', 'Intervalo:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (743, 'intervaloparcelas', 'intervaloparcelas', 'Intervalo:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', 'Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.', 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (896, 'intervaloParcelas', 'intervaloParcelas', 'Intervalo:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (897, 'buttonTransacaoC', 'buttonTransacaoC', 'Gerar Contas', NULL, NULL, 5, 66, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (898, 'numparcelas', 'numParcelas', 'Parcelas:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (907, 'obs', 'obs', 'Nº do Doc.:', NULL, NULL, 1, 16, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (641, 'plcoseq', 'plcoseq', 'Plano de Contas:', NULL, NULL, 2, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (901, 'seq', 'seq', 'Cod.:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (906, 'obs', 'obs', NULL, NULL, NULL, 7, 56, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (891, 'desconto', 'desconto', 'Desconto:', NULL, NULL, 1, 66, 1, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (892, 'acrescimo', 'acrescimo', 'Acrescimo:', NULL, NULL, 1, 66, 1, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (715, 'funcseq', 'funcseq', 'Responsavel:', NULL, NULL, 11, 76, 1, 172, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (775, 'profseq', 'profseq', 'Professor:', NULL, NULL, 11, 12, 1, 221, '-', NULL, '0', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (784, 'ccduseq', 'ccduseq', 'Classificação CDU:', NULL, NULL, 11, 96, 1, 272, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2798,11 +2804,8 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (929, 'cargahoraria', 'cargahoraria', 'C.H.:', NULL, NULL, 1, 100, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (930, 'ementa', 'ementa', 'Ementa:', NULL, NULL, 9, 100, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (821, 'valor', 'valor', 'Valor:', NULL, 'CLASS_MASCARA_VALOR', 11, 89, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (902, 'codigocontacaixa', 'codigocontacaixa_origem', 'Conta de Origem:', NULL, NULL, 2, 999, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (891, 'desconto', 'desconto', 'Desconto:', NULL, NULL, 1, 66, 1, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (892, 'acrescimo', 'acrescimo', 'Acrescimo:', NULL, NULL, 1, 66, 1, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (894, 'valorcorrigido', 'valorcorrigido', 'Valor Corrigido:', NULL, 'CLASS_MASCARA_VALOR', 11, 66, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (898, 'numparcelas', 'numparcelas', 'Parcelas:', NULL, NULL, 1, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (899, 'valortotal', 'valortotal', 'Valor Total:', NULL, 'CLASS_MASCARA_VALOR', 11, 66, 0, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (894, 'valorcorrigido', 'valorcorrigido', 'Valor Corrigido:', NULL, 'CLASS_MASCARA_VALOR', 11, 66, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (826, 'valordescontado', 'valordescontado_desc_prog', 'Valor/Percentual:', NULL, 'CLASS_MASCARA_VALOR', 11, 92, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (931, 'nota', 'nota', 'Nota:', NULL, NULL, 1, 100, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (105, 'pessseq', 'pessseq', 'Cliente:', NULL, NULL, 11, 16, 1, 143, '-', '-', '0', '0', NULL, 1, 1, 1, '1', NULL, 1, 1, '1900-01-01');
@@ -2829,6 +2832,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (944, 'convseq', 'convseq', 'Convênio:', NULL, NULL, 2, 103, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (943, 'dialimite', 'dialimite', 'Dia Limite:', NULL, NULL, 2, 102, 1, 0, '-', '-', '0', '0', 'Caso o desconto não tenha validade, mantenha o valor ''''--'''' (Mantendo o valor no campo ''''Outras deduções/Abatimentos'''' do boleto).', 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (945, 'convseq', 'convseq', 'Convênio:', NULL, NULL, 2, 104, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (702, 'valorCorrigido', 'valorCorrigido', 'Valor total corrigido:', NULL, 'CLASS_MASCARA_VALOR,CLASS_DESTAQUE', 1, 66, 0, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (673, 'valorAlteravel', 'valorAlteravel', 'Valor pode ser alterado:', NULL, NULL, 2, 70, 1, 0, '-', '-', 'setFloat', '0', 'Define se o valor pode sofrer alteração durante a negociação.', 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (645, 'cliente', 'cliente', 'Cliente:', NULL, NULL, 2, 1, 1, 0, 'true', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (309, 'valorcompra', 'valorCompra', 'Valor de Compra:', NULL, NULL, 1, 32, 1, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2890,6 +2894,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (795, 'livrseq', 'livrseq', 'Livro:', NULL, NULL, 11, 87, 1, 277, '-', '-', '0', '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (524, 'pessseq', 'pessseq', 'Fornecedor:', NULL, NULL, 11, 999, 1, 165, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (461, 'empregoFone', 'empregoFone', 'Telefone de Contato:', NULL, 'CLASS_UI_TELEFONE', 1, 999, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (902, 'codigocontacaixa', 'codigocontacaixa_origem', 'Conta de Origem:', NULL, NULL, 2, 999, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (903, 'codigocontacaixa', 'codigocontacaixa_destino', 'Conta de Destino:', NULL, NULL, 2, 999, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (905, 'buttonMov', 'buttonMov', 'Gerar  Movimentação', NULL, NULL, 5, 999, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 2, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (950, 'alterar', 'alterar', 'Alterar', NULL, NULL, 5, 999, 0, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2934,6 +2939,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (158, 'vencimento', 'vencimento', 'Vencimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 21, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (244, 'datanasc', 'datanasc', 'Data de Nascimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 5, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (228, 'dataNasc', 'dataNasc', 'Data de Nascimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 30, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (895, 'vencimento', 'vencimento', 'Data base:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 66, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (695, 'data', 'data', 'Data:', NULL, 'CLASS_CALENDARIO', 10, 46, 1, 0, '-', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (241, 'dataReg', 'dataReg', 'Data do Registro:', NULL, 'CLASS_CALENDARIO', 10, 30, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (924, 'retorno', 'retorno', 'Data de Retorno:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 99, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2953,10 +2959,11 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (137, 'vencimento', 'vencimento', 'Data de vencimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 999, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (460, 'empregoDataAdmissao', 'empregoDataAdmissao', 'Data de Admissão:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 999, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (530, 'vencimento', 'vencimento', 'Vencimento:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 999, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (74, 'dataInicio', 'dataInicio', 'Data de início:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 11, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (120, 'valorNominal', 'valorNominal', 'Valor Nominal:', NULL, 'CLASS_MASCARA_VALOR', 11, 17, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (82, 'valorMatricula', 'valorMatricula', 'Valor da matrícula:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (81, 'valorTaxa', 'valorTaxa', 'Valor da taxa:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (145, 'valorNominal', 'valorNominal', 'Valor nominal:', NULL, 'CLASS_MASCARA_VALOR', 11, 65, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (895, 'vencimento', 'vencimento', 'Data base:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 66, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (81, 'valortaxa', 'valortaxa', 'Valor da taxa:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (306, 'valornominal', 'valorNominal', 'Valor Contábil:', NULL, 'CLASS_MASCARA_VALOR', 11, 32, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (394, 'preco', 'preco', 'Valor:', NULL, 'CLASS_MASCARA_VALOR', 11, 38, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (525, 'valorUnitario', 'valorUnitario', 'Valor Unitario:', NULL, 'CLASS_MASCARA_VALOR', 11, 47, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -2970,6 +2977,7 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (495, 'custolanche', 'custolanche', 'Custo lanche / aluno:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (496, 'custovaletransporte', 'custovaletransporte', 'Custo VT / aluno:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (497, 'custoapostila', 'custoapostila', 'Custo Apostila / aluno:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
+INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (498, 'custoBbrinde', 'custobrinde', 'Custo Brinde / aluno:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (499, 'custoparceiro', 'custoparceiro', 'Custo Parceiros:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (500, 'custoaluguel', 'custoaluguel', 'Custo aluguel:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (501, 'custocertificado', 'custocertificado', 'Custo Certificado:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
@@ -3036,33 +3044,20 @@ INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabs
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (165, 'valorfinal', 'valorfinal', 'Valor Pago:', NULL, 'CLASS_UI_H2,CLASS_MASCARA_VALOR', 1, 21, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (34, 'tipo', 'tipo', NULL, NULL, NULL, 14, 21, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 0, '0', NULL, 1, 1, '2013-10-17');
 INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (41, 'multa', 'juros', 'Multa e Juros:', NULL, 'CLASS_MASCARA_VALOR', 11, 21, 1, 0, '0', 'setMoney', 'setFloat', '0', NULL, 1, 0, 0, '0', NULL, 1, 1, '2013-10-18');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (69, 'objetivo', 'objetivo', 'Objetivo do Curso:', NULL, NULL, 9, 9, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (44, 'gdavseq', 'gdavseq', 'Grade de Avaliações:', NULL, NULL, 2, 9, 1, 0, '-', '-', NULL, NULL, NULL, 1, 0, 1, '0', NULL, 1, 1, '2013-11-25');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (632, 'pessseq', 'pessseq', 'Cliente:', NULL, NULL, 2, 66, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 2, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (687, 'deptseq', 'deptseq', 'Departamento:', NULL, NULL, 2, 14, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (70, 'publicoalvo', 'publicoalvo', 'Publico Alvo:', NULL, NULL, 9, 9, 1, 0, '-', '-', '0', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (45, 'identificador', 'identificador', 'Identificador:', NULL, NULL, 1, 9, 1, 0, '-', '-', '0', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '2013-11-27');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (82, 'valormatricula', 'valormatricula', 'Valor da matrícula:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (498, 'custobrinde', 'custobrinde', 'Custo Brinde / aluno:', NULL, 'CLASS_MASCARA_VALOR', 11, 11, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (74, 'datainicio', 'datainicio', 'Data de início:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 11, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (75, 'datafim', 'datafim', 'Data do término:', '''99/99/9999'',1', 'CLASS_CALENDARIO', 10, 11, 1, 0, 'function/TSetData/getData', 'setDataPT', 'setDataDB', '0', NULL, 1, 1, 1, '0', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (899, 'valortotal', 'valortotal', 'Valor Total:', NULL, 'CLASS_MASCARA_VALOR', 11, 66, 1, 0, '-', 'setMoney', 'setFloat', '0', NULL, 1, 0, 2, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (152, 'intervaloparcelas', 'intervaloparcelas', 'Intervalo:', NULL, NULL, 1, 66, 0, 0, '-', '-', '0', '0', 'Caso o valor do intervalo seja omitido o sistema aplica o valor padrão de 30 dias como intervalo entre as parcelas.', 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
-INSERT INTO campos (seq, colunadb, campo, label, mascara, seletor, tpcaseq, tabseq, ativafunction, ativapesquisa, valorpadrao, outcontrol, incontrol, trigger, help, statseq, required, alteravel, autosave, manter, usuaseq, unidseq, datacad) VALUES (702, 'valorcorrigido', 'valorcorrigido', 'Valor total corrigido:', NULL, 'CLASS_MASCARA_VALOR,CLASS_DESTAQUE', 1, 66, 0, 0, '-', '-', 'setFloat', '0', NULL, 1, 0, 1, '1', NULL, 1, 1, '1900-01-01');
 
 
 --
--- TOC entry 2452 (class 0 OID 0)
+-- TOC entry 2407 (class 0 OID 0)
 -- Dependencies: 168
 -- Name: campos_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('campos_seq_seq', 45, true);
+SELECT pg_catalog.setval('campos_seq_seq', 41, true);
 
 
 --
--- TOC entry 2375 (class 0 OID 32812)
--- Dependencies: 169 2418
+-- TOC entry 2330 (class 0 OID 16427)
+-- Dependencies: 169 2373
 -- Data for Name: campos_x_blocos; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -3097,8 +3092,11 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (717, 167, 708, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (179, 44, 168, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (180, 44, 169, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (191, 22, 180, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (205, 25, 183, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (206, 25, 194, 'N', NULL, 10, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (207, 157, 195, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (190, 45, 179, 'N', NULL, 10, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (211, 51, 199, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (212, 51, 200, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (213, 51, 201, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
@@ -3126,6 +3124,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (247, 57, 234, 'S', NULL, 9, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (248, 57, 235, 'S', NULL, 10, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (249, 57, 236, 'S', NULL, 11, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (250, 112, 237, 'N', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (251, 112, 238, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (252, 113, 239, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (253, 114, 240, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
@@ -3137,9 +3136,6 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (857, 43, 861, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (172, 43, 161, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (257, 59, 245, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (190, 45, 179, 'N', NULL, 10, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (206, 25, 194, 'N', NULL, 10, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (250, 112, 237, 'N', NULL, 0, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (258, 59, 246, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (259, 59, 247, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (260, 59, 248, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
@@ -3184,6 +3180,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (277, 56, 269, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (278, 56, 270, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (279, 56, 271, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (117, 32, 105, 'N', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (280, 62, 265, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (281, 62, 266, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (282, 62, 267, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
@@ -3233,6 +3230,11 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (360, 72, 339, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (361, 72, 340, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (362, 72, 341, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (363, 72, 342, 'N', NULL, 4, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (364, 72, 343, 'N', NULL, 5, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (365, 72, 344, 'N', NULL, 6, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (366, 72, 345, 'N', NULL, 7, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (367, 72, 346, 'N', NULL, 8, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (368, 73, 347, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (369, 73, 348, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (370, 73, 349, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
@@ -3284,10 +3286,6 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (439, 2, 426, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (440, 2, 427, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (442, 2, 429, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (364, 72, 343, 'N', NULL, 5, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (365, 72, 344, 'N', NULL, 6, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (366, 72, 345, 'N', NULL, 7, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (367, 72, 346, 'N', NULL, 8, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (443, 3, 432, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (444, 3, 433, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (445, 3, 434, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
@@ -3428,6 +3426,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (651, 146, 645, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (652, 146, 646, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (653, 146, 647, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (654, 1, 648, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (655, 141, 632, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (656, 141, 630, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (657, 41, 649, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
@@ -3545,6 +3544,9 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (805, 192, 797, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (806, 192, 798, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (810, 191, 803, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (807, 190, 800, 'N', NULL, 3, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (808, 190, 801, 'N', NULL, 4, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (809, 190, 802, 'N', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (812, 194, 807, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (813, 194, 808, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (814, 194, 651, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
@@ -3580,15 +3582,18 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (852, 40, 856, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (853, 40, 857, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (854, 40, 858, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (181, 44, 170, 'N', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (474, 209, 463, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (475, 209, 464, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (476, 209, 465, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (807, 190, 800, 'N', NULL, 3, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (808, 190, 801, 'N', NULL, 4, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (809, 190, 802, 'N', NULL, 5, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (477, 209, 466, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (478, 209, 467, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (479, 209, 468, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (512, 210, 77, 'N', NULL, 5, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (535, 210, 521, 'N', NULL, 12, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (550, 210, 546, 'N', NULL, 14, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (100, 210, 87, 'N', NULL, 2, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (511, 210, 76, 'N', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (103, 211, 91, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (713, 212, 704, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (293, 213, 281, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
@@ -3630,6 +3635,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (208, 230, 196, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (209, 230, 197, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (832, 199, 822, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (210, 230, 198, 'N', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (600, 231, 598, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (601, 231, 599, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (619, 131, 76, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
@@ -3639,6 +3645,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (782, 232, 774, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (737, 233, 728, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (738, 233, 729, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (739, 233, 730, 'N', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (741, 233, 732, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (742, 233, 733, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (698, 235, 694, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
@@ -3652,14 +3659,8 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (588, 239, 585, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (787, 239, 779, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (714, 242, 705, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (227, 242, 215, 'N', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (228, 242, 216, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (210, 230, 198, 'N', NULL, 3, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (227, 242, 215, 'N', NULL, 0, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (511, 210, 76, 'N', NULL, 4, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (512, 210, 77, 'N', NULL, 5, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (535, 210, 521, 'N', NULL, 12, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (550, 210, 546, 'N', NULL, 14, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (739, 233, 730, 'N', NULL, 3, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (229, 242, 217, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (230, 242, 218, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (231, 242, 219, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
@@ -3687,6 +3688,8 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (671, 251, 667, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (841, 251, 831, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (842, 251, 834, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (99, 210, 86, 'N', NULL, 1, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (623, 132, 614, 'N', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (885, 167, 886, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (894, 261, 899, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (886, 261, 891, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
@@ -3729,11 +3732,10 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (922, 270, 931, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (923, 270, 932, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (924, 274, 933, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (9, 33, 644, 'N', NULL, 7, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (831, 199, 821, 'N', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (934, 279, 942, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (935, 279, 943, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (99, 210, 86, 'N', NULL, 1, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (623, 132, 614, 'N', NULL, 1, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (831, 199, 821, 'N', NULL, 6, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (936, 281, 944, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (937, 283, 945, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (939, 285, 947, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
@@ -3747,6 +3749,7 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (948, 288, 956, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (949, 288, 957, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (950, 288, 959, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (838, 194, 644, 'N', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (941, 285, 949, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (942, 285, 950, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (783, 131, 775, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
@@ -3790,24 +3793,24 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (68, 16, 55, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (70, 17, 57, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (71, 18, 58, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (80, 22, 67, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (81, 22, 68, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (82, 22, 69, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (83, 22, 70, 'S', NULL, 5, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (87, 25, 154, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (88, 25, 74, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (89, 25, 75, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (92, 25, 78, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (94, 157, 81, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (95, 157, 82, 'N', NULL, 6, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (97, 157, 84, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (773, 180, 765, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (976, 297, 860, 'N', NULL, 8, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (104, 29, 92, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (105, 29, 93, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (106, 29, 94, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (107, 29, 95, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (108, 29, 96, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (95, 157, 82, 'N', NULL, 6, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (80, 22, 67, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (81, 22, 68, 'S', NULL, 4, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (83, 22, 70, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (838, 194, 644, 'N', NULL, 0, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (976, 297, 860, 'N', NULL, 8, 1, 1, '1900-01-01', 9);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (109, 29, 97, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (110, 29, 98, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (111, 29, 99, 'S', NULL, 0, 1, 1, '1900-01-01', 1);
@@ -3825,10 +3828,13 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (930, 277, 938, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (931, 277, 939, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (932, 91, 940, 'S', NULL, 2, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (933, 22, 941, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (101, 22, 89, 'S', NULL, 7, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (12, 6, 5, 'S', NULL, 1, 1, 1, '2013-08-21', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (16, 6, 7, 'S', NULL, 2, 1, 1, '2013-08-21', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (15, 6, 448, 'S', NULL, 3, 1, 1, '2013-08-21', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (17, 12, 12, 'S', NULL, 2, 1, 1, '2013-09-03', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (938, 25, 946, 'N', NULL, 7, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (20, 194, 16, 'S', NULL, 8, 1, 1, '2013-10-09', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (19, 194, 15, 'S', NULL, 9, 1, 1, '2013-10-09', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (820, 194, 809, 'S', NULL, 10, 1, 1, '1900-01-01', 1);
@@ -3839,35 +3845,22 @@ INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (28, 42, 655, 'S', NULL, 1, 1, 1, '2013-10-17', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (30, 42, 34, 'S', NULL, 1, 1, 1, '2013-10-17', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (36, 43, 35, 'S', NULL, 1, 1, 1, '2013-10-17', 1);
+INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (856, 43, 860, 'N', NULL, 9, 1, 1, '1900-01-01', 1);
 INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (37, 43, 41, 'S', NULL, 4, 1, 1, '2013-10-18', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (39, 22, 45, 'S', NULL, 1, 1, 1, '2013-11-27', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (191, 22, 180, 'S', NULL, 3, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (38, 22, 44, 'S', NULL, 5, 1, 1, '2013-11-25', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (82, 22, 69, 'S', NULL, 6, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (933, 22, 941, 'S', NULL, 8, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (101, 22, 89, 'S', NULL, 9, 1, 1, '1900-01-01', 1);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (9, 33, 644, 'N', NULL, 7, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (100, 210, 87, 'N', NULL, 2, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (117, 32, 105, 'N', NULL, 2, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (181, 44, 170, 'N', NULL, 3, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (363, 72, 342, 'N', NULL, 4, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (856, 43, 860, 'N', NULL, 9, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (938, 25, 946, 'N', NULL, 7, 1, 1, '1900-01-01', 9);
-INSERT INTO campos_x_blocos (seq, blocseq, campseq, mostrarcampo, formato, ordem, usuaseq, unidseq, datacad, statseq) VALUES (654, 1, 648, 'S', NULL, 1, 1, 1, '1900-01-01', 1);
 
 
 --
--- TOC entry 2453 (class 0 OID 0)
+-- TOC entry 2408 (class 0 OID 0)
 -- Dependencies: 170
 -- Name: campos_x_blocos_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('campos_x_blocos_seq_seq', 39, true);
+SELECT pg_catalog.setval('campos_x_blocos_seq_seq', 37, true);
 
 
 --
--- TOC entry 2377 (class 0 OID 32819)
--- Dependencies: 171 2418
+-- TOC entry 2332 (class 0 OID 16434)
+-- Dependencies: 171 2373
 -- Data for Name: campos_x_propriedades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -3969,6 +3962,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (462, 463, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (35, 70, 'setSize', '650;140', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (7, 1, 'setAction', 'onSave', 0, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (109, 156, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (115, 159, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (121, 161, 'setSize', '60', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (199, 219, 'addItems', '1=>Ativo;0=>Inativo;2=>Standby', 1, 1, 1, '1900-01-01');
@@ -3990,7 +3984,10 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (155, 176, 'setSize', '60', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (156, 176, 'onkeyup', '--', 0, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (158, 177, 'onkeyup', '--', 0, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (163, 729, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (164, 732, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (165, 179, 'setAction', 'runCaixa=D', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (166, 179, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (169, 682, 'setSize', '300', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (172, 180, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (173, 642, 'setSize', '90', 1, 1, 1, '1900-01-01');
@@ -4060,8 +4057,10 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (239, 250, 'addItems', '=>;AC=>AC;AL=>AL;AP=>AP;AM=>AM;BA=>BA;CE=>CE;DF=>DF;ES=>ES;GO=>GO;MA=>MA;MT=>MT;MS=>MS;MG=>MG;PA=>PA;PB=>PB;PR=>PR;PE=>PE;PI=>PI;RJ=>RJ;RN=>RN;RS=>RS;RO=>RO;RR=>RR;SC=>SC;SP=>SP;SE=>SE;TO=>TO', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (240, 251, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (241, 252, 'setSize', '160', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (162, 176, 'setProperty', 'disabled;disabled', 0, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (124, 163, 'setSize', '160', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (125, 163, 'onChange', 'openCadCheque(this)', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (145, 175, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (157, 177, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (151, 174, 'setSize', '160', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (242, 254, 'setSize', '50', 1, 1, 1, '1900-01-01');
@@ -4124,7 +4123,10 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (287, 300, 'setSize', '450;80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (288, 289, 'setSize', '40%', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (289, 296, 'setSize', '40', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (290, 314, 'setProperty', 'disabled;disabled
+', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (292, 14, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (293, 14, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (294, 16, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (295, 59, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (296, 59, 'addItems', '=>;
@@ -4153,6 +4155,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (310, 313, 'setSize', '450;60', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (311, 314, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (312, 315, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (313, 315, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (314, 316, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (315, 317, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (316, 318, 'setSize', '450', 1, 1, 1, '1900-01-01');
@@ -4160,9 +4163,14 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (318, 320, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (319, 337, 'addItems', 'F=>Pessoa Física;J=>Pessoa Jurídica', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (320, 322, 'setSize', '200', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (321, 141, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (322, 336, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (323, 336, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (324, 321, 'setSize', '50', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (325, 323, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (326, 323, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (327, 133, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (328, 338, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (329, 340, 'setSize', '180', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (330, 338, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (331, 339, 'setSize', '450', 1, 1, 1, '1900-01-01');
@@ -4240,9 +4248,12 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (408, 413, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (409, 411, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (410, 415, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (411, 412, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (412, 415, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (493, 490, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (495, 492, 'setSize', '425', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (397, 401, 'addItems', 'select seq,pessnmrz from dbpessoa where funcionario=true and statseq=1 order by pessnmrz', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (416, 481, 'setproperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (418, 416, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (419, 417, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (420, 418, 'setSize', '100', 1, 1, 1, '1900-01-01');
@@ -4256,7 +4267,6 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (428, 426, 'addItems', '=>;Solteiro=>Solteiro;Casado=>Casado;Divorciado=>Divorciado;Outros=>Outros', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (429, 427, 'addItems', '=>;afro-brasileiro (negro)=>afro-brasileiro (negro);asiático=>asiático;caucasiano (branco)=>caucasiano (branco);Índias Orientais=>Índias Orientais;hispânico/latino=>hispânico/latino;Oriente Médio=>Oriente Médio;indígena americano=>indígena americano', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (430, 428, 'setSize', '50', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (525, 502, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (431, 428, 'addItems', '=>;A-=>A-;A+=>A+;B-=>B-;B+=>B+;AB-=>AB-;AB+=>AB+;O-=>O-;O+=>O+', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (432, 427, 'setSize', '180', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (433, 429, 'setSize', '100', 1, 1, 1, '1900-01-01');
@@ -4305,10 +4315,12 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (486, 627, 'onClick', 'setTipoExtorno(this)', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (488, 488, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (605, 563, 'setSize', '20', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (491, 488, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (492, 489, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (487, 628, 'addItems', 'select parcseq,parcseq from dbcaixa where tipo=''D'' and statseq=1', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (497, 493, 'addItems', '1=>Ativo;0=>Inativo;2=>Standby', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (500, 494, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (501, 494, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (502, 104, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (504, 106, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (506, 108, 'setSize', '50', 1, 1, 1, '1900-01-01');
@@ -4319,6 +4331,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (511, 112, 'setSize', '180', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (512, 332, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (441, 12, 'setSize', '450', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (513, 332, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (514, 112, 'addItems', '=>;
 1=>Ens. Fundamental;
 2=>Ens. Primeira Fase (1º Grau);
@@ -4330,6 +4343,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 8=>Doutorado;
 9=>Pos-Doutorado', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (516, 23, 'setSize', '40', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (517, 522, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (518, 495, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (519, 496, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (520, 497, 'setSize', '80', 1, 1, 1, '1900-01-01');
@@ -4337,6 +4351,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (522, 499, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (523, 500, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (524, 501, 'setSize', '80', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (525, 502, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (526, 585, 'setSize', '500;100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (527, 505, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (528, 506, 'setSize', '120', 1, 1, 1, '1900-01-01');
@@ -4359,6 +4374,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (545, 517, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (546, 518, 'setSize', '120', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (547, 519, 'setSize', '650;180', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (550, 518, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (552, 565, 'setSize', '250', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (555, 421, 'onClick', 'setTipoForm(this)', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (556, 527, 'onkeyup', 'gerValorTotal(this)', 1, 1, 1, '1900-01-01');
@@ -4390,6 +4406,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (585, 548, 'addItems', '=>;Matutino=>Matutino;Vespertino=>Vespertino;Noturno=>Noturno', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (589, 546, 'setSize', '100', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (590, 550, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (591, 550, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (595, 179, 'style', 'font-size:18px;', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (596, 551, 'setSize', '250', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (597, 551, 'addItems', 'select seq,nomeconta  from  dbplano_conta WHERE tipoconta=''C'' and statseq=1 order by nomeconta', 1, 1, 1, '1900-01-01');
@@ -4408,6 +4425,8 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (609, 566, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (586, 303, 'addItems', 'Maquinário=>Maquinário;Prédio=>Prédio;Móvel e Ut.=>Móvel e Ut.;Veículo=>Veículo', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (611, 565, 'onChange', 'setEmpTerc(this);', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (612, 566, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (779, 73, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (614, 567, 'setSize', '450;40', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (615, 568, 'setSize', '450;40', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (616, 220, 'addItems', '', 1, 1, 1, '1900-01-01');
@@ -4416,6 +4435,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (619, 571, 'setSize', '100%;300', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (620, 572, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (621, 572, 'addItems', '=>;1=>Funcionários;2=>Tributos;3=>Fornecedores', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (622, 241, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (797, 652, 'setAction', 'setConfirmaInscricao(this)', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (183, 71, 'size', '20', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (34, 69, 'setSize', '650;140', 1, 1, 1, '1900-01-01');
@@ -4506,16 +4526,23 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (634, 671, 'setSize', '300', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (635, 672, 'setSize', '150', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (636, 673, 'addItems', '0=>Não;1=>Sim', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (638, 169, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (593, 550, 'addItems', 'select seq from dbpessoa where fornecedor=true and statseq=1 order by seq', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (584, 547, 'addItems', 'select seq, nome from dbcurso where statseq=1 order by nome', 9, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (640, 172, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (642, 683, 'setSize', '250', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (643, 684, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (644, 684, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (645, 685, 'setSize', '650;180', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (715, 687, 'addItems', 'select seq,label from dbdepartamento where statseq=1 order by label', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (717, 689, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (718, 690, 'addItems', 'select seq,nome from dbsala where statseq=1 order by nome', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (719, 691, 'setSize', '400;60', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (720, 677, 'addItems', 'select seq,label from dbdepartamento where statseq=1 order by label', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (722, 694, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (723, 695, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (725, 697, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (726, 698, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (781, 284, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (865, 825, 'addItems', '1=>Percentual;2=>Valor', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (756, 744, 'addItems', 'select seq,titulo from dbtipo_produto order by titulo', 1, 1, 1, '1900-01-01');
@@ -4532,12 +4559,6 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (885, 853, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (843, 807, 'setSize', '300', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (844, 808, 'setSize', '300', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (845, 781, 'setSize', '300', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (847, 815, 'setAction', 'onFormOpen(260,this)', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (886, 854, 'setSize', '120', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (887, 855, 'setSize', '40', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (182, 195, 'addItems', '01=>01;02=>02;03=>03;04=>04;05=>05;06=>06;07=>07;08=>08;09=>09;10=>10;11=>11;12=>12;13=>13;14=>14;15=>15;16=>16;17=>17;18=>18;19=>19;20=>20;21=>21;22=>22;23=>23;24=>24;25=>25;26=>26;27=>27;28=>28;29=>29;30=>30', 0, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (895, 796, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (646, 581, 'addItems', 'Administrativa=>Administrativa;
 Administrstatseq Comercial=>Administrstatseq Comercial;
 Administrstatseq/ Operacional=>Administrstatseq/ Operacional;
@@ -4654,6 +4675,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (804, 651, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (805, 669, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (806, 670, 'setSize', '80', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (890, 104, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1104, 951, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (750, 740, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (754, 742, 'setSize', '90', 1, 1, 1, '1900-01-01');
@@ -4664,16 +4686,21 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (714, 678, 'addItems', 'select funcseq,nomefuncionario from view_funcionario order by nomefuncionario', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (767, 756, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (768, 620, 'addItems', 'select seq,pessnmrz from dbpessoa where statseq=1', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (771, 84, 'onkeyup', 'setValorParcelaTurma(''valorTotal'',''numParcelas'',''valorMensal'')', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (772, 82, 'readonly', 'true', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (773, 757, 'addItems', '0=>Não;1=>Sim', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (774, 758, 'addItems', '1=>Pessoal;2=>Digital', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (775, 759, 'setAction', 'viewDocumento(''seq'')', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (786, 71, 'size', '10', 0, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (705, 647, 'addItems', '1=>Sim;2=>Não;', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (195, 705, 'setProperty', 'disabled;disabled', 0, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (809, 786, 'setSize', '200', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (892, 791, 'setSize', '350', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (813, 776, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (770, 83, 'onblur', 'setValorParcelaTurma(''valorTotal'',''numParcelas'',''valorMensal'')', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (839, 633, 'onchange', 'onLoadSelect(this, ''turmseq'',''TTurma'',''setOptionSelect'')', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (771, 84, 'onkeyup', 'setValorParcelaTurma(''valortotal'',''parcelas'',''valormensal'',event)', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (769, 752, 'disabled', 'true', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (810, 786, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (661, 582, 'addItems', 'Administrativa=>Administrativa;
 Administrstatseq Comercial=>Administrstatseq Comercial;
 Administrstatseq/ Operacional=>Administrstatseq/ Operacional;
@@ -4774,13 +4801,20 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (685, 612, 'setSize', '70', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (688, 618, 'setSize', '100%;400', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (689, 619, 'setSize', '100%;400', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (691, 620, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (693, 702, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (695, 660, 'onchange', 'validaValorAlteravel(''valorNominal'')', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (696, 636, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (697, 637, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (698, 638, 'addItems', 'select seq,pessnmrz from dbpessoa where statseq=1', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (701, 641, 'addItems', 'select seq,nomeconta from  dbplano_conta where statseq=1 and tipoconta=''C''', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (702, 634, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (706, 648, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (708, 650, 'setSize', '90', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (709, 654, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (710, 660, 'onblur', 'validaValorAlteravel(''valorNominal'')', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (711, 664, 'addItems', 'select seq,nomeconta from  dbplano_conta where statseq=1 and tipoconta=''D''', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (712, 665, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (728, 697, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (729, 696, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (730, 698, 'setSize', '100%;80', 1, 1, 1, '1900-01-01');
@@ -4793,6 +4827,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (739, 733, 'addItems', '1=>Contagem;2=>Somatória', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1107, 954, 'setSize', '30', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (700, 640, 'addItems', 'select seq,pessnmrz from dbpessoa where fornecedor=true and statseq=1', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (707, 632, 'addItems', 'select seq,pessnmrz from dbpessoa where cliente=true and statseq=1 order by pessnmrz', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (740, 737, 'addItems', '0=>Nenhum;1=>Diário;2=>Semanal;3=>Mensal;4=>Bimestral;5=>Trimestral;6=>Semestral;7=>Anual', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (741, 728, 'addItems', 'show tables like ''view%''', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (742, 731, 'addItems', 'show tables like ''view%''', 1, 1, 1, '1900-01-01');
@@ -4803,6 +4838,14 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (748, 739, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (776, 761, 'addItems', '1=>Orientação;2=>Arquivo', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (777, 622, 'setSize', '350', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (845, 781, 'setSize', '300', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (847, 815, 'setAction', 'onFormOpen(260,this)', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (886, 854, 'setSize', '120', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (887, 855, 'setSize', '40', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (182, 195, 'addItems', '01=>01;02=>02;03=>03;04=>04;05=>05;06=>06;07=>07;08=>08;09=>09;10=>10;11=>11;12=>12;13=>13;14=>14;15=>15;16=>16;17=>17;18=>18;19=>19;20=>20;21=>21;22=>22;23=>23;24=>24;25=>25;26=>26;27=>27;28=>28;29=>29;30=>30', 0, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (895, 796, 'setSize', '450', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (896, 796, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (848, 795, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (849, 795, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (888, 856, 'setSize', '20', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (889, 857, 'setSize', '70', 1, 1, 1, '1900-01-01');
@@ -4817,6 +4860,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (860, 819, 'addItems', '1=>Desconto;2=>Bolsa;3=>Parceria', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1110, 955, 'setSize', '30', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (783, 775, 'addItems', 'select seq,nomeprofessor from view_professor', 9, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (863, 824, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (864, 824, 'setSize', '450', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (867, 827, 'addItems', '01=>01;02=>02;03=>03;04=>04;05=>05;06=>06;07=>07;08=>08;09=>09;10=>10;11=>11;12=>12;13=>13;14=>14;15=>15;16=>16;17=>17;18=>18;19=>19;20=>20;21=>21;22=>22;23=>23;24=>24;25=>25;26=>26;27=>27;28=>28;29=>29;30=>30; 31=>31', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (869, 826, 'setSize', '80', 1, 1, 1, '1900-01-01');
@@ -4833,6 +4877,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (881, 829, 'disabled', 'true', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (880, 829, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (901, 854, 'addItems', 'select seq,nomeconta from  dbplano_conta', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1000, 170, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (152, 174, 'addItems', 'Dinheiro=>Dinheiro;Cheque=>Cheque;Cartão=>Cartão', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (608, 169, 'addItems', 'select seq,pessnmrz from  dbpessoa where statseq=''1'' order by pessnmrz', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (132, 166, 'disabled', 'true', 1, 1, 1, '1900-01-01');
@@ -4872,9 +4917,11 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (875, 831, 'onchange', 'setValorTotalProduto()', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (687, 617, 'setSize', '100%;300', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1045, 892, 'setSize', '90', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1047, 894, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1048, 894, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1049, 895, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1050, 899, 'setSize', '60', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1051, 899, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1055, 900, 'addItems', 'select seq,nomeconta from dbconta_financeira where statseq=1 order by nomeconta', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1061, 908, 'addItems', '1=>Sim;0=>Não', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (763, 750, 'setAction', 'addContas(this,''seq'', 215)', 1, 1, 1, '1900-01-01');
@@ -4908,6 +4955,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (703, 645, 'addItems', '1=>Sim;2=>Não;', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (704, 646, 'addItems', '1=>Sim;2=>Não;', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (170, 682, 'addItems', 'select seq,nomepessoa from view_aluno', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1084, 682, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1087, 937, 'setSize', '350', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1088, 938, 'setSize', '50', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1089, 939, 'setSize', '50', 1, 1, 1, '1900-01-01');
@@ -4927,6 +4975,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (122, 161, 'onChange;onBlur', 'calculaMovimentacao();', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1044, 891, 'onChange;onBlur', 'calculaMovimentacao(''valortotal'',''acrescimo'',''desconto'',null,null,null,''valorcorrigido'');', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (88, 141, 'setSize', '100', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (90, 128, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (721, 694, 'addItems', 'select seq,nomedisciplina from view_turma_disciplina where statseq=1 order by nomedisciplina', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1111, 956, 'setSize', '250', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1112, 956, 'addItems', 'select seq,titulo from dbavaliacoes_regras order by seq', 1, 1, 1, '1900-01-01');
@@ -4934,12 +4983,18 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1114, 959, 'setSize', '50', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1115, 960, 'setSize', '300;50', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (846, 809, 'setAction', 'setMatricula(this, ''Você deseja realmente confirmar esta ação?'')', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1117, 964, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1118, 964, 'setSize', '50', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1119, 961, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1120, 963, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1121, 965, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1122, 966, 'setSize', '80', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1123, 967, 'setSize', '80', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1124, 966, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1125, 967, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1126, 965, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1127, 968, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1128, 969, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1129, 507, 'onchange', 'calculaDebitoProfessor()', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1132, 961, 'onchange', 'calculaDebitoProfessor()', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1131, 508, 'onchange', 'calculaDebitoProfessor()', 1, 1, 1, '1900-01-01');
@@ -4958,9 +5013,12 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (882, 841, 'addItems', '0=>Aleatório;1=>Custom_petrus;2=>Eggplant;3=>Redmond;4=>Ui-lightness;5=>Black-tie;6=>Sunny;7=>Pepper-grinder;8=>Dot-luv;9=>Ui-tolook;10=>Blitzer;11=>Petrusedu;12=>Petrusedu_alternate;13=>Bluestyle;14=>Flick;15=>Humanity;16=>Overcast;17=>Bluetzer;18=>Fibratec;19=>Remake_bluetzer;20=>South-street;21=>Cupertino;22=>Petrus;', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1145, 913, 'onChange', 'setCampoTurmaDisabled()', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1147, 980, 'addItems', 'select seq,pessnmrz from  dbpessoas where statseq=1 order by pessnmrz', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1148, 980, 'setProperty', 'disabled;disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1149, 980, 'setSize', '450', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1150, 981, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1151, 981, 'setSize', '40', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1152, 977, 'addItems', 'C=>Crédito;D=>Débito', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1153, 977, 'disabled', 'disabled', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1043, 891, 'setSize', '90', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1095, 944, 'addItems', 'select seq,titulo from dbconvenio order by titulo', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1097, 945, 'addItems', 'select seq,titulo from dbconvenio order by titulo', 1, 1, 1, '1900-01-01');
@@ -4990,6 +5048,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (822, 798, 'addItems', 'select seq,pessnmrz from dbpessoas where cliente=true or funcionario=1 order by pessnmrz', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (859, 816, 'addItems', 'select seq,pessnmrz from dbpessoa where statseq=1 order by pessnmrz', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (862, 824, 'addItems', 'select seq,titulo from view_convenio order by titulo', 9, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (789, 776, 'addItems', 'select seq,nome from view_cursos', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (876, 835, 'addItems', 'select funcseq,nomefuncionario from view_funcionario', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (815, 795, 'addItems', 'select seq,titulo from view_livro where pessseq is null order by titulo', 9, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (496, 492, 'addItems', 'select funcseq,nomefuncionario from view_funcionario order by nomefuncionario', 9, 1, 1, '1900-01-01');
@@ -5011,6 +5070,7 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (479, 482, 'addItems', 'select seq,titulo from dbtitularidade order by peso', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (193, 206, 'addItems', 'getItens/view_caixa_funcionario/cofiseq/nomecontacaixa/funcseq,=,TUsuario::getSeqFuncionario;stcfseq,=,1', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (1036, 885, 'addItems', 'select seq,titulo from dbsituacao_movimento order by titulo', 1, 1, 1, '1900-01-01');
+INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (118, 885, 'disabled', 'disabled', 1, 1, 1, '2013-10-03');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (62, 103, 'addItems', 'select seq, statdesc from dbstatus order by statdesc', 1, 1, 1, '1900-01-01');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (119, 12, 'maxlength', '200', 1, 1, 1, '2013-10-09');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (126, 24, 'maxlength', '200', 1, 1, 1, '2013-10-09');
@@ -5157,26 +5217,20 @@ INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (335, 41, 'readonly', 'readonly', 1, 1, 1, '2013-10-18');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (336, 881, 'readonly', 'readonly', 1, 1, 1, '2013-10-18');
 INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (415, 165, 'readonly', 'readonly', 1, 1, 1, '2013-10-18');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (452, 44, 'addItems', 'select seq,titulo from dbgrade_avaliacao order by titulo', 1, 1, 1, '2013-11-25');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (707, 632, 'addItems', 'select seq,pessnmrz from dbpessoa where statseq!=9 order by pessnmrz', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (453, 45, 'setSize', '100', 1, 1, 1, '2013-11-27');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (454, 45, 'maxlength', '20', 1, 1, 1, '2013-11-27');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (770, 83, 'onkeyup', 'setValorParcelaTurma(''valortotal'',''parcelas'',''valormensal'',event)', 1, 1, 1, '1900-01-01');
-INSERT INTO campos_x_propriedades (seq, campseq, metodo, valor, statseq, usuaseq, unidseq, datacad) VALUES (490, 752, 'onkeyup', 'setValorParcelaTurma(''valortotal'',''parcelas'',''valormensal'',event)', 1, 1, 1, '2013-12-02');
 
 
 --
--- TOC entry 2454 (class 0 OID 0)
+-- TOC entry 2409 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: campos_x_propriedades_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('campos_x_propriedades_seq_seq', 490, true);
+SELECT pg_catalog.setval('campos_x_propriedades_seq_seq', 415, true);
 
 
 --
--- TOC entry 2379 (class 0 OID 32829)
--- Dependencies: 173 2418
+-- TOC entry 2334 (class 0 OID 16444)
+-- Dependencies: 173 2373
 -- Data for Name: coluna; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -5198,6 +5252,12 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (729, 381, 'banco', 'Banco', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (730, 381, 'agencia', 'Ag.', 'left', 'left', 40, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (319, 154, 'experiencia', 'Experiência Profissional', 'left', 'left', 350, '-', '0', 1, 0, '-', '0', 7, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (8, 132, 'nome', 'Curso', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (9, 132, 'areacurso', 'Area do curso', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (363, 132, 'tipocurso', 'Tipo do Curso', 'left', 'left', 130, '-', '0', 1, 0, '-', '0', 0, 0, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (546, 242, 'nome', 'Curso', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (547, 242, 'areacurso', 'Area do Curso', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (549, 242, 'tipocurso', 'Tipo', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (829, 417, 'nomedisciplinasemelhante', 'Disciplina Semelhante', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (366, 203, 'contaOrigem', 'Conta de Origem', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (367, 203, 'contaDestino', 'Conta de Destino', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
@@ -5209,6 +5269,8 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (634, 277, 'editora', 'Editora', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (635, 278, 'titulo', 'Titulo', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (620, 259, 'cargahoraria', 'Carga horária', 'center', 'center', 90, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (548, 242, 'cargahoraria', 'C.H. Total', 'left', 'left', 60, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (224, 132, 'cargahoraria', 'C.H. Total', 'left', 'left', 60, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (185, 171, 'dataFeriasPrevisao', 'Previsão de Férias', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (369, 203, 'valor', 'Valor', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (629, 277, 'paginas', 'Páginas', 'left', 'left', 50, '-', '0', 1, 0, '-', '0', 8, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5220,13 +5282,6 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (16, 6, 'telefone', 'Telefone', 'left', 'left', 200, 'TSetModel,setTelefone', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-08-21', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (637, 278, 'autor', 'Autor', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (450, 219, 'pessnmrf', 'CPF/CNPJ', 'left', 'left', 100, 'TSetModel,setCpfcnpj', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (547, 242, 'areacurso', 'Area do Curso', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (549, 242, 'tipocurso', 'Tipo', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (548, 242, 'cargahoraria', 'C.H. Total', 'center', 'center', 60, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (8, 132, 'nome', 'Curso', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (363, 132, 'tipocurso', 'Tipo do Curso', 'left', 'left', 130, '-', '0', 1, 0, '-', '0', 3, 0, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (9, 132, 'areacurso', 'Area do curso', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (224, 132, 'cargahoraria', 'C.H. Total', 'center', 'center', 60, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (406, 212, 'pessnmrf', 'CPF / CNPJ', 'right', 'right', 150, 'TSetModel,setCpfcnpj', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (158, 160, 'pessnmrz', 'Nome / Razão Social', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (175, 165, 'pessnmrz', 'Nome / Razão Social', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
@@ -5305,6 +5360,8 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (779, 396, 'discseq', 'Cod.', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (780, 243, 'discseq', 'Cod.', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (935, 477, 'discseq', 'Codigo', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (573, 259, 'arcuseq', 'Area', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (574, 259, 'tpcuseq', 'Tipo', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (776, 131, 'seq', 'Cod.', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (777, 187, 'seq', 'Cod.', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (184, 171, 'funcseq', 'Funcionário', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5324,7 +5381,6 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (5, 130, 'statseq', 'Status', 'right', 'right', 90, '-', '0', 1, 0, '-', '0', 6, 0, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (72, 143, 'seq', 'Cod.', 'center', 'center', 130, '-', '0', 1, 0, '-', '0', 0, 0, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (75, 143, 'statseq', 'Estatus', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (574, 259, 'tipocurso', 'Tipo', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (157, 160, 'seq', 'Codigo', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 0, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (176, 165, 'seq', 'Código', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (336, 130, 'seq', 'Escolaridade', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 7, 0, 1, 1, '1900-01-01', 'numeric');
@@ -5355,6 +5411,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (949, 479, 'seq', 'Cod.', 'left', 'left', 80, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (984, 488, 'seq', 'Codigo', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (36, 139, 'seq', 'Cod.', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 0, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (10, 133, 'seq', 'Cod.', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (22, 135, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (471, 226, 'seq', 'Cod.', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (649, 193, 'seq', 'Cod.', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5366,14 +5423,14 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (786, 199, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (787, 200, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (811, 410, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (791, 228, 'nome', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (790, 182, 'nome', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (789, 149, 'nome', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (819, 411, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (827, 412, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (918, 467, 'seq', 'Cod.', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (120, 152, 'statseq', 'Situação', 'center', 'center', 60, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (508, 235, 'seq', 'Cod.', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (790, 182, 'referencia', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (789, 149, 'referencia', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (10, 133, 'seq', 'Cod.', 'center', 'center', 60, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (110, 150, 'statseq', 'Situação', 'center', 'center', 80, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (144, 158, 'seq', 'Un.', 'left', 'left', 30, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (152, 159, 'prodseq', 'Nome Produto / Serviço', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5525,6 +5582,10 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (315, 154, 'areaInteresse2', 'Area de Interesse (2ª)', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (316, 154, 'areaInteresse3', 'Area de Interesse (3ª)', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (318, 154, 'cursos', 'Cursos Extra-Curriculares', 'left', 'left', 350, '-', '0', 1, 0, '-', '0', 6, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (658, 310, 'nome', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (661, 314, 'nome', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (662, 314, 'tipocurso', 'Tipo', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (663, 314, 'areacurso', 'Area', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (229, 176, 'titulo', 'Área de Curso', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (551, 243, 'nomedisciplina', 'Disciplina', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (576, 134, 'nomedisciplina', 'Disciplina', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
@@ -5558,9 +5619,6 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (272, 187, 'titulo', 'Disciplina', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (760, 394, 'titulo', 'Disciplina', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (278, 190, 'totalLiquido', 'Valor', 'right', 'right', 90, 'setMoeda,setValor', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (662, 314, 'tipocurso', 'Tipo', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (663, 314, 'areacurso', 'Area', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (658, 310, 'nome', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (280, 190, 'referencia', 'referencia', 'left', 'center', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (293, 192, 'titulo', 'Ocorrência', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (29, 137, 'nomeprofessor', 'Professor', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
@@ -5585,6 +5643,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (627, 277, 'titulocdu', 'Classificação CDU', 'left', 'left', 150, '-', '0', 1, 0, '-', '0', 10, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (636, 278, 'editora', 'Editora', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (761, 394, 'cargahoraria', 'Carga Horária', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (659, 310, 'cargahoraria', 'Carga Horária', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (273, 187, 'cargahoraria', 'Carga Horaria', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (186, 171, 'dataFeriasReal', 'Data Real', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (226, 171, 'dataLimite', 'Data Limite', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'date');
@@ -5685,6 +5744,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (235, 177, 'telefone2', 'Celular', 'center', 'center', 120, 'TSetModel,setTelefone', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (208, 173, 'anoConclusao', 'Ano de Conclusão', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (233, 177, 'cpf', 'CPF', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (189, 172, 'telefone2', 'Telefone Secundário', 'left', 'left', 120, 'TSetModel,setTelefone', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (264, 183, 'datacad', 'Data da Inclusão', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (497, 231, 'dataAdmissao', 'Admissão', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (692, 322, 'valor', 'Valor', 'right', 'right', 60, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 6, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5754,6 +5814,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (526, 239, 'agrupamentoY', 'Forma de Agrupamento Y', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (167, 163, 'cliente', 'Cliente', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (168, 163, 'planoConta', 'Plano de contas', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (169, 163, 'valortotal', 'Valor Total', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (374, 206, 'cliente', 'Pessoa', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (376, 206, 'planoConta', 'Plano de Conta', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (415, 213, 'cliente', 'Fornecedor', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
@@ -5799,6 +5860,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (139, 156, 'instituicaoCertificadora', 'Intituição Ministradora', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (488, 156, 'escolaridade', 'Titularidade', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (11, 133, 'titulo', 'Nome da Turma', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (12, 133, 'nomecurso', 'Curso', 'left', 'left', 230, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (106, 149, 'nomecurso', 'Curso', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (107, 149, 'titulo', 'Turma', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (981, 488, 'valorinicial', 'Valor Inicial', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5813,7 +5875,9 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (946, 479, 'numero', 'Parcela', 'left', 'left', 60, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (37, 139, 'numDoc', 'Documento', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (39, 139, 'valorinicial', 'Valor Nominal', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (60, 133, 'numparcelas', 'N. Parcelas', 'center', 'center', 70, '-', '0', 1, 0, '-', '0', 8, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (61, 133, 'datainicio', 'Data de início', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 9, 1, 1, 1, '1900-01-01', 'date');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (380, 207, 'valorinicial', 'Valor', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (323, 156, 'dataCad', 'Data de Cadastro', 'left', 'left', 110, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (513, 210, 'vencimento', 'Vencimento', 'center', 'center', 80, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (945, 479, 'valorinicial', 'Valor Inicial', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5830,6 +5894,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (214, 133, 'nomeunidade', 'Unidade', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 10, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (251, 182, 'titulo', 'Turma', 'left', 'left', 180, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (252, 182, 'nomecurso', 'Curso', 'left', 'left', 270, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (364, 133, 'status', 'Status', 'center', 'center', 60, 'TTurma,getStatus', '0', 1, 0, '-', '0', 13, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (388, 209, 'titulo', 'Nome da Turma', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (389, 209, 'nomecurso', 'Curso', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (391, 209, 'unidade', 'Unidade', 'left', 'left', 140, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
@@ -5841,9 +5906,6 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (504, 234, 'unidade', 'Unidade', 'left', 'left', 140, '-', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (505, 234, 'status', 'Status', 'left', 'left', 80, 'TTurma,getStatus', '0', 1, 0, '-', '0', 0, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (301, 193, 'alunos', 'Nº de Alunos', 'left', 'left', 80, '-', '0', 1, 0, '-', '0', 7, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (60, 133, 'parcelas', 'N. Parcelas', 'center', 'center', 70, '-', '0', 1, 0, '-', '0', 8, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (12, 133, 'nomecurso', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (364, 133, 'sttuseq', 'Status', 'center', 'center', 100, 'TTurma,getStatus', '0', 1, 0, '-', '0', 13, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (333, 135, 'datas', 'Datas', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (340, 199, 'nomeTurma', 'Turma', 'left', 'left', 180, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (341, 199, 'nomedisciplina', 'Disciplina', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
@@ -5972,6 +6034,7 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (402, 145, 'valoratual', 'Valor Atual', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (532, 228, 'valorTaxa', 'Taxa', 'left', 'left', 60, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (638, 278, 'ano', 'Ano', 'left', 'left', 30, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
+INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (788, 133, 'nome', 'Ref. Curso', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (841, 419, 'saida_cartao', 'Desp. Cartão', 'center', 'center', 120, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 11, 1, 1, 1, '1900-01-01', 'numeric');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (866, 425, 'vencimento', 'Data Venc.', 'left', 'left', 70, '-', '0', 1, 0, '-', '0', 7, 1, 1, 1, '1900-01-01', 'date');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (891, 445, 'numaula', 'Nº', 'center', 'center', 30, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
@@ -5982,53 +6045,20 @@ INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largu
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (19, 172, 'email_principal', 'E-mail', 'left', 'left', 250, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (28, 136, 'email_principal', 'E-mail', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 6, 1, 1, 1, '2013-10-07', 'string');
 INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (530, 137, 'email_principal', 'E-mail', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (169, 163, 'valortotal', 'Valor Total', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 5, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (380, 207, 'valortotal', 'Valor', 'right', 'right', 100, 'TSetModel,setValorMonetario', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (189, 172, 'telefone2', 'Telefone Secundário', 'left', 'left', 120, 'TSetModel,setTelefone', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (30, 7, 'telefone1', 'Telefone', 'center', 'center', 120, 'TSetModel,setTelefone', '0', 1, 0, '-', '0', 5, 1, 1, 1, '2013-11-26', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (34, 7, 'email_principal', 'E-mail', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 6, 1, 1, 1, '2013-11-26', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (43, 7, 'dataAdmissao', 'Admissão', 'center', 'center', 100, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '2013-11-26', 'date');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (49, 7, 'nomeDepartamento', 'Departamento', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '2013-11-26', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (54, 7, 'pessnmrf', 'CPF', 'left', 'left', 120, 'TSetModel,setCpfCnpj', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-11-26', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (659, 310, 'cargahoraria', 'Carga Horária', 'center', 'center', 60, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (56, 7, 'pessnmrz', 'Nome', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '2013-11-26', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (62, 242, 'identificador', 'Identificador', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '2013-11-27', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (65, 24, 'nomeTurma', 'Turma', 'left', 'left', 180, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (58, 132, 'identificador', 'Identificador', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '2013-11-27', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (546, 242, 'nome', 'Curso', 'left', 'left', 400, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (64, 314, 'identificador', 'Identificador', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-11-27', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (661, 314, 'nome', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (63, 310, 'identificador', 'Identificador', 'center', 'center', 120, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-11-27', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (66, 24, 'nomedisciplina', 'Disciplina', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (67, 24, 'nomeprofessor', 'Professor', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (80, 24, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '2013-11-29', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (71, 24, 'nomecurso', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (69, 24, 'dataAtualizacao', 'Ultima Atualização', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 7, 1, 1, 1, '2013-11-29', 'date');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (68, 24, 'alunos', 'Nº de Alunos ', 'left', 'left', 80, '-', '0', 1, 0, '-', '0', 6, 1, 1, 1, '2013-11-29', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (81, 25, 'nomeTurma', 'Turma', 'left', 'left', 180, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (82, 25, 'nomedisciplina', 'Disciplina', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 2, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (83, 25, 'nomeprofessor', 'Professor', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 5, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (90, 25, 'alunos', 'Nº de Alunos ', 'left', 'left', 80, '-', '0', 1, 0, '-', '0', 6, 1, 1, 1, '2013-11-29', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (91, 25, 'dataAtualizacao', 'Ultima Atualização', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 7, 1, 1, 1, '2013-11-29', 'date');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (92, 25, 'nomecurso', 'Curso', 'left', 'left', 300, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '2013-11-29', 'string');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (93, 25, 'discseq', 'Cod.', 'left', 'left', 120, '-', '0', 1, 0, '-', '0', 1, 1, 1, 1, '2013-11-29', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (791, 228, 'referencia', 'Ref. Curso', 'left', 'left', 160, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (573, 259, 'areacurso', 'Area', 'left', 'left', 200, '-', '0', 1, 0, '-', '0', 3, 1, 1, 1, '1900-01-01', 'numeric');
-INSERT INTO coluna (seq, listseq, coluna, label, alinhalabel, alinhadados, largura, colfunction, valorpadrao, tipocoluna, tabseq, colunaaux, link, ordem, statseq, usuaseq, unidseq, datacad, tipodado) VALUES (788, 133, 'referencia', 'Ref. Curso', 'left', 'left', 100, '-', '0', 1, 0, '-', '0', 4, 1, 1, 1, '1900-01-01', 'numeric');
 
 
 --
--- TOC entry 2455 (class 0 OID 0)
+-- TOC entry 2410 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: coluna_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('coluna_seq_seq', 93, true);
+SELECT pg_catalog.setval('coluna_seq_seq', 28, true);
 
 
 --
--- TOC entry 2381 (class 0 OID 32845)
--- Dependencies: 175 2418
+-- TOC entry 2336 (class 0 OID 16460)
+-- Dependencies: 175 2373
 -- Data for Name: dbpessoa; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6036,7 +6066,7 @@ INSERT INTO dbpessoa (seq, unidseq, usuaseq, tipo, pessnmrz, pessnmrf, pessrgie,
 
 
 --
--- TOC entry 2456 (class 0 OID 0)
+-- TOC entry 2411 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: dbpessoa_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6045,19 +6075,19 @@ SELECT pg_catalog.setval('dbpessoa_seq_seq', 1, true);
 
 
 --
--- TOC entry 2383 (class 0 OID 32860)
--- Dependencies: 177 2418
+-- TOC entry 2338 (class 0 OID 16475)
+-- Dependencies: 177 2373
 -- Data for Name: dbstatus; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 INSERT INTO dbstatus (seq, unidseq, usuaseq, statdesc, datacad, statseq) VALUES (1, 1, 1, 'Ativo', '2013-07-16', 1);
 INSERT INTO dbstatus (seq, unidseq, usuaseq, statdesc, datacad, statseq) VALUES (8, 1, 1, 'Inativo', '2013-07-16', 1);
 INSERT INTO dbstatus (seq, unidseq, usuaseq, statdesc, datacad, statseq) VALUES (9, 1, 1, 'Inconsistente', '2013-07-16', 1);
-INSERT INTO dbstatus (seq, unidseq, usuaseq, statdesc, datacad, statseq) VALUES (7, 1, 1, 'Em implementação', '2013-08-13', 1);
+INSERT INTO dbstatus (seq, unidseq, usuaseq, statdesc, datacad, statseq) VALUES (7, 1, 1, 'Com falha na implementação', '2013-08-13', 1);
 
 
 --
--- TOC entry 2457 (class 0 OID 0)
+-- TOC entry 2412 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: dbstatus_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6066,8 +6096,8 @@ SELECT pg_catalog.setval('dbstatus_seq_seq', 1, false);
 
 
 --
--- TOC entry 2385 (class 0 OID 32867)
--- Dependencies: 179 2418
+-- TOC entry 2340 (class 0 OID 16482)
+-- Dependencies: 179 2373
 -- Data for Name: dbunidade; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6075,15 +6105,15 @@ INSERT INTO dbunidade (seq, unidseq, usuaseq, nomeunidade, razaosocial, cnpj, in
 
 
 --
--- TOC entry 2386 (class 0 OID 32875)
--- Dependencies: 180 2418
+-- TOC entry 2341 (class 0 OID 16490)
+-- Dependencies: 180 2373
 -- Data for Name: dbunidade_parametro; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2458 (class 0 OID 0)
+-- TOC entry 2413 (class 0 OID 0)
 -- Dependencies: 181
 -- Name: dbunidade_parametro_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6092,7 +6122,7 @@ SELECT pg_catalog.setval('dbunidade_parametro_seq_seq', 1, false);
 
 
 --
--- TOC entry 2459 (class 0 OID 0)
+-- TOC entry 2414 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: dbunidade_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6101,8 +6131,8 @@ SELECT pg_catalog.setval('dbunidade_seq_seq', 1, true);
 
 
 --
--- TOC entry 2389 (class 0 OID 32888)
--- Dependencies: 183 2418
+-- TOC entry 2344 (class 0 OID 16503)
+-- Dependencies: 183 2373
 -- Data for Name: dbusuario; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6110,8 +6140,8 @@ INSERT INTO dbusuario (seq, unidseq, usuaseq, classeuser, pessseq, usuario, senh
 
 
 --
--- TOC entry 2390 (class 0 OID 32895)
--- Dependencies: 184 2418
+-- TOC entry 2345 (class 0 OID 16510)
+-- Dependencies: 184 2373
 -- Data for Name: dbusuario_privilegio; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6223,7 +6253,7 @@ INSERT INTO dbusuario_privilegio (seq, unidseq, usuaseq, funcionalidade, modulo,
 
 
 --
--- TOC entry 2460 (class 0 OID 0)
+-- TOC entry 2415 (class 0 OID 0)
 -- Dependencies: 185
 -- Name: dbusuario_privilegio_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6232,7 +6262,7 @@ SELECT pg_catalog.setval('dbusuario_privilegio_seq_seq', 105, true);
 
 
 --
--- TOC entry 2461 (class 0 OID 0)
+-- TOC entry 2416 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: dbusuario_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6241,8 +6271,8 @@ SELECT pg_catalog.setval('dbusuario_seq_seq', 1, true);
 
 
 --
--- TOC entry 2393 (class 0 OID 32907)
--- Dependencies: 187 2418
+-- TOC entry 2348 (class 0 OID 16522)
+-- Dependencies: 187 2373
 -- Data for Name: form_button; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6254,33 +6284,33 @@ INSERT INTO form_button (seq, formseq, botao, labelbotao, confirmacao, actionjs,
 
 
 --
--- TOC entry 2462 (class 0 OID 0)
+-- TOC entry 2417 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: form_button_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_button_seq_seq', 3, true);
+SELECT pg_catalog.setval('form_button_seq_seq', 1, false);
 
 
 --
--- TOC entry 2463 (class 0 OID 0)
+-- TOC entry 2418 (class 0 OID 0)
 -- Dependencies: 189
 -- Name: form_list_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_list_seq_seq', 35, true);
+SELECT pg_catalog.setval('form_list_seq_seq', 6, true);
 
 
 --
--- TOC entry 2396 (class 0 OID 32919)
--- Dependencies: 190 2418
+-- TOC entry 2351 (class 0 OID 16534)
+-- Dependencies: 190 2373
 -- Data for Name: form_validacao; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2464 (class 0 OID 0)
+-- TOC entry 2419 (class 0 OID 0)
 -- Dependencies: 191
 -- Name: form_validacao_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -6289,8 +6319,8 @@ SELECT pg_catalog.setval('form_validacao_seq_seq', 1, false);
 
 
 --
--- TOC entry 2398 (class 0 OID 32925)
--- Dependencies: 192 2418
+-- TOC entry 2353 (class 0 OID 16540)
+-- Dependencies: 192 2373
 -- Data for Name: form_x_abas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6391,6 +6421,8 @@ INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq,
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (158, 260, 254, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (110, 58, 40, 1, 2, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (38, 18, 264, 1, 3, 1, 1, '1900-01-01');
+INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (34, 18, 265, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (159, 58, 255, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (160, 261, 256, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (162, 83, 258, 1, 3, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (163, 270, 259, 1, 1, 1, 1, '1900-01-01');
@@ -6468,7 +6500,6 @@ INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq,
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (214, 375, 316, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (215, 376, 317, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (216, 377, 318, 1, 1, 1, 1, '1900-01-01');
-INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (34, 18, 265, 9, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (217, 378, 319, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (218, 379, 320, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (219, 72, 321, 1, 3, 1, 1, '1900-01-01');
@@ -6554,23 +6585,20 @@ INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq,
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (10, 3, 11, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (14, 3, 15, 1, 4, 1, 1, '1900-01-01');
 INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (148, 7, 246, 1, 2, 1, 1, '1900-01-01');
-INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (4, 23, 8, 1, 1, 1, 1, '2013-11-29');
-INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (159, 58, 255, 9, 1, 1, 1, '1900-01-01');
-INSERT INTO form_x_abas (seq, formseq, abaseq, statseq, ordem, usuaseq, unidseq, datacad) VALUES (8, 35, 9, 1, 1, 1, 1, '2013-11-30');
 
 
 --
--- TOC entry 2465 (class 0 OID 0)
+-- TOC entry 2420 (class 0 OID 0)
 -- Dependencies: 193
 -- Name: form_x_abas_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_x_abas_seq_seq', 8, true);
+SELECT pg_catalog.setval('form_x_abas_seq_seq', 3, true);
 
 
 --
--- TOC entry 2400 (class 0 OID 32933)
--- Dependencies: 194 2418
+-- TOC entry 2355 (class 0 OID 16548)
+-- Dependencies: 194 2373
 -- Data for Name: form_x_tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6757,23 +6785,20 @@ INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, dat
 INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (4, 2, 3, 1, 1, 1, '2013-08-21');
 INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (5, 1, 49, 1, 1, 1, '2013-08-21');
 INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (15, 6, 1, 1, 1, 1, '1900-01-01');
-INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (6, 23, 12, 1, 1, 1, '2013-11-29');
-INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (8, 35, 12, 1, 1, 1, '2013-11-30');
-INSERT INTO form_x_tabelas (seq, formseq, tabseq, statseq, usuaseq, unidseq, datacad) VALUES (13, 5, 85, 0, 1, 1, '2013-12-02');
 
 
 --
--- TOC entry 2466 (class 0 OID 0)
+-- TOC entry 2421 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: form_x_tabelas_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('form_x_tabelas_seq_seq', 13, true);
+SELECT pg_catalog.setval('form_x_tabelas_seq_seq', 5, true);
 
 
 --
--- TOC entry 2402 (class 0 OID 32940)
--- Dependencies: 196 2418
+-- TOC entry 2357 (class 0 OID 16555)
+-- Dependencies: 196 2373
 -- Data for Name: forms; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6981,13 +7006,11 @@ INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, for
 INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave, nivel, usuaseq, unidseq, datacad) VALUES (361, 'form_listTreinamento', '-', 34, 1, NULL, 191, 'one', NULL, '1', '1', '0', '0', 2, 1, 1, '1900-01-01');
 INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave, nivel, usuaseq, unidseq, datacad) VALUES (8, 'fichaInscricao', 'Ficha de inscrição', 16, 1, NULL, 138, 'one', NULL, '0', '1', '0', '0', 1, 1, 1, '1900-01-01');
 INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave, nivel, usuaseq, unidseq, datacad) VALUES (450, 'transacoesConvenios', 'Convênios', 103, 1, 67, 451, 'one', '550;200', '1', '1', '0', '0', 2, 1, 1, '1900-01-01');
-INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave, nivel, usuaseq, unidseq, datacad) VALUES (23, 'form_lancamentoNotas', 'Lançamento de Notas', 12, 1, NULL, 24, 'one', '800;450', '0', '0', '0', '0', 1, 1, 1, '2013-11-29');
-INSERT INTO forms (seq, formid, nomeform, tabseq, statseq, formseq, listseq, formainclude, dimensao, botconcluir, botcancelar, formoutcontrol, autosave, nivel, usuaseq, unidseq, datacad) VALUES (35, 'form_lancamentoNotas', 'Lançamento de Notas', 12, 1, NULL, 25, 'one', '800;450', '0', '0', '0', '0', 1, 1, 1, '2013-11-29');
 
 
 --
--- TOC entry 2403 (class 0 OID 32951)
--- Dependencies: 197 2418
+-- TOC entry 2358 (class 0 OID 16566)
+-- Dependencies: 197 2373
 -- Data for Name: lista; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7024,6 +7047,7 @@ INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (170, 'pesq', 5, 'seq', 'prodseq=seq', 'listaPesqProdutos', 'Insumos', 11, 170, '-', '1', '0', 2, '0', '0', '0', '1', 'statseq/=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (194, 'form', 348, 'tudiseq', '0', 'lsitObs', 'Observações', 28, 199, '-', '0', '0', 2, '0', '0', '0', '0', 'obs/!=/AND//string', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (455, 'pesq', 462, 'alunseq', 'discseq_antiga=seq,discseq_antigaLabel=nomedisciplina', 'listaDiscAluno', 'Disciplinas', 56, 458, '-', '1', '0', 2, '0', '0', '0', '1', 'stadseq/=/AND/2/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (310, 'pesq', 310, 'pjcuseq', 'pjcuseq=seq,pjcuseqLabel=nome', 'pesqCursosConcluidos', 'Cursos Disponíveis', 9, 310, '-', '1', '0', 2, '0', '0', '0', '1', 'statseq/!=/AND/8;statseq/!=/AND/9', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (168, 'form', 347, 'usuaseq', '0', 'listaPrivilegios', 'Privilégios', 40, 167, '-', '1', 'Novo Privilegio', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (173, 'form', 341, 'pessseq', '0', 'listaClienteFormacao', 'Formação Acadêmica', 43, 130, '-', '0', 'Novo Registro', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (183, 'form', 342, 'pessseq', '0', 'listaDemandaCliente', 'Interesses', 48, 130, '-', '0', 'Novo Registro', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
@@ -7046,11 +7070,13 @@ INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (162, 'form', 340, 'prodseq', '0', 'listaCotacao', 'Cotação', 38, 161, '-', '0', 'Nova Cotação', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (157, 'form', 338, 'funcseq', '0', 'listaParticipantes', 'Participantes', 34, 156, '-', '0', 'Novo Participante', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (150, 'form', 355, 'turmseq', '0', 'listaRequisitos', 'Pré Requisitos', 23, 133, '-', '0', 'Novo Registro', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (135, 'form', 335, 'turmseq', '0', 'turmaDisciplinas', 'Disciplinas da turma', 12, 133, 'TTurma/getCargaHoraria', '0', 'Associar disciplina', 2, '1', '0', '0', '0', NULL, NULL, 'multiple', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (279, 'form', 370, 'tudiseq', '0', 'listaConteudo', 'Conteudo Ministrado', 28, 193, '-', '0', 'Novo Registro', 2, '1', '1', '0', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (283, 'form', 369, 'tudiseq', '0', 'listaAvaliacoes', 'Avaliações', 27, 193, '-', '0', '0', 2, '0', '1', '0', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (322, 'form', 373, 'pessseq', '0', 'listaConvenios', 'Convênios', 90, 130, '-', '0', 'Relacionar novo convênio', 2, '1', '0', '0', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (327, 'form', 374, 'turmseq', '0', 'listDescontos', 'Faixas de Desconto', 92, 133, '-', '0', 'Novo Registro', 2, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (208, 'pesq', 68, 'seq', 'valornominal=valor,prodseq=seq,tabelaproduto=tabela', 'pesqProdutosC', 'Produto', 70, 208, '-', '1', '1', 2, '1', '0', '0', '1', 'tpprseq/!=/AND/10004330-830', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (134, 'form', 354, 'pjcuseq', '0', 'listDisciplinas', 'Disciplinas', 10, 132, 'TCurso/getCargaHoraria', '0', 'Adicionar Disicplinas', 2, '1', '0', '0', '0', NULL, NULL, 'multiple', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (468, 'form', 465, 'avalseq', '0', 'listaRegrasAvaliacoes', 'Regras da Avaliação', 107, 467, '-', '1', '1', 2, '1', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (467, 'form', 464, 'gdavseq', '0', 'listaAvaliacoes', 'Avaliações', 106, 466, '-', '1', '1', 2, '1', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (453, 'form', 452, 'turmseq', '0', 'listaTurmaConvenios', 'Convênios', 104, 5, '-', '0', '1', 2, '1', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
@@ -7059,7 +7085,6 @@ INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (263, 'form', 366, 'tudiseq', '0', 'listaAvaliacoes', 'Avaliações', 27, 199, '-', '0', '0', 2, '0', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (321, 'form', 320, '0', '0', 'listaConvenios', 'Convênios', 89, 321, '-', '1', 'Novo convênio', 1, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (335, 'form', 332, '0', '0', 'pessoasCaixa', 'Funcionários Caixa', 94, 335, '-', '1', 'Novo Registro', 1, '1', '1', '1', '0', NULL, '', 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (135, 'form', 335, 'turmseq', '0', 'turmaDisciplinas', 'Disciplinas da turma', 12, 133, 'TTurma/getCargaHoraria', '0', 'Associar disciplina', 2, '1', '0', '0', '0', NULL, NULL, 'multiple', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (485, 'form', 486, '0', '0', 'listBaixaMultiplaCredito', 'Contas de Crédito', 65, 485, '-', '1', '0', 2, '0', '0', '0', '0', 'tipo/=/AND/C;stpaseq/in/AND/(1,3)', NULL, 'one', NULL, '0', '1', 'datacad/desc;seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (398, 'form', 397, '0', '0', 'discsPlanoAul', 'Disciplinas', 12, 398, '-', '1', '0', 1, '0', '1', '0', '0', 'profseq/=/AND/TUsuario/getSeqProfessor', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (165, 'pesq', 165, 'seq', 'pessseq=seq,pessseqLabel=seq,nomefornecedor=pessnmrz', 'listaPesqFornecedores', 'Fornecedores', 1, 165, '-', '1', '0', 2, '0', '0', '0', '1', 'fornecedor/=/AND/true;statseq/=/AND/1', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
@@ -7109,6 +7134,7 @@ INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (136, 'form', 6, 'seq', '0', 'listaFuncionarios', 'Funcionários', 81, 136, '-', '1', 'Novo Registro', 1, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (151, 'form', 17, 'seq', '0', 'listaContasCaixa', 'Contas Caixa', 24, 151, '-', '1', 'Novo Registro', 1, '1', '1', '1', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (231, 'form', 80, 'seq', '0', 'ListaFuncionariosDemitidos', 'Funcionários Demitidos', 14, 231, '-', '1', '0', 1, '0', '0', '0', '0', 'situacao/=/AND/3', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (242, 'form', 475, 'seq', '0', 'listaCursosDisponiveis', 'Projeto de Curso Concluído', 9, 242, '-', '1', '0', 1, '0', '1', '0', '0', 'turmas/>/AND/0', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (381, 'form', 380, '0', '1', 'listaCheques', 'Cheques', 95, 381, '-', '1', '0', 1, '0', '0', '0', '0', NULL, NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (234, 'form', 82, 'seq', '0', 'listaTurmasConcluidas', 'Turmas Concluidas', 11, 234, '-', '1', '0', 1, '0', '0', '0', '0', 'sttuseq/=/AND/4', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (209, 'form', 69, 'seq', '0', 'listaTurmaCancelada', 'Turmas Canceladas', 11, 209, '-', '1', '0', 1, '0', '0', '0', '0', 'sttuseq/=/AND/3', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
@@ -7154,25 +7180,19 @@ INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (6, 'form', 2, 'pessseq', '0', 'listaTelefones', 'Lista de Telefones', 3, 130, '-', '1', '1', 2, '1', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '2013-08-21');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (187, 'pesq', 3, 'seq', 'discseq=seq,disiseqLabel=titulo', 'pesqDisciplina', 'Disciplinas', 8, 187, '-', '1', '0', 2, '0', '0', '0', '1', 'statseq/=/AND/1/numeric', NULL, 'oneone', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (456, 'pesq', 461, 'alunseq', 'discseq_nova=seq,discseq_novaLabel=nomedisciplina', 'listaDiscAluno', 'Disciplinas', 56, 458, '-', '1', '0', 2, '0', '0', '0', '1', 'stadseq/=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (396, 'form', 395, '0', '0', 'listaDisciplinasTurma', 'Disciplinas', 10, 395, 'TTurma/buttonAddTurmaDisciplina', '1', '0', 2, '0', '0', '0', '0', 'pjcuseq/=/AND/TTurma/getCursoSeq/1/numeric', NULL, 'one', NULL, '0', '1', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (269, 'form', 267, 'seq', '0', 'listaDevolucoes', 'Devoluções', 87, 269, '-', '1', '0', 1, '0', '0', '0', '0', 'stlvseq/=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (146, 'pesq', 11, '0', 'parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valoratual,valorrealview=valoratual,valorpago=valoratual,vencimento=vencimento', 'listaPesqCDebito', 'Contas a Pagar', 65, 146, '-', '1', '0', 2, '0', '0', '0', '1', 'tipo/=/AND/D;stpaseq/=/AND/1;statseq/=/AND/1', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (184, 'pesq', 4, '0', 'cursseq=seq,cursseqLabel=nome', 'pesqCursos', 'Cursos', 85, 184, '-', '1', '0', 2, '0', '0', '0', '1', 'statseq/!=/AND/8;statseq/!=/AND/9', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (488, 'form', 487, '0', '0', 'listaTransacoesContas', 'Lista de Contas', 65, 488, '-', '1', '0', 1, '0', '1', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'datacad/desc;seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (477, 'form', 476, 'pjcuseq', '0', 'listDisciplinas', 'Disciplinas', 10, 242, 'TCurso/getCargaHoraria', '0', '0', 2, '0', '0', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
+INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (314, 'form', 311, 'seq', '0', 'listaCursosDisponiveis', 'Cursos Disponíveis', 9, 314, '-', '1', '0', 2, '0', '0', '0', '0', 'statseq/=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (272, 'pesq', 270, 'seq', 'ccduseq=seq,ccduseqLabel=titulo', 'pesqClassificacaoCdu', 'ClassificacoesCdeu', 86, 272, '-', '1', 'Nova Classificação', 2, '0', '0', '0', '1', 'statseq/=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (477, 'form', 476, 'pjcuseq', '0', 'listDisciplinas', 'Disciplinas', 10, 242, 'TCurso/getCargaHorariaProjetoCurso', '0', '0', 2, '0', '0', '0', '0', 'statseq/!=/AND/9/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (396, 'form', 395, '0', '0', 'listaDisciplinasTurma', 'Disciplinas', 7, 395, 'TTurma/buttonAddTurmaDisciplina', '1', '0', 2, '0', '0', '0', '0', 'pjcuseq/=/AND/TTurma/getCursoSeq/1/numeric', NULL, 'one', NULL, '0', '1', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (184, 'pesq', 4, '0', 'cursseq=seq,cursseqLabel=titulo', 'pesqCursos', 'Cursos', 85, 184, '-', '1', '0', 2, '0', '0', '0', '1', 'statseq/!=/AND/8;statseq/!=/AND/9', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (24, 'form', 23, 'seq', '0', 'listaLancamentoNotasCoordernador', 'Lista de Disciplinas', 12, 24, '-', '1', '0', 1, '0', '1', '0', '0', 'statseq/!=/AND/9/numeric;alunos/>=/AND/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '2013-11-29');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (25, 'form', 35, 'seq', '0', 'listaLancamentoNotasCoordernador', 'Lista de Disciplinas', 12, 24, '-', '1', '0', 1, '0', '1', '0', '0', 'statseq/!=/AND/9/numeric;alunos/>=/AND/1/numeric;profseq/=/AND/TUsuario/getSeqProfessor', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '2013-11-29');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (7, 'form', 6, 'seq', '0', 'listaTransformaPessoaFuncionario', 'Pessoa -> Funcionario', 1, 7, '-', '1', 'Novo Funcionário', 1, '0', '0', '0', '0', 'funcionario/=/AND/false/boolean;statseq/=/AND/1', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '2013-11-26');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (242, 'form', 475, 'seq', '0', 'listaCursosDisponiveis', 'Projeto de Curso Concluído', 9, 242, '-', '1', '0', 1, '0', '1', '0', '0', 'turmas/>/AND/0/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (134, 'form', 354, 'pjcuseq', '0', 'listDisciplinas', 'Disciplinas', 10, 132, 'TCurso/getCargaHorariaProjetoCurso', '0', 'Adicionar Disicplinas', 2, '1', '0', '0', '0', NULL, NULL, 'multiple', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (314, 'form', 311, 'seq', '0', 'listaCursosDisponiveis', 'Cursos Disponíveis', 9, 314, '-', '1', '0', 2, '0', '0', '0', '0', 'stpcseq/=/OR/1/numeric;turmas/>=/OR/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
-INSERT INTO lista (seq, tipo, formseq, filtropai, pesquisa, lista, label, tabseq, listseq, obapendice, acfiltro, acincluir, nivel, acdeletar, aceditar, acviews, acenviar, filtro, trigger, formainclude, incontrol, acreplicar, acselecao, ordem, aclimite, required, usuaseq, unidseq, statseq, datacad) VALUES (310, 'pesq', 310, 'pjcuseq', 'pjcuseq=seq,pjcuseqLabel=nome', 'pesqCursosConcluidos', 'Cursos Disponíveis', 9, 310, '-', '1', '0', 2, '0', '0', '0', '1', 'stpcseq/=/OR/1/numeric;turmas/>=/OR/1/numeric', NULL, 'one', NULL, '0', '0', 'seq/desc', '1', NULL, 1, 1, 1, '1900-01-01');
 
 
 --
--- TOC entry 2404 (class 0 OID 32971)
--- Dependencies: 198 2418
+-- TOC entry 2359 (class 0 OID 16586)
+-- Dependencies: 198 2373
 -- Data for Name: lista_actions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7193,21 +7213,20 @@ INSERT INTO lista_actions (seq, listseq, tipocampo, nameaction, label, actionjs,
 INSERT INTO lista_actions (seq, listseq, tipocampo, nameaction, label, actionjs, metodoexe, confirm, campoparam, img, ordem, statseq, tiporetorno, usuaseq, unidseq, datacad) VALUES (5, 182, NULL, 'onViewTurma', 'Visualizar turma', 'prossExe', 'onSet', NULL, 'seq', 'new_ico_set.png', 2, 0, 'form', 1, 1, '1900-01-01');
 INSERT INTO lista_actions (seq, listseq, tipocampo, nameaction, label, actionjs, metodoexe, confirm, campoparam, img, ordem, statseq, tiporetorno, usuaseq, unidseq, datacad) VALUES (4, 182, NULL, 'onConfigTurma', 'Gerenciar Turma', 'selectTurma', NULL, NULL, 'seq', 'new_ico_set.png', 1, 0, 'form', 1, 1, '1900-01-01');
 INSERT INTO lista_actions (seq, listseq, tipocampo, nameaction, label, actionjs, metodoexe, confirm, campoparam, img, ordem, statseq, tiporetorno, usuaseq, unidseq, datacad) VALUES (3, 148, NULL, 'onViewHistorico', 'Visualizar', 'prossExe', 'onEdit', NULL, 'seq', 'new_ico_config.png', 1, 1, 'form', 1, 1, '1900-01-01');
-INSERT INTO lista_actions (seq, listseq, tipocampo, nameaction, label, actionjs, metodoexe, confirm, campoparam, img, ordem, statseq, tiporetorno, usuaseq, unidseq, datacad) VALUES (8, 7, NULL, 'onTransformaPessoaFuncionario', 'Tranformar esta pessoa em funcionário', 'setPessoaFuncionario', 'onEdit', NULL, 'seq', 'new_ico_set.png', 2, 1, 'form', 1, 1, '2013-11-26');
 
 
 --
--- TOC entry 2467 (class 0 OID 0)
+-- TOC entry 2422 (class 0 OID 0)
 -- Dependencies: 199
 -- Name: lista_actions_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('lista_actions_seq_seq', 12, true);
+SELECT pg_catalog.setval('lista_actions_seq_seq', 1, false);
 
 
 --
--- TOC entry 2406 (class 0 OID 32988)
--- Dependencies: 200 2418
+-- TOC entry 2361 (class 0 OID 16603)
+-- Dependencies: 200 2373
 -- Data for Name: lista_bnav; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7218,7 +7237,7 @@ INSERT INTO lista_bnav (seq, listseq, nome, tipocampo, label, metodo, funcaojs, 
 
 
 --
--- TOC entry 2468 (class 0 OID 0)
+-- TOC entry 2423 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: lista_bnav_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -7227,15 +7246,15 @@ SELECT pg_catalog.setval('lista_bnav_seq_seq', 1, false);
 
 
 --
--- TOC entry 2408 (class 0 OID 32998)
--- Dependencies: 202 2418
+-- TOC entry 2363 (class 0 OID 16613)
+-- Dependencies: 202 2373
 -- Data for Name: lista_fields; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
 
 --
--- TOC entry 2469 (class 0 OID 0)
+-- TOC entry 2424 (class 0 OID 0)
 -- Dependencies: 203
 -- Name: lista_fields_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -7244,12 +7263,13 @@ SELECT pg_catalog.setval('lista_fields_seq_seq', 1, false);
 
 
 --
--- TOC entry 2410 (class 0 OID 33007)
--- Dependencies: 204 2418
+-- TOC entry 2365 (class 0 OID 16622)
+-- Dependencies: 204 2373
 -- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (25, 'historico', 'Histórico Acadêmico', 'getform', 54, 54, '2', 10, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (82, 'parametros', 'Parametros', 'getform', 46, 46, '2', 4, 12, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (26, 'financeiroAluno', 'Histórico Financeiro', 'getform', 50, 50, '2', 10, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (65, '<separador>', '', '-', 0, 0, '2', 2, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (66, '<separador>', '', '-', 0, 0, '2', 2, 8, 1, 1, 1, '1900-01-01');
@@ -7257,23 +7277,37 @@ INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, m
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (98, '<separador>', '', '-', 0, 0, '2', 4, 10, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (44, 'botFuncionario', 'Funcionários', 'getList', 136, 6, '2', 5, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (14, 'professores', 'Professores', 'getList', 137, 7, '2', 7, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (107, 'responderQuestionario', 'Responder Questionário', 'getList', 0, 2, '2', 8, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (45, 'botProfessor', 'Professores', 'getList', 137, 7, '2', 5, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (7, 'matricula', 'Matrícula', 'getList', 147, 14, '2', 2, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (46, 'botProdutos', 'Turmas Abertas', 'getList', 149, 16, '2', 1, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (48, 'cargos', 'Cargos', 'getList', 153, 19, '1', 5, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (50, 'patrimonios', 'Patrimonios', 'getList', 155, 21, '1', 4, 4, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (51, 'treinamentos', 'Treinamentos', 'getList', 156, 22, '1', 5, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (52, 'unidades', 'Unidades', 'getList', 158, 24, '1', 4, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (53, 'fornecedores', 'Fornecedores', 'getList', 160, 26, '2', 4, 8, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (56, 'usuarios', 'Gerenciar Usuários', 'getList', 167, 31, '2', 4, 11, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (61, 'salas', 'Salas', 'getList', 174, 34, '2', 4, 2, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (63, 'solicitacoes', 'Solicitações', 'getList', 178, 38, '2', 2, 9, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (58, 'demanda', 'Demanda', 'getList', 185, 43, '2', 1, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (16, 'gerDisciplina', 'Diário Eletronico', 'getList', 199, 58, '2', 7, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (17, 'montarGrade', 'Gerenciar Disciplinas', 'getList', 200, 59, '2', 7, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (84, 'gerenciadorProjetos', 'Gerenciar Projetos', 'getList', 203, 57, '2', 11, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (89, 'turmaCanceladas', 'Turmas Canceladas', 'getList', 209, 69, '2', 2, 8, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (13, 'listPresenca', 'Lista de Presença', 'getList', 217, 74, '2', 2, 21, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (93, 'produtos', 'Produtos', 'getList', 218, 75, '2', 4, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (27, 'solicitacao', 'Solicitações', 'getList', 222, 76, '2', 10, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (94, 'departamentos', 'Departamentos', 'getList', 223, 77, '2', 4, 3, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (95, 'solicitacoesEncaminhadas', 'Solicitações Encaminhadas', 'getList', 227, 78, '2', 2, 10, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (100, 'turmasConcluidas', 'Turmas Concluidas', 'getList', 234, 82, '2', 2, 8, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (106, 'gerenciarQuestionario', 'Gerenciar Questionário', 'getList', 244, 89, '2', 8, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (111, 'reservaLivro', 'Reservas', 'getList', 268, 266, '2', 12, 3, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (110, 'locacaoLivro', 'Locação', 'getList', 265, 264, '2', 12, 2, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (112, 'devoucaoLivro', 'Devoluções', 'getList', 269, 267, '2', 12, 4, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (113, '<separador>', '', '-', 0, 0, '2', 12, 5, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (114, 'classificacaoCDU', 'Classificação CDU', 'getList', 271, 270, '2', 12, 6, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (86, 'viewArquivos', 'Orientações e Arquivos', 'getform', 63, 63, '2', 10, 4, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (101, 'biblioteca', 'Controle de Livros', 'getList', 237, 83, '2', 12, 7, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (8, 'bot_convenios', 'Convênios', 'getList', 321, 320, '2', 4, 9, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (29, 'movimentoCaixa', 'Movimento de Caixa', 'getList', 144, 13, '2', 3, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (91, 'transacaoD', 'Transações a Pagar', 'getList', 213, 72, '2', 3, 5, 1, 1, 1, '1900-01-01');
@@ -7281,40 +7315,29 @@ INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, m
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (30, 'contasPagar', 'Contas a Pagar', 'getList', 141, 11, '2', 3, 10, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (32, 'cadPlanoConta', 'Plano de Contas', 'getList', 140, 10, '2', 3, 12, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (34, 'criaContaCaixa', 'Conta Caixa / Bancos', 'getList', 151, 17, '2', 3, 13, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (77, 'relatorioCaixa', 'Relatório de Caixa', 'getform', 41, 41, '2', 3, 23, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (88, 'transacaoC', 'Transações a Receber', 'getList', 206, 67, '2', 3, 4, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (92, 'alunoListaLivros', 'Consulta de Livros', 'getList', 331, 328, '2', 10, 5, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (60, 'compras', 'Compras', 'getList', 179, 40, '2', 4, 6, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (47, 'botDuplicatas', 'Duplicatas', 'getList', 139, 9, '2', 3, 22, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (87, 'extorno', 'Extorno de Caixa', 'getList', 203, 64, '2', 3, 7, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (90, 'cadPessoa', 'Cadastro Pessoa', 'getList', 212, 71, '2', 5, 30, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (55, 'contratos', 'Contratos', 'getList', 166, 30, '2', 4, 9, 9, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (63, 'solicitacoes', 'Solicitações', 'getList', 178, 38, '2', 2, 9, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (77, 'relatorioCaixa', 'Relatório de Caixa', 'getform', 41, 41, '2', 3, 23, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (118, 'moviemntosProgramados', 'Movimentos Programados', 'getForm', 383, 383, '2', 3, 2, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (50, 'patrimonios', 'Patrimonios', 'getList', 155, 21, '1', 4, 4, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (107, 'responderQuestionario', 'Responder Questionário', 'getList', 0, 2, '2', 8, 2, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (82, 'parametros', 'Parametros', 'getform', 46, 46, '2', 4, 12, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (106, 'gerenciarQuestionario', 'Gerenciar Questionário', 'getList', 244, 89, '2', 8, 1, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (27, 'solicitacao', 'Solicitações', 'getList', 222, 76, '2', 10, 3, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (115, 'consultaLivrosAluno', 'Consultar Livros', 'getList', 274, 273, '2', 10, 1, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (86, 'viewArquivos', 'Orientações e Arquivos', 'getform', 63, 63, '2', 10, 4, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (92, 'alunoListaLivros', 'Consulta de Livros', 'getList', 331, 328, '2', 10, 5, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (84, 'gerenciadorProjetos', 'Gerenciar Projetos', 'getList', 203, 57, '2', 11, 0, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (101, 'biblioteca', 'Controle de Livros', 'getList', 237, 83, '2', 12, 7, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (114, 'classificacaoCDU', 'Classificação CDU', 'getList', 271, 270, '2', 12, 6, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (110, 'locacaoLivro', 'Locação', 'getList', 265, 264, '2', 12, 2, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (112, 'devoucaoLivro', 'Devoluções', 'getList', 269, 267, '2', 12, 4, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (111, 'reservaLivro', 'Reservas', 'getList', 268, 266, '2', 12, 3, 7, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (115, 'consultaLivrosAluno', 'Consultar Livros', 'getList', 274, 273, '2', 10, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (118, 'moviemntosProgramados', 'Movimentos Programados', 'getForm', 383, 383, '2', 3, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (6, 'cadTurma', 'Turmas', 'getList', 133, 5, '2', 13, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (105, 'cursos', 'Projeto de Curso Concluído', 'getList', 242, 87, '2', 13, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (75, 'areaCurso', 'Áreas de Cursos', 'getList', 176, 39, '2', 13, 6, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (4, 'cadDisciplina', 'Disciplinas', 'getList', 131, 3, '2', 13, 5, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (5, 'cadProjetoCursos', 'Projeto de Curso', 'getList', 132, 4, '2', 13, 4, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (102, 'cadTipoCurso', 'Tipos de Curso', 'getList', 240, 85, '2', 13, 7, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (117, 'listaCheques', 'Cheques', 'getList', 381, 380, '2', 3, 16, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (116, 'funcCaixa', 'Funcionários Caixa', 'getList', 335, 332, '2', 3, 14, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (19, 'diario', 'Diário Eletrônico', 'getList', 193, 18, '2', 9, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (103, 'consolidarCaixa', 'Consolidação de caixa', 'getList', 391, 395, '2', 3, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (109, 'cursosstatseqs', 'Referência de Curso', 'getList', 259, 90, '2', 13, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (20, 'planoAula', 'Plano de Aula', 'getList', 398, 397, '2', 9, 2, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (85, 'gerenciadorArquivos', 'Orientações e Arquivos', 'getList', 402, 399, '2', 9, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (41, 'negociacao', 'Negociação', 'getList', 163, 29, '2', 3, 6, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (119, 'Sec-relatorioTurma', 'Relatório por Turma', 'getList', 410, 405, '2', 2, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (120, 'Coord-relatorioTurma', 'Relatório por Turma', 'getList', 411, 406, '2', 7, 0, 1, 1, 1, '1900-01-01');
@@ -7326,44 +7349,37 @@ INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, m
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (124, 'gerPessoas', 'Pessoas', 'getList', 212, 71, '2', 4, 12, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (10, 'alunosHistAcademico', 'Históricos Acadêmicos', 'getList', 148, 15, '2', 2, 1, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (125, 'alunosHistFinanceiro', 'Históricos Financeiros', 'getList', 457, 459, '2', 2, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (126, 'alunosProcAcademicos', 'Processos Acadêmicos', 'getList', 458, 460, '2', 2, 1, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (127, 'gradeAvaliacoes', 'Grades de Avaliações', 'getList', 466, 463, '2', 7, 10, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (128, 'notasAlunos', 'Notas de Alunos', 'getList', 470, 469, '2', 2, 15, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (129, 'estornoCaixa', 'Estorno de Caixa', 'getList', 479, 478, '2', 3, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (130, 'consolidacaoNotasFrequencias', 'Consolidação de Notas e Frenquencias', 'getForm', 483, 483, '2', 13, 0, 1, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (131, 'baixaMultipla', 'Baixa Múltipla de Contas', 'getForm', 484, 484, '2', 3, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (132, 'alteraVencimentoConta', 'Alteração de Vencimento de Contas', 'getList', 488, 487, '2', 3, 0, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (104, 'alunosInativos', 'Alunos Inativos', 'getList', 241, 86, '2', 2, 2, 1, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (57, 'ferias', 'Férias', 'getList', 171, 33, '2', 5, 0, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (49, 'curriculos', 'Currículos', 'getList', 154, 20, '1', 5, 0, 9, 1, 1, '1900-01-01');
+INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (43, 'scorecard', 'Scorecard', 'getList', 238, 84, '2', 3, 21, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (40, 'inadimplencia', 'Inadimplência', 'getList', 151, 25, '2', 3, 17, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (83, 'folhaPag', 'Folha de Pagamento', 'getList', 190, 51, '2', 5, 0, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (96, 'produtosTurma', 'Turmas', 'getList', 228, 79, '2', 1, 0, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (99, 'funcDemitidos', 'Funcionários Demitidos', 'getList', 231, 80, '2', 5, 0, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (39, 'contabilidade', 'Contabilidade', 'getform', 44, 44, '2', 3, 20, 9, 1, 1, '1900-01-01');
 INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (2, 'inscricao', 'Inscrição', 'getList', 138, 8, '0', 1, 0, 1, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (3, 'transformaPessoaFuncionario', 'Pessoa -> Funcionário', 'getList', 7, 6, '2', 5, 5, 1, 1, 1, '2013-11-26');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (16, 'gerDisciplina', 'Diário Eletrônico', 'getList', 199, 58, '2', 7, 0, 1, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (9, 'lancamentoNotas', 'Lançamento de Notas', 'getList', 24, 23, '2', 7, 0, 1, 1, 1, '2013-11-29');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (11, 'lancamentoNotas', 'Lançamento de Notas', 'getList', 25, 35, '2', 9, 1, 1, 1, 1, '2013-11-29');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (117, 'listaCheques', 'Cheques', 'getList', 381, 380, '2', 3, 16, 1, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (126, 'alunosProcAcademicos', 'Processos Acadêmicos', 'getList', 458, 460, '2', 2, 1, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (95, 'solicitacoesEncaminhadas', 'Solicitações Encaminhadas', 'getList', 227, 78, '2', 2, 10, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (85, 'gerenciadorArquivos', 'Orientações e Arquivos', 'getList', 402, 399, '2', 9, 3, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (131, 'baixaMultipla', 'Baixa Múltipla de Contas', 'getForm', 484, 484, '2', 3, 0, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (43, 'scorecard', 'Scorecard', 'getList', 238, 84, '2', 3, 21, 7, 1, 1, '1900-01-01');
-INSERT INTO menu (seq, modulo, labelmodulo, metodo, argumento, formseq, nivel, modseq, ordem, statseq, usuaseq, unidseq, datacad) VALUES (127, 'gradeAvaliacoes', 'Grades de Avaliações', 'getList', 466, 463, '2', 7, 10, 7, 1, 1, '1900-01-01');
 
 
 --
--- TOC entry 2470 (class 0 OID 0)
+-- TOC entry 2425 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: menu_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('menu_seq_seq', 11, true);
+SELECT pg_catalog.setval('menu_seq_seq', 1, false);
 
 
 --
--- TOC entry 2412 (class 0 OID 33017)
--- Dependencies: 206 2418
+-- TOC entry 2367 (class 0 OID 16632)
+-- Dependencies: 206 2373
 -- Data for Name: modulo; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7373,17 +7389,17 @@ INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, un
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (5, 'rh', 'Recursos Humanos', 1, 3, 1, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (6, 'paramentros', 'Parametros', 1, 12, 0, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (7, 'coordenador', 'Coordenador', 1, 7, 1, 1, 1, '1900-01-01');
+INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (12, 'biblioteca', 'Biblioteca', 1, 10, 1, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (13, 'academico', 'Acadêmico', 1, 6, 1, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (8, 'questionarios', 'Questionarios', 1, 13, 0, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (11, 'projetos', 'Projetos', 1, 11, 0, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (9, 'professores', 'Professores', 1, 8, 1, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (10, 'alunos', 'Alunos', 1, 9, 1, 1, 1, '1900-01-01');
 INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (4, 'administrativo', 'Administrativo', 1, 4, 1, 1, 1, '1900-01-01');
-INSERT INTO modulo (seq, modulo, labelmodulo, nivel, ordem, statseq, usuaseq, unidseq, datacad) VALUES (12, 'biblioteca', 'Biblioteca', 1, 10, 7, 1, 1, '1900-01-01');
 
 
 --
--- TOC entry 2471 (class 0 OID 0)
+-- TOC entry 2426 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: modulo_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -7392,8 +7408,8 @@ SELECT pg_catalog.setval('modulo_seq_seq', 1, false);
 
 
 --
--- TOC entry 2414 (class 0 OID 33025)
--- Dependencies: 208 2418
+-- TOC entry 2369 (class 0 OID 16640)
+-- Dependencies: 208 2373
 -- Data for Name: tabelas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7491,21 +7507,20 @@ INSERT INTO tabelas (seq, tabela, tabela_view, tabseq, statseq, colunafilho, usu
 INSERT INTO tabelas (seq, tabela, tabela_view, tabseq, statseq, colunafilho, usuaseq, unidseq, datacad) VALUES (23, 'dbrequisito_turma', 'view_requisito_turma', 11, 1, 'rqtuseq', 1, 1, '1900-01-01');
 INSERT INTO tabelas (seq, tabela, tabela_view, tabseq, statseq, colunafilho, usuaseq, unidseq, datacad) VALUES (3, 'dbtelefone', 'dbtelefone', 1, 1, 'foneseq', 1, 1, '2013-08-21');
 INSERT INTO tabelas (seq, tabela, tabela_view, tabseq, statseq, colunafilho, usuaseq, unidseq, datacad) VALUES (27, 'dbturma_disciplina_avaliacao', 'view_turma_disciplina_avaliacao', 12, 1, 'avalseq', 1, 1, '1900-01-01');
-INSERT INTO tabelas (seq, tabela, tabela_view, tabseq, statseq, colunafilho, usuaseq, unidseq, datacad) VALUES (7, 'dbprojeto_curso_disciplina', 'view_curso_disciplina', 8, 1, 'pjcdseq', 1, 1, '2013-11-28');
 
 
 --
--- TOC entry 2472 (class 0 OID 0)
+-- TOC entry 2427 (class 0 OID 0)
 -- Dependencies: 209
 -- Name: tabelas_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('tabelas_seq_seq', 7, true);
+SELECT pg_catalog.setval('tabelas_seq_seq', 4, true);
 
 
 --
--- TOC entry 2416 (class 0 OID 33033)
--- Dependencies: 210 2418
+-- TOC entry 2371 (class 0 OID 16648)
+-- Dependencies: 210 2373
 -- Data for Name: tipo_campo; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -7527,7 +7542,7 @@ INSERT INTO tipo_campo (seq, unidseq, usuaseq, tpcadesc, tipodado, statseq, data
 
 
 --
--- TOC entry 2473 (class 0 OID 0)
+-- TOC entry 2428 (class 0 OID 0)
 -- Dependencies: 211
 -- Name: tipo_campo_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
@@ -7536,8 +7551,8 @@ SELECT pg_catalog.setval('tipo_campo_seq_seq', 15, true);
 
 
 --
--- TOC entry 2124 (class 2606 OID 33064)
--- Dependencies: 161 161 2419
+-- TOC entry 2180 (class 2606 OID 16679)
+-- Dependencies: 161 161 2374
 -- Name: pk_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7546,8 +7561,8 @@ ALTER TABLE ONLY abas
 
 
 --
--- TOC entry 2126 (class 2606 OID 33066)
--- Dependencies: 163 163 2419
+-- TOC entry 2182 (class 2606 OID 16681)
+-- Dependencies: 163 163 2374
 -- Name: pk_blocos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7556,8 +7571,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2128 (class 2606 OID 33068)
--- Dependencies: 165 165 2419
+-- TOC entry 2184 (class 2606 OID 16683)
+-- Dependencies: 165 165 2374
 -- Name: pk_blocos_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7566,8 +7581,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2130 (class 2606 OID 33070)
--- Dependencies: 167 167 2419
+-- TOC entry 2186 (class 2606 OID 16685)
+-- Dependencies: 167 167 2374
 -- Name: pk_campos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7576,8 +7591,8 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2132 (class 2606 OID 33072)
--- Dependencies: 169 169 2419
+-- TOC entry 2188 (class 2606 OID 16687)
+-- Dependencies: 169 169 2374
 -- Name: pk_campos_x_blocos; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7586,8 +7601,8 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
--- TOC entry 2134 (class 2606 OID 33074)
--- Dependencies: 171 171 2419
+-- TOC entry 2190 (class 2606 OID 16689)
+-- Dependencies: 171 171 2374
 -- Name: pk_campos_x_propriedades; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7596,8 +7611,8 @@ ALTER TABLE ONLY campos_x_propriedades
 
 
 --
--- TOC entry 2136 (class 2606 OID 33076)
--- Dependencies: 173 173 2419
+-- TOC entry 2192 (class 2606 OID 16691)
+-- Dependencies: 173 173 2374
 -- Name: pk_coluna; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7606,8 +7621,8 @@ ALTER TABLE ONLY coluna
 
 
 --
--- TOC entry 2138 (class 2606 OID 33078)
--- Dependencies: 175 175 2419
+-- TOC entry 2194 (class 2606 OID 16693)
+-- Dependencies: 175 175 2374
 -- Name: pk_dbpessoa; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7616,8 +7631,8 @@ ALTER TABLE ONLY dbpessoa
 
 
 --
--- TOC entry 2141 (class 2606 OID 33080)
--- Dependencies: 177 177 2419
+-- TOC entry 2197 (class 2606 OID 16695)
+-- Dependencies: 177 177 2374
 -- Name: pk_dbstatus; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7626,8 +7641,8 @@ ALTER TABLE ONLY dbstatus
 
 
 --
--- TOC entry 2143 (class 2606 OID 33082)
--- Dependencies: 179 179 2419
+-- TOC entry 2199 (class 2606 OID 16697)
+-- Dependencies: 179 179 2374
 -- Name: pk_dbunidade; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7636,8 +7651,8 @@ ALTER TABLE ONLY dbunidade
 
 
 --
--- TOC entry 2145 (class 2606 OID 33084)
--- Dependencies: 180 180 2419
+-- TOC entry 2201 (class 2606 OID 16699)
+-- Dependencies: 180 180 2374
 -- Name: pk_dbunidade_parametro; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7646,8 +7661,8 @@ ALTER TABLE ONLY dbunidade_parametro
 
 
 --
--- TOC entry 2147 (class 2606 OID 33086)
--- Dependencies: 183 183 2419
+-- TOC entry 2203 (class 2606 OID 16701)
+-- Dependencies: 183 183 2374
 -- Name: pk_dbusuario; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7656,8 +7671,8 @@ ALTER TABLE ONLY dbusuario
 
 
 --
--- TOC entry 2151 (class 2606 OID 33088)
--- Dependencies: 184 184 2419
+-- TOC entry 2207 (class 2606 OID 16703)
+-- Dependencies: 184 184 2374
 -- Name: pk_dbusuario_privilegio; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7666,8 +7681,8 @@ ALTER TABLE ONLY dbusuario_privilegio
 
 
 --
--- TOC entry 2153 (class 2606 OID 33090)
--- Dependencies: 187 187 2419
+-- TOC entry 2209 (class 2606 OID 16705)
+-- Dependencies: 187 187 2374
 -- Name: pk_form_button; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7676,8 +7691,8 @@ ALTER TABLE ONLY form_button
 
 
 --
--- TOC entry 2155 (class 2606 OID 33092)
--- Dependencies: 190 190 2419
+-- TOC entry 2211 (class 2606 OID 16707)
+-- Dependencies: 190 190 2374
 -- Name: pk_form_validacao; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7686,8 +7701,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2157 (class 2606 OID 33094)
--- Dependencies: 192 192 2419
+-- TOC entry 2213 (class 2606 OID 16709)
+-- Dependencies: 192 192 2374
 -- Name: pk_form_x_abas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7696,8 +7711,8 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
--- TOC entry 2159 (class 2606 OID 33096)
--- Dependencies: 194 194 2419
+-- TOC entry 2215 (class 2606 OID 16711)
+-- Dependencies: 194 194 2374
 -- Name: pk_form_x_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7706,8 +7721,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2161 (class 2606 OID 33098)
--- Dependencies: 196 196 2419
+-- TOC entry 2217 (class 2606 OID 16713)
+-- Dependencies: 196 196 2374
 -- Name: pk_forms; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7716,8 +7731,8 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2163 (class 2606 OID 33100)
--- Dependencies: 197 197 2419
+-- TOC entry 2219 (class 2606 OID 16715)
+-- Dependencies: 197 197 2374
 -- Name: pk_lista; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7726,8 +7741,8 @@ ALTER TABLE ONLY lista
 
 
 --
--- TOC entry 2165 (class 2606 OID 33102)
--- Dependencies: 198 198 2419
+-- TOC entry 2221 (class 2606 OID 16717)
+-- Dependencies: 198 198 2374
 -- Name: pk_lista_actions; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7736,8 +7751,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2167 (class 2606 OID 33104)
--- Dependencies: 200 200 2419
+-- TOC entry 2223 (class 2606 OID 16719)
+-- Dependencies: 200 200 2374
 -- Name: pk_lista_bnav; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7746,8 +7761,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2169 (class 2606 OID 33106)
--- Dependencies: 202 202 2419
+-- TOC entry 2225 (class 2606 OID 16721)
+-- Dependencies: 202 202 2374
 -- Name: pk_lista_fields; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7756,8 +7771,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2171 (class 2606 OID 33108)
--- Dependencies: 204 204 2419
+-- TOC entry 2227 (class 2606 OID 16723)
+-- Dependencies: 204 204 2374
 -- Name: pk_menu; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7766,8 +7781,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 2173 (class 2606 OID 33110)
--- Dependencies: 206 206 2419
+-- TOC entry 2229 (class 2606 OID 16725)
+-- Dependencies: 206 206 2374
 -- Name: pk_modulo; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7776,8 +7791,8 @@ ALTER TABLE ONLY modulo
 
 
 --
--- TOC entry 2175 (class 2606 OID 33112)
--- Dependencies: 208 208 2419
+-- TOC entry 2231 (class 2606 OID 16727)
+-- Dependencies: 208 208 2374
 -- Name: pk_tabelas; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7786,8 +7801,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2177 (class 2606 OID 33114)
--- Dependencies: 210 210 2419
+-- TOC entry 2233 (class 2606 OID 16729)
+-- Dependencies: 210 210 2374
 -- Name: pk_tipo_campo; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7796,8 +7811,8 @@ ALTER TABLE ONLY tipo_campo
 
 
 --
--- TOC entry 2149 (class 1259 OID 33115)
--- Dependencies: 184 2419
+-- TOC entry 2205 (class 1259 OID 16730)
+-- Dependencies: 184 2374
 -- Name: id_dbusuario_privilegio; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -7805,8 +7820,8 @@ CREATE INDEX id_dbusuario_privilegio ON dbusuario_privilegio USING btree (funcio
 
 
 --
--- TOC entry 2139 (class 1259 OID 33116)
--- Dependencies: 175 2419
+-- TOC entry 2195 (class 1259 OID 16731)
+-- Dependencies: 175 2374
 -- Name: uk_dbpessoas; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -7814,8 +7829,8 @@ CREATE UNIQUE INDEX uk_dbpessoas ON dbpessoa USING btree (pessnmrf);
 
 
 --
--- TOC entry 2148 (class 1259 OID 33117)
--- Dependencies: 183 2419
+-- TOC entry 2204 (class 1259 OID 16732)
+-- Dependencies: 183 2374
 -- Name: uk_dbusuario; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -7823,8 +7838,8 @@ CREATE UNIQUE INDEX uk_dbusuario ON dbusuario USING btree (usuario);
 
 
 --
--- TOC entry 2186 (class 2606 OID 33118)
--- Dependencies: 165 2123 161 2419
+-- TOC entry 2242 (class 2606 OID 16733)
+-- Dependencies: 165 2179 161 2374
 -- Name: fk_aba_blab_abaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7833,8 +7848,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2228 (class 2606 OID 33123)
--- Dependencies: 161 2123 192 2419
+-- TOC entry 2284 (class 2606 OID 16738)
+-- Dependencies: 192 2179 161 2374
 -- Name: fk_aba_foab_abaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7843,8 +7858,8 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
--- TOC entry 2187 (class 2606 OID 33128)
--- Dependencies: 163 165 2125 2419
+-- TOC entry 2243 (class 2606 OID 16743)
+-- Dependencies: 165 163 2181 2374
 -- Name: fk_bloc_blab_blocseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7853,8 +7868,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2181 (class 2606 OID 33133)
--- Dependencies: 163 2160 196 2419
+-- TOC entry 2237 (class 2606 OID 16748)
+-- Dependencies: 2216 163 196 2374
 -- Name: fk_form_bloc_formseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7863,8 +7878,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2182 (class 2606 OID 33138)
--- Dependencies: 196 2160 163 2419
+-- TOC entry 2238 (class 2606 OID 16753)
+-- Dependencies: 2216 196 163 2374
 -- Name: fk_form_bloc_frmpseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7873,8 +7888,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2221 (class 2606 OID 33143)
--- Dependencies: 196 187 2160 2419
+-- TOC entry 2277 (class 2606 OID 16758)
+-- Dependencies: 187 2216 196 2374
 -- Name: fk_form_fobu_formseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7883,8 +7898,8 @@ ALTER TABLE ONLY form_button
 
 
 --
--- TOC entry 2231 (class 2606 OID 33148)
--- Dependencies: 2160 196 194 2419
+-- TOC entry 2287 (class 2606 OID 16763)
+-- Dependencies: 194 196 2216 2374
 -- Name: fk_form_fota_formseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7893,8 +7908,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2224 (class 2606 OID 33153)
--- Dependencies: 2160 196 190 2419
+-- TOC entry 2280 (class 2606 OID 16768)
+-- Dependencies: 190 2216 196 2374
 -- Name: fk_form_fova_formseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7903,8 +7918,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2242 (class 2606 OID 33158)
--- Dependencies: 198 197 2162 2419
+-- TOC entry 2298 (class 2606 OID 16773)
+-- Dependencies: 2218 197 198 2374
 -- Name: fk_list_liac_listseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7913,8 +7928,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2245 (class 2606 OID 33163)
--- Dependencies: 197 2162 200 2419
+-- TOC entry 2301 (class 2606 OID 16778)
+-- Dependencies: 2218 197 200 2374
 -- Name: fk_list_libn_listseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7923,8 +7938,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2200 (class 2606 OID 33168)
--- Dependencies: 2162 197 173 2419
+-- TOC entry 2256 (class 2606 OID 16783)
+-- Dependencies: 173 2218 197 2374
 -- Name: fk_list_lico_listseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7933,8 +7948,8 @@ ALTER TABLE ONLY coluna
 
 
 --
--- TOC entry 2249 (class 2606 OID 33173)
--- Dependencies: 2162 202 197 2419
+-- TOC entry 2305 (class 2606 OID 16788)
+-- Dependencies: 197 2218 202 2374
 -- Name: fk_list_lifi_listseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7943,8 +7958,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2253 (class 2606 OID 33178)
--- Dependencies: 204 2172 206 2419
+-- TOC entry 2309 (class 2606 OID 16793)
+-- Dependencies: 204 2228 206 2374
 -- Name: fk_mod_menu_modseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7953,8 +7968,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 2178 (class 2606 OID 33183)
--- Dependencies: 177 161 2140 2419
+-- TOC entry 2234 (class 2606 OID 16798)
+-- Dependencies: 2196 177 161 2374
 -- Name: fk_stat_aba_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7963,8 +7978,8 @@ ALTER TABLE ONLY abas
 
 
 --
--- TOC entry 2188 (class 2606 OID 33188)
--- Dependencies: 177 165 2140 2419
+-- TOC entry 2244 (class 2606 OID 16803)
+-- Dependencies: 177 165 2196 2374
 -- Name: fk_stat_blab_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7973,8 +7988,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2195 (class 2606 OID 33193)
--- Dependencies: 177 2140 169 2419
+-- TOC entry 2251 (class 2606 OID 16808)
+-- Dependencies: 2196 177 169 2374
 -- Name: fk_stat_cabl_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7983,8 +7998,8 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
--- TOC entry 2235 (class 2606 OID 33198)
--- Dependencies: 2140 177 196 2419
+-- TOC entry 2291 (class 2606 OID 16813)
+-- Dependencies: 196 177 2196 2374
 -- Name: fk_stat_form_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7993,8 +8008,8 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2225 (class 2606 OID 33203)
--- Dependencies: 190 177 2140 2419
+-- TOC entry 2281 (class 2606 OID 16818)
+-- Dependencies: 190 177 2196 2374
 -- Name: fk_stat_fova_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8003,8 +8018,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2246 (class 2606 OID 33208)
--- Dependencies: 2140 200 177 2419
+-- TOC entry 2302 (class 2606 OID 16823)
+-- Dependencies: 200 177 2196 2374
 -- Name: fk_stat_libn_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8013,8 +8028,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2250 (class 2606 OID 33213)
--- Dependencies: 177 2140 202 2419
+-- TOC entry 2306 (class 2606 OID 16828)
+-- Dependencies: 202 177 2196 2374
 -- Name: fk_stat_lifi_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8023,8 +8038,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2239 (class 2606 OID 33218)
--- Dependencies: 197 2140 177 2419
+-- TOC entry 2295 (class 2606 OID 16833)
+-- Dependencies: 197 177 2196 2374
 -- Name: fk_stat_list_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8033,8 +8048,8 @@ ALTER TABLE ONLY lista
 
 
 --
--- TOC entry 2254 (class 2606 OID 33223)
--- Dependencies: 2140 204 177 2419
+-- TOC entry 2310 (class 2606 OID 16838)
+-- Dependencies: 204 177 2196 2374
 -- Name: fk_stat_menu_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8043,8 +8058,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 2203 (class 2606 OID 33228)
--- Dependencies: 175 2140 177 2419
+-- TOC entry 2259 (class 2606 OID 16843)
+-- Dependencies: 175 177 2196 2374
 -- Name: fk_stat_pess_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8053,8 +8068,8 @@ ALTER TABLE ONLY dbpessoa
 
 
 --
--- TOC entry 2206 (class 2606 OID 33233)
--- Dependencies: 2140 177 177 2419
+-- TOC entry 2262 (class 2606 OID 16848)
+-- Dependencies: 177 177 2196 2374
 -- Name: fk_stat_stat_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8063,8 +8078,8 @@ ALTER TABLE ONLY dbstatus
 
 
 --
--- TOC entry 2259 (class 2606 OID 33238)
--- Dependencies: 177 208 2140 2419
+-- TOC entry 2315 (class 2606 OID 16853)
+-- Dependencies: 208 177 2196 2374
 -- Name: fk_stat_tab_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8073,8 +8088,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2263 (class 2606 OID 33243)
--- Dependencies: 2140 210 177 2419
+-- TOC entry 2319 (class 2606 OID 16858)
+-- Dependencies: 210 177 2196 2374
 -- Name: fk_stat_tpca_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8083,8 +8098,8 @@ ALTER TABLE ONLY tipo_campo
 
 
 --
--- TOC entry 2209 (class 2606 OID 33248)
--- Dependencies: 179 177 2140 2419
+-- TOC entry 2265 (class 2606 OID 16863)
+-- Dependencies: 179 177 2196 2374
 -- Name: fk_stat_unid_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8093,8 +8108,8 @@ ALTER TABLE ONLY dbunidade
 
 
 --
--- TOC entry 2212 (class 2606 OID 33253)
--- Dependencies: 2140 177 180 2419
+-- TOC entry 2268 (class 2606 OID 16868)
+-- Dependencies: 180 177 2196 2374
 -- Name: fk_stat_unpa_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8103,8 +8118,8 @@ ALTER TABLE ONLY dbunidade_parametro
 
 
 --
--- TOC entry 2215 (class 2606 OID 33258)
--- Dependencies: 2140 183 177 2419
+-- TOC entry 2271 (class 2606 OID 16873)
+-- Dependencies: 183 177 2196 2374
 -- Name: fk_stat_usua_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8113,8 +8128,8 @@ ALTER TABLE ONLY dbusuario
 
 
 --
--- TOC entry 2218 (class 2606 OID 33263)
--- Dependencies: 2140 177 184 2419
+-- TOC entry 2274 (class 2606 OID 16878)
+-- Dependencies: 184 177 2196 2374
 -- Name: fk_stat_usup_statseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8123,8 +8138,8 @@ ALTER TABLE ONLY dbusuario_privilegio
 
 
 --
--- TOC entry 2183 (class 2606 OID 33268)
--- Dependencies: 163 2174 208 2419
+-- TOC entry 2239 (class 2606 OID 16883)
+-- Dependencies: 163 208 2230 2374
 -- Name: fk_tab_bloc_tabseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8133,8 +8148,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2191 (class 2606 OID 33273)
--- Dependencies: 2174 167 208 2419
+-- TOC entry 2247 (class 2606 OID 16888)
+-- Dependencies: 167 208 2230 2374
 -- Name: fk_tab_camp_tabseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8143,8 +8158,8 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2236 (class 2606 OID 33278)
--- Dependencies: 196 2174 208 2419
+-- TOC entry 2292 (class 2606 OID 16893)
+-- Dependencies: 196 208 2230 2374
 -- Name: fk_tab_form_tabseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8153,8 +8168,8 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2232 (class 2606 OID 33283)
--- Dependencies: 194 208 2174 2419
+-- TOC entry 2288 (class 2606 OID 16898)
+-- Dependencies: 194 208 2230 2374
 -- Name: fk_tab_fota_tabseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8163,8 +8178,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2260 (class 2606 OID 33288)
--- Dependencies: 2174 208 208 2419
+-- TOC entry 2316 (class 2606 OID 16903)
+-- Dependencies: 208 208 2230 2374
 -- Name: fk_tab_tab_tabseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8173,8 +8188,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2192 (class 2606 OID 33293)
--- Dependencies: 2176 167 210 2419
+-- TOC entry 2248 (class 2606 OID 16908)
+-- Dependencies: 167 210 2232 2374
 -- Name: fk_tpca_camp_tpcaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8183,8 +8198,8 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2179 (class 2606 OID 33298)
--- Dependencies: 161 179 2142 2419
+-- TOC entry 2235 (class 2606 OID 16913)
+-- Dependencies: 161 179 2198 2374
 -- Name: fk_unid_aba_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8193,8 +8208,8 @@ ALTER TABLE ONLY abas
 
 
 --
--- TOC entry 2189 (class 2606 OID 33303)
--- Dependencies: 2142 165 179 2419
+-- TOC entry 2245 (class 2606 OID 16918)
+-- Dependencies: 165 179 2198 2374
 -- Name: fk_unid_blab_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8203,8 +8218,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2184 (class 2606 OID 33308)
--- Dependencies: 163 179 2142 2419
+-- TOC entry 2240 (class 2606 OID 16923)
+-- Dependencies: 163 179 2198 2374
 -- Name: fk_unid_bloc_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8213,8 +8228,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2196 (class 2606 OID 33313)
--- Dependencies: 2142 169 179 2419
+-- TOC entry 2252 (class 2606 OID 16928)
+-- Dependencies: 169 179 2198 2374
 -- Name: fk_unid_cabl_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8223,8 +8238,8 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
--- TOC entry 2193 (class 2606 OID 33318)
--- Dependencies: 179 167 2142 2419
+-- TOC entry 2249 (class 2606 OID 16933)
+-- Dependencies: 167 179 2198 2374
 -- Name: fk_unid_camp_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8233,8 +8248,8 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2198 (class 2606 OID 33323)
--- Dependencies: 179 171 2142 2419
+-- TOC entry 2254 (class 2606 OID 16938)
+-- Dependencies: 171 179 2198 2374
 -- Name: fk_unid_capr_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8243,8 +8258,8 @@ ALTER TABLE ONLY campos_x_propriedades
 
 
 --
--- TOC entry 2229 (class 2606 OID 33328)
--- Dependencies: 179 192 2142 2419
+-- TOC entry 2285 (class 2606 OID 16943)
+-- Dependencies: 192 179 2198 2374
 -- Name: fk_unid_foab_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8253,8 +8268,8 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
--- TOC entry 2222 (class 2606 OID 33333)
--- Dependencies: 179 187 2142 2419
+-- TOC entry 2278 (class 2606 OID 16948)
+-- Dependencies: 187 179 2198 2374
 -- Name: fk_unid_fobu_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8263,8 +8278,8 @@ ALTER TABLE ONLY form_button
 
 
 --
--- TOC entry 2237 (class 2606 OID 33338)
--- Dependencies: 179 2142 196 2419
+-- TOC entry 2293 (class 2606 OID 16953)
+-- Dependencies: 196 179 2198 2374
 -- Name: fk_unid_form_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8273,8 +8288,8 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2233 (class 2606 OID 33343)
--- Dependencies: 2142 179 194 2419
+-- TOC entry 2289 (class 2606 OID 16958)
+-- Dependencies: 194 179 2198 2374
 -- Name: fk_unid_fota_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8283,8 +8298,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2226 (class 2606 OID 33348)
--- Dependencies: 190 2142 179 2419
+-- TOC entry 2282 (class 2606 OID 16963)
+-- Dependencies: 190 179 2198 2374
 -- Name: fk_unid_fova_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8293,8 +8308,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2243 (class 2606 OID 33353)
--- Dependencies: 179 198 2142 2419
+-- TOC entry 2299 (class 2606 OID 16968)
+-- Dependencies: 198 179 2198 2374
 -- Name: fk_unid_liac_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8303,8 +8318,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2247 (class 2606 OID 33358)
--- Dependencies: 200 179 2142 2419
+-- TOC entry 2303 (class 2606 OID 16973)
+-- Dependencies: 200 179 2198 2374
 -- Name: fk_unid_libn_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8313,8 +8328,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2201 (class 2606 OID 33363)
--- Dependencies: 2142 179 173 2419
+-- TOC entry 2257 (class 2606 OID 16978)
+-- Dependencies: 173 179 2198 2374
 -- Name: fk_unid_lico_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8323,8 +8338,8 @@ ALTER TABLE ONLY coluna
 
 
 --
--- TOC entry 2251 (class 2606 OID 33368)
--- Dependencies: 2142 202 179 2419
+-- TOC entry 2307 (class 2606 OID 16983)
+-- Dependencies: 202 179 2198 2374
 -- Name: fk_unid_lifi_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8333,8 +8348,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2240 (class 2606 OID 33373)
--- Dependencies: 197 2142 179 2419
+-- TOC entry 2296 (class 2606 OID 16988)
+-- Dependencies: 197 179 2198 2374
 -- Name: fk_unid_list_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8343,8 +8358,8 @@ ALTER TABLE ONLY lista
 
 
 --
--- TOC entry 2255 (class 2606 OID 33378)
--- Dependencies: 204 179 2142 2419
+-- TOC entry 2311 (class 2606 OID 16993)
+-- Dependencies: 204 179 2198 2374
 -- Name: fk_unid_menu_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8353,8 +8368,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 2257 (class 2606 OID 33383)
--- Dependencies: 206 179 2142 2419
+-- TOC entry 2313 (class 2606 OID 16998)
+-- Dependencies: 206 179 2198 2374
 -- Name: fk_unid_mod_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8363,8 +8378,8 @@ ALTER TABLE ONLY modulo
 
 
 --
--- TOC entry 2204 (class 2606 OID 33388)
--- Dependencies: 175 2142 179 2419
+-- TOC entry 2260 (class 2606 OID 17003)
+-- Dependencies: 175 179 2198 2374
 -- Name: fk_unid_pess_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8373,8 +8388,8 @@ ALTER TABLE ONLY dbpessoa
 
 
 --
--- TOC entry 2207 (class 2606 OID 33393)
--- Dependencies: 2142 179 177 2419
+-- TOC entry 2263 (class 2606 OID 17008)
+-- Dependencies: 177 179 2198 2374
 -- Name: fk_unid_stat_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8383,8 +8398,8 @@ ALTER TABLE ONLY dbstatus
 
 
 --
--- TOC entry 2261 (class 2606 OID 33398)
--- Dependencies: 208 179 2142 2419
+-- TOC entry 2317 (class 2606 OID 17013)
+-- Dependencies: 208 179 2198 2374
 -- Name: fk_unid_tab_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8393,8 +8408,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2264 (class 2606 OID 33403)
--- Dependencies: 2142 179 210 2419
+-- TOC entry 2320 (class 2606 OID 17018)
+-- Dependencies: 2198 210 179 2374
 -- Name: fk_unid_tpca_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8403,8 +8418,8 @@ ALTER TABLE ONLY tipo_campo
 
 
 --
--- TOC entry 2210 (class 2606 OID 33408)
--- Dependencies: 2142 179 179 2419
+-- TOC entry 2266 (class 2606 OID 17023)
+-- Dependencies: 179 2198 179 2374
 -- Name: fk_unid_unid_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8413,8 +8428,8 @@ ALTER TABLE ONLY dbunidade
 
 
 --
--- TOC entry 2213 (class 2606 OID 33413)
--- Dependencies: 180 2142 179 2419
+-- TOC entry 2269 (class 2606 OID 17028)
+-- Dependencies: 180 2198 179 2374
 -- Name: fk_unid_unpa_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8423,8 +8438,8 @@ ALTER TABLE ONLY dbunidade_parametro
 
 
 --
--- TOC entry 2216 (class 2606 OID 33418)
--- Dependencies: 179 2142 183 2419
+-- TOC entry 2272 (class 2606 OID 17033)
+-- Dependencies: 179 2198 183 2374
 -- Name: fk_unid_usua_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8433,8 +8448,8 @@ ALTER TABLE ONLY dbusuario
 
 
 --
--- TOC entry 2219 (class 2606 OID 33423)
--- Dependencies: 179 2142 184 2419
+-- TOC entry 2275 (class 2606 OID 17038)
+-- Dependencies: 179 184 2198 2374
 -- Name: fk_unid_usup_unidseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8443,8 +8458,8 @@ ALTER TABLE ONLY dbusuario_privilegio
 
 
 --
--- TOC entry 2180 (class 2606 OID 33428)
--- Dependencies: 2146 183 161 2419
+-- TOC entry 2236 (class 2606 OID 17043)
+-- Dependencies: 161 2202 183 2374
 -- Name: fk_usua_aba_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8453,8 +8468,8 @@ ALTER TABLE ONLY abas
 
 
 --
--- TOC entry 2190 (class 2606 OID 33433)
--- Dependencies: 165 2146 183 2419
+-- TOC entry 2246 (class 2606 OID 17048)
+-- Dependencies: 165 183 2202 2374
 -- Name: fk_usua_blab_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8463,8 +8478,8 @@ ALTER TABLE ONLY blocos_x_abas
 
 
 --
--- TOC entry 2185 (class 2606 OID 33438)
--- Dependencies: 163 183 2146 2419
+-- TOC entry 2241 (class 2606 OID 17053)
+-- Dependencies: 163 183 2202 2374
 -- Name: fk_usua_bloc_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8473,8 +8488,8 @@ ALTER TABLE ONLY blocos
 
 
 --
--- TOC entry 2197 (class 2606 OID 33443)
--- Dependencies: 169 183 2146 2419
+-- TOC entry 2253 (class 2606 OID 17058)
+-- Dependencies: 169 2202 183 2374
 -- Name: fk_usua_cabl_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8483,8 +8498,8 @@ ALTER TABLE ONLY campos_x_blocos
 
 
 --
--- TOC entry 2194 (class 2606 OID 33448)
--- Dependencies: 2146 167 183 2419
+-- TOC entry 2250 (class 2606 OID 17063)
+-- Dependencies: 183 2202 167 2374
 -- Name: fk_usua_camp_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8493,8 +8508,8 @@ ALTER TABLE ONLY campos
 
 
 --
--- TOC entry 2199 (class 2606 OID 33453)
--- Dependencies: 2146 183 171 2419
+-- TOC entry 2255 (class 2606 OID 17068)
+-- Dependencies: 2202 171 183 2374
 -- Name: fk_usua_capr_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8503,8 +8518,8 @@ ALTER TABLE ONLY campos_x_propriedades
 
 
 --
--- TOC entry 2230 (class 2606 OID 33458)
--- Dependencies: 2146 192 183 2419
+-- TOC entry 2286 (class 2606 OID 17073)
+-- Dependencies: 192 2202 183 2374
 -- Name: fk_usua_foab_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8513,8 +8528,8 @@ ALTER TABLE ONLY form_x_abas
 
 
 --
--- TOC entry 2223 (class 2606 OID 33463)
--- Dependencies: 187 183 2146 2419
+-- TOC entry 2279 (class 2606 OID 17078)
+-- Dependencies: 187 183 2202 2374
 -- Name: fk_usua_fobu_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8523,8 +8538,8 @@ ALTER TABLE ONLY form_button
 
 
 --
--- TOC entry 2238 (class 2606 OID 33468)
--- Dependencies: 196 183 2146 2419
+-- TOC entry 2294 (class 2606 OID 17083)
+-- Dependencies: 196 2202 183 2374
 -- Name: fk_usua_form_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8533,8 +8548,8 @@ ALTER TABLE ONLY forms
 
 
 --
--- TOC entry 2234 (class 2606 OID 33473)
--- Dependencies: 194 183 2146 2419
+-- TOC entry 2290 (class 2606 OID 17088)
+-- Dependencies: 194 183 2202 2374
 -- Name: fk_usua_fota_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8543,8 +8558,8 @@ ALTER TABLE ONLY form_x_tabelas
 
 
 --
--- TOC entry 2227 (class 2606 OID 33478)
--- Dependencies: 190 183 2146 2419
+-- TOC entry 2283 (class 2606 OID 17093)
+-- Dependencies: 183 2202 190 2374
 -- Name: fk_usua_fova_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8553,8 +8568,8 @@ ALTER TABLE ONLY form_validacao
 
 
 --
--- TOC entry 2244 (class 2606 OID 33483)
--- Dependencies: 183 2146 198 2419
+-- TOC entry 2300 (class 2606 OID 17098)
+-- Dependencies: 183 198 2202 2374
 -- Name: fk_usua_liac_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8563,8 +8578,8 @@ ALTER TABLE ONLY lista_actions
 
 
 --
--- TOC entry 2248 (class 2606 OID 33488)
--- Dependencies: 200 2146 183 2419
+-- TOC entry 2304 (class 2606 OID 17103)
+-- Dependencies: 183 2202 200 2374
 -- Name: fk_usua_libn_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8573,8 +8588,8 @@ ALTER TABLE ONLY lista_bnav
 
 
 --
--- TOC entry 2202 (class 2606 OID 33493)
--- Dependencies: 173 2146 183 2419
+-- TOC entry 2258 (class 2606 OID 17108)
+-- Dependencies: 2202 173 183 2374
 -- Name: fk_usua_lico_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8583,8 +8598,8 @@ ALTER TABLE ONLY coluna
 
 
 --
--- TOC entry 2252 (class 2606 OID 33498)
--- Dependencies: 202 2146 183 2419
+-- TOC entry 2308 (class 2606 OID 17113)
+-- Dependencies: 202 183 2202 2374
 -- Name: fk_usua_lifi_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8593,8 +8608,8 @@ ALTER TABLE ONLY lista_fields
 
 
 --
--- TOC entry 2241 (class 2606 OID 33503)
--- Dependencies: 2146 183 197 2419
+-- TOC entry 2297 (class 2606 OID 17118)
+-- Dependencies: 183 2202 197 2374
 -- Name: fk_usua_list_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8603,8 +8618,8 @@ ALTER TABLE ONLY lista
 
 
 --
--- TOC entry 2256 (class 2606 OID 33508)
--- Dependencies: 183 2146 204 2419
+-- TOC entry 2312 (class 2606 OID 17123)
+-- Dependencies: 204 2202 183 2374
 -- Name: fk_usua_menu_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8613,8 +8628,8 @@ ALTER TABLE ONLY menu
 
 
 --
--- TOC entry 2258 (class 2606 OID 33513)
--- Dependencies: 183 2146 206 2419
+-- TOC entry 2314 (class 2606 OID 17128)
+-- Dependencies: 206 2202 183 2374
 -- Name: fk_usua_mod_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8623,8 +8638,8 @@ ALTER TABLE ONLY modulo
 
 
 --
--- TOC entry 2205 (class 2606 OID 33518)
--- Dependencies: 183 2146 175 2419
+-- TOC entry 2261 (class 2606 OID 17133)
+-- Dependencies: 175 2202 183 2374
 -- Name: fk_usua_pess_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8633,8 +8648,8 @@ ALTER TABLE ONLY dbpessoa
 
 
 --
--- TOC entry 2208 (class 2606 OID 33523)
--- Dependencies: 183 2146 177 2419
+-- TOC entry 2264 (class 2606 OID 17138)
+-- Dependencies: 183 177 2202 2374
 -- Name: fk_usua_stat_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8643,8 +8658,8 @@ ALTER TABLE ONLY dbstatus
 
 
 --
--- TOC entry 2262 (class 2606 OID 33528)
--- Dependencies: 2146 208 183 2419
+-- TOC entry 2318 (class 2606 OID 17143)
+-- Dependencies: 208 183 2202 2374
 -- Name: fk_usua_tab_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8653,8 +8668,8 @@ ALTER TABLE ONLY tabelas
 
 
 --
--- TOC entry 2265 (class 2606 OID 33533)
--- Dependencies: 210 2146 183 2419
+-- TOC entry 2321 (class 2606 OID 17148)
+-- Dependencies: 183 2202 210 2374
 -- Name: fk_usua_tpca_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8663,8 +8678,8 @@ ALTER TABLE ONLY tipo_campo
 
 
 --
--- TOC entry 2211 (class 2606 OID 33538)
--- Dependencies: 179 183 2146 2419
+-- TOC entry 2267 (class 2606 OID 17153)
+-- Dependencies: 179 2202 183 2374
 -- Name: fk_usua_unid_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8673,8 +8688,8 @@ ALTER TABLE ONLY dbunidade
 
 
 --
--- TOC entry 2214 (class 2606 OID 33543)
--- Dependencies: 2146 180 183 2419
+-- TOC entry 2270 (class 2606 OID 17158)
+-- Dependencies: 180 2202 183 2374
 -- Name: fk_usua_unpa_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8683,8 +8698,8 @@ ALTER TABLE ONLY dbunidade_parametro
 
 
 --
--- TOC entry 2217 (class 2606 OID 33548)
--- Dependencies: 183 183 2146 2419
+-- TOC entry 2273 (class 2606 OID 17163)
+-- Dependencies: 183 2202 183 2374
 -- Name: fk_usua_usua_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8693,8 +8708,8 @@ ALTER TABLE ONLY dbusuario
 
 
 --
--- TOC entry 2220 (class 2606 OID 33553)
--- Dependencies: 184 183 2146 2419
+-- TOC entry 2276 (class 2606 OID 17168)
+-- Dependencies: 184 183 2202 2374
 -- Name: fk_usua_usup_usuaseq; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -8702,9 +8717,8 @@ ALTER TABLE ONLY dbusuario_privilegio
     ADD CONSTRAINT fk_usua_usup_usuaseq FOREIGN KEY (usuaseq) REFERENCES dbusuario(seq) ON UPDATE RESTRICT ON DELETE RESTRICT;
 
 
--- Completed on 2013-12-26 17:50:48 BRST
+-- Completed on 2013-10-22 12:25:12 BRST
 
 --
 -- PostgreSQL database dump complete
 --
-
