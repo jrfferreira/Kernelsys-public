@@ -220,7 +220,6 @@ class TSetfields {
 
             // injeta [HELP] no escopo do campo
             if($this->campoHelp[$ch]) {
-
                 $liHelp = new TElement('span');
                 $liHelp->id = "icons";
                 $liHelp->title = $this->campoHelp[$ch];

@@ -322,7 +322,7 @@ class TSetlista {
                 //monta criterio de pesquisa em todas as colunas da tabela em questão.
                 if($dados['cols'.$this->listseq] === "*") {
                 	$expression = $argFiltro['expre'.$this->listseq];
-                	if(preg_match('@^([^ %*]+)$@i', $expression)){
+                	if(preg_match('@^([^%*]+)$@i', $expression)){
                 		$expression = '%'.$expression.'%';
                 	}
                 	
