@@ -55,7 +55,7 @@ class TMatricula {
                 }
                 //==============================================================
 
-            if(count($turma->disciplinas) > 0){
+            if(count($turma->disciplinas) > 0 && is_array($turma->disciplinas)){
 	            foreach($turma->disciplinas as $codTD=>$turmaDisciplina){
 	                $listaTurmaDisicplinas[$turmaDisciplina->discseq] = $turmaDisciplina;
 	            }
