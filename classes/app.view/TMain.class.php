@@ -724,6 +724,8 @@ class TMain {
         $this->getObLista();//Substituir por backbone.js
         
        	$limite = $this->obsession->getValue("comboLimite" . $this->idObject);
+
+       	$this->obsession->__dump(); exit();
        	
         $this->obLista->setLimite($limite);
         $this->obLista->clearSelecao();
