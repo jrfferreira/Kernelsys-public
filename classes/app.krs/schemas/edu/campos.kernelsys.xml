@@ -7576,31 +7576,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="421">
-      <seq>421</seq>
-      <colunadb>tipo</colunadb>
-      <campo>tipo</campo>
-      <label>Tipo de Cadastro:</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>3</tpcaseq>
-      <tabseq>1</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>setTipoForm('tipo1')</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="493">
       <seq>493</seq>
       <colunadb>statseq</colunadb>
@@ -19596,6 +19571,31 @@
       <required>0</required>
       <alteravel>1</alteravel>
       <autosave>1</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="421">
+      <seq>421</seq>
+      <colunadb>tipo</colunadb>
+      <campo>tipo</campo>
+      <label>Tipo de Cadastro:</label>
+      <mascara/>
+      <seletor/>
+      <tpcaseq>3</tpcaseq>
+      <tabseq>1</tabseq>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>F</valorpadrao>
+      <outcontrol>-</outcontrol>
+      <incontrol>0</incontrol>
+      <trigger>setTipoForm('tipo1')</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
       <manter/>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
