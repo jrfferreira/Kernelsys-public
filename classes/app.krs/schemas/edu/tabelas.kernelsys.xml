@@ -1013,17 +1013,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="3">
-      <seq>3</seq>
-      <tabela>dbtelefone</tabela>
-      <tabelaView>dbtelefone</tabelaView>
-      <tabseq>1</tabseq>
-      <statseq>1</statseq>
-      <colunafilho>foneseq</colunafilho>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>2013-08-21</datacad>
-    </row>
     <row seq="27">
       <seq>27</seq>
       <tabela>dbturma_disciplina_avaliacao</tabela>
@@ -1045,6 +1034,17 @@
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
       <datacad>2013-11-28</datacad>
+    </row>
+    <row seq="3">
+      <seq>3</seq>
+      <tabela>dbtelefone</tabela>
+      <tabelaView>view_telefone</tabelaView>
+      <tabseq>1</tabseq>
+      <statseq>1</statseq>
+      <colunafilho>foneseq</colunafilho>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>2013-08-21</datacad>
     </row>
   </tabelas>
 </kernelsys>

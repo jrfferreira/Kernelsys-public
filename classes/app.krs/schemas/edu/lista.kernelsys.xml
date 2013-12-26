@@ -5121,38 +5121,6 @@
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="6">
-      <seq>6</seq>
-      <tipo>form</tipo>
-      <formseq>2</formseq>
-      <filtropai>pessseq</filtropai>
-      <pesquisa>0</pesquisa>
-      <lista>listaTelefones</lista>
-      <label>Lista de Telefones</label>
-      <tabseq>3</tabseq>
-      <listseq>130</listseq>
-      <obapendice>-</obapendice>
-      <acfiltro>1</acfiltro>
-      <acincluir>1</acincluir>
-      <nivel>2</nivel>
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acviews>0</acviews>
-      <acenviar>0</acenviar>
-      <filtro>statseq/!=/AND/9/numeric</filtro>
-      <trigger/>
-      <formainclude>one</formainclude>
-      <incontrol/>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <ordem>seq/desc</ordem>
-      <aclimite>1</aclimite>
-      <required/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <statseq>1</statseq>
-      <datacad>2013-08-21</datacad>
-    </row>
     <row seq="187">
       <seq>187</seq>
       <tipo>pesq</tipo>
@@ -5408,6 +5376,38 @@
       <unidseq>1</unidseq>
       <statseq>1</statseq>
       <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="6">
+      <seq>6</seq>
+      <tipo>form</tipo>
+      <formseq>2</formseq>
+      <filtropai>pessseq</filtropai>
+      <pesquisa>0</pesquisa>
+      <lista>listaTelefones</lista>
+      <label>Lista de Telefones</label>
+      <tabseq>3</tabseq>
+      <listseq>130</listseq>
+      <obapendice>-</obapendice>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <nivel>2</nivel>
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acviews>0</acviews>
+      <acenviar>0</acenviar>
+      <filtro>statseq/!=/AND/9/numeric</filtro>
+      <trigger/>
+      <formainclude>one</formainclude>
+      <incontrol/>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <ordem>prioridade/desc</ordem>
+      <aclimite>1</aclimite>
+      <required/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <statseq>1</statseq>
+      <datacad>2013-08-21</datacad>
     </row>
     <row seq="184">
       <seq>184</seq>
