@@ -5414,7 +5414,7 @@
       <tipo>pesq</tipo>
       <formseq>4</formseq>
       <filtropai>0</filtropai>
-      <pesquisa>cursseq=seq,cursseqLabel=titulo</pesquisa>
+      <pesquisa>cursseq=seq,cursseqLabel=nome</pesquisa>
       <lista>pesqCursos</lista>
       <label>Cursos</label>
       <tabseq>85</tabseq>
