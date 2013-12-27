@@ -5110,16 +5110,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="797">
-      <seq>797</seq>
-      <campseq>652</campseq>
-      <metodo>setAction</metodo>
-      <valor>setConfirmaInscricao(this)</valor>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="183">
       <seq>183</seq>
       <campseq>71</campseq>

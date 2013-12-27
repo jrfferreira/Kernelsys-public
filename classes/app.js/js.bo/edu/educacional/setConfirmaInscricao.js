@@ -1,6 +1,6 @@
-function setConfirmaInscricao(obj){
+function setConfirmaInscricao(tipo, form){
 
-    var dados = $(obj).parents('.TWindow').find('[manter=true]').serialize(),
+    var dados = $('#'+form+'-window [manter=true]').serialize(),
     	tcliente = $('#pessseq');
     
     if(tcliente.val() == "0"){
@@ -10,7 +10,8 @@ function setConfirmaInscricao(obj){
        var valField = 'classe=TInscricao&metodo=setConfirmar&'+dados;
        exe('bloc_gerenciarTurmaInscricao', getPath()+'/app.util/TSec.php', valField, 'POST', 'Sucesso');
 
-       setCancelar('8', '1', 'Concluir');
+       	$('#confirmar8').remove();
+       setCancelar('8', '1', 'Fechar');
 
     }
 

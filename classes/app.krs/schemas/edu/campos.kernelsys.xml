@@ -15151,31 +15151,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="652">
-      <seq>652</seq>
-      <colunadb>Confirmar</colunadb>
-      <campo>confirmar</campo>
-      <label>Confirmar escolha</label>
-      <mascara/>
-      <seletor/>
-      <tpcaseq>5</tpcaseq>
-      <tabseq>16</tabseq>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>-</valorpadrao>
-      <outcontrol>-</outcontrol>
-      <incontrol>0</incontrol>
-      <trigger>0</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>0</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="809">
       <seq>809</seq>
       <colunadb>botefetivamatricula</colunadb>
@@ -16826,31 +16801,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="104">
-      <seq>104</seq>
-      <colunadb>datacad</colunadb>
-      <campo>datacad</campo>
-      <label>Data da Inscrição:</label>
-      <mascara>'99/99/9999',1</mascara>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <tpcaseq>10</tpcaseq>
-      <tabseq>16</tabseq>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-      <outcontrol>setDataPT</outcontrol>
-      <incontrol>setDataDB</incontrol>
-      <trigger>setBotAbas('concluir_botform','0')</trigger>
-      <help/>
-      <statseq>1</statseq>
-      <required>0</required>
-      <alteravel>1</alteravel>
-      <autosave>0</autosave>
-      <manter/>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="828">
       <seq>828</seq>
       <colunadb>datacad</colunadb>
@@ -17291,6 +17241,31 @@
       <outcontrol>setMoney</outcontrol>
       <incontrol>setFloat</incontrol>
       <trigger>0</trigger>
+      <help/>
+      <statseq>1</statseq>
+      <required>0</required>
+      <alteravel>1</alteravel>
+      <autosave>0</autosave>
+      <manter/>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="104">
+      <seq>104</seq>
+      <colunadb>datacad</colunadb>
+      <campo>datacad</campo>
+      <label>Data da Inscrição:</label>
+      <mascara>'99/99/9999',1</mascara>
+      <seletor>CLASS_CALENDARIO</seletor>
+      <tpcaseq>10</tpcaseq>
+      <tabseq>16</tabseq>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <valorpadrao>function/TSetData/getData</valorpadrao>
+      <outcontrol>setDataPT</outcontrol>
+      <incontrol>setDataDB</incontrol>
+      <trigger>setBotAbas('concluir_botform','0')</trigger>
       <help/>
       <statseq>1</statseq>
       <required>0</required>

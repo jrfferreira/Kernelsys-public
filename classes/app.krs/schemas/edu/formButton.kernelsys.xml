@@ -15,20 +15,6 @@
       <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
     </row>
-    <row seq="4">
-      <seq>4</seq>
-      <formseq>8</formseq>
-      <botao>concluir_inscricao</botao>
-      <labelbotao>Concluir</labelbotao>
-      <confirmacao/>
-      <actionjs>onClose</actionjs>
-      <metodo>onClose</metodo>
-      <ordem>2 </ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-    </row>
     <row seq="5">
       <seq>5</seq>
       <formseq>483</formseq>
@@ -51,6 +37,20 @@
       <confirmacao>Você deseja realmente executar a baixa de todas as contas selecionadas?</confirmacao>
       <actionjs>setBaixaMultipla</actionjs>
       <metodo>onClose</metodo>
+      <ordem>1 </ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+    </row>
+    <row seq="4">
+      <seq>4</seq>
+      <formseq>8</formseq>
+      <botao>confirmar8</botao>
+      <labelbotao>Concluir</labelbotao>
+      <confirmacao/>
+      <actionjs>setConfirmaInscricao</actionjs>
+      <metodo/>
       <ordem>1 </ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
