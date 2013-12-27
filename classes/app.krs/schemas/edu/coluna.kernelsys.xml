@@ -3256,27 +3256,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>numeric</tipodado>
     </row>
-    <row seq="884">
-      <seq>884</seq>
-      <listseq>142</listseq>
-      <coluna>seq</coluna>
-      <label>Codigo</label>
-      <alinhalabel>center</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>120</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>1</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>numeric</tipodado>
-    </row>
     <row seq="949">
       <seq>949</seq>
       <listseq>479</listseq>
@@ -3684,6 +3663,27 @@
       <alinhalabel>center</alinhalabel>
       <alinhadados>center</alinhadados>
       <largura>60</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>1</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
+    <row seq="884">
+      <seq>884</seq>
+      <listseq>142</listseq>
+      <coluna>seq</coluna>
+      <label>Codigo</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>120</largura>
       <colfunction>-</colfunction>
       <valorpadrao>0</valorpadrao>
       <tipocoluna>1</tipocoluna>
@@ -11803,27 +11803,6 @@
       <datacad>1900-01-01</datacad>
       <tipodado>numeric</tipodado>
     </row>
-    <row seq="55">
-      <seq>55</seq>
-      <listseq>142</listseq>
-      <coluna>numparcela</coluna>
-      <label>Parcela</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>left</alinhadados>
-      <largura>50</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>-</colunaaux>
-      <link>0</link>
-      <ordem>5</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>numeric</tipodado>
-    </row>
     <row seq="59">
       <seq>59</seq>
       <listseq>142</listseq>
@@ -12412,6 +12391,27 @@
       <datacad>1900-01-01</datacad>
       <tipodado>string</tipodado>
     </row>
+    <row seq="55">
+      <seq>55</seq>
+      <listseq>142</listseq>
+      <coluna>numero</coluna>
+      <label>Parcela</label>
+      <alinhalabel>center</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>50</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>-</colunaaux>
+      <link>0</link>
+      <ordem>5</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>numeric</tipodado>
+    </row>
     <row seq="981">
       <seq>981</seq>
       <listseq>488</listseq>
@@ -12805,27 +12805,6 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>4</ordem>
-      <statseq>1</statseq>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
-      <datacad>1900-01-01</datacad>
-      <tipodado>string</tipodado>
-    </row>
-    <row seq="723">
-      <seq>723</seq>
-      <listseq>142</listseq>
-      <coluna>stpadesc</coluna>
-      <label>Status</label>
-      <alinhalabel>left</alinhalabel>
-      <alinhadados>center</alinhadados>
-      <largura>50</largura>
-      <colfunction>-</colfunction>
-      <valorpadrao>0</valorpadrao>
-      <tipocoluna>1</tipocoluna>
-      <tabseq>0</tabseq>
-      <colunaaux>1</colunaaux>
-      <link>0</link>
-      <ordem>6</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
@@ -13330,6 +13309,27 @@
       <colunaaux>-</colunaaux>
       <link>0</link>
       <ordem>13</ordem>
+      <statseq>1</statseq>
+      <usuaseq>1</usuaseq>
+      <unidseq>1</unidseq>
+      <datacad>1900-01-01</datacad>
+      <tipodado>string</tipodado>
+    </row>
+    <row seq="723">
+      <seq>723</seq>
+      <listseq>142</listseq>
+      <coluna>stpadesc</coluna>
+      <label>Situação</label>
+      <alinhalabel>left</alinhalabel>
+      <alinhadados>center</alinhadados>
+      <largura>180</largura>
+      <colfunction>-</colfunction>
+      <valorpadrao>0</valorpadrao>
+      <tipocoluna>1</tipocoluna>
+      <tabseq>0</tabseq>
+      <colunaaux>1</colunaaux>
+      <link>0</link>
+      <ordem>6</ordem>
       <statseq>1</statseq>
       <usuaseq>1</usuaseq>
       <unidseq>1</unidseq>
