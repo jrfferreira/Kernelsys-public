@@ -15,7 +15,7 @@ function checkedItens(){
     $('#truePrint *').css({
         'border' : '0px solid #fff' ,
         'font-family' : 'Verdana, Geneva, Arial, Helvetica, sans-serif' ,
-        'font-size': '11px',
+        'font-size': '12px',
         'backgroun-color': '#FFF'
     });
 											

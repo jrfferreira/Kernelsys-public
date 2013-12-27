@@ -53,7 +53,7 @@ function atribuicao() {
         });
     });
 
-    $('body').find('div').css('font-size', '11');
+    $('body').find('div').css('font-size', '12');
 
     $('.ui_bloco_legendas').click(function(){
         $(this).parent().children('.ui_bloco_conteudo').toggle()
@@ -78,7 +78,7 @@ function atribuicao() {
         $(this).css( {
             'margin' : '2',
             'margin-left':'4px',
-            'font-size' : '11',
+            'font-size' : '12px',
             '-moz-border-radius': '3px',
             '-webkit-border-radius': '3px',
             'padding' : '4px'
@@ -119,7 +119,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
     'margin-right': '2px',
     'margin-bottom': '2px',
     'margin-left': '4px',
-    'font-size': '11px',
+    'font-size': '12px',
     '-moz-border-radius': '3px',
     '-webkit-border-radius': '3px',
     'border-radius': '3px',
@@ -269,7 +269,7 @@ $('body').find("input:button, .button, .ui-button-text").each(function() {
 
             $('#' + $(this).attr('id') + '_conteudo').addClass(
                 "icons ui-state-highlight ui-corner-all").css( {
-                'font-size' : '11px',
+                'font-size' : '12px',
                 'width' : '250px',
                 'margin' : '3px'
             }).hide();

@@ -12,12 +12,12 @@ class TRodape {
 
     function show(){
         $obTempo = new TElement('span');
-        $obTempo->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px;margin-right: 20px; display: inline; float: right; position: relative; font-family:verdana; font-size:11px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
+        $obTempo->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px;margin-right: 20px; display: inline; float: right; position: relative; font-family:verdana; font-size:12px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
         $obTempo->id    = "obTempoConteiner";
         $obTempo->add($timePrincipal);
         
         $obLabelModulo = new TElement('span');
-        $obLabelModulo->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px; margin-left: 20px; display: inline; float: left; font-family:verdana; font-size:11px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
+        $obLabelModulo->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px; margin-left: 20px; display: inline; float: left; font-family:verdana; font-size:12px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
         $obLabelModulo->id    = "obLabelModulo";
         $obLabelModulo->add('Início');
 
@@ -28,7 +28,7 @@ class TRodape {
         $sep->add('»');
 
         $obLabelSec = new TElement('span');
-        $obLabelSec->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px; margin-left: 0px; display: inline; float: left; font-family:verdana; font-size:11px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
+        $obLabelSec->style = "color: #fff; text-shadow: #333 0px 1px 1px; padding-top: 7px; height: 27px; margin-left: 0px; display: inline; float: left; font-family:verdana; font-size:12px; font-weight:bold; cursor:default; text-align: left; vertical-align: middle;";
         $obLabelSec->id    = "obLabelSec";
         $obLabelSec->add('--');
 

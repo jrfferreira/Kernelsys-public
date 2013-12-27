@@ -490,7 +490,7 @@ class TVoice {
         $cabecalho = $header->getHead('21');
 
         $table = new TTable();
-        $table->style = "font-size: 11px; text-align: left;";
+        $table->style = "font-size: 12px; text-align: left;";
 
         $parametros = array('nome' => array('name'=>'Nome'),
                 'apelido' =>  array('name'=>'Apelido'),
@@ -708,7 +708,7 @@ class TVoice {
             $spanMsg->add('<table border=0 width="100%" rowspacin=5 >');
         foreach($infos->mensagem as $msg){
 
-            $spanMsg->add('<tr><td style="font-size: 20px; text-align: left; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px;"><span style="font-size: 10px; font-weight: normal;">Mensagem</span><br/>'.$msg[TConstantes::FIELD_LABEL].'<td/><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Envios/Atend.</span><br/>'.$msg['envios'].'/'.$msg['atendimentos'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Aproveitamento</span><br/>'.$msg['aproveitamento'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Celulares</span><br/>'.$msg['celulares'].' ('.$msg['celulares_porcentagem'].')</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Fixos</span><br/>'.$msg['fixos'].' ('.$msg['fixos_porcentagem'].')</td></tr><tr><td colspan="5" style="font-size: 11px; height: 10px"> </td></tr>');
+            $spanMsg->add('<tr><td style="font-size: 20px; text-align: left; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px;"><span style="font-size: 10px; font-weight: normal;">Mensagem</span><br/>'.$msg[TConstantes::FIELD_LABEL].'<td/><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Envios/Atend.</span><br/>'.$msg['envios'].'/'.$msg['atendimentos'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Aproveitamento</span><br/>'.$msg['aproveitamento'].'</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Celulares</span><br/>'.$msg['celulares'].' ('.$msg['celulares_porcentagem'].')</td><td style="font-size: 14px; text-align: right; font-weight: bolder; vertical-align: bottom; margin-bottom: 5px"><span style="margin-bottom: 4px; font-size: 10px; font-weight: normal;">Fixos</span><br/>'.$msg['fixos'].' ('.$msg['fixos_porcentagem'].')</td></tr><tr><td colspan="5" style="font-size: 12px; height: 10px"> </td></tr>');
 
         }
         $spanMsg->add('</table>');
@@ -728,7 +728,7 @@ class TVoice {
         $divSaldo = new TElement('div');
         $divSaldo->style = "text-align: center; font-size: 12px; margin-top: 20px";
         $divSaldo->add("<b>Valor em créditos: </b><br/><span style = 'display:inline; font-size: 30px; font-weight: bolder;'>$saldo_valor</span><br/>");
-        $divSaldo->add("<table border=0><tr><td style='padding: 10px; text-align: left; font-size: 11px'>Aprox. <b>".$infos->enviosFixo."</b><br/> envios para telefones fixos.</td><td style='padding: 10px; text-align: right; font-size: 11px'>Aprox. <b>".$infos->enviosCel."</b><br/> envios para telefones celulares.</td></tr></table>");
+        $divSaldo->add("<table border=0><tr><td style='padding: 10px; text-align: left; font-size: 12px'>Aprox. <b>".$infos->enviosFixo."</b><br/> envios para telefones fixos.</td><td style='padding: 10px; text-align: right; font-size: 12px'>Aprox. <b>".$infos->enviosCel."</b><br/> envios para telefones celulares.</td></tr></table>");
         $saldo->add($divSaldo);
 
         $dicas = new TElement("fieldset");
@@ -739,7 +739,7 @@ class TVoice {
         $dicasLegenda->add("Dicas");
         $dicas->add($dicasLegenda);
         $dicasDiv = new TElement('div');
-        $dicasDiv->style = "text-align: center; font-size: 11px; text-align:justify";
+        $dicasDiv->style = "text-align: center; font-size: 12px; text-align:justify";
         $dicasDiv->add('<b>Qualidade de Som: </b> As mensagens gravadas sem o uso de TSS devem contem o minimo de elementos, pois a conversão necessita trabalhar no limite de <i>8 Hrz</i>.');
 
         $dicas->add($dicasDiv);

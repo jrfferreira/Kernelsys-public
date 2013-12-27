@@ -803,7 +803,7 @@ class TSecretaria {
                 $acao->class="datagrid-icon ui-state-hover";
                 $acao->alt="Iniciar Processo";
                 $acao->title="Iniciar Processo";
-                $acao->style="font-size: 11px; vertical-align: middle;";
+                $acao->style="font-size: 12px; vertical-align: middle;";
                 $acao->add($img);
                 $acao->add(' Iniciar');
                     $acao->onclick = "prossExe('onEdit','form','{$vl['formulario']}','{$codigoaluno}','respostaAproveitamento','{$confirmacao}')";

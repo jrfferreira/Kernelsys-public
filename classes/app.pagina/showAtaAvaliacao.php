@@ -173,12 +173,12 @@ foreach ($retAlunosDisc as $obAlunos){
 	$tr->height = "8px";
 
 	$td = new TElement("td");
-	$td->style = "font-size: 11px;";
+	$td->style = "font-size: 12px;";
 	$td->add($obAlunos->seq);
 
 	$th = new TElement("th");
 	$th->scope = "row";
-	$th->style = "font-size: 11px;";
+	$th->style = "font-size: 12px;";
 	$th->add($obAlunos->nomepessoa);
 
 	$tdEmpty = new TElement("td");

@@ -418,13 +418,13 @@ class TGetCurso {
             $titulos = $table->addRow();
             $tempCell = $titulos->addCell('Curso');
             $tempCell->width = "60%";
-            $tempCell->style = "font-weight: bolder; font-size: 11px; border-bottom: 1px dotted #f0f0f0;";
+            $tempCell->style = "font-weight: bolder; font-size: 12px; border-bottom: 1px dotted #f0f0f0;";
             $tempCell = $titulos->addCell('Local');
-            $tempCell->style = "font-weight: bolder; font-size: 11px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
+            $tempCell->style = "font-weight: bolder; font-size: 12px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
             $tempCell = $titulos->addCell('Turmas');
-            $tempCell->style = "font-weight: bolder; font-size: 11px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
+            $tempCell->style = "font-weight: bolder; font-size: 12px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
             $tempCell = $titulos->addCell('Inscrição');
-            $tempCell->style = "font-weight: bolder; font-size: 11px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
+            $tempCell->style = "font-weight: bolder; font-size: 12px; text-align: center; border-bottom: 1px dotted #f0f0f0;";
 
             $nomeCurso = $table->addRow();
             $tempCell = $nomeCurso->addCell($obCurso['nome']);

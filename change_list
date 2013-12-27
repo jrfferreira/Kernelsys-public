@@ -403,5 +403,19 @@ CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
    
  -- Alterações apartir de 18/12/2013
  
- 
-  
+ CREATE VIEW view_telefone AS
+	select 
+		t1.seq,
+		t1.unidseq,
+		t1.usuaseq,
+		t1.pessseq,
+		t1.telefone,
+		t1.codigoarea,
+		t1.datacad,
+		t1.statseq,
+		t1.tpteseq,
+		t2.tptedesc,
+		t2.prioridade
+	from dbtelefone AS t1
+	LEFT JOIN dbtipo_telefone AS t2 ON t2.seq = t1.tpteseq
+	  

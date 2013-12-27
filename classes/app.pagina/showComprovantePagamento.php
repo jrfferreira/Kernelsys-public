@@ -141,7 +141,7 @@ $docStyle->add("#titulo {border-bottom:1px solid #666; background-color: #f9f9f9
 $docStyle->add("#logomarca {border-bottom:1px solid #666; background-color: #f9f9f9; text-align: center; font-weight: bolder; padding: 5px;}");
 $docStyle->add("td {border:0px solid #999;text-align: left; padding: 2px;}");
 $docStyle->add("body {font-family:Arial, Helvetica, sans-serif;font-size: 14px; text-align: center;}");
-$docStyle->add("#digital_ass {border-top: #666 solid 1px; color: #c9c9c9; text-align: center; font-size: 11px; font-weight: bolder;}");
+$docStyle->add("#digital_ass {border-top: #666 solid 1px; color: #c9c9c9; text-align: center; font-size: 12px; font-weight: bolder;}");
 $docStyle->add("#text {text-indent: 25px; padding:20px; text-align: justify;}");
 $docStyle->add("#ass {padding: 10px; padding-left:25px; padding-bottom: 25px; text-align: left;}");
 $docStyle->add("#footer {padding: 10px; padding-left:25px;  text-align: left;}");

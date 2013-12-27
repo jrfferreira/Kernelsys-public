@@ -8,7 +8,7 @@ function checkedItens(){
 						}).get().join('<br><br> ') );
 						
 						
-						$('#truePrint *').css({'border' : '0px solid #fff' , 'font-family' : 'Verdana, Geneva, Arial, Helvetica, sans-serif' , 'font-size': '11px' , 'max-height': '500px' , 'backgroun-color': '#FFF'});
+						$('#truePrint *').css({'border' : '0px solid #fff' , 'font-family' : 'Verdana, Geneva, Arial, Helvetica, sans-serif' , 'font-size': '12px' , 'max-height': '500px' , 'backgroun-color': '#FFF'});
                                                 
 												
     			};

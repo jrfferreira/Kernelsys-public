@@ -178,11 +178,11 @@ foreach ($retAlunosDisc as $obAlunos){
 
 	$th = new TElement("th");
 	$th->scope = "row";
-	$th->style = "font-size: 11px;";
+	$th->style = "font-size: 12px;";
 	$th->add($obAlunos->nomepessoa);
 
 	$td = new TElement("td");
-	$td->style = "font-size: 11px;";
+	$td->style = "font-size: 12px;";
 	$td->add($obAlunos->codigo);
 
 	$tdEmpty = new TElement("td");

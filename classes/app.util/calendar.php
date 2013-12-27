@@ -9,7 +9,7 @@
 
 caption {
      padding: 5px 0 5px 0;
-     font: small-caps bold 11px verdana, arial, tahoma;
+     font: small-caps bold 12px verdana, arial, tahoma;
      background-color: #999;
      border: 1px solid #333;
 }

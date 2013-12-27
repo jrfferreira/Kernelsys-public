@@ -42,7 +42,7 @@
 
           //retorna a mensagem de erro
           $corpoMsg = new TElement('span');
-          $corpoMsg->style = "font-size:11px; margin:5px;";
+          $corpoMsg->style = "font-size:12px; margin:5px;";
           $corpoMsg->add("<hr><br>{$mensagem}</hr><br/><br/>");
           //if($retLog) $corpoMsg->add("<br>O sistema <b>PetrusCOM</b> enviou uma mensagem de erro para a equipe técnica da <b>BitUP</b>.<br/>");
 

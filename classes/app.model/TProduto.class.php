@@ -313,7 +313,7 @@ class TProduto{
 
     	$table = new TTable();
     	$table->cellspacing = 10;
-    	$table->style = "font-size: 11px; width: 100%; text-align: center;";
+    	$table->style = "font-size: 12px; width: 100%; text-align: center;";
     	$col0 = $table->addRow();
 
     	$row0 = $col0->addCell('Valor de Entrada');

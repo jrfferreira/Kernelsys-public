@@ -46,7 +46,7 @@ $.widget("ui.multiselect", {
 		this.id = this.element.attr("id");
 		this.container = $('<div class="ui-multiselect ui-helper-clearfix ui-widget ui-widget-content"></div>').insertAfter(this.element);
 		this.count = 0; // number of currently selected options
-                //this.send = $('<div class="ui-widget"><input type="button" onclick="$(\'#'+ this.id +'\').focus()" value="Inserir" class="ui-state-default botActionOff" style="font-size: 11px;"></div>').insertAfter(this.container);
+                //this.send = $('<div class="ui-widget"><input type="button" onclick="$(\'#'+ this.id +'\').focus()" value="Inserir" class="ui-state-default botActionOff" style="font-size: 12px;"></div>').insertAfter(this.container);
 		this.availableContainer = $('<div class="available ui-widget-content"></div>').appendTo(this.container);
 		this.selectedContainer = $('<div class="selected ui-widget-content"></div>').appendTo(this.container);
 		this.selectedActions = $('<div class="actions ui-widget-header ui-helper-clearfix"><span class="count">0 '+$.ui.multiselect.locale.itemsCount+'</span><a href="#" class="remove-all" style="display: none">'+$.ui.multiselect.locale.removeAll+'</a></div>').appendTo(this.selectedContainer);

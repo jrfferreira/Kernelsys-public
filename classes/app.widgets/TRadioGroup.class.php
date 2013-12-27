@@ -76,7 +76,7 @@ class TRadioGroup extends TField{
                 $button->show();
               		$obj = new TElement('span');
 					$obj->add( $label);
-					$obj->style = 'font-size:11px; padding-right:15px;';
+					$obj->style = 'font-size:12px; padding-right:15px;';
 					$obj->show();
                 
                 if ($this->layout == 'vertical')
