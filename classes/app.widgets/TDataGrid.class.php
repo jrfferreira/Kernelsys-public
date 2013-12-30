@@ -81,6 +81,10 @@ class TDataGrid extends TTable {
 
         // adiciona uma linha à tabela
         $row = parent::addRow('thead');
+        
+        $countCol = $row->addCell("",'th');
+        $countCol->class = 'tdatagrid_col';
+        $countCol->width = '30';
 
         // adiciona células para as ações (Celulas vazias no início da lista)
         if($this->actions and $this->colsAction == true) {
@@ -176,9 +180,15 @@ class TDataGrid extends TTable {
         }
 
         $row->class = $classe;
+        
+        $countCell = $row->addCell($this->rowcount+1);
+        $countCell->align = 'center';
+        $countCell->class = 'tdatagrid_col_secondary';
 
         // verifica se a listagem possui ações
         if ($this->actions and $this->colsAction == true) {
+        	
+        	
 
             // percorre as ações
             foreach ($this->actions as $seqAct=>$action) {
@@ -289,7 +299,7 @@ class TDataGrid extends TTable {
                 }
                 // adiciona a colula na linha
                 $celula = $row->addCell($data);
-                $celula->style = "padding-{$align}:4px; border-left:1px solid #B8C7DC; border-bottom:1px solid #B8C7DC; text-align: {$align};";
+                $celula->style = "padding-{$align}:4px; text-align: {$align};";
                 $celula->reference = $name;
                 $celula->id = $name.$seq;
                 $celula->align = $align;

@@ -409,6 +409,13 @@ Formata Sistema de lista
     background-repeat:repeat-x;
 
 }
+
+.tdatagrid_col_secondary {
+color: rgba(180,180,180,0.4);
+text-shadow: 1px 1px 0px #fefefe;
+}
+
+
 .tdatagrid_col:last-child{
     border-right:1px solid #fff;
 }
@@ -432,6 +439,12 @@ Formata Sistema de lista
     background-image:url(../../app.images/box_barra_over.png);
     background-repeat:repeat-x;
 }
+
+.tdatagrid_row td {
+	border-left: 1px solid rgb(230,230,230);
+	border-bottom: 1px solid rgb(230,230,230);
+}
+
 .tdatagrid_row1{
     height:23px;
     font-size     	:12px;
