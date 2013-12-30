@@ -187,8 +187,6 @@ class TDataGrid extends TTable {
 
         // verifica se a listagem possui ações
         if ($this->actions and $this->colsAction == true) {
-        	
-        	
 
             // percorre as ações
             foreach ($this->actions as $seqAct=>$action) {

@@ -150,7 +150,9 @@ class TDados {
         
         
         //armazena dados do form no cabeçalho
-        $this->obHeaderForm->addHeader($this->formseq, TConstantes::HEAD_DADOSFORM, $obj);
+        if($obj){
+        	$this->obHeaderForm->addHeader($this->formseq, TConstantes::HEAD_DADOSFORM, $obj);
+        }
                 
         return $obj;
     }

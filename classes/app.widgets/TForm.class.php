@@ -70,23 +70,32 @@ class TForm{
         return $this->fields[$name];
     }
     
+        
     /**
-     * m√©todo setData()
+     * mÈtodo setData()
      * Atribui dados aos campos do formul√°rio
      * param  $object = objeto com dados
      */
-    public function setData($object){
+   public function setData($object){
         if(count($object) > 0){
         	foreach ($object as $table => $campos){
+        		
         		if(is_array($campos) && count($campos) > 0){
+        			
         			foreach($campos as $name=>$campo){
+        				
         				if(count($this->fields) > 0){
+        					
 	        				foreach($this->fields as $field){
+	        					
 	        					if(is_object($field) && $field->getName() == $name){
+	        						
 	        						$field->setValue($campo);
-	        						if($field->actPesquisa){
-	        							$field->descLabel = $campos[$field->getName().'Label'];
-	        						}
+	        						
+			    					//caso o campo seja um FK e deva ser retornado a descriÁ„o
+			    					if($field->actPesquisa){
+			    						$field->setDescPesq($campos[$field->getName().'Label']);
+			    					}
 	        					}
 	        				}
         				}
@@ -95,6 +104,30 @@ class TForm{
         	}
         }
     }
+    /*
+    public function setData($object){
+    
+    	if(count($object) > 0){
+    		 
+    		foreach ($object as $table => $campos){
+    
+    			foreach($this->fields as $name=>$field){
+    
+    				if(is_object($field) and is_array($campos)){
+    					$field->setValue($campos[$field->getName()]);
+    
+    					//caso o campo seja um FK e deva ser retornado a descriÁ„o
+    					if($field->actPesquisa){
+    						$field->setDescPesq($campos[$field->getName().'Label']);
+    					}
+    				}
+    			}
+    		}
+    	}
+    }*/
+    
+    
+    
     
     /**
      * m√©todo getData()
