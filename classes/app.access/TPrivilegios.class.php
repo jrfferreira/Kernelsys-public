@@ -237,7 +237,7 @@ class TPrivilegios {
 
                 $fieldSetLegenda = new TElement("legend");
                 $fieldSetLegenda->class = "ui-widget-content ui-corner-all";
-                $fieldSetLegenda->add('<b>Lista:</b> '.$obOpcoesLista->label);
+                $fieldSetLegenda->add('<strong>Lista:</strong> '.$obOpcoesLista->label);
             $obLista->add($fieldSetLegenda);
             $checklistoptions = false;
 

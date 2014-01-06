@@ -720,6 +720,9 @@ class TMain {
     /*
     *fAltera limite
     */
+    /**
+     * 
+     */
     public function onChangeLimit() {
         $this->getObLista();//Substituir por backbone.js
         

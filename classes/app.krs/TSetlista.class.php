@@ -487,6 +487,9 @@ class TSetlista {
     */
     private function setNav($idFiltro){
 
+    	$obsession = new TSession();
+    	$developer = $obsession->getValue('developer');
+
         // configura bot�es de navegação =======================================
         $ActionBack = new TSetAction('prossExe');
         $ActionBack->setMetodo('onBack');
@@ -540,6 +543,11 @@ class TSetlista {
         $NavLista = new TElement('div');
         $NavLista->id = "barraNav";
         $NavLista->class = "ui-bar-navegation ui-state-hover";
+        
+        $LabelLista = new TElement('span');
+        $LabelLista->class = 'button ui-box ui-widget-content ui-corner-all';
+        $LabelLista->add("Lista: " . ($developer ? "(".$this->listseq.") " : "") . $this->label);
+        $NavLista->add($LabelLista);
 
         //posição de visualização=======================================
         $VisFim = $this->posicao+$this->limite;
@@ -561,12 +569,6 @@ class TSetlista {
                 $NavLista->add($bots);
             }
         }
-
-        //$BtNavs->add($this->bt['btBack']);
-        //$BtNavs->add($this->posicao.' / '.$VisFim);
-        //$BtNavs->add($this->bt['btNext']);
-        //$NavLista->add($BtNavs);
-
         
         $NTotal = new TElement('span');
         $NTotal->class = "button ui-box ui-widget-content ui-corner-all";
@@ -579,11 +581,6 @@ class TSetlista {
         $NavLista->add($this->bt['btBack']);
         $NavLista->add($dispNav);
         $NavLista->add($this->bt['btNext']);
-
-        $LabelLista = new TElement('span');
-        $LabelLista->class = 'button ui-box ui-widget-content ui-corner-all';
-        $LabelLista->add('Lista: '.$this->label);
-        $NavLista->add($LabelLista);
 
         $NavLista->add($this->bt['btPrint']);
         

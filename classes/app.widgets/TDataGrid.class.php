@@ -9,6 +9,7 @@ class TDataGrid extends TTable {
     private $colsAction = true;
     private $actions;
     private $rowcount;
+    
 
     /**
      * método __construct()
@@ -285,10 +286,10 @@ class TDataGrid extends TTable {
                 }
 
                 if(substr($width,-1) != "%"){
-                    $max = ($width/6);
+                    $max = ($width/8);
                     if((is_string($data)) and (strlen($data) >= $max ) and ($max > 3 )){
                         $title = $data;
-                        $data_temp = substr($data,0,$max-2);
+                        $data_temp = substr($data,0,$max);
                         $data = trim($data_temp) . "...";
                     }
                 }

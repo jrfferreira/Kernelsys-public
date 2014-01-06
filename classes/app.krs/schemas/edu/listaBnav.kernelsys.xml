@@ -2,60 +2,60 @@
 <kernelsys>
   <listaBnav>
     <row seq="1">
-      <seq>1</seq>
-      <listseq>144</listseq>
-      <nome>botContaCredito</nome>
-      <tipocampo>5</tipocampo>
-      <label> Contas a Receber </label>
-      <metodo>onNew</metodo>
-      <funcaojs>prossExe</funcaojs>
       <argumento>13</argumento>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Contas a Receber </label>
+      <listseq>144</listseq>
+      <metodo>onNew</metodo>
+      <nome>botContaCredito</nome>
+      <seq>1</seq>
       <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
     </row>
     <row seq="2">
-      <seq>2</seq>
-      <listseq>144</listseq>
-      <nome>botContaDebito</nome>
-      <tipocampo>5</tipocampo>
-      <label> Contas a Pagar </label>
-      <metodo>onNew</metodo>
-      <funcaojs>prossExe</funcaojs>
       <argumento>333</argumento>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Contas a Pagar </label>
+      <listseq>144</listseq>
+      <metodo>onNew</metodo>
+      <nome>botContaDebito</nome>
+      <seq>2</seq>
       <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
     </row>
     <row seq="3">
-      <seq>3</seq>
-      <listseq>144</listseq>
-      <nome>botMovimentoProgramado</nome>
-      <tipocampo>5</tipocampo>
-      <label> Movimentos Programados </label>
-      <metodo>onFormOpen</metodo>
-      <funcaojs>prossExe</funcaojs>
       <argumento>383</argumento>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Movimentos Programados </label>
+      <listseq>144</listseq>
+      <metodo>onFormOpen</metodo>
+      <nome>botMovimentoProgramado</nome>
+      <seq>3</seq>
       <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
     </row>
     <row seq="4">
-      <seq>4</seq>
-      <listseq>391</listseq>
-      <nome>botMovInterna</nome>
-      <tipocampo>5</tipocampo>
-      <label> Movimentação Interna</label>
-      <metodo>onFormOpen</metodo>
-      <funcaojs>prossExe</funcaojs>
       <argumento>404</argumento>
-      <usuaseq>1</usuaseq>
-      <unidseq>1</unidseq>
       <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Movimentação Interna</label>
+      <listseq>391</listseq>
+      <metodo>onFormOpen</metodo>
+      <nome>botMovInterna</nome>
+      <seq>4</seq>
       <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
     </row>
   </listaBnav>
 </kernelsys>
