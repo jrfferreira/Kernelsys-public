@@ -33,38 +33,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="175">
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acenviar>1</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>statseq/=/AND/1;salaaula/=/AND/1</filtro>
-      <filtropai>seq</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>175</formseq>
-      <incontrol/>
-      <label>Salas</label>
-      <lista>ListaPesquisaSalas</lista>
-      <listseq>175</listseq>
-      <nivel>2</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>lotacao=seq,sala=seq</pesquisa>
-      <required/>
-      <seq>175</seq>
-      <statseq>1</statseq>
-      <tabseq>44</tabseq>
-      <tipo>pesq</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="277">
       <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
@@ -5661,6 +5629,38 @@
       <statseq>1</statseq>
       <tabseq>9</tabseq>
       <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="175">
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acenviar>1</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>statseq/=/AND/1;salaaula/=/AND/true/boolean</filtro>
+      <filtropai>seq</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>175</formseq>
+      <incontrol/>
+      <label>Salas</label>
+      <lista>ListaPesquisaSalas</lista>
+      <listseq>175</listseq>
+      <nivel>2</nivel>
+      <obapendice>-</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>salaseq=seq,salaseqLabel=nome</pesquisa>
+      <required/>
+      <seq>175</seq>
+      <statseq>1</statseq>
+      <tabseq>44</tabseq>
+      <tipo>pesq</tipo>
       <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

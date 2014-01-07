@@ -142,9 +142,6 @@ $TUnidade = new TUnidade();
 $numDatas = $TUnidade->getParametro('listapresenca_datas');
 $numCampos = $TUnidade->getParametro('listapresenca_datascampos');
 
-$numDatas = $numCampos->listapresenca_datas;
-$numCampos = $numCampos->listapresenca_datascampos;
-
 if(!$numCampos){
 	$numCampos = 1;
 }

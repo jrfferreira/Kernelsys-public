@@ -1,10 +1,10 @@
-# Coluna cxfuseq da tabela dbcaixa passa a ser obrigatorio
-# Coluna notnull|obrigatorio da tabela campos se torna required
-# Verificar se todas as tabelas tem o statseq como valor padrão 1
-# Adicionar na view_inscricao as colunas vencimentomatricula, vencimentotaxa
-# Adicionar a coluna formapag na view_caixa (dbforma_pagamento -> titulo)
+-- # Coluna cxfuseq da tabela dbcaixa passa a ser obrigatorio
+-- # Coluna notnull|obrigatorio da tabela campos se torna required
+-- # Verificar se todas as tabelas tem o statseq como valor padrão 1
+-- # Adicionar na view_inscricao as colunas vencimentomatricula, vencimentotaxa
+-- # Adicionar a coluna formapag na view_caixa (dbforma_pagamento -> titulo)
 
-# VIEW DE PESSOAS
+-- # VIEW DE PESSOAS
 	-- View: view_pessoa
 
 -- DROP VIEW view_pessoa;
@@ -23,7 +23,7 @@
 
 
 	
-#VIEW PESSOAS_TITULARIDADAE
+-- #VIEW PESSOAS_TITULARIDADAE
 	CREATE OR REPLACE VIEW view_pessoa_titularidade AS 
 	 SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.tituseq, t0.curso, t0.instituicao, t0.anoconclusao, t0.observacao, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t3.pessnmrz AS nomepessoa, t2.titulo AS titularidade, t2.nomeacao, t2.peso, t4.seq AS profseq, t5.seq AS funcseq
 	   FROM dbpessoa_titularidade t0
@@ -33,7 +33,7 @@
 	   LEFT JOIN dbfuncionario t5 ON t5.pessseq = t3.seq
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 	  
-#VIEW FUNCIONARIOS
+-- #VIEW FUNCIONARIOS
 
 	CREATE OR REPLACE VIEW view_funcionario AS 
 	 SELECT t0.seq, t2.seq AS funcseq, t0.unidseq, t0.pessnmrz AS nomefuncionario, t0.pessnmrf, t2.cargseq, t3.nomecargo, t2.deptseq, t4.label AS nomedepartamento, t5.nome AS sala, t5.nome AS nomesala, to_char(t2.dataadmissao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataadmissao, t2.statseq AS situacao, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, 
@@ -52,7 +52,7 @@
 	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t0.seq AND t7.tpteseq = 2 
 	  WHERE t0.seq = t2.pessseq;
 
-# VIEW PROFESSORES
+-- # VIEW PROFESSORES
 
 	CREATE OR REPLACE VIEW view_professor AS 
 	 SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.curriculo, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t3.pessnmrz AS nomeprofessor, ( SELECT t2.titulo
@@ -76,7 +76,7 @@
 	   LEFT JOIN dbtelefone t7 ON t7.pessseq = t3.seq AND t7.tpteseq = 2 
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 	
-# VIEW INSCRICAO
+-- # VIEW INSCRICAO
 	CREATE OR REPLACE VIEW view_inscricao AS 
 	 SELECT 
 	 t0.seq, 
@@ -110,7 +110,7 @@
 	   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 
 
-# VIEW_PARCELA
+-- # VIEW_PARCELA
 
 CREATE OR REPLACE VIEW view_parcela AS 
  SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.transeq, t1.pessseq, t0.plcoseq, t0.tipo, t0.valorinicial, t0.valoratual, t0.numero, t0.desconto, to_char(t0.vencimento::timestamp with time zone, 'DD/MM/YYYY'::text) AS vencimento, t0.obs, t0.stpaseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t2.pessnmrz AS nomepessoa, t3.nomeconta AS nomeplanoconta, t0.instrucoespagamento, t999.seq AS statseq, t999.statdesc AS statdescr, t5.valorfinal AS valorfinal_credito, t6.valorfinal AS valorfinal_debito, t8.titulo as stpadesc
@@ -130,7 +130,7 @@ CREATE OR REPLACE VIEW view_parcela AS
   GROUP BY dbcaixa.parcseq) t6 ON t0.seq = t6.parcseq;
 
 
-# TABELA VIEW_NOTA
+-- # TABELA VIEW_NOTA
 CREATE OR REPLACE VIEW view_nota AS 
  SELECT 
 	t1.seq, 
@@ -160,7 +160,7 @@ CREATE OR REPLACE VIEW view_nota AS
    LEFT JOIN dbdisciplina t6 ON t6.seq = t4.discseq
    LEFT JOIN dbavaliacao t7 ON t7.seq = t1.avalseq;
 
-# VIEW_ALUNO_DISCIPLINA
+-- # VIEW_ALUNO_DISCIPLINA
 	CREATE OR REPLACE VIEW view_aluno_disciplina AS 
  SELECT t1.seq, 
 	t1.unidseq, 
@@ -192,7 +192,7 @@ CREATE OR REPLACE VIEW view_nota AS
    LEFT JOIN dbcurso t8 ON t8.seq = t5.cursseq
    LEFT JOIN dbprojeto_curso t9 ON t9.seq = t8.pjcuseq;
 
-# VIEW TURMA_DISCIPLINA
+-- # VIEW TURMA_DISCIPLINA
 
 
 CREATE OR REPLACE VIEW view_turma_disciplina AS 
@@ -234,25 +234,25 @@ CREATE OR REPLACE VIEW view_turma_disciplina AS
    LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
 
 
-# TABELA ENDEREÇO
+-- # TABELA ENDEREÇO
 
 	coluna logradouro para endereco varchar(200)
 
-# TABELA TURMA
+-- # TABELA TURMA
 	coluna diafixovencimento para padraovencimento numeric
 	coluna frequencia para frequenciaaula
 	coluna localaulas character varying(200)
 	remover coluna unalseq
 	
-# TABELA PESSOA
+-- # TABELA PESSOA
 	email_principal character varying(180)
 	email_secundario character varying(180)
 	
-# REMOVER TABELA EMAIL
+-- # REMOVER TABELA EMAIL
 
-# REMOVER O "NOT NULL" das colunas desconto, acrescimo da tabela dbcaixa
+-- # REMOVER O "NOT NULL" das colunas desconto, acrescimo da tabela dbcaixa
 
-# CRIAR TABELA DBPARAMETRO_PRODUTO
+-- # CRIAR TABELA DBPARAMETRO_PRODUTO
 
 CREATE TABLE dbparametro_produto (
 	seq serial,    
@@ -267,7 +267,7 @@ CREATE TABLE dbparametro_produto (
     statseq bigint DEFAULT 1 NOT NULL
 );
 
-# TABELA DBPRODUTO
+-- # TABELA DBPRODUTO
 -- Sequence: dbaluno_requisito_seq_seq
 
 -- DROP SEQUENCE dbaluno_requisito_seq_seq;
@@ -284,14 +284,14 @@ CREATE TABLE dbparametro_produto (
 	
 	ALTER TABLE dbproduto ALTER COLUMN seq SET DEFAULT nextval('dbproduto_seq_seq'::regclass);
 	
-# TABELA ABAS
+-- # TABELA ABAS
    
    Criar coluna require_register padrão false not null
    
    ALTER TABLE abas
    ADD COLUMN require_register boolean NOT NULL DEFAULT false;
    
-# TABELA PROJETO_CURSO
+-- # TABELA PROJETO_CURSO
 
    ALTER TABLE dbprojeto_curso
    ADD COLUMN stpcseq bigint NOT NULL DEFAULT 4;
@@ -299,7 +299,7 @@ CREATE TABLE dbparametro_produto (
    ALTER TABLE dbprojeto_curso
    ADD COLUMN identificador varchar(20) NOT NULL DEFAULT '--';
    
-# View de projeto_curso
+-- # View de projeto_curso
 
 CREATE OR REPLACE VIEW view_projeto_curso AS 
  SELECT t1.seq, t1.unidseq, t1.usuaseq, t1.nome, t1.tpcuseq, t1.arcuseq, t1.objetivo, t1.publicoalvo, to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.titulo AS areacurso, ( SELECT sum(t4.cargahoraria) AS sum
@@ -317,7 +317,7 @@ CREATE OR REPLACE VIEW view_projeto_curso AS
 ALTER TABLE view_projeto_curso
   OWNER TO postgres;
 
-# VIEW de curso_disciplina
+-- # VIEW de curso_disciplina
 
 -- View: view_curso_disciplina
 
