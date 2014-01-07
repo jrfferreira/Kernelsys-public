@@ -5505,38 +5505,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="242">
-      <acdeletar>0</acdeletar>
-      <aceditar>1</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>turmas/&gt;/AND/0/numeric</filtro>
-      <filtropai>seq</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>475</formseq>
-      <incontrol/>
-      <label>Projeto de Curso Concluído</label>
-      <lista>listaCursosDisponiveis</lista>
-      <listseq>242</listseq>
-      <nivel>1</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>242</seq>
-      <statseq>1</statseq>
-      <tabseq>9</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="134">
       <acdeletar>1</acdeletar>
       <aceditar>0</aceditar>
@@ -5564,38 +5532,6 @@
       <seq>134</seq>
       <statseq>1</statseq>
       <tabseq>10</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="132">
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>Novo Registro</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>1</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>turmas/=/AND/0/numeric;stpcseq/!=/1/numeric</filtro>
-      <filtropai>seq</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>4</formseq>
-      <incontrol/>
-      <label>Projetos de Curso</label>
-      <lista>listaCursos</lista>
-      <listseq>132</listseq>
-      <nivel>1</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>132</seq>
-      <statseq>1</statseq>
-      <tabseq>9</tabseq>
       <tipo>form</tipo>
       <trigger/>
       <unidseq>1</unidseq>
@@ -5661,6 +5597,70 @@
       <statseq>1</statseq>
       <tabseq>9</tabseq>
       <tipo>pesq</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="242">
+      <acdeletar>0</acdeletar>
+      <aceditar>1</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>turmas/&gt;=/OR/1/numeric;stpcseq/=/OR/1/numeric</filtro>
+      <filtropai>seq</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>475</formseq>
+      <incontrol/>
+      <label>Projeto de Curso Concluído</label>
+      <lista>listaCursosDisponiveis</lista>
+      <listseq>242</listseq>
+      <nivel>1</nivel>
+      <obapendice>-</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>242</seq>
+      <statseq>1</statseq>
+      <tabseq>9</tabseq>
+      <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="132">
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>Novo Registro</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>1</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>1</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>turmas/=/AND/0/numeric;stpcseq/!=/AND/1/numeric</filtro>
+      <filtropai>seq</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>4</formseq>
+      <incontrol/>
+      <label>Projetos de Curso</label>
+      <lista>listaCursos</lista>
+      <listseq>132</listseq>
+      <nivel>1</nivel>
+      <obapendice>-</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>132</seq>
+      <statseq>1</statseq>
+      <tabseq>9</tabseq>
+      <tipo>form</tipo>
       <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
