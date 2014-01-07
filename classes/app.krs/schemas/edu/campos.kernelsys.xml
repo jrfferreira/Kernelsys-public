@@ -26,6 +26,81 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="567">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>obs</campo>
+      <colunadb>obs</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Obs.:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>567</seq>
+      <statseq>1</statseq>
+      <tabseq>21</tabseq>
+      <tpcaseq>9</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="717">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>numNF</campo>
+      <colunadb>numnf</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Número NF:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>717</seq>
+      <statseq>1</statseq>
+      <tabseq>76</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="124">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>mora</campo>
+      <colunadb>mora</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Mora dia:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>124</seq>
+      <statseq>1</statseq>
+      <tabseq>17</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="436">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -201,38 +276,13 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="10">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cnhValidade</campo>
-      <colunadb>cnhValidade</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Valindade CNH: </label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>10</seq>
-      <statseq>1</statseq>
-      <tabseq>5</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="11">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>registroProfissional</campo>
-      <colunadb>registroProfissional</colunadb>
+      <colunadb>registroprofissional</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -307,7 +357,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>statusDuplicata</campo>
-      <colunadb>statusDuplicata</colunadb>
+      <colunadb>statusduplicata</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -557,7 +607,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataCad</campo>
-      <colunadb>dataCad</colunadb>
+      <colunadb>datacad</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -1301,38 +1351,13 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="567">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>obs</campo>
-      <colunadb>obs</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Obs.:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>567</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>9</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="260">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>necessidadesEspeciais</campo>
-      <colunadb>necessidadesEspeciais</colunadb>
+      <colunadb>necessidadesespeciais</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1357,7 +1382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>carteiraReservista</campo>
-      <colunadb>carteiraReservista</colunadb>
+      <colunadb>carteirareservista</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1582,7 +1607,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>preRequisitos</campo>
-      <colunadb>preRequisitos</colunadb>
+      <colunadb>prerequisitos</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1607,7 +1632,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>horarioTrabalho</campo>
-      <colunadb>horarioTrabalho</colunadb>
+      <colunadb>horariotrabalho</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1632,7 +1657,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>maquinasUtilizadas</campo>
-      <colunadb>maquinasUtilizadas</colunadb>
+      <colunadb>maquinasutilizadas</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1682,7 +1707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoCusto</campo>
-      <colunadb>tipoCusto</colunadb>
+      <colunadb>tipocusto</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1757,7 +1782,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>portadorNecessidades</campo>
-      <colunadb>portadorNecessidades</colunadb>
+      <colunadb>portadornecessidades</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1857,7 +1882,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>grauRisco</campo>
-      <colunadb>grauRisco</colunadb>
+      <colunadb>graurisco</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1907,7 +1932,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cargoAscendente</campo>
-      <colunadb>cargoAscendente</colunadb>
+      <colunadb>cargoascendente</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1932,7 +1957,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cargoDescendente</campo>
-      <colunadb>cargoDescendente</colunadb>
+      <colunadb>cargodescendente</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -1957,7 +1982,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cargaHoraria</campo>
-      <colunadb>cargaHoraria</colunadb>
+      <colunadb>cargahoraria</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2007,7 +2032,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>curriculoMinistrante</campo>
-      <colunadb>curriculoMinistrante</colunadb>
+      <colunadb>curriculoministrante</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2032,7 +2057,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>instituicaoCertificadora</campo>
-      <colunadb>instituicaoCertificadora</colunadb>
+      <colunadb>instituicaocertificadora</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2057,7 +2082,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeCargo</campo>
-      <colunadb>nomeCargo</colunadb>
+      <colunadb>nomecargo</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2207,7 +2232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeCurso</campo>
-      <colunadb>nomeCurso</colunadb>
+      <colunadb>nomecurso</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2257,7 +2282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>relatorioExame</campo>
-      <colunadb>relatorioExame</colunadb>
+      <colunadb>relatorioexame</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2357,7 +2382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>salarioBase</campo>
-      <colunadb>salarioBase</colunadb>
+      <colunadb>salariobase</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2557,7 +2582,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>opCobranca</campo>
-      <colunadb>opCobranca</colunadb>
+      <colunadb>opcobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2632,7 +2657,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numDoc</campo>
-      <colunadb>numDoc</colunadb>
+      <colunadb>numdoc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2657,7 +2682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoSangueRH</campo>
-      <colunadb>tipoSangueRH</colunadb>
+      <colunadb>tiposanguerh</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2732,7 +2757,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numDependentes</campo>
-      <colunadb>numDependentes</colunadb>
+      <colunadb>numdependentes</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2757,7 +2782,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>referenciaComercial</campo>
-      <colunadb>referenciaComercial</colunadb>
+      <colunadb>referenciacomercial</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2782,7 +2807,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>referenciaPessoal</campo>
-      <colunadb>referenciaPessoal</colunadb>
+      <colunadb>referenciapessoal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2807,7 +2832,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoSangue</campo>
-      <colunadb>tipoSangue</colunadb>
+      <colunadb>tiposangue</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -2832,7 +2857,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoDuplicata</campo>
-      <colunadb>tipoDuplicata</colunadb>
+      <colunadb>tipoduplicata</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3351,31 +3376,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="124">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>mora</campo>
-      <colunadb>mora</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Mora dia:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>124</seq>
-      <statseq>1</statseq>
-      <tabseq>17</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="389">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -3582,7 +3582,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoConta</campo>
-      <colunadb>tipoConta</colunadb>
+      <colunadb>tipoconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3632,7 +3632,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numConta</campo>
-      <colunadb>numConta</colunadb>
+      <colunadb>numconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3682,7 +3682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>saldoInicial</campo>
-      <colunadb>saldoInicial</colunadb>
+      <colunadb>saldoinicial</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3707,7 +3707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeConta</campo>
-      <colunadb>nomeConta</colunadb>
+      <colunadb>nomeconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3732,7 +3732,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>foneContatoNome</campo>
-      <colunadb>foneContatoNome</colunadb>
+      <colunadb>fonecontatonome</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3807,7 +3807,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoConta</campo>
-      <colunadb>tipoConta</colunadb>
+      <colunadb>tipoconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -3857,7 +3857,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>filiacaoMae</campo>
-      <colunadb>filiacaoMae</colunadb>
+      <colunadb>filiacaomae</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -4332,7 +4332,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cargaHoraria</campo>
-      <colunadb>cargaHoraria</colunadb>
+      <colunadb>cargahoraria</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -4518,6 +4518,31 @@
       <required>0</required>
       <seletor/>
       <seq>377</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="347">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>pessnmrz</campo>
+      <colunadb>pessnmrz</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Razão Social:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>347</seq>
       <statseq>1</statseq>
       <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
@@ -5207,7 +5232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>estadoCivil</campo>
-      <colunadb>estadoCivil</colunadb>
+      <colunadb>estadocivil</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -5232,7 +5257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoSanguineo</campo>
-      <colunadb>tipoSanguineo</colunadb>
+      <colunadb>tiposanguineo</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -5726,31 +5751,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="347">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>pessnmrz</campo>
-      <colunadb>pessnmrz</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Razão Social:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>347</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="382">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -5782,7 +5782,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>modoDeUso</campo>
-      <colunadb>modoDeUso</colunadb>
+      <colunadb>mododeuso</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6007,7 +6007,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoDocumento</campo>
-      <colunadb>tipoDocumento</colunadb>
+      <colunadb>tipodocumento</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6132,7 +6132,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>diasFeriasPrevisao</campo>
-      <colunadb>diasFeriasPrevisao</colunadb>
+      <colunadb>diasferiasprevisao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6157,7 +6157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>diasFeriasReal</campo>
-      <colunadb>diasFeriasReal</colunadb>
+      <colunadb>diasferiasreal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6207,7 +6207,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numConta</campo>
-      <colunadb>numConta</colunadb>
+      <colunadb>numconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6257,7 +6257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>estadoCivil</campo>
-      <colunadb>estadoCivil</colunadb>
+      <colunadb>estadocivil</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6282,7 +6282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoSanguineo</campo>
-      <colunadb>tipoSanguineo</colunadb>
+      <colunadb>tiposanguineo</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6357,7 +6357,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeTitular</campo>
-      <colunadb>nomeTitular</colunadb>
+      <colunadb>nometitular</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6682,7 +6682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>pessnmrfCobranca</campo>
-      <colunadb>pessnmrfCobranca</colunadb>
+      <colunadb>pessnmrfcobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6707,7 +6707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cidadeCobranca</campo>
-      <colunadb>cidadeCobranca</colunadb>
+      <colunadb>cidadecobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6757,7 +6757,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>estadoCobranca</campo>
-      <colunadb>estadoCobranca</colunadb>
+      <colunadb>estadocobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6782,7 +6782,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>cepCobranca</campo>
-      <colunadb>cepCobranca</colunadb>
+      <colunadb>cepcobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6857,7 +6857,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>inscEstadual</campo>
-      <colunadb>inscEstadual</colunadb>
+      <colunadb>inscestadual</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -6882,7 +6882,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>inscMunicipal</campo>
-      <colunadb>inscMunicipal</colunadb>
+      <colunadb>inscmunicipal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7032,7 +7032,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>anoConclusao</campo>
-      <colunadb>anoConclusao</colunadb>
+      <colunadb>anoconclusao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7157,7 +7157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>razaoSocial</campo>
-      <colunadb>razaoSocial</colunadb>
+      <colunadb>razaosocial</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7182,7 +7182,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>diaSemana</campo>
-      <colunadb>diaSemana</colunadb>
+      <colunadb>diasemana</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7257,7 +7257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeCobranca</campo>
-      <colunadb>nomeCobranca</colunadb>
+      <colunadb>nomecobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7382,7 +7382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tempoEntrega</campo>
-      <colunadb>tempoEntrega</colunadb>
+      <colunadb>tempoentrega</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7707,7 +7707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>capitalSocial</campo>
-      <colunadb>capitalSocial</colunadb>
+      <colunadb>capitalsocial</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7807,7 +7807,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>pagBanco</campo>
-      <colunadb>pagBanco</colunadb>
+      <colunadb>pagbanco</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7832,7 +7832,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>pagAgencia</campo>
-      <colunadb>pagAgencia</colunadb>
+      <colunadb>pagagencia</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7857,7 +7857,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>pagConta</campo>
-      <colunadb>pagConta</colunadb>
+      <colunadb>pagconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7882,7 +7882,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>pagVencimento</campo>
-      <colunadb>pagVencimento</colunadb>
+      <colunadb>pagvencimento</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -7932,7 +7932,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>regimeContrato</campo>
-      <colunadb>regimeContrato</colunadb>
+      <colunadb>regimecontrato</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8082,7 +8082,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>estadoCivil</campo>
-      <colunadb>estadoCivil</colunadb>
+      <colunadb>estadocivil</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8157,7 +8157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>areaInteresse</campo>
-      <colunadb>areaInteresse</colunadb>
+      <colunadb>areainteresse</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8232,7 +8232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>areaInteresse2</campo>
-      <colunadb>areaInteresse2</colunadb>
+      <colunadb>areainteresse2</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8257,7 +8257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>custohospedagem</campo>
-      <colunadb>custoHospedagem</colunadb>
+      <colunadb>custohospedagem</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -8282,7 +8282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>custodeslocamento</campo>
-      <colunadb>custoDeslocamento</colunadb>
+      <colunadb>custodeslocamento</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -8307,7 +8307,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>areaInteresse3</campo>
-      <colunadb>areaInteresse3</colunadb>
+      <colunadb>areainteresse3</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8382,7 +8382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataAtualizacao</campo>
-      <colunadb>dataAtualizacao</colunadb>
+      <colunadb>dataatualizacao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8657,7 +8657,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoUso</campo>
-      <colunadb>tipoUso</colunadb>
+      <colunadb>tipouso</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8682,7 +8682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>descRisco</campo>
-      <colunadb>descRisco</colunadb>
+      <colunadb>descrisco</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8707,7 +8707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>medidasRisco</campo>
-      <colunadb>medidasRisco</colunadb>
+      <colunadb>medidasrisco</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8732,7 +8732,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>descResultado</campo>
-      <colunadb>descResultado</colunadb>
+      <colunadb>descresultado</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8782,7 +8782,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>responsavelNome</campo>
-      <colunadb>responsavelNome</colunadb>
+      <colunadb>responsavelnome</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8807,7 +8807,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>responsavelFuncao</campo>
-      <colunadb>responavelFuncao</colunadb>
+      <colunadb>responavelfuncao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8882,7 +8882,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>receitaPropria</campo>
-      <colunadb>receitaPropria</colunadb>
+      <colunadb>receitapropria</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8907,7 +8907,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>receitaCliente</campo>
-      <colunadb>receitaCliente</colunadb>
+      <colunadb>receitacliente</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8932,7 +8932,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>receitaParceiros</campo>
-      <colunadb>receitaParceiros</colunadb>
+      <colunadb>receitaparceiros</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8957,7 +8957,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>receitaFornecedores</campo>
-      <colunadb>receitaFornecedores</colunadb>
+      <colunadb>receitafornecedores</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -8982,7 +8982,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>receitaTotal</campo>
-      <colunadb>receitaTotal</colunadb>
+      <colunadb>receitatotal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9007,7 +9007,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>recursosTotal</campo>
-      <colunadb>recursosTotal</colunadb>
+      <colunadb>recursostotal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9182,7 +9182,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>rendaMensal</campo>
-      <colunadb>rendaMensal</colunadb>
+      <colunadb>rendamensal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9257,7 +9257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tabelaProduto</campo>
-      <colunadb>tabelaProduto</colunadb>
+      <colunadb>tabelaproduto</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9282,7 +9282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tabelaProduto</campo>
-      <colunadb>tabelaProduto</colunadb>
+      <colunadb>tabelaproduto</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9532,7 +9532,7 @@
       <ativapesquisa>165</ativapesquisa>
       <autosave>0</autosave>
       <campo>pessseq</campo>
-      <colunadb>empTerc</colunadb>
+      <colunadb>empterc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -9832,7 +9832,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tabelaX</campo>
-      <colunadb>tabelaX</colunadb>
+      <colunadb>tabelax</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10032,7 +10032,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>colunaX</campo>
-      <colunadb>colunaX</colunadb>
+      <colunadb>colunax</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10107,7 +10107,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoExtorno</campo>
-      <colunadb>tipoExtorno</colunadb>
+      <colunadb>tipoextorno</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10157,7 +10157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>colunaY</campo>
-      <colunadb>colunaY</colunadb>
+      <colunadb>colunay</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10232,7 +10232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>agrupamentoPeriodico</campo>
-      <colunadb>agrupamentoPeriodico</colunadb>
+      <colunadb>agrupamentoperiodico</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10307,7 +10307,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoAssinatura</campo>
-      <colunadb>tipoAssinatura</colunadb>
+      <colunadb>tipoassinatura</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10507,7 +10507,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numTentativas</campo>
-      <colunadb>numTentativas</colunadb>
+      <colunadb>numtentativas</colunadb>
       <datacad>1900-01-01</datacad>
       <help>Número de vezes que um usuário pode abrir o questionário.</help>
       <incontrol>0</incontrol>
@@ -10532,7 +10532,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeConta</campo>
-      <colunadb>nomeConta</colunadb>
+      <colunadb>nomeconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10557,7 +10557,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>nomeUnidade</campo>
-      <colunadb>nomeUnidade</colunadb>
+      <colunadb>nomeunidade</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10607,7 +10607,7 @@
       <ativapesquisa>205</ativapesquisa>
       <autosave>0</autosave>
       <campo>pesqContaOrigemC</campo>
-      <colunadb>contaOrigem</colunadb>
+      <colunadb>contaorigem</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -10932,7 +10932,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>filiacaoPai</campo>
-      <colunadb>filiacaoPai</colunadb>
+      <colunadb>filiacaopai</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11007,7 +11007,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>numParcelas</campo>
-      <colunadb>numParcelas</colunadb>
+      <colunadb>numparcelas</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11032,7 +11032,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>numQuestoesMax</campo>
-      <colunadb>numQuestoesMax</colunadb>
+      <colunadb>numquestoesmax</colunadb>
       <datacad>1900-01-01</datacad>
       <help>Número de questões liberadas por usuário. Permite o usar randerização de questões.</help>
       <incontrol>0</incontrol>
@@ -11082,7 +11082,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>tipoQuestao</campo>
-      <colunadb>tipoQuestao</colunadb>
+      <colunadb>tipoquestao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11232,7 +11232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>salaAula</campo>
-      <colunadb>salaAula</colunadb>
+      <colunadb>salaaula</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11282,7 +11282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>agrupamentoY</campo>
-      <colunadb>agrupamentoY</colunadb>
+      <colunadb>agrupamentoy</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11307,7 +11307,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>agrupamentoX</campo>
-      <colunadb>agrupamentoX</colunadb>
+      <colunadb>agrupamentox</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -11407,7 +11407,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataInicio</campo>
-      <colunadb>dataInicio</colunadb>
+      <colunadb>datainicio</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -11432,7 +11432,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataFim</campo>
-      <colunadb>dataFim</colunadb>
+      <colunadb>datafim</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -11545,31 +11545,6 @@
       <seq>789</seq>
       <statseq>1</statseq>
       <tabseq>96</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="717">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>numNF</campo>
-      <colunadb>numnf</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Número NF:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>717</seq>
-      <statseq>1</statseq>
-      <tabseq>76</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
@@ -12007,7 +11982,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorQuestao</campo>
-      <colunadb>valorQuestao</colunadb>
+      <colunadb>valorquestao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -12057,7 +12032,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>custosTotal</campo>
-      <colunadb>custosTotal</colunadb>
+      <colunadb>custostotal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -12251,31 +12226,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="9">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cnhCategoria</campo>
-      <colunadb>cnhCategoria</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Categoria CNH: </label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>9</seq>
-      <statseq>1</statseq>
-      <tabseq>5</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="614">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -12407,7 +12357,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>buttonTransacaoD</campo>
-      <colunadb>buttonTransacaoD</colunadb>
+      <colunadb>buttontransacaod</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -12482,7 +12432,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>buttonTransacaoC</campo>
-      <colunadb>buttonTransacaoC</colunadb>
+      <colunadb>buttontransacaoc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -12782,7 +12732,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>logradouroCobranca</campo>
-      <colunadb>logradouroCobranca</colunadb>
+      <colunadb>logradourocobranca</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -14207,7 +14157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorAlteravel</campo>
-      <colunadb>valorAlteravel</colunadb>
+      <colunadb>valoralteravel</colunadb>
       <datacad>1900-01-01</datacad>
       <help>Define se o valor pode sofrer alteração durante a negociação.</help>
       <incontrol>setFloat</incontrol>
@@ -14282,7 +14232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorPago</campo>
-      <colunadb>valorPago</colunadb>
+      <colunadb>valorpago</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -14582,7 +14532,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorBeneficios</campo>
-      <colunadb>valorBeneficios</colunadb>
+      <colunadb>valorbeneficios</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -14657,7 +14607,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataCad</campo>
-      <colunadb>dataCad</colunadb>
+      <colunadb>datacad</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -14732,7 +14682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>custohoraaula</campo>
-      <colunadb>custoHoraAula</colunadb>
+      <colunadb>custohoraaula</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -14757,7 +14707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>1</autosave>
       <campo>regimeTrabalho</campo>
-      <colunadb>regimeTrabalho</colunadb>
+      <colunadb>regimetrabalho</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15132,7 +15082,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>codigoPlanoConta</campo>
-      <colunadb>codigoPlanoConta</colunadb>
+      <colunadb>codigoplanoconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15257,7 +15207,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>empregoAtual</campo>
-      <colunadb>empregoAtual</colunadb>
+      <colunadb>empregoatual</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15282,7 +15232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>empregoFuncao</campo>
-      <colunadb>empregoFuncao</colunadb>
+      <colunadb>empregofuncao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15307,7 +15257,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>empregoContato</campo>
-      <colunadb>empregoContato</colunadb>
+      <colunadb>empregocontato</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15332,7 +15282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>codigoPlanoConta</campo>
-      <colunadb>codigoPlanoConta</colunadb>
+      <colunadb>codigoplanoconta</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15407,7 +15357,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>botSetContas</campo>
-      <colunadb>botSetContas</colunadb>
+      <colunadb>botsetcontas</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15432,7 +15382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorAlteravel</campo>
-      <colunadb>valorAlteravel</colunadb>
+      <colunadb>valoralteravel</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15457,7 +15407,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>buttonVis</campo>
-      <colunadb>buttonVis</colunadb>
+      <colunadb>buttonvis</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15582,7 +15532,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>empregoFone</campo>
-      <colunadb>empregoFone</colunadb>
+      <colunadb>empregofone</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15632,7 +15582,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>buttonMov</campo>
-      <colunadb>buttonMov</colunadb>
+      <colunadb>buttonmov</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -15732,7 +15682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorNominal</campo>
-      <colunadb>valorNominal</colunadb>
+      <colunadb>valornominal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -15757,7 +15707,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorNominal</campo>
-      <colunadb>valorNominal</colunadb>
+      <colunadb>valornominal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -16132,7 +16082,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataAula</campo>
-      <colunadb>dataAula</colunadb>
+      <colunadb>dataaula</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16182,7 +16132,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataRealizacao</campo>
-      <colunadb>dataRealizacao</colunadb>
+      <colunadb>datarealizacao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16207,7 +16157,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>retornoFeriasPrevisao</campo>
-      <colunadb>retornoFeriasPrevisao</colunadb>
+      <colunadb>retornoferiasprevisao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16232,7 +16182,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataFeriasPrevisao</campo>
-      <colunadb>dataFeriasPrevisao</colunadb>
+      <colunadb>dataferiasprevisao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16257,7 +16207,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataTermino</campo>
-      <colunadb>dataTermino</colunadb>
+      <colunadb>datatermino</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16282,7 +16232,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataAssinatura</campo>
-      <colunadb>dataAssinatura</colunadb>
+      <colunadb>dataassinatura</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16432,7 +16382,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataPag</campo>
-      <colunadb>dataPag</colunadb>
+      <colunadb>datapag</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16457,7 +16407,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataLimite</campo>
-      <colunadb>dataLimite</colunadb>
+      <colunadb>datalimite</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16482,7 +16432,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>retornoFeriasReal</campo>
-      <colunadb>retornoFeriasReal</colunadb>
+      <colunadb>retornoferiasreal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16507,7 +16457,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataNasc</campo>
-      <colunadb>dataNasc</colunadb>
+      <colunadb>datanasc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16532,7 +16482,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataExame</campo>
-      <colunadb>dataExame</colunadb>
+      <colunadb>dataexame</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16582,7 +16532,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataCad</campo>
-      <colunadb>dataCad</colunadb>
+      <colunadb>datacad</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16682,7 +16632,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataNasc</campo>
-      <colunadb>dataNasc</colunadb>
+      <colunadb>datanasc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16732,7 +16682,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataReg</campo>
-      <colunadb>dataReg</colunadb>
+      <colunadb>datareg</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16882,7 +16832,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataNasc</campo>
-      <colunadb>dataNasc</colunadb>
+      <colunadb>datanasc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -16907,7 +16857,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataFeriasReal</campo>
-      <colunadb>dataFeriasReal</colunadb>
+      <colunadb>dataferiasreal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -17057,7 +17007,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>dataDisc</campo>
-      <colunadb>dataDisc</colunadb>
+      <colunadb>datadisc</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -17107,7 +17057,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>empregoDataAdmissao</campo>
-      <colunadb>empregoDataAdmissao</colunadb>
+      <colunadb>empregodataadmissao</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setDataDB</incontrol>
@@ -17157,7 +17107,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorNominal</campo>
-      <colunadb>valorNominal</colunadb>
+      <colunadb>valornominal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -17182,7 +17132,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorNominal</campo>
-      <colunadb>valorNominal</colunadb>
+      <colunadb>valornominal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -17332,7 +17282,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorUnitario</campo>
-      <colunadb>valorUnitario</colunadb>
+      <colunadb>valorunitario</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -17382,7 +17332,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>custoUnitario</campo>
-      <colunadb>custoUnitario</colunadb>
+      <colunadb>custounitario</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -17482,7 +17432,7 @@
       <ativapesquisa>0</ativapesquisa>
       <autosave>0</autosave>
       <campo>valorNominal</campo>
-      <colunadb>valorNominal</colunadb>
+      <colunadb>valornominal</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>setFloat</incontrol>
@@ -18057,7 +18007,7 @@
       <ativapesquisa>204</ativapesquisa>
       <autosave>0</autosave>
       <campo>pesqContaOrigemD</campo>
-      <colunadb>contaOrigem</colunadb>
+      <colunadb>contaorigem</colunadb>
       <datacad>1900-01-01</datacad>
       <help/>
       <incontrol>0</incontrol>
@@ -19575,6 +19525,56 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>F</valorpadrao>
+    </row>
+    <row seq="9">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>cnhCategoria</campo>
+      <colunadb>cnhcategoria</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Categoria CNH: </label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>9</seq>
+      <statseq>1</statseq>
+      <tabseq>5</tabseq>
+      <tpcaseq>2</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="10">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>cnhValidade</campo>
+      <colunadb>cnhvalidade</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Valindade CNH: </label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>10</seq>
+      <statseq>1</statseq>
+      <tabseq>5</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
     </row>
   </campos>
 </kernelsys>
