@@ -192,6 +192,11 @@ class TTurmaDisciplinas {
                             $criteriochecagem->add(new TFilter("alunseq", "=", $codigoaluno), 'AND');
                             $criteriochecagem->add(new TFilter("tudiseq", "=", $tudiseq), 'AND');
                             $retornochecagem = $retNotas->select('seq', $criteriochecagem);
+                            
+                            $tdboTurmaDisciplina = new TDbo(TConstantes::DBTURMA_DISCIPLINA);
+                            $critTurmaDisciplina = new TCriteria();
+                            $critTurmaDisciplina->add(new TFilter("seq", "=", $tudiseq));
+                            $tdboTurmaDisciplina->update(array("dataatualizacao"=>date("Y-m-d")), $critTurmaDisciplina);
 
                             $arqumentoUpgrade = $retornochecagem->fetch();
                             if ($arqumentoUpgrade['seq'] == NULL) {
