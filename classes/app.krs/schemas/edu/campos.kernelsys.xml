@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <campos>
+    <row seq="156">
+      <alteravel>1</alteravel>
+      <ativafunction>0</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>pessseq</campo>
+      <colunadb>pessseq</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Pessoa:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>156</seq>
+      <statseq>1</statseq>
+      <tabseq>21</tabseq>
+      <tpcaseq>2</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="385">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -3546,31 +3571,6 @@
       <statseq>1</statseq>
       <tabseq>65</tabseq>
       <tpcaseq>9</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="156">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>pessseq</campo>
-      <colunadb>pessseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Pessoa:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>156</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
