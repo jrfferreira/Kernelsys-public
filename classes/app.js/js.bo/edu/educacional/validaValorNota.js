@@ -1,5 +1,6 @@
-function validaValorNota(obj){
-	if(event.type == "keypress"){
+function validaValorNota(obj,event){
+	event = event || window.event;
+	if(event && event.type == "keypress"){
 		var key = event.charCode,
 			accepted = [44,46,48,49,50,51,52,53,54,55,56,57];
 		if(accepted.indexOf(key) == -1){
