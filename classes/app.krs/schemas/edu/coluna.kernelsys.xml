@@ -16087,27 +16087,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="65">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeTurma</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Turma</label>
-      <largura>180</largura>
-      <link>0</link>
-      <listseq>24</listseq>
-      <ordem>3</ordem>
-      <seq>65</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="58">
       <alinhadados>center</alinhadados>
       <alinhalabel>center</alinhalabel>
@@ -16213,19 +16192,19 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="66">
+    <row seq="65">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
       <colfunction>-</colfunction>
-      <coluna>nomedisciplina</coluna>
+      <coluna>nomeTurma</coluna>
       <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Disciplina</label>
-      <largura>200</largura>
+      <datacad>1900-01-01</datacad>
+      <label>Turma</label>
+      <largura>120</largura>
       <link>0</link>
       <listseq>24</listseq>
-      <ordem>2</ordem>
-      <seq>66</seq>
+      <ordem>3</ordem>
+      <seq>65</seq>
       <statseq>1</statseq>
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
@@ -16242,7 +16221,7 @@
       <colunaaux>-</colunaaux>
       <datacad>2013-11-29</datacad>
       <label>Professor</label>
-      <largura>200</largura>
+      <largura>300</largura>
       <link>0</link>
       <listseq>24</listseq>
       <ordem>5</ordem>
@@ -16251,237 +16230,6 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="80">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>discseq</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Cod.</label>
-      <largura>120</largura>
-      <link>0</link>
-      <listseq>24</listseq>
-      <ordem>1</ordem>
-      <seq>80</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="71">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomecurso</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Curso</label>
-      <largura>300</largura>
-      <link>0</link>
-      <listseq>24</listseq>
-      <ordem>4</ordem>
-      <seq>71</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="69">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>dataAtualizacao</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Ultima Atualização</label>
-      <largura>120</largura>
-      <link>0</link>
-      <listseq>24</listseq>
-      <ordem>7</ordem>
-      <seq>69</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>date</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="68">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>alunos</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Nº de Alunos </label>
-      <largura>80</largura>
-      <link>0</link>
-      <listseq>24</listseq>
-      <ordem>6</ordem>
-      <seq>68</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="81">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeTurma</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Turma</label>
-      <largura>180</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>3</ordem>
-      <seq>81</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="82">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomedisciplina</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Disciplina</label>
-      <largura>200</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>2</ordem>
-      <seq>82</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="83">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeprofessor</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Professor</label>
-      <largura>200</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>5</ordem>
-      <seq>83</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="90">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>alunos</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Nº de Alunos </label>
-      <largura>80</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>6</ordem>
-      <seq>90</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="91">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>dataAtualizacao</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Ultima Atualização</label>
-      <largura>120</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>7</ordem>
-      <seq>91</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>date</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="92">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomecurso</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Curso</label>
-      <largura>300</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>4</ordem>
-      <seq>92</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="93">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>discseq</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>2013-11-29</datacad>
-      <label>Cod.</label>
-      <largura>120</largura>
-      <link>0</link>
-      <listseq>25</listseq>
-      <ordem>1</ordem>
-      <seq>93</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
@@ -16797,6 +16545,258 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="80">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>discseq</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Cod.</label>
+      <largura>50</largura>
+      <link>0</link>
+      <listseq>24</listseq>
+      <ordem>1</ordem>
+      <seq>80</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="81">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomeTurma</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Turma</label>
+      <largura>120</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>3</ordem>
+      <seq>81</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="83">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomeprofessor</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Professor</label>
+      <largura>300</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>5</ordem>
+      <seq>83</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="69">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>dataAtualizacao</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Ultima Atualização</label>
+      <largura>85</largura>
+      <link>0</link>
+      <listseq>24</listseq>
+      <ordem>7</ordem>
+      <seq>69</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>date</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="91">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>dataAtualizacao</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Ultima Atualização</label>
+      <largura>85</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>7</ordem>
+      <seq>91</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>date</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="68">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>alunos</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Nº de Alunos </label>
+      <largura>40</largura>
+      <link>0</link>
+      <listseq>24</listseq>
+      <ordem>6</ordem>
+      <seq>68</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="90">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>alunos</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Nº de Alunos </label>
+      <largura>40</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>6</ordem>
+      <seq>90</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="82">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomedisciplina</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Disciplina</label>
+      <largura>350</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>2</ordem>
+      <seq>82</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="66">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomedisciplina</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Disciplina</label>
+      <largura>350</largura>
+      <link>0</link>
+      <listseq>24</listseq>
+      <ordem>2</ordem>
+      <seq>66</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="71">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomecurso</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Curso</label>
+      <largura>350</largura>
+      <link>0</link>
+      <listseq>24</listseq>
+      <ordem>4</ordem>
+      <seq>71</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="92">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomecurso</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Curso</label>
+      <largura>350</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>4</ordem>
+      <seq>92</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="93">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>discseq</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-11-29</datacad>
+      <label>Cod.</label>
+      <largura>50</largura>
+      <link>0</link>
+      <listseq>25</listseq>
+      <ordem>1</ordem>
+      <seq>93</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>

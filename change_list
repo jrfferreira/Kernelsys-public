@@ -418,4 +418,24 @@ CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
 		t2.prioridade
 	from dbtelefone AS t1
 	LEFT JOIN dbtipo_telefone AS t2 ON t2.seq = t1.tpteseq
+	
+CREATE OR REPLACE VIEW view_turma_disciplina AS 
+ SELECT t0.seq, t0.unidseq, t0.turmseq, t3.cursseq, t0.discseq, t0.profseq, to_char(t0.datarealizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS datarealizacao, to_char(t0.dataatualizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataatualizacao, t0.frequencia, t0.datas, t0.custohoraaula, t0.regimetrabalho, t0.custohospedagem, t0.custodeslocamento, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t6.nome AS sala, t999.seq AS statseq, t999.statdesc, t7.nome AS nomecurso, t3.titulo AS nometurma, t4.titulo AS nomedisciplina, t4.cargahoraria, t5.pessnmrz AS nomeprofessor, ( SELECT count(dbaluno_disciplina.seq) AS count
+           FROM dbaluno_disciplina
+          WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos, t0.salaseq, t7.gdavseq, t3.sttuseq, t0.custoalimentacao, t0.custoextra
+   FROM dbturma_disciplina t0
+   LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
+   LEFT JOIN dbcurso t2 ON t2.seq = t3.cursseq
+   LEFT JOIN dbprojeto_curso t7 ON t7.seq = t2.pjcuseq
+   LEFT JOIN dbdisciplina t4 ON t4.seq = t0.discseq
+   LEFT JOIN dbpessoa t5 ON t5.seq = (( SELECT t9.pessseq
+   FROM dbprofessor t9
+  WHERE t9.seq = t0.profseq))
+   LEFT JOIN dbsala t6 ON t6.seq = t0.salaseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+
+ALTER TABLE view_turma_disciplina
+  OWNER TO postgres;
+
+	
 	  
