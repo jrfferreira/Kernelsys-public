@@ -127,11 +127,6 @@ $obUser = $inPriv->getUser();
     
     $BarraPrincipal->add($help);
 
-    //bot�o de customização
-    //$obBotCuston = new TSetCuston();
-    //$botCuston = $obBotCuston->getBot();
-    //$BarraPrincipal->add($botCuston);
-
 //======================================\\
 
 
@@ -160,6 +155,16 @@ $conteiner = new TTable();
 
         $cellDisplay = $row->addCell('');
         $cellDisplay->height = "100%";
+        
+        
+        
+        if(false){
+        	$display = new TElement('div');
+        	$display->id      = 'displaySys';
+        	$display->style   = "width:100%; height:99%; display: block; vertical-align: top;";
+        	$display->add("");
+        	$cellDisplay->add($display);
+        }
 
 $DCorpo->add($conteiner);
 
@@ -190,8 +195,5 @@ if($obSession->getValue('developer')){
 }
 
 $pageSys->add($content);
-//$pageSys->add($BarraPrincipal);
-//$pageSys->add($DCorpo);
-//$pageSys->add($DRodaPe);
 
 $pageSys->show();

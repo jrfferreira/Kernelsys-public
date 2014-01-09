@@ -8269,16 +8269,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <valor>calculaDebitoProfessor()</valor>
     </row>
-    <row seq="1116">
-      <campseq>964</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>addItems</metodo>
-      <seq>1116</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>select seq,cargahoraria from dbdisciplina</valor>
-    </row>
     <row seq="1136">
       <campseq>965</campseq>
       <datacad>1900-01-01</datacad>

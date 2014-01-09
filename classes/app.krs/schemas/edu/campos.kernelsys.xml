@@ -26,6 +26,31 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="964">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>1</autosave>
+      <campo>cargahoraria</campo>
+      <colunadb>cargahoraria</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Carga Horária:</label>
+      <manter/>
+      <mascara>'999',1</mascara>
+      <outcontrol/>
+      <required>1</required>
+      <seletor/>
+      <seq>964</seq>
+      <statseq>1</statseq>
+      <tabseq>12</tabseq>
+      <tpcaseq>11</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="385">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -15922,31 +15947,6 @@
       <tabseq>999</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>calculaDebitoProfessor()</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="964">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cargahoraria</campo>
-      <colunadb>codigodisciplina</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol/>
-      <label>Carga Horária:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol/>
-      <required>0</required>
-      <seletor/>
-      <seq>964</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
