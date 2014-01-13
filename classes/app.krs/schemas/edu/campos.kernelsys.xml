@@ -151,6 +151,81 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="378">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>email_secundario</campo>
+      <colunadb>email_secundario</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>E-mail Secundario:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>378</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="40">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>email_principal</campo>
+      <colunadb>email_principal</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>E-mail: </label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>40</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="256">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>email_principal</campo>
+      <colunadb>email_principal</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>E-mail:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>256</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="567">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -1418,31 +1493,6 @@
       <required>0</required>
       <seletor/>
       <seq>255</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="256">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>email1</campo>
-      <colunadb>email1</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>E-mail:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>256</seq>
       <statseq>1</statseq>
       <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
@@ -4201,31 +4251,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="378">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>email2</campo>
-      <colunadb>email2</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>E-mail Secundario:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>378</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="383">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -4576,31 +4601,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>function/TSetData/getData</valorpadrao>
     </row>
-    <row seq="377">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>email1</campo>
-      <colunadb>email1</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>E-mail Primario:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>377</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="347">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -4646,6 +4646,31 @@
       <statseq>1</statseq>
       <tabseq>12</tabseq>
       <tpcaseq>11</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="377">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>email_secundario</campo>
+      <colunadb>email_secundario</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>E-mail Primario:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>0</required>
+      <seletor/>
+      <seq>377</seq>
+      <statseq>1</statseq>
+      <tabseq>1</tabseq>
+      <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -9245,31 +9270,6 @@
       <seq>626</seq>
       <statseq>1</statseq>
       <tabseq>5</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="40">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>email1</campo>
-      <colunadb>email1</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>E-mail: </label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>40</seq>
-      <statseq>1</statseq>
-      <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
