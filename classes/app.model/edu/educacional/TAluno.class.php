@@ -275,8 +275,8 @@ class TAluno {
                 $datagrid->addColumn(new TDataGridColumn('parcela', 'Parcela', 'center', '3%'));
                 $datagrid->addColumn(new TDataGridColumn('doc', 'Conta', 'left', '55%'));
                 $datagrid->addColumn(new TDataGridColumn('vencimento', 'Vencimento', 'center', '15%'));
-                $datagrid->addColumn(new TDataGridColumn('valor', 'Valor Nominal', 'center', '10%'));
-                $datagrid->addColumn(new TDataGridColumn('valorfinal', 'Valor Pago', 'center', '10%'));
+                $datagrid->addColumn(new TDataGridColumn('valornominal', 'Valor Nominal', 'center', '10%'));
+                $datagrid->addColumn(new TDataGridColumn('valorpago', 'Valor Pago', 'center', '10%'));
                 $datagrid->createModel('100%');
 
                 $TSetModel = new TSetModel();
@@ -287,7 +287,7 @@ class TAluno {
                             $impressao = new TElement('img');
                             $impressao->src = "../app.view/app.images/petrus/new_ico_print.png";
                             $impressao->style = "cursor:pointer";
-                            $impressao->onclick = "showBoleto('" . $obContas->codigo . "')";
+                            $impressao->onclick = "showBoleto('" . $obContas->seq . "')";
 
                             $situacao = new TElement('img');
                             $situacao->src = ($obContas->stpaseq == 2) ? "../app.view/app.images/" . "sim.gif" : "../app.view/app.images/" . "nao.gif";
@@ -298,8 +298,8 @@ class TAluno {
                             $tempDisc['parcela'] = $obContas->numparcela;
                             $tempDisc['doc'] = $obContas->seq;
                             $tempDisc['vencimento'] = $TSetModel->setDataPT($obContas->vencimento);
-                            $tempDisc['valor'] = 'R$ ' . $TSetModel->setMoney($obContas->valor);
-                            $tempDisc['valorfinal'] = 'R$ ' . $TSetModel->setMoney($obContas->valorfinal);
+                            $tempDisc['valornominal'] = 'R$ ' . $TSetModel->setMoney($obContas->valornominal);
+                            $tempDisc['valorpago'] = 'R$ ' . $TSetModel->setMoney($obContas->valorpago);
 
                             $datagrid->addItem($tempDisc);
                         }
