@@ -590,7 +590,7 @@ class TMain {
             } */
 
             // Executa o editor do formulario se o mesmo for solicitado
-            $forms = $this->getform($this->param['key'],$dados);
+            $forms = $this->getform($dados);
 
         }
         catch (Exception $e) { // em caso de exceção

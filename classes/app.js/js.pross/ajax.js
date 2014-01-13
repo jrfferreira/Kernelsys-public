@@ -75,7 +75,7 @@ function exe(alvo, setUrl, dados, tipoReq, msg, callback){
 	               },
 	               error: function(XMLHttpRequest, textStatus, erro){
 	                   $('#loading-status').removeClass().addClass('ui-ajax-error');
-	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexão.\n\nERRO - ["+e.getMessage+"]");
+	            	   alertPetrus("Ouve uma falhar inesperada na conexão com a internet e o sistema parou temporariamente de responder - Por favor verifique sua conexão.\n\n"+(erro?"ERRO: \n ["+erro.getMessage+"]":""));
 	               }
         	}).responseText;
         }
