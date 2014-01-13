@@ -1630,5 +1630,14 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="14">
+      <datacad>2014-01-13</datacad>
+      <formseq>6</formseq>
+      <seq>14</seq>
+      <statseq>1</statseq>
+      <tabseq>49</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </formXTabelas>
 </kernelsys>
