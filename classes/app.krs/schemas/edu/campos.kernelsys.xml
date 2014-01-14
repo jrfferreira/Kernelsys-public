@@ -1326,31 +1326,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="815">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>setfaltaalunos</campo>
-      <colunadb>setfaltaalunos</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Lançar Faltas</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>815</seq>
-      <statseq>1</statseq>
-      <tabseq>25</tabseq>
-      <tpcaseq>5</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="387">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -6146,31 +6121,6 @@
       <statseq>1</statseq>
       <tabseq>39</tabseq>
       <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="779">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>setfaltaalunos</campo>
-      <colunadb>setfaltaalunos</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Lançar Faltas</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>779</seq>
-      <statseq>1</statseq>
-      <tabseq>25</tabseq>
-      <tpcaseq>5</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

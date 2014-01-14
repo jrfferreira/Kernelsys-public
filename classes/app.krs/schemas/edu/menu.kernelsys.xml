@@ -601,21 +601,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="19">
-      <argumento>193</argumento>
-      <datacad>1900-01-01</datacad>
-      <formseq>18</formseq>
-      <labelmodulo>Diário Eletrônico</labelmodulo>
-      <metodo>getList</metodo>
-      <modseq>9</modseq>
-      <modulo>diario</modulo>
-      <nivel>2</nivel>
-      <ordem>1</ordem>
-      <seq>19</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="103">
       <argumento>391</argumento>
       <datacad>1900-01-01</datacad>
@@ -931,21 +916,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="16">
-      <argumento>199</argumento>
-      <datacad>1900-01-01</datacad>
-      <formseq>58</formseq>
-      <labelmodulo>Diário Eletrônico</labelmodulo>
-      <metodo>getList</metodo>
-      <modseq>7</modseq>
-      <modulo>gerDisciplina</modulo>
-      <nivel>2</nivel>
-      <ordem>0</ordem>
-      <seq>16</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="9">
       <argumento>24</argumento>
       <datacad>2013-11-29</datacad>
@@ -987,6 +957,66 @@
       <nivel>2</nivel>
       <ordem>16</ordem>
       <seq>117</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="21">
+      <argumento>56</argumento>
+      <datacad>2014-01-14</datacad>
+      <formseq>42</formseq>
+      <labelmodulo>Lançamento de Faltas</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>9</modseq>
+      <modulo>lancamentoFalta</modulo>
+      <nivel>2</nivel>
+      <ordem>1</ordem>
+      <seq>21</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="16">
+      <argumento>199</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>58</formseq>
+      <labelmodulo>Lançamento de Aulas</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>7</modseq>
+      <modulo>lancamentoAula</modulo>
+      <nivel>2</nivel>
+      <ordem>0</ordem>
+      <seq>16</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="19">
+      <argumento>193</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>18</formseq>
+      <labelmodulo>Lançamento de Aulas</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>9</modseq>
+      <modulo>lancamentoAula</modulo>
+      <nivel>2</nivel>
+      <ordem>1</ordem>
+      <seq>19</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="18">
+      <argumento>57</argumento>
+      <datacad>2014-01-14</datacad>
+      <formseq>55</formseq>
+      <labelmodulo>Lançamento de Faltas</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>7</modseq>
+      <modulo>lancamentoFalta</modulo>
+      <nivel>2</nivel>
+      <ordem>1</ordem>
+      <seq>18</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

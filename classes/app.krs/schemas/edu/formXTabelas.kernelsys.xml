@@ -1639,5 +1639,41 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="25">
+      <datacad>2014-01-13</datacad>
+      <formseq>364</formseq>
+      <seq>25</seq>
+      <statseq>1</statseq>
+      <tabseq>12</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="28">
+      <datacad>2014-01-14</datacad>
+      <formseq>260</formseq>
+      <seq>28</seq>
+      <statseq>1</statseq>
+      <tabseq>28</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="36">
+      <datacad>2014-01-14</datacad>
+      <formseq>55</formseq>
+      <seq>36</seq>
+      <statseq>1</statseq>
+      <tabseq>28</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="47">
+      <datacad>2014-01-14</datacad>
+      <formseq>42</formseq>
+      <seq>47</seq>
+      <statseq>1</statseq>
+      <tabseq>28</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </formXTabelas>
 </kernelsys>

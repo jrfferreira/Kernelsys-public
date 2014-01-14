@@ -16,6 +16,17 @@ class TTurmaDisciplinas {
     }
 
 
+    public function updateDataAtualizacao($tudiseq){
+    	try {
+    		$tdboTurmaDisciplina = new TDbo(TConstantes::DBTURMA_DISCIPLINA);
+    		$critTurmaDisciplina = new TCriteria();
+    		$critTurmaDisciplina->add(new TFilter("seq", "=", $tudiseq));
+    		$tdboTurmaDisciplina->update(array("dataatualizacao"=>date("Y-m-d")), $critTurmaDisciplina);
+    	}catch (Exception $e){
+            new setException($e);
+    	}
+    }
+    
     public function getTurmasDisciplinasAtivas(){
         $this->obTDbo->setEntidade(TConstantes::VIEW_TURMA_DISCIPLINA);
         $criteria = new TCriteria();
@@ -193,10 +204,7 @@ class TTurmaDisciplinas {
                             $criteriochecagem->add(new TFilter("tudiseq", "=", $tudiseq), 'AND');
                             $retornochecagem = $retNotas->select('seq', $criteriochecagem);
                             
-                            $tdboTurmaDisciplina = new TDbo(TConstantes::DBTURMA_DISCIPLINA);
-                            $critTurmaDisciplina = new TCriteria();
-                            $critTurmaDisciplina->add(new TFilter("seq", "=", $tudiseq));
-                            $tdboTurmaDisciplina->update(array("dataatualizacao"=>date("Y-m-d")), $critTurmaDisciplina);
+                            $this->updateDataAtualizacao($tudiseq);
 
                             $arqumentoUpgrade = $retornochecagem->fetch();
                             if ($arqumentoUpgrade['seq'] == NULL) {
@@ -247,6 +255,10 @@ class TTurmaDisciplinas {
                         $criteriochecagem->add(new TFilter("tdalseq", "=", $obAula->seq));
 
                         $retornochecagem = $retFalta->update(array('justificativa' => $justificativa), $criteriochecagem);
+                        
+                        $this->updateDataAtualizacao($tudiseq);
+                        
+                        $retFalta->commit();
                     } else {
                         throw new ErrorException("A data é invalida.");
                     }
@@ -281,12 +293,12 @@ class TTurmaDisciplinas {
                         $obAula = $this->getAula($tudiseq, $codigoaula);
                         $argumentossetfalta ['datafalta'] = $obAula->dataaula;
                         $argumentossetfalta ['frequencia'] = $aula;
-                        $argumentossetfalta ['tdalseq'] = $obAula->codigo;
+                        $argumentossetfalta ['tdalseq'] = $codigoaula;
                         $argumentossetfalta ['statseq'] = '1';
 
                         if (($situacao == "F") or ($situacao == "P")) {
 
-                            $argumentossetfalta ['situacao'] = $situacao;
+                            $argumentossetfalta ['deferido'] = $situacao == "P" ? false : true;
                             $retFalta = new TDbo(TConstantes::DBFALTA);
 
                             $criteriochecagem = new TCriteria ( );
@@ -295,7 +307,7 @@ class TTurmaDisciplinas {
                             $criteriochecagem->add(new TFilter("tdalseq", "=", $obAula->seq));
                             $criteriochecagem->add(new TFilter("frequencia", "=", $aula));
 
-                            $retornochecagem = $retFalta->select('id', $criteriochecagem);
+                            $retornochecagem = $retFalta->select('seq', $criteriochecagem);
 
                             $arqumentoUpgrade = $retornochecagem->fetch();
                             if ($arqumentoUpgrade['seq'] == NULL) {
@@ -303,6 +315,13 @@ class TTurmaDisciplinas {
                             } else {
                                 $falta = $retFalta->update($argumentossetfalta, $criteriochecagem);
                             }
+                            
+
+                            $this->updateDataAtualizacao($tudiseq);
+                            
+                            $retFalta->commit();
+                            
+                            
                         } else {
                             throw new ErrorException("A situação é invalida.");
                         }
@@ -444,13 +463,13 @@ class TTurmaDisciplinas {
                 $obTDbo = new TDbo(TConstantes::DBFALTA);
                 $criterio2 = new TCriteria();
                 $criterio2->add(new TFilter("tdalseq", "=", $aula->seq));
-                $criterio2->add(new TFilter("deferido", "=", true));
+                $criterio2->add(new TFilter("deferido", "=", true, 'boolean'));
                 $criterio2->setProperty('order', 'frequencia');
                 $retornoFaltas = $obTDbo->select("tdalseq,alunseq,frequencia,justificativa,deferido", $criterio2);
 
                 while ($ret = $retornoFaltas->fetchObject()) {
                     $num = $ret->frequencia;
-                    $aluno = $ret->codigoaluno;
+                    $aluno = $ret->alunseq;
                     $aula->justificativa[$aluno] = ($ret->justificativa != null ) ? $ret->justificativa : $aula->justificativa[$aluno];
                     $aula->faltas[$num][$aluno] = $ret->deferido;
                 }
@@ -570,31 +589,26 @@ class TTurmaDisciplinas {
      * @param $formseq
      * @param $x
      */
-    public function viewSetFaltasAlunos($formseq, $x) {
-    	
+    public function viewSetFaltasAlunos($codigoAula, $formseq) {
 
-        $THeader = new TSetHeader();
-        $header = $THeader->getHead('364', 'seq');
-        $header2 = $THeader->getHead('370', 'seq');
-        $codigoAula = ($header) ? $header : $header2;
-        //$codigoAula = $formseq;
-
-        $this->obTDbo->setEntidade(TConstantes::DBTURMA_DISCIPLINA_AULA);
+    	$this->obTDbo->setEntidade(TConstantes::DBTURMA_DISCIPLINA_AULA);
         $criterio = new TCriteria ( );
         $criterio->add(new TFilter("seq", "=", $codigoAula));
         $retornoAula = $this->obTDbo->select("tudiseq", $criterio);
         $obAula = $retornoAula->fetchObject();
 
+       	$tudiseq = $obAula->tudiseq;
 
         //Objetos para construção da lista
-        $listaAlunos = $this->getAlunos($obAula->tudiseq);
+        $listaAlunos = $this->getAlunos($tudiseq);
 
-
-        $aula = $this->getAula($obAula->tudiseq, $codigoAula);
+		if($codigoAula){
+        	$aula = $this->getAula($tudiseq, $codigoAula);			
+		}
         //Monta lista com os alunos
         $obLista = new TDatagrid();
 
-        $obLista->addColumn(new TDataGridColumn('seq', 'Matr�cula', 'center', '100px'));
+        $obLista->addColumn(new TDataGridColumn('seq', 'Matrícula', 'center', '100px'));
         $obLista->addColumn(new TDataGridColumn('nomealuno', 'Nome', 'left', '350px'));
 
         $countCols = 1;

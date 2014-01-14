@@ -931,16 +931,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="158">
-      <abaseq>254</abaseq>
-      <datacad>1900-01-01</datacad>
-      <formseq>260</formseq>
-      <ordem>1</ordem>
-      <seq>158</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="110">
       <abaseq>40</abaseq>
       <datacad>1900-01-01</datacad>
@@ -2241,16 +2231,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="272">
-      <abaseq>371</abaseq>
-      <datacad>1900-01-01</datacad>
-      <formseq>58</formseq>
-      <ordem>2</ordem>
-      <seq>272</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="273">
       <abaseq>372</abaseq>
       <datacad>1900-01-01</datacad>
@@ -2537,6 +2517,26 @@
       <formseq>35</formseq>
       <ordem>1</ordem>
       <seq>8</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="158">
+      <abaseq>254</abaseq>
+      <datacad>1900-01-01</datacad>
+      <formseq>55</formseq>
+      <ordem>1</ordem>
+      <seq>158</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="9">
+      <abaseq>254</abaseq>
+      <datacad>2014-01-14</datacad>
+      <formseq>42</formseq>
+      <ordem>1</ordem>
+      <seq>9</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

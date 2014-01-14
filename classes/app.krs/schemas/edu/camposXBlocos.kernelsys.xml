@@ -6841,18 +6841,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="787">
-      <blocseq>239</blocseq>
-      <campseq>779</campseq>
-      <datacad>1900-01-01</datacad>
-      <formato/>
-      <mostrarcampo>S</mostrarcampo>
-      <ordem>5</ordem>
-      <seq>787</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="714">
       <blocseq>242</blocseq>
       <campseq>705</campseq>
@@ -6957,18 +6945,6 @@
       <mostrarcampo>S</mostrarcampo>
       <ordem>4</ordem>
       <seq>824</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="825">
-      <blocseq>245</blocseq>
-      <campseq>815</campseq>
-      <datacad>1900-01-01</datacad>
-      <formato/>
-      <mostrarcampo>S</mostrarcampo>
-      <ordem>5</ordem>
-      <seq>825</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

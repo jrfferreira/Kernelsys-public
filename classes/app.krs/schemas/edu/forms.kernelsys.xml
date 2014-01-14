@@ -2984,25 +2984,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="18">
-      <autosave>0</autosave>
-      <botcancelar>0</botcancelar>
-      <botconcluir>0</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao/>
-      <formainclude>multiple</formainclude>
-      <formid>diarioEletronico</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq/>
-      <listseq>193</listseq>
-      <nivel>1</nivel>
-      <nomeform>Diário Elentrônico</nomeform>
-      <seq>18</seq>
-      <statseq>1</statseq>
-      <tabseq>12</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="21">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3706,25 +3687,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="58">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao>700;500</dimensao>
-      <formainclude>one</formainclude>
-      <formid>diarioCoordenacao</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq/>
-      <listseq>199</listseq>
-      <nivel>1</nivel>
-      <nomeform>Diario Coordenacao</nomeform>
-      <seq>58</seq>
-      <statseq>1</statseq>
-      <tabseq>12</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="395">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3820,6 +3782,25 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="58">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>1900-01-01</datacad>
+      <dimensao>700;500</dimensao>
+      <formainclude>one</formainclude>
+      <formid>diarioCoordenacao</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq>199</listseq>
+      <nivel>1</nivel>
+      <nomeform>Lançamendo de Aulas</nomeform>
+      <seq>58</seq>
+      <statseq>1</statseq>
+      <tabseq>12</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="8">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3912,6 +3893,63 @@
       <seq>475</seq>
       <statseq>1</statseq>
       <tabseq>9</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="18">
+      <autosave>0</autosave>
+      <botcancelar>0</botcancelar>
+      <botconcluir>0</botconcluir>
+      <datacad>1900-01-01</datacad>
+      <dimensao/>
+      <formainclude>multiple</formainclude>
+      <formid>diarioEletronico</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq>193</listseq>
+      <nivel>1</nivel>
+      <nomeform>Lançamendo de Aulas</nomeform>
+      <seq>18</seq>
+      <statseq>1</statseq>
+      <tabseq>12</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="55">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>2014-01-14</datacad>
+      <dimensao>700;500</dimensao>
+      <formainclude>multiple</formainclude>
+      <formid>lancamentoFaltas</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq>57</listseq>
+      <nivel>1</nivel>
+      <nomeform>Lançamento de Faltas</nomeform>
+      <seq>55</seq>
+      <statseq>1</statseq>
+      <tabseq>28</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="42">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>2014-01-14</datacad>
+      <dimensao>700;500</dimensao>
+      <formainclude>multiple</formainclude>
+      <formid>lancamentoFaltas</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq>56</listseq>
+      <nivel>1</nivel>
+      <nomeform>Lançamento de Faltas</nomeform>
+      <seq>42</seq>
+      <statseq>1</statseq>
+      <tabseq>28</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

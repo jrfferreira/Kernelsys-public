@@ -93,7 +93,7 @@ class TForms{
     /**
      *
      */
-    public function setForm($validRegister){
+    public function setForm($validRegister = false){
     	
     	// Dados Formulário
         $obsession = new TSession();
@@ -366,7 +366,7 @@ class TForms{
     /*método getForm
     *Retorna o formulario montado com suas respequitivas abas
     */
-    public function getForm($validRegister){
+    public function getForm($validRegister = false){
          $form = $this->setForm($validRegister);
          if($this->dados){
             $form->setData($this->dados);

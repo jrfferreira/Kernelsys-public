@@ -2141,16 +2141,6 @@
       <usuaseq>1</usuaseq>
       <valor>200</valor>
     </row>
-    <row seq="891">
-      <campseq>779</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>setAction</metodo>
-      <seq>891</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>onFormOpen(260,this)</valor>
-    </row>
     <row seq="736">
       <campseq>726</campseq>
       <datacad>1900-01-01</datacad>
@@ -5593,16 +5583,6 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>300</valor>
-    </row>
-    <row seq="847">
-      <campseq>815</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>setAction</metodo>
-      <seq>847</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>onFormOpen(260,this)</valor>
     </row>
     <row seq="886">
       <campseq>854</campseq>

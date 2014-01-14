@@ -422,6 +422,11 @@ class TMain {
 			    			foreach($regChilds as $regChd){
 			    				
 			    				foreach($regChd as $idcampo=>$reg){
+			    					
+			    					//Adiciona sequencial na coluna de registro filho caso exista
+			    					if($this->header[TConstantes::HEAD_COLUNAFK] && $this->header[TConstantes::SEQUENCIAL] && !$dadosChilds[$reg[TConstantes::ENTIDADE]][$this->header[TConstantes::HEAD_COLUNAFK]]) {			    					
+			    						$dadosChilds[$reg[TConstantes::ENTIDADE]][$this->header[TConstantes::HEAD_COLUNAFK]] = $this->header[TConstantes::SEQUENCIAL];
+			    					}
 			    								    								    							    				
 			    					//agrupa campos por entidade para manter no banco
     								$dadosChilds[$reg[TConstantes::ENTIDADE]][$idcampo] = $reg['valor'];
@@ -451,7 +456,15 @@ class TMain {
 		    	
 		    	$tables = array();
 		    	$seqs = array();
+		    	
+		    		    	
 		    	while($entidade = $retKrs->fetchObject()){
+		    		
+		    		//Insere o sequencial do registro atual caso exista
+		    		if($entidade->tabela == $this->header[TConstantes::ENTIDADE]){
+		    			$seqs[$entidade->seq] = $this->header[TConstantes::SEQUENCIAL];
+		    		}
+		    		
 		    		if(!$entidade->tabseq){
 		    			$tables = array_merge(array($entidade->seq=>$entidade),$tables); //coloca no inicio
 		    		}else{
@@ -467,11 +480,11 @@ class TMain {
 		   				if($entData->tabseq && $seqs[$entData->tabseq]){
 		   					$dado[$this->header[TConstantes::HEAD_COLUNAFK]] = $seqs[$entData->tabseq];
 		   				}	   				
-		   				$seqs[$entData->seq] = $this->loadSave($entidade, $dado);	
-			    		if($entidade == $this->entidadeForm){
-			    			$seqAtual = $seqs[$entData->seq];
-			    		}
-		   			}
+		   				$seqs[$entData->seq] = $this->loadSave($entidade, $dado);
+		   			}	
+		    		if($entidade == $this->entidadeForm){
+		    			$seqAtual = $seqs[$entData->seq];
+		    		}
 		    	}
 		    	
 		    	if(count($dados)){

@@ -167,3 +167,47 @@ ALTER TABLE view_turma_disciplina
 ALTER TABLE dbturma_disciplina
    ADD COLUMN cargahoraria numeric NOT NULL DEFAULT 1;
 	
+	
+	
+DROP VIEW view_turma_disciplina_aula;
+CREATE OR REPLACE VIEW view_turma_disciplina_aula AS 
+ SELECT 
+ t1.seq, 
+ t1.unidseq, 
+ t1.usuaseq, 
+ t1.tudiseq, 
+ to_char(t1.dataaula::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataaula, 
+ t1.conteudo, 
+ t1.frequencia, 
+ t1.obs,
+ t0.turmseq, 
+ t3.cursseq, 
+ t0.discseq, 
+ t0.profseq, 
+ t0.frequencia AS frequenciatotal,
+ t6.nome AS sala, 
+ t7.nome AS nomecurso, 
+ t3.titulo AS nometurma, 
+ t4.titulo AS nomedisciplina, 
+ t4.cargahoraria, 
+ t5.pessnmrz AS nomeprofessor, 
+ ( SELECT count(dbaluno_disciplina.seq) AS count
+           FROM dbaluno_disciplina
+          WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos, 
+ t0.salaseq, 
+ t3.sttuseq, 
+ to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
+ t999.seq AS statseq, 
+ t999.statdesc 
+   FROM dbturma_disciplina_aula t1
+   LEFT JOIN dbturma_disciplina t0 ON t0.seq = t1.tudiseq
+   LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
+   LEFT JOIN dbcurso t2 ON t2.seq = t3.cursseq
+   LEFT JOIN dbprojeto_curso t7 ON t7.seq = t2.pjcuseq
+   LEFT JOIN dbdisciplina t4 ON t4.seq = t0.discseq
+   LEFT JOIN dbpessoa t5 ON t5.seq = (( SELECT t9.pessseq
+   FROM dbprofessor t9
+  WHERE t9.seq = t0.profseq))
+   LEFT JOIN dbsala t6 ON t6.seq = t0.salaseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq;
+	
