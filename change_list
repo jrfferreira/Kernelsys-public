@@ -210,4 +210,6 @@ CREATE OR REPLACE VIEW view_turma_disciplina_aula AS
   WHERE t9.seq = t0.profseq))
    LEFT JOIN dbsala t6 ON t6.seq = t0.salaseq
    LEFT JOIN dbstatus t999 ON t999.seq = t1.statseq;
-	
+
+ALTER TABLE dbaproveitamento_disciplina
+   ADD COLUMN instituicao character varying(200);

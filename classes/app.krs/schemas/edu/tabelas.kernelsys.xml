@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <tabelas>
-    <row seq="100">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>100</seq>
-      <statseq>1</statseq>
-      <tabela>dbaproveitamento_disciplina</tabela>
-      <tabelaView>--SEM USO-- dbalunos_disciplinas_aproveitamentos</tabelaView>
-      <tabseq>56</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="102">
       <colunafilho>0</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -1043,6 +1032,17 @@
       <tabela>dbtelefone</tabela>
       <tabelaView>view_telefone</tabelaView>
       <tabseq>1</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="100">
+      <colunafilho>0</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>100</seq>
+      <statseq>1</statseq>
+      <tabela>dbaproveitamento_disciplina</tabela>
+      <tabelaView>dbaproveitamento_disciplina</tabelaView>
+      <tabseq>56</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

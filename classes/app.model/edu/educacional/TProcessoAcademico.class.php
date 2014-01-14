@@ -75,7 +75,7 @@ class TProcessoAcademico {
     public function viewDetalheProcessoAcademico($codigo,$formseq) {
                     $dbo = new TDbo(TConstantes::DBPROCESSO_ACADEMICO);
                     $crit = new TCriteria();
-                    $crit->add(new TFilter('formulario','=',$formseq));
+                    $crit->add(new TFilter('formseq','=',$formseq));
                     $ret = $dbo->select('*',$crit);
                     $processo = $ret->fetch();
                     $retorno = new TElement('div');

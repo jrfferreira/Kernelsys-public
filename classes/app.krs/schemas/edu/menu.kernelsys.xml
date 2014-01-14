@@ -1021,5 +1021,20 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="126">
+      <argumento>458</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>460</formseq>
+      <labelmodulo>Processos Acadêmicos</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>2</modseq>
+      <modulo>alunosProcAcademicos</modulo>
+      <nivel>2</nivel>
+      <ordem>1</ordem>
+      <seq>126</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </menu>
 </kernelsys>

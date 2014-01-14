@@ -733,8 +733,6 @@ class TSecretaria {
             if($codigoaluno) {
                	$TAluno = new TAluno();            	
                 $obAluno = $TAluno->getAluno($codigoaluno);
-                $TTurma = new TTurma();
-                $obTurma = $TTurma->getTurma($obAluno->turmseq);
             	
                 //$getAcademico = $TAluno->getAcademico($codigoaluno);
                 $tabHead = new TElement("fieldset");
@@ -757,12 +755,12 @@ class TSecretaria {
                 $obFieds->geraCampo("Curso:", 'curso', "TEntry", '');
                 $obFieds->setProperty('curso', 'disabled', 'disabled');
                 $obFieds->setProperty('curso', 'size', '60');
-                $obFieds->setValue("curso", $obTurma->nomecurso);
+                $obFieds->setValue("curso", $obAluno->nomecurso);
 
                 $obFieds->geraCampo("Turma:", 'turma', "TEntry", '');
                 $obFieds->setProperty('turma', 'disabled', 'disabled');
                 $obFieds->setProperty('turma', 'size', '60');
-                $obFieds->setValue("turma", $obTurma->titulo);
+                $obFieds->setValue("turma", $obAluno->nometurma);
 
                 $content = new TElement('div');
                 $content->class = "ui_bloco_conteudo";
@@ -806,7 +804,7 @@ class TSecretaria {
                 $acao->style="font-size: 12px; vertical-align: middle;";
                 $acao->add($img);
                 $acao->add(' Iniciar');
-                    $acao->onclick = "prossExe('onEdit','form','{$vl['formulario']}','{$codigoaluno}','respostaAproveitamento','{$confirmacao}')";
+                    $acao->onclick = "prossExe('onEdit','form','{$vl['formseq']}','{$codigoaluno}','respostaAproveitamento','{$confirmacao}')";
                     $tempmenu['ac'] = $acao;
                     $tempmenu['processo'] = '&nbsp;&nbsp;'.$vl['titulo'];
                     $datagrid->addItem($tempmenu);
