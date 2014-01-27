@@ -1271,16 +1271,6 @@
       <usuaseq>1</usuaseq>
       <valor>450;60</valor>
     </row>
-    <row seq="187">
-      <campseq>200</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>addItems</metodo>
-      <seq>187</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>=&gt;;Conta Bancária=&gt;Conta Bancária;Conta Caixa=&gt;Conta Caixa</valor>
-    </row>
     <row seq="188">
       <campseq>201</campseq>
       <datacad>1900-01-01</datacad>
@@ -3129,16 +3119,6 @@
       <usuaseq>1</usuaseq>
       <valor>300</valor>
     </row>
-    <row seq="372">
-      <campseq>379</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>setSize</metodo>
-      <seq>372</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>450</valor>
-    </row>
     <row seq="373">
       <campseq>380</campseq>
       <datacad>1900-01-01</datacad>
@@ -3148,16 +3128,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>200</valor>
-    </row>
-    <row seq="374">
-      <campseq>381</campseq>
-      <datacad>1900-01-01</datacad>
-      <metodo>setSize</metodo>
-      <seq>374</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valor>450;100</valor>
     </row>
     <row seq="375">
       <campseq>382</campseq>
@@ -3818,6 +3788,16 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>180</valor>
+    </row>
+    <row seq="374">
+      <campseq>381</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>setSize</metodo>
+      <seq>374</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>200</valor>
     </row>
     <row seq="451">
       <campseq>453</campseq>
@@ -8988,6 +8968,56 @@ Zootecnia=&gt;Zootecnia; </valor>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valor>setValorParcelaTurma('valortotal','parcelas','valormensal',event)</valor>
+    </row>
+    <row seq="187">
+      <campseq>200</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>addItems</metodo>
+      <seq>187</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>B=&gt;Conta Bancária;C=&gt;Conta Caixa</valor>
+    </row>
+    <row seq="372">
+      <campseq>379</campseq>
+      <datacad>1900-01-01</datacad>
+      <metodo>setSize</metodo>
+      <seq>372</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>200</valor>
+    </row>
+    <row seq="491">
+      <campseq>379</campseq>
+      <datacad>2014-01-27</datacad>
+      <metodo>addItems</metodo>
+      <seq>491</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,nomeconta from dbconta_financeira where tipo = 'B' and statseq != 9 order by nomeconta</valor>
+    </row>
+    <row seq="501">
+      <campseq>380</campseq>
+      <datacad>2014-01-27</datacad>
+      <metodo>addItems</metodo>
+      <seq>501</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,nomeconta from dbconta_financeira where tipo = 'B' and statseq != 9 order by nomeconta</valor>
+    </row>
+    <row seq="503">
+      <campseq>381</campseq>
+      <datacad>2014-01-27</datacad>
+      <metodo>addItems</metodo>
+      <seq>503</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,nomeconta from dbconta_financeira where statseq != 9 order by nomeconta</valor>
     </row>
   </camposXPropriedades>
 </kernelsys>

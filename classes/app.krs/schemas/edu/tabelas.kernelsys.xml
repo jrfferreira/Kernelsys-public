@@ -1046,5 +1046,16 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="13">
+      <colunafilho>boesseq</colunafilho>
+      <datacad>2014-01-27</datacad>
+      <seq>13</seq>
+      <statseq>1</statseq>
+      <tabela>dbboleto_estrutura</tabela>
+      <tabelaView>dbboleto_estrutura</tabelaView>
+      <tabseq>24</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </tabelas>
 </kernelsys>

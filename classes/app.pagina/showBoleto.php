@@ -116,7 +116,7 @@ if($obEndereco) {
 
 
 //objeto Boleto
-$obBl = new TSetBoleto($obConta->seq);
+$obBl = new TSetBoleto($obConta->seq,$obConta->cofiseq);
 $obBl->setSacado($dadosSacado);
 $obBl->setValor($obConta->valorinicial);
 

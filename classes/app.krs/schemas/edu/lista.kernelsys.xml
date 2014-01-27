@@ -5025,38 +5025,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="145">
-      <acdeletar>0</acdeletar>
-      <aceditar>0</aceditar>
-      <acenviar>1</acenviar>
-      <acfiltro>1</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>tipo/=/AND/C/string;stpaseq/in/AND/(1,3,5)/numeric</filtro>
-      <filtropai>0</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>145</formseq>
-      <incontrol/>
-      <label>Contas a Receber</label>
-      <lista>listaContasCredito</lista>
-      <listseq>145</listseq>
-      <nivel>2</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valoratual,valorrealview=valoratual,vencimento=vencimento,plcoseq=plcoseq,transeq=transeq,tipo=tipo</pesquisa>
-      <required/>
-      <seq>145</seq>
-      <statseq>1</statseq>
-      <tabseq>65</tabseq>
-      <tipo>pesq</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="187">
       <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
@@ -5725,6 +5693,38 @@
       <statseq>1</statseq>
       <tabseq>28</tabseq>
       <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="145">
+      <acdeletar>0</acdeletar>
+      <aceditar>0</aceditar>
+      <acenviar>1</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>1900-01-01</datacad>
+      <filtro>tipo/=/AND/C/string;stpaseq/in/AND/(1,3,5)/numeric</filtro>
+      <filtropai>0</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>145</formseq>
+      <incontrol/>
+      <label>Contas a Receber</label>
+      <lista>listaContasCredito</lista>
+      <listseq>145</listseq>
+      <nivel>2</nivel>
+      <obapendice>-</obapendice>
+      <ordem>seq/desc</ordem>
+      <pesquisa>parcseq=seq,parcseqLabel=seq,pessseq=pessseq,valorreal=valoratual,valorrealview=valoratual,vencimento=vencimento,plcoseq=plcoseq,transeq=transeq,tipo=tipo,cofiseq=cofiseq</pesquisa>
+      <required/>
+      <seq>145</seq>
+      <statseq>1</statseq>
+      <tabseq>65</tabseq>
+      <tipo>pesq</tipo>
       <trigger/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

@@ -396,6 +396,13 @@ class TTransacao {
         }
         $this->cols['pessseq'] = $valor;
     }
+    
+    public function setContaFinanceira($cofiseq) {
+    	if (!$cofiseq) {
+    		new setException('A conta financeira relacionada a transação é inválida cofiseq[' . $cofiseq . '] - TTransacao.class.php');
+    	}
+    	$this->cols['cofiseq'] = $cofiseq;
+    }
 
     /**
      * Instancia o valor nominal da transação
@@ -637,6 +644,7 @@ class TTransacao {
                 $dadosConta['valorinicial'] = $valorNominalConta;
                 $dadosConta['valoratual'] = $valorNominalConta;
                 $dadosConta['instrucoespagamento'] = $this->instrucoesPagamento;
+                $dadosConta['cofiseq'] = $this->cols['cofiseq'];
                 $dadosConta['statseq'] = '1';
 
                 for ($np = $this->setPrimeiraParcela; $np <= $this->numContas; $np++) {

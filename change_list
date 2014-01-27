@@ -213,3 +213,84 @@ CREATE OR REPLACE VIEW view_turma_disciplina_aula AS
 
 ALTER TABLE dbaproveitamento_disciplina
    ADD COLUMN instituicao character varying(200);
+   
+-- Alterações a partir de 24/01/2014
+
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN template character varying(200) NOT NULL DEFAULT '../../sysboleto/boleto_petrus.php';
+
+
+ALTER TABLE dbturma
+   ADD COLUMN cofiseq integer;
+   
+ALTER TABLE dbturma
+  ADD CONSTRAINT fk_cofi_parc_cofiseq FOREIGN KEY (cofiseq)
+  REFERENCES dbconta_financeira (seq) MATCH SIMPLE
+  ON UPDATE RESTRICT ON DELETE RESTRICT;
+  
+  update dbturma set cofiseq = 3;
+  
+ALTER TABLE dbturma
+   ALTER COLUMN cofiseq SET NOT NULL;
+   
+ALTER TABLE dbtransacao
+   ADD COLUMN cofiseq integer;
+   
+ALTER TABLE dbtransacao
+  ADD CONSTRAINT fk_cofi_tran_cofiseq FOREIGN KEY (cofiseq)
+  REFERENCES dbconta_financeira (seq) MATCH SIMPLE
+  ON UPDATE RESTRICT ON DELETE RESTRICT;
+  
+  update dbtransacao set cofiseq = 3;
+  
+ALTER TABLE dbtransacao
+   ALTER COLUMN cofiseq SET NOT NULL;
+
+   ALTER TABLE dbparcela
+   ADD COLUMN cofiseq integer;
+   
+ALTER TABLE dbparcela
+  ADD CONSTRAINT fk_cofi_parc_cofiseq FOREIGN KEY (cofiseq)
+  REFERENCES dbconta_financeira (seq) MATCH SIMPLE
+  ON UPDATE RESTRICT ON DELETE RESTRICT;
+  
+  update dbparcela set cofiseq = 3;
+  
+ALTER TABLE dbparcela
+   ALTER COLUMN cofiseq SET NOT NULL;
+   
+CREATE OR REPLACE VIEW view_inscricao AS 
+ SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.transeq, t0.turmseq, t4.seq AS cursseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.pessnmrz AS nomepessoa, t2.pessnmrf, t3.titulo AS nometurma, t3.datainicio, t3.valortaxa, t3.parcelas, t3.valormatricula, t3.valormensal AS valorparcelas, t5.nome AS nomecurso, t0.vencimentomatricula, t0.vencimentotaxa, t3.datainiciovencimentos, t3.padraovencimento, t3.cofiseq
+   FROM dbinscricao t0
+   LEFT JOIN dbpessoa t2 ON t2.seq = t0.pessseq
+   LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
+   LEFT JOIN dbcurso t4 ON t4.seq = t3.cursseq
+   LEFT JOIN dbprojeto_curso t5 ON t5.seq = t4.pjcuseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
+   
+   
+update dbboleto_estrutura set cofiseq = 3;
+
+-- View: view_parcela
+
+-- DROP VIEW view_parcela;
+
+CREATE OR REPLACE VIEW view_parcela AS 
+ SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.transeq, t1.pessseq, t0.plcoseq, t0.tipo, t0.valorinicial, t0.valoratual, t0.numero, t0.desconto, to_char(t0.vencimento::timestamp with time zone, 'DD/MM/YYYY'::text) AS vencimento, t0.obs, t0.stpaseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t2.pessnmrz AS nomepessoa, t3.nomeconta AS nomeplanoconta, t0.instrucoespagamento, t999.seq AS statseq, t999.statdesc AS statdescr, t5.valorfinal AS valorfinal_credito, t6.valorfinal AS valorfinal_debito, t8.titulo AS stpadesc,t0.cofiseq
+   FROM dbparcela t0
+   LEFT JOIN dbtransacao t1 ON t1.seq = t0.transeq
+   LEFT JOIN dbpessoa t2 ON t2.seq = t1.pessseq
+   LEFT JOIN dbplano_conta t3 ON t3.seq = t0.plcoseq
+   LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq
+   LEFT JOIN dbsituacao_parcela t8 ON t8.seq = t0.stpaseq
+   LEFT JOIN ( SELECT sum(dbcaixa.valorfinal) AS valorfinal, dbcaixa.parcseq
+   FROM dbcaixa
+  WHERE dbcaixa.tipo = 'C'::bpchar
+  GROUP BY dbcaixa.parcseq) t5 ON t0.seq = t5.parcseq
+   LEFT JOIN ( SELECT sum(dbcaixa.valorfinal) AS valorfinal, dbcaixa.parcseq
+   FROM dbcaixa
+  WHERE dbcaixa.tipo = 'D'::bpchar
+  GROUP BY dbcaixa.parcseq) t6 ON t0.seq = t6.parcseq;
+
+
+   

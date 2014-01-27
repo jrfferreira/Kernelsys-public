@@ -5524,48 +5524,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="111">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeConta</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Conta</label>
-      <largura>300</largura>
-      <link>0</link>
-      <listseq>151</listseq>
-      <ordem>1</ordem>
-      <seq>111</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="112">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>tipoConta</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Tipo da Conta</label>
-      <largura>150</largura>
-      <link>0</link>
-      <listseq>151</listseq>
-      <ordem>2</ordem>
-      <seq>112</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="113">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
@@ -5587,27 +5545,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="114">
-      <alinhadados>center</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>numConta</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>N da Conta</label>
-      <largura>70</largura>
-      <link>0</link>
-      <listseq>151</listseq>
-      <ordem>4</ordem>
-      <seq>114</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="115">
       <alinhadados>center</alinhadados>
       <alinhalabel>center</alinhalabel>
@@ -5621,27 +5558,6 @@
       <listseq>151</listseq>
       <ordem>5</ordem>
       <seq>115</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="322">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeConta</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Conta</label>
-      <largura>200</largura>
-      <link>0</link>
-      <listseq>151</listseq>
-      <ordem>0</ordem>
-      <seq>322</seq>
       <statseq>1</statseq>
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
@@ -5835,27 +5751,6 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="116">
-      <alinhadados>center</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>saldoInicial</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Saldo Inícial</label>
-      <largura>80</largura>
-      <link>0</link>
-      <listseq>151</listseq>
-      <ordem>6</ordem>
-      <seq>116</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
@@ -6461,6 +6356,90 @@
       <listseq>154</listseq>
       <ordem>15</ordem>
       <seq>311</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="112">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>tipo</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Tipo da Conta</label>
+      <largura>150</largura>
+      <link>0</link>
+      <listseq>151</listseq>
+      <ordem>2</ordem>
+      <seq>112</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="114">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>numconta</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>N da Conta</label>
+      <largura>70</largura>
+      <link>0</link>
+      <listseq>151</listseq>
+      <ordem>4</ordem>
+      <seq>114</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="116">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>saldoinicial</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Saldo Inícial</label>
+      <largura>80</largura>
+      <link>0</link>
+      <listseq>151</listseq>
+      <ordem>6</ordem>
+      <seq>116</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="322">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomeconta</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Conta</label>
+      <largura>200</largura>
+      <link>0</link>
+      <listseq>151</listseq>
+      <ordem>0</ordem>
+      <seq>322</seq>
       <statseq>1</statseq>
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
@@ -17280,6 +17259,27 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="111">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomeconta</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Conta</label>
+      <largura>300</largura>
+      <link>0</link>
+      <listseq>151</listseq>
+      <ordem>1</ordem>
+      <seq>111</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>

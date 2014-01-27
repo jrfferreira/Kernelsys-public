@@ -11,14 +11,16 @@ class TSetBoleto {
     private $infoSacado 	= NULL;
     //dados gerados pelo boleto
     private $dadosBoleto = NULL;
+    
+    public $boleto = NULL;
 
-    public function __construct($parcseq) {
+    public function __construct($parcseq,$cofiseq) {
 
         // estarta o buffer de saida
         //ob_start();
 
         $criteriaInfo = new TCriteria();
-        $criteriaInfo->add(new TFilter('statseq','=','1'));
+        $criteriaInfo->add(new TFilter('cofiseq','=',$cofiseq));
         $dboInfo = new TDbo(TConstantes::DBBOLETO_ESTRUTURA);
         $qDados = $dboInfo->select("*", $criteriaInfo);
 
@@ -29,10 +31,10 @@ class TSetBoleto {
 
         // gera registro do boleto na base de dados dbduplicatas
         $dboInDuplic = new TDbo(TConstantes::DBBOLETO);
-        $this->Duplicata = $dboInDuplic->insert(array("statseq"=>"1",'parcseq'=>$parcseq));
+        $this->boleto = $dboInDuplic->insert(array("statseq"=>"1",'parcseq'=>$parcseq));
 
-        if($this->Duplicata) {
-            $this->seq = $this->Duplicata['id'];
+        if($this->boleto) {
+            $this->seq = $this->boleto['seq'];
         }
         else {
             exit('O historico do boleto não pode ser gerado');
@@ -118,7 +120,7 @@ class TSetBoleto {
         //=====================================================
         //dados do cedente
         $dadosbl = $this->dadosC;
-        $dadosbl['NumDocumento'] = $this->Duplicata['seq'];
+        $dadosbl['NumDocumento'] = $this->boleto['seq'];
 
 
         //dados do sacado
@@ -150,15 +152,9 @@ class TSetBoleto {
         //formata data para Impressão do boleto
         $data_venc_formatada = $this->mascara->setData($this->data_venc);
 
-        $unidade = new TDbo(TConstantes::DBUNIDADE_PARAMETRO);
-        $criteriaUnidade = new TCriteria();
-        $criteriaUnidade->add(new TFilter('parametro','=','padrao_boleto'));
-        $retUnidade = $unidade->select("valor", $criteriaUnidade);
-        $obUnidade = $retUnidade->fetchObject();
-
 
         //Imprime o boleto ========================
-        include_once("$obUnidade->valor");
+        include_once($this->dadosC['template']);
         $this->bkpHTML = $htmlBoleto;
         //===========================================
 

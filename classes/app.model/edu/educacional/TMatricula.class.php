@@ -11,7 +11,7 @@ class TMatricula {
     * Executa primeira matrícula do aluno
     * param <type> $codigoinscricao
     */
-    public function setMatricula($codigoinscricao, $datainiciovencimentos, $padraovencimento){
+    public function setMatricula($codigoinscricao, $datainiciovencimentos, $padraovencimento, $cofiseq){
         try{
 
             if(!$codigoinscricao){
@@ -79,6 +79,7 @@ class TMatricula {
              //$trasacao->setDataFixa($dataFixa);
              $trasacao->setVencimento($datainiciovencimentos);
              $trasacao->setInstrincoesPagamento($infoDescontos);
+             $trasacao->setContaFinanceira($cofiseq);
              $dias = null;
              if($padraovencimento == 0){
                  $trasacao->setPadraoVencimento();
