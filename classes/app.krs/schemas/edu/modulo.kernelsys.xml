@@ -100,5 +100,16 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="12">
+      <datacad>1900-01-01</datacad>
+      <labelmodulo>Biblioteca</labelmodulo>
+      <modulo>biblioteca</modulo>
+      <nivel>1</nivel>
+      <ordem>10</ordem>
+      <seq>12</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </modulo>
 </kernelsys>

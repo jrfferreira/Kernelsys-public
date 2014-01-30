@@ -526,6 +526,66 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="110">
+      <argumento>265</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>264</formseq>
+      <labelmodulo>Locação</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>locacaoLivro</modulo>
+      <nivel>2</nivel>
+      <ordem>2</ordem>
+      <seq>110</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="111">
+      <argumento>268</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>266</formseq>
+      <labelmodulo>Reservas</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>reservaLivro</modulo>
+      <nivel>2</nivel>
+      <ordem>3</ordem>
+      <seq>111</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="112">
+      <argumento>269</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>267</formseq>
+      <labelmodulo>Devoluções</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>devoucaoLivro</modulo>
+      <nivel>2</nivel>
+      <ordem>4</ordem>
+      <seq>112</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="114">
+      <argumento>271</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>270</formseq>
+      <labelmodulo>Classificação CDU</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>classificacaoCDU</modulo>
+      <nivel>2</nivel>
+      <ordem>6</ordem>
+      <seq>114</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="75">
       <argumento>176</argumento>
       <datacad>1900-01-01</datacad>
@@ -1032,6 +1092,21 @@
       <nivel>2</nivel>
       <ordem>1</ordem>
       <seq>126</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="101">
+      <argumento>237</argumento>
+      <datacad>1900-01-01</datacad>
+      <formseq>83</formseq>
+      <labelmodulo>Controle de Livros</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>biblioteca</modulo>
+      <nivel>2</nivel>
+      <ordem>7</ordem>
+      <seq>101</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
