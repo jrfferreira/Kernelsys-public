@@ -5773,18 +5773,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="830">
-      <blocseq>199</blocseq>
-      <campseq>820</campseq>
-      <datacad>1900-01-01</datacad>
-      <formato/>
-      <mostrarcampo>S</mostrarcampo>
-      <ordem>5</ordem>
-      <seq>830</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="833">
       <blocseq>199</blocseq>
       <campseq>823</campseq>

@@ -376,6 +376,31 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="819">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>tconseq</campo>
+      <colunadb>tconseq</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Tipo de convênio:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>819</seq>
+      <statseq>1</statseq>
+      <tabseq>89</tabseq>
+      <tpcaseq>2</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="436">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -496,31 +521,6 @@
       <statseq>1</statseq>
       <tabseq>89</tabseq>
       <tpcaseq>9</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="819">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>tipoconvenio</campo>
-      <colunadb>tipoconvenio</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Tipo de convênio:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>819</seq>
-      <statseq>1</statseq>
-      <tabseq>89</tabseq>
-      <tpcaseq>2</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -12901,31 +12901,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="909">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>vagas</campo>
-      <colunadb>vagas</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Vagas:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>909</seq>
-      <statseq>1</statseq>
-      <tabseq>11</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="697">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -13845,6 +13820,31 @@
       <seq>936</seq>
       <statseq>1</statseq>
       <tabseq>100</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="909">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>vagas</campo>
+      <colunadb>vagas</colunadb>
+      <datacad>1900-01-01</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Vagas:</label>
+      <manter>1</manter>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>909</seq>
+      <statseq>1</statseq>
+      <tabseq>11</tabseq>
       <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
