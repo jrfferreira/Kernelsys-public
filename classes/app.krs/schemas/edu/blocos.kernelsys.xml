@@ -811,21 +811,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="210">
-      <blocoheight>350px</blocoheight>
-      <blocoid>bloco_inforDisciplinasTurma</blocoid>
-      <datacad>1900-01-01</datacad>
-      <formato>lst</formato>
-      <formseq>395</formseq>
-      <frmpseq>335</frmpseq>
-      <nomebloco>Disciplinas Disponiveis</nomebloco>
-      <obapendice/>
-      <seq>210</seq>
-      <statseq>1</statseq>
-      <tabseq>10</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="201">
       <blocoheight>150px</blocoheight>
       <blocoid>blocDescProgressivos</blocoid>
@@ -3943,6 +3928,21 @@
       <seq>42</seq>
       <statseq>1</statseq>
       <tabseq>21</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="210">
+      <blocoheight>350px</blocoheight>
+      <blocoid>bloco_inforDisciplinasTurma</blocoid>
+      <datacad>1900-01-01</datacad>
+      <formato>lst</formato>
+      <formseq>395</formseq>
+      <frmpseq/>
+      <nomebloco>Disciplinas Disponiveis</nomebloco>
+      <obapendice/>
+      <seq>210</seq>
+      <statseq>1</statseq>
+      <tabseq>10</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

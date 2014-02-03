@@ -293,4 +293,6 @@ CREATE OR REPLACE VIEW view_parcela AS
   GROUP BY dbcaixa.parcseq) t6 ON t0.seq = t6.parcseq;
 
 
+ALTER TABLE dbconvenio
+   ALTER COLUMN pessseq DROP NOT NULL;
    

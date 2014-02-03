@@ -334,7 +334,7 @@ class TTurma {
      /**
      *
      * @param string $formseq
-     */
+     */	
     public function addTurmaDisciplina($formseq){
     	
         $obCurso = false;
@@ -563,10 +563,10 @@ class TTurma {
 
     public function getCursoSeq($idLista){
         $header = new TSetHeader();
-        //$headerLista = $header->getHead($idLista,'formseq');
+        $headerLista = $header->getHead($idLista);
         //$headerForm = $header->getHead($headerLista,'frmpseq');
         //$headerForm = $header->getHead($headerForm,'frmpseq');
         $headerForm = $header->getHead('5','camposSession');
-        return $headerForm['cursseq']['valor'];
+        return $headerForm['pjcuseq']['valor'];
     }
 }

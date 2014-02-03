@@ -3687,25 +3687,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="395">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao>900;500</dimensao>
-      <formainclude>multiple</formainclude>
-      <formid>listaDisciplinasTurma</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq>335</formseq>
-      <listseq>396</listseq>
-      <nivel>1</nivel>
-      <nomeform>Disciplinas</nomeform>
-      <seq>395</seq>
-      <statseq>1</statseq>
-      <tabseq>10</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="2">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3798,6 +3779,25 @@
       <seq>58</seq>
       <statseq>1</statseq>
       <tabseq>12</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="395">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>1900-01-01</datacad>
+      <dimensao>900;500</dimensao>
+      <formainclude>multiple</formainclude>
+      <formid>listaDisciplinasTurma</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq>135</formseq>
+      <listseq>396</listseq>
+      <nivel>1</nivel>
+      <nomeform>Disciplinas</nomeform>
+      <seq>395</seq>
+      <statseq>1</statseq>
+      <tabseq>10</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

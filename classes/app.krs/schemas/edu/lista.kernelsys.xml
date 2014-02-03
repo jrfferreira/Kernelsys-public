@@ -5421,8 +5421,8 @@
       <acviews>0</acviews>
       <datacad>1900-01-01</datacad>
       <filtro>pjcuseq/=/AND/TTurma/getCursoSeq/1/numeric</filtro>
-      <filtropai>pjcuseq</filtropai>
-      <formainclude>one</formainclude>
+      <filtropai>0</filtropai>
+      <formainclude>multiple</formainclude>
       <formseq>395</formseq>
       <incontrol/>
       <label>Disciplinas</label>
