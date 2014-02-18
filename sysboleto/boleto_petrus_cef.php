@@ -76,7 +76,7 @@ $dadosboleto["especie_doc"] = "";
 
 // não ALTERAR!
 include("include/funcoes_cef.php"); 
-include("include/layout_petrus.php");
+include("include/layout_petrus_cef.php");
 echo $htmlBoleto;
 //include_once("GetDadosBL.php");
 ?>

@@ -295,20 +295,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="53">
-      <abaid>dadosAdministrstatseqs</abaid>
-      <action>-</action>
-      <datacad>1900-01-01</datacad>
-      <impressao>1</impressao>
-      <nomeaba>Dados Administrstatseqs</nomeaba>
-      <obapendice>-</obapendice>
-      <ordem>0</ordem>
-      <requireRegister/>
-      <seq>53</seq>
-      <statseq>1</statseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="54">
       <abaid>dadosCurriculares</abaid>
       <action>-</action>
@@ -3721,6 +3707,20 @@
       <ordem>0</ordem>
       <requireRegister>1</requireRegister>
       <seq>21</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="53">
+      <abaid>dadosAdministrstatseqs</abaid>
+      <action>-</action>
+      <datacad>1900-01-01</datacad>
+      <impressao>1</impressao>
+      <nomeaba>Dados Administrativos</nomeaba>
+      <obapendice>-</obapendice>
+      <ordem>0</ordem>
+      <requireRegister/>
+      <seq>53</seq>
       <statseq>1</statseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>

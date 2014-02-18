@@ -296,3 +296,15 @@ CREATE OR REPLACE VIEW view_parcela AS
 ALTER TABLE dbconvenio
    ALTER COLUMN pessseq DROP NOT NULL;
    
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN  prefixo_nosso_numero character varying(20);
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN   digitos_nosso_numero integer;
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN   codigo_cedente character varying(20);
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN   convenio character varying(20);
+ ALTER TABLE dbboleto_estrutura
+   ADD COLUMN  contrato character varying(20);
+ALTER TABLE dbboleto_estrutura
+   ADD COLUMN   variacao_carteira character varying(5);

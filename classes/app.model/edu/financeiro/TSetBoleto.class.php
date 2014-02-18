@@ -14,7 +14,7 @@ class TSetBoleto {
     
     public $boleto = NULL;
 
-    public function __construct($parcseq,$cofiseq) {
+    public function __construct($parcseq, $cofiseq) {
 
         // estarta o buffer de saida
         //ob_start();
@@ -82,11 +82,11 @@ class TSetBoleto {
     }
     public function setInstrucoes($texto,$posicao = null){
         if(!$posicao){
-    		$this->instrucoesPagamento = $texto;
-        }else{
-    		$this->instrucoesPagamento[$posicao] = $texto;        	
-        }
-    }
+          $this->instrucoesPagamento = $texto;
+      }else{
+          $this->instrucoesPagamento[$posicao] = $texto;        	
+      }
+  }
     /*
      * Seta o prazo de dias a partir da data de vencimento
     */
@@ -103,8 +103,8 @@ class TSetBoleto {
     }
 
     public function setInformacaoFatura($infoFatura){
-            $this->infoFatura = $infoFatura;
-        }
+        $this->infoFatura = $infoFatura;
+    }
 
     public function setDetalhamento($array){
         $this->detalhamento = $array;
@@ -114,14 +114,15 @@ class TSetBoleto {
     */
     public function showBoleto() {
 
-        //Formata parte contadora do nosso Número=============
-        //calcula zeros necessarios
-        $compNossoNumero = sprintf('%015s', $this->seq);
-        //=====================================================
         //dados do cedente
         $dadosbl = $this->dadosC;
         $dadosbl['NumDocumento'] = $this->boleto['seq'];
 
+
+        //Formata parte contadora do nosso Número=============
+        //calcula zeros necessarios
+        $compNossoNumero = $this->prefixo_nosso_numero . sprintf('%0'.$this->digitos_nosso_numero.'s', $this->seq);
+        //=====================================================
 
         //dados do sacado
         foreach($this->infoSacado as $k=>$d) {
@@ -132,43 +133,43 @@ class TSetBoleto {
         if($this->instrucoesPagamento){
         	if(is_array($this->instrucoesPagamento)){
         		foreach($this->instrucoesPagamento as $ch => $vl){
-                	$dadosbl['instrucao'.$ch] = $vl;        			
-        		}
-        	}else{
-                $dadosbl['instrucao3'] = $this->instrucoesPagamento;
-        	}
+                 $dadosbl['instrucao'.$ch] = $vl;        			
+             }
+         }else{
+            $dadosbl['instrucao3'] = $this->instrucoesPagamento;
         }
-        if($this->infoFatura){
-                $dadosbl['infoFatura'] = $this->infoFatura;
-        }
-        if($this->instrucoesParcelamento){
-                $dadosbl['parcelamento'] = $this->instrucoesParcelamento;
-        }
-        if($this->detalhamento){
-                $dadosbl['detalhamento'] = $this->detalhamento;
-        }
+    }
+    if($this->infoFatura){
+        $dadosbl['infoFatura'] = $this->infoFatura;
+    }
+    if($this->instrucoesParcelamento){
+        $dadosbl['parcelamento'] = $this->instrucoesParcelamento;
+    }
+    if($this->detalhamento){
+        $dadosbl['detalhamento'] = $this->detalhamento;
+    }
 
 
         //formata data para Impressão do boleto
-        $data_venc_formatada = $this->mascara->setData($this->data_venc);
+    $data_venc_formatada = $this->mascara->setData($this->data_venc);
 
 
         //Imprime o boleto ========================
-        include_once($this->dadosC['template']);
-        $this->bkpHTML = $htmlBoleto;
+    include_once($this->dadosC['template']);
+    $this->bkpHTML = $htmlBoleto;
         //===========================================
 
         // Verifica o campo data a ser aplicada na expressão do filtro padrão ======
-        $dadosboleto["data_processamento"] = $this->mascara->setData($dadosboleto["data_processamento"]);
+    $dadosboleto["data_processamento"] = $this->mascara->setData($dadosboleto["data_processamento"]);
         //==========================================================================
 
-        $this->dadosBoleto[0] = $nossonumero;
-        $this->dadosBoleto[1] = $dadosboleto["data_processamento"];
-        $this->dadosBoleto[2] = $valor_boleto;
-        $this->dadosBoleto[3] = $this->data_venc;
- 
-        $this->dadosSacado = $dadosblDn;
-    }
+    $this->dadosBoleto[0] = $nossonumero;
+    $this->dadosBoleto[1] = $dadosboleto["data_processamento"];
+    $this->dadosBoleto[2] = $valor_boleto;
+    $this->dadosBoleto[3] = $this->data_venc;
+
+    $this->dadosSacado = $dadosblDn;
+}
 
     /*
     * grava os dados do boleto em baco de dados pra compensação posterior
@@ -189,9 +190,9 @@ class TSetBoleto {
                 $args["classificacao"] = $classific;
                 $args["bkp"] = $this->bkpHTML;
                 
-                    $criteriaDup = new TCriteria();
-                    $criteriaDup->add(new TFilter('seq','=',$this->seq));
-                    
+                $criteriaDup = new TCriteria();
+                $criteriaDup->add(new TFilter('seq','=',$this->seq));
+
                 $dboUp = new TDbo(TConstantes::DBBOLETO);
                 $dboUp->update($args, $this->seq);
                 $dboUp->commit();
