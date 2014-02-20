@@ -326,6 +326,31 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
+    <row seq="409">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>cofiseq</campo>
+      <colunadb>cofiseq</colunadb>
+      <datacad>2014-02-19</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Conta Financeira:</label>
+      <manter/>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>409</seq>
+      <statseq>1</statseq>
+      <tabseq>16</tabseq>
+      <tpcaseq>2</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
     <row seq="717">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>

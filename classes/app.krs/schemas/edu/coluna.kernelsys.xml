@@ -9472,27 +9472,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="26">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>left</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomeDepartamento</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Departamento</label>
-      <largura>100</largura>
-      <link>0</link>
-      <listseq>136</listseq>
-      <ordem>3</ordem>
-      <seq>26</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="466">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
@@ -17053,6 +17032,27 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
+    <row seq="26">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>nomeDepartamento</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>1900-01-01</datacad>
+      <label>Departamento</label>
+      <largura>200</largura>
+      <link>0</link>
+      <listseq>136</listseq>
+      <ordem>3</ordem>
+      <seq>26</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
     <row seq="341">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
@@ -17301,6 +17301,69 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="346">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>pagbanco</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2014-02-19</datacad>
+      <label>Banco</label>
+      <largura>120</largura>
+      <link>0</link>
+      <listseq>136</listseq>
+      <ordem>7</ordem>
+      <seq>346</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="347">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>pagagencia</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2014-02-19</datacad>
+      <label>Agência</label>
+      <largura>60</largura>
+      <link>0</link>
+      <listseq>136</listseq>
+      <ordem>8</ordem>
+      <seq>347</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="348">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>pagconta</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2014-02-19</datacad>
+      <label>Conta</label>
+      <largura>80</largura>
+      <link>0</link>
+      <listseq>136</listseq>
+      <ordem>9</ordem>
+      <seq>348</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>

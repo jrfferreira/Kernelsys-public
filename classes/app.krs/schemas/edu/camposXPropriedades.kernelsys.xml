@@ -9019,5 +9019,25 @@ Zootecnia=&gt;Zootecnia; </valor>
       <usuaseq>1</usuaseq>
       <valor>select seq,titulo from dbtipo_convenio where statseq = 1 order by titulo</valor>
     </row>
+    <row seq="513">
+      <campseq>409</campseq>
+      <datacad>2014-02-19</datacad>
+      <metodo>setSize</metodo>
+      <seq>513</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>200</valor>
+    </row>
+    <row seq="517">
+      <campseq>409</campseq>
+      <datacad>2014-02-19</datacad>
+      <metodo>addItems</metodo>
+      <seq>517</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valor>select seq,nomeconta from dbconta_financeira where tipo = 'B' and statseq != 9 order by nomeconta</valor>
+    </row>
   </camposXPropriedades>
 </kernelsys>
