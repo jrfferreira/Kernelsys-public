@@ -47,7 +47,7 @@ class TInscricao{
     * param <type> $codigoinscricao
     * param <type> $vencimento
     */
-    private function setTransacaoMatricula($codigoinscricao,$vencimentomatricula){
+    private function setTransacaoMatricula($codigoinscricao,$vencimentomatricula,$cofiseq){
 
         try{
         	$TSetControl = new TSetControl();
@@ -82,6 +82,7 @@ class TInscricao{
 	
 	            $obCreditoM->setPessoa($obInscricao->pessseq);
 	            $obCreditoM->setValorNominal($obTurma->valormatricula);
+                         $ovCreditoM->setContaFinanceira($cofiseq);
 	            $obCreditoM->setAcrescimo('0.00');
 	            $obCreditoM->setParcelas($obTurma->parcelas,$obUnidade->getParametro('financeiro_intervalo_parcela'));
 	            $obCreditoM->setPlanoConta($obTurma->plcoseq);
@@ -132,7 +133,7 @@ class TInscricao{
      * param <type> $vencimento = data do vencimento da taxa de inscrição
      * return <type>
      */
-    private function setTransacaoTaxa($codigoinscricao,$vencimentoTaxa = null){
+    private function setTransacaoTaxa($codigoinscricao,$cofiseq,$vencimentoTaxa = null){
 
         try{
         	$TSetControl = new TSetControl();
@@ -153,6 +154,7 @@ class TInscricao{
 
                 $obCredito->setPessoa($obInscricao->pessseq);
                 $obCredito->setValorNominal($obTurma->valortaxa);
+                $obCredito->setContaFinanceira($cofiseq);
                 $obCredito->setDesconto('0.00');
                 $obCredito->setAcrescimo('0.00');
                 $obCredito->setParcelas('1');
@@ -188,7 +190,7 @@ class TInscricao{
     }
 
     
-    public function setInscricao($pessseq,$turmseq,$vencimentoMatricula,$vencimentoTaxa){
+    public function setInscricao($pessseq,$turmseq,$cofiseq,$vencimentoMatricula,$vencimentoTaxa){
     	try {
     		$obTDbo = new TDbo(TConstantes::DBINSCRICAO);
     		
@@ -218,18 +220,18 @@ class TInscricao{
     /**
     * 
     */
-    public function setConfirmar($pessseq,$cursseq,$turmseq,$vencimentoMatricula,$vencimentoTaxa){
+    public function setConfirmar($pessseq,$cursseq,$turmseq,$cofiseq,$vencimentoMatricula,$vencimentoTaxa){
 
         try{
 
             $TUnidade = new TUnidade();
             $inscseq = $this->setInscricao($pessseq, $turmseq, $vencimentoMatricula, $vencimentoTaxa);
-            $dadosTransacaoMatricula = $this->setTransacaoMatricula($inscseq,$vencimentoMatricula);
+            $dadosTransacaoMatricula = $this->setTransacaoMatricula($inscseq,$vencimentoMatricula,$cofiseq);
             if($dadosTransacaoMatricula){
                 $botMatricula = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\"  onClick=\"showBoleto('".$dadosTransacaoMatricula['parcseq']."')\" >";
             }
             //configura conta credito da taxa de inscrição
-            $dadosTransacaoTaxa = $this->setTransacaoTaxa($inscseq,$vencimentoTaxa);
+            $dadosTransacaoTaxa = $this->setTransacaoTaxa($inscseq,$cofiseq,$vencimentoTaxa);
             if($dadosTransacaoTaxa){
                 $botTaxa = "<input class=\"ui-state-default ui-corner-all ui-state-hover\" type=\"button\" name=\"impBoleto\" id=\"impBoleto\" value=\"Gerar Boleto\" onClick=\"showBoleto('".$dadosTransacaoTaxa['parcseq']."')\" >";
 
