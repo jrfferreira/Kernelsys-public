@@ -1675,5 +1675,23 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="53">
+      <datacad>2014-02-20</datacad>
+      <formseq>6</formseq>
+      <seq>53</seq>
+      <statseq>1</statseq>
+      <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="58">
+      <datacad>2014-02-20</datacad>
+      <formseq>73</formseq>
+      <seq>58</seq>
+      <statseq>1</statseq>
+      <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </formXTabelas>
 </kernelsys>

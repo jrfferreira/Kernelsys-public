@@ -2671,5 +2671,15 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="22">
+      <abaseq>46</abaseq>
+      <blocseq>8</blocseq>
+      <datacad>2014-02-20</datacad>
+      <ordem>2</ordem>
+      <seq>22</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </blocosXAbas>
 </kernelsys>

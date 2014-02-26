@@ -3953,5 +3953,24 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="73">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>2013-08-21</datacad>
+      <dimensao>400;200</dimensao>
+      <formainclude>one</formainclude>
+      <formid>form_telefones</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq>6</formseq>
+      <listseq>74</listseq>
+      <nivel>2</nivel>
+      <nomeform>Telefones</nomeform>
+      <seq>73</seq>
+      <statseq>1</statseq>
+      <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </forms>
 </kernelsys>

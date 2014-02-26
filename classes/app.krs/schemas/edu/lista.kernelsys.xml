@@ -5729,5 +5729,37 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="74">
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>1</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>2013-08-21</datacad>
+      <filtro>statseq/!=/AND/9/numeric</filtro>
+      <filtropai>pessseq</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>73</formseq>
+      <incontrol/>
+      <label>Lista de Telefones</label>
+      <lista>listaTelefones</lista>
+      <listseq>136</listseq>
+      <nivel>2</nivel>
+      <obapendice>-</obapendice>
+      <ordem>prioridade/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>74</seq>
+      <statseq>1</statseq>
+      <tabseq>3</tabseq>
+      <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </lista>
 </kernelsys>

@@ -17053,6 +17053,27 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
+    <row seq="350">
+      <alinhadados>center</alinhadados>
+      <alinhalabel>center</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>codigoarea</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-08-21</datacad>
+      <label>DDD</label>
+      <largura>80</largura>
+      <link>0</link>
+      <listseq>74</listseq>
+      <ordem>2</ordem>
+      <seq>350</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
     <row seq="341">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
@@ -17133,6 +17154,48 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>date</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="351">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>tptedesc</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-12-26</datacad>
+      <label>Tipo</label>
+      <largura>160</largura>
+      <link>0</link>
+      <listseq>74</listseq>
+      <ordem>1</ordem>
+      <seq>351</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="356">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>TSetModel,setTelefone</colfunction>
+      <coluna>telefone</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2013-08-21</datacad>
+      <label>Telefone</label>
+      <largura>200</largura>
+      <link>0</link>
+      <listseq>74</listseq>
+      <ordem>3</ordem>
+      <seq>356</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>numeric</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
