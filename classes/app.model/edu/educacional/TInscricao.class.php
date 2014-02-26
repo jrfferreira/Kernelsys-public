@@ -305,7 +305,8 @@ class TInscricao{
             $valores .= 'valordescontado=>'.$obTurma->valordescontado.'(sp)';
             $valores .= 'datainicio=>'.$dataInicio.'(sp)';
             $valores .= 'vencimentomatricula=>'.$dataMatricula.'(sp)';
-            $valores .= 'vencimentotaxa=>'.$dataIncricao;
+            $valores .= 'vencimentotaxa=>'.$dataIncricao.'(sp)';
+            $valores .= 'cofiseq=>'.$obTurma->cofiseq;
 
             echo $valores;
 
