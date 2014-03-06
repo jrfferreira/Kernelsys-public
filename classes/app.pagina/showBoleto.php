@@ -1,8 +1,4 @@
-﻿<?php
-//==========================================================
-// Gera boleto de inscrição
-//
-//==========================================================
+<?php
 session_start();
 error_reporting(0);
 
@@ -15,7 +11,7 @@ function __autoload($classe) {
 
      $obUser = new TCheckLogin();
      $obUser = $obUser->getUser();
-//=========================================================	
+//=========================================================
 
 $seqconta   = $_GET['cod'];
 $origem     = $_GET['or'];
@@ -56,7 +52,7 @@ while($obContas = $retTransacaoContas->fetch()){
             case '1': $situacao = 'Vencida';break;
             case '2': $situacao = 'Paga';break;
             case '3': $situacao = 'Parcialmente Paga';break;
-        
+
         }
 
         if(($obContas['stpaseq'] == '3' ) || ($obContas['stpaseq'] == '2' ) || ($obContas['stpaseq'] == '1' && $obContas['vencimento'] < date('Y-m-d'))){
@@ -95,10 +91,10 @@ if($obCkBoleto->seq != "" && $obCkBoleto->bkp != "") {
     $criteriaTransacAluno = new TCriteria();
     $criteriaTransacAluno->add(new TFilter('pessseq','=',$obCliente->seq));
     $dboTransacAluno = new TDbo(TConstantes::VIEW_ALUNO);
-    $criteriaTransacAluno->setProperty('limit','1'); 
+    $criteriaTransacAluno->setProperty('limit','1');
     $retTransacAluno = $dboTransacAluno->select("seq,nometurma", $criteriaTransacAluno);
     $obTransacAluno = $retTransacAluno->fetchObject();
-    
+
     $dboEndereco = new TDbo(TConstantes::DBENDERECO);
     $criteriaEndereco = new TCriteria();
     $criteriaEndereco->add(new TFilter('pessseq','=',$obCliente->seq));
@@ -135,7 +131,7 @@ $obBl->setInstrucoesParcelamento ($parc);
 $obBl->setVencimento($obConta->vencimento);
 
 
-//============================================================================================	
+//============================================================================================
 
 if($dadosSacado) {
     $obBl->showBoleto();

@@ -121,7 +121,7 @@ class TSetBoleto {
 
         //Formata parte contadora do nosso Número=============
         //calcula zeros necessarios
-        $compNossoNumero = $this->prefixo_nosso_numero . sprintf('%0'.$this->digitos_nosso_numero.'s', $this->seq);
+        $compNossoNumero = $dadosbl['prefixo_nosso_numero'] . sprintf('%0'.$dadosbl['digitos_nosso_numero'].'s', $this->seq);
         //=====================================================
 
         //dados do sacado

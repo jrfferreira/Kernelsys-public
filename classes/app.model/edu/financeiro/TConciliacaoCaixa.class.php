@@ -151,8 +151,7 @@ class TConciliacaoCaixa{
                                 //baixa conta
                                 $obCaixa = new TCaixa();
                                 $retBaixada = new TElement('div');
-                                $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";
-                                 
+                                $retBaixada->style = "font-family:arial; font-size:14px; border:1px solid #CCC; margin:1px; padding:4px;";                 
                                
                                 $cxfuseq = $obCaixa->getSeqCaixaFuncionario($obDadosBoleto->cofiseq);
                                 
