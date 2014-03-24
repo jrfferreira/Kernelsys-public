@@ -266,6 +266,8 @@ class TDataGrid extends TTable {
                 $align    = $column->getAlign();
                 $width    = $column->getWidth();
                 $function = $column->getTransformer();
+                $link     = $column->isLink();
+
                 if(is_object($object)) {
                     $data     = $object->$name;
                 }
@@ -285,6 +287,8 @@ class TDataGrid extends TTable {
                     }
                 }
 
+                $initialData = $data;
+
                 if(substr($width,-1) != "%"){
                     $max = ($width/8);
                     if((is_string($data)) and (strlen($data) >= $max ) and ($max > 3 )){
@@ -295,6 +299,10 @@ class TDataGrid extends TTable {
                 }
                 if(!$data){
                     $data = " - ";
+                }
+
+                if($link){
+                    $data = "<a href=\"{$initialData}\" target=\"_blank\">{$data}</a>";
                 }
                 // adiciona a colula na linha
                 $celula = $row->addCell($data);

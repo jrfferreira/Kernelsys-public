@@ -130,6 +130,7 @@ class TConstantes {
 	const VIEW_FUNCIONARIO_TREINAMENTO = "view_funcionario_treinamento";
 	const VIEW_INSCRICAO = "view_inscricao";
 	const VIEW_LIVRO = "view_livro";
+    const VIEW_LOCACAO_LIVRO = "view_locacao_livro";
 	const VIEW_NOTA = "view_nota";
 	const VIEW_PARCELA = "view_parcela";
 	const VIEW_PATRIMONIO = "view_patrimonio";
@@ -138,7 +139,6 @@ class TConstantes {
 	const VIEW_PESSOA_FISICA = "view_pessoa_fisica";
 	const VIEW_PESSOA_JURIDICA = "view_pessoa_juridica";
 	const VIEW_PESSOA_TITULARIDADE = "view_pessoa_titularidade";
-	const VIEW_PESSOAS_LIVROS = "view_pessoas_livros";
 	const VIEW_PLANO_CONTA = "view_plano_conta";
 	const VIEW_PRODUTO = "view_produto";
 	const VIEW_PRODUTO_TURMA = "view_produto_turma";

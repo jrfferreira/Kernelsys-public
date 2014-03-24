@@ -342,7 +342,7 @@ class TBiblioteca {
 
                                 $TTransacao->setPessoa($codigopessoa);
                                 $TTransacao->setValorNominal($valortotal);
-                                $TTransacao->setTipoMovimento('C');
+                                //$TTransacao->setTipoMovimento('C');
                                 $TTransacao->setPlanoConta($TParametros->biblioteca_planocontas);
                                 $TTransacao->setAcrescimo('0.00');
                                 $TTransacao->setParcelas('1');

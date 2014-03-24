@@ -2273,70 +2273,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="382">
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>tipo/=/AND/C;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
-      <filtropai>0</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>389</formseq>
-      <incontrol/>
-      <label>Movimentos de crédito programados</label>
-      <lista>listaMovimentosProgramadosC</lista>
-      <listseq>382</listseq>
-      <nivel>2</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>382</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="388">
-      <acdeletar>1</acdeletar>
-      <aceditar>1</aceditar>
-      <acenviar>0</acenviar>
-      <acfiltro>0</acfiltro>
-      <acincluir>0</acincluir>
-      <aclimite>1</aclimite>
-      <acreplicar>0</acreplicar>
-      <acselecao>0</acselecao>
-      <acviews>0</acviews>
-      <datacad>1900-01-01</datacad>
-      <filtro>tipo/=/AND/D;stmoseq/=/AND/3;funcseq/=/AND/TUsuario/getSeqFuncionario</filtro>
-      <filtropai>0</filtropai>
-      <formainclude>one</formainclude>
-      <formseq>390</formseq>
-      <incontrol/>
-      <label>Movimentos de débitos programados</label>
-      <lista>listaMovimentosProgramadosD</lista>
-      <listseq>388</listseq>
-      <nivel>2</nivel>
-      <obapendice>-</obapendice>
-      <ordem>seq/desc</ordem>
-      <pesquisa>0</pesquisa>
-      <required/>
-      <seq>388</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tipo>form</tipo>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="481">
       <acdeletar>0</acdeletar>
       <aceditar>0</aceditar>
@@ -5756,6 +5692,38 @@
       <seq>74</seq>
       <statseq>1</statseq>
       <tabseq>3</tabseq>
+      <tipo>form</tipo>
+      <trigger/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="489">
+      <acdeletar>1</acdeletar>
+      <aceditar>1</aceditar>
+      <acenviar>0</acenviar>
+      <acfiltro>1</acfiltro>
+      <acincluir>0</acincluir>
+      <aclimite>1</aclimite>
+      <acreplicar>0</acreplicar>
+      <acselecao>0</acselecao>
+      <acviews>0</acviews>
+      <datacad>2014-03-19</datacad>
+      <filtro>statseq/!=/AND/9</filtro>
+      <filtropai>0</filtropai>
+      <formainclude>one</formainclude>
+      <formseq>88</formseq>
+      <incontrol/>
+      <label>Lista de Periodicos</label>
+      <lista>listaPeriodicos</lista>
+      <listseq>489</listseq>
+      <nivel>1</nivel>
+      <obapendice>-</obapendice>
+      <ordem>datacad/desc;seq/desc</ordem>
+      <pesquisa>0</pesquisa>
+      <required/>
+      <seq>489</seq>
+      <statseq>1</statseq>
+      <tabseq>110</tabseq>
       <tipo>form</tipo>
       <trigger/>
       <unidseq>1</unidseq>

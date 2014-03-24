@@ -2101,48 +2101,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="739">
-      <alinhadados>center</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>seq</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Cod.:</label>
-      <largura>110</largura>
-      <link>0</link>
-      <listseq>382</listseq>
-      <ordem>1</ordem>
-      <seq>739</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="742">
-      <alinhadados>center</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>seq</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Cod.:</label>
-      <largura>110</largura>
-      <link>0</link>
-      <listseq>388</listseq>
-      <ordem>1</ordem>
-      <seq>742</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="831">
       <alinhadados>center</alinhadados>
       <alinhalabel>center</alinhalabel>
@@ -4600,69 +4558,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
-    <row seq="740">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomepessoa</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Cliente/Fornecedor</label>
-      <largura>250</largura>
-      <link>0</link>
-      <listseq>382</listseq>
-      <ordem>2</ordem>
-      <seq>740</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="741">
-      <alinhadados>right</alinhadados>
-      <alinhalabel>right</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>valorpago</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Valor</label>
-      <largura>100</largura>
-      <link>0</link>
-      <listseq>382</listseq>
-      <ordem>3</ordem>
-      <seq>741</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="743">
-      <alinhadados>left</alinhadados>
-      <alinhalabel>center</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>nomepessoa</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Fornecedor</label>
-      <largura>250</largura>
-      <link>0</link>
-      <listseq>388</listseq>
-      <ordem>2</ordem>
-      <seq>743</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>string</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="749">
       <alinhadados>left</alinhadados>
       <alinhalabel>left</alinhalabel>
@@ -5079,27 +4974,6 @@
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>
       <tipodado>date</tipodado>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
-    <row seq="744">
-      <alinhadados>right</alinhadados>
-      <alinhalabel>right</alinhalabel>
-      <colfunction>-</colfunction>
-      <coluna>valorpago</coluna>
-      <colunaaux>-</colunaaux>
-      <datacad>1900-01-01</datacad>
-      <label>Valor</label>
-      <largura>100</largura>
-      <link>0</link>
-      <listseq>388</listseq>
-      <ordem>3</ordem>
-      <seq>744</seq>
-      <statseq>1</statseq>
-      <tabseq>0</tabseq>
-      <tipocoluna>1</tipocoluna>
-      <tipodado>numeric</tipodado>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
@@ -17200,6 +17074,27 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>0</valorpadrao>
     </row>
+    <row seq="985">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>titulo</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2014-03-19</datacad>
+      <label>Titulo</label>
+      <largura>450</largura>
+      <link>0</link>
+      <listseq>489</listseq>
+      <ordem>1</ordem>
+      <seq>985</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
     <row seq="342">
       <alinhadados>center</alinhadados>
       <alinhalabel>center</alinhalabel>
@@ -17423,6 +17318,27 @@
       <listseq>136</listseq>
       <ordem>9</ordem>
       <seq>348</seq>
+      <statseq>1</statseq>
+      <tabseq>0</tabseq>
+      <tipocoluna>1</tipocoluna>
+      <tipodado>string</tipodado>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>0</valorpadrao>
+    </row>
+    <row seq="986">
+      <alinhadados>left</alinhadados>
+      <alinhalabel>left</alinhalabel>
+      <colfunction>-</colfunction>
+      <coluna>link</coluna>
+      <colunaaux>-</colunaaux>
+      <datacad>2014-03-19</datacad>
+      <label>Acesso</label>
+      <largura>400</largura>
+      <link>1</link>
+      <listseq>489</listseq>
+      <ordem>2</ordem>
+      <seq>986</seq>
       <statseq>1</statseq>
       <tabseq>0</tabseq>
       <tipocoluna>1</tipocoluna>

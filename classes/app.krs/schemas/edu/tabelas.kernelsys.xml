@@ -375,17 +375,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="87">
-      <colunafilho>0</colunafilho>
-      <datacad>1900-01-01</datacad>
-      <seq>87</seq>
-      <statseq>1</statseq>
-      <tabela>dblocacao_livro</tabela>
-      <tabelaView>dblocacao_livro</tabelaView>
-      <tabseq/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="96">
       <colunafilho>livrseq</colunafilho>
       <datacad>1900-01-01</datacad>
@@ -701,6 +690,17 @@
       <statseq>1</statseq>
       <tabela>--SEM USO-- dbquestoes</tabela>
       <tabelaView>--SEM USO-- view_questoes</tabelaView>
+      <tabseq/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="87">
+      <colunafilho>0</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>87</seq>
+      <statseq>1</statseq>
+      <tabela>dblocacao_livro</tabela>
+      <tabelaView>view_locacao_livro</tabelaView>
       <tabseq/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -1054,6 +1054,17 @@
       <tabela>dbboleto_estrutura</tabela>
       <tabelaView>dbboleto_estrutura</tabelaView>
       <tabseq>24</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="110">
+      <colunafilho>se</colunafilho>
+      <datacad>2014-03-19</datacad>
+      <seq>110</seq>
+      <statseq>1</statseq>
+      <tabela>dbperiodicos</tabela>
+      <tabelaView>dbperiodicos</tabelaView>
+      <tabseq/>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

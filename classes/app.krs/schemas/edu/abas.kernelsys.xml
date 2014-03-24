@@ -3725,5 +3725,19 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="382">
+      <abaid>aba_cadastroPeriodico</abaid>
+      <action>-</action>
+      <datacad>2014-03-19</datacad>
+      <impressao>0</impressao>
+      <nomeaba>Informações principais</nomeaba>
+      <obapendice>-</obapendice>
+      <ordem>1</ordem>
+      <requireRegister/>
+      <seq>382</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </abas>
 </kernelsys>

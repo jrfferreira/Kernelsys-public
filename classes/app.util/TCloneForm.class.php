@@ -178,7 +178,7 @@ class TCloneForm {
         // $cont_botoes->add($button);
 
         $window = new TWindow('Confirmação', 'confirmReplicacao');
-        $window->setModal();
+        $window->setModal(true);
         $window->setAutoOpen();
         $window->setSize('450', '170');
         $window->add($cont);

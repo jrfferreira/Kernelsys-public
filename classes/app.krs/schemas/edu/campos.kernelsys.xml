@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kernelsys>
   <campos>
-    <row seq="156">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>pessseq</campo>
-      <colunadb>pessseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Pessoa:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>156</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="964">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -226,31 +201,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="567">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>obs</campo>
-      <colunadb>obs</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Obs.:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>567</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>9</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="379">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -346,6 +296,81 @@
       <statseq>1</statseq>
       <tabseq>16</tabseq>
       <tpcaseq>2</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="983">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>titulo</campo>
+      <colunadb>titulo</colunadb>
+      <datacad>2014-03-19</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Titulo:</label>
+      <manter>1</manter>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>983</seq>
+      <statseq>1</statseq>
+      <tabseq>110</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="984">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>link</campo>
+      <colunadb>link</colunadb>
+      <datacad>2014-03-19</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Endereço de acesso:</label>
+      <manter>1</manter>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>984</seq>
+      <statseq>1</statseq>
+      <tabseq>110</tabseq>
+      <tpcaseq>1</tpcaseq>
+      <trigger>0</trigger>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+      <valorpadrao>-</valorpadrao>
+    </row>
+    <row seq="985">
+      <alteravel>1</alteravel>
+      <ativafunction>1</ativafunction>
+      <ativapesquisa>0</ativapesquisa>
+      <autosave>0</autosave>
+      <campo>descricao</campo>
+      <colunadb>descricao</colunadb>
+      <datacad>2014-03-19</datacad>
+      <help/>
+      <incontrol>0</incontrol>
+      <label>Descrição:</label>
+      <manter>1</manter>
+      <mascara/>
+      <outcontrol>-</outcontrol>
+      <required>1</required>
+      <seletor/>
+      <seq>985</seq>
+      <statseq>1</statseq>
+      <tabseq>110</tabseq>
+      <tpcaseq>9</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -3876,56 +3901,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="169">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>pessseq</campo>
-      <colunadb>pessseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Pessoa:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>169</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="170">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>plcoseq</campo>
-      <colunadb>plcoseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Plano de conta:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>170</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="139">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -3946,31 +3921,6 @@
       <statseq>1</statseq>
       <tabseq>18</tabseq>
       <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="166">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>caixatroco</campo>
-      <colunadb>caixatroco</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Troco:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>166</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>1</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -4301,31 +4251,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="174">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>formaPag</campo>
-      <colunadb>fmpgseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Forma de Pagamento</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>174</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="183">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -4371,31 +4296,6 @@
       <statseq>1</statseq>
       <tabseq>21</tabseq>
       <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="160">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorentrada</campo>
-      <colunadb>valorentrada</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor Recebido:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>160</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -5296,56 +5196,6 @@
       <statseq>1</statseq>
       <tabseq>1</tabseq>
       <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="206">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cofiseq</campo>
-      <colunadb>cofiseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Conta/Caixa de Destino:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>206</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="177">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cofiseq</campo>
-      <colunadb>cofiseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Conta/Caixa de Origem:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>177</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -8026,31 +7876,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="568">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>obs</campo>
-      <colunadb>obs</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Obs.:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>568</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>9</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="570">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -10001,31 +9826,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="656">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>plcoseq</campo>
-      <colunadb>plcoseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Plano de Conta:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>656</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="552">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -10046,31 +9846,6 @@
       <statseq>1</statseq>
       <tabseq>11</tabseq>
       <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="655">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>transeq</campo>
-      <colunadb>transeq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label/>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>655</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>13</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -11551,31 +11326,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="860">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>numdoc</campo>
-      <colunadb>numdoc</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>N° do documento:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>860</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="722">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -12226,81 +11976,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="885">
-      <alteravel>2</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>stmoseq</campo>
-      <colunadb>stmoseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help>Define o tipo de movimento Ex: Movimento programado.</help>
-      <incontrol>0</incontrol>
-      <label>Tipo de movimento:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>885</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>1</valorpadrao>
-    </row>
-    <row seq="163">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>formapag</campo>
-      <colunadb>fmpgseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Forma de pagamento:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>163</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="861">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>acrescimo</campo>
-      <colunadb>acrescimo</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Acréscimos:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>861</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
-    </row>
     <row seq="721">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -12745,31 +12420,6 @@
       <seq>870</seq>
       <statseq>1</statseq>
       <tabseq>65</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="881">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorcalculado</campo>
-      <colunadb>valorcalculado</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor Calculado:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>881</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
       <tpcaseq>11</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
@@ -14326,31 +13976,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="176">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>desconto</campo>
-      <colunadb>desconto</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Desconto:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>176</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="649">
       <alteravel>1</alteravel>
       <ativafunction>0</ativafunction>
@@ -15201,31 +14826,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="161">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>desconto</campo>
-      <colunadb>desconto</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Desconto:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>161</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="140">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -15793,31 +15393,6 @@
       <required>0</required>
       <seletor>CLASS_MASCARA_VALOR</seletor>
       <seq>528</seq>
-      <statseq>1</statseq>
-      <tabseq>999</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="879">
-      <alteravel>2</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorrealview</campo>
-      <colunadb>valorreal</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>879</seq>
       <statseq>1</statseq>
       <tabseq>999</tabseq>
       <tpcaseq>11</tpcaseq>
@@ -16626,31 +16201,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>function/TSetData/getData</valorpadrao>
     </row>
-    <row seq="158">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>vencimento</campo>
-      <colunadb>vencimento</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setDataDB</incontrol>
-      <label>Vencimento:</label>
-      <manter/>
-      <mascara>'99/99/9999',1</mascara>
-      <outcontrol>setDataPT</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <seq>158</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>10</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-    </row>
     <row seq="244">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -16926,31 +16476,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>function/TSetData/getData</valorpadrao>
     </row>
-    <row seq="159">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>datacad</campo>
-      <colunadb>datacad</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setDataDB</incontrol>
-      <label>Data do Movimento</label>
-      <manter/>
-      <mascara>'99/99/9999',1</mascara>
-      <outcontrol>setDataPT</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <seq>159</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>10</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-    </row>
     <row seq="312">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -16970,31 +16495,6 @@
       <seq>312</seq>
       <statseq>1</statseq>
       <tabseq>32</tabseq>
-      <tpcaseq>10</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
-    </row>
-    <row seq="172">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>vencimento</campo>
-      <colunadb>vencimento</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setDataDB</incontrol>
-      <label>Vencimento:</label>
-      <manter/>
-      <mascara>'99/99/9999',1</mascara>
-      <outcontrol>setDataPT</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <seq>172</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
       <tpcaseq>10</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
@@ -17501,31 +17001,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="175">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorpago</campo>
-      <colunadb>valorfinal</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor Pago:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>175</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="495">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -17870,31 +17345,6 @@
       <seq>134</seq>
       <statseq>1</statseq>
       <tabseq>999</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="168">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>146</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>parcseq</campo>
-      <colunadb>parcseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Cod. da Conta:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>168</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
       <tpcaseq>11</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
@@ -18301,31 +17751,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="859">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorrealview</campo>
-      <colunadb>valor</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor da conta:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>859</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="433">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -18400,56 +17825,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>true</valorpadrao>
-    </row>
-    <row seq="171">
-      <alteravel>1</alteravel>
-      <ativafunction>0</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorreal_calculo</campo>
-      <colunadb>valor</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor a Pagar:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>171</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="756">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorreal</campo>
-      <colunadb>valor</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor a pagar:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>756</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
     </row>
     <row seq="101">
       <alteravel>1</alteravel>
@@ -18676,56 +18051,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
     </row>
-    <row seq="155">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>145</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>parcseq</campo>
-      <colunadb>parcseq</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Cod. da Conta:</label>
-      <manter>1</manter>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>1</required>
-      <seletor/>
-      <seq>155</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="35">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>cxfuseq</campo>
-      <colunadb>cxfuseq</colunadb>
-      <datacad>2013-10-17</datacad>
-      <help/>
-      <incontrol/>
-      <label/>
-      <manter/>
-      <mascara/>
-      <outcontrol/>
-      <required>0</required>
-      <seletor/>
-      <seq>35</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>13</tpcaseq>
-      <trigger/>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="423">
       <alteravel>1</alteravel>
       <ativafunction>1</ativafunction>
@@ -18801,31 +18126,6 @@
       <usuaseq>1</usuaseq>
       <valorpadrao>true</valorpadrao>
     </row>
-    <row seq="178">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>multaacrecimo</campo>
-      <colunadb>acrescimo</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label>Acréscimos:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>178</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
     <row seq="977">
       <alteravel>0</alteravel>
       <ativafunction>0</ativafunction>
@@ -18846,31 +18146,6 @@
       <statseq>1</statseq>
       <tabseq>21</tabseq>
       <tpcaseq>2</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="157">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorreal</campo>
-      <colunadb>valor</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>1</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>157</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
       <trigger>0</trigger>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
@@ -18900,31 +18175,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="173">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>dataCad</campo>
-      <colunadb>datacad</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setDataDB</incontrol>
-      <label>Data do Movimento:</label>
-      <manter/>
-      <mascara>'99/99/9999',1</mascara>
-      <outcontrol>setDataPT</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_CALENDARIO</seletor>
-      <seq>173</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>10</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>function/TSetData/getData</valorpadrao>
     </row>
     <row seq="246">
       <alteravel>1</alteravel>
@@ -19150,81 +18400,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
       <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="165">
-      <alteravel>1</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>valorfinal</campo>
-      <colunadb>valorfinal</colunadb>
-      <datacad>1900-01-01</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Valor Pago:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_UI_H2,CLASS_MASCARA_VALOR</seletor>
-      <seq>165</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>1</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="34">
-      <alteravel>0</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>tipo</campo>
-      <colunadb>tipo</colunadb>
-      <datacad>2013-10-17</datacad>
-      <help/>
-      <incontrol>0</incontrol>
-      <label/>
-      <manter/>
-      <mascara/>
-      <outcontrol>-</outcontrol>
-      <required>0</required>
-      <seletor/>
-      <seq>34</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>14</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>-</valorpadrao>
-    </row>
-    <row seq="41">
-      <alteravel>0</alteravel>
-      <ativafunction>1</ativafunction>
-      <ativapesquisa>0</ativapesquisa>
-      <autosave>0</autosave>
-      <campo>juros</campo>
-      <colunadb>multa</colunadb>
-      <datacad>2013-10-18</datacad>
-      <help/>
-      <incontrol>setFloat</incontrol>
-      <label>Multa e Juros:</label>
-      <manter/>
-      <mascara/>
-      <outcontrol>setMoney</outcontrol>
-      <required>0</required>
-      <seletor>CLASS_MASCARA_VALOR</seletor>
-      <seq>41</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <tpcaseq>11</tpcaseq>
-      <trigger>0</trigger>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-      <valorpadrao>0</valorpadrao>
     </row>
     <row seq="69">
       <alteravel>1</alteravel>

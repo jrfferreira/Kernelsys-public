@@ -1521,44 +1521,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="389">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao>900;550</dimensao>
-      <formainclude>one</formainclude>
-      <formid>formblocMovimentoProgC</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq>383</formseq>
-      <listseq>382</listseq>
-      <nivel>2</nivel>
-      <nomeform>Movimentos Programados</nomeform>
-      <seq>389</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
-    <row seq="390">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao>900;550</dimensao>
-      <formainclude>one</formainclude>
-      <formid>formblocMovimentoProgD</formid>
-      <formoutcontrol>0</formoutcontrol>
-      <formseq>383</formseq>
-      <listseq>388</listseq>
-      <nivel>2</nivel>
-      <nomeform>Movimentos Programados</nomeform>
-      <seq>390</seq>
-      <statseq>1</statseq>
-      <tabseq>21</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="392">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3402,25 +3364,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="487">
-      <autosave>0</autosave>
-      <botcancelar>1</botcancelar>
-      <botconcluir>1</botconcluir>
-      <datacad>1900-01-01</datacad>
-      <dimensao>500;200</dimensao>
-      <formainclude>one</formainclude>
-      <formid>form_alteraDataConta</formid>
-      <formoutcontrol>TTransacao/limpaInformacoesBoleto</formoutcontrol>
-      <formseq/>
-      <listseq>488</listseq>
-      <nivel>1</nivel>
-      <nomeform>Alteração de Data da Conta</nomeform>
-      <seq>487</seq>
-      <statseq>1</statseq>
-      <tabseq>65</tabseq>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="484">
       <autosave>0</autosave>
       <botcancelar>1</botcancelar>
@@ -3969,6 +3912,44 @@
       <seq>73</seq>
       <statseq>1</statseq>
       <tabseq>3</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="88">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>2014-03-19</datacad>
+      <dimensao>500;200</dimensao>
+      <formainclude>one</formainclude>
+      <formid>formPeriodicos</formid>
+      <formoutcontrol>0</formoutcontrol>
+      <formseq/>
+      <listseq/>
+      <nivel>1</nivel>
+      <nomeform>Periodicos</nomeform>
+      <seq>88</seq>
+      <statseq>1</statseq>
+      <tabseq>110</tabseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="487">
+      <autosave>0</autosave>
+      <botcancelar>1</botcancelar>
+      <botconcluir>1</botconcluir>
+      <datacad>1900-01-01</datacad>
+      <dimensao>700;400</dimensao>
+      <formainclude>one</formainclude>
+      <formid>form_alteraDataConta</formid>
+      <formoutcontrol>TTransacao/limpaInformacoesBoleto</formoutcontrol>
+      <formseq/>
+      <listseq>488</listseq>
+      <nivel>1</nivel>
+      <nomeform>Alteração de Data da Conta</nomeform>
+      <seq>487</seq>
+      <statseq>1</statseq>
+      <tabseq>65</tabseq>
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>

@@ -12,6 +12,7 @@ class TDataGridColumn
     private $action;
     private $transformer;
     private $visibilidade;
+    private $link;
     
     /**
      * método __construct()
@@ -27,6 +28,7 @@ class TDataGridColumn
         $this->label = $label;
         $this->align = $align;
         $this->width = $width;
+        $this->link = false;
     }
 	
 	public function __set($name, $value){
@@ -50,7 +52,24 @@ class TDataGridColumn
     public function getLabel(){
         return $this->label;
     }
-    
+
+    /**
+     * metodo isLink()
+     * Retorno se a coluna é um link
+     */
+    public function isLink(){
+        return $this->link;
+    }
+
+    /**
+     * metodo setLink()
+     * define se a coluna é um link
+     */
+    public function setLink($bool){
+        $this->link = $bool;
+    }
+
+
     /**
      * método getAlign()
      * Retorna o alinhamento da coluna (left, center, right)

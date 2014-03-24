@@ -1,9 +1,9 @@
 -- # Verificar se todas as tabelas tem o statseq como valor padrão 1
-	
+
 -- # CRIAR TABELA DBPARAMETRO_PRODUTO
 
 CREATE TABLE dbparametro_produto (
-	seq serial,    
+	seq serial,
 	unidseq bigint NOT NULL,
     usuaseq bigint NOT NULL,
     tabela character varying(60),
@@ -14,18 +14,18 @@ CREATE TABLE dbparametro_produto (
     tpprseq bigint NOT NULL,
     statseq bigint DEFAULT 1 NOT NULL
 );
-   
+
 -- # TABELA PROJETO_CURSO
 
    ALTER TABLE dbprojeto_curso
    ADD COLUMN stpcseq bigint NOT NULL DEFAULT 4;
-   
+
    ALTER TABLE dbprojeto_curso
    ADD COLUMN identificador varchar(20) NOT NULL DEFAULT '--';
-   
+
 -- # View de projeto_curso
 
-CREATE OR REPLACE VIEW view_projeto_curso AS 
+CREATE OR REPLACE VIEW view_projeto_curso AS
  SELECT t1.seq, t1.unidseq, t1.usuaseq, t1.nome, t1.tpcuseq, t1.arcuseq, t1.objetivo, t1.publicoalvo, to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.titulo AS areacurso, ( SELECT sum(t4.cargahoraria) AS sum
            FROM dbdisciplina t4
           WHERE (t4.seq IN ( SELECT t5.discseq
@@ -47,7 +47,7 @@ ALTER TABLE view_projeto_curso
 
 -- DROP VIEW view_curso_disciplina;
 
-CREATE OR REPLACE VIEW view_curso_disciplina AS 
+CREATE OR REPLACE VIEW view_curso_disciplina AS
  SELECT t2.seq, t0.unidseq, t0.usuaseq, t0.pjcuseq, t3.seq AS discseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t1.nome AS nomecurso, t3.titulo AS nomedisciplina, t3.cargahoraria, t0.seq AS cursseq
    FROM dbcurso t0
    JOIN dbprojeto_curso t1 ON t1.seq = t0.pjcuseq
@@ -71,28 +71,28 @@ ALTER TABLE dbturma
    ALTER COLUMN horainicio DROP NOT NULL;
 ALTER TABLE dbturma
    ALTER COLUMN horafim DROP NOT NULL;
-   
+
  -- VIEW TURMA
 
-CREATE OR REPLACE VIEW view_turma AS 
+CREATE OR REPLACE VIEW view_turma AS
  SELECT t2.nome AS nomeprojetocurso, t0.seq, t0.unidseq, t0.titulo, t0.aceitainscricao, ( SELECT sum(t4.cargahoraria) AS sum
            FROM dbdisciplina t4
           WHERE (t4.seq IN ( SELECT t5.discseq
                    FROM dbturma_disciplina t5
-                  WHERE t5.turmseq = t0.seq))) AS cargahoraria, 
-                  t0.valortaxa, 
-                  t0.valormatricula, 
-                  t0.valormensal, 
-                  t0.vagas, 
-                  t0.parcelas, 
-                  t0.sttuseq, 
-                  t999.seq AS statseq, 
-                  t999.statdesc, 
-                  t0.datainicio, 
-                  t0.prodseq, 
-                  t3.nomeunidade, 
-                  t0.cursseq, 
-                  t2.nome AS nomecurso, 
+                  WHERE t5.turmseq = t0.seq))) AS cargahoraria,
+                  t0.valortaxa,
+                  t0.valormatricula,
+                  t0.valormensal,
+                  t0.vagas,
+                  t0.parcelas,
+                  t0.sttuseq,
+                  t999.seq AS statseq,
+                  t999.statdesc,
+                  t0.datainicio,
+                  t0.prodseq,
+                  t3.nomeunidade,
+                  t0.cursseq,
+                  t2.nome AS nomecurso,
                   ( SELECT count(t5.turmseq) AS count
            FROM dbinscricao t5
           WHERE t5.turmseq = t0.seq) AS inscritos, ( SELECT count(t6.turmseq) AS count
@@ -103,32 +103,32 @@ CREATE OR REPLACE VIEW view_turma AS
    LEFT JOIN dbprojeto_curso t2 ON t2.seq = t4.pjcuseq
    LEFT JOIN dbunidade t3 ON t3.seq = t0.unidseq
    LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
- 
+
 CREATE INDEX dbturma_disciplina_turmseq_discseq_idx
   ON dbturma_disciplina
   USING btree
   (turmseq, discseq);
-  
-  
+
+
 CREATE INDEX dbturma_cursseq_idx
   ON dbturma
   USING btree
   (cursseq);
-  
+
 
 CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
   ON dbprojeto_curso_disciplina
   USING btree
   (pjcuseq);
-  
+
   ALTER TABLE dbtransacao
    ALTER COLUMN intervaloparcelas DROP NOT NULL;
-   
-   
+
+
  -- Alterações apartir de 18/12/2013
- 
+
  CREATE VIEW view_telefone AS
-	select 
+	select
 		t1.seq,
 		t1.unidseq,
 		t1.usuaseq,
@@ -142,8 +142,8 @@ CREATE INDEX dbprojeto_curso_disciplina_pjcuseq_idx
 		t2.prioridade
 	from dbtelefone AS t1
 	LEFT JOIN dbtipo_telefone AS t2 ON t2.seq = t1.tpteseq
-	
-CREATE OR REPLACE VIEW view_turma_disciplina AS 
+
+CREATE OR REPLACE VIEW view_turma_disciplina AS
  SELECT t0.seq, t0.unidseq, t0.turmseq, t3.cursseq, t0.discseq, t0.profseq, to_char(t0.datarealizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS datarealizacao, to_char(t0.dataatualizacao::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataatualizacao, t0.frequencia, t0.datas, t0.custohoraaula, t0.regimetrabalho, t0.custohospedagem, t0.custodeslocamento, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t6.nome AS sala, t999.seq AS statseq, t999.statdesc, t7.nome AS nomecurso, t3.titulo AS nometurma, t4.titulo AS nomedisciplina, t4.cargahoraria, t5.pessnmrz AS nomeprofessor, ( SELECT count(dbaluno_disciplina.seq) AS count
            FROM dbaluno_disciplina
           WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos, t0.salaseq, t7.gdavseq, t3.sttuseq, t0.custoalimentacao, t0.custoextra
@@ -161,44 +161,44 @@ CREATE OR REPLACE VIEW view_turma_disciplina AS
 ALTER TABLE view_turma_disciplina
   OWNER TO postgres;
 
-	
+
 -- Alterações apartir de 09/01/2014
-	 
+
 ALTER TABLE dbturma_disciplina
    ADD COLUMN cargahoraria numeric NOT NULL DEFAULT 1;
-	
-	
-	
+
+
+
 DROP VIEW view_turma_disciplina_aula;
-CREATE OR REPLACE VIEW view_turma_disciplina_aula AS 
- SELECT 
- t1.seq, 
- t1.unidseq, 
- t1.usuaseq, 
- t1.tudiseq, 
- to_char(t1.dataaula::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataaula, 
- t1.conteudo, 
- t1.frequencia, 
+CREATE OR REPLACE VIEW view_turma_disciplina_aula AS
+ SELECT
+ t1.seq,
+ t1.unidseq,
+ t1.usuaseq,
+ t1.tudiseq,
+ to_char(t1.dataaula::timestamp with time zone, 'DD/MM/YYYY'::text) AS dataaula,
+ t1.conteudo,
+ t1.frequencia,
  t1.obs,
- t0.turmseq, 
- t3.cursseq, 
- t0.discseq, 
- t0.profseq, 
+ t0.turmseq,
+ t3.cursseq,
+ t0.discseq,
+ t0.profseq,
  t0.frequencia AS frequenciatotal,
- t6.nome AS sala, 
- t7.nome AS nomecurso, 
- t3.titulo AS nometurma, 
- t4.titulo AS nomedisciplina, 
- t4.cargahoraria, 
- t5.pessnmrz AS nomeprofessor, 
+ t6.nome AS sala,
+ t7.nome AS nomecurso,
+ t3.titulo AS nometurma,
+ t4.titulo AS nomedisciplina,
+ t4.cargahoraria,
+ t5.pessnmrz AS nomeprofessor,
  ( SELECT count(dbaluno_disciplina.seq) AS count
            FROM dbaluno_disciplina
-          WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos, 
- t0.salaseq, 
- t3.sttuseq, 
- to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, 
- t999.seq AS statseq, 
- t999.statdesc 
+          WHERE dbaluno_disciplina.tudiseq = t0.seq AND dbaluno_disciplina.stadseq = 2::bigint) AS alunos,
+ t0.salaseq,
+ t3.sttuseq,
+ to_char(t1.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad,
+ t999.seq AS statseq,
+ t999.statdesc
    FROM dbturma_disciplina_aula t1
    LEFT JOIN dbturma_disciplina t0 ON t0.seq = t1.tudiseq
    LEFT JOIN dbturma t3 ON t3.seq = t0.turmseq
@@ -213,7 +213,7 @@ CREATE OR REPLACE VIEW view_turma_disciplina_aula AS
 
 ALTER TABLE dbaproveitamento_disciplina
    ADD COLUMN instituicao character varying(200);
-   
+
 -- Alterações a partir de 24/01/2014
 
 ALTER TABLE dbboleto_estrutura
@@ -222,44 +222,44 @@ ALTER TABLE dbboleto_estrutura
 
 ALTER TABLE dbturma
    ADD COLUMN cofiseq integer;
-   
+
 ALTER TABLE dbturma
   ADD CONSTRAINT fk_cofi_parc_cofiseq FOREIGN KEY (cofiseq)
   REFERENCES dbconta_financeira (seq) MATCH SIMPLE
   ON UPDATE RESTRICT ON DELETE RESTRICT;
-  
+
   update dbturma set cofiseq = 3;
-  
+
 ALTER TABLE dbturma
    ALTER COLUMN cofiseq SET NOT NULL;
-   
+
 ALTER TABLE dbtransacao
    ADD COLUMN cofiseq integer;
-   
+
 ALTER TABLE dbtransacao
   ADD CONSTRAINT fk_cofi_tran_cofiseq FOREIGN KEY (cofiseq)
   REFERENCES dbconta_financeira (seq) MATCH SIMPLE
   ON UPDATE RESTRICT ON DELETE RESTRICT;
-  
+
   update dbtransacao set cofiseq = 3;
-  
+
 ALTER TABLE dbtransacao
    ALTER COLUMN cofiseq SET NOT NULL;
 
    ALTER TABLE dbparcela
    ADD COLUMN cofiseq integer;
-   
+
 ALTER TABLE dbparcela
   ADD CONSTRAINT fk_cofi_parc_cofiseq FOREIGN KEY (cofiseq)
   REFERENCES dbconta_financeira (seq) MATCH SIMPLE
   ON UPDATE RESTRICT ON DELETE RESTRICT;
-  
+
   update dbparcela set cofiseq = 3;
-  
+
 ALTER TABLE dbparcela
    ALTER COLUMN cofiseq SET NOT NULL;
-   
-CREATE OR REPLACE VIEW view_inscricao AS 
+
+CREATE OR REPLACE VIEW view_inscricao AS
  SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.pessseq, t0.transeq, t0.turmseq, t4.seq AS cursseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t999.seq AS statseq, t999.statdesc, t2.pessnmrz AS nomepessoa, t2.pessnmrf, t3.titulo AS nometurma, t3.datainicio, t3.valortaxa, t3.parcelas, t3.valormatricula, t3.valormensal AS valorparcelas, t5.nome AS nomecurso, t0.vencimentomatricula, t0.vencimentotaxa, t3.datainiciovencimentos, t3.padraovencimento, t3.cofiseq
    FROM dbinscricao t0
    LEFT JOIN dbpessoa t2 ON t2.seq = t0.pessseq
@@ -267,15 +267,15 @@ CREATE OR REPLACE VIEW view_inscricao AS
    LEFT JOIN dbcurso t4 ON t4.seq = t3.cursseq
    LEFT JOIN dbprojeto_curso t5 ON t5.seq = t4.pjcuseq
    LEFT JOIN dbstatus t999 ON t999.seq = t0.statseq;
-   
-   
+
+
 update dbboleto_estrutura set cofiseq = 3;
 
 -- View: view_parcela
 
 -- DROP VIEW view_parcela;
 
-CREATE OR REPLACE VIEW view_parcela AS 
+CREATE OR REPLACE VIEW view_parcela AS
  SELECT t0.seq, t0.unidseq, t0.usuaseq, t0.transeq, t1.pessseq, t0.plcoseq, t0.tipo, t0.valorinicial, t0.valoratual, t0.numero, t0.desconto, to_char(t0.vencimento::timestamp with time zone, 'DD/MM/YYYY'::text) AS vencimento, t0.obs, t0.stpaseq, to_char(t0.datacad::timestamp with time zone, 'DD/MM/YYYY'::text) AS datacad, t2.pessnmrz AS nomepessoa, t3.nomeconta AS nomeplanoconta, t0.instrucoespagamento, t999.seq AS statseq, t999.statdesc AS statdescr, t5.valorfinal AS valorfinal_credito, t6.valorfinal AS valorfinal_debito, t8.titulo AS stpadesc,t0.cofiseq
    FROM dbparcela t0
    LEFT JOIN dbtransacao t1 ON t1.seq = t0.transeq
@@ -295,7 +295,7 @@ CREATE OR REPLACE VIEW view_parcela AS
 
 ALTER TABLE dbconvenio
    ALTER COLUMN pessseq DROP NOT NULL;
-   
+
 ALTER TABLE dbboleto_estrutura
    ADD COLUMN  prefixo_nosso_numero character varying(20);
 ALTER TABLE dbboleto_estrutura
@@ -308,3 +308,272 @@ ALTER TABLE dbboleto_estrutura
    ADD COLUMN  contrato character varying(20);
 ALTER TABLE dbboleto_estrutura
    ADD COLUMN   variacao_carteira character varying(5);
+
+
+-- 11/03/2014
+
+BEGIN;
+
+
+-- CHANGE "UNIQUE" OF "FIELD "pessnmrf" ------------------------
+-- Will be changed by uniques;
+-- -------------------------------------------------------------
+
+-- CREATE UNIQUE "uk_pessnmrf_dbpessoa" ------------------------
+ALTER TABLE "public"."dbpessoa" ADD CONSTRAINT "uk_pessnmrf_dbpessoa" UNIQUE( "pessnmrf","unidseq" );
+-- -------------------------------------------------------------;
+
+COMMIT;
+
+
+-- 18/03
+
+CREATE TABLE dbperiodicos (
+  seq serial,
+   unidseq BIGINT NOT NULL,
+    usuaseq BIGINT NOT NULL,
+    titulo CHARACTER VARYING(120),
+    link CHARACTER VARYING(180),
+    descricao TEXT,
+    datacad date DEFAULT ('now'::TEXT)::date NOT NULL,
+    statseq BIGINT DEFAULT 1 NOT NULL
+);
+
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ACADEMIA - REVISTA LATINOAMERICANA DE ADMINISTRACIÓN (CLADEA)','http://revistaacademia.uniandes.edu.co/index.php/Cladea/issue/archive','ACADEMIA - REVISTA LATINOAMERICANA DE ADMINISTRACIÓN (CLADEA) PUBLICAÇÃO DO CONSELHO LATINOAMERICANO DAS ESCOLAS DE ADMINISTRAÇÃO (CLADEA). TEXTOS INTEGRAIS A PARTIR DE 2000 PERIODICIDADE: SEMESTRAL ISSN: 1012-825',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ACADEMY OF MARKETING SCIENCE REVIEW','http://www.amsreview.org/articles.htm','ACADEMY OF MARKETING SCIENCE REVIEW CONTINUAÇÃO DE JOURNAL OF CONSUMER AND MARKET RESEARCH - TEXTOS INTEGRAIS A PARTIR DE 1997 PERIODICIDADE: ANUAL ISSN 1526-179',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ADMINISTRAÇÃO ON LINE (FECAP)','http://www.fecap.br/adm_online/adol/artigo.htm','REVISTA ELETRÔNICA DO CURSO DE PÓS-GRADUAÇÃO EM ADMINISTRAÇÃO DE EMPRESAS DA FUNDAÇÃO ESCOLA DE COMÉRCIO ÁLVARES PENTEADO. TEXTOS INTEGRAIS A PARTIR DE 2000. PERIODICIDADE: TRIMESTRAL ISSN: 1517-791',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ADMINISTRADORES.COM.BR','http://www.administradores.com.br/','PORTAL DE ADMINISTRAÇÃO - TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ADM.MADE','http://www.estacio.br/revistamade/edicoes.asp','ADM.MADE - PUBLICAÇÃO DA PÓS-GRADUAÇÃO DA UNIVERSIDADE ESTÁCIO DE SÁ / CURSO DE MESTRADO EM ADMINISTRAÇÃO E DESENVOLVIMENTO EMPRESARIAL. TEXTOS INTEGRAIS DESDE 2000. ISSN 1518-992',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ADVERTISING & MARKETING REVIEW','http://www.ad-mkt-review.com/','ADVERTISING & MARKETING REVIEW TEXTOS SELECIONADOS PERIODICIDADE: IRREGULA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AGRIBUSINESS','http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1520-6297/issues','PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AKRÓPOLIS - REVISTA DE CIÊNCIAS HUMANAS DA UNIPAR','http://revistas.unipar.br/akropolis/issue/archive','AKRÓPOLIS - REVISTA DE CIÊNCIAS HUMANAS DA UNIPAR - PUBLICA TRABALHOS INÉDITOS DE DIVERSAS ÁREAS DAS CIÊNCIAS HUMANAS, TAIS COMO, FILOSOFIA, SOCIOLOGIA, ANTROPOLOGIA, ARQUEOLOGIA, HISTÓRIA E GEOGRAFIA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ALCANCE','http://siaiweb06.univali.br/seer/index.php/ra/issue/archive','ALCANCE - PUBLICAÇÃO DA UNIVERSIDADE DO VALE DO ITAJAÍ. PERIODICIDADE: QUADRIMESTRAL. ISSN: 1983-716X',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AMBIENTE E SOCIEDADE - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=1414-753X&lng=es&nrm=iso','PUBLICAÇÃO DO ANPPAS - UNICAMP TEXTOS INTEGRAIS A PARTIR DE 1999 PERIODICIDADE: SEMESTRAL ISSN 1414-753',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AMERICAN ASSOCIATION OF PORT AUTHORITIES (AAPA)','http://www.aapa-ports.org/home.cfm','AMERICAN ASSOCIATION OF PORT AUTHORITIES (AAPA) - ASSOCIAÇÃO COMERCIAL QUE REPRESENTA MAIS DE 130 AUTORIDADES PORTUÁRIAS PÚBLICAS NOS ESTADOS UNIDOS, CANADÁ, CARIBE E AMÉRICA LATINA. AAPA PROMOVE OS INTERESSES COMUNS DA COMUNIDADE PORTUÁRIA, E FORNECE A LIDERANÇA NO COMÉRCIO, TRANSPORTE, QUESTÕES AMBIENTAIS E OUTRAS RELACIONADAS COM O DESENVOLVIMENTO PORTUÁRIO E OPERAÇÕES',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ANÁLISE - REVISTA ACADÊMICA DA FACE','http://revistaseletronicas.pucrs.br/face/ojs/index.php/face/issue/archive','A REVISTA ANÁLISE É UMA PUBLICAÇÃO SEMESTRAL DA FACULDADE DE ADMINISTRAÇÃO, CONTABILIDADE E ECONOMIA DA PUCRS. TEXTOS INTEGRAIS A PARTIR DE 2005. ISSN: 1980-630',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASOCIACION ARGENTINA DE LOGISTICA EMPRESARIA (ARLOG)','http://www.arlog.org/','TEXTOS SELECIONANDOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASOCIACION LATINOAMERICANA DE LOGISTICA','http://www.all-enlinea.com/index.html','ASOCIACION LATINOAMERICANA DE LOGISTICA - ORGANIZAÇÃO SEM FINS LUCRATIVOS QUE VISA PROMOVER O CONHECIMENTO ENTRE OS SEUS PARCEIROS, DIVULGAR LOGÍSTICA, INTERAGIR COM AGÊNCIAS GOVERNAMENTAIS, E APOIAR A FORMAÇÃO DE ASSOCIAÇÕES DE LOGÍSTICA ',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASSOCIAÇÃO BRASILEIRA DE ATACADISTAS E DISTRIBUIDORES (ABAD)','http://www.abad.com.br/index.shtml','ASSOCIAÇÃO BRASILEIRA DE ATACADISTAS E DISTRIBUIDORES (ABAD) - REPRESENTA AS EMPRESAS ATACADISTAS E DISTRIBUIDORES QUE COMERCIALIZAM PRODUTOS ALIMENTÍCIOS INDUSTRIALIZADOS, CANDIES, BEBIDAS, PRODUTOS DE HIGIENE PESSOAL, LIMPEZA DOMÉSTICA, PRODUTOS FARMACÊUTICOS, DE PERFUMARIA, PAPELARIA E MATERIAL DE CONSTRUÇÃO, ENTRE OUTROS. CONTÉM TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASSOCIAÇÃO BRASILEIRA DE LOGÍSTICA (ABRALOG)','http://www.abralog.com.br/website/home/','ASSOCIAÇÃO BRASILEIRA DE LOGÍSTICA (ABRALOG) - VISA A PROMOÇÃO DA LOGÍSTICA ATRAVÉS DA INTEGRAÇÃO DE SEUS ASSOCIADOS, PRESTANDO SERVIÇOS, CAPTANDO INFORMAÇÕES, DISSEMINANDO CONHECIMENTOS, EXERCENDO AÇÃO POLÍTICA E CONTRIBUINDO PARA O AUMENTO DA COMPETITIVIDADE DO SETOR. CONTÉM ARTIGOS, NOTÍCIAS, EVENTOS ENTRE OUTRAS INFORMAÇÕES SOBRE LOGÍSTICA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASSOCIAÇÃO BRASILEIRA DOS TERMINAIS PORTUÁRIOS (ABTP)','http://www.abtp.org.br/index.php','ASSOCIAÇÃO BRASILEIRA DOS TERMINAIS PORTUÁRIOS (ABTP) - REPRESENTA MAIS DE 100 TERMINAIS PORTUÁRIOS DE USO EXCLUSIVO MISTO E PÚBLICO, QUE MOVIMENTAM CERCA DE 90% DA CARGA GERADA PELO COMÉRCIO EXTERIOR BRASILEIRO. CONTÉM TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ASSOCIATION OF AMERICAN CHAMBERS OF COMMERCE IN LATIN AMERICA (AACCLA)','http://www.aaccla.org/','TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AUSTRAL: BRAZILIAN JOURNAL OF STRATEGY & INTERNATIONAL RELATIONS','http://seer.ufrgs.br/austral/issue/archive','AUSTRAL: BRAZILIAN JOURNAL OF STRATEGY & INTERNATIONAL RELATIONS=REVISTA BRASILEIRA DE ESTRATÉGIA E RELAÇÕES INTERNACIONAIS. PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL. PERIODICIDADE: SEMESTRAL. ISSN 2238 6912',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'AUSTRALIAN JOURNAL OF MANAGEMENT','http://aum.sagepub.com/content/by/year','AUSTRALIAN JOURNAL OF MANAGEMENT TEXTOS INTEGRAIS A PARTIR DE 1991 PERIODICIDADE: SEMESTRAL ISSN 1327-202',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BANCO CENTRAL DO BRASIL','http://www.bancocentral.gov.br/','POSSUI PROGRAMA DE CONVERSÃO AUTOMÁTICA DE MOEDA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BANCO FEDERATIVO (BNDES)','http://www.bndes.gov.br/','BANCO DE DADOS SOBRE FEDERALISMO FISCAL COM O INTUITO DE CONSTITUIR UM PONTO DE ENCONTRO PARA INTERCÂMBIO E DIFUSÃO DE INFORMAÇÕES RELATIVAS A FINANÇAS E ADMINISTRAÇÃO DOS GOVERNOS ESTADUAIS E MUNICIPAIS, OBJETIVANDO CONTRIBUIR PARA A MELHORIA DA GESTÃO PÚBLICA NO BRASIL. POSSUI, COM ACESSO AO PÚBLICO EM GERAL, BANCO DE ESTUDOS, ESTATÍSTICAS, NOTÍCIAS, EXPERIÊNCIAS E ENDEREÇOS, E COM ACESSO RESTRITOS AOS CONVENIADOS, FÓRUM DE DEBATES E ENTRADA DE DADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BASE - BIELEFELD ACADEMIC SEARCH ENGINE','http://www.base-search.net/index.php?i=b&l=en','BASE - BIELEFELD ACADEMIC SEARCH ENGINE - METABUSCADOR QUE COLETA PESQUISA EM DIVERSAS FONTES DE INFORMAÇÃO, INCLUINDO TESES E DISSERTAÇÕES EM TODAS AS ÁREAS DO CONHECIMENT',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BBR - BRAZILIAN BUSINESS REVIEW','http://www.bbronline.com.br/edicoes.asp','PUBLICAÇÃO DA FUNDAÇÃO INSTITUTO CAPIXABA DE PESQUISAS EM CONTABILIDADE, ECONOMIA E FINANÇAS (FUCAPE) TEXTOS INTEGRAIS A PARTIR DE 2004 PERIODICIDADE: SEMESTRAL DE 2004 A 2006. A PARTIR DE 2007 QUADRIMESTRAL ISSN: 1807-734',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BIBLIOGRAPHY ON NETWORK ECONOMICS','http://www.stern.nyu.edu/networks/biblio_hframe.html','BIBLIOGRAFIA INTERATIVA ONLINE DE ECONOMIA E ASSUNTOS RELACIONADOS. POSSUI SUMÁRIOS E ALGUNS TEXTOS INTEGRAI',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BIBLIOTECA ON-LINE DO SEBRAE','http://www.biblioteca.sebrae.com.br','ESPAÇO ABERTO À CONSTRUÇÃO E COMPARTILHAMENTO DO CONHECIMENTO, QUE VISA CONTRIBUIR PARA O CONTÍNUO APRENDIZADO DO EMPREENDEDORISMO, AUXILIANDO O DESENVOLVIMENTO E O FORTALECIMENTO DOS PEQUENOS NEGÓCIOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BIBLIOTECA VIRTUAL DE ARTIGOS EM ECONOMIA','http://www.race.nuca.ie.ufrj.br/index.htm','BIBLIOTECA VIRTUAL DE ARTIGOS EM ECONOMIA - DISPONIBILIZA TEXTOS INTEGRAIS DE ECONOMIA, ACADÊMICOS E PUBLICADOS NOS PRINCIPAIS PERIÓDICOS DE GRANDE CIRCULAÇÃO DO PAÍS, PRINCIPALMENTE EM PORTUGUÊS E EM ESPANHOL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BIBLIOTECA VIRTUAL DE INOVAÇÃO TECNOLÓGICA (PROSSIGA)','http://inovacaotecnologica.ibict.br/','REÚNE DE FORMA ESTRUTURADA E SELETIVA, SITES BRASILEIROS E ESTRANGEIROS CONTENDO INFORMAÇÕES RELEVANTES SOBRE INOVAÇÃO TECNOLÓGICA, EM SEUS MÚLTIPLOS ASPECTOS. INCLUI INFORMAÇÕES SETORIAIS COMO, ESTUDOS E DIAGNÓSTICOS, DIRETÓRIOS DE FEDERAÇÕES E ASSOCIAÇÕES EMPRESARIAIS CENTROS E INSTITUTOS DE PESQUISA TECNOLÓGICA, GRUPOS DE PESQUISA, E, AINDA, INDICADORES SÓCIO-ECONÔMICOS, POLÍTICAS GOVERNAMENTAIS, ÓRGÃOS DE REGULAÇÃO, NORMALIZAÇÃO E FISCALIZAÇÃO, ENTRE OUTRO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BOCC - BIBLIOTECA ON-LINE DE CIÊNCIAS DA COMUNICAÇÃO','http://www.bocc.ubi.pt','ACESSO LIVROS (http://www.livroslabcom.ubi.pt/coleccoes.html',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BOLETIM DA SOCIEDADE PARANAENSE DE MATEMÁTICA','http://www.spm.uem.br/_bspm/index.php?pag=edicoes','PUBLICAÇÃO DA SOCIEDADE PARANAENSE DE MATEMÁTICA. PERIODICIDADE: MENSAL. ISSN: 2175-1188',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BOLETIM DE CONJUNTURA (IPEA)','http://www.ipea.gov.br/pub/bccj/bccj.html','PUBLICAÇÃO DO INSTITUTO DE PESQUISA ECONÔMICA APLICADA. APRESENTA TEXTOS INTEGRAIS A PARTIR DE 1996',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BOLETIM DE POLÍTICA INDUSTRIAL - ACOMPANHAMENTO E ANÁLISE (IPEA)','http://www.ipea.gov.br/pub/bpi/bpi.html','PUBLICAÇÃO DO INSTITUTO DE PESQUISA ECONÔMICA APLICADA. APRESENTA TEXTOS INTEGRAIS A PARTIR DE 1997',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BRAZILIAN ADMINISTRATION REVIEW - BAR','http://anpad.org.br/periodicos/content/frame_base.php?revista=2','TEXTOS INTEGRAIS A PARTIR DE 2004 PERIODICIDADE: TRIMESTRAL ISSN: 1807-769',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BUSINESS QUEST','http://www.westga.edu/%7Ebquest/year.html','BUSINESS QUEST TEXTOS INTEGRAIS A PARTIR DE 1996 PERIODICIDADE: ANUA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'BUSINESS WEEK ONLINE','http://www.businessweek.com/index.html','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'B2B MAGAZINE','http://b2bmagazine.consumidormoderno.uol.com.br/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CADERNO CRH','http://www.cadernocrh.ufba.br/archive.php','CADERNO CRH - PUBLICAÇÃO QUADRIMESTRAL DO CENTRO DE RECURSOS HUMANOS, ÓRGÃO SUPLEMENTAR DA FACULDADE DE FILOSOFIA DA UNIVERSIDADE FEDERAL DA BAHIA, QUE REÚNE TEXTOS INÉDITOS, DE RECONHECIDO INTERESSE ACADÊMICO E ATUALIDADE DAS CIÊNCIAS SOCIAIS, NA FORMA DE ARTIGOS E RESENHAS NAS DIVERSAS SESSÕES DA REVISTA. TEXTOS INTEGRAIS A PARTIR DE 1987. E-ISSN 1983-823',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CADERNOS ADENAUER','http://www.kas.de/brasilien/pt/pages/6508/','REVISTA DA FUNDAÇÃO KONRAD-ADENAUER NO BRASIL. PUBLICA ARTIGOS QUE ABRANGEM ASSUNTOS VARIADOS NOS CAMPOS DA POLÍTICA, DA SITUAÇÃO SOCIAL, DA ECONOMIA, DAS RELAÇÕES INTERNACIONAIS E DO DIREITO. SUMÁRIOS E RESUMOS A PARTIR DE 2001. ISSN: 1519-095',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CADERNOS DE PESQUISAS EM ADMINISTRAÇÃO (FEA/USP)','http://www.regeusp.com.br/sumarioArquivo.asp','PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM ADMINISTRAÇÃO DA FEA-USP. DIVULGA TRABALHOS DE NATUREZA ACADÊMICA RELACIONADOS COM TEMAS EM ADMINISTRAÇÃO. APRESENTA TEXTOS INTEGRAIS A PARTIR DE 1994. PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CADERNOS EBAPE.BR','http://bibliotecadigital.fgv.br/ojs/index.php/cadernosebape/issue/archive','TEXTOS INTEGRAIS A PARTIR DE 2003 PERIODICIDADE: TRIMESTRAL ISSN: 1679-395',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CASE STUDIES - REVISTA BRASILEIRA DE MANAGEMENT','http://www.insightnet.com.br/case/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CEPAL BASES DE DADOS (COMISIÓN ECONÓMICA PARA AMÉRICA LATINA Y EL CARIBE)','http://estadisticas.cepal.org/cepalstat/WEB_CEPALSTAT/Basesdatos.asp','O CEPAL TEM POR OBJETIVO CONTRIBUIR NO DESENVOLVIMENTO ECONÔMICO DA AMÉRICA LATINA, COORDENAR AS AÇÕES ENCAMINHADAS A SUA PROMOÇÃO E REFORÇAR AS RELAÇÕES ECONÔMICAS DOS PAÍSES ENTRE SI E COM AS DEMAIS NAÇÕES DO MUNDO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CIA - CENTRAL INTELLIGENCE AGENCY','https://www.cia.gov/','DESCREVE SEM RESERVAS A SITUAÇÃO POLÍTICA E ECONÔMICA DOS PAÍSE',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CIÊNCIAS SOCIAIS APLICADAS EM REVISTA','http://e-revista.unioeste.br/index.php/csaemrevista/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE ESTADUAL DO OESTE DO PARANÁ TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: SEMESTRAL ISSN: 1679-348X E-ISSN: 1982-303',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CIVITAS - REVISTA DE CIÊNCIAS SOCIAIS','http://revistaseletronicas.pucrs.br/ojs/index.php/civitas/issue/archive','CIVITAS REVISTA DE CIÊNCIAS SOCIAIS - PUBLICAÇÃO DA FACULDADE DE FILOSOFIA E CIÊNCIAS HUMANAS DA PUCRS. TEXTOS INTEGRAIS A PARTIR DE 2001. E-ISSN 1984-728',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'COLLOQUIUM HUMANARUM','http://revistas.unoeste.br/revistas/ojs/index.php/ch/issue/archive','COLLOQUIUM HUMANARUM - PUBLICAÇÃO DA UNIVERSIDADE DO OESTE PAULISTA (UNOESTE). PERIODICIDADE: ANUAL. EISSN:1809-820',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'COMPORTAMENTO ORGANIZACIONAL E GESTÃO - PROJETO SCIELO','http://www.scielo.oces.mctes.pt/scielo.php?script=sci_issues&pid=0872-9662&lng=pt&nrm=iso','PUBLICAÇÃO DO ISPA - INSTITUTO SUPERIOR DE PSICOLOGIA APLICADA TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: SEMESTRAL ISSN 0872-966',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'COMPUTAÇÃO BRASIL (SBC)','http://portal.sbc.org.br/bibliotecadigital/?subject=189','BOLETIM INFORMATIVO DA SBC QUE PUBLICA, MATÉRIAS, REPORTAGENS E ENTREVISTAS RELACIONADAS À ÁREA DA COMPUTAÇÃO E INFORMÁTICA. PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'COMUNICAÇÃO EMPRESARIAL (ABERJE)','http://www.aberje.com.br/novo/pub_revista_anteriores.asp','REVISTA DA ASSOCIAÇÃO BRASILEIRA DE COMUNICAÇÃO EMPRESARIAL (ABERJE). APRESENTA TEXTOS INTEGRAIS A PARTIR DE 1996. PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CONNEXIO - REVISTA ELETRÔNICA DA ESCOLA DE GESTÃO E NEGÓCIO','http://repositorio.unp.br/index.php/connexio/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE POTIGUAR. PERIODICIDADE: SEMESTRAL. ISSN: 2236-8760',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CONTABILIDADE VISTA & REVISTA','http://face.ufmg.br/revista/index.php/contabilidadevistaerevista/issue/archive','CONTABILIDADE VISTA & REVISTA - PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS CONTÁBEIS DA FACULDADE DE CIÊNCIAS ECONÔMICAS DA UNIVERSIDADE FEDERAL DE MINAS GERAIS. TEXTOS INTEGRAIS DESDE 1989. PERIODICIDADE: TRIMESTRAL . ISSN 0103-734',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CONTEXTUS - REVISTA CONTEMPORÂNEA DE ECONOMIA E GESTÃO','http://www.contextus.ufc.br/index.php/contextus/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DO CEARÁ. PERIODICIDADE: SEMESTRAL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CONVERSAS & CONTROVÉRSIAS','http://revistaseletronicas.pucrs.br/ojs/index.php/conversasecontroversias/issue/archive','REVISTA CONVERSAS & CONTROVÉRSIAS É UM PERIÓDICO DA GRADUAÇÃO DO CURSO DE CIÊNCIAS SOCIAIS DA PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL E TEM POR FINALIDADE A PUBLICAÇÃO DE ARTIGOS, PESQUISAS E RESENHAS DOS ALUNOS. EISSN: 2178-569',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CRA VIRTUAL - BOLETIM INFORMATIVO DO CRA-PR','http://www.cra-pr.org.br/cravirtual_index.html','BOLETIM INFORMATIVO DO CONSELHO REGIONAL DE ADMINISTRAÇÃO DO PARANÁ. TEXTOS INTEGRAIS A PARTIR DE 2000',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CUADERNOS DE ECONOMÍA','http://www.fce.unal.edu.co/index.php?option=com_content&task=category§ionid=25&id=114&Itemid=251','CUADERNOS DE ECONOMÍA - PUBLICAÇÃO DO DEPARTAMENTO DE TEORIA Y POLITICA ECONOMICA DA UNIVERSIDADE NACIONAL DE COLOMBIA - UNAL. PUBLICA ARTIGOS RELACIONADOS A ECONOMIA E CONDIÇÕES ECONÔMICAS. PERIODICIDADE: SEMESTRAL. ISSN: 0121-477',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'CUADERNOS DE ECONOMÍA Y DIRECCIÓN DE LA EMPRESA','http://dialnet.unirioja.es/servlet/revista?codigo=354','PUBLICAÇÃO DA ASOCIACIÓN CIENTÍFICA DE ECONOMÍA Y DIRECCIÓN DE EMPRESAS TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: TRIMESTRAL ISSN: ISSN: 1138-575',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'DADOS - REVISTA DE CIÊNCIAS SOCIAIS (IUPERJ) - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0011-5258&lng=pt&nrm=iso','PUBLICAÇÃO DO INSTITUTO UNIVERSITÁRIO DE PESQUISAS DO RIO DE JANEIRO (IUPERJ), CUJO OBJETIVO É DIVULGAR ARTIGOS ORIGINAIS NA ÁREA DE CIÊNCIAS SOCIAIS. TEXTOS INTEGRAIS A PARTIR DE 1996. PERIODICIDADE: TRIMESTRAL ISSN: 0011-5258 E-ISSN: 1678-458',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'DICIONÁRIO DE E-COMMERCE','http://www.e-commerce.org.br/dicionario.htm','DICIONÁRIO DE E-COMMERC',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'DIREITO, ESTADO E SOCIEDADE','http://direitoestadosociedade.jur.puc-rio.br/cgi/cgilua.exe/sys/start.htm?tpl=home','DIREITO, ESTADO E SOCIEDADE - PUBLICAÇÃO DA PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO DE JANEIRO. TEXTOS INTEGRAIS A PARTIR DE 2006',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'DISTRIBUIÇÃO','http://www.newtrade.com.br/db/edicoes_anteriores.php','REVISTA DE NEGÓCIOS DOS ATACADISTA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'DYNAMIS','http://proxy.furb.br/ojs/index.php/dynamis/issue/archive','REVISTA DYNAMIS - PUBLICAÇÃO DA PRÓ-REITORIA DE PESQUISA, PÓS-GRADUAÇÃO E EXTENSÃO (PROPEX) DA UNIVERSIDADE REGIONAL DE BLUMENAU (FURB). PERIODICIDADE: QUADRIMESTRAL. ISSN: 1982-486',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ECONOMIA APLICADA - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=1413-8050&lng=pt&nrm=iso','PUBLICAÇÃO DA FACULDADE DE ECONOMIA, ADMINISTRAÇÃO E CONTABILIDADE DE RIBEIRÃO PRETO DA UNIVERSIDADE DE SÃO PAULO TEXTOS INTEGRAIS A PARTIR DE 2005 PERIODICIDADE: TRIMESTRAL ISSN 1413-805',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ECONOMICS, MANAGEMENT, AND FINANCIAL MARKETS','http://www.ceeol.com/aspx/publicationdetails.aspx?publicationid=dd11247e-8c27-462b-917f-254a313fd0f4','TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: TRIMESTRAL ISSN 1842 - 319',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ECONPAPERS (OREBRO UNIVERSITY, SUÉCIA)','http://econpapers.repec.org/','FORNECE ACESSO A UMA GRANDE COLEÇÃO ONLINE DE DOCUMENTOS E ARTIGOS DE JORNAIS SOBRE ECONOMIA. A MAIORIA DOS TEXTOS ESTÃO DISPONÍVEIS EM TEXTO INTEGRAL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EJBO ELETRONIC JOURNAL OF BUSINESS ETHICS AND ORGANIZATION STUDIES','http://ejbo.jyu.fi/archives.html','EJBO ELETRONIC JOURNAL OF BUSINESS ETHICS AND ORGANIZATION STUDIES TEXTOS INTEGRAIS A PARTIR DE 1996 PERIODICIDADE: ANUAL ISSN 1239-268',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EM QUESTÃO','http://www.seer.ufrgs.br/index.php/EmQuestao/issue/archive','EM QUESTÃO TEXTOS INTEGRAIS A PARTIR DE 2003 PERIODICIDADE: SEMESTRAL ISSN 1807-8893 E-ISSN 1808-524',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EMBALAGEMMARCA','http://www.embalagemmarca.com.br/','EMBALAGEMMARCA TEXTOS INTEGRAIS A PARTIR DE 1999 PERIODICIDADE: MENSA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ENFOQUE: REFLEXÃO CONTÁBIL','http://periodicos.uem.br/ojs/index.php/Enfoque/issue/archive','PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS CONTÁBEIS DA UNIVERSIDADE ESTADUAL DE MARINGÁ-UEM. PERIODICIDADE: QUADRIMESTRAL. EISSN: 1984-882X',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ENSAIOS MATEMÁTICOS','http://www.emis.de/journals/em/ensaiossite.html','ENSAIOS MATEMÁTICOS - PUBLICAÇÃO DA SOCIEDADE BRASILEIRA DE MATEMÁTICA (SBM). TEXTOS INTEGRAIS A PARTIR DE 1989',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ESPM - CENTRAL DE CASES','http://www.espm.br/ESPM/pt/Home/Global/Publicacoes/CentralCases/','CENTRAL DA ESCOLA SUPERIOR DE PROPAGANDA E MARKETING QUE REÚNE HISTÓRIAS DE EMPRESAS BRASILEIRAS QUE EMPREGARAM ESTRATÉGIAS BEM SUCEDIDAS PARA REVERTER QUADROS FINANCEIROS DESFAVORÁVEIS OU CONQUISTAR MAIS ESPAÇO EM SEUS MERCADOS DE ATUAÇÃO. APRESENTA TEXTOS NA ÍNTEGR',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ESTUDOS E PUBLICAÇÕES (BNDES)','http://www.bndes.gov.br/SiteBNDES/bndes/bndes_pt/Institucional/Publicacoes/Consulta_Expressa/','CONTÉM TEXTOS OBJETIVOS SOBRE DIVERSOS ASPECTOS DA ESTRUTURA PRODUTIVA DA ECONOMIA BRASILEIRA. O OBJETIVO DESTA PUBLICAÇÃO É DIVULGAR PARTE DO CONHECIMENTO TÉCNICO DO BNDES APLICADO À ANÁLISE DE PROJETOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ESTUDOS ECONÔMICOS (SÃO PAULO) - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0101-4161&lng=pt&nrm=iso','PUBLICAÇÃO DO INSTITUTO DE PESQUISAS ECONÔMICAS DA FEA-USP TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: TRIMESTRAL ISSN 0101-416',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EUROPA - O PORTAL DA UNIÃO EUROPÉIA','http://europa.eu/index_pt.htm','REVELA OS INTERESSES DO CONTINENTE NO COMÉRCIO INTERNACIONAL E INFORMA QUAIS CERTIFICADOS SÃO EXIGIDOS DOS SEUS FORNECEDORE',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EXECUTIVOS FINANCEIROS','http://www.executivosfinanceiros.com.br/revista/','EXECUTIVOS FINANCEIROS TEXTOS INTEGRAIS A PARTIR DE 2005 PERIODICIDADE: MENSA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'EXPORT.GOV (U.S. GOVERNMENT EXPORT PORTAL)','http://www.export.gov/','PORTAL DESTINADO AO EXPORTADOR AMERICANO, REVELA OS INTERESSES E AS PRIORIDADES DOS ESTADOS UNIDOS NO COMÉRCIO MUNDIA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'FORBES - BUSINESS NEWS AND FINANCIAL NEWS','http://www.forbes.com','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'FORUM EMPRESARIAL','http://forum-empresarial.uprrp.edu/revista.html','PUBLICAÇÃO DA UNIVERSIDAD DE PUERTO RICO TEXTOS INTEGRAIS A PARTIR DE 2002 PERIODICIDADE: SEMESTRAL ISSN:1541-856',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO & PRODUÇÃO (UFSCAR) - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0104-530x&lng=pt&nrm=iso','PUBLICA TRABALHOS ORIGINAIS OU QUE APRESENTEM RESULTADOS DE ESTUDOS E PESQUISAS NA ÁREA DE ENGENHARIA DE PRODUÇÃO. TEXTOS INTEGRAIS A PARTIR DE 2000. PERIODICIDADE: QUADRIMESTRAL ISSN: 0104-530X E-ISSN: 1806-964',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO & REGIONALIDADE','http://seer.uscs.edu.br/index.php/revista_gestao/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE MUNICIPAL DE SÃO CAETANO DO SUL (USCS_SP). PERIODICIDADE: QUADRIMESTRAL. EISSN: 2176-5308',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO & RH ON-LINE','http://www.gestaoerh.com.br/index.php','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO E PLANEJAMENTO','http://www.revistas.unifacs.br/index.php/rgb/issue/archive','TEXTOS INTEGRAIS A PARTIR DE 1999',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO EM AÇÃO','http://www.gestaoemacao.ufba.br/anteriores.html','TEXTOS INTEGRAIS A PARTIR DE 2000 PERIODICIDADE: 2000 A 2003 SEMESTRAL, A PARTIR DE 2004 QUADRIMESTRAL ISSN: 1808-124',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO PÚBLICA: PRÁTICAS E DESAFIOS','http://www.mpanerevista.kinghost.net/ojs-2.2.4/index.php?journal=gppd&page=issue&op=archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DE PERNAMBUCO (UFPE). PERIODICIDADE: SEMESTRAL. ISSN: 2177-1243',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO RH','http://www.gestaorh.com.br/website/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTÃO.ORG (UFPE)','http://www.revista.ufpe.br/gestaoorg/index.php/gestao/issue/archive','REVISTA ELETRÔNICA DE GESTÃO ORGANIZACIONAL DO PROGRAMA DE PÓS-GRADUAÇÃO EM ADMINISTRAÇÃO DA UNIVERSIDADE FEDERAL DE PERNAMBUCO - PROPAD/UFPE QUE VISA A DIVULGAÇÃO DE TRABALHOS CIENTÍFICOS, A DISSEMINAÇÃO DO CONHECIMENTO E O DEBATE DE IDÉIAS SOBRE GESTÃO ORGANIZACIONAL. TEXTOS INTEGRAIS A PARTIR DE 2003. ISSN: 1679-182',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GESTION: REVISTA DE CIENCIAS ADMINISTRATIVAS Y FINANCIERAS DE LA SEGURIDAD SOCIAL - PROJETO SCIELO','http://www.scielo.sa.cr/scielo.php?script=sci_issues&pid=1409-1259&lng=es&nrm=iso','PUBLICAÇÃO DO EDITORIAL NACIONAL DE SALUD Y SEGURIDAD SOCIAL TEXTOS INTEGRAIS A PARTIR DE 1997 PERIODICIDADE: SEMESTRAL ISSN: 1409-125',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GLOBAL MANAGER - REVISTA DA FACULDADE DA SERRA GAÚCHA (FSG)','http://ojs.fsg.br/index.php/global/issue/archive','PUBLICAÇÃO TÉCNICO-CIENTÍFICA DA FACULDADE DA SERRA GAÚCHA, COM A COLABORAÇÃO DE PROFESSORES, ALUNOS E EXPERTS DO BRASIL E DO EXTERIOR. TEXTOS INTEGRAIS. PERIODICIDADE: SEMESTRAL. ISSN: 1676-281',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'GV EXECUTIVO','http://rae.fgv.br/gv-executivo/edicoes','SUMÁRIOS E RESUMOS A PARTIR DE 2002 - TEXTOS SELECIONADOS PARA ''DOWNLOAD'' PERIODICIDADE: IRREGULAR ISSN: 1806-897',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'HARVARD BUSINESS REVIEW','http://hbr.harvardbusiness.org/archive','TEXTOS SELECIONADOS. PERIODICIDADE: MENSAL VERSÃO IMPRESSA BBT. CCES',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'HSM MANAGEMENT','http://www.hsm.com.br/revista.html','REÚNE OS ARTIGOS DAS MAIORES AUTORIDADES MUNDIAIS EM MANAGEMENT SOBRE OS MAIS IMPORTANTES TEMAS DA ÁREA EM DEBATE ATUALMENTE, ALÉM DE ENTREVISTAS, PESQUISAS E REPORTAGENS ESPECIAIS FEITAS NAS MAIORES EMPRESAS AO REDOR DO MUNDO. TEXTOS PARTIR DE 1997. PERIODICIDADE: BIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'IBAM - INSTITUTO BRASILEIRO DE ADMINISTRAÇÃO MUNICIPAL','http://www.ibam.org.br/','O IBAM É UMA ORGANIZAÇÃO DE NATUREZA NÃO-GOVERNAMENTAL, SEM FINS LUCRATIVOS, VOCACIONADA PARA O FORTALECIMENTO DO GOVERNO MUNICIPAL, SOB A ÓTICA DE UMA SOCIEDADE DEMOCRÁTICA, CUJOS OBJETIVOS ABRANGEM O ESTUDO, A PESQUISA E A BUSCA DE SOLUÇÃO DOS PROBLEMAS MUNICIPAIS E URBANOS, NO QUADRO DO DESENVOLVIMENTO REGIONAL E NACIONAL. O INSTITUTO É RECONHECIDO COMO UMA INSTITUIÇÃO DE UTILIDADE PÚBLICA PELO GOVERNO FEDERAL E PELO GOVERNO DO ESTADO DO RIO DE JANEIRO. TAMBÉM É RECONHECIDO COMO UMA INSTITUIÇÃO DE FINS FILANTRÓPICOS PELO CONSELHO NACIONAL DE SERVIÇO SOCIAL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'IBGE - INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA','http://www.ibge.gov.br/home/','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'IBOPE','http://www.ibope.com.br/pt-br/Paginas/home.aspx','EMPRESA PRIVADA DE PESQUISA DA AMÉRICA LATINA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'IDEIA SUSTENTÁVEL','http://www.ideiasustentavel.com.br/revista/edicoes/','REVISTA IDEIA SUSTENTÁVEL ABORDA TEMAS SOCIOAMBIENTAIS NA GESTÃO DAS CORPORAÇÕES BRASILEIRAS, TERCEIRO SETOR, INVESTIMENTO SOCIAL PRIVADO, RESPONSABILIDADE SOCIAL EMPRESARIAL E SUSTENTABILIDADE',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ILOLEX - NORMAS INTERNACIONALES DEL TRABAJO','http://www.oit.org/ilolex/spanish/index.htm','BASE DE DADOS TRILINGUE. CONTEM CONVENÇÕES E RECOMENDAÇÕES, RATIFICAÇÃO INFORMAÇÕES, COMENTÁRIOS DO COMITÉ DE PERITOS E DO COMITÊ DE LIBERDADE SINDICAL, REPRESENTAÇÕES, RECLAMAÇÕES, INTERPRETAÇÕES, SONDAGENS GERAL, E DE NUMEROSOS DOCUMENTOS RELACIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INFORMES DE FINANÇAS PÚBLICAS E EMPREGO - INFORME-SE - (BNDES)','http://www.bndes.gov.br/SiteBNDES/bndes/bndes_pt/Institucional/Publicacoes/Consulta_Expressa/Tipo/Informes_de_Financas_Publicas_e_Emprego/','APRESENTA TEXTOS INTEGRAIS A PARTIR DE 2000',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INSTITUTO BRASILEIRO DE LOGÍSTICA - IBRALOG','http://www.ibralog.org.br/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INSTITUTO CHIAVENATO','http://www.chiavenato.com/site/','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INTAL','http://www.iadb.org/pt/intal/estatisticas-do-comercio,7585.html','O INTAL É UMA UNIDADE DO BANCO INTERAMERICANO DE DESENVOLVIMENTO. SUAS ATIVIDADES CONCENTRAM-SE PRINCIPALMENTE NA CAPACITAÇÃO SOBRE ASSUNTOS DE COMÉRCIO, COOPERAÇÃO E INTEGRAÇÃO REGIONAL E ASSISTÊNCIA TÉCNICA COM ÊNFASE ESPECIAL NO FORTALECIMENTO INSTITUCIONAL E NO DIÁLOGO COM A SOCIEDADE CIVIL, INCLUINDO O SETOR PRIVADO. O INSTITUTO ATUA COMO SECRETARIA DO COMITÊ DE COORDENAÇÃO TÉCNICA DO IIRSA, INTEGRADO PELO BID, CAF E FONPLATA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INTERNATIONAL DATA BASE (IPC - CENSUS BUREAU''S INTERNATIONAL PROGRAMS CENTER, USA)','http://www.census.gov/ipc/www/idb/','BASE DE DADOS QUE CONTÉM TABELAS ESTATÍSTICAS DE DADOS DEMOGRÁFICOS E SÓCIO-ECONÔMICOS DE 227 PAÍSES DO MUND',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INTERNATIONAL JOURNAL OF PUBLIC OPINION RESEARCH','http://ijpor.oxfordjournals.org/archive/','SUMÁRIOS E RESUMOS A PARTIR DE 1989 PERIODICIDADE: TRIMESTRAL ISSN 0954-2892 E-ISSN 1471-690',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INTERSCIENCEPLACE: REVISTA CIENTÍFICA INTERNACIONAL','http://www.interscienceplace.org/interscienceplace/issue/archive','PUBLICAÇÃO SURGIU A PARTIR DE UMA PROPOSTA DE CRIAÇÃO DE UM ESPAÇO PARA PUBLICAÇÕES CIENTÍFICAS A NÍVEL INTERNACIONAL NA ÁREA INTERDISCIPLINAR DURANTE O VI E VII CONGRESSO LATINOAMERICANO DE HUMANIDADES PROMOVIDO PELA REDE LATINOAMERICANO DE HUMANIDADES (MÉXICO-2005 E BRASIL-2007). OFERECE A TODOS OS PESQUISADORES INTERESSADOS UM ESPAÇO PARA DIVULGAÇÃO DE SUAS PRODUÇÕES INTELECTUAIS. ISSN: 1679-984',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'INTERTEM@S NEGÓCIOS','http://intertemas.unitoledo.br/revista/index.php/Negocios/issue/archive','PUBLICAÇÃO DAS FACULDADES INTEGRADAS ''ANTONIO EUFRÁSIO DE TOLEDO''. PERIODICIDADE: SEMESTRAL. ISSN: 1983-446',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'IPC - INDICE DE PREÇOS AO CONSUMIDOR (IPARDES)','http://www.ipardes.gov.br/publicacoes/ipc/ipc.htm','APRESENTA A VARIAÇÃO DE PREÇO DAS CESTAS DE CONSUMO DAS FAMÍLIAS COM RENDA MENSAL DE 1 A 40 SALÁRIOS MÍNIMOS, NO MUNICÍPIO DE CURITIBA. TEXTOS INTEGRAIS A PARTIR DE 2004. PERIODICIDADE: MENSA',1);
+
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'JEMS - JOURNAL OF EMPIRICAL GENERALISATIONS IN MARKETING SCIENCE','http://www.empgens.com/ArticlesHome/Articles.html','JEMS - JOURNAL OF EMPIRICAL GENERALISATIONS IN MARKETING SCIENCE TEXTOS INTEGRAIS A PARTIR DE 1996 PERIODICIDADE: ANUAL ISSN 1326-444',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'JIAD - JOURNAL OF INTERACTIVE ADVERTISING','http://www.jiad.org/issues','JIAD - JOURNAL OF INTERACTIVE ADVERTISING TEXTOS INTEGRAIS A PARTIR DE 2000 PERIODICIDADE: SEMESTRAL ISSN: 1525-201',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'JOURNAL OF CONSUMER RESEARCH (UNIVERSITY OF CHICAGO)','http://www.jstor.org/action/showPublication?journalCode=jconsrese','PUBLICAÇÃO DE UNIVERSITY OF CHICAGO PRESS, JOURNALS DIVISION. TEXTOS INTEGRAIS A PARTIR DE 1997',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'JOURNAL OF INTERNATIONAL MARKETING','http://www.marketingpower.com/AboutAMA/Pages/AMA%20Publications/AMA%20Journals/Journal%20of%20International%20Marketing/JournalofInternationalMarketing.aspx','JOURNAL OF INTERNATIONAL MARKETING SUMÁRIOS E RESUMOS A PARTIR DE 2002 PERIODICIDADE: TRIMESTRAL ISSN: 1069-031X E-ISSN: 1547-721',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'J-STAGE (JAPAN SCIENCE & TECHNOLOGY INFORMATION AGGREGATOR)','http://www.jstage.jst.go.jp/browse/','FERRAMENTA QUE VISA ACELERAR A TRANSMISSÃO E A CIRCULAÇÃO DE INFORMAÇÕES CIENTÍFICAS E TECNOLÓGICAS JAPONESAS ATRAVÉS DE UM FLUXO CONTÍNUO NA INTERNET. APRESENTA JOURNALS, PROCEEDINGS E REPORTS. CADASTRO GRATUITO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'JUS NAVIGANDI - DOUTRINA','http://jus.com.br/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'LEGISLAÇÃO - NORMAS REGULAMENTADORAS DO TRABALHO','http://portal.mte.gov.br/legislacao/','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'LINGUAGEM & ENSINO (UCPEL)','http://rle.ucpel.tche.br/index.php?scentro=php/inicial.php','REVISTA DO CURSO DE MESTRADO EM LETRAS DA UNIVERSIDADE CATÓLICA DE PELOTAS (UCPEL). DIVULGA TRABALHOS INÉDITOS, DE CUNHO TEÓRICO E APLICADO, NA ÁREA DA LINGUAGEM E DE SEU ENSINO, INCLUINDO APRENDIZAGEM E AQUISIÇÃO DE LÍNGUAS, TANTO MATERNA COMO ESTRANGEIRA, DESENVOLVIMENTO E AVALIAÇÃO DA PRODUÇÃO TEXTUAL, ASPECTOS SOCIAIS E PSICOLINGÜÍSTICOS DA COMPREENSÃO TEXTUAL, FORMAÇÃO DE PROFESSORES DE LÍNGUA MATERNA E ESTRANGEIRA, DISCURSO PEDAGÓGICO E ASPECTOS DA INTERAÇÃO EM SALA DE AULA. RELATOS DE EXPERIÊNCIA E ENSAIOS BEM FUNDAMENTADOS SOBRE OS TEMAS ACIMA TAMBÉM SERÃO CONSIDERADOS. APRESENTA TEXTOS INTEGRAIS A PARTIR DE 1998. PERIODICIDADE: SEMESTRAL ISSN: 1415-192',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'LIVRE! - PORTAL DE ACESSO A PERIÓDICOS ELETRÔNICOS DE ACESSO LIVRE NA INTERNET (CNEN)','http://livre.cnen.gov.br','PORTAL DESENVOLVIDO PELA COMISSÃO NACIONAL DE ENERGIA NUCLEAR (CNEN) PARA A IDENTIFICAÇÃO E ACESSO AOS PERIÓDICOS GRATUITOS NA INTERNET. INCLUEM REVISTAS CIENTÍFICAS (JOURNALS), REVISTAS DE DIVULGAÇÃO CIENTÍFICA (MAGAZINES) E BOLETINS TÉCNICOS (BULLETINS/NEWSLETTERS) DE TODAS AS ÁREAS DO CONHECIMENTO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MAGAZIN DEUTSCHLAND','https://www.deutschland.de/de/topic/umwelt','MAGAZIN DEUTSCHLAND - REVISTA ALEMÃ PUBLICADA POR FRANKFURTER SOCIETÄTS-MEDIEN GMBH EM COOPERAÇÃO COM O MINISTÉRIO DAS RELAÇÕES EXTERIORES EM BERLIM. INFORMA SOBRE OS DESENVOLVIMENTOS BILATERAIS ENTRE A ALEMANHA E OUTRAS REGIÕES DO MUNDO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MARINGÁ MANAGEMENT: REVISTA DE CIÊNCIAS EMPRESARIAIS','http://www.maringamanagement.com.br/archive.php','PUBLICAÇÃO DA FACULDADE DE MARINGÁ. TEXTOS INTEGRAIS DESDE 2004. E-ISSN: 1807-646',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MATEMÁTICA CONTEMPORÂNEA','http://www.mat.unb.br/~matcont/','MATEMÁTICA CONTEMPORÂNEA - PUBLICAÇÃO DA SOCIEDADE BRASILEIRA DE MATEMÁTICA. TEXTOS INTEGRAIS A PARTIR DE 1996',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MEIO & MENSAGEM - MM ONLINE','http://www.meioemensagem.com.br/novomm/br/index.jsp','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MELHOR - GESTÃO DE PESSOAS','http://www.revistamelhor.com.br/','TEXTOS SELECIONADOS. PERIODICIDADE: MENSA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MERCADO & EVENTOS','http://www.mercadoeeventos.com.br/script/index.asp','MERCADO & EVENTOS TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'METODOLOGIA CIENTÍFICA','http://www.pedagogiaemfoco.pro.br/met01.htm','METODOLOGIA CIENTÍFICA - MANUAL PARA ELABORAÇÃO DE TEXTOS ACADÊMICOS, MONOGRAFIAS, DISSERTAÇÕES E TESE',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MINISTÉRIO DO DESENVOLVIMENTO SOCIAL E COMBATE À FOME','http://www.mds.gov.br/','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'M@N@GEMENT','http://www.management-aims.com/','M@N@GEMENT TEXTOS INTEGRAIS A PARTIR DE 1998 PERIODICIDADE: TRIMESTRAL ISSN: 1286-489',1);
+
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'MUNDO DO MARKETING','http://www.mundodomarketing.com.br/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'NETLOGÍSTICA','http://netlogistica.com.br/artigos/default.asp','NETLOGÍSTICA - CRIADA COM O INTUITO DE DESENVOLVER PARCERIAS COM INDÚSTRIAS, OPERADORES LOGÍSTICOS E TRANSPORTADORAS NA BUSCA DE PROFISSIONAIS NA ÁREA DE LOGÍSTICA E SUPPLY CHAIN E TAMBÉM DE PROFISSIONAIS EM BUSCA DE UMA NOVA RECOLOCAÇÃO NA ÁREA. TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'NONPROFIT REVIEW , THE','https://www.jstage.jst.go.jp/browse/janpora','PUBLICAÇÃO DA JAPAN NPO RESEARCH ASSOCIATION TEXTOS INTEGRAIS A PARTIR DE 2001 PERIODICIDADE: SEMESTRAL ISSN: 1346-411',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'NOTAS TÉCNICAS - MACROECONOMIA (BNDES)','http://www.bndes.gov.br/SiteBNDES/bndes/bndes_pt/Institucional/Publicacoes/Consulta_Expressa/Tipo/Notas_Tecnicas/','PRODUTO DE UM CONTRATO ENTRE O BNDES E A FUNDAÇÃO UNIVERSITÁRIA JOSÉ BONIFÁCIO - FUJB, COM INTERVENIÊNCIA DA FINEP, E TRATAM DE ARRANJOS E SISTEMAS PRODUTIVOS LOCAIS OU CLUSTERS. OS TEXTOS SÃO VERSÕES PRELIMINARES E FORAM OBJETO DE DISCUSSÃO EM UM SEMINÁRIO REALIZADO EM 04 E 05.09.00',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'OFICINA DE GENTE: GESTÃO DE PESSOAS','http://www.oficinadegente.com/home/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ONLINE JOURNAL OF DISTANCE LEARNING ADMINISTRATION - OJDLA','http://www.westga.edu/~distance/ojdla/browsearticles.php','TEXTOS INTEGRAIS A PARTIR DE 1998 PERIODICIDADE: IRREGULA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'ORGANIZAÇÃO INTERNACIONAL DO TRABALHO','http://www.oitbrasil.org.br/index.php','COM O OBJETIVO DE PROMOVER A JUSTIÇA SOCIAL, A ORGANIZAÇÃO INTERNACIONAL DO TRABALHO (OIT) É A ÚNICA DAS AGÊNCIAS DO SISTEMA DAS NAÇÕES UNIDAS QUE TEM ESTRUTURA TRIPARTITE, NA QUAL OS REPRESENTANTES DOS EMPREGADORES E DOS TRABALHADORES TÊM OS MESMOS DIREITOS QUE OS DO GOVERN',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PARCERIAS ESTRATÉGICAS','http://www.cgee.org.br/parcerias/p22.php','PUBLICADO PELO MINISTÉRIO DA CIÊNCIA E TECNOLOGIA TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PEQUENAS EMPRESAS & GRANDES NEGÓCIOS (PEGN)','http://empresas.globo.com','PUBLICAÇÃO DA EDITORA GLOBO. TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PESQUISA OPERACIONAL','http://www.scielo.br/scielo.php?script=sci_issues&pid=0101-7438&lng=pt&nrm=iso','PUBLICAÇÃO DA SOCIEDADE BRASILEIRA DE PESQUISA OPERACIONAL TEXTOS INTEGRAIS A PARTIR DE 2000 PERIODICIDADE: SEMESTRAL ISSN 0101-7438 E-ISSN 1678-514',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PORTAL BRASILEIRO DE COMÉRCIO EXTERIOR','http://www.comexbrasil.gov.br/','MANTIDO PELO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA E COMÉRCIO EXTERIOR',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PORTAL DA INDUSTRIA BRASILEIRA','http://www.cni.org.br/','CONTÉM INFORMAÇÕES SOBRE CNI (CONFEDERAÇÃO NACIONAL DA INDUSTRIA), SESI ( SERVIÇO SOCIAL DA INDUSTRIA), SENAI (SERVIÇO NACIONAL DE APRENDIZAGEM INDUSTRIAL), E O IEL (INSTITUTO EUVALDO LODI)',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PORTAL DO MARKETING','http://portaldomarketing.com.br/Artigos.htm','PORTAL DESTINADO AO ESTUDO DO MARKETING. CONTÉM INFORMAÇÕES SOBRE MARKETING, EMAIL MARKETING, ONLINE MARKETING, WEB MARKETING, INTERNET MARKETING, ADMINISTRAÇÃO DE EMPRESAS, LIDERANÇA, PSICOLOGIA, VENDAS, CONSULTORIA, NEGÓCIOS E EMPRESAS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PROBLEMAS BRASILEIROS (SESC-SP)','http://www.sescsp.org.br/sesc/revistas/revistas_link_home.cfm?Edicao_Id=361&revista_id=3&breadcrumb=1&tipo=2','PUBLICAÇÃO DOS SESC DE SÃO PAULO COM TEXTOS INTEGRAIS A PARTIR DE 1997',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'PROMETEUS','http://seer.ufs.br/index.php/prometeus/issue/archive','PUBLICAÇÃO DO DEPARTAMENTO DE FILOSOFIA DA UNIVERSIDADE FEDERAL DE SERGIPE. PERIODICIDADE: SEMESTRAL. ISSN: 2176-596',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'QUALITAS - REVISTA ELETRÔNICA','http://revista.uepb.edu.br/index.php/qualitas/issue/archive','QUALITAS - REVISTA ELETRÔNICA - PUBLICADA PELO CENTRO DE CIÊNCIAS SOCIAIS APLICADAS DA UNIVERSIDADE ESTADUAL DA PARAÍBA. PERIODICIDADE: SEMESTRAL. TEXTOS INTEGRAIS A PARTIR DE 2006. ISSN -1677 428',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RACE - REVISTA DE ADMINISTRAÇÃO, CONTABILIDADE E ECONOMIA','http://editora.unoesc.edu.br/index.php/race/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE OESTE DE SANTA CATARINA (UNOESC). PERIODICIDADE: SEMESTRAL. ISSN: 2179-4936',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RACRE - REVISTA DE ADMINISTRAÇÃO','http://ferramentas.unipinhal.edu.br/ojs/racre/archive.php','PUBLICAÇÃO DA UNIPINHAL - CENTRO REGIONAL UNIVERSITÁRIO DE ESPÍRITO SANTO DO PINHAL TEXTOS INTEGRAIS A PARTIR DE 2005 PERIODICIDADE: ANUAL ISSN: 1808-840',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RAE - REVISTA DE ADMINISTRAÇÃO DE EMPRESAS (FGV)','http://rae.fgv.br/rae/edicoes','ACESSO SCIELO (http://www.scielo.br/scielo.php?script=sci_issues&pid=0034-7590&lng=en&nrm=iso',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RAI - REVISTA DE ADMINISTRAÇÃO E INOVAÇÃO','http://www.revistarai.org/rai/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE NOVE DE JULHO TEXTOS INTEGRAIS A PARTIR DE 2004 PERIODICIDADE: QUADRIMESTRAL ISSN: 1809-203',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RAUSP - REVISTA DE ADMINISTRAÇÃO DA USP','http://www.rausp.usp.br','REVISTA DO DEPARTAMENTO DE ADMINISTRAÇÃO DA FACULDADE DE ECONOMIA, ADMINISTRAÇÃO E CONTABILIDADE DA UNIVERSIDADE DE SÃO PAULO. TEM POR OBJETIVO PUBLICAR TRABALHOS CONCEITUAIS, PRÁTICOS E DE PESQUISA QUE AGREGUEM VALOR AO TRABALHO DE ACADÊMICOS E PRATICANTES DE ADMINISTRAÇÃO. APRESENTA APENAS SUMÁRIOS E RESUMOS A PARTIR DE 1977. PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RBE - REVISTA BRASILEIRA DE ECONOMIA (FGV) - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0034-7140&lng=pt&nrm=iso','PUBLICAÇÃO DA FUNDAÇÃO GETÚLIO VARGAS (FGV) QUE VISA O ESTUDO DE ASSUNTOS ECONÔMICOS, SOB SEUS ASPECTOS CIENTÍFICO, TEÓRICO E APLICADO. TEXTOS INTEGRAIS A PARTIR DE 2001. PERIODICIDADE: TRIMESTRAL ISSN: 0034-7140 E-ISSN: 1806-913',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RC&C - REVISTA DE CONTABILIDADE E CONTROLADORIA','http://ojs.c3sl.ufpr.br/ojs2/index.php/rcc/issue/archive','RC&C - REVISTA DE CONTABILIDADE E CONTROLADORIA - PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS CONTÁBEIS DA UNIVERSIDADE FEDERAL DO PARANÁ. PERIODICIDADE: QUADRIMESTRALMENTE. ISSN: 1984-626',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'READ - REVISTA ELETRÔNICA DE ADMINISTRAÇÃO (UFRGS)','http://www.read.ea.ufrgs.br/edicoes/anteriores.php','PUBLICAÇÃO DA ESCOLA DE ADMINISTRAÇÃO DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL (UFRGS). TEM POR OBJETIVO DISSEMINAR O CONHECIMENTO CIENTÍFICO SOBRE ADMINISTRAÇÃO PRODUZIDO NO BRASIL E NO EXTERIOR VISANDO ESTIMULAR O DEBATE ACADÊMICO, BEM COMO AUXILIAR OS PROFISSIONAIS QUE ATUAM NA ÁREA NA REALIZAÇÃO DE SUAS ATIVIDADES. TEXTOS INTEGRAIS A PARTIR DE 1995. CADASTRO GRATUITO. ISSN: 1413-231',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REBRAE - REVISTA BRASILEIRA DE ESTRATÉGIA','http://www2.pucpr.br/reol/index.php/REBRAE?dd99=search','REVISTA BRASILEIRA DE ESTRATÉGIA - PUBLICAÇÃO DA PUCPR, TEVE INÍCIO NO ANO DE 2008 COM O OBJETIVO DE DIVULGAR TRABALHOS ORIGINAIS DE PESQUISA DESTINADOS À ÁREA DA ADMINISTRAÇÃO. PERIODICIDADE: QUADRIMESTRAL. E-ISSN 2175-335',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RECADM - REVISTA ELETRÔNICA DE CIÊNCIA ADMINISTRATIVA','http://revistas.facecla.com.br/index.php/recadm/issue/archive','PUBLICAÇÃO DO NÚCLEO DE ESTUDOS PEDAGÓGICOS E ADMINISTRATIVOS (NEPA), ÓRGÃO VINCULADO AO DEPARTAMENTO ADMINISTRAÇÃO DA FACULDADE CENECISTA PRESIDENTE KENNEDY DE CAMPO LARGO-PARANÁ-BRASIL. TRATA DE TEMAS TEÓRICOS E PRÁTICAS DA CIÊNCIA ADMINISTRATIVA, ESCRITOS POR PESQUISADORES, DOCENTES E DISCENTES DE CURSOS DE GRADUAÇÃO E DE PÓS-GRADUAÇÃO, BEM COMO DE ENTREVISTAS E TRADUÇÕES CONSIDERADAS RELEVANTES, RESENHAS DE LIVROS E RESUMOS DE TESES E DISSERTAÇÕES. TEXTOS INTEGRAIS. PERIODICIDADE: SEMESTRAL ISSN: 1677-738',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RESEARCH & DEVELOPMENT MAGAZINE','http://www.rdmag.com/CrtIssueArch.aspx','SUMÁRIOS E RESUMOS A PARTIR DE 2003 PERIODICIDADE: MENSA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RETRATO DO BRASIL','http://www.oretratodobrasil.com.br/edicoes_anteriores/Retrato_do_Brasil.asp','ISSN: 1980-379',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REUNA','http://revistas.una.br/index.php/reuna/issue/archive','PUBLICAÇÃO DO CENTRO UNIVERSITÁRIO UNA (BELO HORIZONTE). PERIODICIDADE: TRIMESTRAL. EISSN: 2179-8834',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REUNIR - REVISTA DE ADMINISTRAÇÃO, CONTABILIDADE E SUSTENTABILIDADE','http://150.165.111.246/revistaadmin/index.php/uacc/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DE CAMPINA GRANDE. PERIODICIDADE: QUADRIMESTRAL. ISSN: 2237-3667',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ADMINISTRAÇÃO PÚBLICA E GESTÃO SOCIAL (APGS)','http://www.apgs.ufv.br/index.php/apgs/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DE VIÇOSA. PERIODICIDADE: TRIMESTRAL. EISSN: 2175-5787',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA AMBIENTE CONTÁBIL','http://www.ccsa.ufrn.br/ojs/index.php/ambiente/issue/archive','PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS CONTÁBEIS (DCC) DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE. PERIODICIDADE: SEMESTRAL. ISSN: 2176-9036',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ANÁLISE ECONÔMICA (FCE/UFRGS)','http://seer.ufrgs.br/AnaliseEconomica/issue/archive','PUBLICAÇÃO DA FACULDADE DE CIÊNCIAS ECONÔMICAS DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL (UFRGS). TEXTOS INTEGRAIS DE 1994-2004. E-ISSN: 2176-5456',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA BAHIA ANÁLISE & DADOS','http://www.sei.ba.gov.br/index.php?option=com_content&view=article&id=80&Itemid=110','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA BRASILEIRA DE ADMINISTRAÇÃO CIENTÍFICA','http://www.arvore.org.br/seer/index.php/rbadm/issue/archive','PUBLICAÇÃO DA ESCOLA SUPERIOR DE SUSTENTABILIDADE. PERIODICIDADE: QUADRIMESTRAL. ISSN: 2179-684',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA BRASILEIRA DE GESTÃO DE NEGÓCIOS (FECAP)','http://200.169.97.104/seer/index.php/RBGN/issue/archive','REVISTA DA FUNDAÇÃO ESCOLA DE COMÉRCIO ÁLVARES PENTEADO (FECAP). DIVULGA TRABALHOS DE CUNHO TEÓRICO, TÉCNICO E DE PESQUISA DESENVOLVIDOS EM ADMINISTRAÇÃO E CONTABILIDADE. TEXTOS INTEGRAIS A PARTIR DE 2004. PERIODICIDADE: QUADRIMESTRAL ISSN: 1806-4892 E-ISSN: 1983-080',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA BRASILEIRA DE GESTÃO E DESENVOLVIMENTO REGIONAL (G&DR)','http://www.rbgdr.net/revista/index.php/rbgdr/issue/archive','PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO STRICTO E LATO SENSU EM GESTÃO E DESENVOLVIMENTO REGIONAL DA UNIVERSIDADE DE TAUBATÉ (SP). PERIODICIDADE: QUADRIMESTRAL. ISSN: 1809-239',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA CAPITAL CIENTÍFICO','http://revistas.unicentro.br/index.php/capitalcientifico/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE ESTADUAL DO CENTRO-OESTE - UNICENTRO. PERIODICIDADE: SEMESTRAL. ISSN: 2177-4153',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA CATARINENSE DA CIÊNCIA CONTÁBIL','http://www.atena.org.br/revista/ojs-2.2.3-06/index.php/CRCSC/issue/archive','PUBLICAÇÃO DO CONSELHO REGIONAL DE CONTABILIDADE DE SANTA CATARINA. PERIODICIDADE: QUADRIMESTRAL. EISSN: ISSN: 2237-7662',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA CONTÁBIL & EMPRESARIAL','http://www.netlegis.com.br/indexRC.jsp#','TEXTOS SELECIONADOS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA CONTABILIDADE & FINANÇAS (FEA-USP)','http://www.eac.fea.usp.br/eac/revista/busca.aspx','PUBLICAÇÃO DO DEPARTAMENTO DE CONTABILIDADE E ATUÁRIA DA FEA/USP. PERIODICIDADE: QUADRIMESTRAL. ISSN: 1808-057',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DA FACULDADE DE DIREITO DA UFPR','http://ojs.c3sl.ufpr.br/ojs2/index.php/direito/issue/archive?issuesPage=1','REVISTA DA FACULDADE DE DIREITO DA UFPR - PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM DIREITO. TEXTOS INTEGRAIS DESDE 1953. ISSN: 0104-331',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DA GRADUAÇÃO','http://revistaseletronicas.pucrs.br/ojs/index.php/graduacao/issue/archive','REVISTA DA GRADUAÇÃO - ESPAÇO DE DIVULGAÇÃO DE PRÁTICAS PEDAGÓGICAS DESENVOLVIDAS NA PUCRS. NA REVISTA EM QUESTÃO SERÃO PUBLICADOS OS MELHORES TRABALHOS DE CONCLUSÃO DOS CURSOS DE GRADUAÇÃO NA FORMA DE MONOGRAFIA, ARTIGO OU PROJETO, SEGUNDO O PLANO PEDAGÓGICO DE CADA UNIDADE',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DA MICRO E PEQUENA EMPRESA','http://www.faccamp.br/ojs/index.php/RMPE/issue/archive','PUBLICAÇÃO DA FACULDADE CAMPO LIMPO PAULISTA (FACCAMP). PERIODICIDADE: QUADRIMESTRAL. ISSN: 1982-2537',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE ADMINISTRAÇÃO CONTEMPORÂNEA (ANPAD) - RAC','http://www.anpad.org.br/periodicos/content/frame_base.php?revista=1','PUBLICAÇÃO DA ASSOCIAÇÃO NACIONAL DE PÓS-GRADUAÇÃO E PESQUISA EM ADMINISTRAÇÃO (ANPAD). TEM COMO MISSÃO CONTRIBUIR PARA O ENTENDIMENTO APROFUNDADO DA ADMINISTRAÇÃO MEDIANTE A DIVULGAÇÃO DE TRABALHOS DE PESQUISA, ANÁLISES TEÓRICAS, DOCUMENTOS, CASOS DE ENSINO, NOTAS E RESENHAS BIBLIOGRÁFICAS QUE POSSAM SUBSIDIAR AS ATIVIDADES ACADÊMICAS E A AÇÃO ADMINISTRATIVA EM ORGANIZAÇÕES PÚBLICAS E PRIVADAS. AS ÚLTIMAS EDIÇÕES ESTÃO DISPONÍVEIS APENAS PARA LEITURA DE RESUMOS E DADOS INFORMATIVOS JÁ OS NÚMEROS ANTERIORES ESTÃO DISPONÍVEIS PARA LEITURA NA ÍNTEGRA. A PARTIR DE 1997. ISSN: 1415-655',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE ADMINISTRAÇÃO DA UNIMEP','http://raunimep.com.br/ojs/index.php/regen/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE METODISTA DE PIRACICABA. PERIODICIDADE: SEMESTRAL. ISSN: 1679-5350',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE ADMINISTRAÇÃO E CONTABILIDADE DA FA7','http://www.fa7.edu.br/ypiranga/caderno.php?id=79','PUBLICAÇÃO DA FACULDADE 7 DE SETEMBRO TEXTOS INTEGRAIS A PARTIR DE 2005 PERIODICIDADE: ANUAL ISSN 1808-156',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE CIÊNCIAS DA ADMINISTRAÇÃO (UFSC/CAD)','http://www.periodicos.ufsc.br/index.php/adm/issue/archive','PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS DA ADMINISTRAÇÃO (CAD) DA UNIVERSIDADE FEDERAL DE SANTA CATARINA (UFSC). TEXTOS INTEGRAIS A PARTIR 1998. PERIODICIDADE: QUADRIMESTRAL. ISSN 1516-386',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE CIÊNCIAS EMPRESARIAIS DA UNIPAR','http://revistas.unipar.br/empresarial/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE PARANAENSE (UNIPAR). PERIODICIDADE: SEMESTRAL. ISSN: 1982-111',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE CIÊNCIAS GERENCIAIS','http://sare.anhanguera.com/index.php/rcger/issue/archive','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE CONTABILIDADE DA UFBA','http://www.portalseer.ufba.br/index.php/rcontabilidade/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DA BAHIA. PERIODICIDADE: QUADRIMESTRAL. ISSN: 1984-3704',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE CONTABILIDADE DO MESTRADO EM CIÊNCIAS CONTÁBEIS DA UERJ (ONLINE)','http://www.atena.org.br/revista/ojs-2.2.3-08/index.php/UERJ/issue/archive','PUBLICAÇÃO DO PROGRAMA DE MESTRADO EM CIÊNCIAS CONTÁBEIS DA FACULDADE DE ADMINISTRAÇÃO E FINANÇAS DA UNIVERSIDADE DO ESTADO DO RIO JANEIRO. PERIODICIDADE: QUADRIMESTRAL. ISSN: 1984-3291',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE ECONOMIA E SOCIOLOGIA RURAL - PROJETO SCIELO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0103-2003&lng=pt&nrm=iso','PUBLICAÇÃO DA SOCIEDADE BRASILEIRA DE ECONOMIA E SOCIOLOGIA RURAL TEXTOS INTEGRAIS A PARTIR DE 2002 PERIODICIDADE: TRIMESTRAL ISSN 0103-2003 E-ISSN 1806-947',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE EDUCAÇÃO E PESQUISA EM CONTABILIDADE (REPEC)','http://www.repec.org.br/index.php/repec/issue/archive','PUBLICAÇÃO DO CONSELHO FEDERAL DE CONTABILIDADE (CFC), FUNDAÇÃO BRASILEIRA DE CONTABILIDADE (FBC) E ACADEMIA BRASILEIRA DE CIËNCIAS CONTÁBEIS (ABRACICON). PERIODICIDADE: TRIMESTRAL. ISSN: ISSN 1981-8610',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE FILOSOFIA PUCPR - AURORA','http://www2.pucpr.br/reol/index.php/RF?dd99=olds','TEXTOS INTEGRAIS DESDE 2003. ISSN 0104-444',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE FINANÇAS APLICADAS','http://www.financasaplicadas.net/ojs/index.php/financasaplicadas/issue/archive','PUBLICAÇÃO VINCULADA AO GRUPO DE PESQUISA EM FINANÇAS APLICADAS - USP. PERIODICIDADE: SEMESTRAL. ISSN: 2176-8854',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE GESTÃO, FINANÇAS E CONTABILIDADE (RGFC)','http://www.revistas.uneb.br/index.php/financ/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE DO ESTADO DA BAHIA. PERIODICIDADE: QUADRIMESTRAL. ISSN: 2238-5320',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE GESTÃO USP','http://www.ead.fea.usp.br/cad-pesq/index.htm','TEXTOS INTEGRAIS A PARTIR DE 1994 PERIODICIDADE: TRIMESTRAL POSSUI MECANISMO DE BUSC',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE INFORMAÇÃO CONTÁBIL - RIC','http://www.revista.ufpe.br/ricontabeis/index.php/contabeis/issue/archive','PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS CONTÁBEIS (PPGCC). UNIVERSIDADE FEDERAL DE PERNAMBUCO (UFPE). PERIODICIDADE: TRIMESTRAL. ISSN: 1982-3967',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE INFORMAÇÃO E TECNOLOGIA (UNICAMP)','http://www.ccuec.unicamp.br/revista/navegacao/sobre.html','PUBLICAÇÃO DA UNICAMP TEXTOS SELECIONADOS PERIODICIDADE: IRREGULA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE INFORMÁTICA TEÓRICA E APLICADA','http://seer.ufrgs.br/rita/issue/archive','PUBLICAÇÃO DO INSTITUTO DE INFORMÁTICA DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL SUMÁRIOS E RESUMOS A PARTIR DE 1989 PERIODICIDADE: SEMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE NEGÓCIOS','http://proxy.furb.br/ojs/index.php/rn/issue/archive','REVISTA DE NEGÓCIOS - PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM ADMINISTRAÇÃO DA UNIVERSIDADE REGIONAL DE BLUMENAU (PPGAD/FURB). TEXTOS INTEGRAIS DESDE 1996. PERIODICIDADE: TRIMESTRAL. ISSN 1980-443',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DE SOCIOLOGIA E POLÍTICA','http://www.scielo.br/scielo.php?script=sci_issues&pid=0104-4478&lng=pt&nrm=iso','REVISTA DE SOCIOLOGIA E POLÍTICA - PUBLICAÇÃO DO DEPARTAMENTO DE CIÊNCIAS SOCIAIS DA UNIVERSIDADE FEDERAL DO PARANÁ. TEXTOS INTEGRAIS DESDE 2000. PERIODICIDADE: SEMESTRAL. E-ISSN 1678-9873',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA DIGITAL - PÓLO RS','http://www.revistadigital.com.br/','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ECONOMIA & GESTÃO','http://periodicos.pucminas.br/index.php/economiaegestao/issue/archive','PUBLICAÇÃO DO INSTITUTO DE CIÊNCIAS ECONÔMICAS E GERENCIAIS - ICEG E DO PROGRAMA DE PÓS-GRADUAÇÃO EM ADMINISTRAÇÃO - PPGA - DA PUC DE MINAS GERAIS. PERIODICIDADE: QUADRIMESTRAL. EISSN: 1984-6606',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ECONOMIA ENSAIOS','http://www.seer.ufu.br/index.php/revistaeconomiaensaios/issue/archive','PUBLICAÇÃO DO INSTITUTO DE ECONOMIA DA UNIVERSIDADE FEDERAL DE UBERLÂNDIA. PERIODICIDADE: SEMESTRAL. ISSN: 1983-199',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ELETRÔNICA - FACULDADE DE DIREITO DA PUC-SP','http://revistas.pucsp.br/index.php/red/issue/archive','REVISTA ELETRÔNICA - FACULDADE DE DIREITO DA PUC-SP - DIVULGA TRABALHOS CIENTÍFICOS QUE SE ALINHEM COM AS LINHAS DE PESQUISA DESENVOLVIDA PELOS SEIS DEPARTAMENTOS DA FACULDADE DE DIREITO DA PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO. TEXTOS INTEGRAIS A PARTIR DE 2008. PERIODICIDADE: SEMESTRAL. ISSN 1984-109',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA ELETRÔNICA DE EDUCAÇÃO E TECNOLOGIA DO SENAI-SP','http://revistaeletronica.sp.senai.br/index.php/seer/issue/archive','PUBLICA TRABALHOS INÉDITOS NAS ATUAÇÃO DO SENAI, A SABER: ADMINISTRAÇÃO, ALIMENTOS, AUTOMAÇÃO, AUTOMOBILÍSTICA, BORRACHAS, CALÇADOS, CELULOSE E PAPEL, CERÂMICA, CONSTRUÇÃO CIVIL, COURO, ELETROELETRÔNICA, , ENERGIA ELÉTRICA, GÁS, GRÁFICA, INFORMÁTICA, MARCENARIA, MECÂNICA, METALURGIA, MEIO AMBIENTE, METROLOGIA, EDUCAÇÃO, PLÁSTICO, QUALIDADE, QUÍMICA, REFRIGERAÇÃO E CLIMATIZAÇÃO, SEGURANÇA, TELECOMUNICAÇÕES, TÊXTIL, TRANSPORTE, VESTUÁRIO E OUTROS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA FAE BUSINESS','http://www.unifae.br/publicacoes/fae_business.asp','REVISTA FAE BUSINESS - FÓRUM DE DEBATES E DE OPINIÕES DE PROFISSIONAIS, TANTO DO MUNDO ACADÊMICO COMO EMPRESARIAL, SOBRE A GESTÃO DE EMPRESAS DE SUCESSO. TEXTOS INTEGRAIS A PARTIR DE 2001',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA GESTÃO ORGANIZACIONAL - RGO','http://apps.unochapeco.edu.br/revistas/index.php/rgo/issue/archive','PUBLICAÇÃO DO CENTRO DE CIÊNCIAS SOCIAIS APLICADAS DA UNOCHAPECÓ TEXTOS INTEGRAIS A PARTIR DE 2008 PERIODICIDADE: SEMESTRAL ISSN IMPRESSO (1806-6720',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA GESTÃO USP','http://www.regeusp.com.br/default.asp?idpagina=2','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA INTEGRAÇÃO','http://www.usjt.br/prppg/revista/numeros.php','REVISTA INTEGRAÇÃO - PUBLICAÇÃO DE NATUREZA CIENTÍFICA E MULTIDISCIPLINAR PELO ÓRGÃO DA PRÓ-REITORIA DE PESQUISA E PÓS-GRADUAÇÃO DA UNIVERSIDADE SÃO JUDAS TADEU. TEXTOS INTEGRAIS DESDE 1995. PERIODICIDADE: TRIMESTRAL. ISSN 1413-614',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA INTUITIO - PUCRS','http://revistaseletronicas.pucrs.br/ojs/index.php/intuitio/issue/archive','REVISTA INTUITIO - PROGRAMA DE PÓS-GRADUAÇÃO EM FILOSOFIA DA PUCRS. ISSN 1983-401',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA JUS VIGILANTIBUS','http://jusvi.com/artigos','REVISTA JUS VIGILANTIBUS - EM 05 DE NOVEMBRO DE 2007, COM EDIÇÃO DIÁRIA, SERIADA, DIVULGA MATÉRIAS RELACIONADAS AO DIREITO. CONTÉM UM ARQUIVO DE ARTIGOS POR CATEGORIA. ISSN 1983-464',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA LOGWEB','http://www.logweb.com.br/novo/revista/edicoes/','REVISTA LOGWEB - PUBLICAÇÃO VOLTADA PARA OS EXECUTIVOS DAS EMPRESAS DO SETOR DE LOGÍSTICA, FORNECEDORES E USUÁRIOS DESSE SEGMENTO. DISPONÍVEL NA INTERNET, NO FORMATO PDF, PODENDO SER BAIXADA NA ÍNTEGRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA MACKENZIE DE ENGENHARIA E COMPUTAÇÃO','http://www.mackenzie.br/revista_engenharia_computacao.html','TEXTOS INTEGRAIS A PARTIR DE 2001 PERIODICIDADE: IRREGULA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA MARKETING','http://www.revistamarketing.com.br/edicoes-anteriores.aspx','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA NEGÓCIOS E TECNOLOGIA DA INFORMAÇÃO - RNTI','http://publica.fesppr.br/index.php/rnti/issue/archive','PUBLICAÇÃO DO INSTITUTO DE CIÊNCIAS SOCIAIS DO PARANÁ  ICSP TEXTOS INTEGRAIS A PARTIR DE 2006 PERIODICIDADE: SEMESTRAL ISSN: 1809-694',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA NEGÓCIOS EM PROJEÇÃO','http://revista.faculdadeprojecao.edu.br/revista/index.php/Projecao/issue/archive','PUBLICAÇÃO DA ESCOLA DE NEGÓCIOS DA FACULDADE PROJEÇÃO BRASÍLIA. PERIODICIDADE: SEMESTRAL. ISSN: 2178-625',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PENSAMENTO CONTEMPORÂNEO EM ADMINISTRAÇÃO','http://www.uff.br/pae/index.php/pca/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE FEDERAL FLUMINENSE  UFF. PERIODICIDADE: TRIMESTRAL. ISSN: 1982-2596',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PENSAR CONTÁBIL','http://www.atena.org.br/revista/ojs-2.2.3-06/index.php/pensarcontabil/issue/archive','PUBLICAÇÃO DO CONSELHO REGIONAL DE CONTABILIDADE DO ESTADO DO RIO DE JANEIRO. PERIODICIDADE: QUADRIMESTRAL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PERSPECTIVA','http://www.uricer.edu.br/new/rperspectiva/inicio.php?id=ultimos','REVISTA PERSPECTIVA - PUBLICAÇÃO DA UNIVERSIDADE REGIONAL INTEGRADA DO ALTO URUGUAI E DAS MISSÕES  ERECHIM/RS. PERIODICIDADE: TRISMESTRAL. ISSN 0101-2908',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PRONEWS','http://www.revistapronews.com.br','REVISTA DE COMUNICAÇÃO E MARKETING NE, DA ALTERNATIVA COMUNICAÇÃO ASSESSORIA DE IMPRENSA. TEXTOS INTEGRAIS A PARTIR DE 2003, N.44',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PROXXIMA','http://www.proxxima.com.br/#','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PSICO','http://revistaseletronicas.pucrs.br/ojs/index.php/revistapsico/issue/archive','REVISTA PSICO - PUBLICA ARTIGOS ORIGINAIS SOBRE TEMÁTICAS QUE PRIVILEGIEM PESQUISAS E DISCUSSÕES TEÓRICAS SOBRE A PRODUÇÃO DE CONHECIMENTO NAS DIFERENTES ÁREAS DA PSICOLOGIA, VISANDO O DESENVOLVIMENTO DESTA CIÊNCIA, E ATENDENDO SEU PAPEL DE REFERÊNCIA PARA AS PRÁTICAS PROFISSIONAIS DESTE CAMPO DE SABER. PERIODICIDADE: TRIMESTRAL. ISSN: 1980-862',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA PSICOLOGIA: ORGANIZAÇÕES E TRABALHO','http://www.periodicos.ufsc.br/index.php/rpot/issue/archive','REVISTA PSICOLOGIA: ORGANIZAÇÕES E TRABALHO - PUBLICAÇÃO DA UNIVERSIDADE FEDERAL DE SANTA CATARINA. PERIODICIDADE: SEMESTRAL. TEXTOS INTEGRAIS DESDE 2001. ISSN 1984-665',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA SOCIEDADE, CONTABILIDADE E GESTÃO','http://www.atena.org.br/revista/ojs-2.2.3-06/index.php/ufrj/issue/archive','PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS CONTÁBEIS, FACULDADE DE ADMINISTRAÇÃO E CIÊNCIAS CONTÁBEIS (FACC), UNIVERSIDADE FEDERAL DO RIO DE JANEIRO (UFRJ). PERIODICIDADE: SEMESTRAL',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA SOCIOLOGIAS','http://www.scielo.br/scielo.php?script=sci_issues&pid=1517-4522&lng=pt&nrm=isso','REVISTA SOCIOLOGIAS - PROGRAMA DE PÓS-GRADUAÇÃO EM SOCIOLOGIA DA UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL (UFRGS). TEXTOS INTEGRAIS A PARTIR DE 2000. PERIODICIDADE: SEMESTRAL. ISSN 1517-452',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA T&D - INTELIGÊNCIA CORPORATIVA','http://www.rtd.com.br/artigo.asp','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA TEMAS E MATIZES','http://e-revista.unioeste.br/index.php/temasematizes/issue/archive','REVISTA TEMAS E MATIZES - PUBLICAÇÃO DE CARÁTER TÉCNICO-CIENTÍFICO EDITADA PELA PRÓ-REITORIA DE PESQUISA E PÓS-GRADUAÇÃO DA UNIOESTE  UNIVERSIDADE ESTADUAL DO OESTE DO PARANÁ. TEXTOS INTEGRAIS A PARTIR DE 2004. PERIODICIDADE: SEMESTRAL. E-ISSN 1981-468',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA TEORIA E EVIDÊNCIA ECONÔMICA','http://www.upf.br/cepeac/index.php?option=com_content&task=view&id=14&Itemid=16','PUBLICAÇÃO DO CENTRO DE PESQUISA E EXTENSÃO DA FACULDADE DE CIÊNCIAS ECONÔMICAS, ADMINISTRATIVAS E CONTÁBEIS. TEXTOS INTEGRAIS A PARTIR DE 1993 PERIODICIDADE: SEMESTRAL ISSN: 0104-096',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA UNIABEU','http://www.uniabeu.edu.br/publica/index.php/RU/issue/archive','PUBLICAÇÃO DA UNIABEU CENTRO UNIVERSITÁRIO, DESTINADO A PUBLICAR A PRODUÇÃO ACADÊMICO-CIENTÍFICA DAS ÁREAS DE ENSINO DE GRADUAÇÃO E PÓS-GRADUAÇÃO, DE PESQUISA E EXTENSÃO, BEM COMO A DIVULGAR O CONHECIMENTO GERADO PELA COMUNIDADE CIENTÍFICA. PERIODICIDADE: QUADRIMESTRAL. TEXTOS INTEGRAIS A PARTIR DE 2008',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'REVISTA UNIVERSO CONTÁBIL','http://proxy.furb.br/ojs/index.php/universocontabil/issue/archive','PUBLICAÇÃO DO PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS CONTÁBEIS DA UNIVERSIDADE REGIONAL DE BLUMENAU (PPGCC/FURB). PERIODICIDADE: QUADRIMENTRAL. ISSN: 1809-3337',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'RHPORTAL','http://www.rhportal.com.br/#i','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SCIELO - SCIENTIFIC ELETRONIC LIBRARY ONLINE','http://www.scielo.org/index.php?lang=pt','BIBLIOTECA ELETRÔNICA QUE ABRANGE UMA COLEÇÃO SELECIONADA DE PERIÓDICOS CIENTÍFICOS. O SCIELO É RESULTADO DA COOPERAÇÃO ENTRE A FAPESP, BIREME, INSTITUIÇÕES NACIONAIS E INTERNACIONAIS RELACIONADAS COM A COMUNICAÇÃO CIENTÍFICA E EDITORES CIENTÍFICOS. O PROJETO TEM POR OBJETIVO O DESENVOLVIMENTO DE UMA METODOLOGIA COMUM PARA A PREPARAÇÃO, ARMAZENAMENTO, DISSEMINAÇÃO E AVALIAÇÃO DA PRODUÇÃO CIENTÍFICA EM FORMATO ELETRÔNICO. TEXTOS INTEGRAI',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SCIELO BOOKS=SCIELO LIVROS','http://books.scielo.org/','SCIELO BOOKS = SCIELO LIVROS - PROJETO FINANCIADO PELA FAPESP EM PARCERIA COM O CENTRO LATINO-AMERICANO E DO CARIBE DE INFORMAÇÃO EM CIÊNCIAS DA SAÚDE (BIREME) - VISA A PUBLICAÇÃO ONLINE DE COLEÇÕES NACIONAIS E TEMÁTICAS DE LIVROS ACADÊMICOS, EDITADOS POR INSTITUIÇÕES ACADÊMICAS',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SEBRAE','http://www.sebrae.com.br/setor/servicos','TEXTOS SELECIONADO',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SEMINA - CIÊNCIAS SOCIAIS E HUMANAS','http://www.uel.br/revistas/uel/index.php/seminasoc/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE ESTADUAL DE LONDRINA. PUBLICA ARTIGOS ORIGINAIS E ARTIGOS DE REVISÃO LIGADOS À GRANDE ÁREA DAS CIÊNCIAS SOCIAIS E HUMANAS. PERIODICIDADE: SEMESTRAL. ISSN: 1679-038',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SEMPRE BRASIL FOREVER','http://200.196.50.110/insight/brasilsempre/numero27/index.htm','REVISTA BRASILEIRA DE DESENVOLVIMENTO SUSTENTÁVEL TEXTOS SELECIONADOS A PARTIR DE 2002 PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SENAC - SERVIÇO NACIONAL DE APRENDIZAGEM COMERCIAL','http://www.senac.br/home.asp','',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SÉRIE INFORMAÇÕES ESTATÍSTICAS DA AGRICULTURA (IEA)','http://www.iea.sp.gov.br/out/publicacoes/anuario.php','PUBLICAÇÃO DO INSTITUTO DE ECONOMIA AGRÍCOLA (IEA), O ANUÁRIO DE ESTATÍSTICAS VISA FORNECER INFORMAÇÕES PARA ESTUDOS E TOMADAS DE DECISÕES NO ÂMBITO DO AGRONEGÓCIO. A PUBLICAÇÃO REÚNE DADOS BÁSICOS DO SETOR AGRÍCOLA, LEVANTADOS E SISTEMATIZADOS DURANTE O ANO. A PARTIR DE 2000',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SIDRA - SISTEMA IBGE DE RECUPERAÇÃO AUTOMÁTICA (BANCO DE DADOS AGREGADOS)','http://www.sidra.ibge.gov.br/bda/','SEU OBJETIVO É ARMAZENAR TABELAS CONTENDO OS DADOS AGREGADOS DAS PESQUISAS QUE O IBGE REALIZA. AS BUSCAS PODEM SER REALIZADAS ATRAVÉS DE UM MECANISMO DE BUSCA, POR SEÇÕES (DEMOGRÁFICO E CONTAGEM, IPCA E INPC OU PESQUISAS), POR OPÇÕES (ACERVO OU TERRITÓRIO) OU POR TEMAS (AGRICULTURA, COMÉRCIO, CONSTRUÇÃO CIVIL, CONTAS NACIONAIS, ÍNDICES DE PREÇOS, INDÚSTRIA, POPULAÇÃO ETC.',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SOCIEDADE E CULTURA','http://www.revistas.ufg.br/index.php/fchf/issue/archive','PUBLICAÇÃO DA FACULDADE DE CIÊNCIAS SOCIAIS DA UNIVERSIDADE FEDERAL DE GOIÁS E DE SEUS PROGRAMAS DE PÓS-GRADUAÇÃO EM SOCIOLOGIA E EM ANTROPOLOGIA SOCIAL. TRABALHOS INÉDITOS EM PUBLICAÇÕES BRASILEIRAS, SOB A FORMA DE ARTIGOS, ENSAIOS E RESENHAS DE LIVROS EM CIÊNCIAS SOCIAIS. PERIODICIDADE: SEMESTRAL. EISSN: 1980-819',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SOCIEDADE E ESTADO','http://www.scielo.br/scielo.php?script=sci_issues&pid=0102-6992&lng=pt&nrm=isso','SOCIEDADE E ESTADO - PUBLICAÇÃO DO DEPARTAMENTO DE SOCIOLOGIA DA UNIVERSIDADE DE BRASÍLIA . TEXTOS INTEGRAIS A PARTIR DE 2004. ISSN 1980-546',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'SSRN - SOCIAL SCIENCE RESEARCH NETWORK','http://www.ssrn.com/','BASE DE DADOS DE CIÊNCIAS SOCIAIS (CONTABILIDADE, ECONOMIA, DIREITO, ADMINISTRAÇÃO, SISTEMAS DE INFORMAÇÃO, MARKETING, SEGURO SOCIAL). CONTÉM MAIS 76.100 SUMÁRIOS E RESUMOS E MAIS DE 52.000 TEXTOS INTEGRAI',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'TEMPO SOCIAL - REVISTA DE SOCIOLOGIA DA USP','http://www.scielo.br/scielo.php?script=sci_issues&pid=0103-2070&lng=pt&nrm=iso','TEMPO SOCIAL - REVISTA DE SOCIOLOGIA DA USP - DESTINA-SE A PUBLICAÇÃO DE TRABALHOS CIENTÍFICOS ORIGINAIS NAS ÁREAS DE SOCIOLOGIA. TEXTOS INTERGAIS A PARTIR DE 2001. PERIODICIDADE: SEMESTRAL. ISSN 1809-455',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'TEORIA & PESQUISA - REVISTA DE CIÊNCIAS SOCIAIS','http://www.teoriaepesquisa.ufscar.br/index.php/tp/issue/archive','TEXTOS INTEGRAIS A PARTIR DE 2003. PERIODICIDADE: SEMESTRAL. ISSN: 0104-010',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'TEXTO PARA DISCUSSÃO (IPEA)','http://www.ipea.gov.br/pub/td/td.html','DIVULGA RESULTADOS E ANÁLISES PARCIAIS OU FINAIS DE ESTUDOS E ANÁLISES REALIZADAS POR TÉCNICOS DO IPEA E POR PESQUISADORES ASSOCIADOS AOS PROGRAMAS DE PESQUISA COORDENADOS PELO IPEA. A TIRAGEM É, EM MÉDIA, DE 130 EXEMPLARES, VARIANDO DE ACORDO COM O TEMA E/OU ENFOQUE. TEXTOS INTEGRAIS A PARTIR DE 1979',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'UNOESC & CIÊNCIA - ACSA','http://editora.unoesc.edu.br/index.php/acsa/issue/archive','PUBLICAÇÃO DA UNIVERSIDADE DO OESTE DE SANTA CATARINA. PERIODICIDADE: SEMESTRAL. ISSN: 2178-3446',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'UNOPAR CIENTÍFICA CIÊNCIAS JURÍDICAS E EMPRESARIAIS','http://www12.unopar.br/unopar/pesquisa/rcJuridicas.action','PUBLICAÇÃO DA UNIVERSIDADE NORTE DO PARANÁ - UNOPAR TEXTOS INTEGRAIS A PARTIR DE 2000 PERIODICIDADE: ANUAL ISSN 1517-942',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'USA - DEPARTMENT OF COMMERCE','http://www.commerce.gov/','PERMITE CONHECER AS REGRAS AMERICANAS PARA A TROCA DE MERCADORIA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'VERITAS - REVISTA DE FILOSOFIA','http://revistaseletronicas.pucrs.br/veritas/ojs/index.php/veritas/issue/archive','VERITAS - REVISTA DE FILOSOFIA - PUBÇICAÇÃO DA DA PUCRS (PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL. TEXTOS INTEGRAIS A PARTIR DE 2005',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'WHARTON ALUMNI MAGAZINE','http://whartonmagazine.com/issues-archive/','TEXTOS INTEGRAIS A PARTIR DE 1995 PERIODICIDADE: TRIMESTRA',1);
+INSERT INTO dbperiodicos (usuaseq,unidseq,titulo,link,descricao,statseq) VALUES (1,1,'WTO - WORLD TRADE ORGANIZATION (OMC - ORGANIZAÇÃO MUNDIAL DO COMÉRCIO)','http://www.wto.org/','CONTÉM INFORMAÇÕES RELEVANTES SOBRE EXPORTAÇÃO E IMPORTAÇÃO E TEM ATUALIZADOS OS ACORDOS INTERNACIONAI',1);

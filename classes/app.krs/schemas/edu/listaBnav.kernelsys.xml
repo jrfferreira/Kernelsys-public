@@ -29,20 +29,6 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
-    <row seq="3">
-      <argumento>383</argumento>
-      <datacad>1900-01-01</datacad>
-      <funcaojs>prossExe</funcaojs>
-      <label> Movimentos Programados </label>
-      <listseq>144</listseq>
-      <metodo>onFormOpen</metodo>
-      <nome>botMovimentoProgramado</nome>
-      <seq>3</seq>
-      <statseq>1</statseq>
-      <tipocampo>5</tipocampo>
-      <unidseq>1</unidseq>
-      <usuaseq>1</usuaseq>
-    </row>
     <row seq="4">
       <argumento>404</argumento>
       <datacad>1900-01-01</datacad>
@@ -52,6 +38,20 @@
       <metodo>onFormOpen</metodo>
       <nome>botMovInterna</nome>
       <seq>4</seq>
+      <statseq>1</statseq>
+      <tipocampo>5</tipocampo>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
+    <row seq="3">
+      <argumento>383</argumento>
+      <datacad>1900-01-01</datacad>
+      <funcaojs>prossExe</funcaojs>
+      <label> Movimentos Programados </label>
+      <listseq>391</listseq>
+      <metodo>onFormOpen</metodo>
+      <nome>botMovimentoProgramado</nome>
+      <seq>3</seq>
       <statseq>1</statseq>
       <tipocampo>5</tipocampo>
       <unidseq>1</unidseq>

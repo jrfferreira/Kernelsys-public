@@ -1111,5 +1111,20 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="133">
+      <argumento>489</argumento>
+      <datacad>2014-03-19</datacad>
+      <formseq>88</formseq>
+      <labelmodulo>Lista de Periodicos</labelmodulo>
+      <metodo>getList</metodo>
+      <modseq>12</modseq>
+      <modulo>listaPeriodicos</modulo>
+      <nivel>2</nivel>
+      <ordem>0</ordem>
+      <seq>133</seq>
+      <statseq>1</statseq>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
   </menu>
 </kernelsys>

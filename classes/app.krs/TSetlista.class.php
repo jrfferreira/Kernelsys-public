@@ -114,6 +114,10 @@ class TSetlista {
             //instacia objeto coluna para a datagrid
              $this->topCols[$obCol->coluna] = new TDataGridColumn($obCol->coluna, $obCol->label, $obCol->alinhadados, $obCol->largura);
 
+            if($obCol->link == '1'){
+                $this->topCols[$obCol->coluna]->setLink(true);
+            }
+
             //compila visibilidade da coluna
             if($this->visibilidade[$obCol->coluna] == NULL or $this->visibilidade[$obCol->coluna] == TRUE) {
                 $this->topCols[$obCol->coluna]->setVisibilidade(TRUE);
