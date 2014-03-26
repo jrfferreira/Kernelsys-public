@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/pure.css')
+    link(rel='stylesheet', href='/css/layouts/side-menu.css')
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='http://localhost:35729/livereload.js')
+  body
+    #layout
+      block sidebar
+        include sidebar
+
+      #main
+        .header
+          h1 #{title}
+        .content
+          block content
+
+    script(src="/js/ui.js")

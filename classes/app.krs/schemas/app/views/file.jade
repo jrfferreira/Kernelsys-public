@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div#editTable
+    table.pure-table.pure-table-bordered.pure-table-stripe
+      if(keys)
+        thead
+          tr
+            each key in keys
+              th #{key}
+        tbody.list
+          if(nodes)
+            each line in nodes
+              tr.line(id=line.seq)
+                each key in keys
+                  td(class=key,title=key,placeholder=key,name=key,contenteditable) #{line[key]}
+
+    template#node-element
+      each key in keys
+        td(class=key,title=key,placeholder=key,name=key,contenteditable)
+
+    .footer
+      a#add-line.pure-button.button-xlarge.pure-button-active(href="#add",data-seq=lastSeq) Adicionar Linha
+      button#save.pure-button.button-xlarge.pure-button-primary(data-scope=title) Salvar

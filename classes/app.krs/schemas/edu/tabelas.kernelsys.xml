@@ -375,6 +375,17 @@
       <unidseq>1</unidseq>
       <usuaseq>1</usuaseq>
     </row>
+    <row seq="87">
+      <colunafilho>0</colunafilho>
+      <datacad>1900-01-01</datacad>
+      <seq>87</seq>
+      <statseq>1</statseq>
+      <tabela>dblocacao_livro</tabela>
+      <tabelaView>dblocacao_livro</tabelaView>
+      <tabseq/>
+      <unidseq>1</unidseq>
+      <usuaseq>1</usuaseq>
+    </row>
     <row seq="96">
       <colunafilho>livrseq</colunafilho>
       <datacad>1900-01-01</datacad>

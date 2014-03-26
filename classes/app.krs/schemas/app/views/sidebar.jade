@@ -1,0 +1,9 @@
+a#menuLink.menu-link(href="#menu")
+  span
+#menu
+  .pure-menu.pure-menu-open
+    a.pure-menu-heading(href="#") Kernelsys
+    ul
+      each table in tableList
+        li
+          a(href="/#{table.id}/") #{table.name}

@@ -1,0 +1,36 @@
+table {
+  table-layout:fixed;
+}
+
+td {
+  max-width: 200px;
+  word-wrap:break-word;
+}
+
+td:focus {
+  font-weight: bolder;
+}
+
+tr.edited {
+  background: rgba(255,100,100,0.2);
+  border: 2px solid rgba(255,100,100,0.2);
+}
+tr.new {
+  background: rgba(100,255,100,0.2);
+  border: 2px solid rgba(100,255,100,0.2);
+}
+
+.footer {
+  position: fixed;
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  padding: 1em;
+  width: 100%;
+  border-top: 1px solid #f2f2f2;
+}
+
+.footer .pure-button {
+  margin-left: 1em;
+}
